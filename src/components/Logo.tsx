@@ -6,8 +6,9 @@ interface LogoProps {
 }
 
 /**
- * Wordmark — same Playfair styling logic as the hero h1: italic display
- * "Lapland" + roman semibold "Deals". Single visual signature across the site.
+ * #LaplandDeals wordmark — LV brand signature (`#` accent in vibe-pink)
+ * adapted to the cream luxury variant. Same Playfair italic-light + roman
+ * semibold pairing as the hero h1 so header → hero share one signature.
  */
 export default function Logo({ className = '', size = 'md', invert = false }: LogoProps) {
   const sizeClass =
@@ -15,12 +16,12 @@ export default function Logo({ className = '', size = 'md', invert = false }: Lo
     size === 'sm' ? 'text-lg' :
     'text-2xl md:text-[1.7rem]';
 
-  const lightColour = invert ? '#FFFFFF' : '#002F6C';
   const heavyColour = invert ? '#FFFFFF' : '#0F172A';
 
   return (
     <span className={`font-heading leading-none ${sizeClass} ${className}`}>
-      <span className="italic font-light" style={{ color: lightColour, letterSpacing: '-0.02em' }}>
+      <span className="font-semibold" style={{ color: '#EC4899', letterSpacing: '-0.04em', marginRight: '0.04em' }}>#</span>
+      <span className="italic font-light" style={{ color: heavyColour, letterSpacing: '-0.02em' }}>
         Lapland
       </span>
       <span className="font-semibold" style={{ color: heavyColour, letterSpacing: '-0.01em' }}>

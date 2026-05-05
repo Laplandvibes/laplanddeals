@@ -3,6 +3,7 @@ import { ArrowRight, ShieldCheck, Newspaper, Globe } from 'lucide-react';
 import PageSeo from '../components/PageSeo';
 import Hero from '../components/Hero';
 import FlashBand from '../components/FlashBand';
+import TodaysPulse from '../components/TodaysPulse';
 import CategoryTiles from '../components/CategoryTiles';
 import OffersGrid from '../components/OffersGrid';
 import NewsletterSection from '../components/NewsletterSection';
@@ -94,6 +95,7 @@ export default function Home() {
 
       <Hero />
       <FlashBand />
+      <TodaysPulse />
 
       {/* ── Editor's picks ─────────────────────────────────────────── */}
       <section className="relative py-20 sm:py-24">

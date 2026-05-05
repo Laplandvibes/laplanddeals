@@ -30,9 +30,10 @@ export default function Hero() {
             Curated · Last-minute · End-of-season · Midnight sun
           </p>
 
-          {/* H1 mirrors the wordmark: italic light "Lapland" + roman semibold
-              "Deals". Same visual signature header → hero. */}
+          {/* H1 mirrors the wordmark: # in vibe-pink + italic-light "Lapland"
+              + roman semibold "Deals". One signature, header → hero. */}
           <h1 className="font-heading text-ivory leading-[1.02] mb-6 sm:mb-8 text-[3rem] sm:text-[4.5rem] lg:text-[6rem]">
+            <span className="font-semibold tracking-[-0.04em] text-vibe-pink">#</span>
             <span className="italic font-light tracking-[-0.02em]">Lapland</span>
             <span className="font-semibold tracking-[-0.01em]">Deals</span>
             <span className="font-light italic">,</span>

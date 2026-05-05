@@ -22,7 +22,7 @@ export default function Flights() {
         h1Italic="Flights to Lapland"
         h1="live Trip.com fares."
         sub="Helsinki to every Lapland gateway, pre-filled and dated. Click through to real Finnair and Norwegian rates."
-        image="/images/offer-flight-hel-rvn.webp"
+        image="/images/offer-flight-hel-kao.webp"
       />
 
       <section className="relative py-16 sm:py-24">

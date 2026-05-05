@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+// Each tile uses an image that does NOT appear elsewhere on the home page —
+// not in Editor's picks, not in pillar heroes, not in offer cards.
 const tiles = [
-  { to: '/hotels',     label: 'Hotels & Cabins',  hint: 'Glass igloos · Slope-side · Wilderness lodges',     img: '/images/offer-igloo-saariselka.webp' },
-  { to: '/activities', label: 'Activities',       hint: 'Husky · Aurora · Snowmobile · Reindeer',            img: '/images/offer-husky-safaris.webp' },
-  { to: '/flights',    label: 'Flights',          hint: 'Helsinki to Rovaniemi · Kittilä · Ivalo · Kuusamo', img: '/images/offer-flight-hel-rvn.webp' },
-  { to: '/cars',       label: 'Car Hire',         hint: '4WD · Studded tyres · Airport pickup',              img: '/images/offer-car-rvn.webp' },
-  { to: '/packages',   label: 'Packages',         hint: 'Aurora week · Family breaks · Weekend escapes',     img: '/images/offer-package-aurora-week.webp' },
-  { to: '/summer',     label: 'Summer',           hint: 'Midnight sun · Hiking · Lakeside cabins',           img: '/images/offer-summer-midnight-sun.webp' },
+  { to: '/hotels',     label: 'Hotels & Cabins',  hint: 'Glass igloos · Slope-side · Wilderness lodges',     img: '/images/offer-yllas-cabins.webp' },
+  { to: '/activities', label: 'Activities',       hint: 'Husky · Aurora · Snowmobile · Reindeer',            img: '/images/offer-aurora-hunts.webp' },
+  { to: '/flights',    label: 'Flights',          hint: 'Helsinki to Rovaniemi · Kittilä · Ivalo · Kuusamo', img: '/images/offer-flight-hel-ivl.webp' },
+  { to: '/cars',       label: 'Car Hire',         hint: '4WD · Studded tyres · Airport pickup',              img: '/images/offer-car-ktt.webp' },
+  { to: '/packages',   label: 'Packages',         hint: 'Aurora week · Family breaks · Weekend escapes',     img: '/images/offer-package-family-rovaniemi.webp' },
+  { to: '/summer',     label: 'Summer',           hint: 'Midnight sun · Hiking · Lakeside cabins',           img: '/images/offer-summer-hiking.webp' },
 ];
 
 export default function CategoryTiles() {

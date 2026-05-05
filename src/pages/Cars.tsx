@@ -22,7 +22,7 @@ export default function Cars() {
         h1Italic="Winter-ready cars"
         h1="live partner prices."
         sub="Studded tyres, 4WD, free aurora-chasing range. Pickup at every Lapland airport — compare on EconomyBookings."
-        image="/images/offer-car-rvn.webp"
+        image="/images/offer-car-ivl.webp"
       />
 
       <section className="relative py-16 sm:py-24">

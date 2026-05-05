@@ -22,7 +22,7 @@ export default function Activities() {
         h1Italic="Lapland activities"
         h1="real-time availability."
         sub="Husky safaris, aurora hunts, snowmobile expeditions, reindeer-farm visits, ice fishing. Live availability on GetYourGuide — no fake timers, no invented percentages."
-        image="/images/offer-husky-safaris.webp"
+        image="/images/offer-snowmobile.webp"
       />
 
       <section className="relative py-16 sm:py-24">

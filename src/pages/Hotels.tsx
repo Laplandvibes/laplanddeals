@@ -22,7 +22,7 @@ export default function Hotels() {
         h1Italic="Lapland hotels"
         h1="live prices, tonight."
         sub="Glass igloos under the aurora belt, slope-side properties on Levi, wilderness lodges in Ylläs, family hotels in Rovaniemi. Compare tonight's rates on Hotels.com."
-        image="/images/offer-igloo-saariselka.webp"
+        image="/images/offer-rovaniemi-hotels.webp"
       />
 
       <section className="relative py-16 sm:py-24">

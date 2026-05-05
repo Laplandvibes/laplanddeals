@@ -24,7 +24,7 @@ export default function Packages() {
         h1Italic="Build your own"
         h1="Lapland trip."
         sub="We don't sell sealed packages. We curate the building blocks — flights, stays, husky days, aurora hunts — and you book each at the partner's live rate. No middleman fee."
-        image="/images/offer-package-aurora-week.webp"
+        image="/images/offer-day-trips.webp"
       />
 
       <section className="relative py-16 sm:py-24">
