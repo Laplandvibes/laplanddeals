@@ -6,35 +6,63 @@
  * We bypass it for GYG by linking directly with `partner_id` + `cmp` query
  * params — same attribution, correct deep-link.
  *
- * For Hotels.com / EconomyBookings the worker is still the right route (CJ
- * attribution flows through Referer, not query string).
+ * Lapland location slug correction (2026-05-05): `lapland-l662` returns 404 —
+ * the correct GYG ID for Finnish Lapland is `l4404`. Verified via curl.
+ *
+ * Category sub-pages (`/lapland-l4404/<category-tcXX>`) tend to 404 too — GYG
+ * doesn't expose stable category permalinks under every location. Reliable
+ * pattern is to use the SEARCH endpoint `/s/?q=…&partner_id=VRMKD7N&cmp=…`
+ * which always 200s and pre-filters the listing.
  */
 
 const GYG_PARTNER_ID = 'VRMKD7N';
+const SITE_TAG = 'laplanddeals';
 
-/**
- * Build a deep link to a specific GYG product or category page.
- *
- * @param productPath  Path component after `getyourguide.com/`. Examples:
- *                     `lapland-l662/snowmobile-tc6` (category)
- *                     `rovaniemi-l2653/rovaniemi-arctic-snowhotel-...-t1130814` (product)
- * @param sid          Per-placement campaign tag, snake_case.
- */
-export function gygDeepLink(productPath: string, sid: string): string {
-  const path = productPath.replace(/^\/+/, '');
-  const url = new URL(`https://www.getyourguide.com/${path}/`);
+function withAffiliate(rawUrl: string, sid: string): string {
+  const url = new URL(rawUrl);
   url.searchParams.set('partner_id', GYG_PARTNER_ID);
-  url.searchParams.set('cmp', `lv_laplanddeals_${sid}`);
+  url.searchParams.set('cmp', `lv_${SITE_TAG}_${sid}`);
   return url.toString();
 }
 
-/** Common Lapland category landing pages on GYG. */
+/**
+ * Direct deeplink to a specific GYG product or location page (when you know
+ * the exact slug works — verify with curl/browser first).
+ *
+ * @param productPath  Path component after `getyourguide.com/`. Example:
+ *                     `lapland-l4404` (Finnish Lapland location).
+ *                     `rovaniemi-l2653` (Rovaniemi city). NOTE Rovaniemi
+ *                     currently 403s anonymously but works in browser.
+ */
+export function gygDeepLink(productPath: string, sid: string): string {
+  const path = productPath.replace(/^\/+/, '');
+  return withAffiliate(`https://www.getyourguide.com/${path}/`, sid);
+}
+
+/**
+ * Search-result deeplink — most reliable. Always 200s, pre-filters by query,
+ * preserves affiliate attribution. Use this for category landings.
+ */
+export function gygSearch(query: string, sid: string): string {
+  const url = new URL('https://www.getyourguide.com/s/');
+  url.searchParams.set('q', query);
+  url.searchParams.set('partner_id', GYG_PARTNER_ID);
+  url.searchParams.set('cmp', `lv_${SITE_TAG}_${sid}`);
+  return url.toString();
+}
+
+/**
+ * Common Lapland category landing pages. Each uses a verified-working GYG
+ * search URL with affiliate params baked in.
+ */
 export const GYG_CATEGORIES = {
-  all:        gygDeepLink('lapland-l662', 'cat_all'),
-  husky:      gygDeepLink('lapland-l662/husky-safaris-tc26', 'cat_husky'),
-  snowmobile: gygDeepLink('lapland-l662/snowmobile-tc6', 'cat_snowmobile'),
-  reindeer:   gygDeepLink('lapland-l662/reindeer-tours-tc52', 'cat_reindeer'),
-  aurora:     gygDeepLink('lapland-l662/northern-lights-tc119', 'cat_aurora'),
-  iceFishing: gygDeepLink('lapland-l662/ice-fishing-tc6058', 'cat_ice_fishing'),
-  daytrips:   gygDeepLink('lapland-l662/day-trips-tc54', 'cat_daytrips'),
+  all:        gygDeepLink('lapland-l4404', 'cat_all'),
+  husky:      gygSearch('husky safari Lapland', 'cat_husky'),
+  snowmobile: gygSearch('snowmobile Lapland', 'cat_snowmobile'),
+  reindeer:   gygSearch('reindeer Lapland', 'cat_reindeer'),
+  aurora:     gygSearch('northern lights Lapland', 'cat_aurora'),
+  iceFishing: gygSearch('ice fishing Lapland', 'cat_ice_fishing'),
+  daytrips:   gygSearch('Lapland day trip', 'cat_daytrips'),
+  multiday:   gygSearch('Lapland multi-day tour', 'cat_multiday'),
+  hiking:     gygSearch('Lapland hiking summer', 'cat_hiking'),
 } as const;

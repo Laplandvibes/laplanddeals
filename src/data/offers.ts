@@ -1,4 +1,4 @@
-import { gygDeepLink, GYG_CATEGORIES } from '../lib/gyg';
+import { gygDeepLink, gygSearch, GYG_CATEGORIES } from '../lib/gyg';
 import { buildAffiliateHref } from '../components/AffiliateCTA';
 import { TRIP_FLIGHTS } from '../lib/tripcom';
 
@@ -244,7 +244,7 @@ export const offers: Offer[] = [
     location: 'Saariselkä · Inari',
     blurb: 'Glass igloo (3-4 nights) + husky safari + aurora hunt + ice fishing. Each booked separately at the partner\'s live rate. Stack saves over packaged tours.',
     partner: 'getyourguide',
-    href: gygDeepLink('lapland-l662/multi-day-trips-tc55', 'pkg_aurora_week'),
+    href: gygSearch('Lapland multi-day aurora package', 'pkg_aurora_week'),
     flag: 'package',
   },
   {
@@ -276,7 +276,7 @@ export const offers: Offer[] = [
     location: 'Muonio · Kittilä',
     blurb: '102,000 ha national park. Cleanest air in Europe (WMO). Ruska peaks ~Sept 5-15 — dwarf birch turns gold in three days.',
     partner: 'getyourguide',
-    href: gygDeepLink('lapland-l662/hiking-tc14', 'card_summer_hiking'),
+    href: gygSearch('Pallas-Yllästunturi hiking', 'card_summer_hiking'),
     flag: 'summer',
   },
 ];
