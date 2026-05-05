@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Sparkles, Zap, Sun, ArrowRight, ShieldCheck, Newspaper, Globe } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Newspaper, Globe } from 'lucide-react';
 import PageSeo from '../components/PageSeo';
 import Hero from '../components/Hero';
 import FlashBand from '../components/FlashBand';
@@ -7,6 +7,27 @@ import CategoryTiles from '../components/CategoryTiles';
 import OffersGrid from '../components/OffersGrid';
 import NewsletterSection from '../components/NewsletterSection';
 import { offers, getEditorPicks, getLastMinute, getSummerOffers } from '../data/offers';
+
+function SectionHeader({ eyebrow, title, lead, children }: { eyebrow: string; title: string; lead?: string; children?: React.ReactNode }) {
+  return (
+    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
+      <div className="max-w-2xl">
+        <p className="text-finland-blue text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">
+          {eyebrow}
+        </p>
+        <h2 className="font-heading text-3xl sm:text-5xl font-medium leading-[1.05] text-ink">
+          {title}
+        </h2>
+        {lead && (
+          <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed max-w-xl">
+            {lead}
+          </p>
+        )}
+      </div>
+      {children}
+    </div>
+  );
+}
 
 export default function Home() {
   const editorsPicks = getEditorPicks(4);
@@ -75,117 +96,86 @@ export default function Home() {
       <FlashBand />
 
       {/* ── Editor's picks ─────────────────────────────────────────── */}
-      <section className="relative bg-deep-night py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-8 sm:mb-10">
-            <div>
-              <p className="text-vibe-pink text-xs uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
-                <Sparkles className="w-4 h-4" /> Editor's picks
-              </p>
-              <h2 className="font-heading text-3xl sm:text-5xl tracking-wide text-snow">
-                Hand-picked Lapland deals
-              </h2>
-            </div>
-            <Link to="/hotels" className="hidden sm:inline-flex items-center gap-1 text-snow/65 hover:text-vibe-pink text-sm font-semibold no-underline">
-              All hotels <ArrowRight className="w-4 h-4" />
+      <section className="relative py-20 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <SectionHeader
+            eyebrow="Editor's picks"
+            title="Quietly curated for the season ahead."
+            lead="The places we'd send our own friends. Each links to today's live partner price."
+          >
+            <Link to="/hotels" className="hidden md:inline-flex items-center gap-1 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline">
+              All hotels <ArrowRight className="w-3.5 h-3.5" />
             </Link>
-          </div>
+          </SectionHeader>
           <OffersGrid offers={editorsPicks} cols="md:grid-cols-2 lg:grid-cols-4" />
         </div>
       </section>
 
       {/* ── Categories ─────────────────────────────────────────────── */}
-      <section className="relative bg-deep-night-2 py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <p className="text-vibe-pink text-xs uppercase tracking-[0.2em] mb-2">
-              Browse by category
-            </p>
-            <h2 className="font-heading text-3xl sm:text-5xl tracking-wide text-snow">
-              Find your kind of Lapland deal
-            </h2>
-          </div>
+      <section className="relative bg-cream-2 py-20 sm:py-24 border-y border-line">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <SectionHeader
+            eyebrow="Browse by category"
+            title="Find your kind of Lapland deal."
+          />
           <CategoryTiles />
         </div>
       </section>
 
-      {/* ── Last-minute window ─────────────────────────────────────── */}
-      <section className="relative bg-deep-night py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-10">
-            <div>
-              <p className="text-flash-yellow text-xs uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
-                <Zap className="w-4 h-4" /> Last-minute window
-              </p>
-              <h2 className="font-heading text-3xl sm:text-5xl tracking-wide text-snow">
-                Going within the next two weeks?
-              </h2>
-              <p className="text-snow/60 text-base mt-3 max-w-2xl">
-                Cabin nights, husky slots and aurora hunts that often have last-minute openings.
-                Live partner availability — refreshed on every click.
-              </p>
-            </div>
-          </div>
+      {/* ── Last-minute ─────────────────────────────────────────────── */}
+      <section className="relative py-20 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <SectionHeader
+            eyebrow="Last-minute window"
+            title="Going within the next two weeks?"
+            lead="Cabin nights, husky slots and aurora hunts that often have last-minute openings. Live partner availability — refreshed on every click."
+          />
           <OffersGrid offers={lastMinute} />
         </div>
       </section>
 
-      {/* ── Summer / midnight sun (kesä-sääntö) ─────────────────────── */}
-      <section className="relative bg-gradient-to-br from-[#facc15]/10 via-deep-night-2 to-deep-night py-16 sm:py-20 border-y border-flash-yellow/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8 sm:mb-10">
-            <div>
-              <p className="text-flash-yellow text-xs uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
-                <Sun className="w-4 h-4" /> Midnight sun · Jun 6 – Jul 7
-              </p>
-              <h2 className="font-heading text-3xl sm:text-5xl tracking-wide text-snow">
-                Summer in Lapland is cheaper than you think
-              </h2>
-              <p className="text-snow/65 text-base mt-3 max-w-2xl">
-                32 days the sun never sets. Lakeside cabins at a fraction of December rates.
-                Hiking peaks late August — clean air, no mosquitoes, ruska gold.
-              </p>
-            </div>
-            <Link to="/summer" className="shrink-0 inline-flex items-center gap-2 bg-flash-yellow text-deep-night font-bold px-5 py-3 rounded-xl text-sm tracking-wide whitespace-nowrap hover:bg-flash-yellow/85 transition-colors no-underline">
-              Browse summer deals
+      {/* ── Summer (kesä-sääntö) ─────────────────────────────────────── */}
+      <section className="relative py-20 sm:py-24 border-y border-line bg-flash-yellow-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <SectionHeader
+            eyebrow="Midnight sun · Jun 6 – Jul 7"
+            title="Summer in Lapland is the secret deal."
+            lead="32 days the sun never sets. Lakeside cabins at a fraction of December rates. Hiking peaks late August — clean air, no mosquitoes, ruska gold."
+          >
+            <Link
+              to="/summer"
+              className="shrink-0 inline-flex items-center gap-2 bg-ink hover:bg-finland-blue text-ivory font-bold uppercase tracking-[0.1em] px-6 py-3 rounded-full text-[13px] transition-colors no-underline"
+            >
+              Browse summer
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </SectionHeader>
           {summerPicks.length > 0 && <OffersGrid offers={summerPicks} cols="md:grid-cols-2 lg:grid-cols-4" />}
         </div>
       </section>
 
-      {/* ── All deals (preview) ─────────────────────────────────────── */}
-      <section className="relative bg-deep-night py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between mb-8 sm:mb-10">
-            <div>
-              <p className="text-vibe-pink text-xs uppercase tracking-[0.2em] mb-2">
-                Everything
-              </p>
-              <h2 className="font-heading text-3xl sm:text-5xl tracking-wide text-snow">
-                Today's catalogue
-              </h2>
-            </div>
-          </div>
+      {/* ── All (preview) ─────────────────────────────────────────── */}
+      <section className="relative py-20 sm:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <SectionHeader eyebrow="Everything" title="Today's catalogue." />
           <OffersGrid offers={everything} />
         </div>
       </section>
 
-      {/* ── Trust strip ─────────────────────────────────────────────── */}
-      <section className="bg-deep-night-2 border-t border-white/10 py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* ── Trust ─────────────────────────────────────────────────── */}
+      <section className="bg-cream-2 border-t border-line py-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: ShieldCheck, title: 'Honest curation', body: 'Live partner prices. Never invented percentages or fake countdowns.' },
               { icon: Newspaper,   title: 'Reviewed by locals', body: 'Curated by people who actually live and travel in Finnish Lapland.' },
               { icon: Globe,       title: 'Part of #LaplandVibes', body: '23+ sister sites. One ecosystem. One newsletter. One source of truth.' },
             ].map(({ icon: Icon, title, body }) => (
               <div key={title} className="flex items-start gap-4">
-                <Icon className="w-7 h-7 text-vibe-pink shrink-0 mt-1" />
+                <Icon className="w-6 h-6 text-finland-blue shrink-0 mt-1" />
                 <div>
-                  <p className="font-heading text-lg tracking-wide text-snow mb-1">{title}</p>
-                  <p className="text-snow/65 text-sm leading-relaxed">{body}</p>
+                  <p className="font-heading text-lg font-medium text-ink mb-1">{title}</p>
+                  <p className="text-ink-soft text-sm leading-relaxed">{body}</p>
                 </div>
               </div>
             ))}

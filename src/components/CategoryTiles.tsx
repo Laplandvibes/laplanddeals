@@ -1,40 +1,45 @@
 import { Link } from 'react-router-dom';
-import { Hotel, Sparkles, Plane, Car, Calendar, Sun, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const tiles = [
-  { to: '/hotels',     label: 'Hotels & Cabins',  icon: Hotel,    tint: 'from-[#1e3a8a] to-[#0F172A]', count: 'Glass igloos · Slope-side · Wilderness lodges' },
-  { to: '/activities', label: 'Activities',       icon: Sparkles, tint: 'from-[#0c4a6e] to-[#0F172A]', count: 'Husky · Aurora · Snowmobile · Reindeer' },
-  { to: '/flights',    label: 'Flights',          icon: Plane,    tint: 'from-[#7c2d12] to-[#0F172A]', count: 'Helsinki · Rovaniemi · Kittilä · Ivalo' },
-  { to: '/cars',       label: 'Car Hire',         icon: Car,      tint: 'from-[#1e293b] to-[#0F172A]', count: '4WD · Studded tyres · Airport pickup' },
-  { to: '/packages',   label: 'Packages',         icon: Calendar, tint: 'from-[#10b981] to-[#0F172A]', count: 'Aurora week · Family breaks · Weekend escapes' },
-  { to: '/summer',     label: 'Summer',           icon: Sun,      tint: 'from-[#facc15] to-[#7c2d12]', count: 'Midnight sun · Hiking · Lake stays' },
+  { to: '/hotels',     label: 'Hotels & Cabins',  hint: 'Glass igloos · Slope-side · Wilderness lodges',     img: '/images/offer-igloo-saariselka.webp' },
+  { to: '/activities', label: 'Activities',       hint: 'Husky · Aurora · Snowmobile · Reindeer',            img: '/images/offer-husky-safaris.webp' },
+  { to: '/flights',    label: 'Flights',          hint: 'Helsinki to Rovaniemi · Kittilä · Ivalo · Kuusamo', img: '/images/offer-flight-hel-rvn.webp' },
+  { to: '/cars',       label: 'Car Hire',         hint: '4WD · Studded tyres · Airport pickup',              img: '/images/offer-car-rvn.webp' },
+  { to: '/packages',   label: 'Packages',         hint: 'Aurora week · Family breaks · Weekend escapes',     img: '/images/offer-package-aurora-week.webp' },
+  { to: '/summer',     label: 'Summer',           hint: 'Midnight sun · Hiking · Lakeside cabins',           img: '/images/offer-summer-midnight-sun.webp' },
 ];
 
 export default function CategoryTiles() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-      {tiles.map(({ to, label, icon: Icon, tint, count }) => (
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+      {tiles.map(({ to, label, hint, img }) => (
         <Link
           key={to}
           to={to}
-          className="group relative overflow-hidden rounded-2xl border border-white/10 hover:border-vibe-pink/50 transition-all duration-300 hover:-translate-y-0.5 no-underline"
+          className="group relative overflow-hidden rounded-lg border border-line hover:border-line-2 transition-all duration-500 hover:-translate-y-0.5 no-underline aspect-[4/5] md:aspect-[4/3]"
         >
-          <div className={`absolute inset-0 bg-gradient-to-br ${tint}`} />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_60%)]" />
-          <div className="relative p-5 md:p-6 min-h-[140px] md:min-h-[160px] flex flex-col justify-between">
-            <Icon className="w-8 h-8 md:w-10 md:h-10 text-snow/85 group-hover:text-vibe-pink transition-colors" />
-            <div>
-              <h3 className="font-heading text-xl md:text-2xl tracking-wide text-snow mb-1">
-                {label}
-              </h3>
-              <p className="text-snow/60 text-[11px] md:text-xs leading-snug">
-                {count}
-              </p>
-              <span className="mt-2 inline-flex items-center gap-1 text-vibe-pink text-xs font-semibold tracking-wide">
-                Browse
-                <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-              </span>
-            </div>
+          <img
+            src={img}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+          <div className="relative h-full p-5 md:p-6 flex flex-col justify-end">
+            <h3 className="font-heading text-2xl md:text-[1.7rem] font-medium text-ivory leading-tight mb-1">
+              {label}
+            </h3>
+            <p className="text-ivory/75 text-[11px] md:text-xs leading-snug uppercase tracking-[0.14em] mb-3">
+              {hint}
+            </p>
+            <span className="inline-flex items-center gap-1.5 text-ivory text-[12px] font-bold uppercase tracking-[0.12em]">
+              Browse
+              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+            </span>
           </div>
         </Link>
       ))}

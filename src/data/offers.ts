@@ -11,10 +11,8 @@ import { TRIP_FLIGHTS } from '../lib/tripcom';
  * price; we never invent percentages or expiry timers. Curation is ours;
  * pricing is theirs.
  *
- * Optional `flag` is editorial framing (Last-minute / End-of-season / Summer)
- * not a marketing trick — set it where the underlying category genuinely
- * benefits from it (e.g. winter cabin nights in March = real end-of-season
- * window).
+ * Each offer has a corresponding photograph at /public/images/offer-{id}.webp
+ * (generated via scripts/generate-images.py through OpenAI gpt-image-1).
  */
 
 export type OfferCategory = 'hotels' | 'activities' | 'flights' | 'cars' | 'packages';
@@ -30,10 +28,6 @@ export interface Offer {
   partner: OfferPartner;
   href: string;
   flag?: OfferFlag;
-  /** Tailwind gradient class string for the card visual until AI image arrives. */
-  gradient: string;
-  /** lucide-react icon name; mapped in component. */
-  icon: string;
 }
 
 // ─── Helpers ────────────────────────────────────────────────────────────
@@ -59,12 +53,10 @@ export const offers: Offer[] = [
     title: 'Glass Igloo Stays — Saariselkä',
     category: 'hotels',
     location: 'Saariselkä',
-    blurb: 'Heated glass igloos under the aurora belt. Live nightly prices on Hotels.com.',
+    blurb: 'Heated glass igloos on the aurora belt. Live nightly prices on Hotels.com.',
     partner: 'hotels.com',
     href: hotelsUrl('Saariselkä, Finland', 'card_igloo_saariselka'),
     flag: 'editor-pick',
-    gradient: 'from-[#1e3a8a] via-[#312e81] to-[#0F172A]',
-    icon: 'Sparkles',
   },
   {
     id: 'levi-ski',
@@ -75,8 +67,6 @@ export const offers: Offer[] = [
     partner: 'hotels.com',
     href: hotelsUrl('Levi, Kittilä, Finland', 'card_levi_ski'),
     flag: 'last-minute',
-    gradient: 'from-[#0c4a6e] via-[#075985] to-[#0F172A]',
-    icon: 'Mountain',
   },
   {
     id: 'rovaniemi-hotels',
@@ -86,8 +76,6 @@ export const offers: Offer[] = [
     blurb: '15 minutes from Santa Claus Village. Compare hotels and aparthotels.',
     partner: 'hotels.com',
     href: hotelsUrl('Rovaniemi, Finland', 'card_rovaniemi_city'),
-    gradient: 'from-[#7c2d12] via-[#9a3412] to-[#0F172A]',
-    icon: 'Building',
   },
   {
     id: 'yllas-cabins',
@@ -98,8 +86,6 @@ export const offers: Offer[] = [
     partner: 'hotels.com',
     href: hotelsUrl('Ylläs, Kolari, Finland', 'card_yllas_cabins'),
     flag: 'end-of-season',
-    gradient: 'from-[#064e3b] via-[#065f46] to-[#0F172A]',
-    icon: 'Trees',
   },
   {
     id: 'ruka-hotels',
@@ -109,8 +95,6 @@ export const offers: Offer[] = [
     blurb: 'Wild east — Oulanka National Park, husky ranches, late-spring snow.',
     partner: 'hotels.com',
     href: hotelsUrl('Ruka, Kuusamo, Finland', 'card_ruka_stays'),
-    gradient: 'from-[#1e3a8a] via-[#0f172a] to-[#0F172A]',
-    icon: 'Snowflake',
   },
   {
     id: 'inari-stays',
@@ -121,8 +105,6 @@ export const offers: Offer[] = [
     partner: 'hotels.com',
     href: hotelsUrl('Inari, Finland', 'card_inari_stays'),
     flag: 'editor-pick',
-    gradient: 'from-[#312e81] via-[#1e1b4b] to-[#0F172A]',
-    icon: 'Compass',
   },
 
   // ── Activities ─────────────────────────────────────────────────────
@@ -135,8 +117,6 @@ export const offers: Offer[] = [
     partner: 'getyourguide',
     href: GYG_CATEGORIES.husky,
     flag: 'editor-pick',
-    gradient: 'from-[#0c4a6e] via-[#0e7490] to-[#0F172A]',
-    icon: 'Dog',
   },
   {
     id: 'aurora-hunts',
@@ -147,8 +127,6 @@ export const offers: Offer[] = [
     partner: 'getyourguide',
     href: GYG_CATEGORIES.aurora,
     flag: 'last-minute',
-    gradient: 'from-[#10b981] via-[#0f766e] to-[#0F172A]',
-    icon: 'Stars',
   },
   {
     id: 'snowmobile',
@@ -158,8 +136,6 @@ export const offers: Offer[] = [
     blurb: 'Wilderness trails, frozen rivers, Sámi reindeer-farm lunches.',
     partner: 'getyourguide',
     href: GYG_CATEGORIES.snowmobile,
-    gradient: 'from-[#7c2d12] via-[#92400e] to-[#0F172A]',
-    icon: 'Zap',
   },
   {
     id: 'reindeer-tours',
@@ -169,8 +145,6 @@ export const offers: Offer[] = [
     blurb: 'Slow, quiet, ancient — sleigh rides and farm visits with Sámi families.',
     partner: 'getyourguide',
     href: GYG_CATEGORIES.reindeer,
-    gradient: 'from-[#7f1d1d] via-[#991b1b] to-[#0F172A]',
-    icon: 'Heart',
   },
   {
     id: 'ice-fishing',
@@ -181,8 +155,6 @@ export const offers: Offer[] = [
     partner: 'getyourguide',
     href: GYG_CATEGORIES.iceFishing,
     flag: 'end-of-season',
-    gradient: 'from-[#0f172a] via-[#1e293b] to-[#0F172A]',
-    icon: 'Fish',
   },
   {
     id: 'day-trips',
@@ -192,8 +164,6 @@ export const offers: Offer[] = [
     blurb: 'Half-day excursions you can stack: snowshoe + sauna + aurora in 24 hours.',
     partner: 'getyourguide',
     href: GYG_CATEGORIES.daytrips,
-    gradient: 'from-[#1e1b4b] via-[#312e81] to-[#0F172A]',
-    icon: 'Route',
   },
 
   // ── Flights ────────────────────────────────────────────────────────
@@ -206,8 +176,6 @@ export const offers: Offer[] = [
     partner: 'trip.com',
     href: TRIP_FLIGHTS.helToRovaniemi,
     flag: 'last-minute',
-    gradient: 'from-[#0c4a6e] via-[#0369a1] to-[#0F172A]',
-    icon: 'Plane',
   },
   {
     id: 'flight-hel-ktt',
@@ -217,8 +185,6 @@ export const offers: Offer[] = [
     blurb: 'The fast way to Levi & Ylläs. 1h 25m direct.',
     partner: 'trip.com',
     href: TRIP_FLIGHTS.helToKittila,
-    gradient: 'from-[#7c2d12] via-[#9a3412] to-[#0F172A]',
-    icon: 'Plane',
   },
   {
     id: 'flight-hel-ivl',
@@ -228,8 +194,6 @@ export const offers: Offer[] = [
     blurb: 'Northernmost airport in the EU. Gateway to Saariselkä & Inari.',
     partner: 'trip.com',
     href: TRIP_FLIGHTS.helToIvalo,
-    gradient: 'from-[#312e81] via-[#1e1b4b] to-[#0F172A]',
-    icon: 'Plane',
   },
   {
     id: 'flight-hel-kao',
@@ -240,8 +204,6 @@ export const offers: Offer[] = [
     partner: 'trip.com',
     href: TRIP_FLIGHTS.helToKuusamo,
     flag: 'end-of-season',
-    gradient: 'from-[#064e3b] via-[#065f46] to-[#0F172A]',
-    icon: 'Plane',
   },
 
   // ── Cars ───────────────────────────────────────────────────────────
@@ -254,8 +216,6 @@ export const offers: Offer[] = [
     partner: 'economybookings',
     href: carsUrl('RVN', 'card_car_rvn'),
     flag: 'last-minute',
-    gradient: 'from-[#1e293b] via-[#0f172a] to-[#0F172A]',
-    icon: 'Car',
   },
   {
     id: 'car-ktt',
@@ -265,8 +225,6 @@ export const offers: Offer[] = [
     blurb: 'Levi 15 min, Ylläs 50 min. Winter tyres included.',
     partner: 'economybookings',
     href: carsUrl('KTT', 'card_car_ktt'),
-    gradient: 'from-[#1e3a8a] via-[#1e293b] to-[#0F172A]',
-    icon: 'Car',
   },
   {
     id: 'car-ivl',
@@ -276,11 +234,9 @@ export const offers: Offer[] = [
     blurb: 'Saariselkä 30 min, Norwegian border 2h. Quietest roads in Lapland.',
     partner: 'economybookings',
     href: carsUrl('IVL', 'card_car_ivl'),
-    gradient: 'from-[#312e81] via-[#1e1b4b] to-[#0F172A]',
-    icon: 'Car',
   },
 
-  // ── Packages (linked to GYG multi-day + Hotels.com city stays) ────
+  // ── Packages ───────────────────────────────────────────────────────
   {
     id: 'package-aurora-week',
     title: 'Aurora Week — DIY Package',
@@ -290,8 +246,6 @@ export const offers: Offer[] = [
     partner: 'getyourguide',
     href: gygDeepLink('lapland-l662/multi-day-trips-tc55', 'pkg_aurora_week'),
     flag: 'package',
-    gradient: 'from-[#10b981] via-[#0f766e] to-[#0F172A]',
-    icon: 'Calendar',
   },
   {
     id: 'package-family-rovaniemi',
@@ -302,11 +256,9 @@ export const offers: Offer[] = [
     partner: 'getyourguide',
     href: gygDeepLink('rovaniemi-l2653', 'pkg_family_rovaniemi'),
     flag: 'package',
-    gradient: 'from-[#9a3412] via-[#7c2d12] to-[#0F172A]',
-    icon: 'Users',
   },
 
-  // ── Summer offers (kesä-sääntö) ────────────────────────────────────
+  // ── Summer (kesä-sääntö) ───────────────────────────────────────────
   {
     id: 'summer-midnight-sun',
     title: 'Midnight Sun Stays',
@@ -316,8 +268,6 @@ export const offers: Offer[] = [
     partner: 'hotels.com',
     href: hotelsUrl('Inari, Finland', 'card_summer_midnight_sun'),
     flag: 'summer',
-    gradient: 'from-[#facc15] via-[#f97316] to-[#7c2d12]',
-    icon: 'Sun',
   },
   {
     id: 'summer-hiking',
@@ -328,8 +278,6 @@ export const offers: Offer[] = [
     partner: 'getyourguide',
     href: gygDeepLink('lapland-l662/hiking-tc14', 'card_summer_hiking'),
     flag: 'summer',
-    gradient: 'from-[#facc15] via-[#84cc16] to-[#064e3b]',
-    icon: 'Mountain',
   },
 ];
 

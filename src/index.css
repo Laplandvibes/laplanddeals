@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 /* Tailwind v4 must scan ../../shared/ for class names used by the shared
@@ -8,73 +8,84 @@
 @source "../../shared/**/*.{ts,tsx}";
 
 @theme {
-  --font-heading: 'Bebas Neue', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  /* LaplandDeals is a sanctioned light-variant ("saa olla poikkeuksia" — Vesa,
+     2026-05-05). Cream / editorial luxury, NOT canonical deep-night. The
+     Finnish identity layer is still carried by the shared Footer + CookieBanner
+     in finland-blue + white. */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Nunito', sans-serif;
+  --font-display: 'Playfair Display', serif;
 
-  /* Canonical LV ecosystem tokens */
-  --color-deep-night: #0F172A;
-  --color-deep-night-2: #1E293B;
-  --color-snow: #F9FAFB;
+  /* Cream / editorial palette */
+  --color-cream: #FAFAF8;
+  --color-cream-2: #F5F1EA;
+  --color-ivory: #FFFFFF;
+  --color-ink: #0F172A;
+  --color-ink-2: #1F2937;
+  --color-ink-soft: #4B5563;
+  --color-ink-mute: #9CA3AF;
+  --color-line: rgba(15,23,42,0.08);
+  --color-line-2: rgba(15,23,42,0.14);
+
+  /* Brand accents */
   --color-vibe-pink: #EC4899;
   --color-vibe-pink-2: #DB2777;
-  --color-arctic-cyan: #06B6D4;
   --color-finland-blue: #002F6C;
-  --color-aurora-green: #10B981;
+  --color-finland-blue-2: #00204A;
 
-  /* Deals-specific accents — flash/urgency band uses neon-yellow (kesä-sääntö
-     summer warmth) and a clean red for "ending soon" timers. Both used
-     sparingly: page bg stays deep-night, primary CTA stays vibe-pink. */
-  --color-flash-yellow: #FACC15;
-  --color-flash-red: #EF4444;
+  /* Deals-only urgency accents — used sparingly, never for body text */
+  --color-flash-red: #C2410C;
+  --color-flash-red-bg: #FEF2F2;
+  --color-flash-yellow: #B45309;
+  --color-flash-yellow-bg: #FFFBEB;
+  --color-summer: #B45309;
+
+  /* Canonical LV ecosystem tokens — required so shared/ components
+     (Footer, CookieBanner, NewsletterPopup, Legal/*) render correctly.
+     Do NOT use these in laplanddeals page code; they are for shared/. */
+  --color-deep-night: #0F172A;
+  --color-snow: #F9FAFB;
+  --color-arctic-cyan: #06B6D4;
+  --color-aurora-green: #10B981;
 }
 
 @layer base {
+  html { scroll-behavior: smooth; }
+
   body {
     font-family: var(--font-body);
-    background-color: var(--color-deep-night);
-    color: var(--color-snow);
+    background-color: var(--color-cream);
+    color: var(--color-ink);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01" 1, "kern" 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    letter-spacing: 0.025em;
+    color: var(--color-ink);
+    letter-spacing: -0.01em;
   }
 
   ::selection {
     background-color: var(--color-vibe-pink);
-    color: var(--color-snow);
+    color: var(--color-ivory);
   }
 
-  ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: var(--color-deep-night); }
-  ::-webkit-scrollbar-thumb { background: var(--color-vibe-pink); border-radius: 3px; }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--color-cream); }
+  ::-webkit-scrollbar-thumb { background: var(--color-line-2); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-finland-blue); }
 }
 
-/* Hairline gradient frame used on featured deal cards — pulls the eye to
-   "Deal of the Week" without shouting. */
-.frame-pink {
-  background:
-    linear-gradient(var(--color-deep-night-2), var(--color-deep-night-2)) padding-box,
-    linear-gradient(135deg, var(--color-vibe-pink), var(--color-flash-yellow)) border-box;
-  border: 1px solid transparent;
+/* Subtle paper grain on hero overlays — keeps the editorial premium feel. */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Slow ambient pulse used on "Live deals" indicator — pure CSS, no Framer. */
+/* Slow ambient pulse for last-minute "live" indicator. */
 @keyframes deal-pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50%      { opacity: 0.4; transform: scale(1.4); }
+  50%      { opacity: 0.35; transform: scale(1.5); }
 }
 .deal-pulse { animation: deal-pulse 2s ease-in-out infinite; }
-
-/* Diagonal stripe pattern used on "Last chance" urgency band background. */
-.stripes-flash {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(250, 204, 21, 0.08),
-    rgba(250, 204, 21, 0.08) 14px,
-    transparent 14px,
-    transparent 28px
-  );
-}

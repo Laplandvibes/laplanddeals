@@ -27,7 +27,7 @@ const pillarLinks = [
 
 function AppLayout() {
   return (
-    <div className="min-h-screen bg-deep-night text-snow">
+    <div className="min-h-screen bg-cream text-ink">
       <ScrollToTop />
       <Nav />
       <main>
