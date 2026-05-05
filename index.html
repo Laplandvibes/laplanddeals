@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F172A" />
+    <meta name="author" content="Lapeso Oy" />
+    <meta name="publisher" content="Lapeso Oy" />
+
+    <title>LaplandDeals — Last-Minute Deals & Offers for Finnish Lapland</title>
+    <meta name="description" content="Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers — checked daily." />
+    <link rel="canonical" href="https://laplanddeals.com/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Open Graph / WhatsApp / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LaplandDeals" />
+    <meta property="og:title" content="LaplandDeals — Last-Minute Deals & Offers for Finnish Lapland" />
+    <meta property="og:description" content="Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Checked daily." />
+    <meta property="og:url" content="https://laplanddeals.com/" />
+    <meta property="og:image" content="https://laplanddeals.com/og-default.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@laplandvibes" />
+    <meta name="twitter:title" content="LaplandDeals — Last-Minute Deals & Offers for Finnish Lapland" />
+    <meta name="twitter:description" content="Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Checked daily." />
+    <meta name="twitter:image" content="https://laplanddeals.com/og-default.jpg" />
+
+    <!-- Preconnect: fonts + GYG widget -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://widget.getyourguide.com" />
+
+    <!-- GetYourGuide Integration Analyzer (LV-wide rule) -->
+    <script async defer
+      src="https://widget.getyourguide.com/dist/pa.umd.production.min.js"
+      data-gyg-partner-id="VRMKD7N"></script>
+
+    <!-- GA4 Consent Mode v2 (default denied until cookie banner accept) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+      if (localStorage.getItem('laplanddeals_cookie_consent') === 'accepted') {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDS011Y67X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VDS011Y67X', {
+        linker: {
+          domains: [
+            'laplandvibes.com',
+            'laplandnature.com',
+            'laplandstays.com',
+            'laplandbars.com',
+            'laplanddeals.com',
+            'laplanddining.com',
+            'laplandfood.com',
+            'laplandgifts.com',
+            'laplandnightlife.com',
+            'laplandtransport.com',
+            'laplandhoteldeals.com',
+            'laplandhuskysafaris.com',
+            'laplandcarrental.com',
+            'laplandactivities.online',
+            'laplandskiresorts.com',
+            'laplandwellness.com',
+            'laplandvisit.com',
+            'laplandchristmas.com',
+            'stayinlapland.com',
+            'laplandsnowmobile.com',
+            'lapland.blog'
+          ]
+        }
+      });
+    </script>
+
+    <!-- JSON-LD: Organization + WebSite (per-page schema is added by PageSeo) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://laplanddeals.com/#org",
+          "name": "LaplandDeals",
+          "url": "https://laplanddeals.com/",
+          "logo": "https://laplanddeals.com/favicon.svg",
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "LaplandVibes",
+            "url": "https://laplandvibes.com/"
+          },
+          "sameAs": [
+            "https://www.youtube.com/@laplandvibes",
+            "https://www.facebook.com/laplandvibes",
+            "https://www.instagram.com/laplandvibesofficial",
+            "https://www.tiktok.com/@laplandvibesofficial"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://laplanddeals.com/#website",
+          "url": "https://laplanddeals.com/",
+          "name": "LaplandDeals",
+          "publisher": { "@id": "https://laplanddeals.com/#org" },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

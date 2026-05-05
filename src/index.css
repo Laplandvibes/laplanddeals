@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+/* Tailwind v4 must scan ../../shared/ for class names used by the shared
+   Footer/CookieBanner/NewsletterPopup/Legal components. Without this, classes
+   like bg-deep-night/text-vibe-pink/text-snow are stripped from the prod CSS
+   and shared components render unstyled. See lv_critical_react_dedupe.md. */
+@source "../../shared/**/*.{ts,tsx}";
+
+@theme {
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Canonical LV ecosystem tokens */
+  --color-deep-night: #0F172A;
+  --color-deep-night-2: #1E293B;
+  --color-snow: #F9FAFB;
+  --color-vibe-pink: #EC4899;
+  --color-vibe-pink-2: #DB2777;
+  --color-arctic-cyan: #06B6D4;
+  --color-finland-blue: #002F6C;
+  --color-aurora-green: #10B981;
+
+  /* Deals-specific accents — flash/urgency band uses neon-yellow (kesä-sääntö
+     summer warmth) and a clean red for "ending soon" timers. Both used
+     sparingly: page bg stays deep-night, primary CTA stays vibe-pink. */
+  --color-flash-yellow: #FACC15;
+  --color-flash-red: #EF4444;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-deep-night);
+    color: var(--color-snow);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.025em;
+  }
+
+  ::selection {
+    background-color: var(--color-vibe-pink);
+    color: var(--color-snow);
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--color-deep-night); }
+  ::-webkit-scrollbar-thumb { background: var(--color-vibe-pink); border-radius: 3px; }
+}
+
+/* Hairline gradient frame used on featured deal cards — pulls the eye to
+   "Deal of the Week" without shouting. */
+.frame-pink {
+  background:
+    linear-gradient(var(--color-deep-night-2), var(--color-deep-night-2)) padding-box,
+    linear-gradient(135deg, var(--color-vibe-pink), var(--color-flash-yellow)) border-box;
+  border: 1px solid transparent;
+}
+
+/* Slow ambient pulse used on "Live deals" indicator — pure CSS, no Framer. */
+@keyframes deal-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(1.4); }
+}
+.deal-pulse { animation: deal-pulse 2s ease-in-out infinite; }
+
+/* Diagonal stripe pattern used on "Last chance" urgency band background. */
+.stripes-flash {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(250, 204, 21, 0.08),
+    rgba(250, 204, 21, 0.08) 14px,
+    transparent 14px,
+    transparent 28px
+  );
+}
