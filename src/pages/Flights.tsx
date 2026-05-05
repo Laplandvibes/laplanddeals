@@ -19,7 +19,8 @@ export default function Flights() {
 
       <PillarHeader
         eyebrow="Flights"
-        h1="Live fares on Trip.com."
+        h1Italic="Flights to Lapland"
+        h1="live Trip.com fares."
         sub="Helsinki to every Lapland gateway, pre-filled and dated. Click through to real Finnair and Norwegian rates."
         image="/images/offer-flight-hel-rvn.webp"
       />

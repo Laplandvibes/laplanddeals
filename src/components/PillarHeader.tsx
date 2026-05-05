@@ -1,14 +1,24 @@
 interface PillarHeaderProps {
   eyebrow: string;
   h1: string;
+  /** Optional italic display word(s) prepended to the h1 in italic-light. */
+  h1Italic?: string;
   sub: string;
   /** Hero photograph path under /public, e.g. /images/offer-igloo-saariselka.webp */
   image: string;
 }
 
-export default function PillarHeader({ eyebrow, h1, sub, image }: PillarHeaderProps) {
+/**
+ * Pillar page header — same visual signature as the home Hero:
+ *   - full-bleed photograph background
+ *   - left-anchored horizontal dark gradient (NOT bottom-up)
+ *   - vertically centered content block
+ *   - paper-grain magazine texture overlay
+ *   - h1 uses Playfair italic-light + roman-semibold pairing
+ */
+export default function PillarHeader({ eyebrow, h1, h1Italic, sub, image }: PillarHeaderProps) {
   return (
-    <header className="relative overflow-hidden pt-16 min-h-[60vh] md:min-h-[68vh] flex items-end">
+    <header className="relative overflow-hidden pt-16 min-h-[72vh] md:min-h-[78vh] flex items-center">
       <img
         src={image}
         alt=""
@@ -18,16 +28,22 @@ export default function PillarHeader({ eyebrow, h1, sub, image }: PillarHeaderPr
         fetchPriority="high"
         onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/15" />
-      <div className="absolute inset-0 paper-grain opacity-40 mix-blend-overlay" />
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/0" />
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-cream" />
+      <div aria-hidden="true" className="absolute inset-0 paper-grain opacity-40 mix-blend-overlay" />
 
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pb-12 sm:pb-16">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16">
         <div className="max-w-3xl">
-          <p className="text-ivory/80 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.28em] mb-4">
+          <p className="text-ivory/80 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-5 sm:mb-7">
             {eyebrow}
           </p>
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-[3.75rem] font-medium leading-[1.05] tracking-tight text-ivory mb-5">
-            {h1}
+          <h1 className="font-heading text-ivory leading-[1.04] mb-5 sm:mb-7 text-[2.6rem] sm:text-[3.75rem] lg:text-[5rem]">
+            {h1Italic && (
+              <>
+                <span className="italic font-light tracking-[-0.02em]">{h1Italic} </span>
+              </>
+            )}
+            <span className="font-semibold tracking-[-0.015em]">{h1}</span>
           </h1>
           <p className="text-ivory/85 text-base sm:text-lg max-w-2xl leading-relaxed">
             {sub}

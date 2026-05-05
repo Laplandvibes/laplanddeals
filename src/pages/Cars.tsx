@@ -19,8 +19,9 @@ export default function Cars() {
 
       <PillarHeader
         eyebrow="Car hire"
-        h1="Live prices on EconomyBookings."
-        sub="Studded winter tyres, 4WD, free aurora-chasing range. Pickup at every Lapland airport."
+        h1Italic="Winter-ready cars"
+        h1="live partner prices."
+        sub="Studded tyres, 4WD, free aurora-chasing range. Pickup at every Lapland airport — compare on EconomyBookings."
         image="/images/offer-car-rvn.webp"
       />
 

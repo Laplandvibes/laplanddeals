@@ -21,7 +21,8 @@ export default function Packages() {
 
       <PillarHeader
         eyebrow="Packages"
-        h1="Build your own Lapland trip — live prices, no markups."
+        h1Italic="Build your own"
+        h1="Lapland trip."
         sub="We don't sell sealed packages. We curate the building blocks — flights, stays, husky days, aurora hunts — and you book each at the partner's live rate. No middleman fee."
         image="/images/offer-package-aurora-week.webp"
       />

@@ -19,8 +19,9 @@ export default function Activities() {
 
       <PillarHeader
         eyebrow="Activities"
-        h1="Live availability on GetYourGuide."
-        sub="Husky safaris, aurora hunts, snowmobile expeditions, reindeer-farm visits, ice fishing. Real-time bookings — no fake timers, no invented percentages."
+        h1Italic="Lapland activities"
+        h1="real-time availability."
+        sub="Husky safaris, aurora hunts, snowmobile expeditions, reindeer-farm visits, ice fishing. Live availability on GetYourGuide — no fake timers, no invented percentages."
         image="/images/offer-husky-safaris.webp"
       />
 

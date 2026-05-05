@@ -19,7 +19,8 @@ export default function Summer() {
 
       <PillarHeader
         eyebrow="Midnight sun · June 6 – July 7"
-        h1="Summer in Lapland is the secret deal."
+        h1Italic="Summer in Lapland"
+        h1="is the secret deal."
         sub="32 days the sun never sets. Lakeside cabins at a fraction of December rates. Hiking peaks late August — clean air, no mosquitoes, ruska gold."
         image="/images/offer-summer-midnight-sun.webp"
       />

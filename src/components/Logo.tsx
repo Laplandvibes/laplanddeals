@@ -5,18 +5,27 @@ interface LogoProps {
   invert?: boolean;
 }
 
+/**
+ * Wordmark — same Playfair styling logic as the hero h1: italic display
+ * "Lapland" + roman semibold "Deals". Single visual signature across the site.
+ */
 export default function Logo({ className = '', size = 'md', invert = false }: LogoProps) {
   const sizeClass =
-    size === 'lg' ? 'text-2xl md:text-3xl' :
-    size === 'sm' ? 'text-base' :
-    'text-xl';
+    size === 'lg' ? 'text-3xl md:text-4xl' :
+    size === 'sm' ? 'text-lg' :
+    'text-2xl md:text-[1.7rem]';
 
-  const word = invert ? 'text-ivory' : 'text-ink';
+  const lightColour = invert ? '#FFFFFF' : '#002F6C';
+  const heavyColour = invert ? '#FFFFFF' : '#0F172A';
 
   return (
-    <span className={`font-heading tracking-tight ${sizeClass} leading-none ${className}`}>
-      <span className="italic font-medium" style={{ color: invert ? '#FFFFFF' : '#002F6C' }}>Lapland</span>
-      <span className={`font-bold ${word}`}>Deals</span>
+    <span className={`font-heading leading-none ${sizeClass} ${className}`}>
+      <span className="italic font-light" style={{ color: lightColour, letterSpacing: '-0.02em' }}>
+        Lapland
+      </span>
+      <span className="font-semibold" style={{ color: heavyColour, letterSpacing: '-0.01em' }}>
+        Deals
+      </span>
     </span>
   );
 }
