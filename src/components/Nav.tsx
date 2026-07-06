@@ -150,7 +150,7 @@ export default function Nav() {
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex items-center justify-between gap-3 h-16 md:h-[72px]">
           <div className="flex items-center gap-3 sm:gap-5 shrink-0">
-            <EcosystemMenu lang={lang} currentDomain="laplanddeals.com" />
+            <EcosystemMenu lang={lang} currentDomain="laplanddeals.com" variant="light" />
             <Link to={to('/')} className="no-underline" aria-label="LaplandDeals home">
               <Logo />
             </Link>
