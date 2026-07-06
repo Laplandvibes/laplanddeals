@@ -40,13 +40,17 @@ export default function PillarHeader({ eyebrow, h1, h1Italic, sub, image }: Pill
           <p className="text-ivory/80 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-5 sm:mb-7 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             {eyebrow}
           </p>
-          <h1 className="font-heading text-ivory leading-[1.04] mb-5 sm:mb-7 text-[2.6rem] sm:text-[3.75rem] lg:text-[5rem] drop-shadow-[0_3px_18px_rgba(0,0,0,0.85)]">
+          {/* Bebas is single-weight and upright — no italic/weight games.
+              Two-line lockup matching the home Hero: white lead-in line,
+              pink payoff line with the brand glow. */}
+          <h1 className="font-heading text-ivory leading-[0.95] mb-5 sm:mb-7 text-[2.8rem] sm:text-[4rem] lg:text-[5.2rem] drop-shadow-[0_3px_18px_rgba(0,0,0,0.85)]">
             {h1Italic && (
               <>
-                <span className="italic font-light tracking-[-0.02em]">{h1Italic} </span>
+                {h1Italic}
+                <br />
               </>
             )}
-            <span className="font-semibold tracking-[-0.015em]">{h1}</span>
+            <span className="text-vibe-pink drop-shadow-[0_0_40px_rgba(236,72,153,0.8)]">{h1}</span>
           </h1>
           <p className="text-ivory/85 text-base sm:text-lg max-w-2xl leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             {sub}

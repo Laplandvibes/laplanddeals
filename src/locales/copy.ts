@@ -967,7 +967,7 @@ const fi: SectionCopy = {
   flightsPage: {
     eyebrow: 'Lennot',
     h1Italic: 'Lennot Lappiin',
-    h1: 'Trip.comin halvimmat lennot.',
+    h1: 'Trip.comin halvimmat hinnat.',
     sub:
       'Helsinki jokaiselle Lapin lentokentälle, valmiiksi täytetty ja päivätty. Klikkaa avataksesi Finnairin ja Norwegianin todelliset hinnat.',
     seoTitle: 'Lennot Lappiin, Trip.comin live-tarjoukset Helsingistä',
@@ -1005,8 +1005,8 @@ const fi: SectionCopy = {
   },
   summerPage: {
     eyebrow: 'Yötön yö · 6.6.–7.7.',
-    h1Italic: 'Lapin kesä',
-    h1: 'on salainen tarjous.',
+    h1Italic: 'Lapin kesä on',
+    h1: 'salainen tarjous.',
     sub:
       '32 vuorokautta aurinko ei laske. Järvenrantamökit murto-osalla joulukuun hinnoista. Vaeltaminen parhaimmillaan elokuun lopussa, puhdas ilma, ei hyttysiä, ruskan kulta.',
     seoTitle: 'Lapin kesätarjoukset, yöttömän yön majoitukset & vaellus',

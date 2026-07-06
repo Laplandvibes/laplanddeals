@@ -16,7 +16,11 @@ export default function Logo({ className = '', size = 'md', invert = false }: Lo
     size === 'sm' ? 'text-xl md:text-2xl' :
     'text-xl md:text-2xl';
 
-  const heavyColour = invert ? '#FFFFFF' : '#0F172A';
+  // Dark deal theme (2026-07-06): the site chrome is deep-night everywhere, so
+  // LAPLAND is ALWAYS snow — the old non-invert ink (#0F172A) vanished against
+  // the dark nav (Vesa spotted it on /summer). `invert` kept for API compat.
+  void invert;
+  const heavyColour = '#F9FAFB';
 
   // Standard #LAPLAND{BRAND} ecosystem signature (Bebas, # + brand word in
   // vibe-pink, LAPLAND in snow/ink) — a brand constant shared across every LV
