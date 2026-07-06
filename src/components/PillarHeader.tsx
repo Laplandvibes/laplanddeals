@@ -1,3 +1,5 @@
+import PageBreadcrumb from './PageBreadcrumb';
+
 interface PillarHeaderProps {
   eyebrow: string;
   h1: string;
@@ -18,11 +20,12 @@ interface PillarHeaderProps {
  */
 export default function PillarHeader({ eyebrow, h1, h1Italic, sub, image }: PillarHeaderProps) {
   return (
+    <>
     <header className="relative overflow-hidden pt-16 min-h-[72vh] md:min-h-[78vh] flex items-center">
       <img
         src={image}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
+        alt={`${h1Italic ? `${h1Italic} ` : ''}${h1} · Lapland travel deals`}
+        className="absolute inset-0 w-full h-full object-cover object-[center_42%]"
         loading="eager"
         decoding="async"
         fetchPriority="high"
@@ -34,10 +37,10 @@ export default function PillarHeader({ eyebrow, h1, h1Italic, sub, image }: Pill
 
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16">
         <div className="max-w-3xl">
-          <p className="text-ivory/80 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-5 sm:mb-7">
+          <p className="text-ivory/80 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-5 sm:mb-7 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             {eyebrow}
           </p>
-          <h1 className="font-heading text-ivory leading-[1.04] mb-5 sm:mb-7 text-[2.6rem] sm:text-[3.75rem] lg:text-[5rem]">
+          <h1 className="font-heading text-ivory leading-[1.04] mb-5 sm:mb-7 text-[2.6rem] sm:text-[3.75rem] lg:text-[5rem] drop-shadow-[0_3px_18px_rgba(0,0,0,0.85)]">
             {h1Italic && (
               <>
                 <span className="italic font-light tracking-[-0.02em]">{h1Italic} </span>
@@ -45,11 +48,13 @@ export default function PillarHeader({ eyebrow, h1, h1Italic, sub, image }: Pill
             )}
             <span className="font-semibold tracking-[-0.015em]">{h1}</span>
           </h1>
-          <p className="text-ivory/85 text-base sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-ivory/85 text-base sm:text-lg max-w-2xl leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             {sub}
           </p>
         </div>
       </div>
     </header>
+    <PageBreadcrumb />
+    </>
   );
 }

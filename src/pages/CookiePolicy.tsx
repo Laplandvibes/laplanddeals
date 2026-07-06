@@ -1,13 +1,17 @@
 import CookieContent from '../../../shared/Legal/CookieContent';
+import { useLang } from '../i18n/useLang';
+import PageSeo from '../components/PageSeo';
 
 export default function CookiePolicy() {
+  const lang = useLang();
   return (
     <main className="pt-20">
-      <title>Cookie Policy | LaplandDeals</title>
-      <meta name="description" content="How LaplandDeals uses cookies. GDPR + ePrivacy compliant. Operated by Lapeso Oy." />
-      <link rel="canonical" href="https://laplanddeals.com/cookie-policy" />
-      <meta name="robots" content="index, follow" />
-      <CookieContent siteName="LaplandDeals" />
+      <PageSeo
+        title="Cookie Policy"
+        description="How LaplandDeals uses cookies. GDPR + ePrivacy compliant. Operated by Lapeso Oy."
+        path="/cookie-policy"
+      />
+      <CookieContent siteName="LaplandDeals" lang={lang} />
     </main>
   );
 }

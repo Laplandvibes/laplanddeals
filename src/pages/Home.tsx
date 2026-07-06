@@ -1,19 +1,23 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, Newspaper, Globe } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Newspaper, Globe, ExternalLink } from 'lucide-react';
+import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import PageSeo from '../components/PageSeo';
 import Hero from '../components/Hero';
 import FlashBand from '../components/FlashBand';
 import TodaysPulse from '../components/TodaysPulse';
 import CategoryTiles from '../components/CategoryTiles';
 import OffersGrid from '../components/OffersGrid';
+import PartnerAd from '../components/PartnerAd';
 import NewsletterSection from '../components/NewsletterSection';
 import { offers, getEditorPicks, getLastMinute, getSummerOffers } from '../data/offers';
+import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 function SectionHeader({ eyebrow, title, lead, children }: { eyebrow: string; title: string; lead?: string; children?: React.ReactNode }) {
   return (
     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
       <div className="max-w-2xl">
-        <p className="text-finland-blue text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">
+        <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">
           {eyebrow}
         </p>
         <h2 className="font-heading text-3xl sm:text-5xl font-medium leading-[1.05] text-ink">
@@ -30,11 +34,75 @@ function SectionHeader({ eyebrow, title, lead, children }: { eyebrow: string; ti
   );
 }
 
+// Canonical sibling-site URLs (source: shared/Footer + SITE-MAP.md). Order must
+// match COPY[lang].related.links: hotelDeals, activities, tours.
+const SIBLING_URLS = [
+  'https://laplandhoteldeals.com',
+  'https://laplandactivities.online',
+  'https://laplandtours.online',
+];
+
+const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
+  en: {
+    title: 'LaplandDeals — Last-Minute Deals for Finnish Lapland',
+    desc: 'Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers.',
+  },
+  fi: {
+    title: 'LaplandDeals — Last-minute-tarjoukset Suomen Lappiin',
+    desc: 'Kumppaneiden live-tarjoukset Lapin hotelleihin, huskysafareihin, lentoihin Rovaniemelle ja autovuokrauksiin. Last-minute-hinnat, kauden loppumökkiöt ja kesätarjoukset.',
+  },
+  de: {
+    title: 'LaplandDeals — Last-Minute-Angebote für Finnisch-Lappland',
+    desc: 'Live-Partnerangebote für Hotels in Lappland, Husky-Safaris, Flüge nach Rovaniemi und Mietwagen. Last-Minute-Preise, Saisonende-Rabatte, Sommerangebote.',
+  },
+  ja: {
+    title: 'LaplandDeals — フィンランド・ラップランドのお得な旅行プラン',
+    desc: 'ラップランドのホテル、ハスキーサファリ、ロヴァニエミ行き航空券、レンタカーの最新パートナーオファー。直前価格・シーズン終了セール・夏季オファーを',
+  },
+  es: {
+    title: 'LaplandDeals — Ofertas de última hora para la Laponia finlandesa',
+    desc: 'Ofertas reales de los socios en hoteles de Laponia, safaris en husky, vuelos a Rovaniemi y alquiler de coches. Precios de última hora, descensos de fin de temporada y ofertas de verano.',
+  },
+  'pt-BR': {
+    title: 'LaplandDeals — Ofertas de última hora para a Lapônia finlandesa',
+    desc: 'Ofertas reais dos parceiros em hotéis da Lapônia, safáris com huskies, voos para Rovaniemi e aluguel de carro. Preços de última hora, promoções de fim de temporada e ofertas de verão.',
+  },
+  'zh-CN': {
+    title: 'LaplandDeals — 芬兰拉普兰临时优惠与特价',
+    desc: '拉普兰酒店、哈士奇雪橇、罗瓦涅米航班和租车的合作伙伴实时优惠。临时折扣、季末清仓、夏季优惠。',
+  },
+  ko: {
+    title: 'LaplandDeals — 핀란드 라플란드 직전 예약 특가와 할인',
+    desc: '라플란드 호텔, 허스키 사파리, 로바니에미행 항공편, 렌터카의 파트너 실시간 특가. 직전 예약, 시즌 마감 할인, 여름 특가.',
+  },
+  fr: {
+    title: 'LaplandDeals — Offres et promotions de dernière minute pour la Laponie finlandaise',
+    desc: "Offres partenaires en direct sur les hôtels de Laponie, safaris en husky, vols pour Rovaniemi et location de voitures. Tarifs de dernière minute, soldes de fin de saison, offres d'été.",
+  },
+  it: {
+    title: 'LaplandDeals — Offerte last-minute e promozioni per la Lapponia finlandese',
+    desc: 'Offerte partner in tempo reale su hotel in Lapponia, safari con husky, voli per Rovaniemi e autonoleggio. Prezzi last-minute, sconti di fine stagione, offerte estive.',
+  },
+  nl: {
+    title: 'LaplandDeals — Last-minute aanbiedingen voor Fins Lapland',
+    desc: "Live partneraanbiedingen voor Lapland-hotels, husky-safari's, vluchten naar Rovaniemi en autoverhuur. Last-minute prijzen, eindseizoenskortingen, zomeraanbiedingen.",
+  },
+};
+
 export default function Home() {
-  const editorsPicks = getEditorPicks(4);
-  const lastMinute = getLastMinute(6);
-  const summerPicks = getSummerOffers(4);
-  const everything = offers.slice(0, 12);
+  const lang = useLang();
+  const to = useLocalePath();
+  const c = COPY[lang];
+
+  const editorsPicks = getEditorPicks(4, lang);
+  const lastMinute = getLastMinute(6, lang);
+  const summerPicks = getSummerOffers(4, lang);
+  const everything = offers(lang).slice(0, 12);
+  const seo = SEO_TITLE[lang];
+  const pathSeg: Record<Lang, string> = { en: '', fi: '/fi', de: '/de', ja: '/ja', es: '/es', 'pt-BR': '/br', 'zh-CN': '/cn', ko: '/kr', fr: '/fr', it: '/it', nl: '/nl' };
+  const path = pathSeg[lang] || '/';
+  const inLangMap: Record<Lang, string> = { en: 'en', fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko', fr: 'fr', it: 'it', nl: 'nl' };
+  const inLang = inLangMap[lang];
 
   const itemList = {
     '@type': 'ItemList',
@@ -47,49 +115,30 @@ export default function Home() {
     })),
   };
 
+  const faqSchema = {
+    '@type': 'FAQPage',
+    mainEntity: c.faq.items.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   return (
     <>
       <PageSeo
-        title="LaplandDeals — Last-Minute Deals & Offers for Finnish Lapland"
-        description="Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers — checked daily."
-        path="/"
+        title={seo.title}
+        description={seo.desc}
+        path={path}
         jsonLd={[
           {
             '@type': 'WebPage',
-            name: 'LaplandDeals — Last-Minute Deals & Offers for Finnish Lapland',
-            url: 'https://laplanddeals.com/',
-            inLanguage: 'en',
+            name: seo.title,
+            url: `https://laplanddeals.com${path === '/' ? '/' : path}`,
+            inLanguage: inLang,
           },
           itemList,
-          {
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'Are LaplandDeals prices real or invented?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Every deal links to a live partner search (Hotels.com, Trip.com, GetYourGuide, EconomyBookings). The partner shows today\'s actual price the moment you click — we never invent percentages or expiry timers.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'When is the cheapest time to visit Lapland?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Mid-March to mid-April is end-of-season — full snow, longer daylight, lower cabin and ski prices. Late April to early June is shoulder season. Summer (June–August) has midnight-sun cabin deals at a fraction of winter rates.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Where do these deals come from?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'We curate a list of categories and destinations across Finnish Lapland and link each card to a live affiliate search on Hotels.com, Trip.com, GetYourGuide or EconomyBookings. Pricing is theirs; the curation is ours.',
-                },
-              },
-            ],
-          },
+          faqSchema,
         ]}
       />
 
@@ -101,12 +150,12 @@ export default function Home() {
       <section className="relative py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <SectionHeader
-            eyebrow="Editor's picks"
-            title="Quietly curated for the season ahead."
-            lead="The places we'd send our own friends. Each links to today's live partner price."
+            eyebrow={c.sections.pickEyebrow}
+            title={c.sections.pickTitle}
+            lead={c.sections.pickLead}
           >
-            <Link to="/hotels" className="hidden md:inline-flex items-center gap-1 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline">
-              All hotels <ArrowRight className="w-3.5 h-3.5" />
+            <Link to={to('/hotels')} className="hidden md:inline-flex items-center gap-1 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline">
+              {c.sections.pickCta} <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </SectionHeader>
           <OffersGrid offers={editorsPicks} cols="md:grid-cols-2 lg:grid-cols-4" />
@@ -117,8 +166,8 @@ export default function Home() {
       <section className="relative bg-cream-2 py-20 sm:py-24 border-y border-line">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <SectionHeader
-            eyebrow="Browse by category"
-            title="Find your kind of Lapland deal."
+            eyebrow={c.sections.categoriesEyebrow}
+            title={c.sections.categoriesTitle}
           />
           <CategoryTiles />
         </div>
@@ -128,27 +177,27 @@ export default function Home() {
       <section className="relative py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <SectionHeader
-            eyebrow="Last-minute window"
-            title="Going within the next two weeks?"
-            lead="Cabin nights, husky slots and aurora hunts that often have last-minute openings. Live partner availability — refreshed on every click."
+            eyebrow={c.sections.lastMinEyebrow}
+            title={c.sections.lastMinTitle}
+            lead={c.sections.lastMinLead}
           />
           <OffersGrid offers={lastMinute} />
         </div>
       </section>
 
-      {/* ── Summer (kesä-sääntö) ─────────────────────────────────────── */}
+      {/* ── Summer ─────────────────────────────────────── */}
       <section className="relative py-20 sm:py-24 border-y border-line bg-flash-yellow-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <SectionHeader
-            eyebrow="Midnight sun · Jun 6 – Jul 7"
-            title="Summer in Lapland is the secret deal."
-            lead="32 days the sun never sets. Lakeside cabins at a fraction of December rates. Hiking peaks late August — clean air, no mosquitoes, ruska gold."
+            eyebrow={c.sections.summerEyebrow}
+            title={c.sections.summerTitle}
+            lead={c.sections.summerLead}
           >
             <Link
-              to="/summer"
-              className="shrink-0 inline-flex items-center gap-2 bg-ink hover:bg-finland-blue text-ivory font-bold uppercase tracking-[0.1em] px-6 py-3 rounded-full text-[13px] transition-colors no-underline"
+              to={to('/summer')}
+              className="shrink-0 inline-flex items-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] px-6 py-3 rounded-full text-[13px] transition-colors no-underline"
             >
-              Browse summer
+              {c.sections.summerCta}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </SectionHeader>
@@ -156,11 +205,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── All (preview) ─────────────────────────────────────────── */}
+      {/* ── Partner: Lomarengas cottages (distinct from the offer cards) ── */}
+      <section className="relative py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <PartnerAd advertiser="lomarengas" placement="home_cottages" />
+        </div>
+      </section>
+
+      {/* ── All ─────────────────────────────────────────── */}
       <section className="relative py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <SectionHeader eyebrow="Everything" title="Today's catalogue." />
+          <SectionHeader eyebrow={c.sections.everythingEyebrow} title={c.sections.everythingTitle} />
           <OffersGrid offers={everything} />
+          <AffiliateDisclosure variant="block" className="mt-10 max-w-3xl" />
         </div>
       </section>
 
@@ -168,18 +225,91 @@ export default function Home() {
       <section className="bg-cream-2 border-t border-line py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { icon: ShieldCheck, title: 'Honest curation', body: 'Live partner prices. Never invented percentages or fake countdowns.' },
-              { icon: Newspaper,   title: 'Reviewed by locals', body: 'Curated by people who actually live and travel in Finnish Lapland.' },
-              { icon: Globe,       title: 'Part of #LaplandVibes', body: '23+ sister sites. One ecosystem. One newsletter. One source of truth.' },
-            ].map(({ icon: Icon, title, body }) => (
-              <div key={title} className="flex items-start gap-4">
-                <Icon className="w-6 h-6 text-finland-blue shrink-0 mt-1" />
-                <div>
-                  <p className="font-heading text-lg font-medium text-ink mb-1">{title}</p>
-                  <p className="text-ink-soft text-sm leading-relaxed">{body}</p>
+            {[ShieldCheck, Newspaper, Globe].map((Icon, i) => {
+              const t = c.trust[i];
+              return (
+                <div key={t.title} className="flex items-start gap-4">
+                  <Icon className="w-6 h-6 text-vibe-pink shrink-0 mt-1" />
+                  <div>
+                    <p className="font-heading text-lg font-medium text-ink mb-1">{t.title}</p>
+                    <p className="text-ink-soft text-sm leading-relaxed">{t.body}</p>
+                  </div>
                 </div>
-              </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ (visible counterpart of the FAQPage JSON-LD above) ──── */}
+      <section className="relative py-20 sm:py-24 border-t border-line">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="mb-10 md:mb-14">
+            <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">
+              {c.faq.eyebrow}
+            </p>
+            <h2 className="font-heading text-3xl sm:text-5xl font-medium leading-[1.05] text-ink">
+              {c.faq.title}
+            </h2>
+            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed">
+              {c.faq.lead}
+            </p>
+          </div>
+          <div className="space-y-4">
+            {c.faq.items.map((f) => (
+              <details
+                key={f.q}
+                className="group rounded-xl border border-line bg-cream-2 open:border-finland-blue/40 transition-colors"
+              >
+                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none px-6 py-5 min-h-[68px] text-ink font-bold text-base sm:text-lg [&::-webkit-details-marker]:hidden">
+                  {f.q}
+                  <span
+                    aria-hidden="true"
+                    className="shrink-0 text-vibe-pink transition-transform duration-200 group-open:rotate-45 text-2xl leading-none"
+                  >
+                    +
+                  </span>
+                </summary>
+                <p className="px-6 pb-6 text-ink-soft text-sm sm:text-base leading-relaxed">
+                  {f.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Related sites / where to next ───────────────────────────── */}
+      <section className="relative bg-cream-2 py-20 sm:py-24 border-y border-line">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          <div className="max-w-2xl mb-10 md:mb-14">
+            <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">
+              {c.related.eyebrow}
+            </p>
+            <h2 className="font-heading text-3xl sm:text-5xl font-medium leading-[1.05] text-ink">
+              {c.related.title}
+            </h2>
+            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed">
+              {c.related.lead}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {c.related.links.map((l, i) => (
+              <a
+                key={SIBLING_URLS[i]}
+                href={SIBLING_URLS[i]}
+                target="_blank"
+                rel="noopener"
+                className="group flex flex-col rounded-xl border border-line bg-cream p-6 hover:border-finland-blue/50 hover:-translate-y-0.5 transition-all no-underline"
+              >
+                <span className="inline-flex items-center gap-1.5 font-heading text-xl font-medium text-ink group-hover:text-vibe-pink transition-colors">
+                  {l.anchor}
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0 opacity-60" />
+                </span>
+                <span className="text-ink-soft text-sm leading-relaxed mt-2">
+                  {l.blurb}
+                </span>
+              </a>
             ))}
           </div>
         </div>

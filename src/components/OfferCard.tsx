@@ -1,21 +1,15 @@
 import { ArrowUpRight, MapPin } from 'lucide-react';
 import type { Offer } from '../data/offers';
 import { trackAffiliateClick } from '../lib/analytics';
-
-const FLAG_LABEL: Record<NonNullable<Offer['flag']>, string> = {
-  'last-minute':   'Last-minute',
-  'end-of-season': 'End of season',
-  'summer':        'Midnight sun',
-  'package':       'Multi-day',
-  'editor-pick':   "Editor's pick",
-};
+import { useLang } from '../i18n/useLang';
+import { COPY } from '../locales/copy';
 
 const FLAG_STYLE: Record<NonNullable<Offer['flag']>, string> = {
   'last-minute':   'bg-flash-red text-ivory',
   'end-of-season': 'bg-finland-blue text-ivory',
   'summer':        'bg-flash-yellow text-ivory',
   'package':       'bg-vibe-pink text-ivory',
-  'editor-pick':   'bg-ivory text-ink border border-line-2',
+  'editor-pick':   'bg-ivory text-deep-night border border-line-2',
 };
 
 const PARTNER_LABEL: Record<Offer['partner'], string> = {
@@ -33,6 +27,8 @@ interface Props {
 }
 
 export default function OfferCard({ offer, size = 'md', showImage = true }: Props) {
+  const lang = useLang();
+  const card = COPY[lang].card;
   const heightClass =
     size === 'lg' ? 'h-72 md:h-[22rem]' :
     size === 'sm' ? 'h-44' :
@@ -48,7 +44,7 @@ export default function OfferCard({ offer, size = 'md', showImage = true }: Prop
       target="_blank"
       rel="sponsored nofollow noopener"
       onClick={handleClick}
-      className="group flex flex-col overflow-hidden rounded-lg bg-ivory border border-line hover:border-line-2 hover:shadow-[0_24px_48px_-24px_rgba(15,23,42,0.16)] transition-all duration-500 hover:-translate-y-0.5 no-underline"
+      className="group flex flex-col overflow-hidden rounded-lg bg-cream-2 border border-line hover:border-vibe-pink/40 hover:shadow-[0_24px_48px_-24px_rgba(0,0,0,0.75)] transition-all duration-500 hover:-translate-y-0.5 no-underline"
     >
       {/* Visual */}
       <div className={`relative ${heightClass} overflow-hidden bg-cream-2`}>
@@ -72,7 +68,7 @@ export default function OfferCard({ offer, size = 'md', showImage = true }: Prop
             className={`absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.14em] uppercase shadow-sm ${FLAG_STYLE[offer.flag]}`}
           >
             {offer.flag === 'last-minute' && <span className="w-1.5 h-1.5 rounded-full bg-ivory deal-pulse" />}
-            {FLAG_LABEL[offer.flag]}
+            {card.flags[offer.flag]}
           </span>
         )}
       </div>
@@ -94,13 +90,13 @@ export default function OfferCard({ offer, size = 'md', showImage = true }: Prop
 
         <div className="flex items-end justify-between mt-auto pt-4 border-t border-line">
           <div className="flex flex-col">
-            <span className="text-ink-mute text-[10px] uppercase tracking-[0.14em]">Live prices</span>
+            <span className="text-ink-mute text-[10px] uppercase tracking-[0.14em]">{card.livePrices}</span>
             <span className="text-ink text-[13px] font-semibold tracking-tight">
               {PARTNER_LABEL[offer.partner]}
             </span>
           </div>
           <span className="inline-flex items-center gap-1.5 text-vibe-pink text-[13px] font-bold tracking-[0.04em]">
-            See deals
+            {card.seeDeals}
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </span>
         </div>

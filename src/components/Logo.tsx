@@ -12,21 +12,23 @@ interface LogoProps {
  */
 export default function Logo({ className = '', size = 'md', invert = false }: LogoProps) {
   const sizeClass =
-    size === 'lg' ? 'text-3xl md:text-4xl' :
-    size === 'sm' ? 'text-lg' :
-    'text-2xl md:text-[1.7rem]';
+    size === 'lg' ? 'text-4xl md:text-5xl' :
+    size === 'sm' ? 'text-xl md:text-2xl' :
+    'text-xl md:text-2xl';
 
   const heavyColour = invert ? '#FFFFFF' : '#0F172A';
 
+  // Standard #LAPLAND{BRAND} ecosystem signature (Bebas, # + brand word in
+  // vibe-pink, LAPLAND in snow/ink) — a brand constant shared across every LV
+  // site, regardless of each site's own body typography variant.
   return (
-    <span className={`font-heading leading-none ${sizeClass} ${className}`}>
-      <span className="font-semibold" style={{ color: '#EC4899', letterSpacing: '-0.04em', marginRight: '0.04em' }}>#</span>
-      <span className="italic font-light" style={{ color: heavyColour, letterSpacing: '-0.02em' }}>
-        Lapland
-      </span>
-      <span className="font-semibold" style={{ color: heavyColour, letterSpacing: '-0.01em' }}>
-        Deals
-      </span>
+    <span
+      className={`leading-none ${sizeClass} ${className}`}
+      style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '0.04em' }}
+    >
+      <span style={{ color: '#EC4899' }}>#</span>
+      <span style={{ color: heavyColour }}>LAPLAND</span>
+      <span style={{ color: '#EC4899' }}>DEALS</span>
     </span>
   );
 }

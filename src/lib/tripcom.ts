@@ -8,6 +8,23 @@ const TRIP_CONFIG = {
   sourceTag: 'laplanddeals.com',
 } as const;
 
+// LOCALE: 2026-05-16 — pass user locale to Trip.com so DE/FI users land on the
+// local Trip.com flow (locale=de-DE / fi-FI). EN defaults to en-XX (multi-lang EN).
+export type TripLang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+const TRIP_LOCALE: Record<TripLang, string> = {
+  en: 'en-XX',
+  fi: 'fi-FI',
+  de: 'de-DE',
+  ja: 'ja-JP',
+  es: 'es-ES',
+  'pt-BR': 'pt-BR',
+  'zh-CN': 'zh-CN',
+  ko: 'ko-KR',
+  fr: 'fr-FR',
+  it: 'it-IT',
+  nl: 'nl-NL',
+};
+
 function defaultDate(daysFromNow: number): string {
   const d = new Date();
   d.setDate(d.getDate() + daysFromNow);
@@ -30,6 +47,8 @@ export interface TripFlightOpts {
   depart?: string;
   returnDate?: string;
   triptype?: 'rt' | 'ow';
+  /** Site language — sets Trip.com locale param. */
+  lang?: TripLang;
 }
 
 export function buildTripFlightUrl(o: TripFlightOpts): string {
@@ -46,13 +65,14 @@ export function buildTripFlightUrl(o: TripFlightOpts): string {
   url.searchParams.set('class', 'y');
   url.searchParams.set('quantity', '1');
   url.searchParams.set('curr', 'EUR');
-  url.searchParams.set('locale', 'en-XX');
+  url.searchParams.set('locale', TRIP_LOCALE[o.lang ?? 'en']);
   attachAffiliateParams(url, o.sid);
   return url.toString();
 }
 
-export function buildTripFlightHome(sid: string): string {
+export function buildTripFlightHome(sid: string, lang: TripLang = 'en'): string {
   const url = new URL('https://www.trip.com/flights');
+  url.searchParams.set('locale', TRIP_LOCALE[lang]);
   attachAffiliateParams(url, sid);
   return url.toString();
 }
@@ -62,13 +82,15 @@ export function buildTripFlightHome(sid: string): string {
 export interface TripHotelOpts {
   city: string;
   sid: string;
+  /** Site language — sets Trip.com locale param. */
+  lang?: TripLang;
 }
 
 /** Trip.com hotel city search — fallback when Hotels.com (CJ) doesn't cover. */
 export function buildTripHotelUrl(o: TripHotelOpts): string {
   const url = new URL('https://www.trip.com/hotels/list');
   url.searchParams.set('city', o.city);
-  url.searchParams.set('locale', 'en-XX');
+  url.searchParams.set('locale', TRIP_LOCALE[o.lang ?? 'en']);
   url.searchParams.set('curr', 'EUR');
   attachAffiliateParams(url, o.sid);
   return url.toString();
@@ -82,11 +104,13 @@ export interface TripTransportOpts {
   sid: string;
   tab?: 'coach' | 'train';
   depart?: string;
+  /** Site language — sets Trip.com locale param. */
+  lang?: TripLang;
 }
 
 export function buildTripTransportUrl(o: TripTransportOpts): string {
   const url = new URL('https://www.trip.com/trains/list');
-  url.searchParams.set('locale', 'en-XX');
+  url.searchParams.set('locale', TRIP_LOCALE[o.lang ?? 'en']);
   url.searchParams.set('curr', 'EUR');
   url.searchParams.set('departurecity', o.fromCity);
   url.searchParams.set('arrivalcity', o.toCity);
@@ -110,20 +134,20 @@ const PAIRS = {
   hel_kem: { from: 'hel', to: 'kem', fromCity: 'Helsinki', toCity: 'Kemi' },
 } as const;
 
-export const TRIP_FLIGHTS = {
-  helToRovaniemi: buildTripFlightUrl({ ...PAIRS.hel_rvn, sid: 'flight_hel_rvn' }),
-  helToKittila:   buildTripFlightUrl({ ...PAIRS.hel_ktt, sid: 'flight_hel_ktt' }),
-  helToIvalo:     buildTripFlightUrl({ ...PAIRS.hel_ivl, sid: 'flight_hel_ivl' }),
-  helToOulu:      buildTripFlightUrl({ ...PAIRS.hel_oul, sid: 'flight_hel_oul' }),
-  helToKuusamo:   buildTripFlightUrl({ ...PAIRS.hel_kao, sid: 'flight_hel_kao' }),
-  helToKemi:      buildTripFlightUrl({ ...PAIRS.hel_kem, sid: 'flight_hel_kem' }),
-};
+export const TRIP_FLIGHTS = (lang: TripLang = 'en') => ({
+  helToRovaniemi: buildTripFlightUrl({ ...PAIRS.hel_rvn, sid: 'flight_hel_rvn', lang }),
+  helToKittila:   buildTripFlightUrl({ ...PAIRS.hel_ktt, sid: 'flight_hel_ktt', lang }),
+  helToIvalo:     buildTripFlightUrl({ ...PAIRS.hel_ivl, sid: 'flight_hel_ivl', lang }),
+  helToOulu:      buildTripFlightUrl({ ...PAIRS.hel_oul, sid: 'flight_hel_oul', lang }),
+  helToKuusamo:   buildTripFlightUrl({ ...PAIRS.hel_kao, sid: 'flight_hel_kao', lang }),
+  helToKemi:      buildTripFlightUrl({ ...PAIRS.hel_kem, sid: 'flight_hel_kem', lang }),
+});
 
-export const TRIP_HOTELS = {
-  rovaniemi:   buildTripHotelUrl({ city: 'Rovaniemi',   sid: 'hotel_rovaniemi' }),
-  levi:        buildTripHotelUrl({ city: 'Levi',        sid: 'hotel_levi' }),
-  saariselka:  buildTripHotelUrl({ city: 'Saariselkä',  sid: 'hotel_saariselka' }),
-  yllas:       buildTripHotelUrl({ city: 'Ylläs',       sid: 'hotel_yllas' }),
-  inari:       buildTripHotelUrl({ city: 'Inari',       sid: 'hotel_inari' }),
-  ruka:        buildTripHotelUrl({ city: 'Ruka',        sid: 'hotel_ruka' }),
-};
+export const TRIP_HOTELS = (lang: TripLang = 'en') => ({
+  rovaniemi:   buildTripHotelUrl({ city: 'Rovaniemi',   sid: 'hotel_rovaniemi', lang }),
+  levi:        buildTripHotelUrl({ city: 'Levi',        sid: 'hotel_levi', lang }),
+  saariselka:  buildTripHotelUrl({ city: 'Saariselkä',  sid: 'hotel_saariselka', lang }),
+  yllas:       buildTripHotelUrl({ city: 'Ylläs',       sid: 'hotel_yllas', lang }),
+  inari:       buildTripHotelUrl({ city: 'Inari',       sid: 'hotel_inari', lang }),
+  ruka:        buildTripHotelUrl({ city: 'Ruka',        sid: 'hotel_ruka', lang }),
+});

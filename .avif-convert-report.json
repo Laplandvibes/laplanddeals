@@ -1,0 +1,158 @@
+{
+  "site": "laplanddeals-new",
+  "scanned_webp": 24,
+  "converted": 24,
+  "skipped_exists": 0,
+  "skipped_avif_larger": 0,
+  "errors": 0,
+  "total_webp_bytes": 5195304,
+  "total_avif_bytes": 4099089,
+  "saved_mb": "1.05",
+  "saved_pct": "21.1",
+  "report": [
+    {
+      "file": "public\\images\\home-hero.webp",
+      "webp_bytes": 253256,
+      "avif_bytes": 144756,
+      "saved_pct": "42.8"
+    },
+    {
+      "file": "public\\images\\offer-aurora-hunts.webp",
+      "webp_bytes": 76138,
+      "avif_bytes": 46659,
+      "saved_pct": "38.7"
+    },
+    {
+      "file": "public\\images\\offer-car-ivl.webp",
+      "webp_bytes": 349096,
+      "avif_bytes": 292141,
+      "saved_pct": "16.3"
+    },
+    {
+      "file": "public\\images\\offer-car-ktt.webp",
+      "webp_bytes": 236286,
+      "avif_bytes": 188523,
+      "saved_pct": "20.2"
+    },
+    {
+      "file": "public\\images\\offer-car-rvn.webp",
+      "webp_bytes": 226380,
+      "avif_bytes": 183130,
+      "saved_pct": "19.1"
+    },
+    {
+      "file": "public\\images\\offer-day-trips.webp",
+      "webp_bytes": 462468,
+      "avif_bytes": 406301,
+      "saved_pct": "12.1"
+    },
+    {
+      "file": "public\\images\\offer-flight-hel-ivl.webp",
+      "webp_bytes": 194356,
+      "avif_bytes": 162808,
+      "saved_pct": "16.2"
+    },
+    {
+      "file": "public\\images\\offer-flight-hel-kao.webp",
+      "webp_bytes": 350432,
+      "avif_bytes": 311124,
+      "saved_pct": "11.2"
+    },
+    {
+      "file": "public\\images\\offer-flight-hel-ktt.webp",
+      "webp_bytes": 99074,
+      "avif_bytes": 65590,
+      "saved_pct": "33.8"
+    },
+    {
+      "file": "public\\images\\offer-flight-hel-rvn.webp",
+      "webp_bytes": 163036,
+      "avif_bytes": 118364,
+      "saved_pct": "27.4"
+    },
+    {
+      "file": "public\\images\\offer-husky-safaris.webp",
+      "webp_bytes": 178886,
+      "avif_bytes": 136671,
+      "saved_pct": "23.6"
+    },
+    {
+      "file": "public\\images\\offer-ice-fishing.webp",
+      "webp_bytes": 160320,
+      "avif_bytes": 122127,
+      "saved_pct": "23.8"
+    },
+    {
+      "file": "public\\images\\offer-igloo-saariselka.webp",
+      "webp_bytes": 84976,
+      "avif_bytes": 52771,
+      "saved_pct": "37.9"
+    },
+    {
+      "file": "public\\images\\offer-inari-stays.webp",
+      "webp_bytes": 91288,
+      "avif_bytes": 57254,
+      "saved_pct": "37.3"
+    },
+    {
+      "file": "public\\images\\offer-levi-ski.webp",
+      "webp_bytes": 214008,
+      "avif_bytes": 164207,
+      "saved_pct": "23.3"
+    },
+    {
+      "file": "public\\images\\offer-package-aurora-week.webp",
+      "webp_bytes": 172852,
+      "avif_bytes": 115729,
+      "saved_pct": "33.0"
+    },
+    {
+      "file": "public\\images\\offer-package-family-rovaniemi.webp",
+      "webp_bytes": 183978,
+      "avif_bytes": 152662,
+      "saved_pct": "17.0"
+    },
+    {
+      "file": "public\\images\\offer-reindeer-tours.webp",
+      "webp_bytes": 181466,
+      "avif_bytes": 114703,
+      "saved_pct": "36.8"
+    },
+    {
+      "file": "public\\images\\offer-rovaniemi-hotels.webp",
+      "webp_bytes": 161272,
+      "avif_bytes": 109805,
+      "saved_pct": "31.9"
+    },
+    {
+      "file": "public\\images\\offer-ruka-hotels.webp",
+      "webp_bytes": 218214,
+      "avif_bytes": 184303,
+      "saved_pct": "15.5"
+    },
+    {
+      "file": "public\\images\\offer-snowmobile.webp",
+      "webp_bytes": 305606,
+      "avif_bytes": 251796,
+      "saved_pct": "17.6"
+    },
+    {
+      "file": "public\\images\\offer-summer-hiking.webp",
+      "webp_bytes": 432866,
+      "avif_bytes": 396336,
+      "saved_pct": "8.4"
+    },
+    {
+      "file": "public\\images\\offer-summer-midnight-sun.webp",
+      "webp_bytes": 235552,
+      "avif_bytes": 197004,
+      "saved_pct": "16.4"
+    },
+    {
+      "file": "public\\images\\offer-yllas-cabins.webp",
+      "webp_bytes": 163498,
+      "avif_bytes": 124325,
+      "saved_pct": "24.0"
+    }
+  ]
+}

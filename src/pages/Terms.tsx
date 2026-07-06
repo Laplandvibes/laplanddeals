@@ -1,13 +1,17 @@
 import TermsContent from '../../../shared/Legal/TermsContent';
+import { useLang } from '../i18n/useLang';
+import PageSeo from '../components/PageSeo';
 
 export default function Terms() {
+  const lang = useLang();
   return (
     <main className="pt-20">
-      <title>Terms of Use | LaplandDeals</title>
-      <meta name="description" content="Terms of use for LaplandDeals. Operated by Lapeso Oy." />
-      <link rel="canonical" href="https://laplanddeals.com/terms" />
-      <meta name="robots" content="index, follow" />
-      <TermsContent siteName="LaplandDeals" />
+      <PageSeo
+        title="Terms of Use"
+        description="Terms of use for LaplandDeals. Operated by Lapeso Oy."
+        path="/terms"
+      />
+      <TermsContent siteName="LaplandDeals" lang={lang} />
     </main>
   );
 }
