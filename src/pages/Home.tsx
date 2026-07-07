@@ -89,6 +89,25 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
   },
 };
 
+// Per-question links to the deal pages that back each FAQ answer
+// (Vesa 2026-07-07: FAQ answers must point to our own supporting content).
+// Keys are nav entries → labels come pre-translated in all 11 locales.
+const FAQ_ROUTE = {
+  hotels: '/hotels',
+  activities: '/activities',
+  flights: '/flights',
+  cars: '/cars',
+  packages: '/packages',
+  summer: '/summer',
+} as const;
+const FAQ_LINKS: (keyof typeof FAQ_ROUTE)[][] = [
+  ['summer', 'hotels'],       // 1 cheapest time → summer season + hotel deals
+  ['hotels', 'activities'],   // 2 how far ahead to book
+  ['hotels', 'activities'],   // 3 last-minute deals
+  ['packages'],               // 4 what's in a package
+  ['hotels', 'summer'],       // 5 finding genuine discounts
+];
+
 export default function Home() {
   const lang = useLang();
   const to = useLocalePath();
@@ -256,7 +275,7 @@ export default function Home() {
             </p>
           </div>
           <div className="space-y-4">
-            {c.faq.items.map((f) => (
+            {c.faq.items.map((f, faqIndex) => (
               <details
                 key={f.q}
                 className="group rounded-xl border border-line bg-cream-2 open:border-finland-blue/40 transition-colors"
@@ -270,9 +289,24 @@ export default function Home() {
                     +
                   </span>
                 </summary>
-                <p className="px-6 pb-6 text-ink-soft text-sm sm:text-base leading-relaxed">
-                  {f.a}
-                </p>
+                <div className="px-6 pb-6">
+                  <p className="text-ink-soft text-sm sm:text-base leading-relaxed">
+                    {f.a}
+                  </p>
+                  {(FAQ_LINKS[faqIndex] ?? []).length > 0 && (
+                    <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
+                      {FAQ_LINKS[faqIndex].map((key) => (
+                        <Link
+                          key={key}
+                          to={to(FAQ_ROUTE[key])}
+                          className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-vibe-pink hover:text-ink transition-colors no-underline"
+                        >
+                          {c.nav[key]} <ArrowRight className="w-3.5 h-3.5 shrink-0" />
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </details>
             ))}
           </div>
