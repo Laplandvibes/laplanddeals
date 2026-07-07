@@ -9,7 +9,7 @@
  * Lapland location slug correction (2026-05-05): `lapland-l662` returns 404 —
  * the correct GYG ID for Finnish Lapland is `l4404`. Verified via curl.
  *
- * Category sub-pages (`/lapland-l4404/<category-tcXX>`) tend to 404 too — GYG
+ * Category sub-pages (`/lapland-finland-l2652/<category-tcXX>`) tend to 404 too — GYG
  * doesn't expose stable category permalinks under every location. Reliable
  * pattern is to use the SEARCH endpoint `/s/?q=…&partner_id=VRMKD7N&cmp=…`
  * which always 200s and pre-filters the listing.
@@ -30,7 +30,7 @@ function withAffiliate(rawUrl: string, sid: string): string {
  * the exact slug works — verify with curl/browser first).
  *
  * @param productPath  Path component after `getyourguide.com/`. Example:
- *                     `lapland-l4404` (Finnish Lapland location).
+ *                     `lapland-finland-l2652` (Finnish Lapland location).
  *                     `rovaniemi-l2653` (Rovaniemi city). NOTE Rovaniemi
  *                     currently 403s anonymously but works in browser.
  */
@@ -56,7 +56,7 @@ export function gygSearch(query: string, sid: string): string {
  * search URL with affiliate params baked in.
  */
 export const GYG_CATEGORIES = {
-  all:        gygDeepLink('lapland-l4404', 'cat_all'),
+  all:        gygDeepLink('lapland-finland-l2652', 'cat_all'),
   husky:      gygSearch('husky safari Lapland', 'cat_husky'),
   snowmobile: gygSearch('snowmobile Lapland', 'cat_snowmobile'),
   reindeer:   gygSearch('reindeer Lapland', 'cat_reindeer'),
