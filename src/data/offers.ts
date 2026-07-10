@@ -988,7 +988,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       'pt-BR': 'Iglu de vidro (3-4 noites) + safári de huskies + caça à aurora + pesca no gelo. Cada item é reservado separadamente pela tarifa real do parceiro. Combinar sai mais barato que os tours fechados.',
       'zh-CN': '玻璃穹顶屋(3-4 晚)+ 哈士奇雪橇 + 追极光 + 冰钓。每项按合作伙伴实时价格单独预订。自由组合比打包行程更省。',
       ko: '글라스 이글루(3~4박) + 허스키 사파리 + 오로라 헌트 + 얼음낚시. 각 항목을 파트너 실시간 요금으로 따로 예약합니다. 직접 조합하면 패키지 투어보다 절약됩니다.',
-      fr: 'Igloo de verre (3-4 nuits) + safari husky + chasse aux aurores + pêche sur glace. Chaque élément réservé séparément au tarif réel du partenaire. Composer soi-même revient moins cher qu\'un circuit packagé.',
+      fr: 'Igloo de verre (3-4 nuits) + safari en traîneau de huskies + chasse aux aurores + pêche sur glace. Chaque élément réservé séparément au tarif réel du partenaire. Composer soi-même revient moins cher qu\'un circuit packagé.',
       it: 'Igloo di vetro (3-4 notti) + safari con gli husky + caccia all\'aurora + pesca sul ghiaccio. Ogni elemento prenotato separatamente alla tariffa reale del partner. Comporlo da sé costa meno dei tour pacchetto.',
       nl: 'Glazen iglo (3-4 nachten) + huskysafari + poollichtjacht + ijsvissen. Elk apart geboekt tegen het live-tarief van de partner. Zelf combineren is goedkoper dan kant-en-klare tours.',
     },

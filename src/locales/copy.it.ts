@@ -182,7 +182,7 @@ const it: SectionCopy = {
       "Safari con husky, cacce all'aurora, spedizioni in motoslitta, visite a fattorie di renne, pesca sul ghiaccio. Disponibilità in tempo reale su GetYourGuide, niente timer falsi, niente percentuali inventate.",
     seoTitle: 'Offerte attività Lapponia, Husky, aurora, motoslitta',
     seoDesc:
-      "Tariffe GetYourGuide in tempo reale su safari husky, cacce all'aurora, motoslitte, fattorie di renne e pesca sul ghiaccio in Lapponia finlandese.",
+      "Tariffe GetYourGuide in tempo reale su safari con gli husky, cacce all'aurora, motoslitte, fattorie di renne e pesca sul ghiaccio in Lapponia finlandese.",
     bottomTitle: 'Sfogli il catalogo completo della Lapponia',
     bottomLead: '900+ tour, escursioni giornaliere e avventure di più giorni su GetYourGuide.',
     bottomCta: 'Tutte le attività in Lapponia →',

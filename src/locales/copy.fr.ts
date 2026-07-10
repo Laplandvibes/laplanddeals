@@ -16,7 +16,7 @@ const fr: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'les moins chères de Laponie.',
     lead:
-      'Nuits d\'hôtel libérées, places restantes en safari husky et motoneige, forfaits pas chers et chalets disponibles, le tout au même endroit. Un clic vous amène directement au prix actuel du partenaire.',
+      'Nuits d\'hôtel libérées, places restantes en safari en traîneau de huskies et motoneige, forfaits pas chers et chalets disponibles, le tout au même endroit. Un clic vous amène directement au prix actuel du partenaire.',
     primary: 'Offres d\'hôtel pour ce soir',
     secondary: 'Tours aurores pas chers',
     eyebrowSummer: 'Last minute · Bons plans · Soleil de minuit',
