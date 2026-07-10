@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, useLayoutEffect, lazy, Suspense } from 'react';
+import { useEffect, useLayoutEffect, useReducer, lazy, Suspense, type ReactNode } from 'react';
 import Nav from './components/Nav';
 import ScrollToTop from './components/ScrollToTop';
 import SharedFooter from '../../shared/Footer';
@@ -7,7 +7,25 @@ import SharedCookieBanner from '../../shared/CookieBanner';
 import NewsletterPopup from './components/NewsletterPopup';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
 import { useHtmlLang, useLang } from './i18n/useLang';
-import { footerDict } from './locales/copy';
+import { COPY, loadCopy } from './locales/copy';
+import { footerDict } from './locales/footerDict';
+
+/**
+ * Non-EN copy lives in per-language lazy chunks (see locales/copy.ts).
+ * Gate the UI until the active language's chunk is registered in COPY, so
+ * every consumer keeps reading COPY[lang] synchronously. EN never waits.
+ */
+function CopyGate({ children }: { children: ReactNode }) {
+  const lang = useLang();
+  const [, bump] = useReducer((x: number) => x + 1, 0);
+  useEffect(() => {
+    let alive = true;
+    if (!COPY[lang]) loadCopy(lang).then(() => { if (alive) bump(); });
+    return () => { alive = false; };
+  }, [lang]);
+  if (!COPY[lang]) return <div className="min-h-screen bg-cream" />;
+  return <>{children}</>;
+}
 
 const Home = lazy(() => import('./pages/Home'))
 const Hotels = lazy(() => import('./pages/Hotels'))
@@ -58,6 +76,7 @@ function AppLayout() {
       <ScrollToTop />
       <LocaleAutoRedirect />
       <LocaleSync />
+      <CopyGate>
       <Nav />
       <main>
         <Suspense fallback={<div className="min-h-screen" />}>
@@ -202,6 +221,7 @@ function AppLayout() {
         </Suspense>
       </main>
       <SharedFooter pillarLinks={pillarLinks} dict={footerDict(lang)} />
+      </CopyGate>
       <SharedCookieBanner consentKey="laplanddeals_cookie_consent" lang={lang} />
       <NewsletterPopup />
     </div>
