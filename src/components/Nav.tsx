@@ -186,18 +186,21 @@ export default function Nav() {
           </div>
 
           <div className="xl:hidden flex items-center gap-2">
-            <select
-              value={lang}
-              onChange={(e) => switchTo(e.target.value as LangCode)}
-              aria-label={ariaLanguage}
-              className="bg-transparent border border-ink/30 rounded px-2 py-1 text-xs font-semibold uppercase text-ink"
-            >
-              {ALL_LANGS.map((l) => (
-                <option key={l.code} value={l.code}>
-                  {l.label}
-                </option>
-              ))}
-            </select>
+            <div className="relative inline-flex items-center">
+              <select
+                value={lang}
+                onChange={(e) => switchTo(e.target.value as LangCode)}
+                aria-label={ariaLanguage}
+                className="appearance-none bg-transparent border border-ink/30 rounded pl-2 pr-6 py-1 text-xs font-semibold uppercase text-ink"
+              >
+                {ALL_LANGS.map((l) => (
+                  <option key={l.code} value={l.code}>
+                    {l.label}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown aria-hidden="true" className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-ink" />
+            </div>
             <button
               type="button"
               onClick={() => setOpen(!open)}
