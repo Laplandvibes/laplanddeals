@@ -9,6 +9,8 @@ import CategoryTiles from '../components/CategoryTiles';
 import OffersGrid from '../components/OffersGrid';
 import PartnerAd from '../components/PartnerAd';
 import NewsletterSection from '../components/NewsletterSection';
+import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
+import { AD_SLOTS } from '../data/adSlots';
 import { offers, getEditorPicks, getLastMinute, getSummerOffers } from '../data/offers';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -162,6 +164,10 @@ export default function Home() {
       />
 
       <Hero />
+
+      {/* ── PÄÄKUMPPANI — kompakti banneri heti heron alla (LV Media) ── */}
+      <MainPartnerBanner config={AD_SLOTS} locale={lang} />
+
       <FlashBand />
       <TodaysPulse />
 
@@ -180,6 +186,9 @@ export default function Home() {
           <OffersGrid offers={editorsPicks} cols="md:grid-cols-2 lg:grid-cols-4" />
         </div>
       </section>
+
+      {/* ── Kumppanit: kakkospääkumppani + 6 premium-paikkaa (LV Media) ── */}
+      <HomeAdSlots config={AD_SLOTS} locale={lang} />
 
       {/* ── Categories ─────────────────────────────────────────────── */}
       <section className="relative bg-cream-2 py-20 sm:py-24 border-y border-line">
