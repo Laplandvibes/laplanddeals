@@ -305,7 +305,7 @@ export default function PartnerAd({ advertiser, placement, className = '' }: Pro
                 target="_blank"
                 rel="sponsored nofollow noopener"
                 onClick={() => trackAffiliateClick(a.id, placement ?? a.trackId, a.href)}
-                className="group/btn inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.08em] no-underline transition-transform hover:-translate-y-0.5"
+                className="group/btn inline-flex items-center justify-center text-center leading-snug gap-2 rounded-full px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.08em] no-underline transition-transform hover:-translate-y-0.5"
                 style={{ background: a.accent, color: a.accentText }}
               >
                 {a.cta[lang] ?? a.cta.en}
