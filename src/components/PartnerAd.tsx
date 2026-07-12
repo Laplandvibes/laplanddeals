@@ -93,10 +93,10 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       nl: ['4.000+ hutten door heel Finland', 'Veel met eigen sauna aan het meer', 'Finse aanbieder, lokale ondersteuning'],
     },
     cta: {
-      en: 'See cottages on Lomarengas', fi: 'Katso mökit Lomarengaalla', de: 'Hütten bei Lomarengas ansehen',
-      ja: 'Lomarengasでコテージを見る', es: 'Ver cabañas en Lomarengas', 'pt-BR': 'Ver cabanas na Lomarengas',
-      'zh-CN': '在 Lomarengas 查看小屋', ko: 'Lomarengas에서 코티지 보기', fr: 'Voir les chalets sur Lomarengas',
-      it: 'Vedi i cottage su Lomarengas', nl: 'Bekijk hutten op Lomarengas',
+      en: 'Browse cottages', fi: 'Selaa mökkejä', de: 'Hütten ansehen',
+      ja: 'コテージを見る', es: 'Ver cabañas', 'pt-BR': 'Ver cabanas',
+      'zh-CN': '查看小屋', ko: '코티지 보기', fr: 'Voir les chalets',
+      it: 'Vedi i cottage', nl: 'Bekijk hutten',
     },
     note: {
       en: 'Opens Lomarengas.fi — live availability and prices.',
