@@ -442,6 +442,62 @@ export function footerDict(lang: Lang) {
       },
     }
   }
+  if (lang === 'sv') {
+    return {
+      networkBadge: 'Nätverket för finska Lappland',
+      tagline: 'Det digitala hemmet för resor i finska Lappland.',
+      groups: { stay: 'Bo', eatDrink: 'Äta & dricka', do: 'Göra', explore: 'Utforska', essentials: 'Grunderna' },
+      travelGuideKicker: 'Reseguide till Lappland',
+      about: {
+        eyebrow: 'Om LaplandVibes',
+        body: 'Reseguiden till finska Lappland, från norrsken till midnattssol. Handplockade upplevelser, praktiska tips och öppna källor.',
+        badge: 'Oberoende · källor angivna',
+      },
+      spottedError: {
+        title: 'Hittade du ett fel?',
+        body: 'Ser du något som borde rättas? Säg till, vi fixar det direkt.',
+        cta: 'Rapportera ett fel →',
+      },
+      partner: {
+        title: 'Samarbeta med oss',
+        body: 'Annonsera eller samarbeta på 27 Lappland-sajter.',
+        cta: 'Hör av dig →',
+      },
+      press: {
+        title: 'Press & media',
+        body: 'Redaktionella samarbeten och presskit.',
+        cta: 'Presskontakt →',
+      },
+      affiliate: 'Den här sajten innehåller affiliatelänkar. Om du bokar via dem kan LaplandVibes få en provision utan extra kostnad för dig.',
+      copyright: '© {{year}} #LaplandVibes, en del av #LaplandVibes-nätverket',
+      websiteBy: 'Webbplats av Yrityspaketit.fi',
+      legal: { privacy: 'Integritetspolicy', cookie: 'Cookiepolicy', terms: 'Användarvillkor', contact: 'Kontakt' },
+      siteLabels: {
+        hotelDeals: 'Hotellerbjudanden',
+        staysCabins: 'Boenden & stugor',
+        whereToStay: 'Var du kan bo',
+        familyFriendly: 'Familjevänligt',
+        localFood: 'Lokal mat',
+        fineDining: 'Fine dining',
+        barsPubs: 'Barer & pubar',
+        activities: 'Aktiviteter',
+        huskySafaris: 'Huskysafarier',
+        skiResorts: 'Skidorter',
+        snowmobileTours: 'Skoterturer',
+        spaWellness: 'Spa & wellness',
+        nightlife: 'Nattliv',
+        natureParks: 'Natur & parker',
+        travelGuide: 'Reseguide',
+        christmas: 'Jul i Lappland',
+        giftsSouvenirs: 'Presenter & souvenirer',
+        travelBlog: 'Reseblogg',
+        dealsOffers: 'Erbjudanden',
+        transport: 'Transport',
+        carRental: 'Biluthyrning',
+        workInLapland: 'Jobba i Lappland',
+      },
+    }
+  }
   // fi
   return {
     networkBadge: 'Suomen Lapin verkosto',

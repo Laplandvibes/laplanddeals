@@ -217,6 +217,18 @@ function AppLayout() {
           <Route path="/nl/terms" element={<Terms />} />
           <Route path="/nl/cookie-policy" element={<CookiePolicy />} />
 
+      {/* SV */}
+          <Route path="/sv" element={<Home />} />
+          <Route path="/sv/hotels" element={<Hotels />} />
+          <Route path="/sv/activities" element={<Activities />} />
+          <Route path="/sv/flights" element={<Flights />} />
+          <Route path="/sv/cars" element={<Cars />} />
+          <Route path="/sv/packages" element={<Packages />} />
+          <Route path="/sv/summer" element={<Summer />} />
+          <Route path="/sv/privacy" element={<PrivacyPolicy />} />
+          <Route path="/sv/terms" element={<Terms />} />
+          <Route path="/sv/cookie-policy" element={<CookiePolicy />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>

@@ -20,13 +20,13 @@ export default function Nav() {
   // Accessibility aria translations (KO/FR/IT/NL screen-reader leaks fix).
   const ariaSwitchLanguage = pick(lang,
     'Switch language', 'Vaihda kieli', 'Sprache wechseln', '言語を切り替える', 'Cambiar idioma',
-    'Mudar idioma', '切换语言', '언어 변경', 'Changer de langue', 'Cambia lingua', 'Taal wijzigen');
+    'Mudar idioma', '切换语言', '언어 변경', 'Changer de langue', 'Cambia lingua', 'Taal wijzigen', 'Byt språk');
   const ariaLanguage = pick(lang,
     'Language', 'Kieli', 'Sprache', '言語', 'Idioma',
-    'Idioma', '语言', '언어', 'Langue', 'Lingua', 'Taal');
+    'Idioma', '语言', '언어', 'Langue', 'Lingua', 'Taal', 'Språk');
   const ariaToggleMenu = pick(lang,
     'Toggle menu', 'Avaa/sulje valikko', 'Menü umschalten', 'メニューを開閉する', 'Alternar menú',
-    'Alternar menu', '切换菜单', '메뉴 열기/닫기', 'Basculer le menu', 'Apri/chiudi menu', 'Menu wisselen');
+    'Alternar menu', '切换菜单', '메뉴 열기/닫기', 'Basculer le menu', 'Apri/chiudi menu', 'Menu wisselen', 'Växla meny');
 
   const navLinks = [
     { label: c.hotels,     to: to('/hotels') },
@@ -60,10 +60,10 @@ export default function Nav() {
     };
   }, [langOpen]);
 
-  type LangCode = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+  type LangCode = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
   const URL_PREFIX_OF: Record<LangCode, string> = {
     en: '', fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-BR': 'br', 'zh-CN': 'cn',
-    ko: 'kr', fr: 'fr', it: 'it', nl: 'nl',
+    ko: 'kr', fr: 'fr', it: 'it', nl: 'nl', sv: 'sv',
   };
   const ALL_LANGS: { code: LangCode; label: string; native: string }[] = [
     { code: 'en', label: 'EN', native: 'English' },
@@ -77,13 +77,14 @@ export default function Nav() {
     { code: 'fr', label: 'FR', native: 'Français' },
     { code: 'it', label: 'IT', native: 'Italiano' },
     { code: 'nl', label: 'NL', native: 'Nederlands' },
+    { code: 'sv', label: 'SV', native: 'Svenska' },
   ];
 
   const switchTo = (target: LangCode) => {
     if (typeof window !== 'undefined' && window.localStorage) {
       window.localStorage.setItem('lv_locale_choice', target);
     }
-    const bare = pathname.replace(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl)(?=\/|$)/, '') || '/';
+    const bare = pathname.replace(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl|sv)(?=\/|$)/, '') || '/';
     const prefix = URL_PREFIX_OF[target];
     if (!prefix) {
       navigate(bare);

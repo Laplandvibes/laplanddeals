@@ -49,7 +49,7 @@ interface AdvertiserConfig {
 
 const badge: Localized = {
   en: 'Partner', fi: 'Mainos', de: 'Anzeige', ja: '広告', es: 'Publicidad',
-  'pt-BR': 'Publicidade', 'zh-CN': '广告', ko: '광고', fr: 'Annonce', it: 'Annuncio', nl: 'Advertentie',
+  'pt-BR': 'Publicidade', 'zh-CN': '广告', ko: '광고', fr: 'Annonce', it: 'Annuncio', nl: 'Advertentie', sv: 'Annons',
 };
 
 const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
@@ -78,6 +78,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: 'Le plus grand réseau de chalets de Finlande — réservez un vrai chalet de Laponie à la source.',
       it: 'La più grande rete di cottage della Finlandia: prenota una vera baita lappone alla fonte.',
       nl: "Het grootste hutten­netwerk van Finland — boek een echte Laplandse hut rechtstreeks bij de bron.",
+      sv: 'Finlands största stugnätverk — boka en riktig stuga i Lappland direkt hos källan.',
     },
     points: {
       en: ['4,000+ cabins across Finland', 'Many with private lakeside sauna', 'Finnish operator, local support'],
@@ -91,12 +92,13 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: ['Plus de 4 000 chalets dans toute la Finlande', 'Beaucoup avec sauna privé au bord du lac', 'Opérateur finlandais, assistance locale'],
       it: ['Oltre 4.000 baite in tutta la Finlandia', 'Molte con sauna privata sul lago', 'Operatore finlandese, assistenza locale'],
       nl: ['4.000+ hutten door heel Finland', 'Veel met eigen sauna aan het meer', 'Finse aanbieder, lokale ondersteuning'],
+      sv: ['4 000+ stugor i hela Finland', 'Många med egen bastu vid sjön', 'Finsk aktör, lokal support'],
     },
     cta: {
       en: 'Browse cottages', fi: 'Selaa mökkejä', de: 'Hütten ansehen',
       ja: 'コテージを見る', es: 'Ver cabañas', 'pt-BR': 'Ver cabanas',
       'zh-CN': '查看小屋', ko: '코티지 보기', fr: 'Voir les chalets',
-      it: 'Vedi i cottage', nl: 'Bekijk hutten',
+      it: 'Vedi i cottage', nl: 'Bekijk hutten', sv: 'Bläddra bland stugor',
     },
     note: {
       en: 'Opens Lomarengas.fi — live availability and prices.',
@@ -110,6 +112,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: 'Ouvre Lomarengas.fi — disponibilités et prix en temps réel.',
       it: 'Apre Lomarengas.fi — disponibilità e prezzi in tempo reale.',
       nl: 'Opent Lomarengas.fi — actuele beschikbaarheid en prijzen.',
+      sv: 'Öppnar Lomarengas.fi — tillgänglighet och priser i realtid.',
     },
   },
 
@@ -139,6 +142,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: 'Excursions husky, aurores et motoneige — réservez maintenant, payez plus tard, annulez gratuitement jusqu’à 24 h.',
       it: 'Tour husky, aurora e motoslitta: prenota ora, paga dopo, cancella gratis fino a 24 h.',
       nl: "Husky-, aurora- en sneeuwscootertochten — reserveer nu, betaal later, gratis annuleren tot 24 u.",
+      sv: 'Husky-, norrskens- och skoterturer — boka nu, betala senare, avboka gratis fram till 24 h innan.',
     },
     points: {
       en: ['Free cancellation up to 24h before', 'Reserve now, pay later', 'Verified reviews on every tour'],
@@ -152,12 +156,13 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: ['Annulation gratuite jusqu’à 24 h avant', 'Réservez maintenant, payez plus tard', 'Avis vérifiés sur chaque excursion'],
       it: ['Cancellazione gratuita fino a 24 h prima', 'Prenota ora, paga dopo', 'Recensioni verificate su ogni tour'],
       nl: ['Gratis annuleren tot 24 u vooraf', 'Reserveer nu, betaal later', 'Geverifieerde reviews bij elke tour'],
+      sv: ['Gratis avbokning fram till 24 h innan', 'Boka nu, betala senare', 'Verifierade omdömen på varje tur'],
     },
     cta: {
       en: 'Browse Lapland tours', fi: 'Selaa Lapin retkiä', de: 'Lappland-Touren ansehen',
       ja: 'ラップランドのツアーを見る', es: 'Ver tours por Laponia', 'pt-BR': 'Ver tours pela Lapônia',
       'zh-CN': '浏览拉普兰行程', ko: '라플란드 투어 둘러보기', fr: 'Voir les excursions en Laponie',
-      it: 'Sfoglia i tour in Lapponia', nl: 'Bekijk Lapland-tochten',
+      it: 'Sfoglia i tour in Lapponia', nl: 'Bekijk Lapland-tochten', sv: 'Bläddra bland turer i Lappland',
     },
     note: {
       en: 'Opens GetYourGuide — live tour availability.',
@@ -171,6 +176,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: 'Ouvre GetYourGuide — disponibilités des excursions en temps réel.',
       it: 'Apre GetYourGuide — disponibilità dei tour in tempo reale.',
       nl: 'Opent GetYourGuide — actuele beschikbaarheid van tochten.',
+      sv: 'Öppnar GetYourGuide — turernas tillgänglighet i realtid.',
     },
   },
 
@@ -200,6 +206,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: 'Tous les hébergements de Laponie au même endroit — des igloos de verre au pied des pistes, au tarif du jour.',
       it: 'Tutti gli alloggi della Lapponia in un solo posto — dagli igloo di vetro al bordo pista, alla tariffa di oggi.',
       nl: 'Al het verblijf in Lapland op één plek — van glazen iglo tot aan de piste, tegen het tarief van vandaag.',
+      sv: 'Allt boende i Lappland på ett ställe — från glasiglos till skidnära, till dagens live-pris.',
     },
     points: {
       en: ['Free cancellation on most rooms', 'One reward night per 10 stamped', 'Filter by igloo, cabin or ski-in'],
@@ -213,12 +220,13 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: ['Annulation gratuite sur la plupart des chambres', 'Une nuit offerte toutes les 10', 'Filtrez par igloo, chalet ou ski-in'],
       it: ['Cancellazione gratuita sulla maggior parte delle camere', 'Una notte premio ogni 10', 'Filtra per igloo, baita o ski-in'],
       nl: ['Gratis annuleren bij de meeste kamers', 'Eén beloningsnacht per 10', 'Filter op iglo, hut of ski-in'],
+      sv: ['Gratis avbokning på de flesta rum', 'En bonusnatt per 10 stämplade', 'Filtrera på iglo, stuga eller skidnära'],
     },
     cta: {
       en: 'Search Lapland stays', fi: 'Hae Lapin majoitukset', de: 'Lappland-Unterkünfte suchen',
       ja: 'ラップランドの宿を探す', es: 'Buscar alojamiento en Laponia', 'pt-BR': 'Buscar hospedagem na Lapônia',
       'zh-CN': '搜索拉普兰住宿', ko: '라플란드 숙소 검색', fr: 'Rechercher un hébergement en Laponie',
-      it: 'Cerca alloggi in Lapponia', nl: 'Zoek verblijf in Lapland',
+      it: 'Cerca alloggi in Lapponia', nl: 'Zoek verblijf in Lapland', sv: 'Sök boende i Lappland',
     },
     note: {
       en: 'Opens Hotels.com — live rooms and prices.',
@@ -232,6 +240,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: 'Ouvre Hotels.com — chambres et prix en temps réel.',
       it: 'Apre Hotels.com — camere e prezzi in tempo reale.',
       nl: 'Opent Hotels.com — actuele kamers en prijzen.',
+      sv: 'Öppnar Hotels.com — rum och priser i realtid.',
     },
   },
 };

@@ -89,6 +89,10 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
     title: 'LaplandDeals — Last-minute aanbiedingen voor Fins Lapland',
     desc: "Live partneraanbiedingen voor Lapland-hotels, husky-safari's, vluchten naar Rovaniemi en autoverhuur. Last-minute prijzen, eindseizoenskortingen, zomeraanbiedingen.",
   },
+  sv: {
+    title: 'LaplandDeals — sista minuten-erbjudanden till finska Lappland',
+    desc: 'Partnernas live-priser på hotell i Lappland, huskysafarier, flyg till Rovaniemi och biluthyrning. Sista minuten-priser, slutrea på säsongen och sommarerbjudanden.',
+  },
 };
 
 // Per-question links to the deal pages that back each FAQ answer
@@ -120,9 +124,9 @@ export default function Home() {
   const summerPicks = getSummerOffers(4, lang);
   const everything = offers(lang).slice(0, 12);
   const seo = SEO_TITLE[lang];
-  const pathSeg: Record<Lang, string> = { en: '', fi: '/fi', de: '/de', ja: '/ja', es: '/es', 'pt-BR': '/br', 'zh-CN': '/cn', ko: '/kr', fr: '/fr', it: '/it', nl: '/nl' };
+  const pathSeg: Record<Lang, string> = { en: '', fi: '/fi', de: '/de', ja: '/ja', es: '/es', 'pt-BR': '/br', 'zh-CN': '/cn', ko: '/kr', fr: '/fr', it: '/it', nl: '/nl', sv: '/sv' };
   const path = pathSeg[lang] || '/';
-  const inLangMap: Record<Lang, string> = { en: 'en', fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko', fr: 'fr', it: 'it', nl: 'nl' };
+  const inLangMap: Record<Lang, string> = { en: 'en', fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko', fr: 'fr', it: 'it', nl: 'nl', sv: 'sv' };
   const inLang = inLangMap[lang];
 
   const itemList = {

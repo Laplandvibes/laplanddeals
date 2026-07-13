@@ -21,6 +21,7 @@ const TEXT: Record<Lang, string> = {
   fr: 'Certains liens ici sont des liens partenaires. Si vous réservez via ces liens, LaplandDeals peut percevoir une commission. Le prix que vous payez reste le même.',
   it: 'Alcuni link in questa pagina sono link di partner. Se prenoti tramite questi, LaplandDeals può ricevere una commissione. Il prezzo che paghi resta invariato.',
   nl: 'Sommige links hier zijn partnerlinks. Als je via deze links boekt, kan LaplandDeals een commissie ontvangen. De prijs die je betaalt blijft gelijk.',
+  sv: 'Vissa länkar här är partnerlänkar. Om du bokar via dem kan LaplandDeals få en provision. Priset du betalar är detsamma.',
 };
 
 interface Props {

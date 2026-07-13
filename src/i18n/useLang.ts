@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
-export type Lang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+export type Lang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
 
 export const LANG_PREFIX: Record<Lang, string> = {
   en: '',
@@ -14,6 +14,7 @@ export const LANG_PREFIX: Record<Lang, string> = {
   fr: 'fr',
   it: 'it',
   nl: 'nl',
+  sv: 'sv',
 };
 
 export function useLang(): Lang {
@@ -28,6 +29,7 @@ export function useLang(): Lang {
   if (pathname === '/fr' || pathname.startsWith('/fr/')) return 'fr';
   if (pathname === '/it' || pathname.startsWith('/it/')) return 'it';
   if (pathname === '/nl' || pathname.startsWith('/nl/')) return 'nl';
+  if (pathname === '/sv' || pathname.startsWith('/sv/')) return 'sv';
   return 'en';
 }
 
@@ -41,7 +43,7 @@ export function useLocalePath() {
   };
 }
 
-export function useHtmlLang(): 'en-US' | 'fi-FI' | 'de-DE' | 'ja-JP' | 'es-ES' | 'pt-BR' | 'zh-CN' | 'ko-KR' | 'fr-FR' | 'it-IT' | 'nl-NL' {
+export function useHtmlLang(): 'en-US' | 'fi-FI' | 'de-DE' | 'ja-JP' | 'es-ES' | 'pt-BR' | 'zh-CN' | 'ko-KR' | 'fr-FR' | 'it-IT' | 'nl-NL' | 'sv-SE' {
   const lang = useLang();
   if (lang === 'fi') return 'fi-FI';
   if (lang === 'de') return 'de-DE';
@@ -53,11 +55,12 @@ export function useHtmlLang(): 'en-US' | 'fi-FI' | 'de-DE' | 'ja-JP' | 'es-ES' |
   if (lang === 'fr') return 'fr-FR';
   if (lang === 'it') return 'it-IT';
   if (lang === 'nl') return 'nl-NL';
+  if (lang === 'sv') return 'sv-SE';
   return 'en-US';
 }
 
 export function stripLocale(path: string): string {
-  const m = path.match(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl)(?=\/|$)/);
+  const m = path.match(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl|sv)(?=\/|$)/);
   if (m) return path.replace(m[0], '') || '/';
   return path;
 }
@@ -65,7 +68,7 @@ export function stripLocale(path: string): string {
 export function pick<T>(
   lang: Lang,
   en: T, fi: T, de?: T, ja?: T, es?: T, ptBR?: T, zhCN?: T,
-  ko?: T, fr?: T, it?: T, nl?: T,
+  ko?: T, fr?: T, it?: T, nl?: T, sv?: T,
 ): T {
   if (lang === 'fi') return fi;
   if (lang === 'de') return de !== undefined ? de : en;
@@ -77,5 +80,6 @@ export function pick<T>(
   if (lang === 'fr') return fr !== undefined ? fr : en;
   if (lang === 'it') return it !== undefined ? it : en;
   if (lang === 'nl') return nl !== undefined ? nl : en;
+  if (lang === 'sv') return sv !== undefined ? sv : en;
   return en;
 }

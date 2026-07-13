@@ -90,6 +90,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Igloos de verre — Saariselkä',
       it: 'Igloo di vetro — Saariselkä',
       nl: 'Glazen iglo\'s — Saariselkä',
+      sv: 'Glasiglos — Saariselkä',
     },
     category: 'hotels',
     location: {
@@ -104,6 +105,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Saariselkä · Ceinture aurorale',
       it: 'Saariselkä · Fascia aurorale',
       nl: 'Saariselkä · Poollichtgordel',
+      sv: 'Saariselkä · norrskensbältet',
     },
     blurb: {
       en: 'Roughly 30 glass igloos exist in the entire region. Christmas weeks book out by August, open Hotels.com to see what\'s left tonight.',
@@ -117,6 +119,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Toute la région compte environ 30 igloos de verre. Les semaines de Noël sont complètes dès août, ouvrez Hotels.com pour voir ce qu\'il reste ce soir.',
       it: 'In tutta la regione esistono circa 30 igloo di vetro. Le settimane di Natale si esauriscono entro agosto, apri Hotels.com per vedere cosa resta stanotte.',
       nl: 'In de hele regio bestaan ongeveer 30 glazen iglo\'s. De kerstweken zijn in augustus al volgeboekt, open Hotels.com om te zien wat er vanavond nog vrij is.',
+      sv: 'Det finns ungefär 30 glasiglos i hela regionen. Julveckorna är fullbokade redan i augusti, öppna Hotels.com och se vad som är kvar i kväll.',
     },
     partner: 'hotels.com',
     href: hotelsUrl('Saariselkä, Finland', 'card_igloo_saariselka'),
@@ -136,6 +139,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Levi au pied des pistes',
       it: 'Levi a bordo pista',
       nl: 'Levi aan de piste',
+      sv: 'Levi vid backen',
     },
     category: 'hotels',
     location: {
@@ -150,6 +154,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Levi · Kittilä',
       it: 'Levi · Kittilä',
       nl: 'Levi · Kittilä',
+      sv: 'Levi · Kittilä',
     },
     blurb: {
       en: 'Ski-in / ski-out on Finland\'s biggest fell (43 slopes, 230 km tracks). End-of-season weeks (Mar 15 – Apr 12) usually still open at lower rates.',
@@ -163,6 +168,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Ski-in / ski-out sur la plus grande colline de Finlande (43 pistes, 230 km de tracés). Les semaines de fin de saison (15 mars – 12 avr.) restent généralement ouvertes à des tarifs plus bas.',
       it: 'Ski-in / ski-out sulla più grande collina della Finlandia (43 piste, 230 km di tracciati). Le settimane di fine stagione (15 mar – 12 apr) sono di solito ancora disponibili a tariffe più basse.',
       nl: 'Ski-in / ski-out op de grootste berg van Finland (43 pistes, 230 km loipes). De weken aan het einde van het seizoen (15 mrt – 12 apr) zijn meestal nog beschikbaar tegen lagere tarieven.',
+      sv: 'Ski-in / ski-out på Finlands största fjäll (43 nedfarter, 230 km spår). Veckorna i slutet av säsongen (15 mars – 12 april) är oftast fortfarande lediga till lägre pris.',
     },
     partner: 'hotels.com',
     href: hotelsUrl('Levi, Kittilä, Finland', 'card_levi_ski'),
@@ -182,6 +188,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Séjours en ville à Rovaniemi',
       it: 'Soggiorni in città a Rovaniemi',
       nl: 'Stadsverblijven in Rovaniemi',
+      sv: 'Stadsboende i Rovaniemi',
     },
     category: 'hotels',
     location: {
@@ -196,6 +203,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Rovaniemi · Cercle polaire arctique',
       it: 'Rovaniemi · Circolo polare artico',
       nl: 'Rovaniemi · Poolcirkel',
+      sv: 'Rovaniemi · polcirkeln',
     },
     blurb: {
       en: '15 minutes from Santa Claus Village. Direct flights from Helsinki six times daily. Family rooms, aparthotels, design hotels.',
@@ -209,6 +217,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'À 15 minutes du village du Père Noël. Vols directs depuis Helsinki six fois par jour. Chambres familiales, apparthôtels, hôtels design.',
       it: 'A 15 minuti dal Villaggio di Babbo Natale. Voli diretti da Helsinki sei volte al giorno. Camere familiari, aparthotel, hotel di design.',
       nl: 'Op 15 minuten van het kerstmandorp. Directe vluchten vanuit Helsinki zes keer per dag. Familiekamers, aparthotels, designhotels.',
+      sv: '15 minuter från Santa Claus Village. Direktflyg från Helsingfors sex gånger om dagen. Familjerum, lägenhetshotell, designhotell.',
     },
     partner: 'hotels.com',
     href: hotelsUrl('Rovaniemi, Finland', 'card_rovaniemi_city'),
@@ -227,6 +236,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Chalets sauvages de Ylläs',
       it: 'Baite selvagge di Ylläs',
       nl: 'Wildernishutten in Ylläs',
+      sv: 'Vildmarksstugor i Ylläs',
     },
     category: 'hotels',
     location: {
@@ -241,6 +251,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Ylläs · P. N. Pallas-Yllästunturi',
       it: 'Ylläs · P. N. Pallas-Yllästunturi',
       nl: 'Ylläs · NP Pallas-Yllästunturi',
+      sv: 'Ylläs · nationalparken Pallas-Yllästunturi',
     },
     blurb: {
       en: 'Quieter neighbour to Levi, same fells, half the crowd. Cleanest air in Europe according to WMO measurements (2017).',
@@ -254,6 +265,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Le voisin plus calme de Levi, les mêmes collines, deux fois moins de monde. L\'air le plus pur d\'Europe selon les mesures de l\'OMM (2017).',
       it: 'Il vicino più tranquillo di Levi: le stesse colline, metà della folla. L\'aria più pulita d\'Europa secondo le misurazioni dell\'OMM (2017).',
       nl: 'De rustigere buur van Levi, dezelfde bergen, de helft van de drukte. De schoonste lucht van Europa volgens WMO-metingen (2017).',
+      sv: 'Levis lugnare granne, samma fjäll, hälften så mycket folk. Europas renaste luft enligt WMO:s mätningar (2017).',
     },
     partner: 'hotels.com',
     href: hotelsUrl('Ylläs, Kolari, Finland', 'card_yllas_cabins'),
@@ -273,6 +285,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Ruka et Kuusamo',
       it: 'Ruka e Kuusamo',
       nl: 'Ruka & Kuusamo',
+      sv: 'Ruka & Kuusamo',
     },
     category: 'hotels',
     location: {
@@ -287,6 +300,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Ruka · P. N. Oulanka',
       it: 'Ruka · P. N. Oulanka',
       nl: 'Ruka · NP Oulanka',
+      sv: 'Ruka · nationalparken Oulanka',
     },
     blurb: {
       en: 'The wild east, bear country, Karhunkierros trail, husky ranches, latest reliable snow in Finland (often into May).',
@@ -300,6 +314,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'L\'est sauvage, pays des ours, sentier Karhunkierros, fermes de huskies, la neige fiable la plus tardive de Finlande (souvent jusqu\'en mai).',
       it: 'L\'est selvaggio: terra di orsi, il sentiero Karhunkierros, allevamenti di husky e la neve affidabile più tardiva della Finlandia (spesso fino a maggio).',
       nl: 'Het wilde oosten, berenland, de Karhunkierros-route, huskyranches, de laatste betrouwbare sneeuw van Finland (vaak tot in mei).',
+      sv: 'Den vilda östern, björnarnas land, Karhunkierros-leden, huskygårdar, den snö som håller längst i Finland (ofta in i maj).',
     },
     partner: 'hotels.com',
     href: hotelsUrl('Ruka, Kuusamo, Finland', 'card_ruka_stays'),
@@ -318,6 +333,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Inari · Utsjoki — Grand Nord',
       it: 'Inari · Utsjoki — Estremo Nord',
       nl: 'Inari · Utsjoki — Hoge Noorden',
+      sv: 'Inari · Utsjoki — längst i norr',
     },
     category: 'hotels',
     location: {
@@ -332,6 +348,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: '300 km au nord du cercle polaire',
       it: '300 km a nord del Circolo polare',
       nl: '300 km boven de poolcirkel',
+      sv: '300 km norr om polcirkeln',
     },
     blurb: {
       en: 'Above the aurora oval, highest visible-aurora rate in Finland. Sámi capital, no light pollution, two-lane road then nothing.',
@@ -345,6 +362,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Sous l\'ovale auroral, le taux d\'aurores visibles le plus élevé de Finlande. Capitale samie, aucune pollution lumineuse, une route à deux voies puis plus rien.',
       it: 'Sotto l\'ovale aurorale: il più alto tasso di aurore visibili della Finlandia. Capitale sami, nessun inquinamento luminoso, una strada a due corsie e poi il nulla.',
       nl: 'Onder de aurora-ovaal, de hoogste kans op zichtbaar poollicht in Finland. Hoofdplaats van de Sami, geen lichtvervuiling, een tweebaansweg en daarna niets meer.',
+      sv: 'Ovanför norrskensovalen, den högsta chansen att se norrsken i Finland. Samernas huvudort, inga ljusföroreningar, en tvåfilig väg och sedan ingenting.',
     },
     partner: 'hotels.com',
     href: hotelsUrl('Inari, Finland', 'card_inari_stays'),
@@ -367,6 +385,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Safaris en husky',
       it: 'Safari con gli husky',
       nl: 'Huskysafari\'s',
+      sv: 'Huskysafarier',
     },
     category: 'activities',
     location: {
@@ -381,6 +400,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Partout en Laponie',
       it: 'In tutta la Lapponia',
       nl: 'Door heel Lapland',
+      sv: 'I hela Lappland',
     },
     blurb: {
       en: 'Drive your own 6-dog team. Most kennels run 12 sleds/day max, peak weekends fill 7-10 days out. Half-day to overnight cabins.',
@@ -394,6 +414,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Menez votre propre attelage de 6 chiens. La plupart des chenils sortent 12 traîneaux par jour au maximum, les week-ends de pointe se remplissent 7 à 10 jours à l\'avance. De la demi-journée aux nuits en chalet.',
       it: 'Guida la tua muta di 6 cani. La maggior parte dei canili gestisce al massimo 12 slitte al giorno, i weekend di punta si riempiono 7-10 giorni prima. Dalla mezza giornata al pernottamento in baita.',
       nl: 'Bestuur je eigen team van 6 honden. De meeste kennels rijden maximaal 12 sleeën per dag, drukke weekends zitten 7-10 dagen vooraf vol. Van een halve dag tot overnachten in hutten.',
+      sv: 'Kör ditt eget spann med 6 hundar. De flesta kennlar kör högst 12 slädar per dag, de mest populära helgerna fylls 7–10 dagar i förväg. Från halvdag till övernattning i stuga.',
     },
     partner: 'getyourguide',
     href: GYG_CATEGORIES.husky,
@@ -413,6 +434,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Excursions aux aurores boréales',
       it: 'Tour dell\'aurora boreale',
       nl: 'Noorderlichttochten',
+      sv: 'Norrskensturer',
     },
     category: 'activities',
     location: {
@@ -427,6 +449,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Partout en Laponie',
       it: 'In tutta la Lapponia',
       nl: 'Door heel Lapland',
+      sv: 'I hela Lappland',
     },
     blurb: {
       en: 'Aurora season Sept 15 – Apr 5. Photographer-led hunts, frozen-lake campfires, mobile cabins. Cancellation usually 24h before.',
@@ -440,6 +463,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Saison aurorale du 15 sept. au 5 avr. Chasses menées par des photographes, feux de camp sur lacs gelés, cabanes mobiles. Annulation généralement 24 h avant.',
       it: 'Stagione dell\'aurora dal 15 set al 5 apr. Cacce guidate da fotografi, falò su laghi ghiacciati, cabine mobili. Cancellazione di solito 24 h prima.',
       nl: 'Auroraseizoen 15 sep – 5 apr. Tochten met een fotograaf, kampvuren op bevroren meren, mobiele hutten. Annuleren meestal tot 24 u vooraf.',
+      sv: 'Norrskenssäsong 15 september – 5 april. Turer ledda av fotografer, lägereldar på frusna sjöar, mobila stugor. Avbokning oftast fram till 24 h innan.',
     },
     partner: 'getyourguide',
     href: GYG_CATEGORIES.aurora,
@@ -459,6 +483,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Excursions en motoneige',
       it: 'Tour in motoslitta',
       nl: 'Sneeuwscootertochten',
+      sv: 'Skoterturer',
     },
     category: 'activities',
     location: {
@@ -473,6 +498,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Partout en Laponie',
       it: 'In tutta la Lapponia',
       nl: 'Door heel Lapland',
+      sv: 'I hela Lappland',
     },
     blurb: {
       en: 'Wilderness trails, frozen rivers, Sámi reindeer-farm lunches. Drivers need a class-B licence; passenger sleds available.',
@@ -486,6 +512,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Sentiers sauvages, rivières gelées, déjeuners dans des fermes de rennes samies. Permis B requis pour conduire ; traîneaux passagers disponibles.',
       it: 'Sentieri selvaggi, fiumi ghiacciati, pranzi negli allevamenti di renne sami. I conducenti necessitano della patente B; disponibili slitte per passeggeri.',
       nl: 'Wildernispaden, bevroren rivieren, lunches op Samische rendierboerderijen. Bestuurders hebben rijbewijs B nodig; passagiersleeën beschikbaar.',
+      sv: 'Vildmarksleder, frusna älvar, luncher på samiska rengårdar. Föraren behöver B-körkort; passagerarslädar finns.',
     },
     partner: 'getyourguide',
     href: GYG_CATEGORIES.snowmobile,
@@ -504,6 +531,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Traîneaux à rennes et fermes',
       it: 'Slitte di renne e fattorie',
       nl: 'Rendierslee & boerderijen',
+      sv: 'Renslädar & rengårdar',
     },
     category: 'activities',
     location: {
@@ -518,6 +546,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Rovaniemi · Inari',
       it: 'Rovaniemi · Inari',
       nl: 'Rovaniemi · Inari',
+      sv: 'Rovaniemi · Inari',
     },
     blurb: {
       en: '~200 reindeer-herding co-operatives in Finland. Slow sleigh rides, fire-warmed kotas, Sámi families. Book early-morning slots, quietest light.',
@@ -531,6 +560,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Environ 200 coopératives d\'élevage de rennes en Finlande. Balades en traîneau au pas, kotas chauffées au feu, familles samies. Réservez les créneaux matinaux, la lumière la plus paisible.',
       it: 'Circa 200 cooperative di allevamento di renne in Finlandia. Lente passeggiate in slitta, kota scaldate dal fuoco, famiglie sami. Prenota le fasce mattutine, la luce più tranquilla.',
       nl: 'Zo\'n 200 rendierhouderscoöperaties in Finland. Rustige sleetochten, met vuur verwarmde kota\'s, Samische families. Boek vroege ochtendtijden, het rustigste licht.',
+      sv: 'Cirka 200 renbeteslag i Finland. Lugna slädturer, kåtor som värms av eld, samiska familjer. Boka tidiga morgontider, det lugnaste ljuset.',
     },
     partner: 'getyourguide',
     href: GYG_CATEGORIES.reindeer,
@@ -549,6 +579,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Pêche sur glace sur les lacs gelés',
       it: 'Pesca sul ghiaccio nei laghi gelati',
       nl: 'IJsvissen op bevroren meren',
+      sv: 'Pimpelfiske på frusna sjöar',
     },
     category: 'activities',
     location: {
@@ -563,6 +594,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Inari · Saariselkä',
       it: 'Inari · Saariselkä',
       nl: 'Inari · Saariselkä',
+      sv: 'Inari · Saariselkä',
     },
     blurb: {
       en: 'Lake Inari freezes 60-80 cm deep by January. Drill, drop, wait. Equipment + hot drinks + a guide who knows where the perch run.',
@@ -576,6 +608,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Le lac Inari gèle sur 60 à 80 cm d\'épaisseur d\'ici janvier. On perce, on descend, on attend. Matériel + boissons chaudes + un guide qui sait où passent les perches.',
       it: 'Il lago Inari ghiaccia fino a 60-80 cm di spessore entro gennaio. Si fora, si cala, si aspetta. Attrezzatura + bevande calde + una guida che sa dove passano i pesci persico.',
       nl: 'Het Inarimeer vriest tegen januari 60-80 cm dik dicht. Boren, laten zakken, wachten. Uitrusting + warme dranken + een gids die weet waar de baars zit.',
+      sv: 'Inarisjön fryser till 60–80 cm tjocklek till januari. Borra, sänk ner, vänta. Utrustning + varm dryck + en guide som vet var abborren går.',
     },
     partner: 'getyourguide',
     href: GYG_CATEGORIES.iceFishing,
@@ -595,6 +628,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Excursions d\'une journée en Laponie',
       it: 'Gite di un giorno in Lapponia',
       nl: 'Dagtochten in Lapland',
+      sv: 'Dagsturer i Lappland',
     },
     category: 'activities',
     location: {
@@ -609,6 +643,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Partout en Laponie',
       it: 'In tutta la Lapponia',
       nl: 'Door heel Lapland',
+      sv: 'I hela Lappland',
     },
     blurb: {
       en: 'Stack three in 24 hours: snowshoe + smoke sauna + aurora hunt. Most run 4-6 hours each, with 30-min hotel transfers either side.',
@@ -622,6 +657,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Enchaînez-en trois en 24 heures : raquettes + sauna fumé + chasse aux aurores. La plupart durent 4 à 6 heures chacune, avec des transferts hôtel de 30 min de part et d\'autre.',
       it: 'Combina tre attività in 24 ore: ciaspole + sauna affumicata + caccia all\'aurora. La maggior parte dura 4-6 ore ciascuna, con transfer dall\'hotel di 30 min su entrambi i lati.',
       nl: 'Stapel er drie in 24 uur: sneeuwschoenwandelen + rooksauna + poollichtjacht. De meeste duren elk 4-6 uur, met aan weerszijden 30 minuten hoteltransfer.',
+      sv: 'Lägg tre på 24 timmar: snöskovandring + rökbastu + norrskensjakt. De flesta tar 4–6 timmar var, med 30 min hotelltransfer på var sida.',
     },
     partner: 'getyourguide',
     href: GYG_CATEGORIES.daytrips,
@@ -642,6 +678,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Helsinki → Rovaniemi',
       it: 'Helsinki → Rovaniemi',
       nl: 'Helsinki → Rovaniemi',
+      sv: 'Helsingfors → Rovaniemi',
     },
     category: 'flights',
     location: {
@@ -656,6 +693,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'HEL · RVN · 1 h 20 min',
       it: 'HEL · RVN · 1h 20min',
       nl: 'HEL · RVN · 1 u 20 min',
+      sv: 'HEL · RVN · 1 h 20 min',
     },
     blurb: {
       en: '6 daily Finnair + Norwegian rotations. Cheapest fares typically 4-8 weeks out (€89-129 round-trip range when not Christmas).',
@@ -669,6 +707,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: '6 rotations quotidiennes Finnair et Norwegian. Les tarifs les plus bas généralement 4 à 8 semaines avant (89-129 € l\'aller-retour hors Noël).',
       it: '6 rotazioni giornaliere Finnair e Norwegian. Le tariffe più basse di solito 4-8 settimane prima (89-129 € andata e ritorno fuori Natale).',
       nl: '6 dagelijkse Finnair- en Norwegian-rotaties. De goedkoopste tarieven meestal 4-8 weken vooraf (€89-129 retour buiten Kerst).',
+      sv: '6 dagliga turer med Finnair och Norwegian. De billigaste biljetterna vanligtvis 4–8 veckor i förväg (89–129 € tur och retur när det inte är jul).',
     },
     partner: 'trip.com',
     href: TF.helToRovaniemi,
@@ -688,6 +727,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Helsinki → Kittilä (Levi)',
       it: 'Helsinki → Kittilä (Levi)',
       nl: 'Helsinki → Kittilä (Levi)',
+      sv: 'Helsingfors → Kittilä (Levi)',
     },
     category: 'flights',
     location: {
@@ -702,6 +742,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'HEL · KTT · 1 h 25 min',
       it: 'HEL · KTT · 1h 25min',
       nl: 'HEL · KTT · 1 u 25 min',
+      sv: 'HEL · KTT · 1 h 25 min',
     },
     blurb: {
       en: 'Fastest way to Levi (15 min) and Ylläs (50 min). Finnair runs 2-4 daily in winter; route closes nearly entirely May–Aug.',
@@ -715,6 +756,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Le moyen le plus rapide pour Levi (15 min) et Ylläs (50 min). Finnair assure 2 à 4 vols par jour en hiver ; la ligne ferme presque entièrement de mai à août.',
       it: 'Il modo più rapido per Levi (15 min) e Ylläs (50 min). Finnair opera 2-4 voli al giorno in inverno; la rotta chiude quasi del tutto da maggio ad agosto.',
       nl: 'De snelste weg naar Levi (15 min) en Ylläs (50 min). Finnair vliegt in de winter 2-4 keer per dag; de route ligt van mei t/m augustus vrijwel volledig stil.',
+      sv: 'Snabbaste vägen till Levi (15 min) och Ylläs (50 min). Finnair flyger 2–4 gånger om dagen på vintern; linjen är nästan helt nerlagd maj–augusti.',
     },
     partner: 'trip.com',
     href: TF.helToKittila,
@@ -733,6 +775,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Helsinki → Ivalo (Saariselkä)',
       it: 'Helsinki → Ivalo (Saariselkä)',
       nl: 'Helsinki → Ivalo (Saariselkä)',
+      sv: 'Helsingfors → Ivalo (Saariselkä)',
     },
     category: 'flights',
     location: {
@@ -747,6 +790,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'HEL · IVL · 1 h 35 min',
       it: 'HEL · IVL · 1h 35min',
       nl: 'HEL · IVL · 1 u 35 min',
+      sv: 'HEL · IVL · 1 h 35 min',
     },
     blurb: {
       en: 'Northernmost airport in the EU (68.61°N). Gateway to Saariselkä (30 min) and Inari (40 min). Aurora oval starts here.',
@@ -760,6 +804,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'L\'aéroport le plus septentrional de l\'UE (68,61°N). Porte d\'entrée vers Saariselkä (30 min) et Inari (40 min). L\'ovale auroral commence ici.',
       it: 'L\'aeroporto più settentrionale dell\'UE (68,61°N). Porta d\'accesso a Saariselkä (30 min) e Inari (40 min). L\'ovale aurorale inizia qui.',
       nl: 'Het noordelijkste vliegveld van de EU (68,61°N). Toegangspoort tot Saariselkä (30 min) en Inari (40 min). De aurora-ovaal begint hier.',
+      sv: 'EU:s nordligaste flygplats (68,61°N). Porten till Saariselkä (30 min) och Inari (40 min). Norrskensovalen börjar här.',
     },
     partner: 'trip.com',
     href: TF.helToIvalo,
@@ -778,6 +823,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Helsinki → Kuusamo (Ruka)',
       it: 'Helsinki → Kuusamo (Ruka)',
       nl: 'Helsinki → Kuusamo (Ruka)',
+      sv: 'Helsingfors → Kuusamo (Ruka)',
     },
     category: 'flights',
     location: {
@@ -792,6 +838,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'HEL · KAO · 1 h 25 min',
       it: 'HEL · KAO · 1h 25min',
       nl: 'HEL · KAO · 1 u 25 min',
+      sv: 'HEL · KAO · 1 h 25 min',
     },
     blurb: {
       en: 'Best access to Ruka, Oulanka NP and the wild east. Late-season skiing, Ruka often holds snow into early May.',
@@ -805,6 +852,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Le meilleur accès à Ruka, au P. N. Oulanka et à l\'est sauvage. Ski de fin de saison, Ruka conserve souvent la neige jusqu\'à début mai.',
       it: 'Il miglior accesso a Ruka, al P. N. Oulanka e all\'est selvaggio. Sci di fine stagione, Ruka conserva spesso la neve fino a inizio maggio.',
       nl: 'De beste toegang tot Ruka, NP Oulanka en het wilde oosten. Skiën in het naseizoen, Ruka houdt de sneeuw vaak tot begin mei.',
+      sv: 'Bästa vägen till Ruka, nationalparken Oulanka och den vilda östern. Skidåkning sent på säsongen, Ruka har ofta snö in i början av maj.',
     },
     partner: 'trip.com',
     href: TF.helToKuusamo,
@@ -826,6 +874,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Location de voiture — Aéroport de Rovaniemi',
       it: 'Noleggio auto — Aeroporto di Rovaniemi',
       nl: 'Autohuur — Luchthaven Rovaniemi',
+      sv: 'Biluthyrning — Rovaniemi flygplats',
     },
     category: 'cars',
     location: {
@@ -840,6 +889,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'RVN',
       it: 'RVN',
       nl: 'RVN',
+      sv: 'RVN',
     },
     blurb: {
       en: 'Studded tyres legal Nov 1 – Mar 31 (extendable). 4WD recommended. Aurora-chasing range, most ranches and viewpoints within 90 min.',
@@ -853,6 +903,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Pneus cloutés autorisés du 1er nov. au 31 mars (prolongeable). 4WD recommandé. Rayon de chasse aux aurores, la plupart des fermes et points de vue à moins de 90 min.',
       it: 'Pneumatici chiodati consentiti dal 1° nov al 31 mar (prorogabile). 4WD consigliato. Raggio per la caccia all\'aurora, la maggior parte di fattorie e punti panoramici entro 90 min.',
       nl: 'Spijkerbanden toegestaan van 1 nov t/m 31 mrt (verlengbaar). 4WD aanbevolen. Bereik voor poollichtjacht, de meeste boerderijen en uitkijkpunten binnen 90 min.',
+      sv: 'Dubbdäck tillåtna 1 november – 31 mars (kan förlängas). Fyrhjulsdrift rekommenderas. Räckvidd för norrskensjakt, de flesta gårdar och utsiktsplatser inom 90 min.',
     },
     partner: 'economybookings',
     href: carsUrl('RVN', 'card_car_rvn'),
@@ -872,6 +923,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Location de voiture — Aéroport de Kittilä',
       it: 'Noleggio auto — Aeroporto di Kittilä',
       nl: 'Autohuur — Luchthaven Kittilä',
+      sv: 'Biluthyrning — Kittilä flygplats',
     },
     category: 'cars',
     location: {
@@ -886,6 +938,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'KTT',
       it: 'KTT',
       nl: 'KTT',
+      sv: 'KTT',
     },
     blurb: {
       en: 'Levi 15 min, Ylläs 50 min. Winter tyres + chains often included; check inclusions before pickup if December.',
@@ -899,6 +952,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Levi à 15 min, Ylläs à 50 min. Pneus hiver et chaînes souvent inclus ; vérifiez les inclusions avant la prise en décembre.',
       it: 'Levi a 15 min, Ylläs a 50 min. Pneumatici invernali e catene spesso inclusi; verifica cosa è incluso prima del ritiro se è dicembre.',
       nl: 'Levi 15 min, Ylläs 50 min. Winterbanden en kettingen vaak inbegrepen; controleer in december vóór ophalen wat is inbegrepen.',
+      sv: 'Levi 15 min, Ylläs 50 min. Vinterdäck och kedjor ingår ofta; kontrollera vad som ingår före upphämtning om det är december.',
     },
     partner: 'economybookings',
     href: carsUrl('KTT', 'card_car_ktt'),
@@ -917,6 +971,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Location de voiture — Aéroport d\'Ivalo',
       it: 'Noleggio auto — Aeroporto di Ivalo',
       nl: 'Autohuur — Luchthaven Ivalo',
+      sv: 'Biluthyrning — Ivalo flygplats',
     },
     category: 'cars',
     location: {
@@ -931,6 +986,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'IVL',
       it: 'IVL',
       nl: 'IVL',
+      sv: 'IVL',
     },
     blurb: {
       en: 'Saariselkä 30 min, Inari 40 min, Norwegian border 2h. Quietest roads in Lapland, entire E75 stretches without seeing another car.',
@@ -944,6 +1000,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Saariselkä à 30 min, Inari à 40 min, frontière norvégienne à 2 h. Les routes les plus tranquilles de Laponie, des portions entières de l\'E75 sans croiser une autre voiture.',
       it: 'Saariselkä a 30 min, Inari a 40 min, confine norvegese a 2 h. Le strade più tranquille della Lapponia, interi tratti della E75 senza vedere un\'altra auto.',
       nl: 'Saariselkä 30 min, Inari 40 min, Noorse grens 2 u. De rustigste wegen van Lapland, hele stukken van de E75 zonder een andere auto te zien.',
+      sv: 'Saariselkä 30 min, Inari 40 min, norska gränsen 2 h. De lugnaste vägarna i Lappland, hela sträckor av E75 utan att du ser en enda annan bil.',
     },
     partner: 'economybookings',
     href: carsUrl('IVL', 'card_car_ivl'),
@@ -964,6 +1021,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Semaine aurores — Forfait à composer',
       it: 'Settimana dell\'aurora — Pacchetto fai-da-te',
       nl: 'Auroraweek — Zelf-samengesteld pakket',
+      sv: 'Norrskensvecka — bygg själv',
     },
     category: 'packages',
     location: {
@@ -978,6 +1036,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Saariselkä · Inari',
       it: 'Saariselkä · Inari',
       nl: 'Saariselkä · Inari',
+      sv: 'Saariselkä · Inari',
     },
     blurb: {
       en: 'Glass igloo (3-4 nights) + husky safari + aurora hunt + ice fishing. Each booked separately at the partner\'s live rate. Stack saves over packaged tours.',
@@ -991,6 +1050,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Igloo de verre (3-4 nuits) + safari en traîneau de huskies + chasse aux aurores + pêche sur glace. Chaque élément réservé séparément au tarif réel du partenaire. Composer soi-même revient moins cher qu\'un circuit packagé.',
       it: 'Igloo di vetro (3-4 notti) + safari con gli husky + caccia all\'aurora + pesca sul ghiaccio. Ogni elemento prenotato separatamente alla tariffa reale del partner. Comporlo da sé costa meno dei tour pacchetto.',
       nl: 'Glazen iglo (3-4 nachten) + huskysafari + poollichtjacht + ijsvissen. Elk apart geboekt tegen het live-tarief van de partner. Zelf combineren is goedkoper dan kant-en-klare tours.',
+      sv: 'Glasiglo (3–4 nätter) + huskysafari + norrskensjakt + pimpelfiske. Varje del bokas separat till partnerns live-pris. Att kombinera själv blir billigare än paketresor.',
     },
     partner: 'getyourguide',
     href: gygSearch('Lapland multi-day aurora package', 'pkg_aurora_week'),
@@ -1010,6 +1070,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Escapade en famille à Rovaniemi',
       it: 'Vacanza in famiglia a Rovaniemi',
       nl: 'Gezinsuitje Rovaniemi',
+      sv: 'Familjeresa till Rovaniemi',
     },
     category: 'packages',
     location: {
@@ -1024,6 +1085,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Rovaniemi · Cercle polaire arctique',
       it: 'Rovaniemi · Circolo polare artico',
       nl: 'Rovaniemi · Poolcirkel',
+      sv: 'Rovaniemi · polcirkeln',
     },
     blurb: {
       en: 'Santa Claus Village + reindeer farm + family hotel. Christmas Day arrivals: book the village 2-3 months ahead, daytime visit slots fill first.',
@@ -1037,6 +1099,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Village du Père Noël + ferme de rennes + hôtel familial. Arrivées le jour de Noël : réservez le village 2 à 3 mois à l\'avance, les créneaux de visite en journée se remplissent en premier.',
       it: 'Villaggio di Babbo Natale + fattoria delle renne + hotel per famiglie. Arrivi il giorno di Natale: prenota il villaggio con 2-3 mesi di anticipo, le fasce di visita diurne si riempiono per prime.',
       nl: 'Kerstmandorp + rendierboerderij + familiehotel. Aankomst op eerste kerstdag: boek het dorp 2-3 maanden vooraf, de bezoektijden overdag zijn het eerst vol.',
+      sv: 'Santa Claus Village + rengård + familjehotell. Ankomst på juldagen: boka byn 2–3 månader i förväg, besökstiderna på dagtid fylls först.',
     },
     partner: 'getyourguide',
     href: gygDeepLink('rovaniemi-l2653', 'pkg_family_rovaniemi'),
@@ -1058,6 +1121,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Séjours sous le soleil de minuit',
       it: 'Soggiorni sotto il sole di mezzanotte',
       nl: 'Verblijven onder de middernachtzon',
+      sv: 'Boende under midnattssolen',
     },
     category: 'hotels',
     location: {
@@ -1072,6 +1136,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Inari · Utsjoki',
       it: 'Inari · Utsjoki',
       nl: 'Inari · Utsjoki',
+      sv: 'Inari · Utsjoki',
     },
     blurb: {
       en: '32 days the sun never sets (Jun 6 – Jul 7 above 70°N). Lakeside cabin nights run 30-50% under December rates. Mosquitoes peak late June.',
@@ -1085,6 +1150,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: '32 jours où le soleil ne se couche pas (6 juin – 7 juil. au-dessus de 70°N). Les nuits en chalet au bord du lac sont 30 à 50 % sous les tarifs de décembre. Les moustiques culminent fin juin.',
       it: '32 giorni in cui il sole non tramonta (6 giu – 7 lug sopra i 70°N). Le notti nelle baite sul lago costano il 30-50% in meno rispetto a dicembre. Le zanzare al culmine a fine giugno.',
       nl: '32 dagen gaat de zon niet onder (6 jun – 7 jul boven 70°N). Nachten in hutten aan het meer liggen 30-50% onder de decembertarieven. Muggen op hun hoogtepunt eind juni.',
+      sv: '32 dygn går solen aldrig ner (6 juni – 7 juli norr om 70°N). Nätter i stuga vid sjön ligger 30–50 % under decemberpriserna. Myggen är som värst i slutet av juni.',
     },
     partner: 'hotels.com',
     href: hotelsUrl('Inari, Finland', 'card_summer_midnight_sun'),
@@ -1104,6 +1170,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Randonnée d\'été — Pallas-Yllästunturi',
       it: 'Trekking estivo — Pallas-Yllästunturi',
       nl: 'Zomerwandelen — Pallas-Yllästunturi',
+      sv: 'Sommarvandring — Pallas-Yllästunturi',
     },
     category: 'activities',
     location: {
@@ -1118,6 +1185,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Muonio · Kittilä',
       it: 'Muonio · Kittilä',
       nl: 'Muonio · Kittilä',
+      sv: 'Muonio · Kittilä',
     },
     blurb: {
       en: '102,000 ha national park. Cleanest air in Europe (WMO). Ruska peaks ~Sept 5-15, dwarf birch turns gold in three days.',
@@ -1131,6 +1199,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       fr: 'Parc national de 102 000 ha. L\'air le plus pur d\'Europe (OMM). La ruska culmine vers le 5-15 sept., le bouleau nain vire à l\'or en trois jours.',
       it: 'Parco nazionale di 102.000 ha. L\'aria più pulita d\'Europa (OMM). La ruska culmina intorno al 5-15 set, la betulla nana diventa dorata in tre giorni.',
       nl: 'Nationaal park van 102.000 ha. De schoonste lucht van Europa (WMO). De ruska piekt rond 5-15 sep, de dwergberk wordt in drie dagen goudkleurig.',
+      sv: 'Nationalpark på 102 000 ha. Europas renaste luft (WMO). Ruskan (höstfärgerna) kulminerar omkring 5–15 september, dvärgbjörken blir guldgul på tre dagar.',
     },
     partner: 'getyourguide',
     href: gygSearch('Pallas-Yllästunturi hiking', 'card_summer_hiking'),
