@@ -166,12 +166,12 @@ const nl: SectionCopy = {
     h1Italic: 'Lapland-hotels',
     h1: 'live prijzen, vannacht.',
     sub:
-      "Glazen iglo's onder de noorderlicht-band, hotels aan de piste in Levi, wildernislodges in Ylläs, gezinshotels in Rovaniemi. Vergelijk de tarieven van vannacht op Hotels.com.",
+      "Glazen iglo's onder de noorderlicht-band, hotels aan de piste in Levi, wildernislodges in Ylläs, gezinshotels in Rovaniemi. Vergelijk de tarieven van vannacht in realtime.",
     seoTitle: "Lapland-hotelaanbiedingen, Glazen iglo's, piste, hutten",
     seoDesc:
-      "Live Hotels.com-prijzen voor glazen iglo's, ski-in-verblijven, gezinshotels en wildernislodges in heel Fins Lapland. Last-minute en eindseizoens-hutnachten.",
+      "Live prijzen voor glazen iglo's, ski-in-verblijven, gezinshotels en wildernislodges in heel Fins Lapland. Last-minute en eindseizoens-hutnachten.",
     bottomTitle: 'Ziet u uw bestemming niet?',
-    bottomLead: 'Zoek elke Lapland-stad direct op Hotels.com.',
+    bottomLead: 'Zoek elke Lapland-stad direct op Trip.com.',
     bottomCta: 'Alle Lapland-hotels bekijken →',
   },
   activitiesPage: {
@@ -195,7 +195,7 @@ const nl: SectionCopy = {
       "Helsinki naar elke Lapland-luchthaven, vooraf ingevuld en gedateerd. Klik door naar echte Finnair- en Norwegian-tarieven.",
     seoTitle: 'Vluchten naar Lapland, Trip.com-deals vanuit Helsinki',
     seoDesc:
-      'Live Trip.com-vluchtprijzen: Helsinki naar Rovaniemi, Kittilä, Ivalo, Kuusamo en Kemi. Directe Finnair- en Norwegian-tarieven, vooraf ingevuld.',
+      'Live Trip.com-vluchtprijzen: Helsinki naar Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) en Kemi. Directe Finnair- en Norwegian-tarieven, vooraf ingevuld.',
     bottomTitle: 'Reist u van buiten Finland?',
     bottomLead: 'Zoek elke oorsprong naar elke Lapland-luchthaven op Trip.com.',
     bottomCta: 'Open Trip.com vluchtenzoekopdracht →',
@@ -208,7 +208,7 @@ const nl: SectionCopy = {
       "Spijkerbanden, 4x4, vrij bereik voor noorderlicht-jachten. Ophalen op elke Lapland-luchthaven, vergelijk op EconomyBookings.",
     seoTitle: 'Lapland-autoverhuur, Spijkerbanden, 4x4, luchthaven',
     seoDesc:
-      "Live EconomyBookings-prijzen voor autoverhuur op de luchthavens van Rovaniemi, Kittilä, Ivalo en Kuusamo. Spijkerbanden inbegrepen voor winterrijden.",
+      "Live EconomyBookings-prijzen voor autoverhuur op de luchthavens van Rovaniemi, Kittilä, Ivalo en Kuusamo (Ruka). Spijkerbanden inbegrepen voor winterrijden.",
     bottomTitle: 'Helsinki ophalen of enkele reis inleveren?',
     bottomLead: 'EconomyBookings ondersteunt enkele-reis huur tussen de meeste Finse luchthavens.',
     bottomCta: 'Open EconomyBookings →',

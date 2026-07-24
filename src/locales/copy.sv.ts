@@ -170,12 +170,12 @@ const sv: SectionCopy = {
     h1Italic: 'Lapplands hotell',
     h1: 'priser i realtid, i kväll.',
     sub:
-      'Glasiglos under norrskensbältet, boende vid backen i Levi, vildmarkslodger i Ylläs, familjehotell i Rovaniemi. Jämför kvällens priser på Hotels.com.',
+      'Glasiglos under norrskensbältet, boende vid backen i Levi, vildmarkslodger i Ylläs, familjehotell i Rovaniemi. Jämför kvällens priser i realtid.',
     seoTitle: 'Lappland hotellerbjudanden, glasiglos, vid backen, vildmarksstugor',
     seoDesc:
-      'Hotels.com-priser i realtid på glasiglos, ski-in-boende, familjehotell och vildmarkslodger i finska Lappland. Stugnätter i sista minuten och i slutet av säsongen.',
+      'Priser i realtid på glasiglos, ski-in-boende, familjehotell och vildmarkslodger i finska Lappland. Stugnätter i sista minuten och i slutet av säsongen.',
     bottomTitle: 'Ser du inte ditt resmål?',
-    bottomLead: 'Sök vilken ort som helst i Lappland direkt på Hotels.com.',
+    bottomLead: 'Sök vilken ort som helst i Lappland direkt på Trip.com.',
     bottomCta: 'Bläddra bland alla hotell i Lappland →',
   },
   activitiesPage: {
@@ -199,7 +199,7 @@ const sv: SectionCopy = {
       'Helsingfors till varje port till Lappland, förifyllt och daterat. Klicka vidare till Finnairs och Norwegians riktiga priser.',
     seoTitle: 'Flyg till Lappland, Trip.com-erbjudanden i realtid på Helsingforslinjer',
     seoDesc:
-      'Trip.com-flygpriser i realtid: Helsingfors till Rovaniemi, Kittilä, Ivalo, Kuusamo och Kemi. Direktflyg med Finnair och Norwegian, förifyllt och klart att boka.',
+      'Trip.com-flygpriser i realtid: Helsingfors till Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) och Kemi. Direktflyg med Finnair och Norwegian, förifyllda.',
     bottomTitle: 'Reser du från utanför Finland?',
     bottomLead: 'Sök vilken avreseort som helst till valfri flygplats i Lappland på Trip.com.',
     bottomCta: 'Öppna Trip.com flygsök →',
@@ -212,7 +212,7 @@ const sv: SectionCopy = {
       'Dubbdäck, fyrhjulsdrift, räckvidd nog för norrskensjakt. Upphämtning på varje flygplats i Lappland, jämför på EconomyBookings.',
     seoTitle: 'Lappland biluthyrning, dubbdäck, fyrhjulsdrift, upphämtning på flygplatsen',
     seoDesc:
-      'EconomyBookings-priser i realtid på biluthyrning från flygplatserna i Rovaniemi, Kittilä, Ivalo och Kuusamo. Dubbdäck ingår för vinterkörning.',
+      'EconomyBookings-priser i realtid på biluthyrning från flygplatserna i Rovaniemi, Kittilä, Ivalo och Kuusamo (Ruka). Dubbdäck ingår för vinterkörning.',
     bottomTitle: 'Upphämtning i Helsingfors eller enkelresa?',
     bottomLead: 'EconomyBookings stöder enkelresor mellan de flesta finska flygplatser.',
     bottomCta: 'Öppna EconomyBookings →',

@@ -166,12 +166,12 @@ const es: SectionCopy = {
     h1Italic: 'Hoteles de Laponia',
     h1: 'precios reales, esta noche.',
     sub:
-      'Iglús de cristal bajo el cinturón de auroras, alojamientos junto a las pistas en Levi, lodges salvajes en Ylläs, hoteles familiares en Rovaniemi. Compare las tarifas de esta noche en Hotels.com.',
+      'Iglús de cristal bajo el cinturón de auroras, alojamientos junto a las pistas en Levi, lodges salvajes en Ylläs, hoteles familiares en Rovaniemi. Compare las tarifas de esta noche en tiempo real.',
     seoTitle: 'Ofertas de hoteles en Laponia, Iglús de cristal y cabañas',
     seoDesc:
-      'Precios en directo de Hotels.com para iglús de cristal, alojamientos ski-in, hoteles familiares y lodges salvajes en la Laponia finlandesa.',
+      'Precios en directo para iglús de cristal, alojamientos ski-in, hoteles familiares y lodges salvajes en la Laponia finlandesa.',
     bottomTitle: '¿No ve su destino?',
-    bottomLead: 'Busque cualquier pueblo de Laponia directamente en Hotels.com.',
+    bottomLead: 'Busque cualquier pueblo de Laponia directamente en Trip.com.',
     bottomCta: 'Ver todos los hoteles de Laponia →',
   },
   activitiesPage: {
@@ -195,7 +195,7 @@ const es: SectionCopy = {
       'De Helsinki a cada puerta de entrada a Laponia, con datos prellenados. Pulse para ver tarifas reales de Finnair y Norwegian.',
     seoTitle: 'Vuelos a Laponia, Ofertas de Trip.com desde Helsinki',
     seoDesc:
-      'Precios reales de vuelos en Trip.com: Helsinki a Rovaniemi, Kittilä, Ivalo, Kuusamo y Kemi. Tarifas directas de Finnair y Norwegian.',
+      'Precios reales de vuelos en Trip.com: Helsinki a Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) y Kemi. Tarifas directas de Finnair y Norwegian.',
     bottomTitle: '¿Viaja desde fuera de Finlandia?',
     bottomLead: 'Busque cualquier origen a cualquier aeropuerto de Laponia en Trip.com.',
     bottomCta: 'Abrir la búsqueda de vuelos en Trip.com →',
@@ -208,7 +208,7 @@ const es: SectionCopy = {
       'Neumáticos con clavos, 4x4, autonomía libre para perseguir auroras. Recogida en todos los aeropuertos de Laponia, compare en EconomyBookings.',
     seoTitle: 'Alquiler de coches en Laponia, Neumáticos con clavos, 4x4',
     seoDesc:
-      'Precios en directo de EconomyBookings para alquiler de coches en los aeropuertos de Rovaniemi, Kittilä, Ivalo y Kuusamo. Neumáticos con clavos incluidos.',
+      'Precios en directo de EconomyBookings para alquiler de coches en los aeropuertos de Rovaniemi, Kittilä, Ivalo y Kuusamo (Ruka). Neumáticos con clavos incluidos.',
     bottomTitle: '¿Recogida en Helsinki o devolución en otro lugar?',
     bottomLead: 'EconomyBookings admite alquileres de una sola dirección entre la mayoría de aeropuertos finlandeses.',
     bottomCta: 'Abrir EconomyBookings →',

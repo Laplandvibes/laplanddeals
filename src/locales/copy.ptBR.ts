@@ -166,12 +166,12 @@ const ptBR: SectionCopy = {
     h1Italic: 'Hotéis da Lapônia',
     h1: 'preços reais, hoje à noite.',
     sub:
-      'Iglus de vidro sob o cinturão de aurora, acomodações ao pé da pista em Levi, lodges no meio da floresta em Ylläs, hotéis para a família em Rovaniemi. Compare as tarifas desta noite no Hotels.com.',
+      'Iglus de vidro sob o cinturão de aurora, acomodações ao pé da pista em Levi, lodges no meio da floresta em Ylläs, hotéis para a família em Rovaniemi. Compare as tarifas desta noite em tempo real.',
     seoTitle: 'Ofertas de hotéis na Lapônia, Iglus de vidro e cabanas',
     seoDesc:
-      'Preços ao vivo no Hotels.com para iglus de vidro, hospedagens ski-in, hotéis para a família e lodges selvagens em toda a Lapônia finlandesa.',
+      'Preços ao vivo para iglus de vidro, hospedagens ski-in, hotéis para a família e lodges selvagens em toda a Lapônia finlandesa.',
     bottomTitle: 'Não encontrou seu destino?',
-    bottomLead: 'Busque qualquer cidade da Lapônia direto no Hotels.com.',
+    bottomLead: 'Busque qualquer cidade da Lapônia direto no Trip.com.',
     bottomCta: 'Ver todos os hotéis da Lapônia →',
   },
   activitiesPage: {
@@ -195,7 +195,7 @@ const ptBR: SectionCopy = {
       'De Helsinki para todo portão da Lapônia, com datas pré-preenchidas. Clique para ver tarifas reais da Finnair e da Norwegian.',
     seoTitle: 'Voos para a Lapônia, Ofertas do Trip.com de Helsinki',
     seoDesc:
-      'Preços de voos em tempo real no Trip.com: Helsinki para Rovaniemi, Kittilä, Ivalo, Kuusamo e Kemi. Tarifas diretas da Finnair e da Norwegian.',
+      'Preços de voos em tempo real no Trip.com: Helsinki para Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) e Kemi. Tarifas diretas da Finnair e da Norwegian.',
     bottomTitle: 'Vindo de fora da Finlândia?',
     bottomLead: 'Busque qualquer origem para qualquer aeroporto da Lapônia no Trip.com.',
     bottomCta: 'Abrir a busca de voos no Trip.com →',
@@ -208,7 +208,7 @@ const ptBR: SectionCopy = {
       'Pneus com pinos, 4x4, autonomia livre para caçar aurora. Retirada em todos os aeroportos da Lapônia, compare no EconomyBookings.',
     seoTitle: 'Aluguel de carro na Lapônia, Pneus com pinos, 4x4',
     seoDesc:
-      'Preços em tempo real no EconomyBookings para aluguel de carro nos aeroportos de Rovaniemi, Kittilä, Ivalo e Kuusamo. Pneus com pinos inclusos.',
+      'Preços em tempo real no EconomyBookings para aluguel de carro nos aeroportos de Rovaniemi, Kittilä, Ivalo e Kuusamo (Ruka). Pneus com pinos inclusos.',
     bottomTitle: 'Retirar em Helsinki ou devolver em outro aeroporto?',
     bottomLead: 'O EconomyBookings aceita aluguel one-way entre a maioria dos aeroportos finlandeses.',
     bottomCta: 'Abrir o EconomyBookings →',

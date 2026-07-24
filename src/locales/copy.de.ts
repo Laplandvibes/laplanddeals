@@ -166,12 +166,12 @@ const de: SectionCopy = {
     h1Italic: 'Hotels in Lappland',
     h1: 'Live-Preise für heute Abend.',
     sub:
-      'Glas-Iglus im Polarlichtgürtel, pistennahe Häuser in Levi, Wildnis-Lodges in Ylläs, Familienhotels in Rovaniemi. Vergleichen Sie die heutigen Raten auf Hotels.com.',
+      'Glas-Iglus im Polarlichtgürtel, pistennahe Häuser in Levi, Wildnis-Lodges in Ylläs, Familienhotels in Rovaniemi. Vergleichen Sie die heutigen Raten in Echtzeit.',
     seoTitle: 'Lappland Hotelangebote, Glas-Iglus, Pistennah, Hütten',
     seoDesc:
-      'Hotels.com Live-Preise für Glas-Iglus, Ski-in-Unterkünfte, Familienhotels und Wildnis-Lodges in Finnisch-Lappland. Last-Minute- und Saisonende-Hütten.',
+      'Live-Preise für Glas-Iglus, Ski-in-Unterkünfte, Familienhotels und Wildnis-Lodges in Finnisch-Lappland. Last-Minute- und Saisonende-Hütten.',
     bottomTitle: 'Ihr Reiseziel nicht dabei?',
-    bottomLead: 'Suchen Sie jeden Ort in Lappland direkt auf Hotels.com.',
+    bottomLead: 'Suchen Sie jeden Ort in Lappland direkt auf Trip.com.',
     bottomCta: 'Alle Hotels in Lappland ansehen →',
   },
   activitiesPage: {
@@ -195,7 +195,7 @@ const de: SectionCopy = {
       'Helsinki zu jedem Flughafen in Lappland, vorausgefüllt und datiert. Klicken Sie sich zu den echten Finnair- und Norwegian-Tarifen.',
     seoTitle: 'Flüge nach Lappland, Live-Angebote von Trip.com ab Helsinki',
     seoDesc:
-      'Live-Flugpreise von Trip.com: Helsinki nach Rovaniemi, Kittilä, Ivalo, Kuusamo und Kemi. Direktflüge mit Finnair und Norwegian, vorausgefüllt und buchbar.',
+      'Live-Flugpreise von Trip.com: Helsinki nach Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) und Kemi. Direktflüge mit Finnair und Norwegian, vorausgefüllt, buchbar.',
     bottomTitle: 'Sie reisen von außerhalb Finnlands an?',
     bottomLead: 'Suchen Sie jeden Abflug zu jedem Lappland-Flughafen auf Trip.com.',
     bottomCta: 'Trip.com Flugsuche öffnen →',
@@ -208,7 +208,7 @@ const de: SectionCopy = {
       'Spikereifen, 4WD, ausreichende Reichweite für die Polarlichtjagd. Abholung an jedem Lappland-Flughafen, vergleichen Sie auf EconomyBookings.',
     seoTitle: 'Lappland Mietwagen, Spikereifen, 4WD, Flughafenabholung',
     seoDesc:
-      'EconomyBookings Live-Preise für Mietwagen an den Flughäfen Rovaniemi, Kittilä, Ivalo und Kuusamo. Spikereifen für die Winterfahrt inklusive.',
+      'EconomyBookings Live-Preise für Mietwagen an den Flughäfen Rovaniemi, Kittilä, Ivalo und Kuusamo (Ruka). Spikereifen für die Winterfahrt inklusive.',
     bottomTitle: 'Abholung in Helsinki oder Einwegmiete?',
     bottomLead: 'EconomyBookings unterstützt Einwegmieten zwischen den meisten finnischen Flughäfen.',
     bottomCta: 'EconomyBookings öffnen →',

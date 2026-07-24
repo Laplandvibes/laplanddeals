@@ -166,12 +166,12 @@ const fr: SectionCopy = {
     h1Italic: 'Hôtels en Laponie',
     h1: 'tarifs en direct, ce soir.',
     sub:
-      "Igloos de verre sous la ceinture aurorale, hôtels au pied des pistes à Levi, lodges en pleine nature à Ylläs, hôtels familiaux à Rovaniemi. Comparez les tarifs de ce soir sur Hotels.com.",
+      "Igloos de verre sous la ceinture aurorale, hôtels au pied des pistes à Levi, lodges en pleine nature à Ylläs, hôtels familiaux à Rovaniemi. Comparez les tarifs de ce soir en temps réel.",
     seoTitle: 'Offres hôtels Laponie, Igloos de verre, pistes, chalets',
     seoDesc:
-      'Tarifs Hotels.com en direct pour igloos de verre, séjours ski-in, hôtels familiaux et lodges en pleine nature à travers la Laponie finlandaise.',
+      'Tarifs en direct pour igloos de verre, séjours ski-in, hôtels familiaux et lodges en pleine nature à travers la Laponie finlandaise.',
     bottomTitle: 'Vous ne voyez pas votre destination ?',
-    bottomLead: 'Recherchez n\'importe quelle ville de Laponie directement sur Hotels.com.',
+    bottomLead: 'Recherchez n\'importe quelle ville de Laponie directement sur Trip.com.',
     bottomCta: 'Voir tous les hôtels de Laponie →',
   },
   activitiesPage: {
@@ -195,7 +195,7 @@ const fr: SectionCopy = {
       "Helsinki vers toutes les portes d'entrée de Laponie, pré-remplis et datés. Cliquez pour accéder aux vrais tarifs Finnair et Norwegian.",
     seoTitle: 'Vols pour la Laponie, Offres Trip.com depuis Helsinki',
     seoDesc:
-      "Tarifs vols Trip.com en direct : Helsinki vers Rovaniemi, Kittilä, Ivalo, Kuusamo et Kemi. Vols directs Finnair et Norwegian, pré-remplis, prêts à réserver.",
+      "Tarifs vols Trip.com en direct : Helsinki vers Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) et Kemi. Vols directs Finnair et Norwegian, pré-remplis.",
     bottomTitle: 'Vous voyagez depuis hors de Finlande ?',
     bottomLead: "Recherchez n'importe quel point de départ vers un aéroport de Laponie sur Trip.com.",
     bottomCta: 'Ouvrir la recherche de vols Trip.com →',
@@ -208,7 +208,7 @@ const fr: SectionCopy = {
       "Pneus cloutés, 4x4, kilométrage libre pour chasser les aurores. Prise en charge dans tous les aéroports de Laponie, comparez sur EconomyBookings.",
     seoTitle: 'Location voiture Laponie, Pneus cloutés, 4x4, aéroport',
     seoDesc:
-      'Tarifs EconomyBookings en direct sur la location de voitures aux aéroports de Rovaniemi, Kittilä, Ivalo et Kuusamo. Pneus cloutés inclus.',
+      'Tarifs EconomyBookings en direct sur la location de voitures aux aéroports de Rovaniemi, Kittilä, Ivalo et Kuusamo (Ruka). Pneus cloutés inclus.',
     bottomTitle: 'Prise en charge à Helsinki ou retour en aller simple ?',
     bottomLead: 'EconomyBookings prend en charge les locations en aller simple entre la plupart des aéroports finlandais.',
     bottomCta: 'Ouvrir EconomyBookings →',

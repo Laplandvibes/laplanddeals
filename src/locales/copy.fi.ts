@@ -166,12 +166,12 @@ const fi: SectionCopy = {
     h1Italic: 'Lapin hotellit',
     h1: 'vapaat huoneet tänä iltana.',
     sub:
-      'Lasi-iglut revontulivyöhykkeellä, rinneläheiset kohteet Levillä, erämaalodget Ylläksellä, perhehotellit Rovaniemellä. Vertaile tämän illan hinnat Hotels.comissa.',
+      'Lasi-iglut revontulivyöhykkeellä, rinneläheiset kohteet Levillä, erämaalodget Ylläksellä, perhehotellit Rovaniemellä. Vertaile tämän illan hinnat reaaliajassa.',
     seoTitle: 'Lapin hotellitarjoukset, lasi-iglut, rinne, mökit',
     seoDesc:
-      'Hotels.comin sen hetkiset hinnat lasi-igluihin, ski-in-majoituksiin, perhehotelleihin ja erämaalodgeihin Suomen Lapissa. Last-minute- ja kauden loppumökkiöitä.',
+      'Sen hetkiset hinnat lasi-igluihin, ski-in-majoituksiin, perhehotelleihin ja erämaalodgeihin Suomen Lapissa. Last-minute- ja kauden loppumökkiöitä.',
     bottomTitle: 'Eikö kohdetta löytynyt?',
-    bottomLead: 'Hae mitä tahansa Lapin kuntaa suoraan Hotels.comista.',
+    bottomLead: 'Hae mitä tahansa Lapin kuntaa suoraan Sembosta.',
     bottomCta: 'Selaa kaikki Lapin hotellit →',
   },
   activitiesPage: {
@@ -195,7 +195,7 @@ const fi: SectionCopy = {
       'Helsinki jokaiselle Lapin lentokentälle, valmiiksi täytetty ja päivätty. Klikkaa avataksesi Finnairin ja Norwegianin todelliset hinnat.',
     seoTitle: 'Lennot Lappiin, Trip.comin live-tarjoukset Helsingistä',
     seoDesc:
-      'Trip.comin hinnat suoraan: Helsinki–Rovaniemi, Kittilä, Ivalo, Kuusamo ja Kemi. Suorat Finnair- ja Norwegian-lennot, valmiiksi täytetty, valmiita varattaviksi.',
+      'Trip.comin hinnat suoraan: Helsinki–Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) ja Kemi. Suorat Finnair- ja Norwegian-lennot valmiiksi täytettyinä.',
     bottomTitle: 'Matkustatko Suomen ulkopuolelta?',
     bottomLead: 'Hae mitä tahansa lähtöä mihin tahansa Lapin lentokenttään Trip.comissa.',
     bottomCta: 'Avaa Trip.comin lentohaku →',
@@ -208,7 +208,7 @@ const fi: SectionCopy = {
       'Talvirenkaat, 4WD, riittävä matka revontulijahtiin. Nouto jokaiselta Lapin lentokentältä, vertaile EconomyBookingsissa.',
     seoTitle: 'Lapin autovuokraustarjoukset, talvirenkaat, 4WD, nouto',
     seoDesc:
-      'EconomyBookingsin sen hetkiset hinnat autovuokraukseen Rovaniemen, Kittilän, Ivalon ja Kuusamon lentokentiltä. Talvirenkaat sisältyvät.',
+      'EconomyBookingsin sen hetkiset hinnat autovuokraukseen Rovaniemen, Kittilän, Ivalon ja Kuusamon (Ruka) lentokentiltä. Talvirenkaat sisältyvät.',
     bottomTitle: 'Helsingin nouto vai yksisuuntainen palautus?',
     bottomLead: 'EconomyBookings tukee yksisuuntaisia vuokrauksia useimpien Suomen lentokenttien välillä.',
     bottomCta: 'Avaa EconomyBookings →',

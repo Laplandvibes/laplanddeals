@@ -166,12 +166,12 @@ const zhCN: SectionCopy = {
     h1Italic: '拉普兰酒店',
     h1: '今晚的实时价格。',
     sub:
-      '极光带下的玻璃穹顶、莱维雪道旁的酒店、于来斯的荒野旅馆、罗瓦涅米的家庭酒店。在 Hotels.com 上比较今晚的房价。',
+      '极光带下的玻璃穹顶、莱维雪道旁的酒店、于来斯的荒野旅馆、罗瓦涅米的家庭酒店。实时比较今晚的房价。',
     seoTitle: '拉普兰酒店优惠，玻璃穹顶、雪道旁、荒野小屋',
     seoDesc:
-      'Hotels.com 上玻璃穹顶酒店、雪道直达住宿、家庭酒店和荒野旅馆的实时价格,遍布芬兰拉普兰。临时折扣和季末小屋优惠。',
+      '玻璃穹顶酒店、雪道直达住宿、家庭酒店和荒野旅馆的实时价格,遍布芬兰拉普兰。临时折扣和季末小屋优惠。',
     bottomTitle: '没找到您的目的地?',
-    bottomLead: '直接在 Hotels.com 上搜索任何拉普兰小镇。',
+    bottomLead: '直接在 Trip.com 上搜索任何拉普兰小镇。',
     bottomCta: '浏览全部拉普兰酒店 →',
   },
   activitiesPage: {
@@ -195,7 +195,7 @@ const zhCN: SectionCopy = {
       '从赫尔辛基飞往每个拉普兰门户城市,日期已预填。点击查看芬兰航空与挪威航空的真实票价。',
     seoTitle: '飞往拉普兰航班，Trip.com 赫尔辛基出发实时优惠',
     seoDesc:
-      'Trip.com 上的实时机票价格:赫尔辛基至罗瓦涅米、基蒂莱、伊瓦洛、库萨莫和凯米。芬兰航空与挪威航空直飞, 已预填,随时可订。',
+      'Trip.com 上的实时机票价格:赫尔辛基至罗瓦涅米、基蒂莱、伊瓦洛、库萨莫(鲁卡)和凯米。芬兰航空与挪威航空直飞, 已预填,随时可订。',
     bottomTitle: '您是从芬兰之外出发吗?',
     bottomLead: '在 Trip.com 上搜索任何出发地到任何拉普兰机场。',
     bottomCta: '打开 Trip.com 机票搜索 →',
@@ -208,7 +208,7 @@ const zhCN: SectionCopy = {
       '钉胎、四驱、可自由追逐极光的里程。所有拉普兰机场均可取车, 在 EconomyBookings 上比价。',
     seoTitle: '拉普兰租车优惠，钉胎、4WD、机场取车',
     seoDesc:
-      'EconomyBookings 上在罗瓦涅米、基蒂莱、伊瓦洛和库萨莫机场租车的实时价格。冬季驾驶专用钉胎。',
+      'EconomyBookings 上在罗瓦涅米、基蒂莱、伊瓦洛和库萨莫(鲁卡)机场租车的实时价格。冬季驾驶专用钉胎。',
     bottomTitle: '赫尔辛基取车或异地还车?',
     bottomLead: 'EconomyBookings 支持大多数芬兰机场之间的单程租车。',
     bottomCta: '打开 EconomyBookings →',

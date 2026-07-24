@@ -67,18 +67,18 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
     trackId: 'ad_lomarengas',
     badge,
     tagline: {
-      en: "Finland's largest cottage network — book a real Lapland cabin direct from the source.",
-      fi: 'Suomen suurin mökkivälittäjä — varaa aito Lapin mökki suoraan lähteeltä.',
-      de: 'Finnlands größtes Hüttennetz — buchen Sie eine echte Lappland-Hütte direkt an der Quelle.',
+      en: "Finland's largest cottage network. Book a real Lapland cabin direct from the source.",
+      fi: 'Suomen suurin mökkivälittäjä. Varaa aito Lapin mökki suoraan lähteeltä.',
+      de: 'Finnlands größtes Hüttennetz. Buchen Sie eine echte Lappland-Hütte direkt an der Quelle.',
       ja: 'フィンランド最大のコテージネットワーク。本物のラップランドのコテージを直接予約。',
       es: 'La mayor red de cabañas de Finlandia: reserva una auténtica cabaña de Laponia en origen.',
       'pt-BR': 'A maior rede de cabanas da Finlândia: reserve uma cabana autêntica da Lapônia direto na fonte.',
       'zh-CN': '芬兰最大的小屋预订网络——直接从源头预订一座真正的拉普兰小屋。',
-      ko: '핀란드 최대 코티지 네트워크 — 진짜 라플란드 캐빈을 산지에서 직접 예약하세요.',
-      fr: 'Le plus grand réseau de chalets de Finlande — réservez un vrai chalet de Laponie à la source.',
+      ko: '핀란드 최대 코티지 네트워크. 진짜 라플란드 캐빈을 산지에서 직접 예약하세요.',
+      fr: 'Le plus grand réseau de chalets de Finlande. Réservez un vrai chalet de Laponie à la source.',
       it: 'La più grande rete di cottage della Finlandia: prenota una vera baita lappone alla fonte.',
-      nl: "Het grootste hutten­netwerk van Finland — boek een echte Laplandse hut rechtstreeks bij de bron.",
-      sv: 'Finlands största stugnätverk — boka en riktig stuga i Lappland direkt hos källan.',
+      nl: "Het grootste hutten­netwerk van Finland. Boek een echte Laplandse hut rechtstreeks bij de bron.",
+      sv: 'Finlands största stugnätverk. Boka en riktig stuga i Lappland direkt hos källan.',
     },
     points: {
       en: ['4,000+ cabins across Finland', 'Many with private lakeside sauna', 'Finnish operator, local support'],
@@ -101,18 +101,18 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       it: 'Vedi i cottage', nl: 'Bekijk hutten', sv: 'Bläddra bland stugor',
     },
     note: {
-      en: 'Opens Lomarengas.fi — live availability and prices.',
-      fi: 'Avaa Lomarengas.fi:n — vapaat ajat ja hinnat reaaliajassa.',
-      de: 'Öffnet Lomarengas.fi — Verfügbarkeit und Preise in Echtzeit.',
+      en: 'Opens Lomarengas.fi: live availability and prices.',
+      fi: 'Avaa Lomarengas.fi:n. Vapaat ajat ja hinnat reaaliajassa.',
+      de: 'Öffnet Lomarengas.fi: Verfügbarkeit und Preise in Echtzeit.',
       ja: 'Lomarengas.fi を開きます（空室状況と料金はリアルタイム）。',
-      es: 'Abre Lomarengas.fi — disponibilidad y precios en tiempo real.',
-      'pt-BR': 'Abre o Lomarengas.fi — disponibilidade e preços em tempo real.',
+      es: 'Abre Lomarengas.fi: disponibilidad y precios en tiempo real.',
+      'pt-BR': 'Abre o Lomarengas.fi: disponibilidade e preços em tempo real.',
       'zh-CN': '打开 Lomarengas.fi——实时空房与价格。',
-      ko: 'Lomarengas.fi를 엽니다 — 실시간 예약 가능 여부와 요금.',
-      fr: 'Ouvre Lomarengas.fi — disponibilités et prix en temps réel.',
-      it: 'Apre Lomarengas.fi — disponibilità e prezzi in tempo reale.',
-      nl: 'Opent Lomarengas.fi — actuele beschikbaarheid en prijzen.',
-      sv: 'Öppnar Lomarengas.fi — tillgänglighet och priser i realtid.',
+      ko: 'Lomarengas.fi를 엽니다. 실시간 예약 가능 여부와 요금.',
+      fr: 'Ouvre Lomarengas.fi: disponibilités et prix en temps réel.',
+      it: 'Apre Lomarengas.fi: disponibilità e prezzi in tempo reale.',
+      nl: 'Opent Lomarengas.fi: actuele beschikbaarheid en prijzen.',
+      sv: 'Öppnar Lomarengas.fi: tillgänglighet och priser i realtid.',
     },
   },
 
@@ -131,18 +131,18 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
     trackId: 'ad_getyourguide',
     badge,
     tagline: {
-      en: 'Husky, aurora and snowmobile tours — reserve now, pay later, cancel free up to 24h.',
-      fi: 'Husky-, revontuli- ja kelkkaretket — varaa nyt, maksa myöhemmin, peru maksutta 24 h asti.',
-      de: 'Husky-, Polarlicht- und Schneemobiltouren — jetzt reservieren, später zahlen, bis 24 h gratis stornieren.',
+      en: 'Husky, aurora and snowmobile tours: reserve now, pay later, cancel free up to 24h.',
+      fi: 'Husky-, revontuli- ja kelkkaretket: varaa nyt, maksa myöhemmin, peru maksutta 24 h asti.',
+      de: 'Husky-, Polarlicht- und Schneemobiltouren: jetzt reservieren, später zahlen, bis 24 h gratis stornieren.',
       ja: 'ハスキー・オーロラ・スノーモービルツアー。今すぐ予約・後払い・24時間前まで無料キャンセル。',
       es: 'Tours de husky, auroras y moto de nieve: reserva ahora, paga después, cancela gratis hasta 24 h.',
       'pt-BR': 'Tours de husky, auroras e moto de neve: reserve agora, pague depois, cancele grátis até 24 h.',
       'zh-CN': '哈士奇、极光与雪地摩托之旅——立即预订、稍后付款、提前 24 小时免费取消。',
-      ko: '허스키·오로라·스노모빌 투어 — 지금 예약, 나중에 결제, 24시간 전까지 무료 취소.',
-      fr: 'Excursions husky, aurores et motoneige — réservez maintenant, payez plus tard, annulez gratuitement jusqu’à 24 h.',
+      ko: '허스키·오로라·스노모빌 투어: 지금 예약, 나중에 결제, 24시간 전까지 무료 취소.',
+      fr: 'Excursions husky, aurores et motoneige: réservez maintenant, payez plus tard, annulez gratuitement jusqu’à 24 h.',
       it: 'Tour husky, aurora e motoslitta: prenota ora, paga dopo, cancella gratis fino a 24 h.',
-      nl: "Husky-, aurora- en sneeuwscootertochten — reserveer nu, betaal later, gratis annuleren tot 24 u.",
-      sv: 'Husky-, norrskens- och skoterturer — boka nu, betala senare, avboka gratis fram till 24 h innan.',
+      nl: "Husky-, aurora- en sneeuwscootertochten: reserveer nu, betaal later, gratis annuleren tot 24 u.",
+      sv: 'Husky-, norrskens- och skoterturer: boka nu, betala senare, avboka gratis fram till 24 h innan.',
     },
     points: {
       en: ['Free cancellation up to 24h before', 'Reserve now, pay later', 'Verified reviews on every tour'],
@@ -165,62 +165,64 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       it: 'Sfoglia i tour in Lapponia', nl: 'Bekijk Lapland-tochten', sv: 'Bläddra bland turer i Lappland',
     },
     note: {
-      en: 'Opens GetYourGuide — live tour availability.',
-      fi: 'Avaa GetYourGuiden — retkien vapaat ajat reaaliajassa.',
-      de: 'Öffnet GetYourGuide — Tourverfügbarkeit in Echtzeit.',
+      en: 'Opens GetYourGuide: live tour availability.',
+      fi: 'Avaa GetYourGuiden: retkien vapaat ajat reaaliajassa.',
+      de: 'Öffnet GetYourGuide: Tourverfügbarkeit in Echtzeit.',
       ja: 'GetYourGuide を開きます（ツアーの空き状況はリアルタイム）。',
-      es: 'Abre GetYourGuide — disponibilidad de tours en tiempo real.',
-      'pt-BR': 'Abre o GetYourGuide — disponibilidade de tours em tempo real.',
+      es: 'Abre GetYourGuide: disponibilidad de tours en tiempo real.',
+      'pt-BR': 'Abre o GetYourGuide: disponibilidade de tours em tempo real.',
       'zh-CN': '打开 GetYourGuide——实时行程空位。',
-      ko: 'GetYourGuide를 엽니다 — 실시간 투어 예약 가능 여부.',
-      fr: 'Ouvre GetYourGuide — disponibilités des excursions en temps réel.',
-      it: 'Apre GetYourGuide — disponibilità dei tour in tempo reale.',
-      nl: 'Opent GetYourGuide — actuele beschikbaarheid van tochten.',
-      sv: 'Öppnar GetYourGuide — turernas tillgänglighet i realtid.',
+      ko: 'GetYourGuide를 엽니다. 실시간 투어 예약 가능 여부.',
+      fr: 'Ouvre GetYourGuide: disponibilités des excursions en temps réel.',
+      it: 'Apre GetYourGuide: disponibilità dei tour in tempo reale.',
+      nl: 'Opent GetYourGuide: actuele beschikbaarheid van tochten.',
+      sv: 'Öppnar GetYourGuide: turernas tillgänglighet i realtid.',
     },
   },
 
-  // ── Hotels.com — via the go.laplandvibes.com CJ Worker ──
+  // ── Hotel search — via the go.laplandvibes.com Worker ──
+  // The Worker routes fi (locale=fi_FI) to Sembo (Adtraction) and every other
+  // locale to Trip.com. Default skin below is Trip.com; fi gets SEMBO_FI.
   hotelscom: {
     id: 'hotelscom',
-    name: 'Hotels.com',
+    name: 'Trip.com',
     logo: null,
-    wordmark: { text: 'Hotels.com' },
-    accent: '#D32F2F',
+    wordmark: { text: 'Trip.com' },
+    accent: '#2449B8',
     accentText: '#FFFFFF',
-    plateBg: '#1F2A44',
-    ring: 'hover:border-[#D32F2F]/45',
-    glow: 'radial-gradient(circle at 12% 0%, rgba(211,47,47,0.10), transparent 60%)',
+    plateBg: '#3264FF',
+    ring: 'hover:border-[#3264FF]/45',
+    glow: 'radial-gradient(circle at 12% 0%, rgba(50,100,255,0.10), transparent 60%)',
     href: 'https://go.laplandvibes.com/go/hotels?sid=ad_hotelscom_lapland&ss=Lapland%2C%20Finland',
     trackId: 'ad_hotelscom',
     badge,
     tagline: {
-      en: 'Every Lapland stay in one place — from glass igloos to slope-side, at today’s live rate.',
-      fi: 'Kaikki Lapin majoitukset yhdessä paikassa — lasi-igluista rinteen viereen, tämän päivän hinnoin.',
-      de: 'Alle Lappland-Unterkünfte an einem Ort — von Glas-Iglus bis zur Piste, zum heutigen Live-Preis.',
+      en: 'Every Lapland stay in one place, from glass igloos to slope-side, at today’s live rate.',
+      fi: 'Kaikki Lapin majoitukset yhdessä paikassa, lasi-igluista rinteen viereen, tämän päivän hinnoin.',
+      de: 'Alle Lappland-Unterkünfte an einem Ort, von Glas-Iglus bis zur Piste, zum heutigen Live-Preis.',
       ja: 'ラップランドの宿をひとつに。ガラスイグルーからゲレンデ脇まで、本日の最新料金で。',
-      es: 'Todo el alojamiento de Laponia en un solo lugar — de iglús de cristal a pie de pista, al precio de hoy.',
-      'pt-BR': 'Toda a hospedagem da Lapônia num só lugar — de iglus de vidro a pé de pista, ao preço de hoje.',
+      es: 'Todo el alojamiento de Laponia en un solo lugar, de iglús de cristal a pie de pista, al precio de hoy.',
+      'pt-BR': 'Toda a hospedagem da Lapônia num só lugar, de iglus de vidro a pé de pista, ao preço de hoje.',
       'zh-CN': '拉普兰所有住宿一站搞定——从玻璃穹顶屋到雪道旁，按今日实时价。',
-      ko: '라플란드의 모든 숙소를 한곳에 — 글라스 이글루부터 슬로프 사이드까지, 오늘의 실시간 요금으로.',
-      fr: 'Tous les hébergements de Laponie au même endroit — des igloos de verre au pied des pistes, au tarif du jour.',
-      it: 'Tutti gli alloggi della Lapponia in un solo posto — dagli igloo di vetro al bordo pista, alla tariffa di oggi.',
-      nl: 'Al het verblijf in Lapland op één plek — van glazen iglo tot aan de piste, tegen het tarief van vandaag.',
-      sv: 'Allt boende i Lappland på ett ställe — från glasiglos till skidnära, till dagens live-pris.',
+      ko: '라플란드의 모든 숙소를 한곳에, 글라스 이글루부터 슬로프 사이드까지, 오늘의 실시간 요금으로.',
+      fr: 'Tous les hébergements de Laponie au même endroit, des igloos de verre au pied des pistes, au tarif du jour.',
+      it: 'Tutti gli alloggi della Lapponia in un solo posto, dagli igloo di vetro al bordo pista, alla tariffa di oggi.',
+      nl: 'Al het verblijf in Lapland op één plek, van glazen iglo tot aan de piste, tegen het tarief van vandaag.',
+      sv: 'Allt boende i Lappland på ett ställe, från glasiglos till skidnära, till dagens live-pris.',
     },
     points: {
-      en: ['Free cancellation on most rooms', 'One reward night per 10 stamped', 'Filter by igloo, cabin or ski-in'],
-      fi: ['Maksuton peruutus useimmissa huoneissa', 'Yksi bonusyö jokaista 10 yötä kohden', 'Suodata iglu, mökki tai ski-in'],
-      de: ['Kostenlose Stornierung bei den meisten Zimmern', 'Eine Bonusnacht je 10 gesammelten', 'Nach Iglu, Hütte oder Ski-in filtern'],
-      ja: ['ほとんどの客室で無料キャンセル', '10泊ごとに1泊分の特典', 'イグルー・コテージ・スキーインで絞り込み'],
-      es: ['Cancelación gratuita en la mayoría de habitaciones', 'Una noche de recompensa por cada 10', 'Filtra por iglú, cabaña o ski-in'],
-      'pt-BR': ['Cancelamento grátis na maioria dos quartos', 'Uma diária de recompensa a cada 10', 'Filtre por iglu, cabana ou ski-in'],
-      'zh-CN': ['多数房型免费取消', '每住满 10 晚获 1 晚奖励', '按穹顶屋、小屋或近雪道筛选'],
-      ko: ['대부분 객실 무료 취소', '10박 적립 시 1박 무료', '이글루·캐빈·스키인으로 필터'],
-      fr: ['Annulation gratuite sur la plupart des chambres', 'Une nuit offerte toutes les 10', 'Filtrez par igloo, chalet ou ski-in'],
-      it: ['Cancellazione gratuita sulla maggior parte delle camere', 'Una notte premio ogni 10', 'Filtra per igloo, baita o ski-in'],
-      nl: ['Gratis annuleren bij de meeste kamers', 'Eén beloningsnacht per 10', 'Filter op iglo, hut of ski-in'],
-      sv: ['Gratis avbokning på de flesta rum', 'En bonusnatt per 10 stämplade', 'Filtrera på iglo, stuga eller skidnära'],
+      en: ['Hotels, cabins and glass igloos', 'Live prices and availability', 'One search for all of Lapland'],
+      fi: ['Hotellit, mökit ja lasi-iglut', 'Hinnat ja saatavuus reaaliajassa', 'Koko Lappi yhdellä haulla'],
+      de: ['Hotels, Hütten und Glas-Iglus', 'Preise und Verfügbarkeit in Echtzeit', 'Ganz Lappland in einer Suche'],
+      ja: ['ホテル・コテージ・ガラスイグルー', '料金と空室はリアルタイム', 'ラップランド全域をひとつの検索で'],
+      es: ['Hoteles, cabañas e iglús de cristal', 'Precios y disponibilidad en tiempo real', 'Toda Laponia en una sola búsqueda'],
+      'pt-BR': ['Hotéis, cabanas e iglus de vidro', 'Preços e disponibilidade em tempo real', 'Toda a Lapônia em uma só busca'],
+      'zh-CN': ['酒店、小屋与玻璃穹顶屋', '实时价格与空房', '一次搜索覆盖全拉普兰'],
+      ko: ['호텔, 캐빈, 글라스 이글루', '실시간 요금과 예약 가능 여부', '한 번의 검색으로 라플란드 전역'],
+      fr: ['Hôtels, chalets et igloos de verre', 'Prix et disponibilités en temps réel', 'Toute la Laponie en une seule recherche'],
+      it: ['Hotel, baite e igloo di vetro', 'Prezzi e disponibilità in tempo reale', 'Tutta la Lapponia in una sola ricerca'],
+      nl: ["Hotels, hutten en glazen iglo's", 'Prijzen en beschikbaarheid in realtime', 'Heel Lapland in één zoekopdracht'],
+      sv: ['Hotell, stugor och glasiglos', 'Priser och tillgänglighet i realtid', 'Hela Lappland i en enda sökning'],
     },
     cta: {
       en: 'Search Lapland stays', fi: 'Hae Lapin majoitukset', de: 'Lappland-Unterkünfte suchen',
@@ -229,20 +231,40 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       it: 'Cerca alloggi in Lapponia', nl: 'Zoek verblijf in Lapland', sv: 'Sök boende i Lappland',
     },
     note: {
-      en: 'Opens Hotels.com — live rooms and prices.',
-      fi: 'Avaa Hotels.comin — vapaat huoneet ja hinnat reaaliajassa.',
-      de: 'Öffnet Hotels.com — Zimmer und Preise in Echtzeit.',
-      ja: 'Hotels.com を開きます（空室と料金はリアルタイム）。',
-      es: 'Abre Hotels.com — habitaciones y precios en tiempo real.',
-      'pt-BR': 'Abre o Hotels.com — quartos e preços em tempo real.',
-      'zh-CN': '打开 Hotels.com——实时房型与价格。',
-      ko: 'Hotels.com을 엽니다 — 실시간 객실과 요금.',
-      fr: 'Ouvre Hotels.com — chambres et prix en temps réel.',
-      it: 'Apre Hotels.com — camere e prezzi in tempo reale.',
-      nl: 'Opent Hotels.com — actuele kamers en prijzen.',
-      sv: 'Öppnar Hotels.com — rum och priser i realtid.',
+      en: 'Opens Trip.com: live rooms and prices.',
+      fi: 'Avaa Trip.comin: vapaat huoneet ja hinnat reaaliajassa.',
+      de: 'Öffnet Trip.com: Zimmer und Preise in Echtzeit.',
+      ja: 'Trip.com を開きます（空室と料金はリアルタイム）。',
+      es: 'Abre Trip.com: habitaciones y precios en tiempo real.',
+      'pt-BR': 'Abre o Trip.com: quartos e preços em tempo real.',
+      'zh-CN': '打开 Trip.com——实时房型与价格。',
+      ko: 'Trip.com을 엽니다. 실시간 객실과 요금.',
+      fr: 'Ouvre Trip.com: chambres et prix en temps réel.',
+      it: 'Apre Trip.com: camere e prezzi in tempo reale.',
+      nl: 'Opent Trip.com: actuele kamers en prijzen.',
+      sv: 'Öppnar Trip.com: rum och priser i realtid.',
     },
   },
+};
+
+/** fi is routed to Sembo (Adtraction) by the go/hotels Worker, so the hotel
+ *  unit is skinned as Sembo for fi. Same id/trackId: analytics keys unchanged. */
+const SEMBO_FI: AdvertiserConfig = {
+  ...ADVERTISERS.hotelscom,
+  name: 'Sembo',
+  wordmark: { text: 'Sembo' },
+  accent: '#0369A1',
+  plateBg: '#FFFFFF',
+  ring: 'hover:border-[#0EA5E9]/45',
+  glow: 'radial-gradient(circle at 12% 0%, rgba(14,165,233,0.10), transparent 60%)',
+  note: { ...ADVERTISERS.hotelscom.note, fi: 'Avaa Sembon: vapaat huoneet ja hinnat reaaliajassa.' },
+};
+
+/** Worker locale codes per site language, appended to the hotels ad href so the
+ *  go/hotels Worker routes fi to Sembo and every other locale to Trip.com. */
+const HOTELS_AD_LOCALE: Record<Lang, string> = {
+  fi: 'fi_FI', en: 'en_US', de: 'de_DE', fr: 'fr_FR', it: 'it_IT', es: 'es_ES',
+  nl: 'nl_NL', ja: 'ja_JP', ko: 'ko_KR', sv: 'sv_SE', 'pt-BR': 'pt_BR', 'zh-CN': 'zh_CN',
 };
 
 interface Props {
@@ -254,9 +276,10 @@ interface Props {
 
 export default function PartnerAd({ advertiser, placement, className = '' }: Props) {
   const lang = useLang();
-  const a = ADVERTISERS[advertiser];
+  const a = advertiser === 'hotelscom' && lang === 'fi' ? SEMBO_FI : ADVERTISERS[advertiser];
   if (!a) return null;
 
+  const href = a.id === 'hotelscom' ? `${a.href}&locale=${HOTELS_AD_LOCALE[lang]}` : a.href;
   const points = a.points[lang] ?? a.points.en;
 
   return (
@@ -310,10 +333,10 @@ export default function PartnerAd({ advertiser, placement, className = '' }: Pro
             </ul>
             <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3">
               <a
-                href={a.href}
+                href={href}
                 target="_blank"
                 rel="sponsored nofollow noopener"
-                onClick={() => trackAffiliateClick(a.id, placement ?? a.trackId, a.href)}
+                onClick={() => trackAffiliateClick(a.id, placement ?? a.trackId, href)}
                 className="group/btn inline-flex items-center justify-center text-center leading-snug gap-2 rounded-full px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.08em] sm:whitespace-nowrap no-underline transition-transform hover:-translate-y-0.5"
                 style={{ background: a.accent, color: a.accentText }}
               >

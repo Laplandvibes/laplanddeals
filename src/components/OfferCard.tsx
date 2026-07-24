@@ -13,7 +13,7 @@ const FLAG_STYLE: Record<NonNullable<Offer['flag']>, string> = {
 };
 
 const PARTNER_LABEL: Record<Offer['partner'], string> = {
-  'hotels.com':      'Hotels.com',
+  'hotels.com':      'Trip.com',
   'trip.com':        'Trip.com',
   'getyourguide':    'GetYourGuide',
   'economybookings': 'EconomyBookings',

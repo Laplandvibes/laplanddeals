@@ -166,12 +166,12 @@ const en: SectionCopy = {
     h1Italic: 'Lapland hotels',
     h1: 'live prices, tonight.',
     sub:
-      "Glass igloos under the aurora belt, slope-side properties on Levi, wilderness lodges in Ylläs, family hotels in Rovaniemi. Compare tonight's rates on Hotels.com.",
+      "Glass igloos under the aurora belt, slope-side properties on Levi, wilderness lodges in Ylläs, family hotels in Rovaniemi. Compare tonight's live rates.",
     seoTitle: 'Lapland Hotel Deals, Glass Igloos, Slope-Side, Wilderness Cabins',
     seoDesc:
-      'Live Hotels.com prices for glass igloos, ski-in stays, family hotels and wilderness lodges across Finnish Lapland. Last-minute and end-of-season cabin nights.',
+      'Live prices for glass igloos, ski-in stays, family hotels and wilderness lodges across Finnish Lapland. Last-minute and end-of-season cabin nights.',
     bottomTitle: "Don't see your destination?",
-    bottomLead: 'Search any Lapland town directly on Hotels.com.',
+    bottomLead: 'Search any Lapland town directly on Trip.com.',
     bottomCta: 'Browse all Lapland hotels →',
   },
   activitiesPage: {
@@ -195,7 +195,7 @@ const en: SectionCopy = {
       'Helsinki to every Lapland gateway, pre-filled and dated. Click through to real Finnair and Norwegian rates.',
     seoTitle: 'Flights to Lapland, Live Trip.com Deals on Helsinki Routes',
     seoDesc:
-      'Live Trip.com flight prices: Helsinki to Rovaniemi, Kittilä, Ivalo, Kuusamo and Kemi. Direct Finnair and Norwegian fares, pre-filled, ready to book.',
+      'Live Trip.com flight prices: Helsinki to Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) and Kemi. Direct Finnair and Norwegian fares, pre-filled, ready to book.',
     bottomTitle: 'Travelling from outside Finland?',
     bottomLead: 'Search any origin to any Lapland airport on Trip.com.',
     bottomCta: 'Open Trip.com flight search →',
@@ -208,7 +208,7 @@ const en: SectionCopy = {
       'Studded tyres, 4WD, free aurora-chasing range. Pickup at every Lapland airport, compare on EconomyBookings.',
     seoTitle: 'Lapland Car Hire Deals, Studded Tyres, 4WD, Airport Pickup',
     seoDesc:
-      'Live EconomyBookings prices on car hire from Rovaniemi, Kittilä, Ivalo and Kuusamo airports. Studded tyres included for winter driving.',
+      'Live EconomyBookings prices on car hire from Rovaniemi, Kittilä, Ivalo and Kuusamo (Ruka) airports. Studded tyres included for winter driving.',
     bottomTitle: 'Helsinki pickup or one-way drop-off?',
     bottomLead: 'EconomyBookings supports one-way rentals between most Finnish airports.',
     bottomCta: 'Open EconomyBookings →',

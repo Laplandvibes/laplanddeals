@@ -166,12 +166,12 @@ const it: SectionCopy = {
     h1Italic: 'Hotel in Lapponia',
     h1: 'tariffe in tempo reale, stanotte.',
     sub:
-      "Igloo di vetro sotto la fascia aurorale, hotel a bordo pista a Levi, lodge nella natura a Ylläs, hotel per famiglie a Rovaniemi. Confronti le tariffe di stanotte su Hotels.com.",
+      "Igloo di vetro sotto la fascia aurorale, hotel a bordo pista a Levi, lodge nella natura a Ylläs, hotel per famiglie a Rovaniemi. Confronti le tariffe di stanotte in tempo reale.",
     seoTitle: 'Offerte hotel Lapponia, Igloo di vetro, pista, baite',
     seoDesc:
-      'Tariffe Hotels.com in tempo reale per igloo di vetro, soggiorni ski-in, hotel per famiglie e lodge nella natura in tutta la Lapponia finlandese.',
+      'Tariffe in tempo reale per igloo di vetro, soggiorni ski-in, hotel per famiglie e lodge nella natura in tutta la Lapponia finlandese.',
     bottomTitle: 'Non trova la Sua destinazione?',
-    bottomLead: 'Cerchi qualsiasi località della Lapponia direttamente su Hotels.com.',
+    bottomLead: 'Cerchi qualsiasi località della Lapponia direttamente su Trip.com.',
     bottomCta: 'Sfoglia tutti gli hotel della Lapponia →',
   },
   activitiesPage: {
@@ -195,7 +195,7 @@ const it: SectionCopy = {
       "Helsinki verso ogni porta della Lapponia, già compilati e con date. Clicchi per le tariffe reali di Finnair e Norwegian.",
     seoTitle: 'Voli per la Lapponia, Offerte Trip.com da Helsinki',
     seoDesc:
-      'Tariffe voli Trip.com in tempo reale: Helsinki per Rovaniemi, Kittilä, Ivalo, Kuusamo e Kemi. Voli diretti Finnair e Norwegian.',
+      'Tariffe voli Trip.com in tempo reale: Helsinki per Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) e Kemi. Voli diretti Finnair e Norwegian.',
     bottomTitle: 'Parte da fuori della Finlandia?',
     bottomLead: 'Cerchi qualsiasi origine verso qualsiasi aeroporto della Lapponia su Trip.com.',
     bottomCta: 'Apri la ricerca voli Trip.com →',
@@ -208,7 +208,7 @@ const it: SectionCopy = {
       "Gomme chiodate, 4x4, chilometraggio libero per inseguire l'aurora. Ritiro in ogni aeroporto della Lapponia, confronti su EconomyBookings.",
     seoTitle: 'Offerte autonoleggio Lapponia, Gomme chiodate, 4x4',
     seoDesc:
-      "Tariffe EconomyBookings in tempo reale sull'autonoleggio negli aeroporti di Rovaniemi, Kittilä, Ivalo e Kuusamo. Gomme chiodate incluse per la guida invernale.",
+      "Tariffe EconomyBookings in tempo reale sull'autonoleggio negli aeroporti di Rovaniemi, Kittilä, Ivalo e Kuusamo (Ruka). Gomme chiodate invernali incluse.",
     bottomTitle: 'Ritiro a Helsinki o riconsegna in altra città?',
     bottomLead: 'EconomyBookings supporta noleggi a senso unico tra la maggior parte degli aeroporti finlandesi.',
     bottomCta: 'Apri EconomyBookings →',
