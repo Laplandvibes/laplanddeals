@@ -10,7 +10,7 @@ import { useLang, type Lang } from '../i18n/useLang';
  */
 
 const TEXT: Record<Lang, string> = {
-  en: 'Some links here are partner links. If you book through them, LaplandDeals may earn a commission — the price you pay stays the same.',
+  en: 'Some links here are partner links. If you book through them, LaplandDeals may earn a commission; the price you pay stays the same.',
   fi: 'Osa linkeistä on kumppanilinkkejä. Jos varaat niiden kautta, LaplandDeals voi saada pienen provision. Sinulle hinta pysyy samana.',
   de: 'Einige Links hier sind Partnerlinks. Wenn Sie darüber buchen, kann LaplandDeals eine Provision erhalten. Für Sie bleibt der Preis gleich.',
   ja: 'このページの一部のリンクはパートナーリンクです。そこから予約された場合、LaplandDealsが手数料を受け取ることがあります。お客様の支払う価格は変わりません。',

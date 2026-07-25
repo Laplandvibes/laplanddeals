@@ -46,51 +46,51 @@ const SIBLING_URLS = [
 
 const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
   en: {
-    title: 'LaplandDeals — Last-Minute Deals for Finnish Lapland',
+    title: 'LaplandDeals: Last-Minute Deals for Finnish Lapland',
     desc: 'Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers.',
   },
   fi: {
-    title: 'LaplandDeals — Last-minute-tarjoukset Suomen Lappiin',
+    title: 'LaplandDeals: Last-minute-tarjoukset Suomen Lappiin',
     desc: 'Kumppaneiden live-tarjoukset Lapin hotelleihin, huskysafareihin, lentoihin Rovaniemelle ja autovuokrauksiin. Last-minute-hinnat, kauden loppumökkiöt ja kesätarjoukset.',
   },
   de: {
-    title: 'LaplandDeals — Last-Minute-Angebote für Finnisch-Lappland',
+    title: 'LaplandDeals: Last-Minute-Angebote für Finnisch-Lappland',
     desc: 'Live-Partnerangebote für Hotels in Lappland, Husky-Safaris, Flüge nach Rovaniemi und Mietwagen. Last-Minute-Preise, Saisonende-Rabatte, Sommerangebote.',
   },
   ja: {
-    title: 'LaplandDeals — フィンランド・ラップランドのお得な旅行プラン',
+    title: 'LaplandDeals：フィンランド・ラップランドのお得な旅行プラン',
     desc: 'ラップランドのホテル、ハスキーサファリ、ロヴァニエミ行き航空券、レンタカーの最新パートナーオファー。直前価格・シーズン終了セール・夏季オファーを',
   },
   es: {
-    title: 'LaplandDeals — Ofertas de última hora para la Laponia finlandesa',
+    title: 'LaplandDeals: Ofertas de última hora para la Laponia finlandesa',
     desc: 'Ofertas reales de los socios en hoteles de Laponia, safaris en husky, vuelos a Rovaniemi y alquiler de coches. Precios de última hora, descensos de fin de temporada y ofertas de verano.',
   },
   'pt-BR': {
-    title: 'LaplandDeals — Ofertas de última hora para a Lapônia finlandesa',
+    title: 'LaplandDeals: Ofertas de última hora para a Lapônia finlandesa',
     desc: 'Ofertas reais dos parceiros em hotéis da Lapônia, safáris com huskies, voos para Rovaniemi e aluguel de carro. Preços de última hora, promoções de fim de temporada e ofertas de verão.',
   },
   'zh-CN': {
-    title: 'LaplandDeals — 芬兰拉普兰临时优惠与特价',
+    title: 'LaplandDeals：芬兰拉普兰临时优惠与特价',
     desc: '拉普兰酒店、哈士奇雪橇、罗瓦涅米航班和租车的合作伙伴实时优惠。临时折扣、季末清仓、夏季优惠。',
   },
   ko: {
-    title: 'LaplandDeals — 핀란드 라플란드 직전 예약 특가와 할인',
+    title: 'LaplandDeals: 핀란드 라플란드 직전 예약 특가와 할인',
     desc: '라플란드 호텔, 허스키 사파리, 로바니에미행 항공편, 렌터카의 파트너 실시간 특가. 직전 예약, 시즌 마감 할인, 여름 특가.',
   },
   fr: {
-    title: 'LaplandDeals — Offres et promotions de dernière minute pour la Laponie finlandaise',
+    title: 'LaplandDeals: Offres et promotions de dernière minute pour la Laponie finlandaise',
     desc: "Offres partenaires en direct sur les hôtels de Laponie, safaris en husky, vols pour Rovaniemi et location de voitures. Tarifs de dernière minute, soldes de fin de saison, offres d'été.",
   },
   it: {
-    title: 'LaplandDeals — Offerte last-minute e promozioni per la Lapponia finlandese',
+    title: 'LaplandDeals: Offerte last-minute e promozioni per la Lapponia finlandese',
     desc: 'Offerte partner in tempo reale su hotel in Lapponia, safari con husky, voli per Rovaniemi e autonoleggio. Prezzi last-minute, sconti di fine stagione, offerte estive.',
   },
   nl: {
-    title: 'LaplandDeals — Last-minute aanbiedingen voor Fins Lapland',
+    title: 'LaplandDeals: Last-minute aanbiedingen voor Fins Lapland',
     desc: "Live partneraanbiedingen voor Lapland-hotels, husky-safari's, vluchten naar Rovaniemi en autoverhuur. Last-minute prijzen, eindseizoenskortingen, zomeraanbiedingen.",
   },
   sv: {
-    title: 'LaplandDeals — sista minuten-erbjudanden till finska Lappland',
+    title: 'LaplandDeals: sista minuten-erbjudanden till finska Lappland',
     desc: 'Partnernas live-priser på hotell i Lappland, huskysafarier, flyg till Rovaniemi och biluthyrning. Sista minuten-priser, slutrea på säsongen och sommarerbjudanden.',
   },
 };
@@ -131,7 +131,7 @@ export default function Home() {
 
   const itemList = {
     '@type': 'ItemList',
-    name: 'LaplandDeals — featured offers',
+    name: 'LaplandDeals: featured offers',
     itemListElement: editorsPicks.concat(lastMinute).map((o, i) => ({
       '@type': 'ListItem',
       position: i + 1,
