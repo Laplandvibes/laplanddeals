@@ -49,7 +49,7 @@ export default function Hotels() {
           <AffiliateCTA
             partner="hotels"
             sid="hotels_pillar_browse_all"
-            destination="Finnish Lapland"
+            destination="Lapland, Finland"
             className="inline-flex items-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] text-[13px] px-7 py-4 rounded-full no-underline"
           >
             {c.bottomCta}
