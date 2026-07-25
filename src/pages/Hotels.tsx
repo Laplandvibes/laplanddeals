@@ -5,14 +5,14 @@ import PillarHeader from '../components/PillarHeader';
 import AffiliateCTA from '../components/AffiliateCTA';
 import PartnerAd from '../components/PartnerAd';
 import { getOffers } from '../data/offers';
-import { useLang } from '../i18n/useLang';
+import { useLang, LANG_PREFIX } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 export default function Hotels() {
   const lang = useLang();
   const c = COPY[lang].hotelsPage;
   const items = getOffers({ category: 'hotels', lang });
-  const path = lang === 'en' ? '/hotels' : `/${lang}/hotels`;
+  const path = lang === 'en' ? '/hotels' : `/${LANG_PREFIX[lang]}/hotels`;
 
   return (
     <>

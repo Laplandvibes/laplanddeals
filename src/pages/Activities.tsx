@@ -5,14 +5,14 @@ import PillarHeader from '../components/PillarHeader';
 import PartnerAd from '../components/PartnerAd';
 import { getOffers } from '../data/offers';
 import { GYG_CATEGORIES } from '../lib/gyg';
-import { useLang } from '../i18n/useLang';
+import { useLang, LANG_PREFIX } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 export default function Activities() {
   const lang = useLang();
   const c = COPY[lang].activitiesPage;
   const items = getOffers({ category: 'activities', lang });
-  const path = lang === 'en' ? '/activities' : `/${lang}/activities`;
+  const path = lang === 'en' ? '/activities' : `/${LANG_PREFIX[lang]}/activities`;
 
   return (
     <>

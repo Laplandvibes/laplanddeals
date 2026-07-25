@@ -5,14 +5,14 @@ import PillarHeader from '../components/PillarHeader';
 import { offers } from '../data/offers';
 import AffiliateCTA from '../components/AffiliateCTA';
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
-import { useLang } from '../i18n/useLang';
+import { useLang, LANG_PREFIX } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 export default function Summer() {
   const lang = useLang();
   const c = COPY[lang].summerPage;
   const summerItems = offers(lang).filter((o) => o.flag === 'summer');
-  const path = lang === 'en' ? '/summer' : `/${lang}/summer`;
+  const path = lang === 'en' ? '/summer' : `/${LANG_PREFIX[lang]}/summer`;
 
   return (
     <>

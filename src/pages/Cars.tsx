@@ -5,14 +5,14 @@ import PillarHeader from '../components/PillarHeader';
 import AffiliateCTA from '../components/AffiliateCTA';
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import { getOffers } from '../data/offers';
-import { useLang } from '../i18n/useLang';
+import { useLang, LANG_PREFIX } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 export default function Cars() {
   const lang = useLang();
   const c = COPY[lang].carsPage;
   const items = getOffers({ category: 'cars', lang });
-  const path = lang === 'en' ? '/cars' : `/${lang}/cars`;
+  const path = lang === 'en' ? '/cars' : `/${LANG_PREFIX[lang]}/cars`;
 
   return (
     <>

@@ -4,7 +4,7 @@ import NewsletterSection from '../components/NewsletterSection';
 import PillarHeader from '../components/PillarHeader';
 import PartnerAd from '../components/PartnerAd';
 import { offers, getOffers } from '../data/offers';
-import { useLang } from '../i18n/useLang';
+import { useLang, LANG_PREFIX } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 export default function Packages() {
@@ -14,7 +14,7 @@ export default function Packages() {
   const pairsWith = offers(lang).filter((o) =>
     ['igloo-saariselka', 'husky-safaris', 'aurora-hunts', 'rovaniemi-hotels', 'reindeer-tours', 'ice-fishing'].includes(o.id),
   );
-  const path = lang === 'en' ? '/packages' : `/${lang}/packages`;
+  const path = lang === 'en' ? '/packages' : `/${LANG_PREFIX[lang]}/packages`;
 
   return (
     <>

@@ -5,14 +5,14 @@ import PillarHeader from '../components/PillarHeader';
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import { getOffers } from '../data/offers';
 import { buildTripFlightHome } from '../lib/tripcom';
-import { useLang } from '../i18n/useLang';
+import { useLang, LANG_PREFIX } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 export default function Flights() {
   const lang = useLang();
   const c = COPY[lang].flightsPage;
   const items = getOffers({ category: 'flights', lang });
-  const path = lang === 'en' ? '/flights' : `/${lang}/flights`;
+  const path = lang === 'en' ? '/flights' : `/${LANG_PREFIX[lang]}/flights`;
 
   return (
     <>
