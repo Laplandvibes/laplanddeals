@@ -43,7 +43,9 @@ export default function OfferCard({ offer, size = 'md', showImage = true }: Prop
     'h-60 md:h-64';
 
   const handleClick = () => {
-    trackAffiliateClick(offer.partner, offer.id, offer.href);
+    // 'hotels.com' is a legacy data key; GA4 should read the channel that is
+    // actually live (Sembo for fi, Trip.com otherwise), not a retired partner.
+    trackAffiliateClick(offer.partner === 'hotels.com' ? 'lodging' : offer.partner, offer.id, offer.href);
   };
 
   return (
