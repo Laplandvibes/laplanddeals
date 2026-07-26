@@ -53,15 +53,16 @@ export interface Offer {
 
 // ─── Helpers ────────────────────────────────────────────────────────────
 
-function hotelsUrl(query: string, sid: string): string {
-  return buildAffiliateHref({ partner: 'hotels', sid, destination: query });
+function hotelsUrl(query: string, sid: string, lang: TripLang): string {
+  return buildAffiliateHref({ partner: 'hotels', sid, destination: query, lang });
 }
 
-function carsUrl(pickupIATA: string, sid: string): string {
+function carsUrl(pickupIATA: string, sid: string, lang: TripLang): string {
   return buildAffiliateHref({
     partner: 'cars',
     sid,
     query: { pickup_location: pickupIATA },
+    lang,
   });
 }
 
@@ -122,7 +123,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Det finns ungefär 30 glasiglos i hela regionen. Julveckorna är fullbokade redan i augusti, öppna Trip.com och se vad som är kvar i kväll.',
     },
     partner: 'hotels.com',
-    href: hotelsUrl('Saariselkä, Finland', 'card_igloo_saariselka'),
+    href: hotelsUrl('Saariselkä, Finland', 'card_igloo_saariselka', lang),
     flag: 'editor-pick',
   },
   {
@@ -171,7 +172,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Ski-in / ski-out på Finlands största fjäll (43 nedfarter, 230 km spår). Veckorna i slutet av säsongen (15 mars – 12 april) är oftast fortfarande lediga till lägre pris.',
     },
     partner: 'hotels.com',
-    href: hotelsUrl('Levi, Kittilä, Finland', 'card_levi_ski'),
+    href: hotelsUrl('Levi, Kittilä, Finland', 'card_levi_ski', lang),
     flag: 'last-minute',
   },
   {
@@ -220,7 +221,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: '15 minuter från Santa Claus Village. Direktflyg från Helsingfors sex gånger om dagen. Familjerum, lägenhetshotell, designhotell.',
     },
     partner: 'hotels.com',
-    href: hotelsUrl('Rovaniemi, Finland', 'card_rovaniemi_city'),
+    href: hotelsUrl('Rovaniemi, Finland', 'card_rovaniemi_city', lang),
   },
   {
     id: 'yllas-cabins',
@@ -268,7 +269,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Levis lugnare granne, samma fjäll, hälften så mycket folk. Europas renaste luft enligt WMO:s mätningar (2017).',
     },
     partner: 'hotels.com',
-    href: hotelsUrl('Ylläs, Kolari, Finland', 'card_yllas_cabins'),
+    href: hotelsUrl('Ylläs, Kolari, Finland', 'card_yllas_cabins', lang),
     flag: 'end-of-season',
   },
   {
@@ -317,7 +318,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Den vilda östern, björnarnas land, Karhunkierros-leden, huskygårdar, den snö som håller längst i Finland (ofta in i maj).',
     },
     partner: 'hotels.com',
-    href: hotelsUrl('Ruka, Kuusamo, Finland', 'card_ruka_stays'),
+    href: hotelsUrl('Ruka, Kuusamo, Finland', 'card_ruka_stays', lang),
   },
   {
     id: 'inari-stays',
@@ -365,7 +366,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Ovanför norrskensovalen, den högsta chansen att se norrsken i Finland. Samernas huvudort, inga ljusföroreningar, en tvåfilig väg och sedan ingenting.',
     },
     partner: 'hotels.com',
-    href: hotelsUrl('Inari, Finland', 'card_inari_stays'),
+    href: hotelsUrl('Inari, Finland', 'card_inari_stays', lang),
     flag: 'editor-pick',
   },
 
@@ -906,7 +907,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Dubbdäck tillåtna 1 november – 31 mars (kan förlängas). Fyrhjulsdrift rekommenderas. Räckvidd för norrskensjakt, de flesta gårdar och utsiktsplatser inom 90 min.',
     },
     partner: 'economybookings',
-    href: carsUrl('RVN', 'card_car_rvn'),
+    href: carsUrl('RVN', 'card_car_rvn', lang),
     flag: 'last-minute',
   },
   {
@@ -955,7 +956,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Levi 15 min, Ylläs 50 min. Vinterdäck och kedjor ingår ofta; kontrollera vad som ingår före upphämtning om det är december.',
     },
     partner: 'economybookings',
-    href: carsUrl('KTT', 'card_car_ktt'),
+    href: carsUrl('KTT', 'card_car_ktt', lang),
   },
   {
     id: 'car-ivl',
@@ -1003,7 +1004,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Saariselkä 30 min, Inari 40 min, norska gränsen 2 h. De lugnaste vägarna i Lappland, hela sträckor av E75 utan att du ser en enda annan bil.',
     },
     partner: 'economybookings',
-    href: carsUrl('IVL', 'card_car_ivl'),
+    href: carsUrl('IVL', 'card_car_ivl', lang),
   },
 
   // ── Packages ───────────────────────────────────────────────────────
@@ -1153,7 +1154,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: '32 dygn går solen aldrig ner (6 juni – 7 juli norr om 70°N). Nätter i stuga vid sjön ligger 30–50 % under decemberpriserna. Myggen är som värst i slutet av juni.',
     },
     partner: 'hotels.com',
-    href: hotelsUrl('Inari, Finland', 'card_summer_midnight_sun'),
+    href: hotelsUrl('Inari, Finland', 'card_summer_midnight_sun', lang),
     flag: 'summer',
   },
   {

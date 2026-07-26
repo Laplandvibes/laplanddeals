@@ -85,13 +85,16 @@ const GYG_DOMAIN: Record<_Lang, string> = {
 const GYG_PARTNER_ID = 'VRMKD7N';
 const SITE_ID = 'laplanddeals';
 
+// `lang` is REQUIRED: it decides the hotels locale, and the go/hotels Worker routes
+// locale=fi_FI to Sembo (9 % / 45 d) and every other locale to Trip.com. An "en"
+// default silently sent Finnish visitors past Sembo — see offers.ts (Vesa 2026-07-26).
 export function buildAffiliateHref({
   partner,
   sid,
   destination,
   query,
-  lang = "en",
-}: Pick<AffiliateCTAProps, 'partner' | 'sid' | 'destination' | 'query'> & { lang?: _Lang }): string {
+  lang,
+}: Pick<AffiliateCTAProps, 'partner' | 'sid' | 'destination' | 'query'> & { lang: _Lang }): string {
   if (partner === 'activities') {
     const path = (destination ?? '').replace(/^\/+/, '').replace(/\/+$/, '');
     const url = new URL(path ? `${GYG_DOMAIN[lang]}/${path}/` : `${GYG_DOMAIN[lang]}/`);
