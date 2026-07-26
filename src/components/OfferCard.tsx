@@ -1,7 +1,7 @@
 import { ArrowUpRight, MapPin } from 'lucide-react';
 import type { Offer } from '../data/offers';
 import { trackAffiliateClick } from '../lib/analytics';
-import { useLang } from '../i18n/useLang';
+import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
 const FLAG_STYLE: Record<NonNullable<Offer['flag']>, string> = {
@@ -18,6 +18,14 @@ const PARTNER_LABEL: Record<Offer['partner'], string> = {
   'getyourguide':    'GetYourGuide',
   'economybookings': 'EconomyBookings',
 };
+
+// The card footer must name the partner the visitor actually lands on ("no hiding",
+// Vesa). Lodging offers ('hotels.com' is a legacy data key) route through the
+// go/hotels Worker, which sends fi to Sembo and every other locale to Trip.com.
+function partnerLabel(partner: Offer['partner'], lang: Lang): string {
+  if (partner === 'hotels.com' && lang === 'fi') return 'Sembo';
+  return PARTNER_LABEL[partner];
+}
 
 interface Props {
   offer: Offer;
@@ -92,7 +100,7 @@ export default function OfferCard({ offer, size = 'md', showImage = true }: Prop
           <div className="flex flex-col">
             <span className="text-ink-mute text-[10px] uppercase tracking-[0.14em]">{card.livePrices}</span>
             <span className="text-ink text-[13px] font-semibold tracking-tight">
-              {PARTNER_LABEL[offer.partner]}
+              {partnerLabel(offer.partner, lang)}
             </span>
           </div>
           <span className="inline-flex items-center gap-1.5 text-vibe-pink text-[13px] font-bold tracking-[0.04em]">

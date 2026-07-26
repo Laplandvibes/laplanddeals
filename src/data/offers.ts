@@ -110,7 +110,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
     },
     blurb: {
       en: 'Roughly 30 glass igloos exist in the entire region. Christmas weeks book out by August, open Trip.com to see what\'s left tonight.',
-      fi: 'Koko alueella on noin 30 lasi-iglua. Jouluviikot varataan loppuun jo elokuussa, avaa Trip.com nähdäksesi mitä tälle illalle on jäljellä.',
+      fi: 'Koko alueella on noin 30 lasi-iglua. Jouluviikot varataan loppuun jo elokuussa, katso Sembosta mitä tälle illalle on jäljellä.',
       de: 'In der gesamten Region gibt es rund 30 Glas-Iglus. Die Weihnachtswochen sind bis August ausgebucht, öffnen Sie Trip.com und sehen Sie, was heute Abend noch frei ist.',
       ja: '地域全体でガラスイグルーはおよそ30棟しかありません。クリスマスの週は8月までに満室に, Trip.comを開いて今夜の空き状況をご確認ください。',
       es: 'En toda la región existen unos 30 iglús de cristal. Las semanas de Navidad se agotan en agosto, abre Trip.com para ver qué queda esta noche.',
