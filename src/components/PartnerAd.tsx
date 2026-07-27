@@ -63,7 +63,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
     plateBg: '#FFFFFF',
     ring: 'hover:border-[#1F3A93]/45',
     glow: 'radial-gradient(circle at 12% 0%, rgba(31,58,147,0.10), transparent 60%)',
-    href: 'https://on.lomarengas.fi/t/t?a=1071150667&as=2086870803&t=2&tk=1',
+    href: 'https://go.laplandvibes.com/go/lomarengas?sid=deals_partner',
     trackId: 'ad_lomarengas',
     badge,
     tagline: {
