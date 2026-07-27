@@ -169,7 +169,7 @@ const fi: SectionCopy = {
       'Lasi-iglut revontulivyöhykkeellä, rinneläheiset kohteet Levillä, erämaalodget Ylläksellä, perhehotellit Rovaniemellä. Vertaile tämän illan hinnat reaaliajassa.',
     seoTitle: 'Lapin hotellitarjoukset, lasi-iglut, rinne, mökit',
     seoDesc:
-      'Sen hetkiset hinnat lasi-igluihin, ski-in-majoituksiin, perhehotelleihin ja erämaalodgeihin Suomen Lapissa. Last-minute- ja kauden loppumökkiöitä.',
+      'Sen hetkiset hinnat lasi-igluihin, ski-in-majoituksiin, perhehotelleihin ja erämaalodgeihin Suomen Lapissa. Last-minute- ja kauden loppumökkejä.',
     bottomTitle: 'Eikö kohdetta löytynyt?',
     bottomLead: 'Hae mitä tahansa Lapin kuntaa suoraan Sembosta.',
     bottomCta: 'Selaa kaikki Lapin hotellit →',
@@ -218,7 +218,7 @@ const fi: SectionCopy = {
     h1Italic: 'Rakenna oma',
     h1: 'Lapin reissusi.',
     sub:
-      'Emme myy suljettuja paketteja. Kuratoimme palaset, lennot, majoitukset, huskypäivät, revontulisafarit, ja sinä varaat jokaisen kumppanin live-hinnalla. Ei välityspalkkiota.',
+      'Emme myy suljettuja paketteja. Kuratoimme palaset (lennot, majoitukset, huskypäivät, revontulisafarit), ja sinä varaat jokaisen kumppanin live-hinnalla. Ei välityspalkkiota.',
     seoTitle: 'Lapin matkapaketit, revontuliviikko, perheloma, viikonloppu',
     seoDesc:
       'Monipäiväisiä Lapin matkaideoita: revontuliviikko Saariselällä, perheloma Rovaniemellä, viikonloppukarkureissut. Jokainen varataan erikseen kumppanin hinnalla.',
@@ -273,7 +273,7 @@ const fi: SectionCopy = {
       },
       {
         q: 'Mitä tyypilliseen Lapin matkapakettiin kuuluu?',
-        a: 'Se vaihtelee toimijoittain, joten lue aina mitä hintaan sisältyy. Yleinen kokonaisuus yhdistää muutaman yön majoituksen yhteen tai kahteen aktiviteettiin, husky-safariin, revontulisafariin tai moottorikelkkaretkeen, ja joskus mukana on lentokenttäkuljetukset. LaplandDealsissa emme myy suljettuja paketteja: kuratoimme palaset (lennot, majoitukset, aktiviteetit, autovuokraus), ja sinä varaat jokaisen kumppanin live-hintaan ilman välityspalkkiota.',
+        a: 'Se vaihtelee toimijoittain, joten lue aina mitä hintaan sisältyy. Yleinen kokonaisuus yhdistää muutaman yön majoituksen yhteen tai kahteen aktiviteettiin (husky-safari, revontulisafari tai moottorikelkkaretki), ja joskus mukana on lentokenttäkuljetukset. LaplandDealsissa emme myy suljettuja paketteja: kuratoimme palaset (lennot, majoitukset, aktiviteetit, autovuokraus), ja sinä varaat jokaisen kumppanin live-hintaan ilman välityspalkkiota.',
       },
       {
         q: 'Miten löydän aitoja Lapin alennuksia?',
