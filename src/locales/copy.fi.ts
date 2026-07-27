@@ -166,7 +166,7 @@ const fi: SectionCopy = {
     h1Italic: 'Lapin hotellit',
     h1: 'vapaat huoneet tänä iltana.',
     sub:
-      'Lasi-iglut revontulivyöhykkeellä, rinneläheiset kohteet Levillä, erämaalodget Ylläksellä, perhehotellit Rovaniemellä. Vertaile tämän illan hinnat reaaliajassa.',
+      'Lasi-iglut revontulivyöhykkeellä, rinneläheiset kohteet Levillä, erämaalodget Ylläksellä, perhehotellit Rovaniemellä. Vertaile tämän illan hintoja reaaliajassa.',
     seoTitle: 'Lapin hotellitarjoukset, lasi-iglut, rinne, mökit',
     seoDesc:
       'Sen hetkiset hinnat lasi-igluihin, ski-in-majoituksiin, perhehotelleihin ja erämaalodgeihin Suomen Lapissa. Last-minute- ja kauden loppumökkejä.',
