@@ -13,7 +13,8 @@ import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import { offers, getEditorPicks, getLastMinute, getSummerOffers } from '../data/offers';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
-import { COPY } from '../locales/copy';
+import { COPY } from '../locales/copy';
+import { AppPromoHero } from '../components/AppPromo';
 
 function SectionHeader({ eyebrow, title, lead, children }: { eyebrow: string; title: string; lead?: string; children?: React.ReactNode }) {
   return (
@@ -40,7 +41,7 @@ function SectionHeader({ eyebrow, title, lead, children }: { eyebrow: string; ti
 // match COPY[lang].related.links: hotelDeals, activities, tours.
 const SIBLING_URLS = [
   'https://laplandhoteldeals.com',
-  'https://laplandactivities.online',
+  'https://laplandactivities.fi',
   'https://laplandtours.online',
 ];
 
@@ -363,6 +364,9 @@ export default function Home() {
       </section>
 
       <NewsletterSection />
+    {/* App launch block. Bottom of the page on purpose: the site's own hero is
+        what the search result promised, and this does not get to interrupt it. */}
+    <AppPromoHero />
     </>
   );
 }

@@ -9,6 +9,7 @@ import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
 import { useHtmlLang, useLang } from './i18n/useLang';
 import { COPY, loadCopy } from './locales/copy';
 import { footerDict } from './locales/footerDict';
+import { AppPromoNudge } from './components/AppPromo';
 
 /**
  * Non-EN copy lives in per-language lazy chunks (see locales/copy.ts).
@@ -245,6 +246,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <AppLayout />
-    </BrowserRouter>
+    {/* App promo: engagement-triggered, never on arrival. */}
+      <AppPromoNudge />
+      </BrowserRouter>
   );
 }
