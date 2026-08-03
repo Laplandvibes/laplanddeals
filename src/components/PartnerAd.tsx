@@ -1,6 +1,7 @@
 import { Check, ArrowRight } from 'lucide-react';
 import { useLang, type Lang } from '../i18n/useLang';
 import { trackAffiliateClick } from '../lib/analytics';
+import { gygLocalizeHref } from '../lib/gyg';
 import AffiliateDisclosure from './AffiliateDisclosure';
 
 /**
@@ -127,7 +128,9 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
     plateBg: '#FFFFFF',
     ring: 'hover:border-[#FF5533]/45',
     glow: 'radial-gradient(circle at 12% 0%, rgba(255,85,51,0.10), transparent 60%)',
-    href: 'https://www.getyourguide.com/s/?q=Lapland%20Finland&partner_id=VRMKD7N&cmp=lv_laplanddeals_ad_gyg',
+    // Workerin kautta 2026-08-03 (rakentaa GYG:n /s?q=-haun, injektoi
+    // partner_id+cmp:n); kieli liitetään renderissä gygLocalizeHrefillä.
+    href: 'https://go.laplandvibes.com/go/activities?sid=ad_gyg&q=Lapland%20Finland',
     trackId: 'ad_getyourguide',
     badge,
     tagline: {
@@ -279,7 +282,8 @@ export default function PartnerAd({ advertiser, placement, className = '' }: Pro
   const a = advertiser === 'hotelscom' && lang === 'fi' ? SEMBO_FI : ADVERTISERS[advertiser];
   if (!a) return null;
 
-  const href = a.id === 'hotelscom' ? `${a.href}&locale=${HOTELS_AD_LOCALE[lang]}` : a.href;
+  const href =
+    a.id === 'hotelscom' ? `${a.href}&locale=${HOTELS_AD_LOCALE[lang]}` : gygLocalizeHref(a.href, lang);
   const points = a.points[lang] ?? a.points.en;
 
   return (

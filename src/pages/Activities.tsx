@@ -4,7 +4,7 @@ import NewsletterSection from '../components/NewsletterSection';
 import PillarHeader from '../components/PillarHeader';
 import PartnerAd from '../components/PartnerAd';
 import { getOffers } from '../data/offers';
-import { GYG_CATEGORIES } from '../lib/gyg';
+import { GYG_CATEGORIES, gygLocalizeHref } from '../lib/gyg';
 import { useLang, LANG_PREFIX } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
@@ -47,7 +47,7 @@ export default function Activities() {
             {c.bottomLead}
           </p>
           <a
-            href={GYG_CATEGORIES.all}
+            href={gygLocalizeHref(GYG_CATEGORIES.all, lang)}
             target="_blank"
             rel="sponsored nofollow noopener"
             className="inline-flex items-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] text-[13px] px-7 py-4 rounded-full no-underline"

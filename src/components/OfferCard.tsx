@@ -1,6 +1,7 @@
 import { ArrowUpRight, MapPin } from 'lucide-react';
 import type { Offer } from '../data/offers';
 import { trackAffiliateClick } from '../lib/analytics';
+import { gygLocalizeHref } from '../lib/gyg';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
@@ -42,15 +43,19 @@ export default function OfferCard({ offer, size = 'md', showImage = true }: Prop
     size === 'sm' ? 'h-44' :
     'h-60 md:h-64';
 
+  // offers.ts on staattinen moduuli ilman kieltä — Worker-aktiviteettilinkin
+  // language=-parametri liitetään vasta tässä (gygLocalizeHref ohittaa muut URLit).
+  const href = gygLocalizeHref(offer.href, lang);
+
   const handleClick = () => {
     // 'hotels.com' is a legacy data key; GA4 should read the channel that is
     // actually live (Sembo for fi, Trip.com otherwise), not a retired partner.
-    trackAffiliateClick(offer.partner === 'hotels.com' ? 'lodging' : offer.partner, offer.id, offer.href);
+    trackAffiliateClick(offer.partner === 'hotels.com' ? 'lodging' : offer.partner, offer.id, href);
   };
 
   return (
     <a
-      href={offer.href}
+      href={href}
       target="_blank"
       rel="sponsored nofollow noopener"
       onClick={handleClick}

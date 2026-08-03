@@ -1,59 +1,68 @@
 /**
- * GetYourGuide deep-link helper.
+ * GetYourGuide deep-link helper — Workerin kautta 2026-08-03 alkaen.
  *
- * The `go.laplandvibes.com/go/activities/*` Cloudflare Worker collapses every
- * slug to GYG's homepage (bug, 2026-05-02 — see bug_go_lv_worker_gyg_dropped.md).
- * We bypass it for GYG by linking directly with `partner_id` + `cmp` query
- * params — same attribution, correct deep-link.
+ * Tämä tiedosto rakensi aiemmin raakoja getyourguide.com-URLeja perusteella
+ * "Worker collapses every slug to GYG's homepage (2026-05-02)". Väite ei pidä
+ * enää paikkaansa: se oli curl-bot-fallback-artefakti, ja Worker on 2026-08-02
+ * lähtien hoitanut slugin, /s?q=-haun JA kielen polkuprefiksin (`language=`-
+ * parametri → GYG:n `<kieli>-<maa>/`-etuliite, ainoa lokalisointi jota GYG
+ * kunnioittaa — raaka ?language= on GYG:llä no-op). Suora linkitys menettäisi
+ * D1-klikkilokin ja veisi partner_id:n bundleen; Worker injektoi partner_id:n
+ * ja cmp=lv_<domain>_<sid>:n itse.
  *
- * Lapland location slug correction (2026-05-05): `lapland-l662` returns 404 —
- * the correct GYG ID for Finnish Lapland is `l4404`. Verified via curl.
- *
- * Category sub-pages (`/lapland-finland-l2652/<category-tcXX>`) tend to 404 too — GYG
- * doesn't expose stable category permalinks under every location. Reliable
- * pattern is to use the SEARCH endpoint `/s/?q=…&partner_id=VRMKD7N&cmp=…`
- * which always 200s and pre-filters the listing.
+ * Koska tarjousdata (offers.ts) on staattinen moduuli ilman kieltä, kieli
+ * liitetään renderissä: kutsu `gygLocalizeHref(href, lang)` — se koskee vain
+ * /go/activities-URLeihin ja jättää muut ennalleen.
  */
 
-const GYG_PARTNER_ID = 'VRMKD7N';
-const SITE_TAG = 'laplanddeals';
+import type { Lang } from '../i18n/useLang';
 
-function withAffiliate(rawUrl: string, sid: string): string {
-  const url = new URL(rawUrl);
-  url.searchParams.set('partner_id', GYG_PARTNER_ID);
-  url.searchParams.set('cmp', `lv_${SITE_TAG}_${sid}`);
-  return url.toString();
+const GO = 'https://go.laplandvibes.com/go/activities';
+
+/**
+ * Worker `?language=` codes (same table as shared/gyg/picks.ts). `en` is GYG's
+ * default and needs no param; `de` needs a code here even though the old raw
+ * links didn't send one — they used the getyourguide.de domain instead.
+ */
+export const GYG_WORKER_LANG: Record<Lang, string | undefined> = {
+  en: undefined, fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-BR': 'pt-br',
+  'zh-CN': 'zh', ko: 'ko', fr: 'fr', it: 'it', nl: 'nl', sv: 'sv',
+};
+
+/**
+ * Liitä sivun kieli Worker-aktiviteettilinkkiin renderissä. Muut URLit
+ * (Lomarengas, Trip.com, …) palautuvat sellaisenaan.
+ */
+export function gygLocalizeHref(href: string, lang: Lang): string {
+  if (!href.startsWith(GO)) return href;
+  const code = GYG_WORKER_LANG[lang];
+  if (!code) return href;
+  return `${href}${href.includes('?') ? '&' : '?'}language=${code}`;
 }
 
 /**
  * Direct deeplink to a specific GYG product or location page (when you know
- * the exact slug works — verify with curl/browser first).
+ * the exact slug works — verify in a real browser first; a delisted id does
+ * NOT 404, GYG redirects it to a city listing).
  *
  * @param productPath  Path component after `getyourguide.com/`. Example:
  *                     `lapland-finland-l2652` (Finnish Lapland location).
- *                     `rovaniemi-l2653` (Rovaniemi city). NOTE Rovaniemi
- *                     currently 403s anonymously but works in browser.
  */
 export function gygDeepLink(productPath: string, sid: string): string {
-  const path = productPath.replace(/^\/+/, '');
-  return withAffiliate(`https://www.getyourguide.com/${path}/`, sid);
+  const path = productPath.replace(/^\/+/, '').replace(/\/+$/, '');
+  return `${GO}/${path}?sid=${sid}`;
 }
 
 /**
- * Search-result deeplink — most reliable. Always 200s, pre-filters by query,
- * preserves affiliate attribution. Use this for category landings.
+ * Search deeplink — most reliable. Worker rakentaa GYG:n /s?q=-haun (ainoa
+ * URL jossa GYG kunnioittaa q:ta; sijaintisivut ohittavat sen).
  */
 export function gygSearch(query: string, sid: string): string {
-  const url = new URL('https://www.getyourguide.com/s/');
-  url.searchParams.set('q', query);
-  url.searchParams.set('partner_id', GYG_PARTNER_ID);
-  url.searchParams.set('cmp', `lv_${SITE_TAG}_${sid}`);
-  return url.toString();
+  return `${GO}?sid=${sid}&q=${encodeURIComponent(query)}`;
 }
 
 /**
- * Common Lapland category landing pages. Each uses a verified-working GYG
- * search URL with affiliate params baked in.
+ * Common Lapland category landing pages.
  */
 export const GYG_CATEGORIES = {
   all:        gygDeepLink('lapland-finland-l2652', 'cat_all'),
