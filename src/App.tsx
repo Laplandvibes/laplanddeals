@@ -39,13 +39,15 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const Terms = lazy(() => import('./pages/Terms'))
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'))
 const NotFound = lazy(() => import('./pages/NotFound'))
+// key → label haetaan SharedFooterin pillars-sanakirjasta sivun kielellä;
+// name jää EN-fallbackiksi jos avain puuttuu sanakirjasta.
 const pillarLinks = [
-  { name: 'Hotels',     href: '/hotels' },
-  { name: 'Activities', href: '/activities' },
-  { name: 'Flights',    href: '/flights' },
-  { name: 'Cars',       href: '/cars' },
-  { name: 'Packages',   href: '/packages' },
-  { name: 'Summer',     href: '/summer' },
+  { key: 'hotels' as const,     name: 'Hotels',     href: '/hotels' },
+  { key: 'activities' as const, name: 'Activities', href: '/activities' },
+  { key: 'flights' as const,    name: 'Flights',    href: '/flights' },
+  { key: 'cars' as const,       name: 'Cars',       href: '/cars' },
+  { key: 'packages' as const,   name: 'Packages',   href: '/packages' },
+  { key: 'summer' as const,     name: 'Summer',     href: '/summer' },
 ];
 
 function LocaleSync() {
