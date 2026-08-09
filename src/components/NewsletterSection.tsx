@@ -88,7 +88,7 @@ export default function NewsletterSection() {
             </div>
           ) : (
             <>
-            <FounderByline tone="pink" />
+            <><FounderByline tone="pink" />
             <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
@@ -107,7 +107,7 @@ export default function NewsletterSection() {
               >
                 {state === 'sending' ? c.sending : c.cta}
               </button>
-            </form>
+            </form></>
             </>
           )}
 
