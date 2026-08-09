@@ -277,13 +277,26 @@ interface Props {
   className?: string;
 }
 
+/** Lomarengas-CTA: sid kutsupaikasta + dest=Lapin mökkihaku. Kovakoodattu
+ *  sid 'deals_partner' sulatti kaikki pinnat yhdeksi raportointiriviksi, ja
+ *  ilman destiä Adtraction-wrap pudotti lomarengas.fi:n ETUSIVULLE
+ *  (lv_permanent_rules §5, 2026-08-09). Lomarenkaalla vain fi/en-sivustot. */
+function lomarengasHref(sid: string, lang: Lang): string {
+  const dest = lang === 'fi'
+    ? 'https://www.lomarengas.fi/mokkihaku/lappi'
+    : 'https://www.lomarengas.fi/en/cottage-search/lappi';
+  return `https://go.laplandvibes.com/go/lomarengas?sid=${encodeURIComponent(sid)}&dest=${encodeURIComponent(dest)}`;
+}
+
 export default function PartnerAd({ advertiser, placement, className = '' }: Props) {
   const lang = useLang();
   const a = advertiser === 'hotelscom' && lang === 'fi' ? SEMBO_FI : ADVERTISERS[advertiser];
   if (!a) return null;
 
   const href =
-    a.id === 'hotelscom' ? `${a.href}&locale=${HOTELS_AD_LOCALE[lang]}` : gygLocalizeHref(a.href, lang);
+    a.id === 'hotelscom' ? `${a.href}&locale=${HOTELS_AD_LOCALE[lang]}`
+    : a.id === 'lomarengas' ? lomarengasHref(placement ?? a.trackId, lang)
+    : gygLocalizeHref(a.href, lang);
   const points = a.points[lang] ?? a.points.en;
 
   return (
