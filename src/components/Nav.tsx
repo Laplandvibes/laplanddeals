@@ -84,7 +84,10 @@ export default function Nav() {
     if (typeof window !== 'undefined' && window.localStorage) {
       window.localStorage.setItem('lv_locale_choice', target);
     }
-    const bare = pathname.replace(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl|sv)(?=\/|$)/, '') || '/';
+    // Strip EVERY leading locale segment (see i18n/useLang.ts). GSC 2026-08-13:
+    // /cn/ko/flights/ (57 näyttöä) ja /br/pt-BR/activities/ ovat yhä indeksissä;
+    // yhden segmentin riisunta teki niistä kieltä vaihdettaessa uusia roska-URLeja.
+    const bare = pathname.replace(/^(?:\/(?:pt-BR|zh-CN|fi|de|ja|es|br|cn|kr|ko|fr|it|nl|sv))+(?=\/|$)/i, '') || '/';
     const prefix = URL_PREFIX_OF[target];
     if (!prefix) {
       navigate(bare);

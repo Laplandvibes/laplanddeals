@@ -59,10 +59,20 @@ export function useHtmlLang(): 'en-US' | 'fi-FI' | 'de-DE' | 'ja-JP' | 'es-ES' |
   return 'en-US';
 }
 
+// Strips EVERY leading locale segment, not just the first, and knows the
+// code-form prefixes (pt-BR, zh-CN, ko) as well as the short URL forms.
+//
+// 2026-08-13: Google still has stacked-prefix URLs indexed from an older build —
+// /br/pt-BR/activities/ (5 näyttöä), /cn/ko/flights/ (57), /cn/pt-BR/flights/ (48),
+// mitattu GSC:stä. Current code only ever emits the short form, so nothing new is
+// minted from scratch. But stripping only the FIRST segment meant that a visitor
+// landing on one of those stale URLs and switching language produced a brand new
+// junk URL (/br/pt-BR/… + switch to fi → /fi/pt-BR/…). The bug re-seeded itself
+// from its own indexed output, which is why the URL space kept growing.
+const LOCALE_RUN = /^(?:\/(?:pt-BR|zh-CN|fi|de|ja|es|br|cn|kr|ko|fr|it|nl|sv))+(?=\/|$)/i;
+
 export function stripLocale(path: string): string {
-  const m = path.match(/^\/(fi|de|ja|es|br|cn|kr|fr|it|nl|sv)(?=\/|$)/);
-  if (m) return path.replace(m[0], '') || '/';
-  return path;
+  return path.replace(LOCALE_RUN, '') || '/';
 }
 
 export function pick<T>(
