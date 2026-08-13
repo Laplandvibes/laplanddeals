@@ -6,7 +6,7 @@ import SharedFooter from '../../shared/Footer';
 import SharedCookieBanner from '../../shared/CookieBanner';
 import NewsletterPopup from './components/NewsletterPopup';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
-import { useHtmlLang, useLang } from './i18n/useLang';
+import { useHtmlLang, useLang, stripLocale } from './i18n/useLang';
 import { COPY, loadCopy } from './locales/copy';
 import { footerDict } from './locales/footerDict';
 import { AppPromoNudge } from './components/AppPromo';
@@ -73,8 +73,29 @@ function LocaleSync() {
   return null;
 }
 
+/**
+ * 🔴 Routes whose page content brings its OWN <main>.
+ *
+ * shared/Legal/{Terms,Privacy,Cookie}Content each open with
+ * `<main className="pt-16 bg-deep-night min-h-screen">` (TermsContent.tsx:1370).
+ * Wrapping those in AppLayout's <main> nests two landmarks: invalid HTML, and a
+ * screen reader announces two "main" regions with no way to tell which is the
+ * document's. Measured on the deployed page 13.8.2026 — /fi/terms rendered
+ * BODY > … > MAIN > DIV.pt-20 > MAIN.pt-16 — i.e. moving the page's own wrapper
+ * to a <div> (Terms.tsx) removed the middle one but left this outer one.
+ *
+ * These three routes therefore get a plain <div> here and let the shared content
+ * own the landmark; every other route keeps AppLayout's <main> as its only one.
+ * Do NOT "simplify" this back to an unconditional <main>.
+ */
+const ROUTES_OWNING_MAIN = new Set(['/privacy', '/terms', '/cookie-policy']);
+
 function AppLayout() {
   const lang = useLang();
+  const { pathname } = useLocation();
+  const Wrapper = ROUTES_OWNING_MAIN.has(stripLocale(pathname).replace(/\/+$/, '') || '/')
+    ? 'div'
+    : 'main';
   return (
     <div className="min-h-screen bg-cream text-ink">
       <ScrollToTop />
@@ -82,7 +103,7 @@ function AppLayout() {
       <LocaleSync />
       <CopyGate>
       <Nav />
-      <main>
+      <Wrapper>
         <Suspense fallback={<div className="min-h-screen" />}>
           <Routes>
           <Route path="/" element={<Home />} />
@@ -235,7 +256,7 @@ function AppLayout() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>
-      </main>
+      </Wrapper>
       <SharedFooter pillarLinks={pillarLinks} dict={footerDict(lang)} />
       </CopyGate>
       <SharedCookieBanner consentKey="laplanddeals_cookie_consent" lang={lang} />
