@@ -49,6 +49,12 @@ export default function Cars() {
           <AffiliateCTA
             partner="cars"
             sid="cars_pillar_browse_all"
+            // 🔴 destination=IATA on pakollinen: ilman sitä klikki putoaa
+            // EconomyBookingsin etusivulle TYHJÄLLÄ noutokentällä (EB pudottaa
+            // kaikki queryt ilman plc:tä — Worker mappaa RVN→plc 61909).
+            // RVN = Rovaniemi, verkoston oletusnoutopiste (vrt. offers.ts
+            // pickup_location). Lisätty 2026-08-14.
+            destination="RVN"
             className="inline-flex items-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] text-[13px] px-7 py-4 rounded-full no-underline"
           >
             {c.bottomCta}
