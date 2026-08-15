@@ -1,0 +1,22 @@
+# LaplandDeals
+
+> Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers.
+
+## Main pages
+
+- [Hotels](https://laplanddeals.com/hotels/): live rates for glass igloos, slope-side stays, family hotels and wilderness lodges.
+- [Car hire](https://laplanddeals.com/cars/): winter-ready cars with studded tyres from Rovaniemi, Kittilä, Ivalo and Kuusamo airports, compared on EconomyBookings.
+- [Flights](https://laplanddeals.com/flights/): live Trip.com fares from Helsinki to Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) and Kemi.
+- [Activities](https://laplanddeals.com/activities/): husky safaris, aurora hunts, snowmobile tours, reindeer farms and ice fishing with live GetYourGuide availability.
+- [Packages](https://laplanddeals.com/packages/): multi-day trip ideas: aurora week in Saariselkä, family breaks in Rovaniemi, weekend escapes, each block booked at the partner's live rate.
+- [Summer](https://laplanddeals.com/summer/): midnight sun stays (June 6 to July 7), hiking season and lakeside cabins.
+
+## Languages
+
+English (default, no prefix), Finnish (/fi/), Swedish (/sv/), German (/de/), Spanish (/es/), French (/fr/), Italian (/it/), Dutch (/nl/), Japanese (/ja/), Korean (/kr/), Brazilian Portuguese (/br/), Chinese (/cn/).
+
+## Network
+
+- Hub: https://laplandvibes.com/
+- Sitemap: https://laplanddeals.com/sitemap.xml
+- Contact: info@laplanddeals.com
