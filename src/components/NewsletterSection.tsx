@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { CheckCircle, Tag, Bell, Clock, Sun } from 'lucide-react';
 import { trackNewsletterSignup } from '../lib/analytics';
-import { useLang } from '../i18n/useLang';
+import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import FounderByline from '../../../shared/FounderByline';
 
@@ -10,17 +10,72 @@ const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as strin
 
 const ICONS = [Tag, Clock, Sun, Bell];
 
+// Consent + age confirmation strings. Kept here (not in locales/copy.*) so the
+// whole opt-in lives in one file; keyed by the same Lang codes as COPY.
+const CONSENT: Record<Lang, { consent: string; privacy: string }> = {
+  en: {
+    consent: 'Yes, send the LaplandVibes newsletter (travel tips, seasonal updates and offers) to this email address. I confirm I am 18 or over.',
+    privacy: 'Privacy Policy',
+  },
+  fi: {
+    consent: 'LaplandVibes saa lähettää minulle uutiskirjettä (matkailuvinkkejä, sesonkitietoa ja tarjouksia) antamaani sähköpostiosoitteeseen. Olen täyttänyt 18 vuotta.',
+    privacy: 'Tietosuojaseloste',
+  },
+  de: {
+    consent: 'Ja, LaplandVibes darf mir den Newsletter mit Reisetipps, Saisoninfos und Angeboten an diese E-Mail-Adresse senden. Ich bin mindestens 18 Jahre alt.',
+    privacy: 'Datenschutzerklärung',
+  },
+  ja: {
+    consent: '入力したメールアドレス宛に、LaplandVibesがニュースレター（旅のヒント、シーズン情報、キャンペーン情報）を送ることに同意します。私は18歳以上です。',
+    privacy: 'プライバシーポリシー',
+  },
+  es: {
+    consent: 'Acepto recibir en mi correo el boletín de LaplandVibes (consejos de viaje, información de temporada y ofertas) y confirmo que tengo al menos 18 años.',
+    privacy: 'Política de privacidad',
+  },
+  'pt-BR': {
+    consent: 'Aceito receber a newsletter da LaplandVibes no e-mail informado, com dicas de viagem, informações de temporada e ofertas. Tenho 18 anos ou mais.',
+    privacy: 'Política de Privacidade',
+  },
+  'zh-CN': {
+    consent: '我同意 LaplandVibes 向我填写的邮箱发送订阅邮件，内容包括拉普兰旅行建议、季节资讯和优惠信息，并确认本人已年满18周岁。',
+    privacy: '隐私政策',
+  },
+  ko: {
+    consent: '입력한 이메일 주소로 LaplandVibes가 보내는 여행 팁·시즌 정보·프로모션 소식 뉴스레터 수신에 동의하며, 만 18세 이상임을 확인합니다.',
+    privacy: '개인정보처리방침',
+  },
+  fr: {
+    consent: "J'accepte de recevoir la newsletter LaplandVibes (conseils voyage, infos saisonnières, offres) à cette adresse e-mail et je confirme avoir 18 ans ou plus.",
+    privacy: 'Politique de confidentialité',
+  },
+  it: {
+    consent: "Sì, desidero ricevere la newsletter di LaplandVibes (consigli di viaggio, novità stagionali e offerte) all'indirizzo indicato. Ho almeno 18 anni.",
+    privacy: 'Informativa sulla privacy',
+  },
+  nl: {
+    consent: 'Ja, LaplandVibes mag de nieuwsbrief met reistips, seizoensinfo en aanbiedingen naar dit e-mailadres sturen. Ik ben 18 jaar of ouder.',
+    privacy: 'Privacyverklaring',
+  },
+  sv: {
+    consent: 'Ja, jag vill ha nyhetsbrevet från LaplandVibes med restips, säsongsinfo och erbjudanden till min e-postadress. Jag är minst 18 år.',
+    privacy: 'Integritetspolicy',
+  },
+};
+
 export default function NewsletterSection() {
   const lang = useLang();
   const c = COPY[lang].newsletter;
+  const cc = CONSENT[lang] ?? CONSENT.en;
 
   const [email, setEmail] = useState('');
+  const [consented, setConsented] = useState(false);
   const [state, setState] = useState<'idle' | 'sending' | 'ok' | 'err'>('idle');
   const [errMsg, setErrMsg] = useState('');
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
-    if (!email || state === 'sending') return;
+    if (!email || !consented || state === 'sending') return;
     setState('sending');
     setErrMsg('');
     try {
@@ -31,7 +86,13 @@ export default function NewsletterSection() {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
           },
-          body: JSON.stringify({ email, source: 'laplanddeals-section' }),
+          body: JSON.stringify({
+            email,
+            source: 'laplanddeals-section',
+            consent: true,
+            ageConfirmed: true,
+            consentText: cc.consent,
+          }),
         });
         if (!res.ok && res.status !== 409) {
           throw new Error(`Subscription failed (${res.status})`);
@@ -89,24 +150,47 @@ export default function NewsletterSection() {
           ) : (
             <>
             <><FounderByline tone="pink" />
-            <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={c.placeholder}
-                aria-label={c.placeholder}
-                required
-                disabled={state === 'sending'}
-                className="flex-1 bg-ivory text-deep-night placeholder:text-deep-night/50 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-4 focus:ring-ivory/30 transition-shadow"
-              />
-              <button
-                type="submit"
-                disabled={state === 'sending'}
-                className="bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] text-sm px-8 py-4 rounded-full transition-colors whitespace-nowrap disabled:opacity-60"
-              >
-                {state === 'sending' ? c.sending : c.cta}
-              </button>
+            <form onSubmit={onSubmit} className="flex flex-col gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={c.placeholder}
+                  aria-label={c.placeholder}
+                  required
+                  disabled={state === 'sending'}
+                  className="flex-1 bg-ivory text-deep-night placeholder:text-deep-night/50 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-4 focus:ring-ivory/30 transition-shadow"
+                />
+                <button
+                  type="submit"
+                  disabled={state === 'sending'}
+                  className="bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] text-sm px-8 py-4 rounded-full transition-colors whitespace-nowrap disabled:opacity-60"
+                >
+                  {state === 'sending' ? c.sending : c.cta}
+                </button>
+              </div>
+              <label className="flex items-start gap-3 px-1 text-ivory/75 text-xs sm:text-[13px] leading-snug cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={consented}
+                  onChange={(e) => setConsented(e.target.checked)}
+                  required
+                  disabled={state === 'sending'}
+                  className="mt-0.5 w-4 h-4 shrink-0 accent-vibe-pink cursor-pointer focus:outline-none focus:ring-2 focus:ring-ivory/40"
+                />
+                <span>
+                  {cc.consent}{' '}
+                  <a
+                    href="/privacy-policy"
+                    target="_blank"
+                    rel="noopener"
+                    className="underline underline-offset-2 text-ivory hover:text-vibe-pink transition-colors"
+                  >
+                    {cc.privacy}
+                  </a>
+                </span>
+              </label>
             </form></>
             </>
           )}
