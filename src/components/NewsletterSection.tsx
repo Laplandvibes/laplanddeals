@@ -83,15 +83,16 @@ export default function NewsletterSection() {
   const [consented, setConsented] = useState(false);
   const [state, setState] = useState<'idle' | 'sending' | 'ok' | 'err'>('idle');
   const [errMsg, setErrMsg] = useState('');
-  // [LV-FUNNEL] VAIN view + start: buildissa ei ole VITE_SUPABASE_* -arvoja
-  // (repossa ei .env:iä), joten alla oleva env-vartioitu fetch karsiutuu
-  // buildista kokonaan pois ja lomake näyttää onnistumisen LÄHETTÄMÄTTÄ
-  // MITÄÄN. submit/success-eventit valehtelisivat suppiloon — ne saa lisätä
-  // vasta kun lähetys on oikeasti korjattu (standardi:
-  // memory _procedural/lv_form_funnel_events.md, sääntö 2).
+  // [LV-FUNNEL] Koko suppilo view -> start -> blocked/submit -> success|error.
+  // submit/success lisattiin vasta kun lahetys oli oikeasti korjattu ja
+  // todennettu livesta (84cf60c + tama commit); aiemmin ne olisivat
+  // valehdelleet suppiloon lomakkeesta joka ei lahettanyt mitaan.
+  // Standardi: memory _procedural/lv_form_funnel_events.md.
   const funnelData = { surface: 'inline', lang };
   const sectionRef = useRef<HTMLElement | null>(null);
   const startTracked = useRef(false);
+  // nl_blocked kerran per submit-yritys: natiivi invalid laukeaa per kentta.
+  const blockedTracked = useRef(false);
   useEffect(() => {
     const el = sectionRef.current;
     if (!el || typeof IntersectionObserver === 'undefined') return;
@@ -113,16 +114,27 @@ export default function NewsletterSection() {
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
-    if (!email || !consented || state === 'sending') return;
+    if (!email || !consented || state === 'sending') {
+      if (state !== 'sending') {
+        track('nl_blocked', { ...funnelData, reason: !email ? 'email' : 'consent' });
+      }
+      return;
+    }
+    // Missing build-time config must FAIL, never fake success: the previous
+    // `if (env) { fetch }` variant compiled the whole fetch away when .env
+    // was absent (21.8.2026 night patrol: success UI, zero requests). This is
+    // a guard-haara, so it emits nl_blocked — nl_submit means the request
+    // really left, and must never fire for a build that cannot send.
+    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+      track('nl_blocked', { ...funnelData, reason: 'config' });
+      setState('err');
+      setErrMsg('Subscription is temporarily unavailable');
+      return;
+    }
     setState('sending');
     setErrMsg('');
+    track('nl_submit', funnelData);
     try {
-      // Missing build-time config must FAIL, never fake success: the previous
-      // `if (env) { fetch }` variant compiled the whole fetch away when .env
-      // was absent (21.8.2026 night patrol: success UI, zero requests).
-      if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-        throw new Error('Subscription is temporarily unavailable');
-      }
       const res = await fetch(`${SUPABASE_URL}/functions/v1/send-welcome-email`, {
         method: 'POST',
         headers: {
@@ -132,20 +144,33 @@ export default function NewsletterSection() {
         body: JSON.stringify({
           email,
           source: 'laplanddeals-section',
+          // Segmentointikentat: ilman naita palvelin joutuu paattelemaan
+          // sivuston source-tagista eika kielta/kanavaa saa lainkaan.
+          // `channel` on sama arvo kuin suppilon `surface` (standardi).
+          site: 'laplanddeals',
+          language: lang,
+          channel: 'inline',
           consent: true,
           ageConfirmed: true,
           consentText: cc.consent,
         }),
       });
-      if (!res.ok && res.status !== 409) {
-        throw new Error(`Subscription failed (${res.status})`);
+      // Jo-tilaaja tulee 200:lla + { alreadySubscribed: true } — EI 409:lla,
+      // joten tila luetaan bodysta. Virhebody sisaltaa { error }.
+      const data: { error?: string; alreadySubscribed?: boolean } = await res
+        .json()
+        .catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || `Subscription failed (${res.status})`);
       }
       trackNewsletterSignup('laplanddeals-section');
+      track('nl_success', data.alreadySubscribed ? { ...funnelData, already: true } : funnelData);
       setState('ok');
       setEmail('');
     } catch (err) {
       setState('err');
       setErrMsg(err instanceof Error ? err.message : 'Something went wrong');
+      track('nl_error', funnelData);
     }
   }
 
@@ -192,7 +217,20 @@ export default function NewsletterSection() {
           ) : (
             <>
             <><FounderByline tone="pink" />
-            <form onSubmit={onSubmit} className="flex flex-col gap-3">
+            <form
+              onSubmit={onSubmit}
+              onInvalidCapture={(e) => {
+                // Natiivi required-validointi esti lahetyksen. Laukeaa per
+                // kentta, joten vaimennetaan 400 ms:ksi -> yksi nl_blocked
+                // per submit-yritys.
+                if (blockedTracked.current) return;
+                blockedTracked.current = true;
+                window.setTimeout(() => { blockedTracked.current = false; }, 400);
+                const t = e.target as HTMLInputElement;
+                track('nl_blocked', { ...funnelData, reason: t.type === 'checkbox' ? 'consent' : 'email' });
+              }}
+              className="flex flex-col gap-3"
+            >
               <div className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="email"
