@@ -117,24 +117,28 @@ export default function NewsletterSection() {
     setState('sending');
     setErrMsg('');
     try {
-      if (SUPABASE_URL && SUPABASE_ANON_KEY) {
-        const res = await fetch(`${SUPABASE_URL}/functions/v1/send-welcome-email`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-          },
-          body: JSON.stringify({
-            email,
-            source: 'laplanddeals-section',
-            consent: true,
-            ageConfirmed: true,
-            consentText: cc.consent,
-          }),
-        });
-        if (!res.ok && res.status !== 409) {
-          throw new Error(`Subscription failed (${res.status})`);
-        }
+      // Missing build-time config must FAIL, never fake success: the previous
+      // `if (env) { fetch }` variant compiled the whole fetch away when .env
+      // was absent (21.8.2026 night patrol: success UI, zero requests).
+      if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+        throw new Error('Subscription is temporarily unavailable');
+      }
+      const res = await fetch(`${SUPABASE_URL}/functions/v1/send-welcome-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          email,
+          source: 'laplanddeals-section',
+          consent: true,
+          ageConfirmed: true,
+          consentText: cc.consent,
+        }),
+      });
+      if (!res.ok && res.status !== 409) {
+        throw new Error(`Subscription failed (${res.status})`);
       }
       trackNewsletterSignup('laplanddeals-section');
       setState('ok');
@@ -222,7 +226,7 @@ export default function NewsletterSection() {
                 <span>
                   {cc.consent}{' '}
                   <a
-                    href="/privacy-policy"
+                    href="/privacy/"
                     target="_blank"
                     rel="noopener"
                     className="underline underline-offset-2 text-ivory hover:text-vibe-pink transition-colors"
