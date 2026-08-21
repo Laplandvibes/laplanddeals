@@ -2,7 +2,10 @@
   {
     "path": "/",
     "fallbackTitle": "LaplandDeals: Last-Minute Deals for Finnish Lapland",
-    "fallbackDescription": "Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers."
+    "fallbackDescription": "Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers.",
+    "harvestFiles": [
+      "src/pages/Home.tsx"
+    ]
   },
   {
     "path": "/hotels",
