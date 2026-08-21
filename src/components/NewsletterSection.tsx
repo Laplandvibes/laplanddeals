@@ -1,9 +1,20 @@
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { CheckCircle, Tag, Bell, Clock, Sun } from 'lucide-react';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import FounderByline from '../../../shared/FounderByline';
+
+/**
+ * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,
+ * ei jaettua importtia (vendoroitu sync on refresh-only). Ei saa koskaan
+ * rikkoa lomaketta. Standardi: memory _procedural/lv_form_funnel_events.md.
+ */
+function track(event: string, data?: Record<string, unknown>) {
+  try {
+    (window as unknown as { umami?: { track: (e: string, d?: unknown) => void } }).umami?.track(event, data);
+  } catch { /* ignore */ }
+}
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined;
@@ -72,6 +83,33 @@ export default function NewsletterSection() {
   const [consented, setConsented] = useState(false);
   const [state, setState] = useState<'idle' | 'sending' | 'ok' | 'err'>('idle');
   const [errMsg, setErrMsg] = useState('');
+  // [LV-FUNNEL] VAIN view + start: buildissa ei ole VITE_SUPABASE_* -arvoja
+  // (repossa ei .env:iä), joten alla oleva env-vartioitu fetch karsiutuu
+  // buildista kokonaan pois ja lomake näyttää onnistumisen LÄHETTÄMÄTTÄ
+  // MITÄÄN. submit/success-eventit valehtelisivat suppiloon — ne saa lisätä
+  // vasta kun lähetys on oikeasti korjattu (standardi:
+  // memory _procedural/lv_form_funnel_events.md, sääntö 2).
+  const funnelData = { surface: 'inline', lang };
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const startTracked = useRef(false);
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((en) => en.isIntersecting)) {
+        track('nl_view', funnelData);
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const trackStart = () => {
+    if (startTracked.current) return;
+    startTracked.current = true;
+    track('nl_start', funnelData);
+  };
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -108,7 +146,7 @@ export default function NewsletterSection() {
   }
 
   return (
-    <section className="relative bg-finland-blue overflow-hidden">
+    <section className="relative bg-finland-blue overflow-hidden" ref={sectionRef}>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(236,72,153,0.18),transparent_55%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,0,0,0.35),transparent_60%)]" />
 
@@ -155,6 +193,7 @@ export default function NewsletterSection() {
                 <input
                   type="email"
                   value={email}
+                  onFocus={trackStart}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={c.placeholder}
                   aria-label={c.placeholder}
@@ -174,6 +213,7 @@ export default function NewsletterSection() {
                 <input
                   type="checkbox"
                   checked={consented}
+                  onFocus={trackStart}
                   onChange={(e) => setConsented(e.target.checked)}
                   required
                   disabled={state === 'sending'}

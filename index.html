@@ -89,8 +89,6 @@
     <meta name="twitter:title" content="LaplandDeals: Last-Minute Deals & Offers for Finnish Lapland" />
     <meta name="twitter:description" content="Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Checked daily." />
     <!-- Preconnect: fonts + GYG widget -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://widget.getyourguide.com" />
 
     <!-- GetYourGuide Integration Analyzer (LV-wide rule) -->
@@ -208,7 +206,16 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <!-- Umami Cloud — cookieless analytics, no consent gate needed (writes nothing to the browser) -->
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="e2bcc54d-be00-4176-856a-15de3865f240"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="e2bcc54d-be00-4176-856a-15de3865f240" data-domains="laplanddeals.com,www.laplanddeals.com"></script>
+      <!-- Self-hosted heading + body faces. Without these the browser cannot
+         discover the fonts until the bundled CSS has parsed, which guarantees a
+         visible pass in the fallback sans (33 % wider than Bebas). crossorigin is
+         required even same-origin — fonts are fetched in CORS mode and a preload
+         without it downloads the file twice. -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="/fonts/v16-JTUSjIg69CK48gW7PXoo9Wlhyw.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="/fonts/v17-rP2Hp2ywxg089UriCZOIHQ.woff2" />
   </head>
   <body>
     <div id="root"></div>
