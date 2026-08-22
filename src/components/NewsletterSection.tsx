@@ -3,8 +3,8 @@ import { CheckCircle, Tag, Bell, Clock, Sun } from 'lucide-react';
 import { trackNewsletterSignup } from '../lib/analytics';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
-import FounderByline from '../../../shared/FounderByline';
-import { localePath } from '../../../shared/Legal/localePath';
+import FounderByline from '../shared/FounderByline';
+import { localePath } from '../shared/Legal/localePath';
 
 /**
  * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,

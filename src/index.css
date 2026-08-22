@@ -63,7 +63,7 @@
    Footer/CookieBanner/NewsletterPopup/Legal components. Without this, classes
    like bg-deep-night/text-vibe-pink/text-snow are stripped from the prod CSS
    and shared components render unstyled. See lv_critical_react_dedupe.md. */
-@source "../../shared/**/*.{ts,tsx}";
+@source "./shared/**/*.{ts,tsx}";
 
 @theme {
   /* DARK DEAL THEME (2026-07-06, Vesa: "mummojen yhdistys" -> punchy diili-ilme).

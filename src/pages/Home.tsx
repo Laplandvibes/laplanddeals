@@ -9,7 +9,7 @@ import CategoryTiles from '../components/CategoryTiles';
 import OffersGrid from '../components/OffersGrid';
 import PartnerAd from '../components/PartnerAd';
 import NewsletterSection from '../components/NewsletterSection';
-import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
+import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import { offers, getEditorPicks, getLastMinute, getSummerOffers } from '../data/offers';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';

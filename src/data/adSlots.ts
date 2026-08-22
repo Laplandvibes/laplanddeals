@@ -14,8 +14,8 @@
  * -portaaliin (laplandvibes.com/media/site/laplanddeals) + GA4-event.
  */
 
-import type { HomeAdSlotsConfig } from '../../../shared/HomeAdSlots';
-import { DEFAULT_PREMIUM_SPOTS } from '../../../shared/PremiumSpotGrid';
+import type { HomeAdSlotsConfig } from '../shared/HomeAdSlots';
+import { DEFAULT_PREMIUM_SPOTS } from '../shared/PremiumSpotGrid';
 
 export const AD_SLOTS: HomeAdSlotsConfig = {
   siteSlug: 'laplanddeals',

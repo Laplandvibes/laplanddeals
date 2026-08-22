@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import Logo from './Logo';
-import EcosystemMenu from '../../../shared/EcosystemMenu';
+import EcosystemMenu from '../shared/EcosystemMenu';
 import { useLang, useLocalePath, pick } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
