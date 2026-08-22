@@ -188,6 +188,9 @@ const fr: SectionCopy = {
     bottomCta: 'Toutes les activités de Laponie →',
   },
   flightsPage: {
+    introTitle: 'Vers quel aéroport lapon voler réellement',
+    introP1: 'Depuis Helsinki, il y a quatre portes pratiques, et la bonne se décide par l\'endroit où vous dormez, pas par le prix du billet. Rovaniemi dessert la ville elle-même, l\'Ounasvaara et la route de l\'est. Kittilä est le transfert court vers Levi et Ylläs. Ivalo couvre Saariselkä et Inari, le grand nord. Kuusamo est celui de Ruka.',
+    introP2: 'Le vol lui-même dure environ une heure et demie : un billet moins cher vers le mauvais aéroport peut donc vous coûter deux heures de route à l\'arrivée. Les tarifs sont récupérés en direct chez le partenaire plutôt que stockés, et les lignes sont opérées par Finnair et Norwegian.',
     eyebrow: 'Vols',
     h1Italic: 'Vols pour la Laponie',
     h1: 'tarifs Trip.com en direct.',
@@ -201,6 +204,9 @@ const fr: SectionCopy = {
     bottomCta: 'Ouvrir la recherche de vols Trip.com →',
   },
   carsPage: {
+    introTitle: 'Ce qu\'une voiture de location doit vraiment avoir en Laponie',
+    introP1: 'Deux choses décident si une voiture tient ici, et aucune n\'est le logo sur le capot : les pneus et la garde au sol. Les véhicules d\'hiver loués dans les aéroports lapons sont équipés pour les conditions, cloutés là où le loueur le précise ; le vrai choix porte donc sur la taille. Une petite voiture suffit sur les axes entre les villes ; un 4x4 justifie son prix sur les routes secondaires non déneigées et les accès aux chalets.',
+    introP2: 'La prise en charge se fait à Rovaniemi, Kittilä, Ivalo et Kuusamo, ce qui couvre toutes les portes de la page vols, et la location en aller simple fonctionne entre la plupart des aéroports finlandais si vous voulez arriver et repartir de villes différentes. Les prix viennent en direct du partenaire : vous voyez le tarif du jour, pas une vieille capture.',
     eyebrow: 'Location de voitures',
     h1Italic: 'Voitures prêtes pour l\'hiver',
     h1: 'tarifs partenaires en direct.',
@@ -214,6 +220,9 @@ const fr: SectionCopy = {
     bottomCta: 'Ouvrir EconomyBookings →',
   },
   packagesPage: {
+    introTitle: 'Pourquoi nous ne vendons pas de forfait tout compris',
+    introP1: 'Une semaine lapone packagée regroupe un vol, un hôtel et deux activités derrière un seul prix, et c\'est dans le regroupement que se cache la marge. Nous listons les mêmes briques séparément : le vol, l\'hébergement, la journée en traîneau, la soirée aurores. Vous réservez chacune au tarif en direct du partenaire, et personne n\'ajoute sa couche par-dessus.',
+    introP2: 'La plupart des séjours se stabilisent entre quatre et sept nuits, assez pour deux ou trois grosses activités plus la marge météo qu\'exige la chasse aux aurores. Construisez à partir de l\'hébergement : c\'est le lit qui décide de l\'aéroport pertinent et des activités à portée, pas l\'inverse.',
     eyebrow: 'Forfaits',
     h1Italic: 'Composez votre',
     h1: 'voyage en Laponie.',
@@ -227,6 +236,9 @@ const fr: SectionCopy = {
     pairLead: 'Les modules que la plupart des voyageurs ajoutent à un séjour de 4 à 7 nuits en Laponie.',
   },
   summerPage: {
+    introTitle: 'Pourquoi venir en été',
+    introP1: 'Pendant 32 jours, du 6 juin au 7 juillet, le soleil ne se couche pas dans l\'extrême nord, et cela change ce qu\'est une journée, pas seulement à quoi elle ressemble. Vous pouvez partir en randonnée à neuf heures du soir et rentrer en plein jour. La demande s\'effondre en mai, quand la saison des aurores se termine et que les remontées s\'arrêtent : les mêmes chalets au bord du lac, pleins en février, ont des semaines libres.',
+    introP2: 'Fin août est l\'autre fenêtre : la randonnée est au mieux, les moustiques sont partis, et la ruska colore les fjells avant la première neige. Emportez un masque de nuit et considérez la lumière comme la raison de venir, pas comme un obstacle à contourner.',
     eyebrow: 'Soleil de minuit · 6 juin – 7 juillet',
     h1Italic: "L'été en Laponie",
     h1: "c'est l'offre cachée.",

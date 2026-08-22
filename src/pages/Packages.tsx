@@ -33,6 +33,16 @@ export default function Packages() {
         image="/images/offer-day-trips.webp"
       />
 
+      {/* Editorial lead — the same copy block routes.json harvests as this
+          route's copyKey, so reader and crawler get one text in one language. */}
+      <section className="relative pt-14 sm:pt-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-10">
+          <h2 className="font-heading text-3xl sm:text-4xl tracking-wide mb-4">{c.introTitle}</h2>
+          <p className="text-sm sm:text-base leading-relaxed mb-4 opacity-80">{c.introP1}</p>
+          <p className="text-sm sm:text-base leading-relaxed opacity-80">{c.introP2}</p>
+        </div>
+      </section>
+
       <section className="relative py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <h2 className="font-heading text-3xl sm:text-4xl font-medium text-ink mb-8">

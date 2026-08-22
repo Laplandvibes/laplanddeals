@@ -599,6 +599,40 @@ function harvestFromTsBlock(block, out, meta, seen, budget) {
     const kept = harvestKeep(unescapeJsString(m[3]), meta, seen);
     if (kept) { out.push(kept); budget.words -= kept.split(/\s+/).length; }
   }
+  // 🔴 The kv regex above needs a `key:` in front of every string, so a BARE
+  // STRING ARRAY yields nothing at all. laplandluxuryvillas keeps every villa
+  // and destination paragraph in `copy: ['…','…']` and `signature: [...]`, so
+  // its records harvested the one-line tagline and stopped — 8 villa routes ×
+  // 5 locales sat on the shell word count (own crawl 2026-08-23).
+  // Objects INSIDE an array were never the problem: the kv scan is linear and
+  // does not care about nesting, so `[{ title: '…' }]` already matched. Only
+  // key-less strings were invisible.
+  const arrRe = /["']?(\w+)["']?\s*:\s*\[/g;
+  let am;
+  while ((am = arrRe.exec(block)) !== null && budget.words > 0) {
+    if (HARVEST_SKIP_KEY_RE.test(am[1])) continue;
+    const chunk = sliceArray(block, arrRe.lastIndex - 1);
+    if (!chunk) continue;
+    // `(?<![:\w])` keeps this off the values the kv pass already took.
+    const strRe = /(?<![:\w])(['"`])((?:\\.|(?!\1).)*)\1/g;
+    let sm;
+    while ((sm = strRe.exec(chunk)) !== null && budget.words > 0) {
+      const kept = harvestKeep(unescapeJsString(sm[2]), meta, seen);
+      if (kept) { out.push(kept); budget.words -= kept.split(/\s+/).length; }
+    }
+  }
+}
+
+/** Slice the balanced [ … ] starting at openIdx. Same fail-open contract as
+ *  sliceBlock: an imbalance yields null and the caller harvests nothing. */
+function sliceArray(src, openIdx) {
+  let depth = 0, start = -1;
+  for (let i = openIdx; i < src.length; i++) {
+    const c = src[i];
+    if (c === '[') { if (depth === 0) start = i + 1; depth++; }
+    else if (c === ']') { depth--; if (depth === 0) return start < 0 ? null : src.slice(start, i); }
+  }
+  return null;
 }
 
 /** JSON-locale subtree for a jsonKey — same file/keyPath logic as readJsonLocale. */
@@ -655,16 +689,37 @@ function harvestRouteText(loc, route, meta) {
     //   { "path": "/city/oulu",
     //     "harvestRecord": { "file": "src/data/cities.{lang}.ts", "key": "oulu" } }
     //
+    // An ARRAY is accepted too, when one page's copy is split over several
+    // per-language data files:
+    //
+    //   { "path": "/destinations/levi",
+    //     "harvestRecord": [ { "file": "src/locales/data.gen.{lang}.ts", "key": "levi" },
+    //                        { "file": "src/data/guides.{lang}.ts",      "key": "levi" } ] }
+    //
     // {lang} is substituted with the locale's copy-file ident (ptBR, zhCN) and,
     // if that file does not exist, with the plain lang tag (pt-BR, zh-CN) —
     // both spellings occur in the network. Missing file or missing record ⇒
     // nothing harvested for that locale, never English in its place.
-    const rec = route.harvestRecord;
+    // A route may name SEVERAL records: laplandactivities' destination pages
+    // take their localized name/why/access from `src/locales/data.gen.{lang}.ts`
+    // AND their season/planning copy from `src/data/guides.{lang}.ts`. A single
+    // record would force one of the two to stay out of the crawlable body while
+    // the page itself renders both. Object form still works unchanged.
+    const recs = Array.isArray(route.harvestRecord)
+      ? route.harvestRecord
+      : (route.harvestRecord ? [route.harvestRecord] : []);
+    for (const rec of recs) {
     if (rec && rec.file && rec.key && budget.words > 0) {
-      const candidates = [
-        rec.file.replace('{lang}', loc.ident),
-        rec.file.replace('{lang}', loc.lang),
-      ];
+      // English is the base language on every LV site, so it often has no
+      // per-language overlay file at all. `baseFile` names the English source
+      // and is consulted ONLY for the en locale, so English text can never land
+      // on a localized URL.
+      const candidates = loc.lang === 'en' && rec.baseFile
+        ? [rec.baseFile, rec.file.replace('{lang}', loc.ident)]
+        : [
+          rec.file.replace('{lang}', loc.ident),
+          rec.file.replace('{lang}', loc.lang),
+        ];
       const fp = candidates.map((c) => resolve(CWD, c)).find((p) => existsSync(p));
       if (fp) {
         let src = inlinePageCache.get(fp);
@@ -675,6 +730,26 @@ function harvestRouteText(loc, route, meta) {
         if (!b) {
           const cm = new RegExp(`\\bconst\\s+${rec.key.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&')}\\b[^=]*=\\s*\\{`).exec(src);
           if (cm) b = sliceBlock(src, cm.index + cm[0].length - 1);
+        }
+        // Third shape: an ARRAY of records identified by a field
+        // (`{ slug: 'levi', … }`) rather than an object map — this is how the
+        // English base data is written on most sites. Walk back from the field
+        // to that record's own opening brace and slice only it; harvesting the
+        // whole file would print every record on every page.
+        if (!b) {
+          const idField = rec.by || 'slug';
+          const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, (c) => '\\' + c);
+          const idRe = new RegExp('["\']?' + esc(idField) + '["\']?\\s*:\\s*([\'"])' + esc(rec.key) + '\\1');
+          const im = idRe.exec(src);
+          if (im) {
+            let depth = 0, open = -1;
+            for (let i = im.index; i >= 0; i--) {
+              const c = src[i];
+              if (c === '}') depth++;
+              else if (c === '{') { if (depth === 0) { open = i; break; } depth--; }
+            }
+            if (open >= 0) b = sliceBlock(src, open);
+          }
         }
         if (b) {
           if (rec.mode === 'localeMap') {
@@ -696,6 +771,7 @@ function harvestRouteText(loc, route, meta) {
         }
       }
     }
+    }
 
     if (Array.isArray(route.harvestFiles)) {
       for (const rel of route.harvestFiles) {
@@ -707,9 +783,17 @@ function harvestRouteText(loc, route, meta) {
         const reConst = new RegExp(`\\bconst\\s+${loc.ident}\\b\\s*(?::[^=]+)?=\\s*\\{`, 'g');
         const m = reConst.exec(src);
         if (m) { harvestFromTsBlock(sliceBlock(src, m.index + m[0].length - 1), out, meta, seen, budget); continue; }
+        // Every per-language block in the file, not just the first: a page
+        // file often holds several Record<Lang, …> maps (hero, seo, body), and
+        // findKeyBlock returned whichever came first in source order.
+        let took = false;
         for (const k of [loc.lang, loc.ident]) {
-          const b = findKeyBlock(src, k);
-          if (b) { harvestFromTsBlock(b, out, meta, seen, budget); break; }
+          for (const b of findKeyBlocks(src, k)) {
+            if (budget.words <= 0) break;
+            harvestFromTsBlock(b, out, meta, seen, budget);
+            took = true;
+          }
+          if (took) break;
         }
       }
     }

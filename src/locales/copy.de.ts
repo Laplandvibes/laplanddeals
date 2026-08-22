@@ -188,6 +188,9 @@ const de: SectionCopy = {
     bottomCta: 'Alle Lappland-Aktivitäten →',
   },
   flightsPage: {
+    introTitle: 'Welchen Flughafen in Lappland Sie wirklich ansteuern sollten',
+    introP1: 'Von Helsinki aus gibt es vier praktische Tore, und das richtige entscheidet sich daran, wo Sie schlafen, nicht am Ticketpreis. Rovaniemi bedient die Stadt selbst, den Ounasvaara und die Ostroute. Kittilä ist der kurze Transfer nach Levi und Ylläs. Ivalo deckt Saariselkä und Inari ab, den hohen Norden. Kuusamo ist der Flughafen für Ruka.',
+    introP2: 'Der Flug selbst dauert etwa anderthalb Stunden, ein günstigeres Ticket zum falschen Flughafen kann Sie am anderen Ende also zwei Stunden Landstraße kosten. Die Preise werden live beim Partner abgerufen statt gespeichert, geflogen werden die Strecken von Finnair und Norwegian.',
     eyebrow: 'Flüge',
     h1Italic: 'Flüge nach Lappland',
     h1: 'Live-Preise von Trip.com.',
@@ -201,6 +204,9 @@ const de: SectionCopy = {
     bottomCta: 'Trip.com Flugsuche öffnen →',
   },
   carsPage: {
+    introTitle: 'Was ein Mietwagen in Lappland wirklich haben muss',
+    introP1: 'Zwei Dinge entscheiden, ob ein Auto hier oben taugt, und keines davon ist das Emblem auf der Haube: Reifen und Bodenfreiheit. Winterfahrzeuge von den lappländischen Flughäfen sind für die Bedingungen ausgerüstet, mit Spikes dort, wo der Anbieter es angibt, die eigentliche Wahl ist also die Größe. Ein Kleinwagen genügt auf den Hauptstraßen zwischen den Orten; ein Allradler verdient seinen Preis auf ungeräumten Nebenstraßen und Hüttenzufahrten.',
+    introP2: 'Abholung ist in Rovaniemi, Kittilä, Ivalo und Kuusamo, womit alle Flughäfen der Flugseite abgedeckt sind, und Einwegmieten laufen zwischen den meisten finnischen Flughäfen, wenn Sie an verschiedenen Orten ein- und ausfliegen wollen. Die Preise kommen live vom Partner, Sie sehen also den heutigen Tarif und keinen alten Screenshot.',
     eyebrow: 'Mietwagen',
     h1Italic: 'Winterfeste Mietwagen',
     h1: 'Live-Partnerpreise.',
@@ -214,6 +220,9 @@ const de: SectionCopy = {
     bottomCta: 'EconomyBookings öffnen →',
   },
   packagesPage: {
+    introTitle: 'Warum wir kein fertiges Paket verkaufen',
+    introP1: 'Eine paketierte Lapplandwoche bündelt Flug, Hotel und zwei Aktivitäten hinter einem Preis, und genau im Bündel versteckt sich die Marge. Wir listen dieselben Bausteine einzeln: den Flug, die Unterkunft, den Huskytag, den Nordlichtabend. Sie buchen jeden zum Live-Tarif des Partners, und niemand legt eine eigene Schicht darüber.',
+    introP2: 'Die meisten Reisen pendeln sich bei vier bis sieben Nächten ein, genug für zwei oder drei große Aktivitäten plus den Wetterpuffer, den die Nordlichtjagd braucht. Bauen Sie von der Unterkunft nach außen: Das Bett entscheidet, welcher Flughafen richtig ist und welche Aktivitäten in Reichweite liegen, nicht umgekehrt.',
     eyebrow: 'Pakete',
     h1Italic: 'Bauen Sie Ihre eigene',
     h1: 'Lappland-Reise.',
@@ -227,6 +236,9 @@ const de: SectionCopy = {
     pairLead: 'Die Bausteine, die die meisten Reisenden zu einer 4–7-Nächte-Lapplandreise stapeln.',
   },
   summerPage: {
+    introTitle: 'Was für eine Reise im Sommer spricht',
+    introP1: '32 Tage lang, vom 6. Juni bis zum 7. Juli, geht die Sonne im äußersten Norden nicht unter, und das verändert, was ein Tag ist, nicht nur wie er aussieht. Sie können um neun Uhr abends zu einer Wanderung aufbrechen und bei Tageslicht zurückkommen. Im Mai bricht die Nachfrage ein, wenn die Nordlichtsaison endet und die Lifte stehen, und dieselben Seehütten, die im Februar ausgebucht waren, haben leere Wochen.',
+    introP2: 'Ende August ist das zweite Fenster: Das Wandern ist am besten, die Mücken sind weg, und die Ruska färbt die Fjells vor dem ersten Schnee. Nehmen Sie eine Schlafmaske mit und behandeln Sie das Licht als Grund zu kommen, nicht als etwas, das man umgehen muss.',
     eyebrow: 'Mitternachtssonne · 6. Juni – 7. Juli',
     h1Italic: 'Der Sommer in Lappland',
     h1: 'ist das Geheimangebot.',

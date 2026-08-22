@@ -192,6 +192,9 @@ const sv: SectionCopy = {
     bottomCta: 'Alla aktiviteter i Lappland →',
   },
   flightsPage: {
+    introTitle: 'Vilken flygplats i Lappland du faktiskt bör flyga till',
+    introP1: 'Det finns fyra praktiska portar från Helsingfors, och den rätta avgörs av var du sover, inte av biljettpriset. Rovaniemi betjänar staden själv, Ounasvaara och den östliga vägen. Kittilä är den korta transfern till Levi och Ylläs. Ivalo täcker Saariselkä och Enare, det yttersta norr. Kuusamo är den för Ruka.',
+    introP2: 'Själva flygningen tar runt en och en halv timme, så ett billigare pris till fel flygplats kan kosta dig två timmar landsväg i andra änden. Priserna hämtas live från partnern i stället för att lagras, och rutterna flygs av Finnair och Norwegian.',
     eyebrow: 'Flyg',
     h1Italic: 'Flyg till Lappland',
     h1: 'Trip.com-priser i realtid.',
@@ -205,6 +208,9 @@ const sv: SectionCopy = {
     bottomCta: 'Öppna Trip.com flygsök →',
   },
   carsPage: {
+    introTitle: 'Vad en hyrbil i Lappland faktiskt måste ha',
+    introP1: 'Två saker avgör om en bil fungerar här uppe, och ingen av dem är märket på huven: däcken och markfrigången. Vinterbilar från flygplatserna i Lappland är utrustade för förhållandena, dubbade där uthyraren anger det, så det meningsfulla valet är storleken. En liten bil räcker på huvudvägarna mellan orterna; en fyrhjulsdriven tjänar in sitt pris på oplogade sidovägar och stuginfarter.',
+    introP2: 'Upphämtning sker i Rovaniemi, Kittilä, Ivalo och Kuusamo, vilket täcker alla portar på flygsidan, och enkelresa mellan de flesta finska flygplatser går att ordna om du vill flyga in och ut från olika orter. Priserna hämtas live från partnern, så det du ser är dagens pris och inte en gammal skärmbild.',
     eyebrow: 'Biluthyrning',
     h1Italic: 'Vintersäkra bilar',
     h1: 'partnerns priser i realtid.',
@@ -218,6 +224,9 @@ const sv: SectionCopy = {
     bottomCta: 'Öppna EconomyBookings →',
   },
   packagesPage: {
+    introTitle: 'Varför vi inte säljer ett färdigt paket',
+    introP1: 'En paketerad Lapplandsvecka buntar ihop flyg, hotell och två aktiviteter bakom ett pris, och det är i bunten marginalen gömmer sig. Vi listar samma byggstenar var för sig: flyget, boendet, hunddagen, norrskenskvällen. Du bokar var och en till partnerns livepris, och ingen lägger på ett eget lager.',
+    introP2: 'De flesta resor landar på fyra till sju nätter, vilket räcker till två eller tre stora aktiviteter plus den vädermarginal som norrskensjakt kräver. Bygg utifrån boendet: sängen avgör vilken flygplats som är rätt och vilka aktiviteter som ligger inom räckhåll, inte tvärtom.',
     eyebrow: 'Paket',
     h1Italic: 'Bygg din egen',
     h1: 'Lapplandsresa.',
@@ -231,6 +240,9 @@ const sv: SectionCopy = {
     pairLead: 'Byggstenarna som de flesta resenärer staplar till en 4–7 nätters Lapplandsresa.',
   },
   summerPage: {
+    introTitle: 'Argumenten för att åka på sommaren',
+    introP1: 'Under 32 dagar, från 6 juni till 7 juli, går solen inte ner i nordligaste Lappland, och det förändrar vad en dag är och inte bara hur den ser ut. Du kan starta en vandring klockan nio på kvällen och komma tillbaka i dagsljus. Efterfrågan faller i maj när norrskenssäsongen tar slut och liftarna stannar, så samma sjönära stugor som var fullbokade i februari har tomma veckor.',
+    introP2: 'Slutet av augusti är det andra fönstret: vandringen är som bäst, myggen är borta, och ruskan färgar fjällen före första snön. Ta med en sovmask och se ljuset som skälet att åka, inte som något att jobba runt.',
     eyebrow: 'Midnattssol · 6 juni – 7 juli',
     h1Italic: 'Sommaren i Lappland',
     h1: 'är det dolda fyndet.',

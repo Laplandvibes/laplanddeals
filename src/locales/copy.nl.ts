@@ -188,6 +188,9 @@ const nl: SectionCopy = {
     bottomCta: 'Alle Lapland-activiteiten →',
   },
   flightsPage: {
+    introTitle: 'Naar welke Laplandse luchthaven u werkelijk moet vliegen',
+    introP1: 'Vanuit Helsinki zijn er vier praktische poorten, en de juiste wordt bepaald door waar u slaapt, niet door de ticketprijs. Rovaniemi bedient de stad zelf, de Ounasvaara en de oostelijke route. Kittilä is de korte transfer naar Levi en Ylläs. Ivalo dekt Saariselkä en Inari, het verre noorden. Kuusamo is die voor Ruka.',
+    introP2: 'De vlucht zelf duurt ongeveer anderhalf uur, dus een goedkoper ticket naar de verkeerde luchthaven kan u aan de andere kant twee uur weg kosten. De prijzen worden live bij de partner opgehaald in plaats van opgeslagen, en de routes worden gevlogen door Finnair en Norwegian.',
     eyebrow: 'Vluchten',
     h1Italic: 'Vluchten naar Lapland',
     h1: 'live Trip.com-tarieven.',
@@ -201,6 +204,9 @@ const nl: SectionCopy = {
     bottomCta: 'Open Trip.com vluchtenzoekopdracht →',
   },
   carsPage: {
+    introTitle: 'Wat een huurauto in Lapland echt moet hebben',
+    introP1: 'Twee dingen bepalen of een auto hier bruikbaar is, en geen van beide is het merk op de motorkap: banden en bodemvrijheid. Winterauto\'s van de Laplandse luchthavens zijn uitgerust voor de omstandigheden, met spijkers waar de verhuurder dat aangeeft, dus de zinvolle keuze is de maat. Een kleine auto volstaat op de hoofdwegen tussen de plaatsen; een vierwielaandrijver verdient zijn prijs op ongeruimde zijwegen en hutopritten.',
+    introP2: 'Ophalen kan in Rovaniemi, Kittilä, Ivalo en Kuusamo, waarmee alle luchthavens van de vluchtenpagina gedekt zijn, en eenrichtingshuur loopt tussen de meeste Finse luchthavens als u op verschillende plaatsen in- en uit wilt vliegen. De prijzen komen live van de partner, u ziet dus het tarief van vandaag en geen oude schermafbeelding.',
     eyebrow: 'Autoverhuur',
     h1Italic: "Winterklare auto's",
     h1: 'live partnerprijzen.',
@@ -214,6 +220,9 @@ const nl: SectionCopy = {
     bottomCta: 'Open EconomyBookings →',
   },
   packagesPage: {
+    introTitle: 'Waarom wij geen kant-en-klaar pakket verkopen',
+    introP1: 'Een verpakte Laplandweek bundelt een vlucht, een hotel en twee activiteiten achter één prijs, en in die bundel zit de marge verstopt. Wij zetten dezelfde bouwstenen los neer: de vlucht, het verblijf, de huskydag, de noorderlichtavond. U boekt elk tegen het livetarief van de partner, en niemand legt er een eigen laag overheen.',
+    introP2: 'De meeste reizen komen uit op vier tot zeven nachten, genoeg voor twee of drie grote activiteiten plus de weersmarge die noorderlichtjacht vraagt. Bouw vanaf het verblijf naar buiten: het bed bepaalt welke luchthaven klopt en welke activiteiten binnen bereik liggen, niet andersom.',
     eyebrow: 'Pakketten',
     h1Italic: 'Stel uw eigen',
     h1: 'Lapland-reis samen.',
@@ -227,6 +236,9 @@ const nl: SectionCopy = {
     pairLead: 'De modules die de meeste reizigers toevoegen aan een 4-7-daags Lapland-verblijf.',
   },
   summerPage: {
+    introTitle: 'Waarom u in de zomer zou gaan',
+    introP1: '32 dagen lang, van 6 juni tot 7 juli, gaat de zon in het uiterste noorden niet onder, en dat verandert wat een dag is, niet alleen hoe die eruitziet. U kunt om negen uur \'s avonds aan een wandeling beginnen en bij daglicht terugkomen. In mei stort de vraag in wanneer het noorderlichtseizoen eindigt en de liften stilvallen, en dezelfde hutten aan het meer die in februari vol zaten hebben lege weken.',
+    introP2: 'Eind augustus is het tweede venster: het wandelen is op zijn best, de muggen zijn weg, en de ruska kleurt de fjells voor de eerste sneeuw. Neem een slaapmasker mee en zie het licht als de reden om te komen, niet als iets om omheen te werken.',
     eyebrow: 'Middernachtszon · 6 juni – 7 juli',
     h1Italic: 'De zomer in Lapland',
     h1: 'is de verborgen aanbieding.',

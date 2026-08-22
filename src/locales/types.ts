@@ -122,6 +122,9 @@ export type SectionCopy = {
     bottomCta: string;
   };
   flightsPage: {
+    introTitle: string
+    introP1: string
+    introP2: string
     eyebrow: string;
     h1Italic: string;
     h1: string;
@@ -133,6 +136,9 @@ export type SectionCopy = {
     bottomCta: string;
   };
   carsPage: {
+    introTitle: string
+    introP1: string
+    introP2: string
     eyebrow: string;
     h1Italic: string;
     h1: string;
@@ -144,6 +150,9 @@ export type SectionCopy = {
     bottomCta: string;
   };
   packagesPage: {
+    introTitle: string
+    introP1: string
+    introP2: string
     eyebrow: string;
     h1Italic: string;
     h1: string;
@@ -155,6 +164,9 @@ export type SectionCopy = {
     pairLead: string;
   };
   summerPage: {
+    introTitle: string
+    introP1: string
+    introP2: string
     eyebrow: string;
     h1Italic: string;
     h1: string;

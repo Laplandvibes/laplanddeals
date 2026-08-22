@@ -5,31 +5,203 @@
     "fallbackDescription": "Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers.",
     "harvestFiles": [
       "src/pages/Home.tsx"
+    ],
+    "copyKey": "hero",
+    "harvestKeys": [
+      "flashBand",
+      "pulse",
+      "sections",
+      "tiles",
+      "trust",
+      "faq",
+      "related"
     ]
   },
   {
     "path": "/hotels",
-    "copyKey": "hotelsPage"
+    "copyKey": "hotelsPage",
+    "harvestRecord": [
+      {
+        "file": "src/data/offers.ts",
+        "key": "igloo-saariselka",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "levi-ski",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "rovaniemi-hotels",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "yllas-cabins",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "ruka-hotels",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "inari-stays",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "summer-midnight-sun",
+        "by": "id",
+        "mode": "localeMap"
+      }
+    ]
   },
   {
     "path": "/cars",
-    "copyKey": "carsPage"
+    "copyKey": "carsPage",
+    "harvestRecord": [
+      {
+        "file": "src/data/offers.ts",
+        "key": "car-rvn",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "car-ktt",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "car-ivl",
+        "by": "id",
+        "mode": "localeMap"
+      }
+    ]
   },
   {
     "path": "/flights",
-    "copyKey": "flightsPage"
+    "copyKey": "flightsPage",
+    "harvestRecord": [
+      {
+        "file": "src/data/offers.ts",
+        "key": "flight-hel-rvn",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "flight-hel-ktt",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "flight-hel-ivl",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "flight-hel-kao",
+        "by": "id",
+        "mode": "localeMap"
+      }
+    ]
   },
   {
     "path": "/activities",
-    "copyKey": "activitiesPage"
+    "copyKey": "activitiesPage",
+    "harvestRecord": [
+      {
+        "file": "src/data/offers.ts",
+        "key": "husky-safaris",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "aurora-hunts",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "snowmobile",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "reindeer-tours",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "ice-fishing",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "day-trips",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "summer-hiking",
+        "by": "id",
+        "mode": "localeMap"
+      }
+    ]
   },
   {
     "path": "/packages",
-    "copyKey": "packagesPage"
+    "copyKey": "packagesPage",
+    "harvestRecord": [
+      {
+        "file": "src/data/offers.ts",
+        "key": "package-aurora-week",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "package-family-rovaniemi",
+        "by": "id",
+        "mode": "localeMap"
+      }
+    ]
   },
   {
     "path": "/summer",
-    "copyKey": "summerPage"
+    "copyKey": "summerPage",
+    "harvestRecord": [
+      {
+        "file": "src/data/offers.ts",
+        "key": "summer-midnight-sun",
+        "by": "id",
+        "mode": "localeMap"
+      },
+      {
+        "file": "src/data/offers.ts",
+        "key": "summer-hiking",
+        "by": "id",
+        "mode": "localeMap"
+      }
+    ]
   },
   {
     "path": "/privacy",

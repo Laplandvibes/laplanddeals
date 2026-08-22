@@ -188,6 +188,9 @@ const ptBR: SectionCopy = {
     bottomCta: 'Todas as atividades da Lapônia →',
   },
   flightsPage: {
+    introTitle: 'Para qual aeroporto da Lapônia você deve realmente voar',
+    introP1: 'De Helsinque há quatro portões práticos, e o certo é decidido por onde você dorme, não pelo preço da passagem. Rovaniemi atende a própria cidade, o Ounasvaara e a estrada do leste. Kittilä é o transfer curto para Levi e Ylläs. Ivalo cobre Saariselkä e Inari, o extremo norte. Kuusamo é o de Ruka.',
+    introP2: 'O voo em si leva cerca de uma hora e meia, então uma passagem mais barata para o aeroporto errado pode custar duas horas de estrada do outro lado. As tarifas são puxadas ao vivo do parceiro em vez de armazenadas, e as rotas são operadas por Finnair e Norwegian.',
     eyebrow: 'Voos',
     h1Italic: 'Voos para a Lapônia',
     h1: 'tarifas reais do Trip.com.',
@@ -201,6 +204,9 @@ const ptBR: SectionCopy = {
     bottomCta: 'Abrir a busca de voos no Trip.com →',
   },
   carsPage: {
+    introTitle: 'O que um carro alugado na Lapônia precisa mesmo ter',
+    introP1: 'Duas coisas decidem se um carro funciona aqui em cima, e nenhuma é o logo no capô: pneus e altura do solo. Os carros de inverno dos aeroportos da Lapônia vêm preparados para as condições, com cravos onde a locadora informa, então a escolha que importa é o tamanho. Um carro pequeno dá conta das estradas principais entre as cidades; um 4x4 justifica o preço nas secundárias sem limpeza de neve e nas entradas de cabana.',
+    introP2: 'A retirada é em Rovaniemi, Kittilä, Ivalo e Kuusamo, o que cobre todos os portões da página de voos, e a locação de mão única funciona entre a maioria dos aeroportos finlandeses, caso você queira entrar e sair por cidades diferentes. Os preços vêm ao vivo do parceiro: você vê a tarifa de hoje, não um print antigo.',
     eyebrow: 'Aluguel de carro',
     h1Italic: 'Carros prontos para o inverno',
     h1: 'preços reais do parceiro.',
@@ -214,6 +220,9 @@ const ptBR: SectionCopy = {
     bottomCta: 'Abrir o EconomyBookings →',
   },
   packagesPage: {
+    introTitle: 'Por que não vendemos pacote fechado',
+    introP1: 'Uma semana na Lapônia empacotada junta voo, hotel e duas atividades atrás de um preço só, e é no pacote que a margem se esconde. Nós listamos os mesmos blocos separadamente: o voo, a hospedagem, o dia de husky, a noite de aurora. Você reserva cada um pela tarifa ao vivo do parceiro, e ninguém acrescenta uma camada por cima.',
+    introP2: 'A maioria das viagens se acomoda entre quatro e sete noites, o bastante para duas ou três atividades grandes mais a folga de clima que a caça à aurora exige. Construa a partir da hospedagem: é a cama que decide qual aeroporto faz sentido e quais atividades ficam ao alcance, não o contrário.',
     eyebrow: 'Pacotes',
     h1Italic: 'Monte a sua',
     h1: 'viagem para a Lapônia.',
@@ -227,6 +236,9 @@ const ptBR: SectionCopy = {
     pairLead: 'Os blocos que a maioria dos viajantes monta numa viagem de 4-7 noites pela Lapônia.',
   },
   summerPage: {
+    introTitle: 'O argumento para ir no verão',
+    introP1: 'Durante 32 dias, de 6 de junho a 7 de julho, o sol não se põe no extremo norte, e isso muda o que é um dia, não apenas como ele parece. Dá para começar uma caminhada às nove da noite e voltar com luz. A procura despenca em maio, quando a temporada de aurora acaba e os teleféricos param: as mesmas cabanas à beira do lago que estavam lotadas em fevereiro têm semanas vazias.',
+    introP2: 'O fim de agosto é a outra janela: a caminhada está no melhor momento, os mosquitos já foram, e o ruska tinge os fjells antes da primeira neve. Leve uma máscara de dormir e trate a luz como o motivo para ir, não como algo a contornar.',
     eyebrow: 'Sol da meia-noite · 6 jun – 7 jul',
     h1Italic: 'Verão na Lapônia',
     h1: 'é a oferta secreta.',

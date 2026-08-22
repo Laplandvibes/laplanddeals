@@ -188,6 +188,9 @@ const fi: SectionCopy = {
     bottomCta: 'Kaikki Lapin aktiviteetit →',
   },
   flightsPage: {
+    introTitle: 'Mille Lapin kentälle kannattaa oikeasti lentää',
+    introP1: 'Helsingistä on neljä käytännön porttia, ja oikean ratkaisee se, missä nukut, ei lipun hinta. Rovaniemi palvelee kaupunkia itseään, Ounasvaaraa ja itäistä tietä. Kittilä on lyhyt siirtymä Leville ja Ylläkselle. Ivalo kattaa Saariselän ja Inarin eli kaukaisen pohjoisen. Kuusamo on se, josta mennään Rukalle.',
+    introP2: 'Itse lento kestää noin puolitoista tuntia, joten halvempi lippu väärälle kentälle voi maksaa kaksi tuntia maantietä toisessa päässä. Hinnat haetaan kumppanilta livenä eikä säilötä, ja reittejä lentävät Finnair ja Norwegian.',
     eyebrow: 'Lennot',
     h1Italic: 'Lennot Lappiin',
     h1: 'Trip.comin halvimmat hinnat.',
@@ -201,6 +204,9 @@ const fi: SectionCopy = {
     bottomCta: 'Avaa Trip.comin lentohaku →',
   },
   carsPage: {
+    introTitle: 'Mitä lappilaisessa vuokra-autossa pitää oikeasti olla',
+    introP1: 'Kaksi asiaa ratkaisee, toimiiko auto täällä, eikä kumpikaan ole merkki konepellillä: renkaat ja maavara. Lapin lentoasemilta vuokrattavat talviautot on varustettu olosuhteisiin, nastoitettu siellä missä vuokraamo niin ilmoittaa, joten merkitsevä valinta on koko. Pieni auto riittää kaupunkien välisillä päätiellä; nelivetoisen hinta maksaa itsensä takaisin auraamattomilla sivuteillä ja mökkiteillä.',
+    introP2: 'Nouto on Rovaniemellä, Kittilässä, Ivalossa ja Kuusamossa, mikä kattaa kaikki lentosivun portit, ja yhdensuuntainen vuokraus onnistuu useimpien Suomen lentoasemien välillä, jos haluat lentää sisään ja ulos eri kaupungeista. Hinnat tulevat kumppanilta livenä, joten näet tämän päivän hinnan etkä vanhaa kuvakaappausta.',
     eyebrow: 'Autovuokraus',
     h1Italic: 'Talvivalmiit autot',
     h1: 'kumppanin hinnat suoraan.',
@@ -214,6 +220,9 @@ const fi: SectionCopy = {
     bottomCta: 'Avaa EconomyBookings →',
   },
   packagesPage: {
+    introTitle: 'Miksi emme myy valmista pakettia',
+    introP1: 'Valmis Lapin viikko niputtaa lennon, hotellin ja kaksi ohjelmaa yhden hinnan taakse, ja juuri niputuksessa kate piilee. Me listaamme samat rakennuspalikat erikseen: lennon, majoituksen, huskypäivän, revontuli-illan. Varaat jokaisen kumppanin livehinnalla, eikä kukaan lisää päälle omaa kerrostaan.',
+    introP2: 'Useimmat matkat asettuvat neljästä seitsemään yöhön, mikä riittää kahteen tai kolmeen isoon ohjelmaan ja siihen säävaraan, jota revontulien jahtaaminen vaatii. Rakenna majoituksesta ulospäin: vuode ratkaisee, mikä lentokenttä on oikea ja mitkä ohjelmat ovat ulottuvilla, eikä toisin päin.',
     eyebrow: 'Matkapaketit',
     h1Italic: 'Rakenna oma',
     h1: 'Lapin reissusi.',
@@ -227,6 +236,9 @@ const fi: SectionCopy = {
     pairLead: 'Palaset jotka useimmat matkailijat kasaavat 4–7 yön Lapin matkaan.',
   },
   summerPage: {
+    introTitle: 'Miksi kesällä kannattaa tulla',
+    introP1: '32 päivän ajan, 6. kesäkuuta ja 7. heinäkuuta välillä, aurinko ei laske pohjoisimmassa Lapissa, ja se muuttaa sen mitä päivä on eikä vain miltä se näyttää. Voit lähteä vaellukselle yhdeksältä illalla ja palata päivänvalossa. Kysyntä romahtaa toukokuussa, kun revontulikausi loppuu ja hissit pysähtyvät, joten samoilla järvenrantamökeillä, jotka olivat täynnä helmikuussa, on tyhjiä viikkoja.',
+    introP2: 'Elokuun loppu on toinen ikkuna: vaeltaminen on parhaimmillaan, hyttyset ovat menneet, ja ruska värittää tunturit ennen ensilunta. Ota unimaski mukaan ja pidä valoa syynä tulla, älä asiana jonka ympäri pitää kiertää.',
     eyebrow: 'Yötön yö · 6.6.–7.7.',
     h1Italic: 'Lapin kesä on',
     h1: 'salainen tarjous.',

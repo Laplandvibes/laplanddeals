@@ -188,6 +188,9 @@ const en: SectionCopy = {
     bottomCta: 'All Lapland activities →',
   },
   flightsPage: {
+    introTitle: 'Which Lapland airport you should actually fly into',
+    introP1: 'There are four practical gateways from Helsinki, and the right one is decided by where you sleep, not by the fare. Rovaniemi serves the city itself, Ounasvaara and the eastern road. Kittilä is the short transfer for Levi and Ylläs. Ivalo covers Saariselkä and Inari, the far north. Kuusamo is the one for Ruka.',
+    introP2: 'The flight itself is about an hour and a half, so a cheaper fare into the wrong airport can cost you two hours of road at the other end. Fares here are pulled live from the partner rather than stored, and the routes are flown by Finnair and Norwegian.',
     eyebrow: 'Flights',
     h1Italic: 'Flights to Lapland',
     h1: 'live Trip.com fares.',
@@ -201,6 +204,9 @@ const en: SectionCopy = {
     bottomCta: 'Open Trip.com flight search →',
   },
   carsPage: {
+    introTitle: 'What a Lapland rental actually needs to have',
+    introP1: 'Two things decide whether a car works up here, and neither is the badge on the bonnet: tyres and ground clearance. Winter rentals from the Lapland airports come fitted for the conditions, studded where the operator specifies it, so the meaningful choice is size. A small car is fine on the main roads between towns; a 4WD earns its price on unploughed side roads and cabin driveways.',
+    introP2: 'Pickup is at Rovaniemi, Kittilä, Ivalo and Kuusamo, which covers every gateway on the flights page, and one-way rentals run between most Finnish airports if you want to fly in and out of different towns. Prices come live from the partner, so what you see is today\'s rate rather than an old screenshot.',
     eyebrow: 'Car hire',
     h1Italic: 'Winter-ready cars',
     h1: 'live partner prices.',
@@ -214,6 +220,9 @@ const en: SectionCopy = {
     bottomCta: 'Open EconomyBookings →',
   },
   packagesPage: {
+    introTitle: 'Why we do not sell a sealed package',
+    introP1: 'A packaged Lapland week bundles a flight, a hotel and two activities behind one price, and the bundle is where the margin hides. We list the same building blocks separately: the flight, the stay, the husky day, the aurora evening. You book each at the partner\'s live rate, and nobody adds a layer on top.',
+    introP2: 'Most trips settle at four to seven nights, which is long enough for two or three big activities plus the weather flexibility that aurora hunting needs. Build from the stay outwards: the bed decides which airport is right and which activities are within reach, not the other way round.',
     eyebrow: 'Packages',
     h1Italic: 'Build your own',
     h1: 'Lapland trip.',
@@ -227,6 +236,9 @@ const en: SectionCopy = {
     pairLead: 'The blocks most travellers stack into a 4–7 night Lapland trip.',
   },
   summerPage: {
+    introTitle: 'The case for going in summer',
+    introP1: 'For 32 days, from 6 June to 7 July, the sun does not set in the far north, and that changes what a day is rather than just how it looks. You can start a hike at nine in the evening and finish in daylight. Demand collapses in May when aurora season ends and the lifts stop, so the same lakeside cabins that were solid in February have empty weeks.',
+    introP2: 'Late August is the other window: the hiking is at its best, the mosquitoes have gone, and ruska turns the fells before the first snow. Bring a sleep mask, and treat the light as the reason to come rather than something to work around.',
     eyebrow: 'Midnight sun · June 6 – July 7',
     h1Italic: 'Summer in Lapland',
     h1: 'is the secret deal.',
