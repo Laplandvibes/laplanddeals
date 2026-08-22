@@ -1,12 +1,18 @@
 import type { ReactNode, AnchorHTMLAttributes } from 'react';
 import { useLang } from '../i18n/useLang';
+import { GYG_WORKER_LANG } from '../lib/gyg';
 
 /**
  * LaplandVibes affiliate CTA. All CJ-routed clicks (Hotels.com, EconomyBookings)
  * are funnelled through https://go.laplandvibes.com — the Cloudflare Worker
  * handles per-domain CJ Website ID attribution via Referer.
  *
- * For GYG, see ./gyg.ts (worker collapses slugs to homepage — bypass).
+ * Activities (GetYourGuide) also go through the Worker — see ../lib/gyg.ts,
+ * which was migrated back on 2026-08-03. This component kept building direct
+ * getyourguide.com links until 2026-08-22, citing the same stale
+ * bug_go_lv_worker_gyg_dropped.md (2026-05-02) the helper had already
+ * disproved: `handleGyg` forwards the whole multi-segment path (verified live
+ * 2026-08-22), and a direct link never reaches the D1 click log.
  * For Trip.com, see ../lib/tripcom.ts (Impact, direct links with query params).
  *
  * Synced 2026-05-05 from laplandbars/AffiliateCTA.tsx — same canonical contract.
@@ -65,25 +71,6 @@ const CARS_LANG: Record<_Lang, string> = {
   nl: "nl",
   sv: "sv",
 };
-const GYG_DOMAIN: Record<_Lang, string> = {
-  en: "https://www.getyourguide.com",
-  fi: "https://www.getyourguide.com",
-  de: "https://www.getyourguide.de",
-  // GYG has no .jp — fallback to .com + ?language=ja (added in GYG builder).
-  ja: "https://www.getyourguide.com",
-  es: "https://www.getyourguide.es",
-  "pt-BR": "https://www.getyourguide.com",
-  "zh-CN": "https://www.getyourguide.com",
-  ko: "https://www.getyourguide.com",
-  fr: "https://www.getyourguide.fr",
-  it: "https://www.getyourguide.it",
-  nl: "https://www.getyourguide.nl",
-  // GYG has no .se — fallback to .com + ?language=sv (added in GYG builder).
-  sv: "https://www.getyourguide.com",
-};
-
-const GYG_PARTNER_ID = 'VRMKD7N';
-const SITE_ID = 'laplanddeals';
 
 // `lang` is REQUIRED: it decides the hotels locale, and the go/hotels Worker routes
 // locale=fi_FI to Sembo (9 % / 45 d) and every other locale to Trip.com. An "en"
@@ -95,23 +82,26 @@ export function buildAffiliateHref({
   query,
   lang,
 }: Pick<AffiliateCTAProps, 'partner' | 'sid' | 'destination' | 'query'> & { lang: _Lang }): string {
+  // ─── Activities (GetYourGuide) via the Worker ─────────────────────
+  // The slug goes in the PATH so the Worker can log which activity converted
+  // (D1 `slug` column); a direct link is invisible to our own click count.
+  // `partner_id` + `cmp=lv_<domain>_<sid>` are added by the Worker from env +
+  // Referer, so the id lives in exactly one place.
+  //
+  // 🔴 `language` is read by the WORKER, not by GetYourGuide: `?language=xx` is a
+  // no-op there (measured 2026-08-02) — GYG localises by a `<lang>-<country>/`
+  // PATH PREFIX, which the Worker builds from this parameter. That is why the
+  // old per-locale hosts (getyourguide.de/.fr/.es…) are gone rather than kept:
+  // one Worker owns the whole mapping. Codes come from GYG_WORKER_LANG so this
+  // component and ../lib/gyg.ts cannot drift apart.
   if (partner === 'activities') {
     const path = (destination ?? '').replace(/^\/+/, '').replace(/\/+$/, '');
-    const url = new URL(path ? `${GYG_DOMAIN[lang]}/${path}/` : `${GYG_DOMAIN[lang]}/`);
-    url.searchParams.set('partner_id', GYG_PARTNER_ID);
-    url.searchParams.set('cmp', `lv_${SITE_ID}_${sid}`);
-    if (lang === 'fi') url.searchParams.set('language', 'fi');
-    if (lang === 'ja') url.searchParams.set('language', 'ja');
-    if (lang === 'es') url.searchParams.set('language', 'es');
-    if (lang === 'pt-BR') url.searchParams.set('language', 'pt-BR');
-    if (lang === 'zh-CN') url.searchParams.set('language', 'zh-CN');
-    if (lang === 'ko') url.searchParams.set('language', 'ko');
-    if (lang === 'fr') url.searchParams.set('language', 'fr');
-    if (lang === 'it') url.searchParams.set('language', 'it');
-    if (lang === 'nl') url.searchParams.set('language', 'nl');
-    if (lang === 'sv') url.searchParams.set('language', 'sv');
-    if (query) for (const [k, v] of Object.entries(query)) if (v) url.searchParams.set(k, v);
-    return url.toString();
+    const params = new URLSearchParams();
+    params.set('sid', sid);
+    const gygLang = GYG_WORKER_LANG[lang];
+    if (gygLang) params.set('language', gygLang);
+    if (query) for (const [k, v] of Object.entries(query)) if (v) params.set(k, v);
+    return `${REDIRECT_HOST}/go/activities${path ? `/${path}` : ''}?${params.toString()}`;
   }
   const params = new URLSearchParams({ sid, ...(query || {}) });
   // 🔴 cars käyttää pickup_location=IATA, EI ss:ää — ss=IATA valuu EB:n
