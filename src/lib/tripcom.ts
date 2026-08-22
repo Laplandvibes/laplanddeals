@@ -1,12 +1,43 @@
-// Trip.com affiliate deep-link builders.
-// Allianceid 8175308, SID 309472136, trip_sub1=laplanddeals.com
-// Synced 2026-05-05 from laplandvibes/src/lib/tripcom.ts
+// Trip.com booking links - reitittyvat go.laplandvibes.com-Workerin kautta.
+//
+// MUUTOS 2026-08-22 (Vesan paatos). Tassa luki aiemmin: "Trip.com URLs DO NOT
+// route through go.laplandvibes.com (that worker is CJ-only)." Se piti paikkansa
+// 30.4.2026, mutta vanheni CJ-exitissa 23.7. Kommentti jai korjaamatta ja
+// OPETTI OHITUSTA seuraaville: sama kuvio kopioitui koko verkostoon, joten
+// lentoklikit eivat koskaan paatyneet D1-lokiin eivatka Command Centeriin,
+// vaikka komissio kulki.
+//
+// Nyt kaikki menee /go/flights- ja /go/trains-reittien kautta:
+//   - klikki kirjautuu D1:een (kumppani, sid, sivusto, maa, laite)
+//   - kumppanitunnukset asetetaan Workerissa, joten ne eivat voi pudota pois
+//     sivuston linkista huomaamatta
+//   - kohde-URL on tavulleen sama kuin ennen (verifioitu livena)
+//
+// w         = lahdesivusto. Worker paattelisi sen muuten Referer-otsakkeesta,
+//             joka katoaa some-sovellusselaimissa ja tiukalla referrer-policylla.
+// trip_sid  = TAMAN sivuston oma Trip.com-SID. SID ei ole verkostossa yksi:
+//             neljalla sivustolla on oma (Vesa lisannyt ne Trip.comin Sites-
+//             hallintaan), muilla jaettu. Ilman tata parametria neljan sivuston
+//             tuotto sulaisi Trip.comin raportissa yhdeksi riviksi.
+//
+// Paivamaarat jatetaan pois kun kutsuja ei niita anna: Worker tayttaa oletukset
+// (+30/+34 vrk lennoille, +14 juna/bussille) KLIKIN hetkella. Ennen ne
+// laskettiin renderoinnissa, joten prerenderoity sivu tarjosi vanhetessaan yha
+// lahempana olevaa - pahimmillaan mennytta - paivaa.
 
-const TRIP_CONFIG = {
-  allianceId: '8175308',
-  defaultSiteId: '309472136',
-  sourceTag: 'laplanddeals.com',
-} as const;
+const GO = 'https://go.laplandvibes.com/go';
+const SITE_TAG = 'laplanddeals.com';
+const TRIP_SID = '309472136';
+
+/** Rakentaa Worker-linkin: tyhjat parametrit jatetaan pois, sid + w aina mukaan. */
+function goUrl(route: 'flights' | 'trains' | 'hotels', params: Record<string, string>, sid: string): string {
+  const u = new URL(`${GO}/${route}`);
+  for (const [k, v] of Object.entries(params)) if (v) u.searchParams.set(k, v);
+  u.searchParams.set('sid', sid);
+  u.searchParams.set('w', SITE_TAG);
+  if (route !== 'hotels') u.searchParams.set('trip_sid', TRIP_SID);
+  return u.toString();
+}
 
 // LOCALE: 2026-05-16 — pass user locale to Trip.com so DE/FI users land on the
 // local Trip.com flow (locale=de-DE / fi-FI). EN defaults to en-XX (multi-lang EN).
@@ -26,19 +57,6 @@ const TRIP_LOCALE: Record<TripLang, string> = {
   sv: 'sv-SE',
 };
 
-function defaultDate(daysFromNow: number): string {
-  const d = new Date();
-  d.setDate(d.getDate() + daysFromNow);
-  return d.toISOString().slice(0, 10);
-}
-
-function attachAffiliateParams(url: URL, sid: string): void {
-  url.searchParams.set('Allianceid', TRIP_CONFIG.allianceId);
-  url.searchParams.set('SID', TRIP_CONFIG.defaultSiteId);
-  url.searchParams.set('trip_sub1', TRIP_CONFIG.sourceTag);
-  url.searchParams.set('trip_sub2', sid);
-}
-
 // ─── Flights ────────────────────────────────────────────────────────────
 
 export interface TripFlightOpts {
@@ -53,29 +71,22 @@ export interface TripFlightOpts {
 }
 
 export function buildTripFlightUrl(o: TripFlightOpts): string {
-  const url = new URL('https://www.trip.com/flights/showfarefirst');
   const triptype = o.triptype ?? 'rt';
-  const depart = o.depart ?? defaultDate(30);
-  url.searchParams.set('dcity', o.from.toLowerCase());
-  url.searchParams.set('acity', o.to.toLowerCase());
-  url.searchParams.set('ddate', depart);
-  url.searchParams.set('triptype', triptype);
-  if (triptype === 'rt') {
-    url.searchParams.set('rdate', o.returnDate ?? defaultDate(34));
-  }
-  url.searchParams.set('class', 'y');
-  url.searchParams.set('quantity', '1');
-  url.searchParams.set('curr', 'EUR');
-  url.searchParams.set('locale', TRIP_LOCALE[o.lang ?? 'en']);
-  attachAffiliateParams(url, o.sid);
-  return url.toString();
+  return goUrl('flights', {
+    dcity: o.from.toLowerCase(),
+    acity: o.to.toLowerCase(),
+    ddate: o.depart ?? '',
+    triptype,
+    rdate: triptype === 'rt' ? (o.returnDate ?? '') : '',
+    class: 'y',
+    quantity: '1',
+    curr: 'EUR',
+    locale: TRIP_LOCALE[o.lang ?? 'en'],
+  }, o.sid);
 }
 
 export function buildTripFlightHome(sid: string, lang: TripLang = 'en'): string {
-  const url = new URL('https://www.trip.com/flights');
-  url.searchParams.set('locale', TRIP_LOCALE[lang]);
-  attachAffiliateParams(url, sid);
-  return url.toString();
+  return goUrl('flights', { locale: TRIP_LOCALE[lang] }, sid);
 }
 
 // ─── Hotels ─────────────────────────────────────────────────────────────
@@ -89,12 +100,9 @@ export interface TripHotelOpts {
 
 /** Trip.com hotel city search — fallback when Hotels.com (CJ) doesn't cover. */
 export function buildTripHotelUrl(o: TripHotelOpts): string {
-  const url = new URL('https://www.trip.com/hotels/list');
-  url.searchParams.set('city', o.city);
-  url.searchParams.set('locale', TRIP_LOCALE[o.lang ?? 'en']);
-  url.searchParams.set('curr', 'EUR');
-  attachAffiliateParams(url, o.sid);
-  return url.toString();
+  // Hotellit kulkevat verkoston yhteisen /go/hotels-reitin kautta: se osaa
+  // lisaksi ohjata suomenkieliset Sembolle (9 %) ja muut Trip.comille.
+  return goUrl('hotels', { ss: o.city, locale: TRIP_LOCALE[o.lang ?? 'en'] }, o.sid);
 }
 
 // ─── Buses & Trains ─────────────────────────────────────────────────────
@@ -110,18 +118,14 @@ export interface TripTransportOpts {
 }
 
 export function buildTripTransportUrl(o: TripTransportOpts): string {
-  const url = new URL('https://www.trip.com/trains/list');
-  url.searchParams.set('locale', TRIP_LOCALE[o.lang ?? 'en']);
-  url.searchParams.set('curr', 'EUR');
-  url.searchParams.set('departurecity', o.fromCity);
-  url.searchParams.set('arrivalcity', o.toCity);
-  url.searchParams.set('tripTab', o.tab ?? 'coach');
-  url.searchParams.set('departdate', o.depart ?? defaultDate(14));
-  url.searchParams.set('hidadultnum', '1');
-  url.searchParams.set('hidinfantnum', '0');
-  url.searchParams.set('hidoldnum', '0');
-  attachAffiliateParams(url, o.sid);
-  return url.toString();
+  return goUrl('trains', {
+    locale: TRIP_LOCALE[o.lang ?? 'en'],
+    curr: 'EUR',
+    departurecity: o.fromCity,
+    arrivalcity: o.toCity,
+    tripTab: o.tab ?? 'coach',
+    departdate: o.depart ?? '',
+  }, o.sid);
 }
 
 // ─── Common pre-built deep links ────────────────────────────────────────

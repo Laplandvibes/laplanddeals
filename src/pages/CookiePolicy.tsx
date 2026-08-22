@@ -1,4 +1,4 @@
-import CookieContent from '../../../shared/Legal/CookieContent';
+import CookieContent from '../shared/Legal/CookieContent';
 import { useLang } from '../i18n/useLang';
 import PageSeo from '../components/PageSeo';
 

@@ -1,4 +1,4 @@
-import PrivacyContent from '../../../shared/Legal/PrivacyContent';
+import PrivacyContent from '../shared/Legal/PrivacyContent';
 import { useLang } from '../i18n/useLang';
 import PageSeo from '../components/PageSeo';
 

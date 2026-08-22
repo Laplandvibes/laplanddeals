@@ -1,4 +1,4 @@
-import TermsContent from '../../../shared/Legal/TermsContent';
+import TermsContent from '../shared/Legal/TermsContent';
 import { useLang } from '../i18n/useLang';
 import PageSeo from '../components/PageSeo';
 
