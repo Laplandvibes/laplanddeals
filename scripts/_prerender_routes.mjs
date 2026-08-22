@@ -280,8 +280,21 @@ function pickTD(block) {
 // ---------- READER 1: per-lang copy.{lang}.ts (original) ----------
 const perLangSources = {};
 for (const loc of LOCALE_LIST) {
-  const fp = resolve(LOCALES, loc.file);
-  if (existsSync(fp)) perLangSources[loc.lang] = readFileSync(fp, 'utf-8');
+  // Both spellings occur in the network: copy.ptBR.ts (most sites) and
+  // copy.pt-BR.ts (stayinlapland, laplandkids). Trying only the first left
+  // those locales with an empty copy source and no error anywhere.
+  const fp = [loc.file, `copy.${loc.lang}.ts`]
+    .map((n) => resolve(LOCALES, n)).find((p) => existsSync(p)) || resolve(LOCALES, loc.file);
+  let src = existsSync(fp) ? readFileSync(fp, 'utf-8') : '';
+  // 🔴 Some sites keep the locale file as a thin re-export and the real text in
+  // an overrides file beside it: laplandnature's copy.sv.ts is 232 bytes,
+  // `deepMerge(en, SV_OVERRIDES)`, while overrides.sv.ts holds 80+ kB of
+  // Swedish. Readers that looked only at the stub harvested nothing for eight
+  // of twelve locales. Both files are the SAME locale, so appending cannot leak
+  // another language in, and duplicate strings are dropped by harvestKeep.
+  const ovr = fp.replace(/copy\.(?=[^\\\/]*$)/, 'overrides.');
+  if (ovr !== fp && existsSync(ovr)) src += '\n' + readFileSync(ovr, 'utf-8');
+  if (src) perLangSources[loc.lang] = src;
 }
 
 function readPerLangCopy(loc, copyKey) {
@@ -776,10 +789,19 @@ function harvestRouteText(loc, route, meta) {
     if (Array.isArray(route.harvestFiles)) {
       for (const rel of route.harvestFiles) {
         if (budget.words <= 0) break;
-        const fp = resolve(CWD, rel);
-        if (!existsSync(fp)) continue;
+        // A {lang} placeholder means the FILE is one language (laplandstore's
+        // Hero.copy.fi.ts and friends). There is no per-language block to find
+        // inside it, so harvest the whole file — it is this locale's text and
+        // no other's. Paths without {lang} keep the block-scoped behaviour.
+        const perLangFile = rel.includes('{lang}');
+        const fp = perLangFile
+          ? [rel.replace('{lang}', loc.ident), rel.replace('{lang}', loc.lang)]
+            .map((c) => resolve(CWD, c)).find((p) => existsSync(p))
+          : resolve(CWD, rel);
+        if (!fp || !existsSync(fp)) continue;
         let src = inlinePageCache.get(fp);
         if (!src) { src = readFileSync(fp, 'utf-8'); inlinePageCache.set(fp, src); }
+        if (perLangFile) { harvestFromTsBlock(src, out, meta, seen, budget); continue; }
         const reConst = new RegExp(`\\bconst\\s+${loc.ident}\\b\\s*(?::[^=]+)?=\\s*\\{`, 'g');
         const m = reConst.exec(src);
         if (m) { harvestFromTsBlock(sliceBlock(src, m.index + m[0].length - 1), out, meta, seen, budget); continue; }
