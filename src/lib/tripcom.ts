@@ -98,7 +98,7 @@ export interface TripHotelOpts {
   lang?: TripLang;
 }
 
-/** Trip.com hotel city search — fallback when Hotels.com (CJ) doesn't cover. */
+/** Trip.com hotel city search — fallback when the lodging partner (CJ) doesn't cover. */
 export function buildTripHotelUrl(o: TripHotelOpts): string {
   // Hotellit kulkevat verkoston yhteisen /go/hotels-reitin kautta: se osaa
   // lisaksi ohjata suomenkieliset Sembolle (9 %) ja muut Trip.comille.

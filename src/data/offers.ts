@@ -7,7 +7,7 @@ import type { Lang } from '../i18n/useLang';
  * LaplandDeals offer catalogue.
  *
  * IMPORTANT BRAND RULE — NO FAKE PRICES.
- * Every offer here points to a LIVE partner search/category page (Hotels.com,
+ * Every offer here points to a LIVE partner search/category page (the lodging partner,
  * Trip.com, GetYourGuide, EconomyBookings). The partner shows today's actual
  * price; we never invent percentages or expiry timers. Curation is ours;
  * pricing is theirs.
