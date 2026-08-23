@@ -34,7 +34,7 @@ export default function Hotels() {
       <section className="relative py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <OffersGrid offers={items} />
-          <PartnerAd advertiser="hotelscom" placement="hotels_pillar" className="mt-12 sm:mt-16" />
+          <PartnerAd advertiser="lodging" placement="hotels_pillar" className="mt-12 sm:mt-16" />
         </div>
       </section>
 

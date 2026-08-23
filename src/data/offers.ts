@@ -23,7 +23,7 @@ import type { Lang } from '../i18n/useLang';
 
 export type OfferCategory = 'hotels' | 'activities' | 'flights' | 'cars' | 'packages';
 export type OfferFlag = 'last-minute' | 'end-of-season' | 'summer' | 'package' | 'editor-pick';
-export type OfferPartner = 'hotels.com' | 'trip.com' | 'getyourguide' | 'economybookings';
+export type OfferPartner = 'lodging' | 'trip.com' | 'getyourguide' | 'economybookings';
 
 /** A string translated into every supported site locale. */
 export type Localized = Record<Lang, string>;
@@ -122,7 +122,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       nl: 'In de hele regio bestaan ongeveer 30 glazen iglo\'s. De kerstweken zijn in augustus al volgeboekt, open Trip.com om te zien wat er vanavond nog vrij is.',
       sv: 'Det finns ungefär 30 glasiglos i hela regionen. Julveckorna är fullbokade redan i augusti, öppna Trip.com och se vad som är kvar i kväll.',
     },
-    partner: 'hotels.com',
+    partner: 'lodging',
     href: hotelsUrl('Saariselkä, Finland', 'card_igloo_saariselka', lang),
     flag: 'editor-pick',
   },
@@ -171,7 +171,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       nl: 'Ski-in / ski-out op de grootste berg van Finland (43 pistes, 230 km loipes). De weken aan het einde van het seizoen (15 mrt – 12 apr) zijn meestal nog beschikbaar tegen lagere tarieven.',
       sv: 'Ski-in / ski-out på Finlands största fjäll (43 nedfarter, 230 km spår). Veckorna i slutet av säsongen (15 mars – 12 april) är oftast fortfarande lediga till lägre pris.',
     },
-    partner: 'hotels.com',
+    partner: 'lodging',
     href: hotelsUrl('Levi, Kittilä, Finland', 'card_levi_ski', lang),
     flag: 'last-minute',
   },
@@ -220,7 +220,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       nl: 'Op 15 minuten van het kerstmandorp. Directe vluchten vanuit Helsinki zes keer per dag. Familiekamers, aparthotels, designhotels.',
       sv: '15 minuter från Santa Claus Village. Direktflyg från Helsingfors sex gånger om dagen. Familjerum, lägenhetshotell, designhotell.',
     },
-    partner: 'hotels.com',
+    partner: 'lodging',
     href: hotelsUrl('Rovaniemi, Finland', 'card_rovaniemi_city', lang),
   },
   {
@@ -268,7 +268,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       nl: 'De rustigere buur van Levi, dezelfde bergen, de helft van de drukte. De schoonste lucht van Europa volgens WMO-metingen (2017).',
       sv: 'Levis lugnare granne, samma fjäll, hälften så mycket folk. Europas renaste luft enligt WMO:s mätningar (2017).',
     },
-    partner: 'hotels.com',
+    partner: 'lodging',
     href: hotelsUrl('Ylläs, Kolari, Finland', 'card_yllas_cabins', lang),
     flag: 'end-of-season',
   },
@@ -317,7 +317,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       nl: 'Het wilde oosten, berenland, de Karhunkierros-route, huskyranches, de laatste betrouwbare sneeuw van Finland (vaak tot in mei).',
       sv: 'Den vilda östern, björnarnas land, Karhunkierros-leden, huskygårdar, den snö som håller längst i Finland (ofta in i maj).',
     },
-    partner: 'hotels.com',
+    partner: 'lodging',
     href: hotelsUrl('Ruka, Kuusamo, Finland', 'card_ruka_stays', lang),
   },
   {
@@ -365,7 +365,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       nl: 'Onder de aurora-ovaal, de hoogste kans op zichtbaar poollicht in Finland. Hoofdplaats van de Sami, geen lichtvervuiling, een tweebaansweg en daarna niets meer.',
       sv: 'Ovanför norrskensovalen, den högsta chansen att se norrsken i Finland. Samernas huvudort, inga ljusföroreningar, en tvåfilig väg och sedan ingenting.',
     },
-    partner: 'hotels.com',
+    partner: 'lodging',
     href: hotelsUrl('Inari, Finland', 'card_inari_stays', lang),
     flag: 'editor-pick',
   },
@@ -1153,7 +1153,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       nl: '32 dagen gaat de zon niet onder (6 jun – 7 jul boven 70°N). Nachten in hutten aan het meer liggen 30-50% onder de decembertarieven. Muggen op hun hoogtepunt eind juni.',
       sv: '32 dygn går solen aldrig ner (6 juni – 7 juli norr om 70°N). Nätter i stuga vid sjön ligger 30–50 % under decemberpriserna. Myggen är som värst i slutet av juni.',
     },
-    partner: 'hotels.com',
+    partner: 'lodging',
     href: hotelsUrl('Inari, Finland', 'card_summer_midnight_sun', lang),
     flag: 'summer',
   },

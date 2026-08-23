@@ -14,17 +14,17 @@ const FLAG_STYLE: Record<NonNullable<Offer['flag']>, string> = {
 };
 
 const PARTNER_LABEL: Record<Offer['partner'], string> = {
-  'hotels.com':      'Trip.com',
+  'lodging':         'Trip.com',
   'trip.com':        'Trip.com',
   'getyourguide':    'GetYourGuide',
   'economybookings': 'EconomyBookings',
 };
 
 // The card footer must name the partner the visitor actually lands on ("no hiding",
-// Vesa). Lodging offers ('hotels.com' is a legacy data key) route through the
+// Vesa). Lodging offers route through the
 // go/hotels Worker, which sends fi to Sembo and every other locale to Trip.com.
 function partnerLabel(partner: Offer['partner'], lang: Lang): string {
-  if (partner === 'hotels.com' && lang === 'fi') return 'Sembo';
+  if (partner === 'lodging' && lang === 'fi') return 'Sembo';
   return PARTNER_LABEL[partner];
 }
 
@@ -48,9 +48,9 @@ export default function OfferCard({ offer, size = 'md', showImage = true }: Prop
   const href = gygLocalizeHref(offer.href, lang);
 
   const handleClick = () => {
-    // 'hotels.com' is a legacy data key; GA4 should read the channel that is
-    // actually live (Sembo for fi, Trip.com otherwise), not a retired partner.
-    trackAffiliateClick(offer.partner === 'hotels.com' ? 'lodging' : offer.partner, offer.id, href);
+    // GA4 reads the channel, not a brand: the go/hotels Worker picks Sembo for
+    // fi and Trip.com elsewhere, so one 'lodging' key covers both.
+    trackAffiliateClick(offer.partner, offer.id, href);
   };
 
   return (

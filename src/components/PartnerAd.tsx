@@ -22,7 +22,7 @@ import AffiliateDisclosure from './AffiliateDisclosure';
  *  - Distributed, never stacked back-to-back; one per relevant page.
  */
 
-export type AdvertiserId = 'lomarengas' | 'getyourguide' | 'hotelscom';
+export type AdvertiserId = 'lomarengas' | 'getyourguide' | 'lodging';
 
 type Localized = Record<Lang, string>;
 
@@ -186,8 +186,8 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
   // ── Hotel search — via the go.laplandvibes.com Worker ──
   // The Worker routes fi (locale=fi_FI) to Sembo (Adtraction) and every other
   // locale to Trip.com. Default skin below is Trip.com; fi gets SEMBO_FI.
-  hotelscom: {
-    id: 'hotelscom',
+  lodging: {
+    id: 'lodging',
     name: 'Trip.com',
     logo: null,
     wordmark: { text: 'Trip.com' },
@@ -196,8 +196,8 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
     plateBg: '#3264FF',
     ring: 'hover:border-[#3264FF]/45',
     glow: 'radial-gradient(circle at 12% 0%, rgba(50,100,255,0.10), transparent 60%)',
-    href: 'https://go.laplandvibes.com/go/hotels?sid=ad_hotelscom_lapland&ss=Lapland%2C%20Finland',
-    trackId: 'ad_hotelscom',
+    href: 'https://go.laplandvibes.com/go/hotels?sid=ad_lodging_lapland&ss=Lapland%2C%20Finland',
+    trackId: 'ad_lodging',
     badge,
     tagline: {
       en: 'Every Lapland stay in one place, from glass igloos to slope-side, at today’s live rate.',
@@ -253,14 +253,14 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
 /** fi is routed to Sembo (Adtraction) by the go/hotels Worker, so the hotel
  *  unit is skinned as Sembo for fi. Same id/trackId: analytics keys unchanged. */
 const SEMBO_FI: AdvertiserConfig = {
-  ...ADVERTISERS.hotelscom,
+  ...ADVERTISERS.lodging,
   name: 'Sembo',
   wordmark: { text: 'Sembo' },
   accent: '#0369A1',
   plateBg: '#FFFFFF',
   ring: 'hover:border-[#0EA5E9]/45',
   glow: 'radial-gradient(circle at 12% 0%, rgba(14,165,233,0.10), transparent 60%)',
-  note: { ...ADVERTISERS.hotelscom.note, fi: 'Avaa Sembon: vapaat huoneet ja hinnat reaaliajassa.' },
+  note: { ...ADVERTISERS.lodging.note, fi: 'Avaa Sembon: vapaat huoneet ja hinnat reaaliajassa.' },
 };
 
 /** Worker locale codes per site language, appended to the hotels ad href so the
@@ -290,11 +290,11 @@ function lomarengasHref(sid: string, lang: Lang): string {
 
 export default function PartnerAd({ advertiser, placement, className = '' }: Props) {
   const lang = useLang();
-  const a = advertiser === 'hotelscom' && lang === 'fi' ? SEMBO_FI : ADVERTISERS[advertiser];
+  const a = advertiser === 'lodging' && lang === 'fi' ? SEMBO_FI : ADVERTISERS[advertiser];
   if (!a) return null;
 
   const href =
-    a.id === 'hotelscom' ? `${a.href}&locale=${HOTELS_AD_LOCALE[lang]}`
+    a.id === 'lodging' ? `${a.href}&locale=${HOTELS_AD_LOCALE[lang]}`
     : a.id === 'lomarengas' ? lomarengasHref(placement ?? a.trackId, lang)
     : gygLocalizeHref(a.href, lang);
   const points = a.points[lang] ?? a.points.en;
@@ -353,7 +353,7 @@ export default function PartnerAd({ advertiser, placement, className = '' }: Pro
                 href={href}
                 target="_blank"
                 rel="sponsored nofollow noopener"
-                onClick={() => trackAffiliateClick(a.id === 'hotelscom' ? 'lodging' : a.id, placement ?? a.trackId, href)}
+                onClick={() => trackAffiliateClick(a.id, placement ?? a.trackId, href)}
                 className="group/btn inline-flex items-center justify-center text-center leading-snug gap-2 rounded-full px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.08em] sm:whitespace-nowrap no-underline transition-transform hover:-translate-y-0.5"
                 style={{ background: a.accent, color: a.accentText }}
               >
