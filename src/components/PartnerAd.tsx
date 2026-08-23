@@ -128,9 +128,11 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
     plateBg: '#FFFFFF',
     ring: 'hover:border-[#FF5533]/45',
     glow: 'radial-gradient(circle at 12% 0%, rgba(255,85,51,0.10), transparent 60%)',
-    // Workerin kautta 2026-08-03 (rakentaa GYG:n /s?q=-haun, injektoi
-    // partner_id+cmp:n); kieli liitetään renderissä gygLocalizeHrefillä.
-    href: 'https://go.laplandvibes.com/go/activities?sid=ad_gyg&q=Lapland%20Finland',
+    // Workerin kautta 2026-08-03; kieli liitetään renderissä gygLocalizeHrefillä.
+    // Kohde on GYG:n Lappi-sijaintisivu (kuratoitu listaus), ei /s?q=Lapland
+    // Finland -haku — paljas paikannimihaku renderöi geneerisen globaalihaun
+    // ilman kategorianostoja (mitattu 2026-08-23, ketju verifioitu otsikkoon asti).
+    href: 'https://go.laplandvibes.com/go/activities/lapland-finland-l2652?sid=ad_gyg',
     trackId: 'ad_getyourguide',
     badge,
     tagline: {
