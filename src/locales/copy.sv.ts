@@ -200,7 +200,7 @@ const sv: SectionCopy = {
     h1: 'Trip.com-priser i realtid.',
     sub:
       'Helsingfors till varje port till Lappland, förifyllt och daterat. Klicka vidare till Finnairs och Norwegians riktiga priser.',
-    seoTitle: 'Flyg till Lappland, Trip.com-erbjudanden i realtid på Helsingforslinjer',
+    seoTitle: 'Flyg till Lappland: Trip.com-priser i realtid',
     seoDesc:
       'Trip.com-flygpriser i realtid: Helsingfors till Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) och Kemi. Direktflyg med Finnair och Norwegian, förifyllda.',
     bottomTitle: 'Reser du från utanför Finland?',
@@ -216,7 +216,7 @@ const sv: SectionCopy = {
     h1: 'partnerns priser i realtid.',
     sub:
       'Dubbdäck, fyrhjulsdrift, räckvidd nog för norrskensjakt. Upphämtning på varje flygplats i Lappland, jämför på EconomyBookings.',
-    seoTitle: 'Lappland biluthyrning, dubbdäck, fyrhjulsdrift, upphämtning på flygplatsen',
+    seoTitle: 'Biluthyrning i Lappland: dubbdäck, fyrhjulsdrift, flygplats',
     seoDesc:
       'EconomyBookings-priser i realtid på biluthyrning från flygplatserna i Rovaniemi, Kittilä, Ivalo och Kuusamo (Ruka). Dubbdäck ingår för vinterkörning.',
     bottomTitle: 'Upphämtning i Helsingfors eller enkelresa?',
