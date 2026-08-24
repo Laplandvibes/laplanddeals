@@ -69,11 +69,17 @@ export default function Summer() {
             ))}
           </div>
           <div className="text-center mt-10">
+            {/* No hardcoded checkin/checkout here. They were '2026-06-15' and
+                '2026-06-22', so by late August every click opened a Trip.com
+                search for a stay that had already ended. Measured through the
+                Worker 2026-08-24: checkin/checkout are in PASSTHROUGH and
+                Trip.com receives them verbatim; only Sembo has a past-date
+                guard, so just the fi_FI reader was protected. Undated, the
+                partner opens on its own dates and the reader picks theirs. */}
             <AffiliateCTA
               partner="hotels-seasonal"
               sid="summer_browse_all"
               destination="Lapland, Finland"
-              query={{ checkin: '2026-06-15', checkout: '2026-06-22' }}
               className="inline-flex items-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] text-[13px] px-7 py-4 rounded-full no-underline"
             >
               {c.cta}
