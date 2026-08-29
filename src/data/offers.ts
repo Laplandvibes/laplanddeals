@@ -109,7 +109,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Saariselkä · norrskensbältet',
     },
     blurb: {
-      en: 'Roughly 30 glass igloos exist in the entire region. Christmas weeks book out by August, open Trip.com to see what\'s left tonight.',
+      en: 'Only a few dozen glass-igloo properties exist in the entire region. Christmas weeks book out by August, open Trip.com to see what\'s left tonight.',
       fi: 'Koko alueella on noin 30 lasi-iglua. Jouluviikot varataan loppuun jo elokuussa, katso Sembosta mitä tälle illalle on jäljellä.',
       de: 'In der gesamten Region gibt es rund 30 Glas-Iglus. Die Weihnachtswochen sind bis August ausgebucht, öffnen Sie Trip.com und sehen Sie, was heute Abend noch frei ist.',
       ja: '地域全体でガラスイグルーはおよそ30棟しかありません。クリスマスの週は8月までに満室に, Trip.comを開いて今夜の空き状況をご確認ください。',
@@ -453,7 +453,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'I hela Lappland',
     },
     blurb: {
-      en: 'Aurora season Sept 15 – Apr 5. Photographer-led hunts, frozen-lake campfires, mobile cabins. Cancellation usually 24h before.',
+      en: 'Aurora season runs roughly September to early April. Photographer-led hunts, frozen-lake campfires, mobile cabins. Cancellation usually 24h before.',
       fi: 'Revontulikausi 15.9.–5.4. Valokuvaajan vetämiä retkiä, nuotioita jäätyneellä järvellä, liikkuvia mökkejä. Peruutus yleensä 24 h ennen.',
       de: 'Polarlicht-Saison 15.9.–5.4. Touren mit Fotografen, Lagerfeuer auf gefrorenen Seen, mobile Hütten. Stornierung meist 24 h vorher.',
       ja: 'オーロラシーズンは9月15日〜4月5日。写真家が案内するハント、凍った湖でのたき火、移動式キャビン。キャンセルは通常24時間前まで。',
@@ -1140,7 +1140,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Inari · Utsjoki',
     },
     blurb: {
-      en: '32 days the sun never sets (Jun 6 – Jul 7 above 70°N). Lakeside cabin nights run 30-50% under December rates. Mosquitoes peak late June.',
+      en: '32 days the sun never sets in Rovaniemi (Jun 6 – Jul 7; longer further north). Lakeside cabin nights run 30-50% under December rates. Mosquitoes peak late June.',
       fi: '32 vuorokautta aurinko ei laske (6.6.–7.7. napapiirillä). Järvenrantamökkien yöt 30–50 % alle joulukuun hintojen. Hyttyset huipussaan kesäkuun lopulla.',
       de: '32 Tage geht die Sonne nicht unter (6.6.–7.7. oberhalb 70°N). Nächte in Seehütten 30–50 % unter den Dezemberpreisen. Mücken am stärksten Ende Juni.',
       ja: '32日間太陽が沈みません(北緯70度以北で6月6日〜7月7日)。湖畔コテージの宿泊は12月料金より30〜50%安く。蚊のピークは6月下旬。',

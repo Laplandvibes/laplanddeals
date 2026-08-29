@@ -35,7 +35,7 @@ const en: SectionCopy = {
   pulse: {
     eyebrow: "Today's pulse",
     titleItalic: 'What’s',
-    titleRest: 'happening on Lapland right now.',
+    titleRest: 'happening in Lapland right now.',
     lead:
       'Concrete seasonal facts, not invented countdowns. We update this whenever the situation moves.',
     items: [
@@ -67,7 +67,7 @@ const en: SectionCopy = {
       {
         when: 'From September',
         title: 'Aurora season starts again',
-        body: 'The active window runs roughly mid-September to early April. Saariselkä, Inari and Utsjoki have the highest visible-aurora rates. Hunts usually cancel up to 24h before, so they are easy to add late.',
+        body: 'The active window runs roughly September to early April. Saariselkä, Inari and Utsjoki have the highest visible-aurora rates. Hunts usually cancel up to 24h before, so they are easy to add late.',
       },
     ],
   },
