@@ -65,9 +65,9 @@ const it: SectionCopy = {
         body: "I voli A/R Finnair e Norwegian HEL→Lapponia scendono nella fascia 89-129 € se prenotati 4-8 settimane prima, esclusi i picchi di Natale, Pasqua e febbraio.",
       },
       {
-        when: 'Da settembre',
+        when: 'Da fine agosto',
         title: "Riparte la stagione dell'aurora boreale",
-        body: "La finestra attiva va all'incirca da metà settembre a inizio aprile. Saariselkä, Inari e Utsjoki hanno i tassi di aurora visibile più alti. Le cacce si cancellano spesso fino a 24 h prima, quindi sono facili da aggiungere all'ultimo.",
+        body: "La finestra attiva va all'incirca da fine agosto a inizio aprile. Saariselkä, Inari e Utsjoki hanno i tassi di aurora visibile più alti. Le cacce si cancellano spesso fino a 24 h prima, quindi sono facili da aggiungere all'ultimo.",
       },
     ],
   },
@@ -281,7 +281,7 @@ const it: SectionCopy = {
       },
       {
         q: 'Le offerte last-minute per la Lapponia valgono la pena?',
-        a: 'Spesso sì, al di fuori dei pochi periodi di picco. Quando una baita, un posto in slitta trainata dagli husky o una caccia all’aurora hanno spazio invenduto a ridosso della data, i partner lo rilasciano alla tariffa in tempo reale, e le escursioni di aurora e husky accettano spesso prenotazioni fino a circa 24 ore prima. Le eccezioni sono Natale, Capodanno, Pasqua (Pääsiäinen) e le vacanze scolastiche di febbraio, quando la domanda è alta e aspettare raramente aiuta.',
+        a: 'Spesso sì, al di fuori dei pochi periodi di picco. Quando una baita, un posto in slitta trainata dagli husky o una caccia all’aurora hanno spazio invenduto a ridosso della data, i partner lo rilasciano alla tariffa in tempo reale, e le escursioni di aurora e husky accettano spesso prenotazioni fino a circa 24 ore prima. Le eccezioni sono Natale, Capodanno, Pasqua e le vacanze scolastiche di febbraio, quando la domanda è alta e aspettare raramente aiuta.',
       },
       {
         q: 'Cosa include un tipico pacchetto per la Lapponia?',

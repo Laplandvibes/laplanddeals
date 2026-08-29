@@ -65,9 +65,9 @@ const es: SectionCopy = {
         body: 'Los vuelos de ida y vuelta de Finnair y Norwegian HEL→Laponia caen al rango de 89-129 € cuando se reservan con 4-8 semanas de antelación, fuera de las puntas de Navidad, Semana Santa y febrero.',
       },
       {
-        when: 'Desde septiembre',
+        when: 'Desde finales de agosto',
         title: 'Vuelve la temporada de auroras',
-        body: 'La ventana activa va aproximadamente de mediados de septiembre a principios de abril. Saariselkä, Inari y Utsjoki tienen las tasas más altas de auroras visibles. Las cazas suelen cancelarse hasta 24 h antes, así que es fácil añadirlas a última hora.',
+        body: 'La ventana activa va aproximadamente de finales de agosto a principios de abril. Saariselkä, Inari y Utsjoki tienen las tasas más altas de auroras visibles. Las cazas suelen cancelarse hasta 24 h antes, así que es fácil añadirlas a última hora.',
       },
     ],
   },
@@ -281,7 +281,7 @@ const es: SectionCopy = {
       },
       {
         q: '¿Merecen la pena las ofertas de última hora en Laponia?',
-        a: 'A menudo sí, fuera de los pocos periodos de máxima demanda. Cuando una cabaña, una plaza de husky o una caza de auroras tiene espacio sin vender cerca de la fecha, los socios lo liberan al precio en tiempo real, y las excursiones de auroras y de huskies suelen admitir reservas hasta unas 24 horas antes. Las excepciones son Navidad, Año Nuevo, Semana Santa (Pääsiäinen) y las vacaciones escolares de febrero, cuando la demanda es alta y esperar rara vez ayuda.',
+        a: 'A menudo sí, fuera de los pocos periodos de máxima demanda. Cuando una cabaña, una plaza de husky o una caza de auroras tiene espacio sin vender cerca de la fecha, los socios lo liberan al precio en tiempo real, y las excursiones de auroras y de huskies suelen admitir reservas hasta unas 24 horas antes. Las excepciones son Navidad, Año Nuevo, Semana Santa y las vacaciones escolares de febrero, cuando la demanda es alta y esperar rara vez ayuda.',
       },
       {
         q: '¿Qué incluye un paquete típico de Laponia?',

@@ -65,9 +65,9 @@ const en: SectionCopy = {
         body: 'Finnair and Norwegian HEL→Lapland round-trips drop into the €89–129 band when booked 4–8 weeks ahead, outside the Christmas, Easter and February peaks.',
       },
       {
-        when: 'From September',
+        when: 'From late August',
         title: 'Aurora season starts again',
-        body: 'The active window runs roughly September to early April. Saariselkä, Inari and Utsjoki have the highest visible-aurora rates. Hunts usually cancel up to 24h before, so they are easy to add late.',
+        body: 'The active window runs roughly from late August to early April. Saariselkä, Inari and Utsjoki have the highest visible-aurora rates. Hunts usually cancel up to 24h before, so they are easy to add late.',
       },
     ],
   },
@@ -281,7 +281,7 @@ const en: SectionCopy = {
       },
       {
         q: 'Are last-minute Lapland deals worth it?',
-        a: 'Often, yes, outside the few peak windows. When a cabin, husky slot or aurora hunt has unsold space close to the date, partners release it at the live rate, and aurora and husky tours frequently take bookings up to about 24 hours before. The exceptions are Christmas, New Year, Easter (Pääsiäinen) and the February school holiday, when demand is high and waiting rarely helps.',
+        a: 'Often, yes, outside the few peak windows. When a cabin, husky slot or aurora hunt has unsold space close to the date, partners release it at the live rate, and aurora and husky tours frequently take bookings up to about 24 hours before. The exceptions are Christmas, New Year, Easter and the February school holiday, when demand is high and waiting rarely helps.',
       },
       {
         q: "What's included in a typical Lapland package deal?",

@@ -65,9 +65,9 @@ const nl: SectionCopy = {
         body: 'Finnair- en Norwegian-retourvluchten HEL→Lapland zakken naar € 89-129 als je 4-8 weken vooraf boekt, buiten de pieken van Kerst, Pasen en de februarivakantie.',
       },
       {
-        when: 'Vanaf september',
+        when: 'Vanaf eind augustus',
         title: 'Het noorderlichtseizoen begint weer',
-        body: 'Het actieve venster loopt ruwweg van half september tot begin april. Saariselkä, Inari en Utsjoki hebben de hoogste kans op zichtbaar noorderlicht. Een jacht wordt meestal tot 24 u vooraf geannuleerd, dus je voegt hem makkelijk last-minute toe.',
+        body: 'Het actieve venster loopt ruwweg van eind augustus tot begin april. Saariselkä, Inari en Utsjoki hebben de hoogste kans op zichtbaar noorderlicht. Een jacht wordt meestal tot 24 u vooraf geannuleerd, dus je voegt hem makkelijk last-minute toe.',
       },
     ],
   },
@@ -281,7 +281,7 @@ const nl: SectionCopy = {
       },
       {
         q: 'Zijn last-minute Lapland-aanbiedingen de moeite waard?',
-        a: 'Vaak wel, buiten de paar piekperiodes. Wanneer een hut, een husky-plek of een noorderlichttocht vlak voor de datum nog onverkochte ruimte heeft, geven partners die vrij tegen de live prijs, en noorderlicht- en huskytochten nemen vaak tot ongeveer 24 uur van tevoren nog boekingen aan. De uitzonderingen zijn Kerst, Oud en Nieuw, Pasen (Pääsiäinen) en de februarivakantie, wanneer de vraag hoog is en wachten zelden helpt.',
+        a: 'Vaak wel, buiten de paar piekperiodes. Wanneer een hut, een husky-plek of een noorderlichttocht vlak voor de datum nog onverkochte ruimte heeft, geven partners die vrij tegen de live prijs, en noorderlicht- en huskytochten nemen vaak tot ongeveer 24 uur van tevoren nog boekingen aan. De uitzonderingen zijn Kerst, Oud en Nieuw, Pasen en de februarivakantie, wanneer de vraag hoog is en wachten zelden helpt.',
       },
       {
         q: 'Wat zit er in een typisch Lapland-pakket?',

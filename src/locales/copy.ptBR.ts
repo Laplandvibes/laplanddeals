@@ -65,9 +65,9 @@ const ptBR: SectionCopy = {
         body: 'Voos ida e volta Finnair e Norwegian HEL→Lapônia caem na faixa de €89-129 quando reservados com 4-8 semanas de antecedência, fora dos picos de Natal, Páscoa e fevereiro.',
       },
       {
-        when: 'A partir de setembro',
+        when: 'A partir do fim de agosto',
         title: 'A temporada de aurora recomeça',
-        body: 'A janela ativa vai mais ou menos de meados de setembro ao início de abril. Saariselkä, Inari e Utsjoki têm as maiores taxas de aurora visível. As caças costumam ser canceladas até 24h antes, então é fácil adicionar de última hora.',
+        body: 'A janela ativa vai mais ou menos do fim de agosto ao início de abril. Saariselkä, Inari e Utsjoki têm as maiores taxas de aurora visível. As caças costumam ser canceladas até 24h antes, então é fácil adicionar de última hora.',
       },
     ],
   },
@@ -281,7 +281,7 @@ const ptBR: SectionCopy = {
       },
       {
         q: 'As ofertas de última hora na Lapônia valem a pena?',
-        a: 'Muitas vezes sim, fora dos poucos períodos de pico. Quando uma cabana, uma vaga de husky ou uma caça à aurora tem espaço não vendido perto da data, os parceiros a liberam pelo preço em tempo real, e os passeios de aurora e de husky frequentemente aceitam reservas até cerca de 24 horas antes. As exceções são Natal, Ano-Novo, Páscoa (Pääsiäinen) e as férias escolares de fevereiro, quando a procura é alta e esperar raramente ajuda.',
+        a: 'Muitas vezes sim, fora dos poucos períodos de pico. Quando uma cabana, uma vaga de husky ou uma caça à aurora tem espaço não vendido perto da data, os parceiros a liberam pelo preço em tempo real, e os passeios de aurora e de husky frequentemente aceitam reservas até cerca de 24 horas antes. As exceções são Natal, Ano-Novo, Páscoa e as férias escolares de fevereiro, quando a procura é alta e esperar raramente ajuda.',
       },
       {
         q: 'O que costuma estar incluído em um pacote da Lapônia?',

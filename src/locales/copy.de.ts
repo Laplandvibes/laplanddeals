@@ -42,12 +42,12 @@ const de: SectionCopy = {
       {
         when: 'Genau jetzt',
         title: 'Mitternachtssonne, die niedrigsten Preise des Jahres',
-        body: 'Bis Ende Juli geht die Sonne kaum unter. Seenhütten liegen deutlich unter den Winterpreisen, und dieselben Fjelle, die im Februar ausgebucht waren, sind jetzt ruhig. Das preislich günstigste Fenster des Jahres.',
+        body: 'Bis Ende Juli geht die Sonne kaum unter. Seehütten liegen deutlich unter den Winterpreisen, und dieselben Fjells, die im Februar ausgebucht waren, sind jetzt ruhig. Das preislich günstigste Fenster des Jahres.',
       },
       {
         when: 'Jetzt bis August',
         title: 'Wander- und Wassersaison',
-        body: 'Pallas-Yllästunturi und die östlichen Fjelle sind trocken und offen. Lange Tage zum Wandern, für SUP und Seenbäder. Die Mücken lassen bis August nach; für Ende Juni ein Kopfnetz mitnehmen.',
+        body: 'Pallas-Yllästunturi und die östlichen Fjells sind trocken und offen. Lange Tage zum Wandern, für SUP und Seenbäder. Die Mücken lassen bis August nach; für Ende Juni ein Kopfnetz mitnehmen.',
       },
       {
         when: '5.–15. September',
@@ -62,12 +62,12 @@ const de: SectionCopy = {
       {
         when: 'Sparen bei Flügen',
         title: '4–8 Wochen Vorlauf ab Helsinki',
-        body: 'Finnair- und Norwegian-Hin-und-Rückflüge HEL→Lappland fallen auf 89–129 €, wenn Sie 4–8 Wochen im Voraus buchen, außerhalb der Weihnachts-, Oster- und Februarspitzen.',
+        body: 'Hin- und Rückflüge HEL→Lappland mit Finnair und Norwegian fallen auf 89–129 €, wenn Sie 4–8 Wochen im Voraus buchen, außerhalb der Weihnachts-, Oster- und Februarspitzen.',
       },
       {
-        when: 'Ab September',
+        when: 'Ab Ende August',
         title: 'Die Polarlicht-Saison beginnt erneut',
-        body: 'Das aktive Fenster reicht etwa von Mitte September bis Anfang April. Saariselkä, Inari und Utsjoki zeigen die höchsten Sichtquoten. Touren werden meist bis 24 h vorher storniert, sie lassen sich also leicht kurzfristig dazubuchen.',
+        body: 'Das aktive Fenster reicht etwa von Ende August bis Anfang April. Saariselkä, Inari und Utsjoki zeigen die höchsten Sichtquoten. Touren lassen sich meist bis 24 Stunden vorher stornieren und daher leicht kurzfristig dazubuchen.',
       },
     ],
   },
@@ -89,7 +89,7 @@ const de: SectionCopy = {
     summerEyebrow: 'Mitternachtssonne · 6.6.–7.7.',
     summerTitle: 'Der Sommer in Lappland ist das Geheimangebot.',
     summerLead:
-      '32 Tage geht die Sonne nicht unter. Seenhütten zum Bruchteil der Dezemberpreise. Wandern am besten Ende August, klare Luft, keine Mücken, Ruska-Gold.',
+      '32 Tage geht die Sonne nicht unter. Seehütten zum Bruchteil der Dezemberpreise. Wandern am besten Ende August, klare Luft, keine Mücken, Ruska-Gold.',
     summerCta: 'Sommer ansehen',
 
     everythingEyebrow: 'Alle Angebote',
@@ -97,11 +97,11 @@ const de: SectionCopy = {
   },
   tiles: [
     { label: 'Hotels & Hütten', hint: 'Glas-Iglus · Pistennah · Wildnis-Lodges' },
-    { label: 'Aktivitäten', hint: 'Husky · Aurora · Schneemobil · Rentier' },
+    { label: 'Aktivitäten', hint: 'Husky · Polarlicht · Schneemobil · Rentier' },
     { label: 'Flüge', hint: 'Helsinki–Rovaniemi · Kittilä · Ivalo · Kuusamo' },
     { label: 'Mietwagen', hint: '4WD · Spikereifen · Abholung am Flughafen' },
-    { label: 'Pakete', hint: 'Aurora-Woche · Familienauszeit · Wochenende' },
-    { label: 'Sommer', hint: 'Mitternachtssonne · Wandern · Seenhütten' },
+    { label: 'Pakete', hint: 'Polarlicht-Woche · Familienauszeit · Wochenende' },
+    { label: 'Sommer', hint: 'Mitternachtssonne · Wandern · Seehütten' },
   ],
   card: {
     livePrices: 'Live-Preise',
@@ -150,7 +150,7 @@ const de: SectionCopy = {
       },
       {
         title: 'Knappe Zusammenfassung',
-        body: 'Eine Zusammenfassung, keine Flut. Abmeldung in jeder Sendung.',
+        body: 'Eine Zusammenfassung, keine Flut. Abmeldung in jeder E-Mail.',
       },
     ],
     placeholder: 'Ihre E-Mail-Adresse',
@@ -167,7 +167,7 @@ const de: SectionCopy = {
     h1: 'Live-Preise für heute Abend.',
     sub:
       'Glas-Iglus im Polarlichtgürtel, pistennahe Häuser in Levi, Wildnis-Lodges in Ylläs, Familienhotels in Rovaniemi. Vergleichen Sie die heutigen Raten in Echtzeit.',
-    seoTitle: 'Lappland Hotelangebote, Glas-Iglus, Pistennah, Hütten',
+    seoTitle: 'Lappland-Hotelangebote: Glas-Iglus, Pistennähe, Hütten',
     seoDesc:
       'Live-Preise für Glas-Iglus, Ski-in-Unterkünfte, Familienhotels und Wildnis-Lodges in Finnisch-Lappland. Last-Minute- und Saisonende-Hütten.',
     bottomTitle: 'Ihr Reiseziel nicht dabei?',
@@ -180,7 +180,7 @@ const de: SectionCopy = {
     h1: 'Verfügbarkeit in Echtzeit.',
     sub:
       'Husky-Safaris, Polarlichtjagd, Schneemobiltouren, Besuche auf Rentierfarmen, Eisfischen. Live-Verfügbarkeit auf GetYourGuide, keine falschen Timer, keine erfundenen Prozente.',
-    seoTitle: 'Lappland Aktivitätsangebote, Husky, Polarlicht, Schneemobil',
+    seoTitle: 'Lappland-Aktivitäten: Husky, Polarlicht, Schneemobil',
     seoDesc:
       'GetYourGuide Live-Preise für Husky-Safaris, Polarlichtjagd, Schneemobiltouren, Rentierfarmen und Eisfischen in Finnisch-Lappland. Last-Minute-Slots.',
     bottomTitle: 'Vollständigen Lappland-Katalog ansehen',
@@ -198,7 +198,7 @@ const de: SectionCopy = {
       'Helsinki zu jedem Flughafen in Lappland, vorausgefüllt und datiert. Klicken Sie sich zu den echten Finnair- und Norwegian-Tarifen.',
     seoTitle: 'Flüge nach Lappland, Live-Angebote von Trip.com ab Helsinki',
     seoDesc:
-      'Live-Flugpreise von Trip.com: Helsinki nach Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) und Kemi. Direktflüge mit Finnair und Norwegian, vorausgefüllt, buchbar.',
+      'Live-Flugpreise von Trip.com: Helsinki nach Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) und Kemi. Direktflüge mit Finnair und Norwegian, vorausgefüllt und buchbar.',
     bottomTitle: 'Sie reisen von außerhalb Finnlands an?',
     bottomLead: 'Suchen Sie jeden Abflug zu jedem Lappland-Flughafen auf Trip.com.',
     bottomCta: 'Trip.com Flugsuche öffnen →',
@@ -212,7 +212,7 @@ const de: SectionCopy = {
     h1: 'Live-Partnerpreise.',
     sub:
       'Spikereifen, 4WD, ausreichende Reichweite für die Polarlichtjagd. Abholung an jedem Lappland-Flughafen, vergleichen Sie auf EconomyBookings.',
-    seoTitle: 'Lappland Mietwagen, Spikereifen, 4WD, Flughafenabholung',
+    seoTitle: 'Lappland-Mietwagen: Spikereifen, 4WD, Flughafenabholung',
     seoDesc:
       'EconomyBookings Live-Preise für Mietwagen an den Flughäfen Rovaniemi, Kittilä, Ivalo und Kuusamo (Ruka). Spikereifen für die Winterfahrt inklusive.',
     bottomTitle: 'Abholung in Helsinki oder Einwegmiete?',
@@ -221,30 +221,30 @@ const de: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Warum wir kein fertiges Paket verkaufen',
-    introP1: 'Eine paketierte Lapplandwoche bündelt Flug, Hotel und zwei Aktivitäten hinter einem Preis, und genau im Bündel versteckt sich die Marge. Wir listen dieselben Bausteine einzeln: den Flug, die Unterkunft, den Huskytag, den Nordlichtabend. Sie buchen jeden zum Live-Tarif des Partners, und niemand legt eine eigene Schicht darüber.',
-    introP2: 'Die meisten Reisen pendeln sich bei vier bis sieben Nächten ein, genug für zwei oder drei große Aktivitäten plus den Wetterpuffer, den die Nordlichtjagd braucht. Bauen Sie von der Unterkunft nach außen: Das Bett entscheidet, welcher Flughafen richtig ist und welche Aktivitäten in Reichweite liegen, nicht umgekehrt.',
+    introP1: 'Eine paketierte Lapplandwoche bündelt Flug, Hotel und zwei Aktivitäten hinter einem Preis, und genau im Bündel versteckt sich die Marge. Wir listen dieselben Bausteine einzeln: den Flug, die Unterkunft, den Huskytag, den Polarlichtabend. Sie buchen jeden zum Live-Tarif des Partners, und niemand legt eine eigene Schicht darüber.',
+    introP2: 'Die meisten Reisen pendeln sich bei vier bis sieben Nächten ein, genug für zwei oder drei große Aktivitäten plus den Wetterpuffer, den die Polarlichtjagd braucht. Bauen Sie von der Unterkunft nach außen: Das Bett entscheidet, welcher Flughafen richtig ist und welche Aktivitäten in Reichweite liegen, nicht umgekehrt.',
     eyebrow: 'Pakete',
     h1Italic: 'Bauen Sie Ihre eigene',
     h1: 'Lappland-Reise.',
     sub:
       'Wir verkaufen keine versiegelten Pakete. Wir kuratieren die Bausteine, Flüge, Unterkünfte, Husky-Tage, Polarlichtjagd, und Sie buchen jeden zum Live-Tarif des Partners. Keine Vermittlungsgebühr.',
-    seoTitle: 'Lappland Pauschalangebote, Aurora, Familie, Wochenende',
+    seoTitle: 'Lappland-Reisebausteine: Polarlicht, Familie, Wochenende',
     seoDesc:
-      'Mehrtägige Lappland-Reiseideen: Aurora-Woche in Saariselkä, Familienauszeit in Rovaniemi, Wochenend-Trips. Jeder Baustein einzeln zum Partner-Live-Tarif.',
+      'Mehrtägige Lappland-Reiseideen: Polarlicht-Woche in Saariselkä, Familienauszeit in Rovaniemi, Wochenendtrips. Jeder Baustein zum Live-Tarif des Partners.',
     curatedTitle: 'Kuratierte Reiseideen',
     pairTitle: 'Mit Ihrer Unterkunft kombinieren',
-    pairLead: 'Die Bausteine, die die meisten Reisenden zu einer 4–7-Nächte-Lapplandreise stapeln.',
+    pairLead: 'Die Bausteine, aus denen die meisten Reisenden eine Lappland-Reise von vier bis sieben Nächten bauen.',
   },
   summerPage: {
     introTitle: 'Was für eine Reise im Sommer spricht',
-    introP1: '32 Tage lang, vom 6. Juni bis zum 7. Juli, geht die Sonne im äußersten Norden nicht unter, und das verändert, was ein Tag ist, nicht nur wie er aussieht. Sie können um neun Uhr abends zu einer Wanderung aufbrechen und bei Tageslicht zurückkommen. Im Mai bricht die Nachfrage ein, wenn die Nordlichtsaison endet und die Lifte stehen, und dieselben Seehütten, die im Februar ausgebucht waren, haben leere Wochen.',
+    introP1: '32 Tage lang, vom 6. Juni bis zum 7. Juli, geht die Sonne am Polarkreis nicht unter, weiter nördlich noch länger, und das verändert, was ein Tag ist, nicht nur wie er aussieht. Sie können um neun Uhr abends zu einer Wanderung aufbrechen und bei Tageslicht zurückkommen. Im Mai bricht die Nachfrage ein, wenn die Polarlichtsaison endet und die Lifte stehen, und dieselben Seehütten, die im Februar ausgebucht waren, haben leere Wochen.',
     introP2: 'Ende August ist das zweite Fenster: Das Wandern ist am besten, die Mücken sind weg, und die Ruska färbt die Fjells vor dem ersten Schnee. Nehmen Sie eine Schlafmaske mit und behandeln Sie das Licht als Grund zu kommen, nicht als etwas, das man umgehen muss.',
     eyebrow: 'Mitternachtssonne · 6. Juni – 7. Juli',
     h1Italic: 'Der Sommer in Lappland',
     h1: 'ist das Geheimangebot.',
     sub:
-      '32 Tage geht die Sonne nicht unter. Seenhütten zum Bruchteil der Dezemberpreise. Wandern am besten Ende August, klare Luft, keine Mücken, Ruska-Gold.',
-    seoTitle: 'Lappland Sommerangebote, Mitternachtssonne & Wandern',
+      '32 Tage geht die Sonne nicht unter. Seehütten zum Bruchteil der Dezemberpreise. Wandern am besten Ende August, klare Luft, keine Mücken, Ruska-Gold.',
+    seoTitle: 'Lappland-Sommerangebote: Mitternachtssonne & Wandern',
     seoDesc:
       '32 Tage geht die Sonne nicht unter in Finnisch-Lappland (6.6.–7.7.). Hütten unter Mitternachtssonne, Wandern im Pallas-Yllästunturi, Sommer am See.',
     offersTitle: 'Sommerangebote, Live-Partnerpreise',
@@ -257,7 +257,7 @@ const de: SectionCopy = {
       },
       {
         title: 'Lappland steht Ihnen offen',
-        body: 'Dieselben Fjelle, dieselben Seen, dieselbe Wildnis, ohne den Pauschalreise-Aufschlag.',
+        body: 'Dieselben Fjells, dieselben Seen, dieselbe Wildnis, ohne den Pauschalreise-Aufschlag.',
       },
       {
         title: 'Endloses Tageslicht',
@@ -273,19 +273,19 @@ const de: SectionCopy = {
     items: [
       {
         q: 'Wann ist die günstigste Reisezeit für Lappland?',
-        a: 'Spätfrühling und Sommer, etwa von Mai bis August, sind am ruhigsten und am günstigsten. Die Aurora-Saison ist vorbei und die Skigebiete sind geschlossen, sodass Seehütten, die im Februar ausgebucht waren, nun leer stehen. Innerhalb des Winters sind die Nebensaison-Wochen (Mitte März bis Mitte April) günstiger als die Hochsaison zu Weihnachten und in den Februarferien, bei vollem Schnee und längeren Tagen.',
+        a: 'Spätfrühling und Sommer, etwa von Mai bis August, sind am ruhigsten und am günstigsten. Die Polarlicht-Saison ist vorbei und die Skigebiete sind geschlossen, sodass Seehütten, die im Februar ausgebucht waren, nun leer stehen. Innerhalb des Winters sind die Nebensaison-Wochen (Mitte März bis Mitte April) günstiger als die Hochsaison zu Weihnachten und in den Februarferien, bei vollem Schnee und längeren Tagen.',
       },
       {
         q: 'Wie weit im Voraus sollte ich eine Lappland-Reise buchen?',
-        a: 'Das hängt von der Saison ab. Weihnachten und Neujahr sind am knappsten: Glas-Iglus und Familienzimmer im Weihnachtsmanndorf sind oft schon Ende August ausgebucht. Die Aurora-Saison (etwa November bis März) ist entspannter, beliebte Wochenenden füllen sich jedoch früh. Frühling, Sommer und Herbst erfordern selten einen Vorlauf von Monaten. Flüge ab Helsinki sind in der Regel am günstigsten, wenn Sie einige Wochen im Voraus buchen, außerhalb der Hochsaison zu Weihnachten, Ostern und in den Februarferien.',
+        a: 'Das hängt von der Saison ab. Weihnachten und Neujahr sind am knappsten: Glas-Iglus und Familienzimmer im Weihnachtsmanndorf sind oft schon Ende August ausgebucht. Die Polarlicht-Hochsaison (etwa November bis März) ist entspannter, beliebte Wochenenden füllen sich jedoch früh. Frühling, Sommer und Herbst erfordern selten einen Vorlauf von Monaten. Flüge ab Helsinki sind in der Regel am günstigsten, wenn Sie einige Wochen im Voraus buchen, außerhalb der Hochsaison zu Weihnachten, Ostern und in den Februarferien.',
       },
       {
         q: 'Lohnen sich Last-Minute-Angebote für Lappland?',
-        a: 'Oft ja, außerhalb der wenigen Hochsaison-Fenster. Wenn eine Hütte, ein Husky-Platz oder eine Aurora-Tour kurz vor dem Termin noch frei ist, geben die Partner sie zum Live-Preis frei, und Aurora- und Husky-Touren nehmen häufig noch bis etwa 24 Stunden vorher Buchungen an. Die Ausnahmen sind Weihnachten, Neujahr, Ostern (Pääsiäinen) und die Februarferien, wenn die Nachfrage hoch ist und Warten selten hilft.',
+        a: 'Oft ja, außerhalb der wenigen Hochsaison-Fenster. Wenn eine Hütte, ein Husky-Platz oder eine Polarlicht-Tour kurz vor dem Termin noch frei ist, geben die Partner sie zum Live-Preis frei, und Polarlicht- und Husky-Touren nehmen häufig noch bis etwa 24 Stunden vorher Buchungen an. Die Ausnahmen sind Weihnachten, Neujahr, Ostern und die Februarferien, wenn die Nachfrage hoch ist und Warten selten hilft.',
       },
       {
         q: 'Was ist in einem typischen Lappland-Paket enthalten?',
-        a: 'Das variiert je nach Anbieter, lesen Sie daher stets die enthaltenen Leistungen. Ein gängiges Paket verbindet einige Übernachtungen mit ein bis zwei Aktivitäten, einer Husky-Safari, einer Aurora-Tour oder einer Schneemobiltour, und manchmal Flughafentransfers. Bei LaplandDeals verkaufen wir keine festen Pakete: Wir kuratieren die Bausteine (Flüge, Unterkünfte, Aktivitäten, Mietwagen), und Sie buchen jeden einzeln zum Live-Preis des Partners, ohne Vermittlungsgebühr.',
+        a: 'Das variiert je nach Anbieter, lesen Sie daher stets die enthaltenen Leistungen. Ein gängiges Paket verbindet einige Übernachtungen mit ein bis zwei Aktivitäten, einer Husky-Safari, einer Polarlicht-Tour oder einer Schneemobiltour, und manchmal Flughafentransfers. Bei LaplandDeals verkaufen wir keine festen Pakete: Wir kuratieren die Bausteine (Flüge, Unterkünfte, Aktivitäten, Mietwagen), und Sie buchen jeden einzeln zum Live-Preis des Partners, ohne Vermittlungsgebühr.',
       },
       {
         q: 'Wie finde ich echte Rabatte für Lappland?',
@@ -298,8 +298,8 @@ const de: SectionCopy = {
     title: 'Mehr aus dem #LaplandVibes-Netzwerk.',
     lead: 'Schwestersites, die einen Bereich Ihrer Lappland-Reise vertiefen. Jede öffnet sich in einem neuen Tab.',
     links: [
-      { anchor: 'Hotelangebote & Pakete', blurb: 'Glas-Iglus, Nordlicht-Suiten und Familienresorts in ganz Finnisch-Lappland.' },
-      { anchor: 'Angebote für Aktivitäten & Safaris', blurb: 'Husky-Safaris, Aurora-Touren, Schneemobiltouren und Rentierfarmen mit Live-Verfügbarkeit.' },
+      { anchor: 'Hotelangebote & Pakete', blurb: 'Glas-Iglus, Polarlicht-Suiten und Familienresorts in ganz Finnisch-Lappland.' },
+      { anchor: 'Angebote für Aktivitäten & Safaris', blurb: 'Husky-Safaris, Polarlicht-Touren, Schneemobiltouren und Rentierfarmen mit Live-Verfügbarkeit.' },
       { anchor: 'All-inclusive-Rundreisen', blurb: 'Mehrtägige geführte Reiserouten, die Unterkünfte, Transfers und Aktivitäten verbinden.' },
     ],
   },

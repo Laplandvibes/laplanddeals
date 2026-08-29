@@ -65,9 +65,9 @@ const fi: SectionCopy = {
         body: 'Finnairin ja Norwegianin HEL→Lappi-edestakaiset putoavat 89–129 euron välille, kun varaat 4–8 viikkoa etukäteen, pois lukien joulun, pääsiäisen ja helmikuun huiput.',
       },
       {
-        when: 'Syyskuusta alkaen',
+        when: 'Elokuun lopusta alkaen',
         title: 'Revontulisesonki alkaa taas',
-        body: 'Aktiivinen kausi kulkee suunnilleen syyskuun puolivälistä huhtikuun alkuun. Saariselkä, Inari ja Utsjoki näyttävät korkeimmat näkyvyysprosentit. Revontulisafari peruuntuu yleensä 24 h ennen, joten sen voi lisätä myöhään.',
+        body: 'Aktiivinen kausi kulkee suunnilleen elokuun lopusta huhtikuun alkuun. Saariselkä, Inari ja Utsjoki näyttävät korkeimmat näkyvyysprosentit. Revontulisafari peruuntuu yleensä 24 h ennen, joten sen voi lisätä myöhään.',
       },
     ],
   },

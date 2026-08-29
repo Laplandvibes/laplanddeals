@@ -69,9 +69,9 @@ const sv: SectionCopy = {
         body: 'Finnairs och Norwegians tur och retur Helsingfors→Lappland hamnar i spannet 89–129 € när du bokar 4–8 veckor i förväg, utanför topparna vid jul, påsk och februari.',
       },
       {
-        when: 'Från september',
+        when: 'Från slutet av augusti',
         title: 'Norrskenssäsongen börjar igen',
-        body: 'Det aktiva fönstret varar ungefär från mitten av september till början av april. Saariselkä, Inari och Utsjoki har de högsta chanserna att se norrsken. Turerna avbokas oftast fram till 24 h innan, så de är lätta att lägga till sent.',
+        body: 'Det aktiva fönstret varar ungefär från slutet av augusti till början av april. Saariselkä, Inari och Utsjoki har de högsta chanserna att se norrsken. Turerna avbokas oftast fram till 24 h innan, så de är lätta att lägga till sent.',
       },
     ],
   },

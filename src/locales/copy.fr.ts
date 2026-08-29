@@ -65,9 +65,9 @@ const fr: SectionCopy = {
         body: "Les A/R Finnair et Norwegian HEL→Laponie tombent dans la fourchette 89-129 € lorsqu'ils sont réservés 4 à 8 semaines à l'avance, hors pics de Noël, de Pâques et de février.",
       },
       {
-        when: 'À partir de septembre',
+        when: 'À partir de fin août',
         title: 'La saison des aurores boréales repart',
-        body: "La fenêtre active court de mi-septembre à début avril environ. Saariselkä, Inari et Utsjoki affichent les taux d'aurores visibles les plus élevés. Les sorties s'annulent souvent jusqu'à 24 h avant, faciles à ajouter au dernier moment.",
+        body: "La fenêtre active court de fin août à début avril environ. Saariselkä, Inari et Utsjoki affichent les taux d'aurores visibles les plus élevés. Les sorties s'annulent souvent jusqu'à 24 h avant, faciles à ajouter au dernier moment.",
       },
     ],
   },
@@ -281,7 +281,7 @@ const fr: SectionCopy = {
       },
       {
         q: 'Les offres de dernière minute en Laponie en valent-elles la peine ?',
-        a: 'Souvent oui, en dehors des quelques périodes de pointe. Lorsqu’un chalet, une place en traîneau à chiens ou une chasse aux aurores dispose de places invendues à l’approche de la date, les partenaires les libèrent au tarif en temps réel, et les excursions aurores et husky acceptent souvent les réservations jusqu’à environ 24 heures avant. Les exceptions sont Noël, le Nouvel An, Pâques (Pääsiäinen) et les vacances scolaires de février, où la demande est forte et où attendre n’aide guère.',
+        a: 'Souvent oui, en dehors des quelques périodes de pointe. Lorsqu’un chalet, une place en traîneau à chiens ou une chasse aux aurores dispose de places invendues à l’approche de la date, les partenaires les libèrent au tarif en temps réel, et les excursions aurores et husky acceptent souvent les réservations jusqu’à environ 24 heures avant. Les exceptions sont Noël, le Nouvel An, Pâques et les vacances scolaires de février, où la demande est forte et où attendre n’aide guère.',
       },
       {
         q: 'Que comprend un forfait typique en Laponie ?',
