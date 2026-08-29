@@ -52,7 +52,7 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
   },
   fi: {
     title: 'LaplandDeals: Last-minute-tarjoukset Suomen Lappiin',
-    desc: 'Kumppaneiden live-tarjoukset Lapin hotelleihin, huskysafareihin, lentoihin Rovaniemelle ja autovuokrauksiin. Last-minute-hinnat, kauden loppumökkiöt ja kesätarjoukset.',
+    desc: 'Kumppaneiden live-tarjoukset Lapin hotelleihin, huskysafareihin, lentoihin Rovaniemelle ja autovuokrauksiin. Last-minute-hinnat, kauden lopun mökkiyöt ja kesätarjoukset.',
   },
   de: {
     title: 'LaplandDeals: Last-Minute-Angebote für Finnisch-Lappland',

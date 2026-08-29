@@ -159,7 +159,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
     },
     blurb: {
       en: 'Ski-in / ski-out on Finland\'s biggest fell (43 slopes, 230 km tracks). End-of-season weeks (Mar 15 – Apr 12) usually still open at lower rates.',
-      fi: 'Ski-in / ski-out Suomen suurimmalla tunturilla (43 rinnettä, 230 km latuja). Kauden loppuviikot (15.3.–12.4.) yleensä vielä auki edullisemmin hinnoin.',
+      fi: 'Ski-in / ski-out Suomen suurimmassa hiihtokeskuksessa (44 rinnettä, 230 km latuja). Kauden loppuviikot (15.3.–12.4.) yleensä vielä auki edullisemmin hinnoin.',
       de: 'Ski-in / Ski-out auf Finnlands größtem Fjell (43 Pisten, 230 km Loipen). Die Wochen zum Saisonende (15.3.–12.4.) sind meist noch zu günstigeren Preisen frei.',
       ja: 'フィンランド最大のフェル(43コース、トラック230km)でスキーイン/スキーアウト。シーズン終盤の週(3月15日〜4月12日)は通常まだ予約可能で、料金もお手頃です。',
       es: 'Ski-in / ski-out en la mayor colina de Finlandia (43 pistas, 230 km de huellas). Las semanas de fin de temporada (15 mar – 12 abr) suelen estar disponibles a tarifas más bajas.',
@@ -353,7 +353,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
     },
     blurb: {
       en: 'Above the aurora oval, highest visible-aurora rate in Finland. Sámi capital, no light pollution, two-lane road then nothing.',
-      fi: 'Revontuliovaalin yläpuolella, Suomen korkein revontulien näkyvyys. Saamelaisten pääpaikka, ei valosaastetta, kaksikaistainen tie ja sitten ei mitään.',
+      fi: 'Revontuliovaalin yläpuolella, Suomen paras revontulinäkyvyys. Saamelaisten pääpaikka, ei valosaastetta, kaksikaistainen tie ja sitten ei mitään.',
       de: 'Über dem Polarlicht-Oval, die höchste Sichtungsrate Finnlands. Hauptort der Samen, keine Lichtverschmutzung, eine zweispurige Straße und dann nichts mehr.',
       ja: 'オーロラオーバルの真下, フィンランドで最もオーロラが見える確率。サーミの中心地、光害なし、片側一車線の道、その先には何もありません。',
       es: 'Sobre el óvalo auroral: la tasa de auroras visibles más alta de Finlandia. Capital sami, sin contaminación lumínica, una carretera de dos carriles y luego nada.',
@@ -405,7 +405,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
     },
     blurb: {
       en: 'Drive your own 6-dog team. Most kennels run 12 sleds/day max, peak weekends fill 7-10 days out. Half-day to overnight cabins.',
-      fi: 'Aja omaa 6 koiran valjakkoa. Useimmat kennelit ajavat enintään 12 rekeä päivässä, huippuviikonloput täyttyvät 7–10 päivää etukäteen. Puolesta päivästä yön yli -mökkeihin.',
+      fi: 'Aja omaa kuuden koiran valjakkoa. Useimmat kennelit ajavat enintään 12 rekeä päivässä, huippuviikonloput täyttyvät 7–10 päivää etukäteen. Puolesta päivästä yön yli -mökkeihin.',
       de: 'Lenken Sie Ihr eigenes 6-Hunde-Gespann. Die meisten Kennel fahren maximal 12 Schlitten pro Tag, Spitzenwochenenden sind 7–10 Tage vorher ausgebucht. Vom Halbtag bis zur Übernachtung in Hütten.',
       ja: '6頭のチームを自分で操縦します。多くのケンネルは1日最大12台のソリ, ピークの週末は7〜10日前に埋まります。半日からコテージ宿泊まで。',
       es: 'Conduce tu propio trineo de 6 perros. La mayoría de los criaderos hacen 12 trineos al día como máximo; los fines de semana punta se llenan con 7-10 días de antelación. Desde medio día hasta cabañas con pernoctación.',
@@ -551,7 +551,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
     },
     blurb: {
       en: '~200 reindeer-herding co-operatives in Finland. Slow sleigh rides, fire-warmed kotas, Sámi families. Book early-morning slots, quietest light.',
-      fi: 'Suomessa noin 200 paliskuntaa. Verkkaisia poroajeluja, tulilla lämmitettyjä kotia, saamelaisperheitä. Varaa aamuvarhaiset ajat, rauhallisin valo.',
+      fi: 'Suomessa on 54 paliskuntaa. Verkkaisia poroajeluja, tulilla lämmitettyjä kotia, saamelaisperheitä. Varaa aamuvarhaiset ajat, rauhallisin valo.',
       de: 'Rund 200 Rentierzucht-Genossenschaften in Finnland. Gemächliche Schlittenfahrten, am Feuer gewärmte Kotas, samische Familien. Buchen Sie frühmorgens, das ruhigste Licht.',
       ja: 'フィンランドには約200のトナカイ放牧協同組合があります。ゆったりとしたそり、火で暖めるコタ、サーミの家族。早朝の枠を予約すれば最も静かな光を楽しめます。',
       es: 'Unas 200 cooperativas de pastoreo de renos en Finlandia. Paseos en trineo pausados, kotas calentadas al fuego, familias sami. Reserva las franjas de primera hora: la luz más serena.',
@@ -1141,7 +1141,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
     },
     blurb: {
       en: '32 days the sun never sets (Jun 6 – Jul 7 above 70°N). Lakeside cabin nights run 30-50% under December rates. Mosquitoes peak late June.',
-      fi: '32 vuorokautta aurinko ei laske (6.6.–7.7. yli 70°N). Järvenrantamökkien yöt 30–50 % alle joulukuun hintojen. Hyttyset huipussaan kesäkuun lopulla.',
+      fi: '32 vuorokautta aurinko ei laske (6.6.–7.7. napapiirillä). Järvenrantamökkien yöt 30–50 % alle joulukuun hintojen. Hyttyset huipussaan kesäkuun lopulla.',
       de: '32 Tage geht die Sonne nicht unter (6.6.–7.7. oberhalb 70°N). Nächte in Seehütten 30–50 % unter den Dezemberpreisen. Mücken am stärksten Ende Juni.',
       ja: '32日間太陽が沈みません(北緯70度以北で6月6日〜7月7日)。湖畔コテージの宿泊は12月料金より30〜50%安く。蚊のピークは6月下旬。',
       es: '32 días sin que el sol se ponga (6 jun – 7 jul por encima de 70°N). Las noches en cabañas junto al lago salen un 30-50% por debajo de las tarifas de diciembre. Los mosquitos alcanzan su pico a finales de junio.',
