@@ -158,7 +158,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Levi · Kittilä',
     },
     blurb: {
-      en: 'Ski-in / ski-out on Finland\'s biggest fell (43 slopes, 230 km tracks). End-of-season weeks (Mar 15 – Apr 12) usually still open at lower rates.',
+      en: 'Ski-in / ski-out at Finland\'s biggest ski resort (44 slopes, 230 km tracks). End-of-season weeks (Mar 15 – Apr 12) usually still open at lower rates.',
       fi: 'Ski-in / ski-out Suomen suurimmassa hiihtokeskuksessa (44 rinnettä, 230 km latuja). Kauden loppuviikot (15.3.–12.4.) yleensä vielä auki edullisemmin hinnoin.',
       de: 'Ski-in / Ski-out auf Finnlands größtem Fjell (43 Pisten, 230 km Loipen). Die Wochen zum Saisonende (15.3.–12.4.) sind meist noch zu günstigeren Preisen frei.',
       ja: 'フィンランド最大のフェル(43コース、トラック230km)でスキーイン/スキーアウト。シーズン終盤の週(3月15日〜4月12日)は通常まだ予約可能で、料金もお手頃です。',
@@ -550,7 +550,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       sv: 'Rovaniemi · Inari',
     },
     blurb: {
-      en: '~200 reindeer-herding co-operatives in Finland. Slow sleigh rides, fire-warmed kotas, Sámi families. Book early-morning slots, quietest light.',
+      en: '54 reindeer-herding co-operatives in Finland. Slow sleigh rides, fire-warmed kotas, Sámi families. Book early-morning slots, quietest light.',
       fi: 'Suomessa on 54 paliskuntaa. Verkkaisia poroajeluja, tulilla lämmitettyjä kotia, saamelaisperheitä. Varaa aamuvarhaiset ajat, rauhallisin valo.',
       de: 'Rund 200 Rentierzucht-Genossenschaften in Finnland. Gemächliche Schlittenfahrten, am Feuer gewärmte Kotas, samische Familien. Buchen Sie frühmorgens, das ruhigste Licht.',
       ja: 'フィンランドには約200のトナカイ放牧協同組合があります。ゆったりとしたそり、火で暖めるコタ、サーミの家族。早朝の枠を予約すれば最も静かな光を楽しめます。',
