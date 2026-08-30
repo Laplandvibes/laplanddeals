@@ -268,7 +268,7 @@ const it: SectionCopy = {
   },
   faq: {
     eyebrow: 'Buono a sapersi',
-    title: 'Offerte in Lapponia, le tue domande, le nostre risposte.',
+    title: 'Offerte in Lapponia, le Sue domande, le nostre risposte.',
     lead: 'Risposte oneste su quando partire, quando prenotare e cosa aspettarsi. Nessun prezzo inventato, nessuna falsa urgenza.',
     items: [
       {
