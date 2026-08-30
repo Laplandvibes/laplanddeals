@@ -414,7 +414,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       ko: '6마리 개썰매를 직접 몹니다. 대부분의 견사는 하루 최대 12대 운영, 성수기 주말은 7~10일 전에 마감됩니다. 반나절부터 캐빈 1박까지.',
       fr: 'Menez votre propre attelage de 6 chiens. La plupart des chenils sortent 12 traîneaux par jour au maximum, les week-ends de pointe se remplissent 7 à 10 jours à l\'avance. De la demi-journée aux nuits en chalet.',
       it: 'Guidi la Sua muta di 6 cani. La maggior parte dei canili gestisce al massimo 12 slitte al giorno, i weekend di punta si riempiono 7-10 giorni prima. Dalla mezza giornata al pernottamento in baita.',
-      nl: 'Bestuur je eigen team van 6 honden. De meeste kennels rijden maximaal 12 sleeën per dag, drukke weekends zitten 7-10 dagen vooraf vol. Van een halve dag tot overnachten in hutten.',
+      nl: 'Bestuur uw eigen team van 6 honden. De meeste kennels rijden maximaal 12 sleeën per dag, drukke weekends zitten 7-10 dagen vooraf vol. Van een halve dag tot overnachten in hutten.',
       sv: 'Kör ditt eget spann med 6 hundar. De flesta kennlar kör högst 12 slädar per dag, de mest populära helgerna fylls 7–10 dagar i förväg. Från halvdag till övernattning i stuga.',
     },
     partner: 'getyourguide',

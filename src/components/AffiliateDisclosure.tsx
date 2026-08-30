@@ -20,7 +20,7 @@ const TEXT: Record<Lang, string> = {
   ko: '이 페이지의 일부 링크는 파트너 링크입니다. 이를 통해 예약하시면 LaplandDeals가 수수료를 받을 수 있으며, 고객님이 지불하는 가격은 동일합니다.',
   fr: 'Certains liens ici sont des liens partenaires. Si vous réservez via ces liens, LaplandDeals peut percevoir une commission. Le prix que vous payez reste le même.',
   it: 'Alcuni link in questa pagina sono link di partner. Se prenoti tramite questi, LaplandDeals può ricevere una commissione. Il prezzo che paghi resta invariato.',
-  nl: 'Sommige links hier zijn partnerlinks. Als je via deze links boekt, kan LaplandDeals een commissie ontvangen. De prijs die je betaalt blijft gelijk.',
+  nl: 'Sommige links hier zijn partnerlinks. Als u via deze links boekt, kan LaplandDeals een commissie ontvangen. De prijs die u betaalt blijft gelijk.',
   sv: 'Vissa länkar här är partnerlänkar. Om du bokar via dem kan LaplandDeals få en provision. Priset du betalar är detsamma.',
 };
 

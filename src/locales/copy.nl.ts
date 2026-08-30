@@ -16,12 +16,12 @@ const nl: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'deals van Lapland.',
     lead:
-      'Vrijgekomen hotelnachten, onverkochte husky- en sneeuwscooterplekken, goedkope pakketten en vrije huisjes, alles op één plek. Eén klik brengt je rechtstreeks naar de actuele prijs van de partner.',
+      'Vrijgekomen hotelnachten, onverkochte husky- en sneeuwscooterplekken, goedkope pakketten en vrije huisjes, alles op één plek. Eén klik brengt u rechtstreeks naar de actuele prijs van de partner.',
     primary: 'Hoteldeals voor vanavond',
     secondary: 'Goedkope noorderlichttours',
     eyebrowSummer: 'Last minute · Goedkope deals · Middernachtzon',
     leadSummer:
-      'Het goedkoopste seizoen van het jaar: middernachtzon-huisjes onder winterprijzen, vrije activiteitenplekken, vluchten naar Rovaniemi en zomerhuurauto\'s. Eén klik brengt je rechtstreeks naar de actuele prijs van de partner.',
+      'Het goedkoopste seizoen van het jaar: middernachtzon-huisjes onder winterprijzen, vrije activiteitenplekken, vluchten naar Rovaniemi en zomerhuurauto\'s. Eén klik brengt u rechtstreeks naar de actuele prijs van de partner.',
     secondarySummer: 'Middernachtzon-deals',
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
@@ -62,12 +62,12 @@ const nl: SectionCopy = {
       {
         when: 'Beste tariefvenster',
         title: '4-8 weken vooraf vanuit Helsinki',
-        body: 'Finnair- en Norwegian-retourvluchten HEL→Lapland zakken naar € 89-129 als je 4-8 weken vooraf boekt, buiten de pieken van Kerst, Pasen en de februarivakantie.',
+        body: 'Finnair- en Norwegian-retourvluchten HEL→Lapland zakken naar € 89-129 als u 4-8 weken vooraf boekt, buiten de pieken van Kerst, Pasen en de februarivakantie.',
       },
       {
         when: 'Vanaf eind augustus',
         title: 'Het noorderlichtseizoen begint weer',
-        body: 'Het actieve venster loopt ruwweg van eind augustus tot begin april. Saariselkä, Inari en Utsjoki hebben de hoogste kans op zichtbaar noorderlicht. Een jacht wordt meestal tot 24 u vooraf geannuleerd, dus je voegt hem makkelijk last-minute toe.',
+        body: 'Het actieve venster loopt ruwweg van eind augustus tot begin april. Saariselkä, Inari en Utsjoki hebben de hoogste kans op zichtbaar noorderlicht. Een jacht wordt meestal tot 24 u vooraf geannuleerd, dus u voegt hem makkelijk last-minute toe.',
       },
     ],
   },
@@ -157,7 +157,7 @@ const nl: SectionCopy = {
     cta: 'Ontvang de aanbiedingen',
     sending: 'Versturen…',
     okTitle: 'Bijna klaar.',
-    okBody: 'Bevestig je aanmelding via de e-mail die we net hebben gestuurd.',
+    okBody: 'Bevestig uw aanmelding via de e-mail die we net hebben gestuurd.',
     fineprint: 'Alleen wanneer er echt iets te melden is. Met één klik uit te schrijven. Wij delen uw adres nooit.',
     error: 'Inschrijven lukt nu niet. Probeer het zo opnieuw.',
   },
