@@ -157,7 +157,7 @@ const it: SectionCopy = {
     cta: 'Ricevi le offerte',
     sending: 'Invio in corso…',
     okTitle: 'Ci siamo quasi.',
-    okBody: 'Conferma l\'iscrizione dall\'e-mail che ti abbiamo appena inviato.',
+    okBody: 'Conferma l\'iscrizione dall\'e-mail che Le abbiamo appena inviato.',
     fineprint: 'Solo quando c\'è davvero qualcosa che vale la pena segnalare. Disiscrizione in un clic. Non condividiamo mai il Suo indirizzo.',
     error: 'Impossibile iscrivere ora. Riprovi tra poco.',
   },
