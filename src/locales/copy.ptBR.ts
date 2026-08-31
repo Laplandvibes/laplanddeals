@@ -61,7 +61,7 @@ const ptBR: SectionCopy = {
       },
       {
         when: 'Melhor janela para tarifas',
-        title: '4-8 semanas antes a partir de Helsinki',
+        title: '4-8 semanas antes a partir de Helsinque',
         body: 'Voos ida e volta Finnair e Norwegian HEL→Lapônia caem na faixa de €89-129 quando reservados com 4-8 semanas de antecedência, fora dos picos de Natal, Páscoa e fevereiro.',
       },
       {
@@ -98,8 +98,8 @@ const ptBR: SectionCopy = {
   tiles: [
     { label: 'Hotéis e cabanas', hint: 'Iglus de vidro · Pé na pista · Lodges selvagens' },
     { label: 'Atividades', hint: 'Husky · Aurora · Snowmobile · Renas' },
-    { label: 'Voos', hint: 'Helsinki para Rovaniemi · Kittilä · Ivalo · Kuusamo' },
-    { label: 'Aluguel de carro', hint: '4x4 · Pneus com pinos · Retirada no aeroporto' },
+    { label: 'Voos', hint: 'Helsinque para Rovaniemi · Kittilä · Ivalo · Kuusamo' },
+    { label: 'Aluguel de carro', hint: '4x4 · Pneus com cravos · Retirada no aeroporto' },
     { label: 'Pacotes', hint: 'Semana de aurora · Viagens em família · Fim de semana' },
     { label: 'Verão', hint: 'Sol da meia-noite · Caminhadas · Cabanas à beira do lago' },
   ],
@@ -195,10 +195,10 @@ const ptBR: SectionCopy = {
     h1Italic: 'Voos para a Lapônia',
     h1: 'tarifas reais do Trip.com.',
     sub:
-      'De Helsinki para todo portão da Lapônia, com datas pré-preenchidas. Clique para ver tarifas reais da Finnair e da Norwegian.',
-    seoTitle: 'Voos para a Lapônia, Ofertas do Trip.com de Helsinki',
+      'De Helsinque para todo portão da Lapônia, com datas pré-preenchidas. Clique para ver tarifas reais da Finnair e da Norwegian.',
+    seoTitle: 'Voos para a Lapônia, Ofertas do Trip.com de Helsinque',
     seoDesc:
-      'Preços de voos em tempo real no Trip.com: Helsinki para Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) e Kemi. Tarifas diretas da Finnair e da Norwegian.',
+      'Preços de voos em tempo real no Trip.com: Helsinque para Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) e Kemi. Tarifas diretas da Finnair e da Norwegian.',
     bottomTitle: 'Vindo de fora da Finlândia?',
     bottomLead: 'Busque qualquer origem para qualquer aeroporto da Lapônia no Trip.com.',
     bottomCta: 'Abrir a busca de voos no Trip.com →',
@@ -211,11 +211,11 @@ const ptBR: SectionCopy = {
     h1Italic: 'Carros prontos para o inverno',
     h1: 'preços reais do parceiro.',
     sub:
-      'Pneus com pinos, 4x4, autonomia livre para caçar aurora. Retirada em todos os aeroportos da Lapônia, compare no EconomyBookings.',
-    seoTitle: 'Aluguel de carro na Lapônia, Pneus com pinos, 4x4',
+      'Pneus com cravos, 4x4, autonomia livre para caçar aurora. Retirada em todos os aeroportos da Lapônia, compare no EconomyBookings.',
+    seoTitle: 'Aluguel de carro na Lapônia, Pneus com cravos, 4x4',
     seoDesc:
-      'Preços em tempo real no EconomyBookings para aluguel de carro nos aeroportos de Rovaniemi, Kittilä, Ivalo e Kuusamo (Ruka). Pneus com pinos inclusos.',
-    bottomTitle: 'Retirar em Helsinki ou devolver em outro aeroporto?',
+      'Preços em tempo real no EconomyBookings para aluguel de carro nos aeroportos de Rovaniemi, Kittilä, Ivalo e Kuusamo (Ruka). Pneus com cravos inclusos.',
+    bottomTitle: 'Retirar em Helsinque ou devolver em outro aeroporto?',
     bottomLead: 'O EconomyBookings aceita aluguel one-way entre a maioria dos aeroportos finlandeses.',
     bottomCta: 'Abrir o EconomyBookings →',
   },
@@ -228,7 +228,7 @@ const ptBR: SectionCopy = {
     h1: 'viagem para a Lapônia.',
     sub:
       'A gente não vende pacote pronto. Selecionamos os blocos, voos, hospedagens, dias com husky, caça à aurora, e você reserva cada um na tarifa real do parceiro. Sem taxa de intermediário.',
-    seoTitle: 'Pacotes na Lapônia, Semana de aurora e viagens família',
+    seoTitle: 'Pacotes na Lapônia, Semana de aurora e viagens em família',
     seoDesc:
       'Ideias de roteiros de vários dias na Lapônia: semana de aurora em Saariselkä, viagens em família em Rovaniemi e fins de semana. Cada parte reservada à parte.',
     curatedTitle: 'Ideias de viagem selecionadas',
