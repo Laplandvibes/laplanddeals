@@ -12,7 +12,7 @@ export default function Terms() {
     <div className="pt-20">
       <PageSeo
         title="Terms of Use"
-        description="Terms of use for LaplandDeals. Operated by Lapeso Oy."
+        description="Terms of use for LaplandDeals. Operated by LaPeso Oy."
         path="/terms"
       />
       <TermsContent siteName="LaplandDeals" lang={lang} />

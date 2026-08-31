@@ -8,7 +8,7 @@ export default function CookiePolicy() {
     <main className="pt-20">
       <PageSeo
         title="Cookie Policy"
-        description="How LaplandDeals uses cookies. GDPR + ePrivacy compliant. Operated by Lapeso Oy."
+        description="How LaplandDeals uses cookies. GDPR + ePrivacy compliant. Operated by LaPeso Oy."
         path="/cookie-policy"
       />
       <CookieContent siteName="LaplandDeals" lang={lang} />
