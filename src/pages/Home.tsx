@@ -79,7 +79,7 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
     desc: '라플란드 호텔, 허스키 사파리, 로바니에미행 항공편, 렌터카의 파트너 실시간 특가. 직전 예약, 시즌 마감 할인, 여름 특가.',
   },
   fr: {
-    title: 'LaplandDeals: Offres et promotions de dernière minute pour la Laponie finlandaise',
+    title: 'LaplandDeals : Offres et promotions de dernière minute pour la Laponie finlandaise',
     desc: "Offres partenaires en direct sur les hôtels de Laponie, safaris en husky, vols pour Rovaniemi et location de voitures. Tarifs de dernière minute, soldes de fin de saison, offres d'été.",
   },
   it: {

@@ -42,12 +42,12 @@ const it: SectionCopy = {
       {
         when: 'Proprio adesso',
         title: "Sole di mezzanotte, le tariffe più basse dell'anno",
-        body: "Fino a fine luglio il sole tramonta a malapena. Le baite sul lago restano ben sotto i prezzi invernali e gli stessi fjell esauriti a febbraio sono deserti. Il miglior rapporto qualità-prezzo dell'anno.",
+        body: "Fino a fine luglio il sole tramonta a malapena. Le baite sul lago restano ben sotto i prezzi invernali e gli stessi fjäll esauriti a febbraio sono deserti. Il miglior rapporto qualità-prezzo dell'anno.",
       },
       {
         when: 'Da adesso ad agosto',
         title: 'Stagione di trekking e acqua',
-        body: "Il Pallas-Yllästunturi e i fjell orientali sono asciutti e aperti. Giornate lunghe per trekking, SUP e nuotate nel lago. Le zanzare si attenuano nel corso di agosto; per fine giugno portate una retina da testa.",
+        body: "Il Pallas-Yllästunturi e i fjäll orientali sono asciutti e aperti. Giornate lunghe per trekking, SUP e nuotate nel lago. Le zanzare si attenuano nel corso di agosto; per fine giugno portate una retina da testa.",
       },
       {
         when: '5–15 set.',
@@ -126,7 +126,7 @@ const it: SectionCopy = {
     },
     {
       title: 'Parte di #LaplandVibes',
-      body: '23+ siti gemelli. Un solo ecosistema, una sola fonte.',
+      body: '27+ siti gemelli. Un solo ecosistema, una sola fonte.',
     },
   ],
   newsletter: {
@@ -238,7 +238,7 @@ const it: SectionCopy = {
   summerPage: {
     introTitle: 'Le ragioni per andarci d\'estate',
     introP1: 'Per 32 giorni, dal 6 giugno al 7 luglio, il sole non tramonta nell\'estremo nord, e questo cambia che cosa sia una giornata, non solo il suo aspetto. Può partire per un\'escursione alle nove di sera e rientrare con la luce. A maggio la domanda crolla, quando finisce la stagione dell\'aurora e gli impianti si fermano: le stesse baite sul lago piene a febbraio hanno settimane libere.',
-    introP2: 'Fine agosto è l\'altra finestra: il trekking dà il meglio, le zanzare se ne sono andate e il ruska colora i fjell prima della prima neve. Porti una mascherina per dormire e consideri la luce il motivo per venire, non un ostacolo da aggirare.',
+    introP2: 'Fine agosto è l\'altra finestra: il trekking dà il meglio, le zanzare se ne sono andate e il ruska colora i fjäll prima della prima neve. Porti una mascherina per dormire e consideri la luce il motivo per venire, non un ostacolo da aggirare.',
     eyebrow: 'Sole di mezzanotte · 6 giugno – 7 luglio',
     h1Italic: "L'estate in Lapponia",
     h1: "è l'offerta nascosta.",

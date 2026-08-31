@@ -126,7 +126,7 @@ const zhCN: SectionCopy = {
     },
     {
       title: '#LaplandVibes 网络成员',
-      body: '23+ 姐妹网站。一个生态系统,一个权威信息源。',
+      body: '27+ 姐妹网站。一个生态系统,一个权威信息源。',
     },
   ],
   newsletter: {

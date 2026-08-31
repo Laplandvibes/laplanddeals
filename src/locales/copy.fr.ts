@@ -42,12 +42,12 @@ const fr: SectionCopy = {
       {
         when: 'En ce moment',
         title: "Soleil de minuit, les tarifs les plus bas de l'année",
-        body: "Jusqu'à fin juillet, le soleil se couche à peine. Les chalets au bord du lac restent bien en dessous des prix d'hiver, et les fjells qui affichaient complet en février sont déserts. La meilleure période de l'année côté rapport qualité-prix.",
+        body: "Jusqu'à fin juillet, le soleil se couche à peine. Les chalets au bord du lac restent bien en dessous des prix d'hiver, et les fjälls qui affichaient complet en février sont déserts. La meilleure période de l'année côté rapport qualité-prix.",
       },
       {
         when: "D'ici fin août",
         title: "Saison de la randonnée et de l'eau",
-        body: "Le Pallas-Yllästunturi et les fjells de l'est sont secs et ouverts. Longues journées pour la randonnée, le SUP et la baignade en lac. Les moustiques se calment au fil d'août ; prévoyez une moustiquaire de tête pour fin juin.",
+        body: "Le Pallas-Yllästunturi et les fjälls de l'est sont secs et ouverts. Longues journées pour la randonnée, le SUP et la baignade en lac. Les moustiques se calment au fil d'août ; prévoyez une moustiquaire de tête pour fin juin.",
       },
       {
         when: '5–15 sept.',
@@ -57,7 +57,7 @@ const fr: SectionCopy = {
       {
         when: 'Noël 2026',
         title: 'Déjà très réservé',
-        body: 'Les igloos de verre et chambres familiales du village du Père Noël ferment généralement aux réservations fin août. Dîners de Noël et balades en traîneau à rennes : souvent partis avant octobre.',
+        body: 'Les igloos de verre et chambres familiales du Village du Père Noël ferment généralement aux réservations fin août. Dîners de Noël et balades en traîneau à rennes : souvent partis avant octobre.',
       },
       {
         when: 'Fenêtre idéale pour les tarifs',
@@ -126,7 +126,7 @@ const fr: SectionCopy = {
     },
     {
       title: 'Membre de #LaplandVibes',
-      body: '23+ sites jumeaux. Un seul écosystème, une seule source.',
+      body: '27+ sites jumeaux. Un seul écosystème, une seule source.',
     },
   ],
   newsletter: {
@@ -179,10 +179,10 @@ const fr: SectionCopy = {
     h1Italic: 'Activités en Laponie',
     h1: 'disponibilité en temps réel.',
     sub:
-      "Safaris en husky, chasses aux aurores, expéditions en motoneige, visites de fermes de rennes, pêche sur glace. Disponibilité en direct sur GetYourGuide, sans faux compte à rebours ni pourcentage inventé.",
+      "Safaris en traîneau de huskies, chasses aux aurores, expéditions en motoneige, visites de fermes de rennes, pêche sur glace. Disponibilité en direct sur GetYourGuide, sans faux compte à rebours ni pourcentage inventé.",
     seoTitle: 'Offres activités Laponie, Husky, aurore boréale, motoneige',
     seoDesc:
-      'Tarifs GetYourGuide en direct sur safaris husky, chasses aux aurores, motoneige, fermes de rennes et pêche sur glace en Laponie finlandaise.',
+      'Tarifs GetYourGuide en direct sur safaris en traîneau de huskies, chasses aux aurores, motoneige, fermes de rennes et pêche sur glace en Laponie finlandaise.',
     bottomTitle: 'Parcourir le catalogue complet de la Laponie',
     bottomLead: '900+ excursions, sorties à la journée et aventures de plusieurs jours sur GetYourGuide.',
     bottomCta: 'Toutes les activités de Laponie →',
@@ -238,7 +238,7 @@ const fr: SectionCopy = {
   summerPage: {
     introTitle: 'Pourquoi venir en été',
     introP1: 'Pendant 32 jours, du 6 juin au 7 juillet, le soleil ne se couche pas dans l\'extrême nord, et cela change ce qu\'est une journée, pas seulement à quoi elle ressemble. Vous pouvez partir en randonnée à neuf heures du soir et rentrer en plein jour. La demande s\'effondre en mai, quand la saison des aurores se termine et que les remontées s\'arrêtent : les mêmes chalets au bord du lac, pleins en février, ont des semaines libres.',
-    introP2: 'Fin août est l\'autre fenêtre : la randonnée est au mieux, les moustiques sont partis, et la ruska colore les fjells avant la première neige. Emportez un masque de nuit et considérez la lumière comme la raison de venir, pas comme un obstacle à contourner.',
+    introP2: 'Fin août est l\'autre fenêtre : la randonnée est au mieux, les moustiques sont partis, et la ruska colore les fjälls avant la première neige. Emportez un masque de nuit et considérez la lumière comme la raison de venir, pas comme un obstacle à contourner.',
     eyebrow: 'Soleil de minuit · 6 juin – 7 juillet',
     h1Italic: "L'été en Laponie",
     h1: "c'est l'offre cachée.",
@@ -277,7 +277,7 @@ const fr: SectionCopy = {
       },
       {
         q: 'Combien de temps à l’avance faut-il réserver un voyage en Laponie ?',
-        a: 'Cela dépend de la saison. Noël et le Nouvel An sont les plus tendus : les igloos de verre et les chambres familiales du village du père Noël affichent souvent complet dès la fin août. La saison des aurores (de novembre à mars environ) est plus calme, mais les week-ends prisés se remplissent tôt. Le printemps, l’été et l’automne nécessitent rarement plusieurs mois d’anticipation. Les vols au départ d’Helsinki sont généralement les moins chers réservés quelques semaines à l’avance, hors pics de Noël, de Pâques et des vacances de février.',
+        a: 'Cela dépend de la saison. Noël et le Nouvel An sont les plus tendus : les igloos de verre et les chambres familiales du Village du Père Noël affichent souvent complet dès la fin août. La saison des aurores (de novembre à mars environ) est plus calme, mais les week-ends prisés se remplissent tôt. Le printemps, l’été et l’automne nécessitent rarement plusieurs mois d’anticipation. Les vols au départ d’Helsinki sont généralement les moins chers réservés quelques semaines à l’avance, hors pics de Noël, de Pâques et des vacances de février.',
       },
       {
         q: 'Les offres de dernière minute en Laponie en valent-elles la peine ?',
@@ -285,7 +285,7 @@ const fr: SectionCopy = {
       },
       {
         q: 'Que comprend un forfait typique en Laponie ?',
-        a: 'Cela varie selon le prestataire : lisez toujours ce qui est inclus. Un forfait courant associe quelques nuits d’hébergement à une ou deux activités, un safari en husky, une chasse aux aurores ou une excursion en motoneige, et parfois les transferts aéroport. Sur LaplandDeals, nous ne vendons pas de forfaits fermés : nous sélectionnons les éléments (vols, hébergements, activités, location de voiture) et vous réservez chacun au tarif en temps réel du partenaire, sans frais d’intermédiaire.',
+        a: 'Cela varie selon le prestataire : lisez toujours ce qui est inclus. Un forfait courant associe quelques nuits d’hébergement à une ou deux activités, un safari en traîneau de huskies, une chasse aux aurores ou une excursion en motoneige, et parfois les transferts aéroport. Sur LaplandDeals, nous ne vendons pas de forfaits fermés : nous sélectionnons les éléments (vols, hébergements, activités, location de voiture) et vous réservez chacun au tarif en temps réel du partenaire, sans frais d’intermédiaire.',
       },
       {
         q: 'Comment trouver de vraies réductions en Laponie ?',
@@ -299,7 +299,7 @@ const fr: SectionCopy = {
     lead: 'Des sites jumeaux qui approfondissent un aspect du voyage en Laponie. Chacun s’ouvre dans un nouvel onglet.',
     links: [
       { anchor: 'offres d’hôtels et forfaits', blurb: 'Igloos de verre, suites sous les aurores boréales et complexes familiaux dans toute la Laponie finlandaise.' },
-      { anchor: 'offres sur les activités et safaris', blurb: 'Safaris en husky, chasses aux aurores, excursions en motoneige et fermes de rennes avec disponibilité en temps réel.' },
+      { anchor: 'offres sur les activités et safaris', blurb: 'Safaris en traîneau de huskies, chasses aux aurores, excursions en motoneige et fermes de rennes avec disponibilité en temps réel.' },
       { anchor: 'circuits tout compris', blurb: 'Itinéraires guidés de plusieurs jours qui réunissent hébergements, transferts et activités.' },
     ],
   },

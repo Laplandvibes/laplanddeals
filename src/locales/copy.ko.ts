@@ -126,7 +126,7 @@ const ko: SectionCopy = {
     },
     {
       title: '#LaplandVibes의 일원',
-      body: '23개 이상의 자매 사이트. 하나의 생태계, 하나의 출처.',
+      body: '27개 이상의 자매 사이트. 하나의 생태계, 하나의 출처.',
     },
   ],
   newsletter: {

@@ -383,7 +383,7 @@ const rawOffers = (lang: TripLang): RawOffer[] => {
       'pt-BR': 'Safáris de huskies',
       'zh-CN': '哈士奇雪橇之旅',
       ko: '허스키 사파리',
-      fr: 'Safaris en husky',
+      fr: 'Safaris en traîneau de huskies',
       it: 'Safari con gli husky',
       nl: 'Huskysafari\'s',
       sv: 'Huskysafarier',

@@ -126,7 +126,7 @@ const fi: SectionCopy = {
     },
     {
       title: 'Osa #LaplandVibes-verkostoa',
-      body: '23+ sisarsivustoa. Yksi ekosysteemi, yksi totuuden lähde.',
+      body: '27+ sisarsivustoa. Yksi ekosysteemi, yksi totuuden lähde.',
     },
   ],
   newsletter: {

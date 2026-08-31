@@ -126,7 +126,7 @@ const ptBR: SectionCopy = {
     },
     {
       title: 'Parte do #LaplandVibes',
-      body: 'Mais de 23 sites parceiros. Um ecossistema, uma única fonte da verdade.',
+      body: 'Mais de 27 sites parceiros. Um ecossistema, uma única fonte da verdade.',
     },
   ],
   newsletter: {
@@ -238,7 +238,7 @@ const ptBR: SectionCopy = {
   summerPage: {
     introTitle: 'O argumento para ir no verão',
     introP1: 'Durante 32 dias, de 6 de junho a 7 de julho, o sol não se põe no extremo norte, e isso muda o que é um dia, não apenas como ele parece. Dá para começar uma caminhada às nove da noite e voltar com luz. A procura despenca em maio, quando a temporada de aurora acaba e os teleféricos param: as mesmas cabanas à beira do lago que estavam lotadas em fevereiro têm semanas vazias.',
-    introP2: 'O fim de agosto é a outra janela: a caminhada está no melhor momento, os mosquitos já foram, e o ruska tinge os fjells antes da primeira neve. Leve uma máscara de dormir e trate a luz como o motivo para ir, não como algo a contornar.',
+    introP2: 'O fim de agosto é a outra janela: a caminhada está no melhor momento, os mosquitos já foram, e o ruska tinge os fjälls antes da primeira neve. Leve uma máscara de dormir e trate a luz como o motivo para ir, não como algo a contornar.',
     eyebrow: 'Sol da meia-noite · 6 jun – 7 jul',
     h1Italic: 'Verão na Lapônia',
     h1: 'é a oferta secreta.',

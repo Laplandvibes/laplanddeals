@@ -126,7 +126,7 @@ const ja: SectionCopy = {
     },
     {
       title: '#LaplandVibes ネットワークの一員',
-      body: '23以上の姉妹サイト。一つのエコシステム、一つの信頼できる情報源です。',
+      body: '27以上の姉妹サイト。一つのエコシステム、一つの信頼できる情報源です。',
     },
   ],
   newsletter: {

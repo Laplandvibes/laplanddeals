@@ -126,7 +126,7 @@ const en: SectionCopy = {
     },
     {
       title: 'Part of #LaplandVibes',
-      body: '23+ sister sites. One ecosystem, one source of truth.',
+      body: '27+ sister sites. One ecosystem, one source of truth.',
     },
   ],
   newsletter: {

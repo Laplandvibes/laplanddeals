@@ -126,7 +126,7 @@ const de: SectionCopy = {
     },
     {
       title: 'Teil von #LaplandVibes',
-      body: '23+ Schwesterseiten. Ein Ökosystem, eine Quelle der Wahrheit.',
+      body: '27+ Schwesterseiten. Ein Ökosystem, eine Quelle der Wahrheit.',
     },
   ],
   newsletter: {

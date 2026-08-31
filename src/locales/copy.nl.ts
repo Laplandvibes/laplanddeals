@@ -42,12 +42,12 @@ const nl: SectionCopy = {
       {
         when: 'Nu',
         title: 'Middernachtzon, de laagste tarieven van het jaar',
-        body: 'Tot eind juli gaat de zon nauwelijks onder. Hutten aan het meer liggen ruim onder de winterprijzen, en dezelfde fjells die in februari uitverkocht waren, zijn nu stil. Het beste prijsmoment van het jaar.',
+        body: 'Tot eind juli gaat de zon nauwelijks onder. Hutten aan het meer liggen ruim onder de winterprijzen, en dezelfde fjälls die in februari uitverkocht waren, zijn nu stil. Het beste prijsmoment van het jaar.',
       },
       {
         when: 'Nu tot en met augustus',
         title: 'Wandel- en waterseizoen',
-        body: 'Pallas-Yllästunturi en de oostelijke fjells zijn droog en open. Lange dagen om te wandelen, te suppen en in het meer te zwemmen. De muggen nemen in de loop van augustus af; neem voor eind juni een hoofdnetje mee.',
+        body: 'Pallas-Yllästunturi en de oostelijke fjälls zijn droog en open. Lange dagen om te wandelen, te suppen en in het meer te zwemmen. De muggen nemen in de loop van augustus af; neem voor eind juni een hoofdnetje mee.',
       },
       {
         when: '5–15 sept.',
@@ -126,7 +126,7 @@ const nl: SectionCopy = {
     },
     {
       title: 'Onderdeel van #LaplandVibes',
-      body: '23+ zustersites. Eén ecosysteem, één bron van waarheid.',
+      body: '27+ zustersites. Eén ecosysteem, één bron van waarheid.',
     },
   ],
   newsletter: {
@@ -238,7 +238,7 @@ const nl: SectionCopy = {
   summerPage: {
     introTitle: 'Waarom u in de zomer zou gaan',
     introP1: '32 dagen lang, van 6 juni tot 7 juli, gaat de zon in het uiterste noorden niet onder, en dat verandert wat een dag is, niet alleen hoe die eruitziet. U kunt om negen uur \'s avonds aan een wandeling beginnen en bij daglicht terugkomen. In mei stort de vraag in wanneer het noorderlichtseizoen eindigt en de liften stilvallen, en dezelfde hutten aan het meer die in februari vol zaten hebben lege weken.',
-    introP2: 'Eind augustus is het tweede venster: het wandelen is op zijn best, de muggen zijn weg, en de ruska kleurt de fjells voor de eerste sneeuw. Neem een slaapmasker mee en zie het licht als de reden om te komen, niet als iets om omheen te werken.',
+    introP2: 'Eind augustus is het tweede venster: het wandelen is op zijn best, de muggen zijn weg, en de ruska kleurt de fjälls voor de eerste sneeuw. Neem een slaapmasker mee en zie het licht als de reden om te komen, niet als iets om omheen te werken.',
     eyebrow: 'Middernachtszon · 6 juni – 7 juli',
     h1Italic: 'De zomer in Lapland',
     h1: 'is de verborgen aanbieding.',

@@ -130,7 +130,7 @@ const sv: SectionCopy = {
     },
     {
       title: 'En del av #LaplandVibes',
-      body: '23+ systersajter. Ett ekosystem, en sanningskälla.',
+      body: '27+ systersajter. Ett ekosystem, en sanningskälla.',
     },
   ],
   newsletter: {

@@ -42,12 +42,12 @@ const es: SectionCopy = {
       {
         when: 'Ahora mismo',
         title: 'Sol de medianoche, las tarifas más bajas del año',
-        body: 'Hasta julio el sol apenas se pone. Las cabañas junto al lago salen muy por debajo de los precios de invierno, y los mismos fjells que se agotaron en febrero están tranquilos. La mejor ventana de calidad-precio del año.',
+        body: 'Hasta julio el sol apenas se pone. Las cabañas junto al lago salen muy por debajo de los precios de invierno, y los mismos fjälls que se agotaron en febrero están tranquilos. La mejor ventana de calidad-precio del año.',
       },
       {
         when: 'De ahora a agosto',
         title: 'Temporada de senderismo y agua',
-        body: 'Pallas-Yllästunturi y los fjells del este están secos y abiertos. Días largos para caminar, hacer SUP y bañarse en los lagos. Los mosquitos aflojan a lo largo de agosto; lleve una red para la cabeza a finales de junio.',
+        body: 'Pallas-Yllästunturi y los fjälls del este están secos y abiertos. Días largos para caminar, hacer SUP y bañarse en los lagos. Los mosquitos aflojan a lo largo de agosto; lleve una red para la cabeza a finales de junio.',
       },
       {
         when: '5-15 sep',
@@ -126,7 +126,7 @@ const es: SectionCopy = {
     },
     {
       title: 'Parte de #LaplandVibes',
-      body: 'Más de 23 sitios hermanos. Un ecosistema, una sola fuente de verdad.',
+      body: 'Más de 27 sitios hermanos. Un ecosistema, una sola fuente de verdad.',
     },
   ],
   newsletter: {
@@ -238,7 +238,7 @@ const es: SectionCopy = {
   summerPage: {
     introTitle: 'Por qué merece la pena ir en verano',
     introP1: 'Durante 32 días, del 6 de junio al 7 de julio, el sol no se pone en el extremo norte, y eso cambia lo que es un día, no sólo su aspecto. Puede empezar una caminata a las nueve de la noche y volver con luz. La demanda se desploma en mayo, cuando acaba la temporada de auroras y paran los remontes: las mismas cabañas junto al lago que estaban llenas en febrero tienen semanas libres.',
-    introP2: 'Finales de agosto es la otra ventana: el senderismo está en su mejor momento, los mosquitos se han ido y el ruska tiñe los fjells antes de la primera nieve. Lleve un antifaz y tome la luz como el motivo para venir, no como algo que hay que sortear.',
+    introP2: 'Finales de agosto es la otra ventana: el senderismo está en su mejor momento, los mosquitos se han ido y el ruska tiñe los fjälls antes de la primera nieve. Lleve un antifaz y tome la luz como el motivo para venir, no como algo que hay que sortear.',
     eyebrow: 'Sol de medianoche · 6 jun – 7 jul',
     h1Italic: 'El verano en Laponia',
     h1: 'es la oferta secreta.',
