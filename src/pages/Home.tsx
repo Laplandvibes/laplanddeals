@@ -92,7 +92,7 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
   },
   sv: {
     title: 'LaplandDeals: sista minuten-erbjudanden till finska Lappland',
-    desc: 'Partnernas live-priser på hotell i Lappland, huskysafarier, flyg till Rovaniemi och biluthyrning. Sista minuten-priser, slutrea på säsongen och sommarerbjudanden.',
+    desc: 'Partnernas live-priser på hotell i Lappland, huskysafarier, flyg till Rovaniemi och biluthyrning. Sista minuten-priser, säsongens slutrea och sommarerbjudanden.',
   },
 };
 

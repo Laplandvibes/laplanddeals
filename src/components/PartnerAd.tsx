@@ -213,7 +213,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: 'Tous les hébergements de Laponie au même endroit, des igloos de verre au pied des pistes, au tarif du jour.',
       it: 'Tutti gli alloggi della Lapponia in un solo posto, dagli igloo di vetro al bordo pista, alla tariffa di oggi.',
       nl: 'Alle accommodaties in Lapland op één plek, van glazen iglo tot hotel aan de piste, tegen het tarief van vandaag.',
-      sv: 'Allt boende i Lappland på ett ställe, från glasiglos till skidnära, till dagens live-pris.',
+      sv: 'Allt boende i Lappland på ett ställe, från glasigloor till skidnära, till dagens live-pris.',
     },
     points: {
       en: ['Hotels, cabins and glass igloos', 'Live prices and availability', 'One search for all of Lapland'],
@@ -227,7 +227,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       fr: ['Hôtels, chalets et igloos de verre', 'Prix et disponibilités en temps réel', 'Toute la Laponie en une seule recherche'],
       it: ['Hotel, baite e igloo di vetro', 'Prezzi e disponibilità in tempo reale', 'Tutta la Lapponia in una sola ricerca'],
       nl: ["Hotels, hutten en glazen iglo's", 'Prijzen en beschikbaarheid in realtime', 'Heel Lapland in één zoekopdracht'],
-      sv: ['Hotell, stugor och glasiglos', 'Priser och tillgänglighet i realtid', 'Hela Lappland i en enda sökning'],
+      sv: ['Hotell, stugor och glasigloor', 'Priser och tillgänglighet i realtid', 'Hela Lappland i en enda sökning'],
     },
     cta: {
       en: 'Search Lapland stays', fi: 'Hae Lapin majoitukset', de: 'Lappland-Unterkünfte suchen',

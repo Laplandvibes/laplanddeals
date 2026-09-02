@@ -20,7 +20,7 @@ const sv: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'sista minuten-erbjudanden.',
     lead:
-      'Frigjorda hotellnätter, osålda platser på husky- och skoterturer, billiga paket och lediga stugor, allt på ett ställe. Ett klick tar dig direkt till partnerns aktuella pris.',
+      'Frisläppta hotellnätter, osålda platser på husky- och skoterturer, billiga paket och lediga stugor, allt på ett ställe. Ett klick tar dig direkt till partnerns aktuella pris.',
     primary: 'Kvällens hotellerbjudanden',
     secondary: 'Billiga norrskensturer',
     eyebrowSummer: 'Last minute · Billiga erbjudanden · Midnattssol',
@@ -61,17 +61,17 @@ const sv: SectionCopy = {
       {
         when: 'Julen 2026',
         title: 'Fylls redan upp',
-        body: 'Glasiglos och familjerum i Santa Claus Village stänger oftast för bokning i slutet av augusti. Julaftonsmiddagar och renslädsturer brukar vara borta i oktober.',
+        body: 'Glasigloor och familjerum i Santa Claus Village stänger oftast för bokning i slutet av augusti. Julaftonsmiddagar och renslädsturer brukar vara slutsålda i oktober.',
       },
       {
         when: 'Rätt läge för biljetter',
         title: '4–8 veckor innan från Helsingfors',
-        body: 'Finnairs och Norwegians tur och retur Helsingfors→Lappland hamnar i spannet 89–129 € när du bokar 4–8 veckor i förväg, utanför topparna vid jul, påsk och februari.',
+        body: 'Tur och retur Helsingfors–Lappland med Finnair och Norwegian hamnar i spannet 89–129 € när du bokar 4–8 veckor i förväg, utanför topparna vid jul, påsk och februari.',
       },
       {
         when: 'Från slutet av augusti',
         title: 'Norrskenssäsongen börjar igen',
-        body: 'Det aktiva fönstret varar ungefär från slutet av augusti till början av april. Saariselkä, Inari och Utsjoki har de högsta chanserna att se norrsken. Turerna avbokas oftast fram till 24 h innan, så de är lätta att lägga till sent.',
+        body: 'Det aktiva fönstret varar ungefär från slutet av augusti till början av april. Saariselkä, Inari och Utsjoki har de högsta chanserna att se norrsken. Turerna kan oftast avbokas fram till 24 h innan, så de är lätta att lägga till sent.',
       },
     ],
   },
@@ -93,14 +93,14 @@ const sv: SectionCopy = {
     summerEyebrow: 'Midnattssol · 6 juni – 7 juli',
     summerTitle: 'Sommaren i Lappland är det dolda fyndet.',
     summerLead:
-      '32 dygn går solen aldrig ner. Stugor vid sjön för en bråkdel av decemberpriserna. Vandringen kulminerar i slutet av augusti, ren luft, inga myggor, guldgul ruska.',
+      'I 32 dygn går solen aldrig ner. Stugor vid sjön för en bråkdel av decemberpriserna. Vandringen kulminerar i slutet av augusti, ren luft, inga myggor, guldgul ruska.',
     summerCta: 'Bläddra bland sommaren',
 
     everythingEyebrow: 'Allt',
     everythingTitle: 'Dagens katalog.',
   },
   tiles: [
-    { label: 'Hotell & stugor', hint: 'Glasiglos · Vid backen · Vildmarkslodger' },
+    { label: 'Hotell & stugor', hint: 'Glasigloor · Vid backen · Vildmarkslodger' },
     { label: 'Aktiviteter', hint: 'Husky · Norrsken · Skoter · Ren' },
     { label: 'Flyg', hint: 'Helsingfors till Rovaniemi · Kittilä · Ivalo · Kuusamo' },
     { label: 'Biluthyrning', hint: 'Fyrhjulsdrift · Dubbdäck · Upphämtning på flygplatsen' },
@@ -170,10 +170,10 @@ const sv: SectionCopy = {
     h1Italic: 'Lapplands hotell',
     h1: 'priser i realtid, i kväll.',
     sub:
-      'Glasiglos under norrskensbältet, boende vid backen i Levi, vildmarkslodger i Ylläs, familjehotell i Rovaniemi. Jämför kvällens priser i realtid.',
-    seoTitle: 'Lappland hotellerbjudanden, glasiglos, vid backen, vildmarksstugor',
+      'Glasigloor under norrskensbältet, boende vid backen i Levi, vildmarkslodger i Ylläs, familjehotell i Rovaniemi. Jämför kvällens priser i realtid.',
+    seoTitle: 'Hotellerbjudanden i Lappland: glasigloor, vid backen, vildmarksstugor',
     seoDesc:
-      'Priser i realtid på glasiglos, ski-in-boende, familjehotell och vildmarkslodger i finska Lappland. Stugnätter i sista minuten och i slutet av säsongen.',
+      'Priser i realtid på glasigloor, ski-in-boende, familjehotell och vildmarkslodger i finska Lappland. Stugnätter i sista minuten och i slutet av säsongen.',
     bottomTitle: 'Ser du inte ditt resmål?',
     bottomLead: 'Sök vilken ort som helst i Lappland direkt på Trip.com.',
     bottomCta: 'Bläddra bland alla hotell i Lappland →',
@@ -183,8 +183,8 @@ const sv: SectionCopy = {
     h1Italic: 'Aktiviteter i Lappland',
     h1: 'tillgänglighet i realtid.',
     sub:
-      'Huskysafarier, norrskensturer, skoterexpeditioner, besök på rengårdar, pimpelfiske. Tillgänglighet i realtid på GetYourGuide, inga falska timers, ingen påhittad procent.',
-    seoTitle: 'Lappland aktivitetserbjudanden, husky, norrsken, skoter m.m.',
+      'Huskysafarier, norrskensturer, skoterexpeditioner, besök på rengårdar, pimpelfiske. Tillgänglighet i realtid på GetYourGuide, inga falska nedräkningar, ingen påhittad procent.',
+    seoTitle: 'Aktivitetserbjudanden i Lappland: husky, norrsken, skoter m.m.',
     seoDesc:
       'GetYourGuide-priser i realtid på huskysafarier, norrskensturer, skoterturer, rengårdar och pimpelfiske i finska Lappland. Platser i sista minuten.',
     bottomTitle: 'Bläddra i hela Lappland-katalogen',
@@ -193,7 +193,7 @@ const sv: SectionCopy = {
   },
   flightsPage: {
     introTitle: 'Vilken flygplats i Lappland du faktiskt bör flyga till',
-    introP1: 'Det finns fyra praktiska portar från Helsingfors, och den rätta avgörs av var du sover, inte av biljettpriset. Rovaniemi betjänar staden själv, Ounasvaara och den östliga vägen. Kittilä är den korta transfern till Levi och Ylläs. Ivalo täcker Saariselkä och Enare, det yttersta norr. Kuusamo är den för Ruka.',
+    introP1: 'Det finns fyra praktiska portar från Helsingfors, och den rätta avgörs av var du sover, inte av biljettpriset. Rovaniemi betjänar staden själv, Ounasvaara och den östliga vägen. Kittilä är den korta transfern till Levi och Ylläs. Ivalo täcker Saariselkä och Enare, längst i norr. Kuusamo är den för Ruka.',
     introP2: 'Själva flygningen tar runt en och en halv timme, så ett billigare pris till fel flygplats kan kosta dig två timmar landsväg i andra änden. Priserna hämtas live från partnern i stället för att lagras, och rutterna flygs av Finnair och Norwegian.',
     eyebrow: 'Flyg',
     h1Italic: 'Flyg till Lappland',
@@ -232,7 +232,7 @@ const sv: SectionCopy = {
     h1: 'Lapplandsresa.',
     sub:
       'Vi säljer inga färdiga paket. Vi väljer ut byggstenarna, flyg, boende, huskydagar, norrskensturer, och du bokar varje del till partnerns pris i realtid. Ingen mellanhandsavgift.',
-    seoTitle: 'Lappland paketerbjudanden, norrskensvecka, familjeresor, weekender',
+    seoTitle: 'Paketerbjudanden i Lappland: norrskensvecka, familjeresor, weekender',
     seoDesc:
       'Idéer för flerdagarsresor i Lappland: norrskensvecka i Saariselkä, familjeresor i Rovaniemi, weekendresor. Varje del bokas separat till partnerns priser i realtid.',
     curatedTitle: 'Utvalda reseidéer',
@@ -242,15 +242,15 @@ const sv: SectionCopy = {
   summerPage: {
     introTitle: 'Argumenten för att åka på sommaren',
     introP1: 'Under 32 dagar, från 6 juni till 7 juli, går solen inte ner i nordligaste Lappland, och det förändrar vad en dag är och inte bara hur den ser ut. Du kan starta en vandring klockan nio på kvällen och komma tillbaka i dagsljus. Efterfrågan faller i maj när norrskenssäsongen tar slut och liftarna stannar, så samma sjönära stugor som var fullbokade i februari har tomma veckor.',
-    introP2: 'Slutet av augusti är det andra fönstret: vandringen är som bäst, myggen är borta, och ruskan färgar fjällen före första snön. Ta med en sovmask och se ljuset som skälet att åka, inte som något att jobba runt.',
+    introP2: 'Slutet av augusti är det andra fönstret: vandringen är som bäst, myggen är borta, och ruskan färgar fjällen före första snön. Ta med en sovmask och se ljuset som skälet att åka, inte som ett problem att hantera.',
     eyebrow: 'Midnattssol · 6 juni – 7 juli',
     h1Italic: 'Sommaren i Lappland',
     h1: 'är det dolda fyndet.',
     sub:
-      '32 dygn går solen aldrig ner. Stugor vid sjön för en bråkdel av decemberpriserna. Vandringen kulminerar i slutet av augusti, ren luft, inga myggor, guldgul ruska.',
-    seoTitle: 'Lappland sommarerbjudanden, boende i midnattssol och vandring',
+      'I 32 dygn går solen aldrig ner. Stugor vid sjön för en bråkdel av decemberpriserna. Vandringen kulminerar i slutet av augusti, ren luft, inga myggor, guldgul ruska.',
+    seoTitle: 'Sommarerbjudanden i Lappland: boende i midnattssol och vandring',
     seoDesc:
-      '32 dygn går solen aldrig ner i finska Lappland (6 juni – 7 juli). Stugerbjudanden i midnattssol, vandring i Pallas-Yllästunturi, sommarboende vid sjön för en bråkdel av vinterpriserna.',
+      'I 32 dygn går solen aldrig ner i finska Lappland (6 juni – 7 juli). Stugerbjudanden i midnattssol, vandring i Pallas-Yllästunturi, sommarboende vid sjön för en bråkdel av vinterpriserna.',
     offersTitle: 'Sommarerbjudanden, partnerns priser i realtid',
     offersFallback: 'Sommarerbjudanden håller på att väljas ut, kom tillbaka snart.',
     reasonsTitle: 'Tre ärliga skäl till att sommaren är billigare',
@@ -272,24 +272,24 @@ const sv: SectionCopy = {
   },
   faq: {
     eyebrow: 'Bra att veta',
-    title: 'Lappland-erbjudanden, dina frågor, besvarade.',
+    title: 'Lapplandserbjudanden: dina frågor, besvarade.',
     lead: 'Ärliga svar om tajming, bokningsfönster och vad du kan vänta dig. Inga påhittade priser, ingen falsk brådska.',
     items: [
       {
         q: 'När är det billigast att besöka Lappland?',
-        a: 'Sen vår och sommar, ungefär maj till augusti, är lugnast och mest prisvärt. Norrskenssäsongen är slut och skidorterna har stängt, så stugor vid sjön som var slutsålda i februari står tomma. Inom vintern är mellansäsongsveckorna (mitten av mars till mitten av april) billigare än topparna vid jul och februarilovet, samtidigt som snön är full och dagarna längre.',
+        a: 'Sen vår och sommar, ungefär maj till augusti, är lugnast och mest prisvärda. Norrskenssäsongen är slut och skidorterna har stängt, så stugor vid sjön som var slutsålda i februari står tomma. Inom vintern är mellansäsongsveckorna (mitten av mars till mitten av april) billigare än topparna vid jul och sportlovet, samtidigt som snötäcket är som djupast och dagarna längre.',
       },
       {
         q: 'Hur långt i förväg bör jag boka en Lapplandsresa?',
-        a: 'Det beror på säsongen. Jul och nyår är tightast: glasiglos och familjerum i Santa Claus Village stänger ofta för bokning i slutet av augusti. Norrskenssäsongen (ungefär november till mars) är lugnare, men populära helger fylls tidigt. Vår, sommar och höst kräver sällan flera månaders framförhållning. Flyg från Helsingfors brukar vara billigast bokat några veckor i förväg, utanför topparna vid jul, påsk och februarilovet.',
+        a: 'Det beror på säsongen. Jul och nyår är tajtast: glasigloor och familjerum i Santa Claus Village stänger ofta för bokning i slutet av augusti. Norrskenssäsongen (ungefär november till mars) är lugnare, men populära helger fylls tidigt. Vår, sommar och höst kräver sällan flera månaders framförhållning. Flyg från Helsingfors brukar vara billigast bokat några veckor i förväg, utanför topparna vid jul, påsk och sportlovet.',
       },
       {
         q: 'Är sista minuten-erbjudanden i Lappland värda det?',
-        a: 'Ofta, ja, utanför de få topparna. När en stuga, huskyplats eller norrskenstur har osålda platser nära datumet släpper partnern dem till priset i realtid, och norrskens- och huskyturer tar ofta emot bokningar fram till cirka 24 timmar innan. Undantagen är jul, nyår, påsk (pääsiäinen) och februarilovet, när efterfrågan är hög och det sällan lönar sig att vänta.',
+        a: 'Ofta, ja, utanför de få topparna. När en stuga, huskyplats eller norrskenstur har osålda platser nära datumet släpper partnern dem till priset i realtid, och norrskens- och huskyturer tar ofta emot bokningar fram till cirka 24 timmar innan. Undantagen är jul, nyår, påsk (pääsiäinen) och sportlovet, när efterfrågan är hög och det sällan lönar sig att vänta.',
       },
       {
         q: 'Vad ingår i ett typiskt Lappland-paket?',
-        a: 'Det varierar mellan arrangörer, så läs alltid vad som ingår. Ett vanligt paket kombinerar några nätters boende med en eller två aktiviteter, en huskysafari, en norrskenstur eller en skoterresa, och ibland flygplatstransfer. På LaplandDeals säljer vi inga färdiga paket; vi väljer ut byggstenarna (flyg, boende, aktiviteter, biluthyrning) så att du bokar varje del till partnerns pris i realtid utan mellanhandsavgift.',
+        a: 'Det varierar mellan arrangörer, så läs alltid vad som ingår. Ett vanligt paket kombinerar några nätters boende med en eller två aktiviteter, en huskysafari, en norrskenstur eller en skotertur, och ibland flygplatstransfer. På LaplandDeals säljer vi inga färdiga paket; vi väljer ut byggstenarna (flyg, boende, aktiviteter, biluthyrning) så att du bokar varje del till partnerns pris i realtid utan mellanhandsavgift.',
       },
       {
         q: 'Hur hittar jag äkta rabatter i Lappland?',
@@ -302,7 +302,7 @@ const sv: SectionCopy = {
     title: 'Mer från nätverket #LaplandVibes.',
     lead: 'Systersajter som går djupare på ett hörn av en Lapplandsresa. Var och en öppnas i en ny flik.',
     links: [
-      { anchor: 'hotellerbjudanden & paket', blurb: 'Glasiglos, norrskenssviter och familjeresorter i finska Lappland.' },
+      { anchor: 'hotellerbjudanden & paket', blurb: 'Glasigloor, norrskenssviter och familjeresorter i finska Lappland.' },
       { anchor: 'erbjudanden på aktiviteter & safarier', blurb: 'Huskysafarier, norrskensturer, skoterturer och rengårdar med tillgänglighet i realtid.' },
       { anchor: 'all-inclusive-turpaket', blurb: 'Guidade flerdagarsupplägg som syr ihop boende, transfer och aktiviteter.' },
     ],
