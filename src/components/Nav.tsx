@@ -26,7 +26,7 @@ export default function Nav() {
     'Idioma', '语言', '언어', 'Langue', 'Lingua', 'Taal', 'Språk');
   const ariaToggleMenu = pick(lang,
     'Toggle menu', 'Avaa/sulje valikko', 'Menü umschalten', 'メニューを開閉する', 'Alternar menú',
-    'Alternar menu', '切换菜单', '메뉴 열기/닫기', 'Basculer le menu', 'Apri/chiudi menu', 'Menu wisselen', 'Växla meny');
+    'Alternar menu', '切换菜单', '메뉴 열기/닫기', 'Basculer le menu', 'Apri/chiudi menu', 'Menu openen/sluiten', 'Växla meny');
 
   const navLinks = [
     { label: c.hotels,     to: to('/hotels') },

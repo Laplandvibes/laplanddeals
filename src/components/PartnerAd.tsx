@@ -146,7 +146,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       ko: '허스키·오로라·스노모빌 투어: 지금 예약, 나중에 결제, 24시간 전까지 무료 취소.',
       fr: 'Excursions husky, aurores et motoneige: réservez maintenant, payez plus tard, annulez gratuitement jusqu’à 24 h.',
       it: 'Tour husky, aurora e motoslitta: prenota ora, paga dopo, cancella gratis fino a 24 h.',
-      nl: "Husky-, aurora- en sneeuwscootertochten: reserveer nu, betaal later, gratis annuleren tot 24 u.",
+      nl: "Husky-, noorderlicht- en sneeuwscootertochten: reserveer nu, betaal later, gratis annuleren tot 24 u.",
       sv: 'Husky-, norrskens- och skoterturer: boka nu, betala senare, avboka gratis fram till 24 h innan.',
     },
     points: {
@@ -212,7 +212,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       ko: '라플란드의 모든 숙소를 한곳에, 글래스 이글루부터 슬로프 사이드까지, 오늘의 실시간 요금으로.',
       fr: 'Tous les hébergements de Laponie au même endroit, des igloos de verre au pied des pistes, au tarif du jour.',
       it: 'Tutti gli alloggi della Lapponia in un solo posto, dagli igloo di vetro al bordo pista, alla tariffa di oggi.',
-      nl: 'Al het verblijf in Lapland op één plek, van glazen iglo tot aan de piste, tegen het tarief van vandaag.',
+      nl: 'Alle accommodaties in Lapland op één plek, van glazen iglo tot hotel aan de piste, tegen het tarief van vandaag.',
       sv: 'Allt boende i Lappland på ett ställe, från glasiglos till skidnära, till dagens live-pris.',
     },
     points: {
@@ -233,7 +233,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       en: 'Search Lapland stays', fi: 'Hae Lapin majoitukset', de: 'Lappland-Unterkünfte suchen',
       ja: 'ラップランドの宿を探す', es: 'Buscar alojamiento en Laponia', 'pt-BR': 'Buscar hospedagem na Lapônia',
       'zh-CN': '搜索拉普兰住宿', ko: '라플란드 숙소 검색', fr: 'Rechercher un hébergement en Laponie',
-      it: 'Cerca alloggi in Lapponia', nl: 'Zoek verblijf in Lapland', sv: 'Sök boende i Lappland',
+      it: 'Cerca alloggi in Lapponia', nl: 'Zoek een verblijf in Lapland', sv: 'Sök boende i Lappland',
     },
     note: {
       en: 'Opens Trip.com: live rooms and prices.',
