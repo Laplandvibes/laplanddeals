@@ -16,12 +16,12 @@ const es: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'más baratas de Laponia.',
     lead:
-      'Noches de hotel liberadas, plazas libres en safaris de huskies y motos de nieve, paquetes baratos y cabañas disponibles, todo en un solo sitio. Un clic te lleva directo al precio actual del socio.',
+      'Noches de hotel liberadas, plazas libres en safaris de huskies y motos de nieve, paquetes baratos y cabañas disponibles, todo en un solo sitio. Un clic le lleva directo al precio actual del socio.',
     primary: 'Ofertas de hotel para esta noche',
     secondary: 'Tours de auroras baratos',
     eyebrowSummer: 'Last minute · Ofertas baratas · Sol de medianoche',
     leadSummer:
-      'La temporada más barata del año: cabañas bajo el sol de medianoche por menos que en invierno, plazas libres en actividades, vuelos a Rovaniemi y coches de verano. Un clic te lleva directo al precio actual del socio.',
+      'La temporada más barata del año: cabañas bajo el sol de medianoche por menos que en invierno, plazas libres en actividades, vuelos a Rovaniemi y coches de verano. Un clic le lleva directo al precio actual del socio.',
     secondarySummer: 'Ofertas de sol de medianoche',
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
@@ -157,7 +157,7 @@ const es: SectionCopy = {
     cta: 'Recibir las ofertas',
     sending: 'Enviando…',
     okTitle: 'Ya casi.',
-    okBody: 'Confirma tu suscripción desde el correo que acabamos de enviarte.',
+    okBody: 'Confirme su suscripción desde el correo que acabamos de enviarle.',
     fineprint: 'Solo cuando hay algo que merece la pena. Baja en un clic. Nunca compartimos su dirección.',
     error: 'No se ha podido suscribir ahora mismo. Inténtelo de nuevo en un momento.',
   },
@@ -268,7 +268,7 @@ const es: SectionCopy = {
   },
   faq: {
     eyebrow: 'Conviene saber',
-    title: 'Ofertas de Laponia, tus preguntas, respondidas.',
+    title: 'Ofertas de Laponia, sus preguntas, respondidas.',
     lead: 'Respuestas honestas sobre cuándo viajar, cuándo reservar y qué esperar. Sin precios inventados ni urgencia fingida.',
     items: [
       {
@@ -285,11 +285,11 @@ const es: SectionCopy = {
       },
       {
         q: '¿Qué incluye un paquete típico de Laponia?',
-        a: 'Varía según el operador, así que lee siempre lo que incluye. Un paquete habitual combina algunas noches de alojamiento con una o dos actividades, un safari en husky, una caza de auroras o una excursión en moto de nieve, y a veces traslados al aeropuerto. En LaplandDeals no vendemos paquetes cerrados: seleccionamos las piezas (vuelos, alojamientos, actividades, alquiler de coche) y tú reservas cada una al precio en tiempo real del socio, sin comisión de intermediario.',
+        a: 'Varía según el operador, así que lea siempre lo que incluye. Un paquete habitual combina algunas noches de alojamiento con una o dos actividades, un safari en husky, una caza de auroras o una excursión en moto de nieve, y a veces traslados al aeropuerto. En LaplandDeals no vendemos paquetes cerrados: seleccionamos las piezas (vuelos, alojamientos, actividades, alquiler de coche) y usted reserva cada una al precio en tiempo real del socio, sin comisión de intermediario.',
       },
       {
         q: '¿Cómo encontrar descuentos auténticos en Laponia?',
-        a: 'Compara el precio en tiempo real del socio con la tarifa habitual del alojamiento o el operador, en lugar de fiarte de un porcentaje llamativo. Viaja en temporada media o en verano, alójate algo apartado de los centros más concurridos y reserva las actividades directamente en plataformas de confianza. Cada precio en LaplandDeals enlaza directamente con la tarifa actual del socio: nunca inventamos porcentajes ni mostramos cuentas atrás falsas.',
+        a: 'Compare el precio en tiempo real del socio con la tarifa habitual del alojamiento o el operador, en lugar de fiarte de un porcentaje llamativo. Viaja en temporada media o en verano, alójate algo apartado de los centros más concurridos y reserva las actividades directamente en plataformas de confianza. Cada precio en LaplandDeals enlaza directamente con la tarifa actual del socio: nunca inventamos porcentajes ni mostramos cuentas atrás falsas.',
       },
     ],
   },
