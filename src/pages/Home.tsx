@@ -51,7 +51,7 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
     desc: 'Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers.',
   },
   fi: {
-    title: 'LaplandDeals: Last-minute-tarjoukset Suomen Lappiin',
+    title: 'LaplandDeals: Last minute -tarjoukset Suomen Lappiin',
     desc: 'Kumppaneiden live-tarjoukset Lapin hotelleihin, huskysafareihin, lentoihin Rovaniemelle ja autovuokrauksiin. Last-minute-hinnat, kauden lopun mökkiyöt ja kesätarjoukset.',
   },
   de: {
@@ -60,7 +60,7 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
   },
   ja: {
     title: 'LaplandDeals：フィンランド・ラップランドのお得な旅行プラン',
-    desc: 'ラップランドのホテル、ハスキーサファリ、ロヴァニエミ行き航空券、レンタカーの最新パートナーオファー。直前価格・シーズン終了セール・夏季オファーを',
+    desc: 'ラップランドのホテル、ハスキーサファリ、ロヴァニエミ行き航空券、レンタカーの最新パートナーオファー。直前価格・シーズン終了セール・夏季オファーをまとめてご紹介します。',
   },
   es: {
     title: 'LaplandDeals: Ofertas de última hora para la Laponia finlandesa',

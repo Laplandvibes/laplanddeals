@@ -17,7 +17,7 @@
       "related"
     ],
     "fallbackTitleByLang": {
-      "fi": "LaplandDeals: Last-minute-tarjoukset Suomen Lappiin",
+      "fi": "LaplandDeals: Last minute -tarjoukset Suomen Lappiin",
       "de": "LaplandDeals: Last-Minute-Angebote für Finnisch-Lappland",
       "ja": "LaplandDeals：フィンランド・ラップランドのお得な旅行プラン",
       "es": "LaplandDeals: Ofertas de última hora para la Laponia finlandesa",
@@ -32,7 +32,7 @@
     "fallbackDescriptionByLang": {
       "fi": "Kumppaneiden live-tarjoukset Lapin hotelleihin, huskysafareihin, lentoihin Rovaniemelle ja autovuokrauksiin. Last-minute-hinnat, kauden lopun mökkiyöt ja kesätarjoukset.",
       "de": "Live-Partnerangebote für Hotels in Lappland, Husky-Safaris, Flüge nach Rovaniemi und Mietwagen. Last-Minute-Preise, Saisonende-Rabatte, Sommerangebote.",
-      "ja": "ラップランドのホテル、ハスキーサファリ、ロヴァニエミ行き航空券、レンタカーの最新パートナーオファー。直前価格・シーズン終了セール・夏季オファーを",
+      "ja": "ラップランドのホテル、ハスキーサファリ、ロヴァニエミ行き航空券、レンタカーの最新パートナーオファー。直前価格・シーズン終了セール・夏季オファーをまとめてご紹介します。",
       "es": "Ofertas reales de los socios en hoteles de Laponia, safaris en husky, vuelos a Rovaniemi y alquiler de coches. Precios de última hora, descensos de fin de temporada y ofertas de verano.",
       "pt-BR": "Ofertas reais dos parceiros em hotéis da Lapônia, safáris com huskies, voos para Rovaniemi e aluguel de carro. Preços de última hora, promoções de fim de temporada e ofertas de verão.",
       "zh-CN": "拉普兰酒店、哈士奇雪橇、罗瓦涅米航班和租车的合作伙伴实时优惠。临时折扣、季末清仓、夏季优惠。",
@@ -311,7 +311,7 @@
       "nl": "Cookiebeleid | LaplandDeals",
       "ja": "クッキーポリシー | LaplandDeals",
       "ko": "쿠키 정책 | LaplandDeals",
-      "zh-CN": "Cookie政策 | LaplandDeals",
+      "zh-CN": "Cookie 政策 | LaplandDeals",
       "pt-BR": "Política de cookies | LaplandDeals"
     },
     "fallbackDescriptionByLang": {

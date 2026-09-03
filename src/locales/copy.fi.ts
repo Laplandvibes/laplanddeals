@@ -16,12 +16,12 @@ const fi: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'viime hetken diilit.',
     lead:
-      'Vapautuneet hotelliyöt, täyttymättömät husky- ja kelkkaretket, edulliset paketit ja vapaat mökit yhdessä paikassa. Klikkaus vie suoraan kumppanille, jossa näet ja varaat senhetkisen hinnan.',
+      'Vapautuneet hotelliyöt, täyttymättömät husky- ja kelkkaretket, edulliset paketit ja vapaat mökit yhdessä paikassa. Klikkaus vie kumppanin sivulle, jossa näet ja varaat ajantasaisen hinnan.',
     primary: 'Illan hotellidiilit',
     secondary: 'Halvat revontuliretket',
     eyebrowSummer: 'Last minute · Vapautuneet paikat · Yötön yö',
     leadSummer:
-      'Vuoden halvin sesonki: yöttömän yön mökit alle talvihintojen, vapaat retkipaikat, lennot Rovaniemelle ja kesän vuokra-autot. Klikkaus vie suoraan kumppanille, jossa näet ja varaat senhetkisen hinnan.',
+      'Vuoden halvin kausi: yöttömän yön mökit talvihintoja halvemmalla, vapaat retkipaikat, lennot Rovaniemelle ja kesän vuokra-autot. Klikkaus vie kumppanin sivulle, jossa näet ja varaat ajantasaisen hinnan.',
     secondarySummer: 'Yötön yö -diilit',
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
@@ -29,7 +29,7 @@ const fi: SectionCopy = {
   flashBand: {
     leadBold: 'Suoraan kumppanin hinta',
     leadRest:
-      ' · klikkaus vie kumppanin sivulle, jossa näet hinnan. Emme keksi prosentteja emmekä pyöritä valeajastimia.',
+      ' · klikkaus vie kumppanin sivulle, jossa näet hinnan. Emme keksi prosentteja emmekä pyöritä tekaistuja lähtölaskentoja.',
     cta: 'Tämän illan hotellit →',
   },
   pulse: {
@@ -37,27 +37,27 @@ const fi: SectionCopy = {
     titleItalic: 'Mitä',
     titleRest: 'Lapissa tapahtuu juuri nyt.',
     lead:
-      'Konkreettisia kausifaktoja, ei keksittyjä ajastimia. Päivitämme tämän aina, kun tilanne muuttuu.',
+      'Konkreettista tietoa kaudesta, ei tekaistuja lähtölaskentoja. Päivitämme tämän aina, kun tilanne muuttuu.',
     items: [
       {
         when: 'Juuri nyt',
         title: 'Yötön yö, vuoden halvimmat hinnat',
-        body: 'Heinäkuun loppuun asti aurinko tuskin laskee. Järvenrantamökit selvästi alle talvihintojen, ja samat tunturit, jotka myytiin loppuun helmikuussa, ovat nyt hiljaisia. Vuoden paras hinta-laatuikkuna.',
+        body: 'Heinäkuun loppuun asti aurinko tuskin laskee. Järvenrantamökit selvästi alle talvihintojen, ja samat tunturit, jotka myytiin loppuun helmikuussa, ovat nyt hiljaisia. Vuoden paras hinta-laatusuhde.',
       },
       {
         when: 'Nyt elokuun loppuun',
         title: 'Vaellus- ja vesikausi',
-        body: 'Pallas-Yllästunturi ja itäiset tunturit ovat kuivia ja auki. Pitkät päivät vaellukseen, SUP-lautailuun ja järviuintiin. Hyttyset helpottavat elokuuta kohti; ota niskaverkko mukaan kesäkuun lopulla.',
+        body: 'Pallas-Yllästunturi ja itäiset tunturit ovat kuivia ja auki. Pitkät päivät vaellukseen, SUP-lautailuun ja järviuintiin. Hyttyset helpottavat elokuuta kohti; ota hyttyshattu mukaan kesäkuun lopulla.',
       },
       {
         when: '5.–15.9.',
         title: 'Ruska: syysvärit huippuun nopeasti',
-        body: 'Vaivaiskoivu kääntyy kullalle noin kolmessa päivässä. Mökit ovat yhä edullisia ja ilma on Euroopan puhtainta (WMO). Myös revontulet palaavat öiden pimentyessä.',
+        body: 'Vaivaiskoivu värjäytyy kullankeltaiseksi noin kolmessa päivässä. Mökit ovat yhä edullisia ja ilma on Euroopan puhtainta (WMO). Myös revontulet palaavat öiden pimentyessä.',
       },
       {
         when: 'Joulu 2026',
         title: 'Jo nyt täyttymässä',
-        body: 'Lasi-iglut ja Joulupukin Pajakylän perhehuoneet sulkeutuvat varauksilta yleensä elokuun lopulla. Jouluaaton illalliset ja porotila-ajelut: useimmiten myyty loppuun lokakuuhun mennessä.',
+        body: 'Lasi-iglut ja Joulupukin pajakylän perhehuoneet on yleensä varattu loppuun jo elokuussa. Jouluaaton illalliset ja porotila-ajelut: useimmiten myyty loppuun lokakuuhun mennessä.',
       },
       {
         when: 'Lippujen makea piste',
@@ -67,7 +67,7 @@ const fi: SectionCopy = {
       {
         when: 'Elokuun lopusta alkaen',
         title: 'Revontulisesonki alkaa taas',
-        body: 'Aktiivinen kausi kulkee suunnilleen elokuun lopusta huhtikuun alkuun. Saariselkä, Inari ja Utsjoki näyttävät korkeimmat näkyvyysprosentit. Revontulisafari peruuntuu yleensä 24 h ennen, joten sen voi lisätä myöhään.',
+        body: 'Aktiivinen kausi kestää suunnilleen elokuun lopusta huhtikuun alkuun. Saariselällä, Inarissa ja Utsjoella revontulia näkyy useimmin. Revontulisafarin voi yleensä peruuttaa vielä 24 h ennen lähtöä, joten sen voi lisätä myöhään.',
       },
     ],
   },
@@ -84,7 +84,7 @@ const fi: SectionCopy = {
     lastMinEyebrow: 'Last-minute -ikkuna',
     lastMinTitle: 'Lähdössä parin viikon sisällä?',
     lastMinLead:
-      'Mökkiöitä, huskypaikkoja ja revontulisafareita, joissa on usein last-minute-aukkoja. Vapaat paikat ja hinnan näet suoraan kumppanilta.',
+      'Mökkiöitä, huskypaikkoja ja revontulisafareita, joissa on usein vapaita paikkoja viime hetkellä. Vapaat paikat ja hinnan näet suoraan kumppanilta.',
 
     summerEyebrow: 'Yötön yö · 6.6.–7.7.',
     summerTitle: 'Lapin kesä on salainen tarjous.',
@@ -126,7 +126,7 @@ const fi: SectionCopy = {
     },
     {
       title: 'Osa #LaplandVibes-verkostoa',
-      body: '27+ sisarsivustoa. Yksi ekosysteemi, yksi totuuden lähde.',
+      body: '27+ sisarsivustoa. Yksi ekosysteemi, yksi luotettava lähde.',
     },
   ],
   newsletter: {
@@ -169,9 +169,9 @@ const fi: SectionCopy = {
       'Lasi-iglut revontulivyöhykkeellä, rinneläheiset kohteet Levillä, erämaalodget Ylläksellä, perhehotellit Rovaniemellä. Vertaile tämän illan hintoja reaaliajassa.',
     seoTitle: 'Lapin hotellitarjoukset, lasi-iglut, rinne, mökit',
     seoDesc:
-      'Senhetkiset hinnat lasi-igluihin, ski-in-majoituksiin, perhehotelleihin ja erämaalodgeihin Suomen Lapissa. Last-minute- ja kauden lopun mökkiöitä.',
+      'Ajantasaiset hinnat lasi-igluihin, rinneläheisiin majoituksiin, perhehotelleihin ja erämaalodgeihin Suomen Lapissa. Last-minute- ja kauden lopun mökkiöitä.',
     bottomTitle: 'Eikö kohdetta löytynyt?',
-    bottomLead: 'Hae mitä tahansa Lapin kuntaa suoraan Sembosta.',
+    bottomLead: 'Hae mitä tahansa Lapin paikkakuntaa suoraan Sembosta.',
     bottomCta: 'Selaa kaikkia Lapin hotelleja →',
   },
   activitiesPage: {
@@ -212,7 +212,7 @@ const fi: SectionCopy = {
     h1: 'kumppanin hinnat suoraan.',
     sub:
       'Talvirenkaat, 4WD, riittävä matka revontulijahtiin. Nouto jokaiselta Lapin lentokentältä, vertaile EconomyBookingsissa.',
-    seoTitle: 'Lapin autovuokraustarjoukset, talvirenkaat, 4WD, nouto',
+    seoTitle: 'Lapin autovuokraustarjoukset, nastarenkaat, neliveto, lentokenttänouto',
     seoDesc:
       'EconomyBookingsin senhetkiset hinnat autovuokraukseen Rovaniemen, Kittilän, Ivalon ja Kuusamon (Ruka) lentokentiltä. Talvirenkaat sisältyvät.',
     bottomTitle: 'Helsingin nouto vai yksisuuntainen palautus?',
@@ -269,7 +269,7 @@ const fi: SectionCopy = {
   faq: {
     eyebrow: 'Hyvä tietää',
     title: 'Lapin tarjoukset, vastauksia kysymyksiisi.',
-    lead: 'Rehellisiä vastauksia ajoituksesta, varausikkunoista ja siitä, mitä odottaa. Ei keksittyjä hintoja, ei tekokiirettä.',
+    lead: 'Rehellisiä vastauksia ajoituksesta, varausajoista ja siitä, mitä on odotettavissa. Ei keksittyjä hintoja, ei tekokiirettä.',
     items: [
       {
         q: 'Milloin on halvinta matkustaa Lappiin?',
@@ -285,11 +285,11 @@ const fi: SectionCopy = {
       },
       {
         q: 'Mitä tyypilliseen Lapin matkapakettiin kuuluu?',
-        a: 'Se vaihtelee toimijoittain, joten lue aina, mitä hintaan sisältyy. Yleinen kokonaisuus yhdistää muutaman yön majoituksen yhteen tai kahteen aktiviteettiin (huskysafari, revontulisafari tai moottorikelkkaretki), ja joskus mukana on lentokenttäkuljetuksia. LaplandDealsissa emme myy suljettuja paketteja: kuratoimme palaset (lennot, majoitukset, aktiviteetit, autovuokraus), ja sinä varaat jokaisen kumppanin live-hintaan ilman välityspalkkiota.',
+        a: 'Se vaihtelee toimijoittain, joten lue aina, mitä hintaan sisältyy. Yleinen kokonaisuus yhdistää muutaman yön majoituksen yhteen tai kahteen aktiviteettiin (huskysafari, revontulisafari tai moottorikelkkaretki), ja joskus mukana on lentokenttäkuljetuksia. LaplandDealsissa emme myy valmiita pakettimatkoja: kuratoimme palaset (lennot, majoitukset, aktiviteetit, autovuokraus), ja sinä varaat jokaisen kumppanin live-hintaan ilman välityspalkkiota.',
       },
       {
         q: 'Miten löydän aitoja Lapin alennuksia?',
-        a: 'Vertaa kumppanin live-hintaa kohteen tai toimijan normaaliin hintaan sen sijaan että luottaisit otsikon prosenttilukuun. Matkusta väli- tai kesäkaudella, majoitu hieman vilkkaimpien keskusten ulkopuolelle ja varaa aktiviteetit suoraan luotettavilta alustoilta. Jokainen LaplandDealsin hinta linkkaa suoraan kumppanin senhetkiseen hintaan, emme keksi prosentteja emmekä pyöritä valeajastimia.',
+        a: 'Vertaa kumppanin live-hintaa kohteen tai toimijan normaaliin hintaan sen sijaan, että luottaisit otsikon prosenttilukuun. Matkusta väli- tai kesäkaudella, majoitu hieman vilkkaimpien keskusten ulkopuolelle ja varaa aktiviteetit suoraan luotettavilta alustoilta. Jokainen LaplandDealsin hinta linkkaa suoraan kumppanin senhetkiseen hintaan, emme keksi prosentteja emmekä pyöritä valeajastimia.',
       },
     ],
   },

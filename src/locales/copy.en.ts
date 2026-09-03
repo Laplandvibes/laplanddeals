@@ -29,7 +29,7 @@ const en: SectionCopy = {
   flashBand: {
     leadBold: "Partner's own price",
     leadRest:
-      ' · one click opens the partner page with their current rate. We never invent percentages or run fake countdowns.',
+      ' · one click opens the partner’s page showing their current rate. We never invent percentages or run fake countdowns.',
     cta: "Tonight's hotels →",
   },
   pulse: {
@@ -62,12 +62,12 @@ const en: SectionCopy = {
       {
         when: 'Sweet spot for fares',
         title: '4–8 weeks out from Helsinki',
-        body: 'Finnair and Norwegian HEL→Lapland round-trips drop into the €89–129 band when booked 4–8 weeks ahead, outside the Christmas, Easter and February peaks.',
+        body: 'Finnair and Norwegian Helsinki–Lapland round-trips drop into the €89–129 band when booked 4–8 weeks ahead, outside the Christmas, Easter and February half-term peaks.',
       },
       {
         when: 'From late August',
         title: 'Aurora season starts again',
-        body: 'The active window runs roughly from late August to early April. Saariselkä, Inari and Utsjoki have the highest visible-aurora rates. Hunts usually cancel up to 24h before, so they are easy to add late.',
+        body: 'The active window runs roughly from late August to early April. Saariselkä, Inari and Utsjoki have the highest visible-aurora rates. Hunts can usually be cancelled up to 24 hours before, so they are easy to add late.',
       },
     ],
   },
@@ -89,7 +89,7 @@ const en: SectionCopy = {
     summerEyebrow: 'Midnight sun · Jun 6 – Jul 7',
     summerTitle: 'Summer in Lapland is the secret deal.',
     summerLead:
-      '32 days the sun never sets. Lakeside cabins at a fraction of December rates. Hiking peaks late August, clean air, no mosquitoes, ruska gold.',
+      '32 days the sun never sets. Lakeside cabins at a fraction of December rates. Hiking peaks in late August, clean air, no mosquitoes, ruska gold.',
     summerCta: 'Browse summer',
 
     everythingEyebrow: 'Everything',
@@ -212,7 +212,7 @@ const en: SectionCopy = {
     h1: 'live partner prices.',
     sub:
       'Studded tyres, 4WD, free aurora-chasing range. Pickup at every Lapland airport, compare on EconomyBookings.',
-    seoTitle: 'Lapland Car Hire Deals, Studded Tyres, 4WD, Airport Pickup',
+    seoTitle: 'Car Rental → Car Hire (footer link only — this hero string needs no change)',
     seoDesc:
       'Live EconomyBookings prices on car hire from Rovaniemi, Kittilä, Ivalo and Kuusamo (Ruka) airports. Studded tyres included for winter driving.',
     bottomTitle: 'Helsinki pickup or one-way drop-off?',
@@ -243,7 +243,7 @@ const en: SectionCopy = {
     h1Italic: 'Summer in Lapland',
     h1: 'is the secret deal.',
     sub:
-      '32 days the sun never sets. Lakeside cabins at a fraction of December rates. Hiking peaks late August, clean air, no mosquitoes, ruska gold.',
+      '32 days the sun never sets. Lakeside cabins at a fraction of December rates. Hiking peaks in late August, clean air, no mosquitoes, ruska gold.',
     seoTitle: 'Lapland Summer Deals, Midnight Sun Stays & Hiking',
     seoDesc:
       '32 days the sun never sets in Finnish Lapland (Jun 6 – Jul 7). Midnight-sun cabin deals, hiking in Pallas-Yllästunturi, lakeside summer stays at a fraction of winter rates.',
@@ -273,11 +273,11 @@ const en: SectionCopy = {
     items: [
       {
         q: 'When is the cheapest time to visit Lapland?',
-        a: 'Late spring and summer, roughly May through August, are the quietest and most affordable. Aurora season has ended and the ski resorts have closed, so lakeside cabins that sold out in February sit empty. Within winter, the shoulder weeks (mid-March to mid-April) are cheaper than the Christmas and February-holiday peaks while still having full snow and longer daylight.',
+        a: 'Late spring and summer, roughly May to August, are the quietest and most affordable. Aurora season has ended and the ski resorts have closed, so lakeside cabins that sold out in February sit empty. Within winter, the shoulder weeks (mid-March to mid-April) are cheaper than the Christmas and February half-term peaks and still have full snow cover and longer daylight.',
       },
       {
         q: 'How far in advance should I book a Lapland trip?',
-        a: 'It depends on the season. Christmas and New Year are the tightest: glass igloos and Santa Claus Village family rooms often close to bookings by late August. Aurora season (roughly November to March) is calmer but popular weekends fill early. Spring, summer and autumn rarely need months of lead time. Flights from Helsinki tend to be cheapest booked a few weeks out, outside the Christmas, Easter and February-break peaks.',
+        a: 'It depends on the season. Christmas and New Year are the tightest: glass igloos and Santa Claus Village family rooms often close to bookings by late August. Aurora season (roughly November to March) is calmer but popular weekends fill early. Spring, summer and autumn rarely need months of lead time. Flights from Helsinki tend to be cheapest booked a few weeks ahead, outside the Christmas, Easter and February-break peaks.',
       },
       {
         q: 'Are last-minute Lapland deals worth it?',
@@ -285,11 +285,11 @@ const en: SectionCopy = {
       },
       {
         q: "What's included in a typical Lapland package deal?",
-        a: 'It varies by operator, so always read the inclusions. A common bundle pairs a few nights of accommodation with one or two activities, a husky safari, an aurora hunt or a snowmobile tour, and sometimes airport transfers. On LaplandDeals we do not sell sealed packages; we curate the building blocks (flights, stays, activities, car hire) so you book each at the partner’s live price with no middleman fee.',
+        a: 'It varies by operator, so always read the inclusions. A common bundle pairs a few nights of accommodation with one or two activities, a husky safari, an aurora hunt or a snowmobile tour, and sometimes airport transfers. On LaplandDeals we do not sell fixed packages; we curate the building blocks (flights, stays, activities, car hire) so you book each at the partner’s live price with no middleman fee.',
       },
       {
         q: 'How can I find genuine Lapland discounts?',
-        a: 'Compare the live partner price against the property or operator’s normal rate rather than trusting a headline percentage. Travel in the shoulder or summer seasons, stay slightly outside the busiest resorts, and book activities directly through trusted platforms. Every price on LaplandDeals links straight to the partner’s current rate, we never invent percentages or run fake countdowns.',
+        a: 'Compare the live partner price against the property or operator’s normal rate rather than trusting a headline percentage. Travel in the shoulder or summer seasons, stay slightly outside the busiest resorts, and book activities directly through trusted platforms. Every price on LaplandDeals links straight to the partner’s current rate — we never invent percentages or run fake countdowns.',
       },
     ],
   },
