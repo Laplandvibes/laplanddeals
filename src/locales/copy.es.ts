@@ -16,7 +16,7 @@ const es: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'más baratas de Laponia.',
     lead:
-      'Noches de hotel liberadas, plazas libres en safaris de huskies y motos de nieve, paquetes baratos y cabañas disponibles, todo en un solo sitio. Un clic le lleva directo al precio actual del socio.',
+      'Habitaciones de hotel que se liberan, plazas libres en safaris de huskies y motos de nieve, paquetes baratos y cabañas disponibles, todo en un solo sitio. Un clic le lleva directo al precio actual del socio.',
     primary: 'Ofertas de hotel para esta noche',
     secondary: 'Tours de auroras baratos',
     eyebrowSummer: 'Last minute · Ofertas baratas · Sol de medianoche',
@@ -42,32 +42,32 @@ const es: SectionCopy = {
       {
         when: 'Ahora mismo',
         title: 'Sol de medianoche, las tarifas más bajas del año',
-        body: 'Hasta julio el sol apenas se pone. Las cabañas junto al lago salen muy por debajo de los precios de invierno, y los mismos fjälls que se agotaron en febrero están tranquilos. La mejor ventana de calidad-precio del año.',
+        body: 'Hasta julio el sol apenas se pone. Las cabañas junto al lago salen muy por debajo de los precios de invierno, y los mismos fjälls que se agotaron en febrero están tranquilos. La mejor relación calidad-precio del año.',
       },
       {
         when: 'De ahora a agosto',
         title: 'Temporada de senderismo y agua',
-        body: 'Pallas-Yllästunturi y los fjälls del este están secos y abiertos. Días largos para caminar, hacer SUP y bañarse en los lagos. Los mosquitos aflojan a lo largo de agosto; lleve una red para la cabeza a finales de junio.',
+        body: 'Pallas-Yllästunturi y los fjälls del este están secos y abiertos. Días largos para caminar, hacer SUP y bañarse en los lagos. Los mosquitos van disminuyendo a lo largo de agosto; lleve una mosquitera para la cabeza a finales de junio.',
       },
       {
         when: '5-15 sep',
-        title: 'Ruska: el color del otoño llega a su punto rápido',
+        title: 'Ruska: el color del otoño alcanza su punto álgido en pocos días',
         body: 'El abedul enano se vuelve dorado en unos tres días. Las cabañas siguen siendo asequibles y el aire es el más limpio de Europa (OMM). Las auroras boreales también regresan a medida que las noches se oscurecen.',
       },
       {
         when: 'Navidad 2026',
         title: 'Ya se está llenando',
-        body: 'Los iglús de cristal y las habitaciones familiares de Santa Claus Village suelen cerrar reservas a finales de agosto. Las cenas de Nochebuena y las plazas de trineo de renos tienden a agotarse en octubre.',
+        body: 'Los iglús de cristal y las habitaciones familiares del Pueblo de Papá Noel suelen cerrar reservas a finales de agosto. Las cenas de Nochebuena y las plazas de trineo de renos tienden a agotarse en octubre.',
       },
       {
         when: 'Mejor momento para tarifas',
         title: '4-8 semanas antes desde Helsinki',
-        body: 'Los vuelos de ida y vuelta de Finnair y Norwegian HEL→Laponia caen al rango de 89-129 € cuando se reservan con 4-8 semanas de antelación, fuera de las puntas de Navidad, Semana Santa y febrero.',
+        body: 'Los vuelos de ida y vuelta de Finnair y Norwegian HEL→Laponia caen al rango de 89–129 € cuando se reservan con 4-8 semanas de antelación, fuera de las puntas de Navidad, Semana Santa y febrero.',
       },
       {
         when: 'Desde finales de agosto',
         title: 'Vuelve la temporada de auroras',
-        body: 'La ventana activa va aproximadamente de finales de agosto a principios de abril. Saariselkä, Inari y Utsjoki tienen las tasas más altas de auroras visibles. Las cazas suelen cancelarse hasta 24 h antes, así que es fácil añadirlas a última hora.',
+        body: 'La ventana activa va aproximadamente de finales de agosto a principios de abril. Saariselkä, Inari y Utsjoki tienen las tasas más altas de auroras visibles. Las excursiones de auroras se pueden cancelar hasta 24 h antes, así que es fácil añadirlas a última hora.',
       },
     ],
   },
@@ -89,14 +89,14 @@ const es: SectionCopy = {
     summerEyebrow: 'Sol de medianoche · 6 jun – 7 jul',
     summerTitle: 'El verano en Laponia es la oferta secreta.',
     summerLead:
-      '32 días sin que el sol se ponga. Cabañas junto al lago a una fracción de las tarifas de diciembre. El senderismo llega al pico a finales de agosto, aire limpio, sin mosquitos, oro de ruska.',
+      '32 días sin que el sol se ponga. Cabañas junto al lago a una fracción de las tarifas de diciembre. El senderismo alcanza su mejor momento a finales de agosto, aire limpio, sin mosquitos, oro de ruska.',
     summerCta: 'Explorar verano',
 
     everythingEyebrow: 'Todo',
     everythingTitle: 'El catálogo de hoy.',
   },
   tiles: [
-    { label: 'Hoteles y cabañas', hint: 'Iglús de cristal · Pistas de esquí · Lodges salvajes' },
+    { label: 'Hoteles y cabañas', hint: 'Iglús de cristal · Junto a las pistas · Lodges en plena naturaleza' },
     { label: 'Actividades', hint: 'Husky · Auroras · Motonieve · Renos' },
     { label: 'Vuelos', hint: 'Helsinki a Rovaniemi · Kittilä · Ivalo · Kuusamo' },
     { label: 'Alquiler de coches', hint: '4x4 · Neumáticos con clavos · Recogida en aeropuerto' },
@@ -122,7 +122,7 @@ const es: SectionCopy = {
     },
     {
       title: 'Revisado por locales',
-      body: 'Curado por personas que viajan y escriben desde la Laponia finlandesa.',
+      body: 'Seleccionado por personas que viajan y escriben desde la Laponia finlandesa.',
     },
     {
       title: 'Parte de #LaplandVibes',
@@ -169,7 +169,7 @@ const es: SectionCopy = {
       'Iglús de cristal bajo el cinturón de auroras, alojamientos junto a las pistas en Levi, lodges salvajes en Ylläs, hoteles familiares en Rovaniemi. Compare las tarifas de esta noche en tiempo real.',
     seoTitle: 'Ofertas de hoteles en Laponia, Iglús de cristal y cabañas',
     seoDesc:
-      'Precios en directo para iglús de cristal, alojamientos ski-in, hoteles familiares y lodges salvajes en la Laponia finlandesa.',
+      'Precios en tiempo real para iglús de cristal, alojamientos junto a las pistas, hoteles familiares y lodges salvajes en la Laponia finlandesa.',
     bottomTitle: '¿No ve su destino?',
     bottomLead: 'Busque cualquier pueblo de Laponia directamente en Trip.com.',
     bottomCta: 'Ver todos los hoteles de Laponia →',
@@ -243,7 +243,7 @@ const es: SectionCopy = {
     h1Italic: 'El verano en Laponia',
     h1: 'es la oferta secreta.',
     sub:
-      '32 días sin que el sol se ponga. Cabañas junto al lago a una fracción de las tarifas de diciembre. El senderismo llega al pico a finales de agosto, aire limpio, sin mosquitos, oro de ruska.',
+      '32 días sin que el sol se ponga. Cabañas junto al lago a una fracción de las tarifas de diciembre. El senderismo alcanza su mejor momento a finales de agosto, aire limpio, sin mosquitos, oro de ruska.',
     seoTitle: 'Ofertas de verano en Laponia, Sol de medianoche',
     seoDesc:
       '32 días sin que el sol se ponga en la Laponia finlandesa (6 jun – 7 jul). Cabañas con sol de medianoche, senderismo en Pallas-Yllästunturi y estancias al lago.',
@@ -268,7 +268,7 @@ const es: SectionCopy = {
   },
   faq: {
     eyebrow: 'Conviene saber',
-    title: 'Ofertas de Laponia, sus preguntas, respondidas.',
+    title: 'Ofertas de Laponia: sus preguntas, respondidas',
     lead: 'Respuestas honestas sobre cuándo viajar, cuándo reservar y qué esperar. Sin precios inventados ni urgencia fingida.',
     items: [
       {

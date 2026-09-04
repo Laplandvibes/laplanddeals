@@ -151,7 +151,7 @@ export function footerDict(lang: Lang) {
       affiliate: 'Este sitio contiene enlaces de afiliados. Si usted reserva a través de estos enlaces, LaplandVibes puede recibir una comisión sin coste adicional para usted.',
       copyright: '© {{year}} #LaplandVibes, Parte de la red #LaplandVibes',
       websiteBy: 'Sitio web de Yrityspaketit.fi',
-      legal: { privacy: 'Política de privacidad', cookie: 'Política de cookies', terms: 'Términos de uso', contact: 'Contacto' },
+      legal: { privacy: 'Política de privacidad', cookie: 'Política de cookies', terms: 'Términos de servicio', contact: 'Contacto' },
       siteLabels: {
         hotelDeals: 'Ofertas de hoteles',
         staysCabins: 'Alojamientos y cabañas',

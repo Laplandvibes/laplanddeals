@@ -16,12 +16,12 @@ const it: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'più economiche della Lapponia.',
     lead:
-      'Notti d\'hotel liberate, posti invenduti per husky e motoslitte, pacchetti economici e baite libere, tutto in un unico posto. Un clic ti porta dritto al prezzo attuale del partner.',
+      'Camere d\'albergo che si liberano, posti invenduti nei safari con gli husky e in motoslitta, pacchetti economici e baite libere, tutto in un unico posto. Un clic La porta dritto al prezzo attuale del partner.',
     primary: 'Offerte hotel per stasera',
     secondary: 'Tour aurora economici',
     eyebrowSummer: 'Last minute · Offerte convenienti · Sole di mezzanotte',
     leadSummer:
-      'La stagione più economica dell\'anno: baite sotto il sole di mezzanotte a meno dei prezzi invernali, posti liberi nelle attività, voli per Rovaniemi e auto estive. Un clic ti porta dritto al prezzo attuale del partner.',
+      'La stagione più economica dell\'anno: baite sotto il sole di mezzanotte a meno dei prezzi invernali, posti liberi nelle attività, voli per Rovaniemi e auto estive. Un clic La porta dritto al prezzo attuale del partner.',
     secondarySummer: 'Offerte sole di mezzanotte',
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
@@ -47,33 +47,33 @@ const it: SectionCopy = {
       {
         when: 'Da adesso ad agosto',
         title: 'Stagione di trekking e acqua',
-        body: "Il Pallas-Yllästunturi e i fjäll orientali sono asciutti e aperti. Giornate lunghe per trekking, SUP e nuotate nel lago. Le zanzare si attenuano nel corso di agosto; per fine giugno portate una retina da testa.",
+        body: "Il Pallas-Yllästunturi e i fjäll orientali sono asciutti e aperti. Giornate lunghe per trekking, SUP e nuotate nel lago. Le zanzare si attenuano nel corso di agosto; per fine giugno porti una retina da testa.",
       },
       {
         when: '5–15 set.',
-        title: "Ruska: il foliage autunnale al culmine, in fretta",
-        body: "La betulla nana diventa oro in circa tre giorni. Le baite sono ancora accessibili e l'aria è la più pulita d'Europa (WMO). Con le notti che si fanno più buie torna anche l'aurora boreale.",
+        title: "Ruska: il foliage autunnale esplode e dura pochissimo",
+        body: "La betulla nana diventa oro in circa tre giorni. Le baite sono ancora accessibili e l'aria è la più pulita d'Europa (OMM). Con le notti che si fanno più buie torna anche l'aurora boreale.",
       },
       {
         when: 'Natale 2026',
         title: 'Già molto prenotato',
-        body: "Gli igloo di vetro e le camere familiari del Villaggio di Babbo Natale chiudono alle prenotazioni di solito a fine agosto. Cene di Natale e slot per le slitte di renne: in genere esauriti entro ottobre.",
+        body: "Gli igloo di vetro e le camere familiari del Villaggio di Babbo Natale di solito chiudono le prenotazioni a fine agosto. Cene di Natale e posti per i safari con le renne: in genere esauriti entro ottobre.",
       },
       {
         when: 'Fascia ottimale per le tariffe',
         title: "4-8 settimane prima da Helsinki",
-        body: "I voli A/R Finnair e Norwegian HEL→Lapponia scendono nella fascia 89-129 € se prenotati 4-8 settimane prima, esclusi i picchi di Natale, Pasqua e febbraio.",
+        body: "I voli A/R Finnair e Norwegian HEL→Lapponia scendono nella fascia 89–129 € se prenotati 4-8 settimane prima, esclusi i picchi di Natale, Pasqua e febbraio.",
       },
       {
         when: 'Da fine agosto',
         title: "Riparte la stagione dell'aurora boreale",
-        body: "La finestra attiva va all'incirca da fine agosto a inizio aprile. Saariselkä, Inari e Utsjoki hanno i tassi di aurora visibile più alti. Le cacce si cancellano spesso fino a 24 h prima, quindi sono facili da aggiungere all'ultimo.",
+        body: "La finestra attiva va all'incirca da fine agosto a inizio aprile. Saariselkä, Inari e Utsjoki hanno i tassi di aurora visibile più alti. Le escursioni sono annullabili fino a 24 h prima, quindi sono facili da aggiungere all'ultimo.",
       },
     ],
   },
   sections: {
     pickEyebrow: 'Selezione della redazione',
-    pickTitle: 'Selezionate con discrezione per la stagione che verrà.',
+    pickTitle: 'Selezionate con cura per la stagione che verrà.',
     pickLead:
       "Posti che vale la pena consigliare a un amico. Ogni scheda collega alla tariffa partner di oggi.",
     pickCta: 'Tutti gli hotel',
@@ -84,12 +84,12 @@ const it: SectionCopy = {
     lastMinEyebrow: 'Finestra last-minute',
     lastMinTitle: 'Parte nelle prossime due settimane?',
     lastMinLead:
-      "Notti in baita, slot husky e cacce all'aurora che spesso hanno aperture last-minute. Disponibilità partner in tempo reale, aggiornata ad ogni clic.",
+      "Notti in baita, posti per i safari con gli husky e cacce all'aurora che spesso hanno aperture last-minute. Disponibilità partner in tempo reale, aggiornata ad ogni clic.",
 
     summerEyebrow: 'Sole di mezzanotte · 6 giugno – 7 luglio',
     summerTitle: "L'estate in Lapponia è l'offerta nascosta.",
     summerLead:
-      "32 giorni in cui il sole non tramonta. Baite sul lago a una frazione delle tariffe di dicembre. Picco trekking fine agosto, aria pulita, niente zanzare, ruska dorato.",
+      "32 giorni in cui il sole non tramonta. Baite sul lago a una frazione delle tariffe di dicembre. Trekking al culmine a fine agosto, aria pulita, niente zanzare, ruska dorato.",
     summerCta: "Sfoglia l'estate",
 
     everythingEyebrow: 'Tutto',
@@ -98,7 +98,7 @@ const it: SectionCopy = {
   tiles: [
     { label: 'Hotel & baite', hint: 'Igloo di vetro · A bordo pista · Lodge nella natura' },
     { label: 'Attività', hint: 'Husky · Aurora · Motoslitta · Renne' },
-    { label: 'Voli', hint: 'Helsinki per Rovaniemi · Kittilä · Ivalo · Kuusamo' },
+    { label: 'Voli', hint: 'Da Helsinki a Rovaniemi · Kittilä · Ivalo · Kuusamo' },
     { label: 'Autonoleggio', hint: '4x4 · Gomme chiodate · Ritiro in aeroporto' },
     { label: 'Pacchetti', hint: 'Settimana aurora · Famiglie · Weekend' },
     { label: 'Estate', hint: 'Sole di mezzanotte · Trekking · Baite sul lago' },
@@ -126,7 +126,7 @@ const it: SectionCopy = {
     },
     {
       title: 'Parte di #LaplandVibes',
-      body: '27+ siti gemelli. Un solo ecosistema, una sola fonte.',
+      body: 'Oltre 27 siti della rete. Un solo ecosistema, una sola fonte.',
     },
   ],
   newsletter: {
@@ -169,7 +169,7 @@ const it: SectionCopy = {
       "Igloo di vetro sotto la fascia aurorale, hotel a bordo pista a Levi, lodge nella natura a Ylläs, hotel per famiglie a Rovaniemi. Confronti le tariffe di stanotte in tempo reale.",
     seoTitle: 'Offerte hotel Lapponia, Igloo di vetro, pista, baite',
     seoDesc:
-      'Tariffe in tempo reale per igloo di vetro, soggiorni ski-in, hotel per famiglie e lodge nella natura in tutta la Lapponia finlandese.',
+      'Tariffe in tempo reale per igloo di vetro, soggiorni a bordo pista, hotel per famiglie e lodge nella natura in tutta la Lapponia finlandese.',
     bottomTitle: 'Non trova la Sua destinazione?',
     bottomLead: 'Cerchi qualsiasi località della Lapponia direttamente su Trip.com.',
     bottomCta: 'Sfoglia tutti gli hotel della Lapponia →',
@@ -243,7 +243,7 @@ const it: SectionCopy = {
     h1Italic: "L'estate in Lapponia",
     h1: "è l'offerta nascosta.",
     sub:
-      "32 giorni in cui il sole non tramonta. Baite sul lago a una frazione delle tariffe di dicembre. Picco trekking fine agosto, aria pulita, niente zanzare, ruska dorato.",
+      "32 giorni in cui il sole non tramonta. Baite sul lago a una frazione delle tariffe di dicembre. Trekking al culmine a fine agosto, aria pulita, niente zanzare, ruska dorato.",
     seoTitle: 'Offerte estate Lapponia, Sole di mezzanotte e trekking',
     seoDesc:
       '32 giorni di sole di mezzanotte in Lapponia finlandese (6 giugno – 7 luglio). Baite, trekking nel parco Pallas-Yllästunturi e alloggi estivi sul lago.',
@@ -280,7 +280,7 @@ const it: SectionCopy = {
         a: 'Dipende dalla stagione. Natale e Capodanno sono i periodi più tirati: gli igloo di vetro e le camere familiari del Villaggio di Babbo Natale spesso esauriscono già a fine agosto. La stagione dell’aurora (all’incirca da novembre a marzo) è più tranquilla, ma i weekend più richiesti si riempiono presto. Primavera, estate e autunno raramente richiedono mesi di anticipo. I voli da Helsinki sono di solito più economici se prenotati con qualche settimana di margine, al di fuori dei picchi di Natale, Pasqua e delle vacanze di febbraio.',
       },
       {
-        q: 'Le offerte last-minute per la Lapponia valgono la pena?',
+        q: 'Vale la pena approfittare delle offerte last-minute per la Lapponia?',
         a: 'Spesso sì, al di fuori dei pochi periodi di picco. Quando una baita, un posto in slitta trainata dagli husky o una caccia all’aurora hanno spazio invenduto a ridosso della data, i partner lo rilasciano alla tariffa in tempo reale, e le escursioni di aurora e husky accettano spesso prenotazioni fino a circa 24 ore prima. Le eccezioni sono Natale, Capodanno, Pasqua e le vacanze scolastiche di febbraio, quando la domanda è alta e aspettare raramente aiuta.',
       },
       {

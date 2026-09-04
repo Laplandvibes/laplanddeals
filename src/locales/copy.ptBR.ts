@@ -16,7 +16,7 @@ const ptBR: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'mais baratas da Lapônia.',
     lead:
-      'Diárias de hotel liberadas, vagas sobrando em safáris de husky e snowmobile, pacotes baratos e cabanas livres, tudo num lugar só. Um clique leva direto ao preço atual do parceiro.',
+      'Diárias de hotel liberadas, vagas sobrando em safáris de huskies e de snowmobile, pacotes baratos e cabanas livres, tudo num lugar só. Um clique leva direto ao preço atual do parceiro.',
     primary: 'Ofertas de hotel para hoje',
     secondary: 'Passeios de aurora baratos',
     eyebrowSummer: 'Last minute · Ofertas baratas · Sol da meia-noite',
@@ -42,12 +42,12 @@ const ptBR: SectionCopy = {
       {
         when: 'Agora',
         title: 'Sol da meia-noite, as tarifas mais baixas do ano',
-        body: 'Até julho o sol quase não se põe. As cabanas à beira do lago saem bem abaixo dos preços de inverno, e as mesmas montanhas que esgotaram em fevereiro ficam tranquilas. A melhor janela de custo-benefício do ano.',
+        body: 'Até julho o sol quase não se põe. As cabanas à beira do lago saem bem abaixo dos preços de inverno, e os mesmos fjälls que esgotaram em fevereiro ficam tranquilos. A melhor época de custo-benefício do ano.',
       },
       {
         when: 'De agora até agosto',
         title: 'Temporada de trilhas e água',
-        body: 'Pallas-Yllästunturi e as montanhas do leste estão secas e abertas. Dias longos para caminhar, fazer SUP e nadar nos lagos. Os mosquitos diminuem ao longo de agosto; leve uma rede de cabeça no fim de junho.',
+        body: 'Pallas-Yllästunturi e as montanhas do leste estão secas e abertas. Dias longos para caminhar, fazer SUP e nadar nos lagos. Os mosquitos diminuem ao longo de agosto; leve uma tela mosquiteira para a cabeça no fim de junho.',
       },
       {
         when: '5-15 set',
@@ -57,17 +57,17 @@ const ptBR: SectionCopy = {
       {
         when: 'Natal de 2026',
         title: 'Já está enchendo',
-        body: 'Iglus de vidro e quartos familiares na Vila do Papai Noel costumam fechar reservas no fim de agosto. Jantares de Véspera de Natal e horários de trenó com renas geralmente acabam até outubro.',
+        body: 'Iglus de vidro e quartos familiares na Vila do Papai Noel costumam fechar reservas no fim de agosto. Jantares de Véspera de Natal e as vagas de trenó com renas geralmente esgotam até outubro.',
       },
       {
         when: 'Melhor janela para tarifas',
         title: '4-8 semanas antes a partir de Helsinque',
-        body: 'Voos ida e volta Finnair e Norwegian HEL→Lapônia caem na faixa de €89-129 quando reservados com 4-8 semanas de antecedência, fora dos picos de Natal, Páscoa e fevereiro.',
+        body: 'Voos ida e volta Finnair e Norwegian HEL→Lapônia caem na faixa de € 89–129 quando reservados com 4-8 semanas de antecedência, fora dos picos de Natal, Páscoa e fevereiro.',
       },
       {
         when: 'A partir do fim de agosto',
         title: 'A temporada de aurora recomeça',
-        body: 'A janela ativa vai mais ou menos do fim de agosto ao início de abril. Saariselkä, Inari e Utsjoki têm as maiores taxas de aurora visível. As caças costumam ser canceladas até 24h antes, então é fácil adicionar de última hora.',
+        body: 'A janela ativa vai mais ou menos do fim de agosto ao início de abril. Saariselkä, Inari e Utsjoki têm as maiores taxas de aurora visível. As caças podem ser canceladas até 24h antes, então é fácil adicionar de última hora.',
       },
     ],
   },
@@ -75,11 +75,11 @@ const ptBR: SectionCopy = {
     pickEyebrow: 'Escolhas da redação',
     pickTitle: 'Selecionado com cuidado para a próxima temporada.',
     pickLead:
-      'Lugares que valem a recomendação para um amigo. Cada cartão leva ao preço real do parceiro de hoje.',
+      'Lugares que valem a recomendação para um amigo. Cada card leva ao preço real do parceiro de hoje.',
     pickCta: 'Todos os hotéis',
 
     categoriesEyebrow: 'Navegar por categoria',
-    categoriesTitle: 'Encontre o seu tipo de oferta da Lapônia.',
+    categoriesTitle: 'Encontre a oferta da Lapônia certa para você.',
 
     lastMinEyebrow: 'Janela de última hora',
     lastMinTitle: 'Vai viajar nas próximas duas semanas?',
@@ -89,7 +89,7 @@ const ptBR: SectionCopy = {
     summerEyebrow: 'Sol da meia-noite · 6 jun – 7 jul',
     summerTitle: 'Verão na Lapônia é a oferta secreta.',
     summerLead:
-      '32 dias em que o sol não se põe. Cabanas à beira do lago por uma fração das tarifas de dezembro. Pico de caminhada no fim de agosto, ar limpo, sem mosquitos, ouro do ruska.',
+      '32 dias em que o sol não se põe. Cabanas à beira do lago por uma fração das tarifas de dezembro. Caminhadas no auge no fim de agosto, ar limpo, sem mosquitos, ouro do ruska.',
     summerCta: 'Ver verão',
 
     everythingEyebrow: 'Tudo',
@@ -98,7 +98,7 @@ const ptBR: SectionCopy = {
   tiles: [
     { label: 'Hotéis e cabanas', hint: 'Iglus de vidro · Pé na pista · Lodges selvagens' },
     { label: 'Atividades', hint: 'Husky · Aurora · Snowmobile · Renas' },
-    { label: 'Voos', hint: 'Helsinque para Rovaniemi · Kittilä · Ivalo · Kuusamo' },
+    { label: 'Voos', hint: 'De Helsinque a Rovaniemi · Kittilä · Ivalo · Kuusamo' },
     { label: 'Aluguel de carro', hint: '4x4 · Pneus com cravos · Retirada no aeroporto' },
     { label: 'Pacotes', hint: 'Semana de aurora · Viagens em família · Fim de semana' },
     { label: 'Verão', hint: 'Sol da meia-noite · Caminhadas · Cabanas à beira do lago' },
@@ -126,7 +126,7 @@ const ptBR: SectionCopy = {
     },
     {
       title: 'Parte do #LaplandVibes',
-      body: 'Mais de 27 sites parceiros. Um ecossistema, uma única fonte da verdade.',
+      body: 'Mais de 27 sites parceiros. Um ecossistema, uma única fonte confiável.',
     },
   ],
   newsletter: {
@@ -169,7 +169,7 @@ const ptBR: SectionCopy = {
       'Iglus de vidro sob o cinturão de aurora, acomodações ao pé da pista em Levi, lodges no meio da floresta em Ylläs, hotéis para a família em Rovaniemi. Compare as tarifas desta noite em tempo real.',
     seoTitle: 'Ofertas de hotéis na Lapônia, Iglus de vidro e cabanas',
     seoDesc:
-      'Preços ao vivo para iglus de vidro, hospedagens ski-in, hotéis para a família e lodges selvagens em toda a Lapônia finlandesa.',
+      'Preços em tempo real para iglus de vidro, hospedagens ao pé da pista, hotéis para famílias e lodges na natureza em toda a Lapônia finlandesa.',
     bottomTitle: 'Não encontrou seu destino?',
     bottomLead: 'Busque qualquer cidade da Lapônia direto no Trip.com.',
     bottomCta: 'Ver todos os hotéis da Lapônia →',
@@ -243,7 +243,7 @@ const ptBR: SectionCopy = {
     h1Italic: 'Verão na Lapônia',
     h1: 'é a oferta secreta.',
     sub:
-      '32 dias em que o sol não se põe. Cabanas à beira do lago por uma fração das tarifas de dezembro. Pico de caminhada no fim de agosto, ar limpo, sem mosquitos, ouro do ruska.',
+      '32 dias em que o sol não se põe. Cabanas à beira do lago por uma fração das tarifas de dezembro. Caminhadas no auge no fim de agosto, ar limpo, sem mosquitos, ouro do ruska.',
     seoTitle: 'Ofertas de verão na Lapônia, Sol da meia-noite',
     seoDesc:
       '32 dias em que o sol não se põe na Lapônia finlandesa (6 jun – 7 jul). Cabanas com sol da meia-noite, caminhadas em Pallas-Yllästunturi e estadias no lago.',
@@ -273,7 +273,7 @@ const ptBR: SectionCopy = {
     items: [
       {
         q: 'Qual é a época mais barata para visitar a Lapônia?',
-        a: 'O fim da primavera e o verão, de maio a agosto, aproximadamente, são a época mais tranquila e em conta. A temporada de auroras acabou e as estações de esqui fecharam, então as cabanas à beira do lago que lotavam em fevereiro ficam vazias. Dentro do inverno, as semanas de baixa temporada (de meados de março a meados de abril) são mais baratas que os picos do Natal e das férias de fevereiro, com neve farta e mais horas de luz.',
+        a: 'O fim da primavera e o verão, de maio a agosto, aproximadamente, são a época mais tranquila e em conta. A temporada de auroras acabou e as estações de esqui fecharam, então as cabanas à beira do lago que lotavam em fevereiro ficam vazias. Dentro do inverno, as semanas de meia temporada (de meados de março a meados de abril) são mais baratas que os picos do Natal e das férias de fevereiro, com neve farta e mais horas de luz.',
       },
       {
         q: 'Com quanta antecedência devo reservar uma viagem à Lapônia?',

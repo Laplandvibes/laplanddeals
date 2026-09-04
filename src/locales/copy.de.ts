@@ -21,7 +21,7 @@ const de: SectionCopy = {
     secondary: 'Günstige Polarlicht-Touren',
     eyebrowSummer: 'Last Minute · Günstige Deals · Mitternachtssonne',
     leadSummer:
-      'Die günstigste Saison des Jahres: Mitternachtssonnen-Hütten unter Winterpreisen, freie Aktivitätsplätze, Flüge nach Rovaniemi und Sommer-Mietwagen. Ein Klick führt direkt zum aktuellen Preis des Partners.',
+      'Die günstigste Saison des Jahres: Hütten unter der Mitternachtssonne, günstiger als im Winter, freie Aktivitätsplätze, Flüge nach Rovaniemi und Sommer-Mietwagen. Ein Klick führt direkt zum aktuellen Preis des Partners.',
     secondarySummer: 'Mitternachtssonnen-Deals',
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
@@ -42,12 +42,12 @@ const de: SectionCopy = {
       {
         when: 'Genau jetzt',
         title: 'Mitternachtssonne, die niedrigsten Preise des Jahres',
-        body: 'Bis Ende Juli geht die Sonne kaum unter. Seehütten liegen deutlich unter den Winterpreisen, und dieselben Fjells, die im Februar ausgebucht waren, sind jetzt ruhig. Das preislich günstigste Fenster des Jahres.',
+        body: 'Bis Ende Juli geht die Sonne kaum unter. Hütten am See liegen deutlich unter den Winterpreisen, und dieselben Fjälls, die im Februar ausgebucht waren, sind jetzt ruhig. Das preislich günstigste Fenster des Jahres.',
       },
       {
         when: 'Jetzt bis August',
         title: 'Wander- und Wassersaison',
-        body: 'Pallas-Yllästunturi und die östlichen Fjells sind trocken und offen. Lange Tage zum Wandern, für SUP und Seenbäder. Die Mücken lassen bis August nach; für Ende Juni ein Kopfnetz mitnehmen.',
+        body: 'Pallas-Yllästunturi und die östlichen Fjells sind trocken und offen. Lange Tage zum Wandern, für SUP und Seenbäder. Die Mücken lassen bis August nach; nehmen Sie für Ende Juni ein Kopfnetz mit.',
       },
       {
         when: '5.–15. September',
@@ -57,23 +57,23 @@ const de: SectionCopy = {
       {
         when: 'Weihnachten 2026',
         title: 'Bereits in den Büchern',
-        body: 'Glas-Iglus und Familienzimmer im Weihnachtsmanndorf schließen ihre Buchung meist Ende August. Heiligabend-Dinner und Rentierschlitten-Plätze sind in der Regel im Oktober vergeben.',
+        body: 'Glas-Iglus und Familienzimmer im Weihnachtsmanndorf sind meist ab Ende August ausgebucht. Heiligabend-Dinner und Rentierschlitten-Plätze sind in der Regel im Oktober vergeben.',
       },
       {
         when: 'Sparen bei Flügen',
         title: '4–8 Wochen Vorlauf ab Helsinki',
-        body: 'Hin- und Rückflüge HEL→Lappland mit Finnair und Norwegian fallen auf 89–129 €, wenn Sie 4–8 Wochen im Voraus buchen, außerhalb der Weihnachts-, Oster- und Februarspitzen.',
+        body: 'Hin- und Rückflüge Helsinki–Lappland mit Finnair und Norwegian fallen auf 89–129 €, wenn Sie 4–8 Wochen im Voraus buchen, außerhalb der Weihnachts-, Oster- und Februarspitzen.',
       },
       {
         when: 'Ab Ende August',
         title: 'Die Polarlicht-Saison beginnt erneut',
-        body: 'Das aktive Fenster reicht etwa von Ende August bis Anfang April. Saariselkä, Inari und Utsjoki zeigen die höchsten Sichtquoten. Touren lassen sich meist bis 24 Stunden vorher stornieren und daher leicht kurzfristig dazubuchen.',
+        body: 'Die Saison reicht etwa von Ende August bis Anfang April. Saariselkä, Inari und Utsjoki bieten die besten Chancen auf Polarlichter. Touren lassen sich meist bis 24 Stunden vorher stornieren und daher leicht kurzfristig dazubuchen.',
       },
     ],
   },
   sections: {
     pickEyebrow: 'Redaktionsempfehlung',
-    pickTitle: 'Leise kuratiert für die kommende Saison.',
+    pickTitle: 'In Ruhe ausgewählt für die kommende Saison.',
     pickLead:
       'Orte, die Sie auch einem Freund empfehlen würden. Jede Karte führt zum heutigen Live-Preis des Partners.',
     pickCta: 'Alle Hotels',
@@ -84,10 +84,10 @@ const de: SectionCopy = {
     lastMinEyebrow: 'Last-Minute-Fenster',
     lastMinTitle: 'Reise in den nächsten zwei Wochen?',
     lastMinLead:
-      'Hüttennächte, Husky-Slots und Polarlicht-Touren mit oft kurzfristiger Verfügbarkeit. Live-Verfügbarkeit des Partners, bei jedem Klick aktualisiert.',
+      'Hüttennächte, Husky-Plätze und Polarlicht-Touren mit oft kurzfristiger Verfügbarkeit. Live-Verfügbarkeit des Partners, bei jedem Klick aktualisiert.',
 
     summerEyebrow: 'Mitternachtssonne · 6.6.–7.7.',
-    summerTitle: 'Der Sommer in Lappland ist das Geheimangebot.',
+    summerTitle: 'Der Sommer in Lappland ist der Geheimtipp.',
     summerLead:
       '32 Tage geht die Sonne nicht unter. Seehütten zum Bruchteil der Dezemberpreise. Wandern am besten Ende August, klare Luft, keine Mücken, Ruska-Gold.',
     summerCta: 'Sommer ansehen',
@@ -99,7 +99,7 @@ const de: SectionCopy = {
     { label: 'Hotels & Hütten', hint: 'Glas-Iglus · Pistennah · Wildnis-Lodges' },
     { label: 'Aktivitäten', hint: 'Husky · Polarlicht · Schneemobil · Rentier' },
     { label: 'Flüge', hint: 'Helsinki–Rovaniemi · Kittilä · Ivalo · Kuusamo' },
-    { label: 'Mietwagen', hint: '4WD · Spikereifen · Abholung am Flughafen' },
+    { label: 'Mietwagen', hint: 'Allrad · Spikereifen · Abholung am Flughafen' },
     { label: 'Pakete', hint: 'Polarlicht-Woche · Familienauszeit · Wochenende' },
     { label: 'Sommer', hint: 'Mitternachtssonne · Wandern · Seehütten' },
   ],
@@ -118,7 +118,7 @@ const de: SectionCopy = {
   trust: [
     {
       title: 'Ehrliche Kuratierung',
-      body: 'Live-Partnerpreise. Niemals erfundene Prozente oder gefälschte Countdowns.',
+      body: 'Live-Partnerpreise. Niemals erfundene Rabatte oder künstliche Countdowns.',
     },
     {
       title: 'Aus Finnland geprüft',
@@ -126,7 +126,7 @@ const de: SectionCopy = {
     },
     {
       title: 'Teil von #LaplandVibes',
-      body: '27+ Schwesterseiten. Ein Ökosystem, eine Quelle der Wahrheit.',
+      body: '27+ Schwesterseiten. Ein Ökosystem, eine verlässliche Quelle.',
     },
   ],
   newsletter: {
@@ -166,7 +166,7 @@ const de: SectionCopy = {
     h1Italic: 'Hotels in Lappland',
     h1: 'Live-Preise für heute Abend.',
     sub:
-      'Glas-Iglus im Polarlichtgürtel, pistennahe Häuser in Levi, Wildnis-Lodges in Ylläs, Familienhotels in Rovaniemi. Vergleichen Sie die heutigen Raten in Echtzeit.',
+      'Glas-Iglus im Polarlichtgürtel, pistennahe Häuser in Levi, Wildnis-Lodges in Ylläs, Familienhotels in Rovaniemi. Vergleichen Sie die heutigen Preise in Echtzeit.',
     seoTitle: 'Lappland-Hotelangebote: Glas-Iglus, Pistennähe, Hütten',
     seoDesc:
       'Live-Preise für Glas-Iglus, Ski-in-Unterkünfte, Familienhotels und Wildnis-Lodges in Finnisch-Lappland. Last-Minute- und Saisonende-Hütten.',
@@ -268,7 +268,7 @@ const de: SectionCopy = {
   },
   faq: {
     eyebrow: 'Gut zu wissen',
-    title: 'Lappland-Angebote, Ihre Fragen, beantwortet.',
+    title: 'Lappland-Angebote: Antworten auf Ihre Fragen.',
     lead: 'Ehrliche Antworten zu Reisezeit, Buchungsfenstern und dem, was Sie erwartet. Keine erfundenen Preise, keine vorgetäuschte Dringlichkeit.',
     items: [
       {

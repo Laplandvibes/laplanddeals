@@ -20,7 +20,7 @@ const sv: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'sista minuten-erbjudanden.',
     lead:
-      'Frisläppta hotellnätter, osålda platser på husky- och skoterturer, billiga paket och lediga stugor, allt på ett ställe. Ett klick tar dig direkt till partnerns aktuella pris.',
+      'Lediga hotellnätter, osålda platser på husky- och skoterturer, billiga paket och lediga stugor, allt på ett ställe. Ett klick tar dig direkt till partnerns aktuella pris.',
     primary: 'Kvällens hotellerbjudanden',
     secondary: 'Billiga norrskensturer',
     eyebrowSummer: 'Last minute · Billiga erbjudanden · Midnattssol',
@@ -33,7 +33,7 @@ const sv: SectionCopy = {
   flashBand: {
     leadBold: 'Partnerns eget pris',
     leadRest:
-      ' · ett klick öppnar partnersidan med deras aktuella pris. Vi hittar aldrig på procent eller kör falska nedräkningar.',
+      ' · ett klick öppnar partnersidan med deras aktuella pris. Vi hittar aldrig på rabattprocent och kör inga falska nedräkningar.',
     cta: 'Kvällens hotell →',
   },
   pulse: {
@@ -51,7 +51,7 @@ const sv: SectionCopy = {
       {
         when: 'Nu till augusti',
         title: 'Vandrings- och vattensäsong',
-        body: 'Pallas-Yllästunturi och de östra fjällen är torra och öppna. Långa dagar för vandring, SUP och bad i sjöar. Myggen avtar under augusti; ta med myggnät för slutet av juni.',
+        body: 'Pallas-Yllästunturi och de östra fjällen är torra och öppna. Långa dagar för vandring, SUP och bad i sjöar. Myggen avtar under augusti; ta med myggmössa om du reser i slutet av juni.',
       },
       {
         when: '5–15 september',
@@ -71,7 +71,7 @@ const sv: SectionCopy = {
       {
         when: 'Från slutet av augusti',
         title: 'Norrskenssäsongen börjar igen',
-        body: 'Det aktiva fönstret varar ungefär från slutet av augusti till början av april. Saariselkä, Inari och Utsjoki har de högsta chanserna att se norrsken. Turerna kan oftast avbokas fram till 24 h innan, så de är lätta att lägga till sent.',
+        body: 'Det aktiva fönstret varar ungefär från slutet av augusti till början av april. Saariselkä, Inari och Utsjoki har de högsta chanserna att se norrsken. Turerna kan oftast avbokas fram till 24 timmar innan, så de är lätta att lägga till sent.',
       },
     ],
   },
@@ -130,7 +130,7 @@ const sv: SectionCopy = {
     },
     {
       title: 'En del av #LaplandVibes',
-      body: '27+ systersajter. Ett ekosystem, en sanningskälla.',
+      body: '27+ systersajter. Ett ekosystem, en enda källa att lita på.',
     },
   ],
   newsletter: {
@@ -170,7 +170,7 @@ const sv: SectionCopy = {
     h1Italic: 'Lapplands hotell',
     h1: 'priser i realtid, i kväll.',
     sub:
-      'Glasigloor under norrskensbältet, boende vid backen i Levi, vildmarkslodger i Ylläs, familjehotell i Rovaniemi. Jämför kvällens priser i realtid.',
+      'Glasigloor i norrskensbältet, boende vid backen i Levi, vildmarkslodger i Ylläs, familjehotell i Rovaniemi. Jämför kvällens priser i realtid.',
     seoTitle: 'Hotellerbjudanden i Lappland: glasigloor, vid backen, vildmarksstugor',
     seoDesc:
       'Priser i realtid på glasigloor, ski-in-boende, familjehotell och vildmarkslodger i finska Lappland. Stugnätter i sista minuten och i slutet av säsongen.',
@@ -232,7 +232,7 @@ const sv: SectionCopy = {
     h1: 'Lapplandsresa.',
     sub:
       'Vi säljer inga färdiga paket. Vi väljer ut byggstenarna, flyg, boende, huskydagar, norrskensturer, och du bokar varje del till partnerns pris i realtid. Ingen mellanhandsavgift.',
-    seoTitle: 'Paketerbjudanden i Lappland: norrskensvecka, familjeresor, weekender',
+    seoTitle: 'Paketerbjudanden i Lappland: norrskensvecka, familjeresor, weekendresor',
     seoDesc:
       'Idéer för flerdagarsresor i Lappland: norrskensvecka i Saariselkä, familjeresor i Rovaniemi, weekendresor. Varje del bokas separat till partnerns priser i realtid.',
     curatedTitle: 'Utvalda reseidéer',
@@ -272,7 +272,7 @@ const sv: SectionCopy = {
   },
   faq: {
     eyebrow: 'Bra att veta',
-    title: 'Lapplandserbjudanden: dina frågor, besvarade.',
+    title: 'Lapplandserbjudanden: svar på dina frågor.',
     lead: 'Ärliga svar om tajming, bokningsfönster och vad du kan vänta dig. Inga påhittade priser, ingen falsk brådska.',
     items: [
       {
@@ -281,11 +281,11 @@ const sv: SectionCopy = {
       },
       {
         q: 'Hur långt i förväg bör jag boka en Lapplandsresa?',
-        a: 'Det beror på säsongen. Jul och nyår är tajtast: glasigloor och familjerum i Santa Claus Village stänger ofta för bokning i slutet av augusti. Norrskenssäsongen (ungefär november till mars) är lugnare, men populära helger fylls tidigt. Vår, sommar och höst kräver sällan flera månaders framförhållning. Flyg från Helsingfors brukar vara billigast bokat några veckor i förväg, utanför topparna vid jul, påsk och sportlovet.',
+        a: 'Det beror på säsongen. Jul och nyår är svårast att få plats på: glasigloor och familjerum i Jultomtens by är ofta fullbokade i slutet av augusti. Norrskenssäsongen (ungefär november till mars) är lugnare, men populära helger fylls tidigt. Vår, sommar och höst kräver sällan flera månaders framförhållning. Flyg från Helsingfors är oftast billigast om du bokar några veckor i förväg, utanför topparna vid jul, påsk och sportlovet.',
       },
       {
         q: 'Är sista minuten-erbjudanden i Lappland värda det?',
-        a: 'Ofta, ja, utanför de få topparna. När en stuga, huskyplats eller norrskenstur har osålda platser nära datumet släpper partnern dem till priset i realtid, och norrskens- och huskyturer tar ofta emot bokningar fram till cirka 24 timmar innan. Undantagen är jul, nyår, påsk (pääsiäinen) och sportlovet, när efterfrågan är hög och det sällan lönar sig att vänta.',
+        a: 'Ofta, ja, utanför de få topparna. När en stuga, huskyplats eller norrskenstur har osålda platser nära datumet släpper partnern dem till priset i realtid, och norrskens- och huskyturer tar ofta emot bokningar fram till cirka 24 timmar innan. Undantagen är jul, nyår, påsk och sportlovet, när efterfrågan är hög och det sällan lönar sig att vänta.',
       },
       {
         q: 'Vad ingår i ett typiskt Lappland-paket?',

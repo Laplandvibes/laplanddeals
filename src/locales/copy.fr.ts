@@ -16,7 +16,7 @@ const fr: SectionCopy = {
     h1Line1Bold: '',
     h1Line2: 'les moins chères de Laponie.',
     lead:
-      'Nuits d\'hôtel libérées, places restantes en safari en traîneau de huskies et motoneige, forfaits pas chers et chalets disponibles, le tout au même endroit. Un clic vous amène directement au prix actuel du partenaire.',
+      'Chambres d\'hôtel qui se libèrent, places restantes en safari en traîneau à chiens et motoneige, forfaits pas chers et chalets disponibles, le tout au même endroit. Un clic vous amène directement au prix actuel du partenaire.',
     primary: 'Offres d\'hôtel pour ce soir',
     secondary: 'Tours aurores pas chers',
     eyebrowSummer: 'Last minute · Bons plans · Soleil de minuit',
@@ -47,35 +47,35 @@ const fr: SectionCopy = {
       {
         when: "D'ici fin août",
         title: "Saison de la randonnée et de l'eau",
-        body: "Le Pallas-Yllästunturi et les fjälls de l'est sont secs et ouverts. Longues journées pour la randonnée, le SUP et la baignade en lac. Les moustiques se calment au fil d'août ; prévoyez une moustiquaire de tête pour fin juin.",
+        body: "Le Pallas-Yllästunturi et les fjälls de l'est sont secs et ouverts. Longues journées pour la randonnée, le SUP et la baignade en lac. Les moustiques se font plus rares au fil du mois d’août ; prévoyez une moustiquaire de tête pour fin juin.",
       },
       {
         when: '5–15 sept.',
         title: "Ruska : les couleurs d'automne au sommet, et vite",
-        body: "Le bouleau nain vire à l'or en trois jours environ. Les chalets restent abordables et l'air est le plus pur d'Europe (WMO). Les aurores boréales reviennent aussi à mesure que les nuits s'assombrissent.",
+        body: "Le bouleau nain vire à l'or en trois jours environ. Les chalets restent abordables et l’air est le plus pur d’Europe (OMM). Les aurores boréales reviennent aussi à mesure que les nuits s'assombrissent.",
       },
       {
         when: 'Noël 2026',
         title: 'Déjà très réservé',
-        body: 'Les igloos de verre et chambres familiales du Village du Père Noël ferment généralement aux réservations fin août. Dîners de Noël et balades en traîneau à rennes : souvent partis avant octobre.',
+        body: 'Les igloos de verre et chambres familiales du Village du Père Noël ne prennent généralement plus de réservations fin août. Dîners de Noël et balades en traîneau à rennes : souvent complètes dès octobre.',
       },
       {
         when: 'Fenêtre idéale pour les tarifs',
         title: '4 à 8 semaines avant le départ depuis Helsinki',
-        body: "Les A/R Finnair et Norwegian HEL→Laponie tombent dans la fourchette 89-129 € lorsqu'ils sont réservés 4 à 8 semaines à l'avance, hors pics de Noël, de Pâques et de février.",
+        body: "Les A/R Finnair et Norwegian HEL→Laponie descendent à 89–129 € lorsqu'ils sont réservés 4 à 8 semaines à l'avance, hors pics de Noël, de Pâques et de février.",
       },
       {
         when: 'À partir de fin août',
         title: 'La saison des aurores boréales repart',
-        body: "La fenêtre active court de fin août à début avril environ. Saariselkä, Inari et Utsjoki affichent les taux d'aurores visibles les plus élevés. Les sorties s'annulent souvent jusqu'à 24 h avant, faciles à ajouter au dernier moment.",
+        body: "La fenêtre active court de fin août à début avril environ. Saariselkä, Inari et Utsjoki affichent les taux d'aurores visibles les plus élevés. Les sorties sont annulables jusqu’à 24 h avant, faciles à ajouter au dernier moment.",
       },
     ],
   },
   sections: {
     pickEyebrow: 'Sélection de la rédaction',
-    pickTitle: 'Discrètement sélectionnés pour la saison à venir.',
+    pickTitle: 'Sélectionnés avec soin pour la saison à venir.',
     pickLead:
-      "Des adresses qu'on recommanderait à un ami. Chaque carte renvoie au tarif partenaire du jour.",
+      "Des adresses que vous recommanderiez à un ami. Chaque carte renvoie au tarif partenaire du jour.",
     pickCta: 'Tous les hôtels',
 
     categoriesEyebrow: 'Parcourir par catégorie',
@@ -84,12 +84,12 @@ const fr: SectionCopy = {
     lastMinEyebrow: 'Fenêtre de dernière minute',
     lastMinTitle: 'Vous partez dans les deux semaines ?',
     lastMinLead:
-      "Nuits en chalet, créneaux de husky et chasses aux aurores qui se libèrent souvent à la dernière minute. Disponibilité partenaire en direct, rafraîchie à chaque clic.",
+      "Nuits en chalet, places en safari en traîneau à chiens et chasses aux aurores qui se libèrent souvent à la dernière minute. Disponibilité partenaire en direct, rafraîchie à chaque clic.",
 
     summerEyebrow: 'Soleil de minuit · 6 juin – 7 juillet',
     summerTitle: "L'été en Laponie, c'est l'offre cachée.",
     summerLead:
-      "32 jours sans coucher de soleil. Chalets au bord du lac à une fraction des tarifs de décembre. Pic de randonnée fin août, air pur, pas de moustiques, ruska doré.",
+      "32 jours sans coucher de soleil. Chalets au bord du lac à une fraction des tarifs de décembre. La randonnée à son apogée fin août, air pur, pas de moustiques, ruska doré.",
     summerCta: "Découvrir l'été",
 
     everythingEyebrow: 'Tout',
@@ -126,7 +126,7 @@ const fr: SectionCopy = {
     },
     {
       title: 'Membre de #LaplandVibes',
-      body: '27+ sites jumeaux. Un seul écosystème, une seule source.',
+      body: 'Plus de 27 sites du réseau. Un seul écosystème, une seule source.',
     },
   ],
   newsletter: {
@@ -167,9 +167,9 @@ const fr: SectionCopy = {
     h1: 'tarifs en direct, ce soir.',
     sub:
       "Igloos de verre sous la ceinture aurorale, hôtels au pied des pistes à Levi, lodges en pleine nature à Ylläs, hôtels familiaux à Rovaniemi. Comparez les tarifs de ce soir en temps réel.",
-    seoTitle: 'Offres hôtels Laponie, Igloos de verre, pistes, chalets',
+    seoTitle: 'Offres hôtels en Laponie : igloos de verre, pistes, chalets',
     seoDesc:
-      'Tarifs en direct pour igloos de verre, séjours ski-in, hôtels familiaux et lodges en pleine nature à travers la Laponie finlandaise.',
+      'Tarifs en temps réel pour igloos de verre, séjours au pied des pistes, hôtels familiaux et lodges en pleine nature partout en Laponie finlandaise.',
     bottomTitle: 'Vous ne voyez pas votre destination ?',
     bottomLead: 'Recherchez n\'importe quelle ville de Laponie directement sur Trip.com.',
     bottomCta: 'Voir tous les hôtels de Laponie →',
@@ -243,7 +243,7 @@ const fr: SectionCopy = {
     h1Italic: "L'été en Laponie",
     h1: "c'est l'offre cachée.",
     sub:
-      "32 jours sans coucher de soleil. Chalets au bord du lac à une fraction des tarifs de décembre. Pic de randonnée fin août, air pur, pas de moustiques, ruska doré.",
+      "32 jours sans coucher de soleil. Chalets au bord du lac à une fraction des tarifs de décembre. La randonnée à son apogée fin août, air pur, pas de moustiques, ruska doré.",
     seoTitle: 'Offres été Laponie, Soleil de minuit & randonnée',
     seoDesc:
       '32 jours de soleil de minuit en Laponie finlandaise (6 juin – 7 juillet). Chalets, randonnée dans le parc Pallas-Yllästunturi et séjours au bord du lac.',
@@ -285,7 +285,7 @@ const fr: SectionCopy = {
       },
       {
         q: 'Que comprend un forfait typique en Laponie ?',
-        a: 'Cela varie selon le prestataire : lisez toujours ce qui est inclus. Un forfait courant associe quelques nuits d’hébergement à une ou deux activités, un safari en traîneau de huskies, une chasse aux aurores ou une excursion en motoneige, et parfois les transferts aéroport. Sur LaplandDeals, nous ne vendons pas de forfaits fermés : nous sélectionnons les éléments (vols, hébergements, activités, location de voiture) et vous réservez chacun au tarif en temps réel du partenaire, sans frais d’intermédiaire.',
+        a: 'Cela varie selon le prestataire : lisez toujours ce qui est inclus. Un forfait courant associe quelques nuits d’hébergement à une ou deux activités, un safari en traîneau à chiens, une chasse aux aurores ou une excursion en motoneige, et parfois les transferts aéroport. Sur LaplandDeals, nous ne vendons pas de forfaits fermés : nous sélectionnons les éléments (vols, hébergements, activités, location de voiture) et vous réservez chacun au tarif en temps réel du partenaire, sans frais d’intermédiaire.',
       },
       {
         q: 'Comment trouver de vraies réductions en Laponie ?',

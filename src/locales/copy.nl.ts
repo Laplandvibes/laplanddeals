@@ -29,7 +29,7 @@ const nl: SectionCopy = {
   flashBand: {
     leadBold: 'Eigen prijs van de partner',
     leadRest:
-      ' · één klik opent de partnerpagina met het actuele tarief. We verzinnen nooit percentages en gebruiken geen valse aftellers.',
+      ' · één klik opent de partnerpagina met het actuele tarief. We verzinnen nooit percentages en gebruiken geen valse afteltimers.',
     cta: 'Hotels vannacht →',
   },
   pulse: {
@@ -57,25 +57,25 @@ const nl: SectionCopy = {
       {
         when: 'Kerst 2026',
         title: 'Al druk geboekt',
-        body: "Glazen iglo's en familiekamers in het Kerstmandorp sluiten meestal eind augustus voor boekingen. Kerstavond-diners en rendierslede-slots: doorgaans weg vóór oktober.",
+        body: "Glazen iglo's en familiekamers in het Kerstmandorp sluiten meestal eind augustus voor boekingen. Kerstavonddiners en plekken in de rendierslee: doorgaans weg vóór oktober.",
       },
       {
         when: 'Beste tariefvenster',
         title: '4-8 weken vooraf vanuit Helsinki',
-        body: 'Finnair- en Norwegian-retourvluchten HEL→Lapland zakken naar € 89-129 als u 4-8 weken vooraf boekt, buiten de pieken van Kerst, Pasen en de februarivakantie.',
+        body: 'Finnair- en Norwegian-retourvluchten Helsinki–Lapland zakken naar € 89–129 als u 4–8 weken vooraf boekt, buiten de pieken van Kerst, Pasen en de februarivakantie.',
       },
       {
         when: 'Vanaf eind augustus',
         title: 'Het noorderlichtseizoen begint weer',
-        body: 'Het actieve venster loopt ruwweg van eind augustus tot begin april. Saariselkä, Inari en Utsjoki hebben de hoogste kans op zichtbaar noorderlicht. Een noorderlichttocht kunt u meestal tot 24 uur vooraf annuleren, dus u voegt er makkelijk last-minute een toe.',
+        body: 'Het seizoen loopt ruwweg van eind augustus tot begin april. Saariselkä, Inari en Utsjoki hebben de hoogste kans op zichtbaar noorderlicht. Een noorderlichttocht kunt u meestal tot 24 uur vooraf annuleren, dus u boekt er makkelijk last minute nog een bij.',
       },
     ],
   },
   sections: {
     pickEyebrow: 'Keuze van de redactie',
-    pickTitle: 'Rustig geselecteerd voor het komende seizoen.',
+    pickTitle: 'Met zorg geselecteerd voor het komende seizoen.',
     pickLead:
-      "Plekken die u zou aanraden aan een vriend. Elke kaart linkt naar het partnertarief van vandaag.",
+      "Plekken die u aan een vriend zou aanraden. Elke kaart linkt naar het partnertarief van vandaag.",
     pickCta: 'Alle hotels',
 
     categoriesEyebrow: 'Blader op categorie',
@@ -84,12 +84,12 @@ const nl: SectionCopy = {
     lastMinEyebrow: 'Last-minute venster',
     lastMinTitle: 'Vertrekt u binnen twee weken?',
     lastMinLead:
-      "Hutnachten, husky-slots en noorderlicht-jachten die vaak last-minute openingen hebben. Live partnerbeschikbaarheid, ververst bij elke klik.",
+      "Hutnachten, husky-plekken en noorderlichttochten waar vaak last minute nog plek vrij is. Live partnerbeschikbaarheid, ververst bij elke klik.",
 
     summerEyebrow: 'Middernachtzon · 6 juni – 7 juli',
-    summerTitle: "De zomer in Lapland is de verborgen aanbieding.",
+    summerTitle: "De zomer in Lapland is de best bewaarde geheimtip.",
     summerLead:
-      "32 dagen zonder zonsondergang. Hutten aan het meer voor een fractie van de decembertarieven. Wandelpiek eind augustus, schone lucht, geen muggen, gouden ruska.",
+      "32 dagen zonder zonsondergang. Hutten aan het meer voor een fractie van de decembertarieven. Wandelen is eind augustus op zijn mooist, schone lucht, geen muggen, gouden ruska.",
     summerCta: 'Zomer bekijken',
 
     everythingEyebrow: 'Alles',
@@ -126,7 +126,7 @@ const nl: SectionCopy = {
     },
     {
       title: 'Onderdeel van #LaplandVibes',
-      body: '27+ zustersites. Eén ecosysteem, één bron van waarheid.',
+      body: '27+ zustersites. Eén ecosysteem, één betrouwbare bron.',
     },
   ],
   newsletter: {
@@ -166,12 +166,12 @@ const nl: SectionCopy = {
     h1Italic: 'Lapland-hotels',
     h1: 'live prijzen, vannacht.',
     sub:
-      "Glazen iglo's onder de noorderlichtgordel, hotels aan de piste in Levi, wildernislodges in Ylläs, gezinshotels in Rovaniemi. Vergelijk de tarieven van vannacht in realtime.",
+      "Glazen iglo's in de noorderlichtgordel, hotels aan de piste in Levi, wildernislodges in Ylläs, gezinshotels in Rovaniemi. Vergelijk de actuele tarieven voor vanavond.",
     seoTitle: "Lapland-hotelaanbiedingen: glazen iglo's, aan de piste, wildernishutten",
     seoDesc:
       "Live prijzen voor glazen iglo's, ski-in-verblijven, gezinshotels en wildernislodges in heel Fins Lapland. Last-minute en eindseizoens-hutnachten.",
     bottomTitle: 'Ziet u uw bestemming niet?',
-    bottomLead: 'Zoek elke Lapland-stad direct op Trip.com.',
+    bottomLead: 'Zoek elke plaats in Lapland direct op Trip.com.',
     bottomCta: 'Alle Lapland-hotels bekijken →',
   },
   activitiesPage: {
@@ -243,7 +243,7 @@ const nl: SectionCopy = {
     h1Italic: 'De zomer in Lapland',
     h1: 'is de verborgen aanbieding.',
     sub:
-      "32 dagen zonder zonsondergang. Hutten aan het meer voor een fractie van de decembertarieven. Wandelpiek eind augustus, schone lucht, geen muggen, gouden ruska.",
+      "32 dagen zonder zonsondergang. Hutten aan het meer voor een fractie van de decembertarieven. Wandelen is eind augustus op zijn mooist, schone lucht, geen muggen, gouden ruska.",
     seoTitle: 'Lapland-zomeraanbiedingen: middernachtzon, verblijven en wandelen',
     seoDesc:
       '32 dagen middernachtzon in Fins Lapland (6 juni – 7 juli). Hutaanbiedingen onder de middernachtzon, wandelen in Pallas-Yllästunturi en zomerverblijven.',
@@ -268,7 +268,7 @@ const nl: SectionCopy = {
   },
   faq: {
     eyebrow: 'Goed om te weten',
-    title: 'Lapland-aanbiedingen, uw vragen beantwoord.',
+    title: 'Lapland-aanbiedingen: antwoord op uw vragen.',
     lead: 'Eerlijke antwoorden over wanneer u gaat, wanneer u boekt en wat u kunt verwachten. Geen verzonnen prijzen, geen nep-urgentie.',
     items: [
       {
@@ -281,7 +281,7 @@ const nl: SectionCopy = {
       },
       {
         q: 'Zijn last-minute Lapland-aanbiedingen de moeite waard?',
-        a: 'Vaak wel, buiten de paar piekperiodes. Wanneer een hut, een husky-plek of een noorderlichttocht vlak voor de datum nog onverkochte ruimte heeft, geven partners die vrij tegen de live prijs, en noorderlicht- en huskytochten nemen vaak tot ongeveer 24 uur van tevoren nog boekingen aan. De uitzonderingen zijn Kerst, Oud en Nieuw, Pasen en de februarivakantie, wanneer de vraag hoog is en wachten zelden helpt.',
+        a: 'Vaak wel, buiten de paar piekperiodes. Wanneer een hut, een husky-plek of een noorderlichttocht vlak voor de datum nog plekken over heeft, geven partners die vrij tegen de live prijs, en noorderlicht- en huskytochten nemen vaak tot ongeveer 24 uur van tevoren nog boekingen aan. De uitzonderingen zijn Kerst, Oud en Nieuw, Pasen en de februarivakantie, wanneer de vraag hoog is en wachten zelden helpt.',
       },
       {
         q: 'Wat zit er in een typisch Lapland-pakket?',

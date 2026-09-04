@@ -64,7 +64,7 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
   },
   es: {
     title: 'LaplandDeals: Ofertas de última hora para la Laponia finlandesa',
-    desc: 'Ofertas reales de los socios en hoteles de Laponia, safaris en husky, vuelos a Rovaniemi y alquiler de coches. Precios de última hora, descensos de fin de temporada y ofertas de verano.',
+    desc: 'Ofertas reales de los socios en hoteles de Laponia, safaris de huskies, vuelos a Rovaniemi y alquiler de coches. Precios de última hora, bajadas de precio de fin de temporada y ofertas de verano.',
   },
   'pt-BR': {
     title: 'LaplandDeals: Ofertas de última hora para a Lapônia finlandesa',
@@ -80,7 +80,7 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
   },
   fr: {
     title: 'LaplandDeals : Offres et promotions de dernière minute pour la Laponie finlandaise',
-    desc: "Offres partenaires en direct sur les hôtels de Laponie, safaris en husky, vols pour Rovaniemi et location de voitures. Tarifs de dernière minute, soldes de fin de saison, offres d'été.",
+    desc: "Offres partenaires en direct sur les hôtels de Laponie, safaris en traîneau à chiens, vols pour Rovaniemi et location de voitures. Tarifs de dernière minute, soldes de fin de saison, offres d'été.",
   },
   it: {
     title: 'LaplandDeals: Offerte last-minute e promozioni per la Lapponia finlandese',
@@ -92,7 +92,7 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
   },
   sv: {
     title: 'LaplandDeals: sista minuten-erbjudanden till finska Lappland',
-    desc: 'Partnernas live-priser på hotell i Lappland, huskysafarier, flyg till Rovaniemi och biluthyrning. Sista minuten-priser, säsongens slutrea och sommarerbjudanden.',
+    desc: 'Partnernas realtidspriser på hotell i Lappland, huskysafarier, flyg till Rovaniemi och biluthyrning. Sista minuten-priser, säsongens slutrea och sommarerbjudanden.',
   },
 };
 
