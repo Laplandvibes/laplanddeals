@@ -63,11 +63,11 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
     desc: 'ラップランドのホテル、ハスキーサファリ、ロヴァニエミ行き航空券、レンタカーの最新パートナーオファー。直前価格・シーズン終了セール・夏季オファーをまとめてご紹介します。',
   },
   es: {
-    title: 'LaplandDeals: Ofertas de última hora para la Laponia finlandesa',
+    title: 'LaplandDeals: ofertas de última hora en Laponia',
     desc: 'Ofertas reales de los socios en hoteles de Laponia, safaris de huskies, vuelos a Rovaniemi y alquiler de coches. Precios de última hora, bajadas de precio de fin de temporada y ofertas de verano.',
   },
   'pt-BR': {
-    title: 'LaplandDeals: Ofertas de última hora para a Lapônia finlandesa',
+    title: 'LaplandDeals: ofertas de última hora na Lapônia',
     desc: 'Ofertas reais dos parceiros em hotéis da Lapônia, safáris com huskies, voos para Rovaniemi e aluguel de carro. Preços de última hora, promoções de fim de temporada e ofertas de verão.',
   },
   'zh-CN': {
@@ -79,11 +79,11 @@ const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
     desc: '라플란드 호텔, 허스키 사파리, 로바니에미행 항공편, 렌터카의 파트너 실시간 특가. 직전 예약, 시즌 마감 할인, 여름 특가.',
   },
   fr: {
-    title: 'LaplandDeals : Offres et promotions de dernière minute pour la Laponie finlandaise',
+    title: 'LaplandDeals : offres de dernière minute en Laponie',
     desc: "Offres partenaires en direct sur les hôtels de Laponie, safaris en traîneau à chiens, vols pour Rovaniemi et location de voitures. Tarifs de dernière minute, soldes de fin de saison, offres d'été.",
   },
   it: {
-    title: 'LaplandDeals: Offerte last-minute e promozioni per la Lapponia finlandese',
+    title: 'LaplandDeals: offerte last-minute per la Lapponia',
     desc: 'Offerte partner in tempo reale su hotel in Lapponia, safari con husky, voli per Rovaniemi e autonoleggio. Prezzi last-minute, sconti di fine stagione, offerte estive.',
   },
   nl: {

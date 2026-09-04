@@ -212,7 +212,7 @@ const en: SectionCopy = {
     h1: 'live partner prices.',
     sub:
       'Studded tyres, 4WD, free aurora-chasing range. Pickup at every Lapland airport, compare on EconomyBookings.',
-    seoTitle: 'Car Rental → Car Hire (footer link only — this hero string needs no change)',
+    seoTitle: 'Lapland Car Hire Deals, Studded Tyres, 4WD, Airport Pickup',
     seoDesc:
       'Live EconomyBookings prices on car hire from Rovaniemi, Kittilä, Ivalo and Kuusamo (Ruka) airports. Studded tyres included for winter driving.',
     bottomTitle: 'Helsinki pickup or one-way drop-off?',
