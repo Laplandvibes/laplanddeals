@@ -212,7 +212,7 @@ const fi: SectionCopy = {
     h1: 'kumppanin hinnat suoraan.',
     sub:
       'Talvirenkaat, 4WD, riittävä matka revontulijahtiin. Nouto jokaiselta Lapin lentokentältä, vertaile EconomyBookingsissa.',
-    seoTitle: 'Lapin autovuokraustarjoukset, nastarenkaat, neliveto, lentokenttänouto',
+    seoTitle: 'Lapin autovuokraus: nastarenkaat, neliveto, kenttänouto',
     seoDesc:
       'EconomyBookingsin senhetkiset hinnat autovuokraukseen Rovaniemen, Kittilän, Ivalon ja Kuusamon (Ruka) lentokentiltä. Talvirenkaat sisältyvät.',
     bottomTitle: 'Helsingin nouto vai yksisuuntainen palautus?',

@@ -167,7 +167,7 @@ const en: SectionCopy = {
     h1: 'live prices, tonight.',
     sub:
       "Glass igloos under the aurora belt, slope-side properties on Levi, wilderness lodges in Ylläs, family hotels in Rovaniemi. Compare tonight's live rates.",
-    seoTitle: 'Lapland Hotel Deals, Glass Igloos, Slope-Side, Wilderness Cabins',
+    seoTitle: 'Lapland Hotel Deals: Glass Igloos, Slope-Side, Cabins',
     seoDesc:
       'Live prices for glass igloos, ski-in stays, family hotels and wilderness lodges across Finnish Lapland. Last-minute and end-of-season cabin nights.',
     bottomTitle: "Don't see your destination?",

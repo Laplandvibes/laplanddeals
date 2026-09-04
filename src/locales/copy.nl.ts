@@ -167,7 +167,7 @@ const nl: SectionCopy = {
     h1: 'live prijzen, vannacht.',
     sub:
       "Glazen iglo's in de noorderlichtgordel, hotels aan de piste in Levi, wildernislodges in Ylläs, gezinshotels in Rovaniemi. Vergelijk de actuele tarieven voor vanavond.",
-    seoTitle: "Lapland-hotelaanbiedingen: glazen iglo's, aan de piste, wildernishutten",
+    seoTitle: "Lapland-hotelaanbiedingen: glazen iglo's, piste, wildernis",
     seoDesc:
       "Live prijzen voor glazen iglo's, ski-in-verblijven, gezinshotels en wildernislodges in heel Fins Lapland. Last-minute en eindseizoens-hutnachten.",
     bottomTitle: 'Ziet u uw bestemming niet?',
@@ -180,7 +180,7 @@ const nl: SectionCopy = {
     h1: 'realtime beschikbaarheid.',
     sub:
       "Husky-safari's, noorderlicht-jachten, sneeuwscooter-expedities, bezoeken aan rendierboerderijen, ijsvissen. Live beschikbaarheid op GetYourGuide, geen valse timers, geen verzonnen percentages.",
-    seoTitle: 'Aanbiedingen voor Lapland-activiteiten: husky, noorderlicht, sneeuwscooter',
+    seoTitle: 'Lapland-activiteiten: husky, noorderlicht, sneeuwscooter',
     seoDesc:
       "Live GetYourGuide-prijzen voor husky-safari's, noorderlicht-jachten, sneeuwscootertours, rendierboerderijen en ijsvissen in heel Fins Lapland. Last-minute slots.",
     bottomTitle: 'Blader door de volledige Lapland-catalogus',
@@ -212,7 +212,7 @@ const nl: SectionCopy = {
     h1: 'live partnerprijzen.',
     sub:
       "Spijkerbanden, 4x4, vrije actieradius voor noorderlichtjachten. Ophalen op elke Lapland-luchthaven, vergelijk op EconomyBookings.",
-    seoTitle: 'Lapland-autoverhuur: spijkerbanden, 4x4, ophalen op de luchthaven',
+    seoTitle: 'Lapland-autoverhuur: spijkerbanden, 4x4, luchthaven',
     seoDesc:
       "Live EconomyBookings-prijzen voor autoverhuur op de luchthavens van Rovaniemi, Kittilä, Ivalo en Kuusamo (Ruka). Spijkerbanden inbegrepen voor winterrijden.",
     bottomTitle: 'Ophalen in Helsinki of elders inleveren?',
@@ -244,7 +244,7 @@ const nl: SectionCopy = {
     h1: 'is de verborgen aanbieding.',
     sub:
       "32 dagen zonder zonsondergang. Hutten aan het meer voor een fractie van de decembertarieven. Wandelen is eind augustus op zijn mooist, schone lucht, geen muggen, gouden ruska.",
-    seoTitle: 'Lapland-zomeraanbiedingen: middernachtzon, verblijven en wandelen',
+    seoTitle: 'Lapland-zomeraanbiedingen: middernachtzon en wandelen',
     seoDesc:
       '32 dagen middernachtzon in Fins Lapland (6 juni – 7 juli). Hutaanbiedingen onder de middernachtzon, wandelen in Pallas-Yllästunturi en zomerverblijven.',
     offersTitle: 'Zomeraanbiedingen, live partnerprijzen',

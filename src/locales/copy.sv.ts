@@ -171,7 +171,7 @@ const sv: SectionCopy = {
     h1: 'priser i realtid, i kväll.',
     sub:
       'Glasigloor i norrskensbältet, boende vid backen i Levi, vildmarkslodger i Ylläs, familjehotell i Rovaniemi. Jämför kvällens priser i realtid.',
-    seoTitle: 'Hotellerbjudanden i Lappland: glasigloor, vid backen, vildmarksstugor',
+    seoTitle: 'Hotellerbjudanden i Lappland: glasigloor, backen, vildmark',
     seoDesc:
       'Priser i realtid på glasigloor, ski-in-boende, familjehotell och vildmarkslodger i finska Lappland. Stugnätter i sista minuten och i slutet av säsongen.',
     bottomTitle: 'Ser du inte ditt resmål?',
@@ -184,7 +184,7 @@ const sv: SectionCopy = {
     h1: 'tillgänglighet i realtid.',
     sub:
       'Huskysafarier, norrskensturer, skoterexpeditioner, besök på rengårdar, pimpelfiske. Tillgänglighet i realtid på GetYourGuide, inga falska nedräkningar, ingen påhittad procent.',
-    seoTitle: 'Aktivitetserbjudanden i Lappland: husky, norrsken, skoter m.m.',
+    seoTitle: 'Aktivitetserbjudanden i Lappland: husky, norrsken, skoter',
     seoDesc:
       'GetYourGuide-priser i realtid på huskysafarier, norrskensturer, skoterturer, rengårdar och pimpelfiske i finska Lappland. Platser i sista minuten.',
     bottomTitle: 'Bläddra i hela Lappland-katalogen',
@@ -232,7 +232,7 @@ const sv: SectionCopy = {
     h1: 'Lapplandsresa.',
     sub:
       'Vi säljer inga färdiga paket. Vi väljer ut byggstenarna, flyg, boende, huskydagar, norrskensturer, och du bokar varje del till partnerns pris i realtid. Ingen mellanhandsavgift.',
-    seoTitle: 'Paketerbjudanden i Lappland: norrskensvecka, familjeresor, weekendresor',
+    seoTitle: 'Paketerbjudanden i Lappland: norrsken, familj, weekend',
     seoDesc:
       'Idéer för flerdagarsresor i Lappland: norrskensvecka i Saariselkä, familjeresor i Rovaniemi, weekendresor. Varje del bokas separat till partnerns priser i realtid.',
     curatedTitle: 'Utvalda reseidéer',
@@ -248,7 +248,7 @@ const sv: SectionCopy = {
     h1: 'är det dolda fyndet.',
     sub:
       'I 32 dygn går solen aldrig ner. Stugor vid sjön för en bråkdel av decemberpriserna. Vandringen kulminerar i slutet av augusti, ren luft, inga myggor, guldgul ruska.',
-    seoTitle: 'Sommarerbjudanden i Lappland: boende i midnattssol och vandring',
+    seoTitle: 'Sommarerbjudanden i Lappland: midnattssol och vandring',
     seoDesc:
       'I 32 dygn går solen aldrig ner i finska Lappland (6 juni – 7 juli). Stugerbjudanden i midnattssol, vandring i Pallas-Yllästunturi, sommarboende vid sjön för en bråkdel av vinterpriserna.',
     offersTitle: 'Sommarerbjudanden, partnerns priser i realtid',
