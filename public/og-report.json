@@ -1,0 +1,86 @@
+{
+  "version": "20260905",
+  "domain": "laplanddeals.com",
+  "brand": "DEALS",
+  "tagline": "Last-minute deals for Finnish Lapland",
+  "generated": "2026-09-05T21:51:04.041Z",
+  "staticFallbackSeason": "summer",
+  "seasons": {
+    "summer": {
+      "heroUrl": "https://laplanddeals.com/images/home-hero-summer.avif",
+      "heroAlt": "Finnish Lapland, a lakeside cabin landscape",
+      "heroSha": "e8c3d45d26eaa890",
+      "bytes": 218323,
+      "sha256": "9042a12826e864ab23b40e193236ce20461c7f33a0d7bc58b33b0c471b6c6072",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 16073,
+      "inkBox": [
+        338,
+        493,
+        862,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 94.2,
+      "centerSq": 94,
+      "photoRegion": 114.9,
+      "photoRegionRef": 114.9,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 527,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": []
+    },
+    "winter": {
+      "heroUrl": "https://laplanddeals.com/images/home-hero.avif",
+      "heroAlt": "Finnish Lapland, a lakeside cabin landscape",
+      "heroSha": "2a9178db30337b0e",
+      "bytes": 96092,
+      "sha256": "be1b5814b8625cbd9a489bbd93d8f73063f0300acb49bd1c448d8fdb3f8bc05a",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 16073,
+      "inkBox": [
+        338,
+        493,
+        862,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 109.4,
+      "centerSq": 115,
+      "photoRegion": 135.7,
+      "photoRegionRef": 135.7,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 527,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": []
+    }
+  }
+}
