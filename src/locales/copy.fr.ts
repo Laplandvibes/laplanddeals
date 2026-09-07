@@ -12,9 +12,9 @@ const fr: SectionCopy = {
   },
   hero: {
     eyebrow: 'Last minute · Bons plans · Saison des aurores',
-    h1Line1Italic: 'Les offres last minute',
+    h1Line1Italic: 'Offres de dernière minute',
     h1Line1Bold: '',
-    h1Line2: 'les moins chères de Laponie.',
+    h1Line2: 'pas chères en Laponie.',
     lead:
       'Chambres d\'hôtel qui se libèrent, places restantes en safari en traîneau à chiens et motoneige, forfaits pas chers et chalets disponibles, le tout au même endroit. Un clic vous amène directement au prix actuel du partenaire.',
     primary: 'Offres d\'hôtel pour ce soir',

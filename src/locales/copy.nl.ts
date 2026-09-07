@@ -12,9 +12,9 @@ const nl: SectionCopy = {
   },
   hero: {
     eyebrow: 'Last minute · Goedkope deals · Noorderlichtseizoen',
-    h1Line1Italic: 'De goedkoopste last-minute',
+    h1Line1Italic: 'Goedkope last-minute',
     h1Line1Bold: '',
-    h1Line2: 'deals van Lapland.',
+    h1Line2: 'deals in Lapland.',
     lead:
       'Vrijgekomen hotelnachten, onverkochte husky- en sneeuwscooterplekken, goedkope pakketten en vrije hutten, alles op één plek. Eén klik brengt u rechtstreeks naar de actuele prijs van de partner.',
     primary: 'Hoteldeals voor vanavond',

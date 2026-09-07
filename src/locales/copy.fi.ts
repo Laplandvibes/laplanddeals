@@ -12,9 +12,9 @@ const fi: SectionCopy = {
   },
   hero: {
     eyebrow: 'Last minute · Vapautuneet paikat · Revontulikausi',
-    h1Line1Italic: 'Lapin halvimmat',
+    h1Line1Italic: 'Halvat viime hetken',
     h1Line1Bold: '',
-    h1Line2: 'viime hetken diilit.',
+    h1Line2: 'diilit Lappiin.',
     lead:
       'Vapautuneet hotelliyöt, täyttymättömät husky- ja kelkkaretket, edulliset paketit ja vapaat mökit yhdessä paikassa. Klikkaus vie kumppanin sivulle, jossa näet ja varaat ajantasaisen hinnan.',
     primary: 'Illan hotellidiilit',

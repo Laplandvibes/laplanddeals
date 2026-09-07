@@ -16,9 +16,9 @@ const sv: SectionCopy = {
   },
   hero: {
     eyebrow: 'Last minute · Billiga erbjudanden · Norrskenssäsong',
-    h1Line1Italic: 'Lapplands billigaste',
+    h1Line1Italic: 'Billiga sista minuten-',
     h1Line1Bold: '',
-    h1Line2: 'sista minuten-erbjudanden.',
+    h1Line2: 'erbjudanden i Lappland.',
     lead:
       'Lediga hotellnätter, osålda platser på husky- och skoterturer, billiga paket och lediga stugor, allt på ett ställe. Ett klick tar dig direkt till partnerns aktuella pris.',
     primary: 'Kvällens hotellerbjudanden',

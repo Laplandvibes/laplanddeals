@@ -12,9 +12,9 @@ const es: SectionCopy = {
   },
   hero: {
     eyebrow: 'Last minute · Ofertas baratas · Temporada de auroras',
-    h1Line1Italic: 'Las ofertas last minute',
+    h1Line1Italic: 'Ofertas last minute',
     h1Line1Bold: '',
-    h1Line2: 'más baratas de Laponia.',
+    h1Line2: 'baratas en Laponia.',
     lead:
       'Habitaciones de hotel que se liberan, plazas libres en safaris de huskies y motos de nieve, paquetes baratos y cabañas disponibles, todo en un solo sitio. Un clic le lleva directo al precio actual del socio.',
     primary: 'Ofertas de hotel para esta noche',

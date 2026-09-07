@@ -12,9 +12,9 @@ const en: SectionCopy = {
   },
   hero: {
     eyebrow: 'Last minute · Cheap deals · Aurora season',
-    h1Line1Italic: "Lapland's cheapest",
+    h1Line1Italic: 'Cheap last-minute',
     h1Line1Bold: '',
-    h1Line2: 'last-minute deals.',
+    h1Line2: 'deals in Lapland.',
     lead:
       "Freed-up hotel nights, unfilled husky and snowmobile seats, cheap packages and open cabins, all in one place. One click takes you straight to the partner's current price.",
     primary: "Tonight's hotel deals",

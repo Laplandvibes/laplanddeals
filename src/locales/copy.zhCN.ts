@@ -12,9 +12,9 @@ const zhCN: SectionCopy = {
   },
   hero: {
     eyebrow: '尾单 · 超值优惠 · 极光季',
-    h1Line1Italic: '拉普兰最便宜的',
+    h1Line1Italic: '拉普兰特价',
     h1Line1Bold: '',
-    h1Line2: '尾单特惠。',
+    h1Line2: '尾单优惠。',
     lead:
       '临时空出的酒店客房、未售完的哈士奇雪橇和雪地摩托名额、便宜的套餐和空置小屋，全在一处。一键直达合作伙伴的当前价格。',
     primary: '今晚酒店特惠',

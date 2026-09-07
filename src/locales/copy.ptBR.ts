@@ -12,9 +12,9 @@ const ptBR: SectionCopy = {
   },
   hero: {
     eyebrow: 'Last minute · Ofertas baratas · Temporada de auroras',
-    h1Line1Italic: 'As ofertas de última hora',
+    h1Line1Italic: 'Ofertas de última hora',
     h1Line1Bold: '',
-    h1Line2: 'mais baratas da Lapônia.',
+    h1Line2: 'baratas na Lapônia.',
     lead:
       'Diárias de hotel liberadas, vagas sobrando em safáris de huskies e de snowmobile, pacotes baratos e cabanas livres, tudo num lugar só. Um clique leva direto ao preço atual do parceiro.',
     primary: 'Ofertas de hotel para hoje',

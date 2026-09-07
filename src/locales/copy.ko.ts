@@ -12,7 +12,7 @@ const ko: SectionCopy = {
   },
   hero: {
     eyebrow: '막판 예약 · 초특가 · 오로라 시즌',
-    h1Line1Italic: '라플란드 최저가',
+    h1Line1Italic: '라플란드 저가',
     h1Line1Bold: '',
     h1Line2: '막판 특가.',
     lead:

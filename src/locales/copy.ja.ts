@@ -12,7 +12,7 @@ const ja: SectionCopy = {
   },
   hero: {
     eyebrow: '直前予約 · 格安ディール · オーロラシーズン',
-    h1Line1Italic: 'ラップランド最安の',
+    h1Line1Italic: 'ラップランドの格安',
     h1Line1Bold: '',
     h1Line2: '直前セール。',
     lead:

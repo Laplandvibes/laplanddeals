@@ -12,9 +12,9 @@ const it: SectionCopy = {
   },
   hero: {
     eyebrow: 'Last minute · Offerte convenienti · Stagione delle aurore',
-    h1Line1Italic: 'Le offerte last minute',
+    h1Line1Italic: 'Offerte last minute',
     h1Line1Bold: '',
-    h1Line2: 'più economiche della Lapponia.',
+    h1Line2: 'economiche in Lapponia.',
     lead:
       'Camere d\'albergo che si liberano, posti invenduti nei safari con gli husky e in motoslitta, pacchetti economici e baite libere, tutto in un unico posto. Un clic La porta dritto al prezzo attuale del partner.',
     primary: 'Offerte hotel per stasera',

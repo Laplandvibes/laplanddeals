@@ -12,9 +12,9 @@ const de: SectionCopy = {
   },
   hero: {
     eyebrow: 'Last Minute · Günstige Deals · Polarlicht-Saison',
-    h1Line1Italic: 'Lapplands günstigste',
+    h1Line1Italic: 'Günstige Last-Minute-',
     h1Line1Bold: '',
-    h1Line2: 'Last-Minute-Deals.',
+    h1Line2: 'Angebote für Lappland.',
     lead:
       'Frei gewordene Hotelnächte, unverkaufte Husky- und Schneemobilplätze, günstige Pakete und freie Hütten, alles an einem Ort. Ein Klick führt direkt zum aktuellen Preis des Partners.',
     primary: 'Hotel-Deals heute Abend',
