@@ -193,7 +193,7 @@ const fi: SectionCopy = {
     introP2: 'Itse lento kestää noin puolitoista tuntia, joten halvempi lippu väärälle kentälle voi maksaa kaksi tuntia maantietä toisessa päässä. Hinnat haetaan kumppanilta livenä eikä tallenneta, ja reittejä lentävät Finnair ja Norwegian.',
     eyebrow: 'Lennot',
     h1Italic: 'Lennot Lappiin',
-    h1: 'Trip.comin halvimmat hinnat.',
+    h1: 'Trip.comin hinnat livenä.',
     sub:
       'Helsinki jokaiselle Lapin lentokentälle, valmiiksi täytetty ja päivätty. Klikkaa avataksesi Finnairin ja Norwegianin todelliset hinnat.',
     seoTitle: 'Lennot Lappiin, Trip.comin live-tarjoukset Helsingistä',
