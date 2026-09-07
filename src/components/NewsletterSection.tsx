@@ -185,6 +185,11 @@ export default function NewsletterSection() {
           <p className="text-ivory/65 text-[11px] uppercase tracking-[0.28em] mb-5">{c.kicker}</p>
           <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-ivory mb-5 leading-[1.05]">
             <span className="italic font-light">{c.titleItalic}</span>
+            {/* 🔴 <br /> ei tuota välilyöntiä tekstisisältöön: ilman tätä väliä
+                otsikon saavutettava nimi on kaksi sanaa kiinni toisissaan.
+                Ruudulla ei muutu mikään. Sama korjaus kuin
+                laplandcarrental/PageHero.tsx (7.9.2026). */}
+            {' '}
             <br />
             {c.titleRest}
           </h2>
