@@ -19,4 +19,4 @@ English (default, no prefix), Finnish (/fi/), Swedish (/sv/), German (/de/), Spa
 
 - Hub: https://laplandvibes.com/
 - Sitemap: https://laplanddeals.com/sitemap.xml
-- Contact: info@laplanddeals.com
+- Contact: info@laplandvibes.com
