@@ -43,12 +43,14 @@ export type SectionCopy = {
     leadRest: string;
     cta: string;
   };
-  pulse: {
-    eyebrow: string;
-    titleItalic: string;
-    titleRest: string;
-    lead: string;
-    items: { when: string; title: string; body: string }[];
+  /** Live sections (2026-09-10). {time}/{date}/{from}/{to} are runtime placeholders. */
+  live: {
+    flights: { eyebrow: string; title: string; lead: string; soon: string; anyDate: string; oneWay: string; roundTrip: string; from: string; checked: string; all: string };
+    cabins: { eyebrow: string; title: string; lead: string; weekFrom: string; guests: string; lastMinute: string; lastMinuteLead: string; view: string; updated: string };
+    cars: { eyebrow: string; title: string; lead: string; window: string; total: string; operator: string; orSimilar: string; auto: string; manual: string; cta: string; classNames: string[] };
+    activities: { eyebrow: string; title: string; lead: string; browse: string };
+    /** places: Levi, Rovaniemi, Saariselkä, Ylläs, Ruka, Inari — CJK locales transliterate. */
+    tonight: { eyebrow: string; title: string; lead: string; places: string[] };
   };
   sections: {
     pickEyebrow: string;

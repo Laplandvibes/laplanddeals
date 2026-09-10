@@ -32,45 +32,6 @@ const nl: SectionCopy = {
       ' · één klik opent de partnerpagina met het actuele tarief. We verzinnen nooit percentages en gebruiken geen valse afteltimers.',
     cta: 'Hotels vannacht →',
   },
-  pulse: {
-    eyebrow: 'De stand van vandaag',
-    titleItalic: 'Wat',
-    titleRest: 'er nu in Lapland gebeurt.',
-    lead:
-      "Concrete seizoensfeiten, geen verzonnen aftellers. We werken het bij zodra de situatie verandert.",
-    items: [
-      {
-        when: 'Nu',
-        title: 'Middernachtzon, de laagste tarieven van het jaar',
-        body: 'Tot eind juli gaat de zon nauwelijks onder. Hutten aan het meer liggen ruim onder de winterprijzen, en dezelfde fjälls (heuvels) die in februari uitverkocht waren, zijn nu stil. Het beste prijsmoment van het jaar.',
-      },
-      {
-        when: 'Nu tot en met augustus',
-        title: 'Wandel- en waterseizoen',
-        body: 'Pallas-Yllästunturi en de oostelijke fjälls zijn droog en open. Lange dagen om te wandelen, te suppen en in het meer te zwemmen. De muggen nemen in de loop van augustus af; neem voor eind juni een hoofdnetje mee.',
-      },
-      {
-        when: '5–15 sept.',
-        title: 'Ruska: herfstkleuren pieken razendsnel',
-        body: "De dwergberk kleurt in zo'n drie dagen goudgeel. Hutten zijn nog betaalbaar en de lucht is de schoonste van Europa (WMO). Naarmate de nachten donkerder worden, keert ook het noorderlicht terug.",
-      },
-      {
-        when: 'Kerst 2026',
-        title: 'Al druk geboekt',
-        body: "Glazen iglo's en familiekamers in het Kerstmandorp sluiten meestal eind augustus voor boekingen. Kerstavonddiners en plekken in de rendierslee: doorgaans weg vóór oktober.",
-      },
-      {
-        when: 'Beste tariefvenster',
-        title: '4-8 weken vooraf vanuit Helsinki',
-        body: 'Finnair- en Norwegian-retourvluchten Helsinki–Lapland zakken naar € 89–129 als u 4–8 weken vooraf boekt, buiten de pieken van Kerst, Pasen en de februarivakantie.',
-      },
-      {
-        when: 'Vanaf eind augustus',
-        title: 'Het noorderlichtseizoen begint weer',
-        body: 'Het seizoen loopt ruwweg van eind augustus tot begin april. Saariselkä, Inari en Utsjoki hebben de hoogste kans op zichtbaar noorderlicht. Een noorderlichttocht kunt u meestal tot 24 uur vooraf annuleren, dus u boekt er makkelijk last minute nog een bij.',
-      },
-    ],
-  },
   sections: {
     pickEyebrow: 'Keuze van de redactie',
     pickTitle: 'Met zorg geselecteerd voor het komende seizoen.',
@@ -265,6 +226,71 @@ const nl: SectionCopy = {
       },
     ],
     cta: 'Zoek een zomerweek →',
+  },
+  // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
+  live: {
+    "flights": {
+      "eyebrow": "Live tarieven · Travelpayouts",
+      "title": "De goedkoopste vluchten naar Lapland op dit moment",
+      "lead": "Het laagste tarief in de Travelpayouts-cache voor elke luchthaven in Lapland vanaf Helsinki, plus het goedkoopste vertrek binnen de komende 14 dagen. Elke rij opent precies dat tarief.",
+      "soon": "Komende 14 dagen",
+      "anyDate": "Goedkoopste datum",
+      "oneWay": "enkele reis",
+      "roundTrip": "retour",
+      "from": "vanaf",
+      "checked": "Tarieven gecontroleerd om {time}",
+      "all": "Alle vluchtaanbiedingen"
+    },
+    "cabins": {
+      "eyebrow": "Lomarengas · feed dagelijks ververst",
+      "title": "De goedkoopste Lapland-hutten deze week",
+      "lead": "Echte hutten uit de productfeed van Lomarengas, gesorteerd op weekprijs. Foto’s en prijzen zijn van de verhuurder zelf.",
+      "weekFrom": "week vanaf",
+      "guests": "pers.",
+      "lastMinute": "Last-minute hutten in Lapland",
+      "lastMinuteLead": "Lomarengas geeft korting op aankomsten die nog maar een paar dagen weg zijn. Deze link opent dat filter voor Lapland.",
+      "view": "Hut bekijken",
+      "updated": "Feed ververst op {date}"
+    },
+    "cars": {
+      "eyebrow": "EconomyBookings · gecontroleerd op {date}",
+      "title": "Huurauto op de luchthaven, echte totaalprijzen",
+      "lead": "Totaalprijzen uit de live vergelijking voor 4 huurdagen, inclusief belastingen. Elke rij opent dezelfde zoekopdracht met dezelfde data.",
+      "window": "Ophalen {from}, inleveren {to}",
+      "total": "Totaal 4 dagen",
+      "operator": "Verhuurder",
+      "orSimilar": "of vergelijkbaar",
+      "auto": "Automaat",
+      "manual": "Handgeschakeld",
+      "cta": "Open deze zoekopdracht",
+      "classNames": [
+        "Mini",
+        "Economy",
+        "Compact",
+        "Middenklasse",
+        "Stationwagen",
+        "SUV"
+      ]
+    },
+    "activities": {
+      "eyebrow": "GetYourGuide · live beschikbaarheid",
+      "title": "Tours die u nog kunt boeken",
+      "lead": "Prijzen en vrije plaatsen komen rechtstreeks van GetYourGuide. De meeste tours zijn tot 24 uur van tevoren te annuleren.",
+      "browse": "Alle Lapland-tours op GetYourGuide"
+    },
+    "tonight": {
+      "eyebrow": "Vannacht",
+      "title": "Een bed voor vannacht in",
+      "lead": "Elke knop opent de zoekopdracht van de partner voor vannacht, dus wat u ziet is wat nog vrij is.",
+      "places": [
+        "Levi",
+        "Rovaniemi",
+        "Saariselkä",
+        "Ylläs",
+        "Ruka",
+        "Inari"
+      ]
+    }
   },
   faq: {
     eyebrow: 'Goed om te weten',

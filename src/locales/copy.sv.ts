@@ -36,45 +36,6 @@ const sv: SectionCopy = {
       ' · ett klick öppnar partnersidan med deras aktuella pris. Vi hittar aldrig på rabattprocent och kör inga falska nedräkningar.',
     cta: 'Kvällens hotell →',
   },
-  pulse: {
-    eyebrow: 'Dagens läge',
-    titleItalic: 'Vad som',
-    titleRest: 'händer i Lappland just nu.',
-    lead:
-      'Konkreta säsongsfakta, inga påhittade nedräkningar. Vi uppdaterar det här så fort läget ändras.',
-    items: [
-      {
-        when: 'Just nu',
-        title: 'Midnattssol, årets lägsta priser',
-        body: 'Under juli går solen knappt ner. Stugor vid sjön ligger klart under vinterpriser, och samma fjäll som var slutsålda i februari står tomma. Årets bästa prisläge.',
-      },
-      {
-        when: 'Nu till augusti',
-        title: 'Vandrings- och vattensäsong',
-        body: 'Pallas-Yllästunturi och de östra fjällen är torra och öppna. Långa dagar för vandring, SUP och bad i sjöar. Myggen avtar under augusti; ta med myggmössa om du reser i slutet av juni.',
-      },
-      {
-        when: '5–15 september',
-        title: 'Ruskan: höstfärgerna kulminerar snabbt',
-        body: 'Dvärgbjörken blir guldgul på ungefär tre dagar. Stugorna är fortfarande prisvärda och luften är den renaste i Europa (WMO). Norrskenet återvänder också när nätterna mörknar.',
-      },
-      {
-        when: 'Julen 2026',
-        title: 'Fylls redan upp',
-        body: 'Glasigloor och familjerum i Santa Claus Village stänger oftast för bokning i slutet av augusti. Julaftonsmiddagar och renslädsturer brukar vara slutsålda i oktober.',
-      },
-      {
-        when: 'Rätt läge för biljetter',
-        title: '4–8 veckor innan från Helsingfors',
-        body: 'Tur och retur Helsingfors–Lappland med Finnair och Norwegian hamnar i spannet 89–129 € när du bokar 4–8 veckor i förväg, utanför topparna vid jul, påsk och februari.',
-      },
-      {
-        when: 'Från slutet av augusti',
-        title: 'Norrskenssäsongen börjar igen',
-        body: 'Det aktiva fönstret varar ungefär från slutet av augusti till början av april. Saariselkä, Inari och Utsjoki har de högsta chanserna att se norrsken. Turerna kan oftast avbokas fram till 24 timmar innan, så de är lätta att lägga till sent.',
-      },
-    ],
-  },
   sections: {
     pickEyebrow: 'Redaktionens val',
     pickTitle: 'Lugnt utvald för säsongen som kommer.',
@@ -269,6 +230,71 @@ const sv: SectionCopy = {
       },
     ],
     cta: 'Hitta en sommarvecka →',
+  },
+  // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
+  live: {
+    "flights": {
+      "eyebrow": "Priser i realtid · Travelpayouts",
+      "title": "Billigaste flygen till Lappland just nu",
+      "lead": "Det lägsta priset i Travelpayouts cache för varje flygplats i Lappland från Helsingfors, plus den billigaste avgången inom de närmaste 14 dagarna. Varje rad öppnar exakt det priset.",
+      "soon": "Närmaste 14 dagarna",
+      "anyDate": "Billigaste datum",
+      "oneWay": "enkel resa",
+      "roundTrip": "tur och retur",
+      "from": "från",
+      "checked": "Priser kontrollerade {time}",
+      "all": "Alla flygerbjudanden"
+    },
+    "cabins": {
+      "eyebrow": "Lomarengas · flödet uppdateras dagligen",
+      "title": "Veckans billigaste stugor i Lappland",
+      "lead": "Riktiga stugor från Lomarengas produktflöde, sorterade efter veckopris. Bilder och priser är uthyrarens egna.",
+      "weekFrom": "vecka från",
+      "guests": "pers.",
+      "lastMinute": "Sista minuten-stugor i Lappland",
+      "lastMinuteLead": "Lomarengas sänker priset på ankomster som bara är några dagar bort. Länken öppnar det filtret för Lappland.",
+      "view": "Visa stugan",
+      "updated": "Flödet uppdaterat {date}"
+    },
+    "cars": {
+      "eyebrow": "EconomyBookings · kontrollerat {date}",
+      "title": "Hyrbil på flygplatsen, riktiga totalpriser",
+      "lead": "Totalpriser hämtade från jämförelsen i realtid för 4 hyrdagar, skatter inkluderade. Varje rad öppnar samma sökning med samma datum.",
+      "window": "Upphämtning {from}, återlämning {to}",
+      "total": "Totalt 4 dagar",
+      "operator": "Uthyrare",
+      "orSimilar": "eller liknande",
+      "auto": "Automat",
+      "manual": "Manuell",
+      "cta": "Öppna denna sökning",
+      "classNames": [
+        "Minibil",
+        "Economy",
+        "Kompakt",
+        "Mellanklass",
+        "Kombi",
+        "SUV"
+      ]
+    },
+    "activities": {
+      "eyebrow": "GetYourGuide · tillgänglighet i realtid",
+      "title": "Turer som fortfarande går att boka",
+      "lead": "Priser och lediga platser kommer direkt från GetYourGuide. De flesta turer kan avbokas upp till 24 timmar innan.",
+      "browse": "Alla turer i Lappland på GetYourGuide"
+    },
+    "tonight": {
+      "eyebrow": "I natt",
+      "title": "Ett rum i natt i",
+      "lead": "Varje knapp öppnar partnerns sökning för i natt, så det som visas är det som fortfarande är ledigt.",
+      "places": [
+        "Levi",
+        "Rovaniemi",
+        "Saariselkä",
+        "Ylläs",
+        "Ruka",
+        "Inari"
+      ]
+    }
   },
   faq: {
     eyebrow: 'Bra att veta',

@@ -32,45 +32,6 @@ const en: SectionCopy = {
       ' · one click opens the partner’s page showing their current rate. We never invent percentages or run fake countdowns.',
     cta: "Tonight's hotels →",
   },
-  pulse: {
-    eyebrow: "Today's pulse",
-    titleItalic: 'What’s',
-    titleRest: 'happening in Lapland right now.',
-    lead:
-      'Concrete seasonal facts, not invented countdowns. We update this whenever the situation moves.',
-    items: [
-      {
-        when: 'Right now',
-        title: 'Midnight sun, lowest rates of the year',
-        body: 'Through July the sun barely sets. Lakeside cabins run well under winter prices, and the same fells that sold out in February sit quiet. Best-value window of the year.',
-      },
-      {
-        when: 'Now through August',
-        title: 'Hiking and water season',
-        body: 'Pallas-Yllästunturi and the eastern fells are dry and open. Long days for hiking, SUP and lake swims. Mosquitoes ease off through August; bring a head net for late June.',
-      },
-      {
-        when: 'Sept 5 – 15',
-        title: 'Ruska: autumn colour peaks fast',
-        body: 'The dwarf birch turns gold in roughly three days. Cabins are still affordable and the air is the cleanest in Europe (WMO). Aurora also returns as the nights darken.',
-      },
-      {
-        when: 'Christmas 2026',
-        title: 'Already filling up',
-        body: 'Glass igloos and Santa Claus Village family rooms usually close to bookings in late August. Christmas Eve dinners and reindeer-sleigh slots tend to be gone by October.',
-      },
-      {
-        when: 'Sweet spot for fares',
-        title: '4–8 weeks out from Helsinki',
-        body: 'Finnair and Norwegian Helsinki–Lapland round-trips drop into the €89–129 band when booked 4–8 weeks ahead, outside the Christmas, Easter and February half-term peaks.',
-      },
-      {
-        when: 'From late August',
-        title: 'Aurora season starts again',
-        body: 'The active window runs roughly from late August to early April. Saariselkä, Inari and Utsjoki have the highest visible-aurora rates. Hunts can usually be cancelled up to 24 hours before, so they are easy to add late.',
-      },
-    ],
-  },
   sections: {
     pickEyebrow: "Editor's picks",
     pickTitle: 'Quietly curated for the season ahead.',
@@ -265,6 +226,71 @@ const en: SectionCopy = {
       },
     ],
     cta: 'Find a summer week →',
+  },
+  // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
+  live: {
+    "flights": {
+      "eyebrow": "Live fares · Travelpayouts",
+      "title": "Cheapest flights to Lapland right now",
+      "lead": "The lowest fare in the Travelpayouts cache for each Lapland airport from Helsinki, plus the cheapest departure within the next 14 days. Each row opens that exact fare.",
+      "soon": "Next 14 days",
+      "anyDate": "Cheapest date",
+      "oneWay": "one way",
+      "roundTrip": "return",
+      "from": "from",
+      "checked": "Fares checked {time}",
+      "all": "All flight deals"
+    },
+    "cabins": {
+      "eyebrow": "Lomarengas · feed refreshed daily",
+      "title": "Cheapest Lapland cabins this week",
+      "lead": "Real cabins from the Lomarengas product feed, sorted by weekly price. Photos and prices are the operator’s own.",
+      "weekFrom": "week from",
+      "guests": "guests",
+      "lastMinute": "Last-minute cabins in Lapland",
+      "lastMinuteLead": "Lomarengas discounts arrivals that are only days away. This link opens that filter for Lapland.",
+      "view": "View cabin",
+      "updated": "Feed updated {date}"
+    },
+    "cars": {
+      "eyebrow": "EconomyBookings · checked {date}",
+      "title": "Airport car hire, real totals",
+      "lead": "Totals captured from the live comparison for a 4-day hire, taxes included. Each row opens the same search with the same dates.",
+      "window": "Pick-up {from}, return {to}",
+      "total": "4-day total",
+      "operator": "Operator",
+      "orSimilar": "or similar",
+      "auto": "Automatic",
+      "manual": "Manual",
+      "cta": "Open this search",
+      "classNames": [
+        "Mini",
+        "Economy",
+        "Compact",
+        "Midsize",
+        "Estate",
+        "SUV"
+      ]
+    },
+    "activities": {
+      "eyebrow": "GetYourGuide · live availability",
+      "title": "Tours you can still book",
+      "lead": "Prices and free slots come straight from GetYourGuide. Most tours can be cancelled up to 24 hours before.",
+      "browse": "All Lapland tours on GetYourGuide"
+    },
+    "tonight": {
+      "eyebrow": "Tonight",
+      "title": "A bed tonight in",
+      "lead": "Each button opens the partner’s search for tonight, so what you see is what is still free.",
+      "places": [
+        "Levi",
+        "Rovaniemi",
+        "Saariselkä",
+        "Ylläs",
+        "Ruka",
+        "Inari"
+      ]
+    }
   },
   faq: {
     eyebrow: 'Good to know',

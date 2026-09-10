@@ -32,45 +32,6 @@ const es: SectionCopy = {
       ' · actualizados con cada clic. Nunca inventamos porcentajes, los socios muestran la tarifa real de hoy.',
     cta: 'Hoteles de esta noche →',
   },
-  pulse: {
-    eyebrow: 'El pulso de hoy',
-    titleItalic: 'Qué',
-    titleRest: 'está pasando en Laponia ahora mismo.',
-    lead:
-      'Hechos estacionales concretos, no cuentas atrás inventadas. Lo actualizamos cuando la situación cambia.',
-    items: [
-      {
-        when: 'Ahora mismo',
-        title: 'Sol de medianoche, las tarifas más bajas del año',
-        body: 'Hasta julio el sol apenas se pone. Las cabañas junto al lago salen muy por debajo de los precios de invierno, y los mismos fjälls que se agotaron en febrero están tranquilos. La mejor relación calidad-precio del año.',
-      },
-      {
-        when: 'De ahora a agosto',
-        title: 'Temporada de senderismo y agua',
-        body: 'Pallas-Yllästunturi y los fjälls del este están secos y abiertos. Días largos para caminar, hacer SUP y bañarse en los lagos. Los mosquitos van disminuyendo a lo largo de agosto; lleve una mosquitera para la cabeza a finales de junio.',
-      },
-      {
-        when: '5-15 sep',
-        title: 'Ruska: el color del otoño alcanza su punto álgido en pocos días',
-        body: 'El abedul enano se vuelve dorado en unos tres días. Las cabañas siguen siendo asequibles y el aire es el más limpio de Europa (OMM). Las auroras boreales también regresan a medida que las noches se oscurecen.',
-      },
-      {
-        when: 'Navidad 2026',
-        title: 'Ya se está llenando',
-        body: 'Los iglús de cristal y las habitaciones familiares del Pueblo de Papá Noel suelen cerrar reservas a finales de agosto. Las cenas de Nochebuena y las plazas de trineo de renos tienden a agotarse en octubre.',
-      },
-      {
-        when: 'Mejor momento para tarifas',
-        title: '4-8 semanas antes desde Helsinki',
-        body: 'Los vuelos de ida y vuelta de Finnair y Norwegian HEL→Laponia caen al rango de 89–129 € cuando se reservan con 4-8 semanas de antelación, fuera de las puntas de Navidad, Semana Santa y febrero.',
-      },
-      {
-        when: 'Desde finales de agosto',
-        title: 'Vuelve la temporada de auroras',
-        body: 'La ventana activa va aproximadamente de finales de agosto a principios de abril. Saariselkä, Inari y Utsjoki tienen las tasas más altas de auroras visibles. Las excursiones de auroras se pueden cancelar hasta 24 h antes, así que es fácil añadirlas a última hora.',
-      },
-    ],
-  },
   sections: {
     pickEyebrow: 'Selección editorial',
     pickTitle: 'Cuidadosamente seleccionado para la temporada que viene.',
@@ -265,6 +226,71 @@ const es: SectionCopy = {
       },
     ],
     cta: 'Encontrar una semana de verano →',
+  },
+  // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
+  live: {
+    "flights": {
+      "eyebrow": "Tarifas en vivo · Travelpayouts",
+      "title": "Los vuelos más baratos a Laponia ahora mismo",
+      "lead": "La tarifa más baja en la caché de Travelpayouts para cada aeropuerto de Laponia desde Helsinki, más la salida más barata en los próximos 14 días. Cada fila abre exactamente esa tarifa.",
+      "soon": "Próximos 14 días",
+      "anyDate": "Fecha más barata",
+      "oneWay": "solo ida",
+      "roundTrip": "ida y vuelta",
+      "from": "desde",
+      "checked": "Tarifas comprobadas a las {time}",
+      "all": "Todas las ofertas de vuelos"
+    },
+    "cabins": {
+      "eyebrow": "Lomarengas · feed actualizado a diario",
+      "title": "Las cabañas más baratas de Laponia esta semana",
+      "lead": "Cabañas reales del feed de productos de Lomarengas, ordenadas por precio semanal. Las fotos y los precios son del propio operador.",
+      "weekFrom": "semana desde",
+      "guests": "pers.",
+      "lastMinute": "Cabañas de última hora en Laponia",
+      "lastMinuteLead": "Lomarengas rebaja las llegadas que están a solo unos días. Este enlace abre ese filtro para Laponia.",
+      "view": "Ver cabaña",
+      "updated": "Feed actualizado el {date}"
+    },
+    "cars": {
+      "eyebrow": "EconomyBookings · comprobado el {date}",
+      "title": "Coche de alquiler en el aeropuerto, totales reales",
+      "lead": "Totales tomados del comparador en vivo para un alquiler de 4 días, impuestos incluidos. Cada fila abre la misma búsqueda con las mismas fechas.",
+      "window": "Recogida {from}, devolución {to}",
+      "total": "Total 4 días",
+      "operator": "Operador",
+      "orSimilar": "o similar",
+      "auto": "Automático",
+      "manual": "Manual",
+      "cta": "Abrir esta búsqueda",
+      "classNames": [
+        "Mini",
+        "Economy",
+        "Compacto",
+        "Medio",
+        "Familiar",
+        "SUV"
+      ]
+    },
+    "activities": {
+      "eyebrow": "GetYourGuide · disponibilidad en vivo",
+      "title": "Tours que aún se pueden reservar",
+      "lead": "Los precios y las plazas libres vienen directamente de GetYourGuide. La mayoría de los tours se pueden cancelar hasta 24 horas antes.",
+      "browse": "Todos los tours de Laponia en GetYourGuide"
+    },
+    "tonight": {
+      "eyebrow": "Esta noche",
+      "title": "Una cama esta noche en",
+      "lead": "Cada botón abre la búsqueda del socio para esta noche, así que lo que aparece es lo que sigue libre.",
+      "places": [
+        "Levi",
+        "Rovaniemi",
+        "Saariselkä",
+        "Ylläs",
+        "Ruka",
+        "Inari"
+      ]
+    }
   },
   faq: {
     eyebrow: 'Conviene saber',

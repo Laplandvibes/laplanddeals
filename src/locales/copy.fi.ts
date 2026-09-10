@@ -32,45 +32,6 @@ const fi: SectionCopy = {
       ' · klikkaus vie kumppanin sivulle, jossa näet hinnan. Emme keksi prosentteja emmekä pyöritä tekaistuja lähtölaskentoja.',
     cta: 'Tämän illan hotellit →',
   },
-  pulse: {
-    eyebrow: 'Tilanne tänään',
-    titleItalic: 'Mitä',
-    titleRest: 'Lapissa tapahtuu juuri nyt.',
-    lead:
-      'Konkreettista tietoa kaudesta, ei tekaistuja lähtölaskentoja. Päivitämme tämän aina, kun tilanne muuttuu.',
-    items: [
-      {
-        when: 'Juuri nyt',
-        title: 'Yötön yö, vuoden halvimmat hinnat',
-        body: 'Heinäkuun loppuun asti aurinko tuskin laskee. Järvenrantamökit selvästi alle talvihintojen, ja samat tunturit, jotka myytiin loppuun helmikuussa, ovat nyt hiljaisia. Vuoden paras hinta-laatusuhde.',
-      },
-      {
-        when: 'Nyt elokuun loppuun',
-        title: 'Vaellus- ja vesikausi',
-        body: 'Pallas-Yllästunturi ja itäiset tunturit ovat kuivia ja auki. Pitkät päivät vaellukseen, SUP-lautailuun ja järviuintiin. Hyttyset helpottavat elokuuta kohti; ota hyttyshattu mukaan kesäkuun lopulla.',
-      },
-      {
-        when: '5.–15.9.',
-        title: 'Ruska: syysvärit huippuun nopeasti',
-        body: 'Vaivaiskoivu värjäytyy kullankeltaiseksi noin kolmessa päivässä. Mökit ovat yhä edullisia ja ilma on Euroopan puhtainta (WMO). Myös revontulet palaavat öiden pimentyessä.',
-      },
-      {
-        when: 'Joulu 2026',
-        title: 'Jo nyt täyttymässä',
-        body: 'Lasi-iglut ja Joulupukin pajakylän perhehuoneet on yleensä varattu loppuun jo elokuussa. Jouluaaton illalliset ja porotila-ajelut: useimmiten myyty loppuun lokakuuhun mennessä.',
-      },
-      {
-        when: 'Lippujen makea piste',
-        title: '4–8 viikkoa Helsingistä',
-        body: 'Finnairin ja Norwegianin HEL→Lappi-edestakaiset putoavat 89–129 euron välille, kun varaat 4–8 viikkoa etukäteen, pois lukien joulun, pääsiäisen ja helmikuun huiput.',
-      },
-      {
-        when: 'Elokuun lopusta alkaen',
-        title: 'Revontulisesonki alkaa taas',
-        body: 'Aktiivinen kausi kestää suunnilleen elokuun lopusta huhtikuun alkuun. Saariselällä, Inarissa ja Utsjoella revontulia näkyy useimmin. Revontulisafarin voi yleensä peruuttaa vielä 24 h ennen lähtöä, joten sen voi lisätä myöhään.',
-      },
-    ],
-  },
   sections: {
     pickEyebrow: 'Toimituksen poiminta',
     pickTitle: 'Käsin valittu tulevalle kaudelle.',
@@ -265,6 +226,71 @@ const fi: SectionCopy = {
       },
     ],
     cta: 'Etsi kesäviikko →',
+  },
+  // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
+  live: {
+    "flights": {
+      "eyebrow": "Live-hinnat · Travelpayouts",
+      "title": "Halvimmat lennot Lappiin juuri nyt",
+      "lead": "Travelpayoutsin välimuistin edullisin hinta jokaiselle Lapin kentälle Helsingistä sekä halvin lähtö seuraavan 14 päivän sisällä. Rivi avaa juuri sen hinnan.",
+      "soon": "Seuraavat 14 päivää",
+      "anyDate": "Halvin päivä",
+      "oneWay": "yhteen suuntaan",
+      "roundTrip": "meno-paluu",
+      "from": "alk.",
+      "checked": "Hinnat tarkistettu {time}",
+      "all": "Kaikki lentotarjoukset"
+    },
+    "cabins": {
+      "eyebrow": "Lomarengas · syöte päivittyy päivittäin",
+      "title": "Lapin edullisimmat mökit tällä viikolla",
+      "lead": "Aitoja mökkejä Lomarenkaan tuotesyötteestä viikkohinnan mukaan järjestettynä. Kuvat ja hinnat ovat Lomarenkaan omia.",
+      "weekFrom": "viikko alk.",
+      "guests": "hlö",
+      "lastMinute": "Äkkilähdöt Lapin mökkeihin",
+      "lastMinuteLead": "Lomarengas myy lähipäivien vapaat viikot alennettuun hintaan. Tämä linkki avaa sen suodattimen Lapin mökeille.",
+      "view": "Katso mökki",
+      "updated": "Syöte päivitetty {date}"
+    },
+    "cars": {
+      "eyebrow": "EconomyBookings · tarkistettu {date}",
+      "title": "Vuokra-auto lentokentältä, oikeat kokonaishinnat",
+      "lead": "Hinnat on poimittu vertailun tuloksista 4 päivän vuokralle veroineen. Rivi avaa saman haun samoilla päivillä.",
+      "window": "Nouto {from}, palautus {to}",
+      "total": "4 pv yhteensä",
+      "operator": "Vuokraamo",
+      "orSimilar": "tai vastaava",
+      "auto": "Automaatti",
+      "manual": "Manuaali",
+      "cta": "Avaa tämä haku",
+      "classNames": [
+        "Pikkuauto",
+        "Economy",
+        "Compact",
+        "Keskikoko",
+        "Farmari",
+        "SUV"
+      ]
+    },
+    "activities": {
+      "eyebrow": "GetYourGuide · vapaat paikat livenä",
+      "title": "Retket, joihin mahtuu vielä",
+      "lead": "Hinnat ja vapaat paikat tulevat suoraan GetYourGuidesta. Useimmat retket voi perua 24 tuntia ennen lähtöä.",
+      "browse": "Kaikki Lapin retket GetYourGuidessa"
+    },
+    "tonight": {
+      "eyebrow": "Tänä yönä",
+      "title": "Yöpaikka tälle yölle",
+      "lead": "Nappi avaa kumppanin haun tälle yölle, joten näet vain sen mitä on vielä vapaana.",
+      "places": [
+        "Levi",
+        "Rovaniemi",
+        "Saariselkä",
+        "Ylläs",
+        "Ruka",
+        "Inari"
+      ]
+    }
   },
   faq: {
     eyebrow: 'Hyvä tietää',

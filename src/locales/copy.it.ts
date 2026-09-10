@@ -32,45 +32,6 @@ const it: SectionCopy = {
       ' · aggiornate ad ogni clic. Non inventiamo percentuali, i partner mostrano la tariffa di oggi.',
     cta: 'Hotel stanotte →',
   },
-  pulse: {
-    eyebrow: 'Polso di oggi',
-    titleItalic: 'Cosa',
-    titleRest: 'sta succedendo in Lapponia adesso.',
-    lead:
-      'Fatti stagionali concreti, niente conti alla rovescia inventati. Aggiorniamo non appena la situazione cambia.',
-    items: [
-      {
-        when: 'Proprio adesso',
-        title: "Sole di mezzanotte, le tariffe più basse dell'anno",
-        body: "Fino a fine luglio il sole tramonta a malapena. Le baite sul lago restano ben sotto i prezzi invernali e gli stessi fjäll esauriti a febbraio sono deserti. Il miglior rapporto qualità-prezzo dell'anno.",
-      },
-      {
-        when: 'Da adesso ad agosto',
-        title: 'Stagione di trekking e acqua',
-        body: "Il Pallas-Yllästunturi e i fjäll orientali sono asciutti e aperti. Giornate lunghe per trekking, SUP e nuotate nel lago. Le zanzare si attenuano nel corso di agosto; per fine giugno porti una retina da testa.",
-      },
-      {
-        when: '5–15 set.',
-        title: "Ruska: il foliage autunnale esplode e dura pochissimo",
-        body: "La betulla nana diventa oro in circa tre giorni. Le baite sono ancora accessibili e l'aria è la più pulita d'Europa (OMM). Con le notti che si fanno più buie torna anche l'aurora boreale.",
-      },
-      {
-        when: 'Natale 2026',
-        title: 'Già molto prenotato',
-        body: "Gli igloo di vetro e le camere familiari del Villaggio di Babbo Natale di solito chiudono le prenotazioni a fine agosto. Cene di Natale e posti per i safari con le renne: in genere esauriti entro ottobre.",
-      },
-      {
-        when: 'Fascia ottimale per le tariffe',
-        title: "4-8 settimane prima da Helsinki",
-        body: "I voli A/R Finnair e Norwegian HEL→Lapponia scendono nella fascia 89–129 € se prenotati 4-8 settimane prima, esclusi i picchi di Natale, Pasqua e febbraio.",
-      },
-      {
-        when: 'Da fine agosto',
-        title: "Riparte la stagione dell'aurora boreale",
-        body: "La finestra attiva va all'incirca da fine agosto a inizio aprile. Saariselkä, Inari e Utsjoki hanno i tassi di aurora visibile più alti. Le escursioni sono annullabili fino a 24 h prima, quindi sono facili da aggiungere all'ultimo.",
-      },
-    ],
-  },
   sections: {
     pickEyebrow: 'Selezione della redazione',
     pickTitle: 'Selezionate con cura per la stagione che verrà.',
@@ -265,6 +226,71 @@ const it: SectionCopy = {
       },
     ],
     cta: 'Cerca una settimana estiva →',
+  },
+  // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
+  live: {
+    "flights": {
+      "eyebrow": "Tariffe in tempo reale · Travelpayouts",
+      "title": "I voli più economici per la Lapponia in questo momento",
+      "lead": "La tariffa più bassa nella cache di Travelpayouts per ogni aeroporto della Lapponia da Helsinki, più la partenza più economica nei prossimi 14 giorni. Ogni riga apre esattamente quella tariffa.",
+      "soon": "Prossimi 14 giorni",
+      "anyDate": "Data più economica",
+      "oneWay": "solo andata",
+      "roundTrip": "andata e ritorno",
+      "from": "da",
+      "checked": "Tariffe verificate alle {time}",
+      "all": "Tutte le offerte voli"
+    },
+    "cabins": {
+      "eyebrow": "Lomarengas · feed aggiornato ogni giorno",
+      "title": "Le baite più economiche della Lapponia questa settimana",
+      "lead": "Baite reali dal feed prodotti di Lomarengas, ordinate per prezzo settimanale. Foto e prezzi sono dell’operatore.",
+      "weekFrom": "settimana da",
+      "guests": "pers.",
+      "lastMinute": "Baite last-minute in Lapponia",
+      "lastMinuteLead": "Lomarengas sconta gli arrivi a pochi giorni di distanza. Questo link apre quel filtro per la Lapponia.",
+      "view": "Vedi la baita",
+      "updated": "Feed aggiornato il {date}"
+    },
+    "cars": {
+      "eyebrow": "EconomyBookings · verificato il {date}",
+      "title": "Autonoleggio in aeroporto, totali reali",
+      "lead": "Totali rilevati dal confronto in tempo reale per un noleggio di 4 giorni, tasse incluse. Ogni riga apre la stessa ricerca con le stesse date.",
+      "window": "Ritiro {from}, riconsegna {to}",
+      "total": "Totale 4 giorni",
+      "operator": "Noleggiatore",
+      "orSimilar": "o simile",
+      "auto": "Automatico",
+      "manual": "Manuale",
+      "cta": "Apri questa ricerca",
+      "classNames": [
+        "Mini",
+        "Economy",
+        "Compatta",
+        "Media",
+        "Station wagon",
+        "SUV"
+      ]
+    },
+    "activities": {
+      "eyebrow": "GetYourGuide · disponibilità in tempo reale",
+      "title": "Tour ancora prenotabili",
+      "lead": "Prezzi e posti liberi arrivano direttamente da GetYourGuide. La maggior parte dei tour si può cancellare fino a 24 ore prima.",
+      "browse": "Tutti i tour della Lapponia su GetYourGuide"
+    },
+    "tonight": {
+      "eyebrow": "Stanotte",
+      "title": "Un letto per stanotte a",
+      "lead": "Ogni pulsante apre la ricerca del partner per stanotte, quindi ciò che vede è ciò che è ancora libero.",
+      "places": [
+        "Levi",
+        "Rovaniemi",
+        "Saariselkä",
+        "Ylläs",
+        "Ruka",
+        "Inari"
+      ]
+    }
   },
   faq: {
     eyebrow: 'Buono a sapersi',

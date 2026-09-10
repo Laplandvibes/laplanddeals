@@ -4,17 +4,33 @@ import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import PageSeo from '../components/PageSeo';
 import Hero from '../components/Hero';
 import FlashBand from '../components/FlashBand';
-import TodaysPulse from '../components/TodaysPulse';
 import CategoryTiles from '../components/CategoryTiles';
 import OffersGrid from '../components/OffersGrid';
-import PartnerAd from '../components/PartnerAd';
 import NewsletterSection from '../components/NewsletterSection';
+import LiveFlights from '../components/LiveFlights';
+import LiveCabins from '../components/LiveCabins';
+import LiveCars from '../components/LiveCars';
+import GygLive from '../components/GygLive';
+import TonightStrip from '../components/TonightStrip';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
-import { offers, getEditorPicks, getLastMinute, getSummerOffers } from '../data/offers';
+import { getEditorPicks, getSummerOffers } from '../data/offers';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
-import { COPY } from '../locales/copy';
+import { COPY } from '../locales/copy';
 import { AppPromoHero } from '../components/AppPromo';
+
+/**
+ * Front page (rebuilt 2026-09-10, "Tänään Lapissa").
+ *
+ * Every section above the editor's picks is LIVE or DATED data from a partner
+ * source — Travelpayouts fares, the Lomarengas feed, captured EconomyBookings
+ * totals, the GetYourGuide widget — and each shows when it was checked. The
+ * static "Today's pulse" (seasonal claims that were two months stale on
+ * 10 September) and the duplicated card grids (the same 24 cards rendered up
+ * to three times, 29 phone screens) are gone. The house ad for the main
+ * partner slot no longer sits directly under the hero: an unsold "ad spot
+ * available" banner is not what a deals page should open with.
+ */
 
 function SectionHeader({ eyebrow, title, lead, children }: { eyebrow: string; title: string; lead?: string; children?: React.ReactNode }) {
   return (
@@ -44,6 +60,11 @@ const SIBLING_URLS = [
   'https://laplandactivities.fi',
   'https://laplandtours.online',
 ];
+
+// The summer section is a planning surface: shown April–August, when the
+// midnight-sun window (6 June – 7 July) is ahead or running. In September it
+// advertised a season that had ended.
+const showSummerSection = () => { const m = new Date().getMonth() + 1; return m >= 4 && m <= 8; };
 
 const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
   en: {
@@ -121,9 +142,8 @@ export default function Home() {
   const c = COPY[lang];
 
   const editorsPicks = getEditorPicks(4, lang);
-  const lastMinute = getLastMinute(6, lang);
   const summerPicks = getSummerOffers(4, lang);
-  const everything = offers(lang).slice(0, 12);
+  const summerOn = showSummerSection();
   const seo = SEO_TITLE[lang];
   const pathSeg: Record<Lang, string> = { en: '', fi: '/fi', de: '/de', ja: '/ja', es: '/es', 'pt-BR': '/br', 'zh-CN': '/cn', ko: '/kr', fr: '/fr', it: '/it', nl: '/nl', sv: '/sv' };
   const path = pathSeg[lang] || '/';
@@ -133,7 +153,7 @@ export default function Home() {
   const itemList = {
     '@type': 'ItemList',
     name: 'LaplandDeals: featured offers',
-    itemListElement: editorsPicks.concat(lastMinute).map((o, i) => ({
+    itemListElement: editorsPicks.map((o, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: o.title,
@@ -169,12 +189,24 @@ export default function Home() {
       />
 
       <Hero />
+      <FlashBand />
 
-      {/* ── PÄÄKUMPPANI — kompakti banneri heti heron alla (LV Media) ── */}
+      {/* ── LIVE: cheapest flights (Travelpayouts via laplandflights.fi) ── */}
+      <LiveFlights />
+
+      {/* ── PÄÄKUMPPANI — kompakti banneri (LV Media). Ensimmäisen live-osion
+          alla, ei heron alla: myymätön "ad spot available" ei saa olla
+          diilisivun ensimmäinen asia. ── */}
       <MainPartnerBanner config={AD_SLOTS} locale={lang} />
 
-      <FlashBand />
-      <TodaysPulse />
+      {/* ── LIVE: a bed tonight (checkin=today through the Worker) ── */}
+      <TonightStrip />
+
+      {/* ── LIVE: cheapest Lomarengas cabins + their own last-minute filter ── */}
+      <LiveCabins />
+
+      {/* ── DATED: EconomyBookings totals for the next captured window ── */}
+      <LiveCars />
 
       {/* ── Editor's picks ─────────────────────────────────────────── */}
       <section className="relative py-20 sm:py-24">
@@ -189,6 +221,7 @@ export default function Home() {
             </Link>
           </SectionHeader>
           <OffersGrid offers={editorsPicks} cols="md:grid-cols-2 lg:grid-cols-4" />
+          <AffiliateDisclosure variant="block" className="mt-10 max-w-3xl" />
         </div>
       </section>
 
@@ -206,53 +239,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Last-minute ─────────────────────────────────────────────── */}
-      <section className="relative py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <SectionHeader
-            eyebrow={c.sections.lastMinEyebrow}
-            title={c.sections.lastMinTitle}
-            lead={c.sections.lastMinLead}
-          />
-          <OffersGrid offers={lastMinute} />
-        </div>
-      </section>
+      {/* ── LIVE: GetYourGuide widget, Lapland region ── */}
+      <GygLive />
 
-      {/* ── Summer ─────────────────────────────────────── */}
-      <section className="relative py-20 sm:py-24 border-y border-line bg-flash-yellow-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <SectionHeader
-            eyebrow={c.sections.summerEyebrow}
-            title={c.sections.summerTitle}
-            lead={c.sections.summerLead}
-          >
-            <Link
-              to={to('/summer')}
-              className="shrink-0 inline-flex items-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] px-6 py-3 rounded-full text-[13px] transition-colors no-underline"
+      {/* ── Summer (April–August only) ─────────────────────────────── */}
+      {summerOn && (
+        <section className="relative py-20 sm:py-24 border-y border-line bg-flash-yellow-bg">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+            <SectionHeader
+              eyebrow={c.sections.summerEyebrow}
+              title={c.sections.summerTitle}
+              lead={c.sections.summerLead}
             >
-              {c.sections.summerCta}
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </SectionHeader>
-          {summerPicks.length > 0 && <OffersGrid offers={summerPicks} cols="md:grid-cols-2 lg:grid-cols-4" />}
-        </div>
-      </section>
-
-      {/* ── Partner: Lomarengas cottages (distinct from the offer cards) ── */}
-      <section className="relative py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <PartnerAd advertiser="lomarengas" placement="home_cottages" />
-        </div>
-      </section>
-
-      {/* ── All ─────────────────────────────────────────── */}
-      <section className="relative py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <SectionHeader eyebrow={c.sections.everythingEyebrow} title={c.sections.everythingTitle} />
-          <OffersGrid offers={everything} />
-          <AffiliateDisclosure variant="block" className="mt-10 max-w-3xl" />
-        </div>
-      </section>
+              <Link
+                to={to('/summer')}
+                className="shrink-0 inline-flex items-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] px-6 py-3 rounded-full text-[13px] transition-colors no-underline"
+              >
+                {c.sections.summerCta}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </SectionHeader>
+            {summerPicks.length > 0 && <OffersGrid offers={summerPicks} cols="md:grid-cols-2 lg:grid-cols-4" />}
+          </div>
+        </section>
+      )}
 
       {/* ── Trust ─────────────────────────────────────────────────── */}
       <section className="bg-cream-2 border-t border-line py-14">
@@ -273,9 +283,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* App launch block, directly under the site's own opening. At the foot
-          of the page it measured 81 % down a 33 000 px front page, and an
-          announcement nobody scrolls to is not an announcement. */}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AppPromoHero />
       </div>

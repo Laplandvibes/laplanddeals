@@ -32,45 +32,6 @@ const de: SectionCopy = {
       ' · bei jedem Klick aktualisiert. Wir erfinden keine Prozente, der Partner zeigt den heutigen Preis.',
     cta: 'Hotels heute Abend →',
   },
-  pulse: {
-    eyebrow: 'Lage heute',
-    titleItalic: 'Was',
-    titleRest: 'in Lappland gerade passiert.',
-    lead:
-      'Konkrete Saisonfakten, keine erfundenen Countdowns. Wir aktualisieren diesen Block, sobald sich die Lage ändert.',
-    items: [
-      {
-        when: 'Genau jetzt',
-        title: 'Mitternachtssonne, die niedrigsten Preise des Jahres',
-        body: 'Bis Ende Juli geht die Sonne kaum unter. Hütten am See liegen deutlich unter den Winterpreisen, und dieselben Fjälls, die im Februar ausgebucht waren, sind jetzt ruhig. Das preislich günstigste Fenster des Jahres.',
-      },
-      {
-        when: 'Jetzt bis August',
-        title: 'Wander- und Wassersaison',
-        body: 'Pallas-Yllästunturi und die östlichen Fjells sind trocken und offen. Lange Tage zum Wandern, für SUP und Seenbäder. Die Mücken lassen bis August nach; nehmen Sie für Ende Juni ein Kopfnetz mit.',
-      },
-      {
-        when: '5.–15. September',
-        title: 'Ruska: die Herbstfärbung erreicht schnell ihren Höhepunkt',
-        body: 'Die Zwergbirke färbt sich in rund drei Tagen golden. Hütten sind noch günstig und die Luft ist die sauberste in Europa (WMO). Mit den dunkler werdenden Nächten kehren auch die Polarlichter zurück.',
-      },
-      {
-        when: 'Weihnachten 2026',
-        title: 'Bereits in den Büchern',
-        body: 'Glas-Iglus und Familienzimmer im Weihnachtsmanndorf sind meist ab Ende August ausgebucht. Heiligabend-Dinner und Rentierschlitten-Plätze sind in der Regel im Oktober vergeben.',
-      },
-      {
-        when: 'Sparen bei Flügen',
-        title: '4–8 Wochen Vorlauf ab Helsinki',
-        body: 'Hin- und Rückflüge Helsinki–Lappland mit Finnair und Norwegian fallen auf 89–129 €, wenn Sie 4–8 Wochen im Voraus buchen, außerhalb der Weihnachts-, Oster- und Februarspitzen.',
-      },
-      {
-        when: 'Ab Ende August',
-        title: 'Die Polarlicht-Saison beginnt erneut',
-        body: 'Die Saison reicht etwa von Ende August bis Anfang April. Saariselkä, Inari und Utsjoki bieten die besten Chancen auf Polarlichter. Touren lassen sich meist bis 24 Stunden vorher stornieren und daher leicht kurzfristig dazubuchen.',
-      },
-    ],
-  },
   sections: {
     pickEyebrow: 'Redaktionsempfehlung',
     pickTitle: 'In Ruhe ausgewählt für die kommende Saison.',
@@ -265,6 +226,71 @@ const de: SectionCopy = {
       },
     ],
     cta: 'Sommerwoche finden →',
+  },
+  // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
+  live: {
+    "flights": {
+      "eyebrow": "Live-Preise · Travelpayouts",
+      "title": "Die günstigsten Flüge nach Lappland, jetzt",
+      "lead": "Der niedrigste Preis im Travelpayouts-Cache für jeden Lappland-Flughafen ab Helsinki, dazu der günstigste Abflug innerhalb der nächsten 14 Tage. Jede Zeile öffnet genau diesen Tarif.",
+      "soon": "Nächste 14 Tage",
+      "anyDate": "Günstigster Termin",
+      "oneWay": "einfacher Flug",
+      "roundTrip": "Hin- und Rückflug",
+      "from": "ab",
+      "checked": "Preise geprüft {time}",
+      "all": "Alle Flugangebote"
+    },
+    "cabins": {
+      "eyebrow": "Lomarengas · Feed täglich aktualisiert",
+      "title": "Die günstigsten Hütten in Lappland diese Woche",
+      "lead": "Echte Hütten aus dem Lomarengas-Produktfeed, nach Wochenpreis sortiert. Fotos und Preise stammen vom Anbieter.",
+      "weekFrom": "Woche ab",
+      "guests": "Pers.",
+      "lastMinute": "Last-Minute-Hütten in Lappland",
+      "lastMinuteLead": "Lomarengas reduziert Anreisen, die nur wenige Tage entfernt liegen. Dieser Link öffnet genau diesen Filter für Lappland.",
+      "view": "Hütte ansehen",
+      "updated": "Feed aktualisiert {date}"
+    },
+    "cars": {
+      "eyebrow": "EconomyBookings · geprüft {date}",
+      "title": "Mietwagen am Flughafen, echte Gesamtpreise",
+      "lead": "Gesamtpreise aus dem Live-Vergleich für 4 Miettage inklusive Steuern. Jede Zeile öffnet dieselbe Suche mit denselben Daten.",
+      "window": "Abholung {from}, Rückgabe {to}",
+      "total": "Gesamt 4 Tage",
+      "operator": "Vermieter",
+      "orSimilar": "oder ähnlich",
+      "auto": "Automatik",
+      "manual": "Schaltgetriebe",
+      "cta": "Diese Suche öffnen",
+      "classNames": [
+        "Kleinstwagen",
+        "Economy",
+        "Kompakt",
+        "Mittelklasse",
+        "Kombi",
+        "SUV"
+      ]
+    },
+    "activities": {
+      "eyebrow": "GetYourGuide · Verfügbarkeit in Echtzeit",
+      "title": "Touren, die Sie noch buchen können",
+      "lead": "Preise und freie Plätze kommen direkt von GetYourGuide. Die meisten Touren lassen sich bis 24 Stunden vorher stornieren.",
+      "browse": "Alle Lappland-Touren auf GetYourGuide"
+    },
+    "tonight": {
+      "eyebrow": "Heute Nacht",
+      "title": "Ein Bett für heute Nacht in",
+      "lead": "Jeder Button öffnet die Partnersuche für heute Nacht, Sie sehen also nur, was noch frei ist.",
+      "places": [
+        "Levi",
+        "Rovaniemi",
+        "Saariselkä",
+        "Ylläs",
+        "Ruka",
+        "Inari"
+      ]
+    }
   },
   faq: {
     eyebrow: 'Gut zu wissen',

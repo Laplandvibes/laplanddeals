@@ -3,6 +3,7 @@ import OffersGrid from '../components/OffersGrid';
 import NewsletterSection from '../components/NewsletterSection';
 import PillarHeader from '../components/PillarHeader';
 import PartnerAd from '../components/PartnerAd';
+import GygLive from '../components/GygLive';
 import { getOffers } from '../data/offers';
 import { GYG_CATEGORIES, gygLocalizeHref } from '../lib/gyg';
 import { useLang, LANG_PREFIX } from '../i18n/useLang';
@@ -30,6 +31,8 @@ export default function Activities() {
         sub={c.sub}
         image="/images/offer-snowmobile.webp"
       />
+
+      <GygLive items={9} cmp="lv_laplanddeals_activities_widget" />
 
       <section className="relative py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">

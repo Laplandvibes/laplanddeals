@@ -4,6 +4,7 @@ import NewsletterSection from '../components/NewsletterSection';
 import PillarHeader from '../components/PillarHeader';
 import AffiliateCTA from '../components/AffiliateCTA';
 import PartnerAd from '../components/PartnerAd';
+import TonightStrip from '../components/TonightStrip';
 import { getOffers } from '../data/offers';
 import { useLang, LANG_PREFIX } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -30,6 +31,9 @@ export default function Hotels() {
         sub={c.sub}
         image="/images/offer-rovaniemi-hotels.webp"
       />
+
+      {/* "Tonight's hotel deals" (hero + nav CTA) lands here: searches pinned to tonight. */}
+      <TonightStrip />
 
       <section className="relative py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">

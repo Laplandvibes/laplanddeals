@@ -3,6 +3,7 @@ import OffersGrid from '../components/OffersGrid';
 import NewsletterSection from '../components/NewsletterSection';
 import PillarHeader from '../components/PillarHeader';
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
+import LiveFlights from '../components/LiveFlights';
 import { getOffers } from '../data/offers';
 import { buildTripFlightHome } from '../lib/tripcom';
 import { useLang, LANG_PREFIX } from '../i18n/useLang';
@@ -40,6 +41,8 @@ export default function Flights() {
           <p className="text-sm sm:text-base leading-relaxed opacity-80">{c.introP2}</p>
         </div>
       </section>
+
+      <LiveFlights compact />
 
       <section className="relative py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">

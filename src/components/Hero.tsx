@@ -3,8 +3,11 @@ import { ArrowRight } from 'lucide-react';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 
-// May–September → summer hero, otherwise winter hero.
-const isSummerSeason = () => { const m = new Date().getMonth()+1; return m>=5 && m<=9; };
+// June–August → summer hero (midnight sun through 7 July, hiking August).
+// Was May–September until 2026-09-10: on 10 September the live hero still read
+// "MIDNIGHT SUN · cheapest season of the year" two months after the sun set.
+// From September the base (aurora-season) copy is the truthful one.
+const isSummerSeason = () => { const m = new Date().getMonth()+1; return m>=6 && m<=8; };
 
 export default function Hero() {
   const lang = useLang();
