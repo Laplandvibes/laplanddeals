@@ -62,7 +62,7 @@ export default function Hero() {
             <span className="text-vibe-pink drop-shadow-[0_0_40px_rgba(236,72,153,0.8)]">{c.h1Line2}</span>
           </h1>
 
-          <p className="text-ivory/85 text-base sm:text-lg lg:text-xl max-w-xl mb-9 sm:mb-11 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+          <p className="text-ivory/85 text-base sm:text-lg lg:text-xl max-w-xl xl:max-w-3xl mb-9 sm:mb-11 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] xl:text-2xl">
             {lead}
           </p>
 
