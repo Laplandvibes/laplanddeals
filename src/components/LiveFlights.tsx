@@ -142,13 +142,15 @@ export default function LiveFlights({ compact = false }: { compact?: boolean }) 
                       <div className="text-[10px] uppercase tracking-[0.14em] text-ink-mute mt-0.5">{month}</div>
                     </div>
                     <div className="min-w-0 flex-1">
+                      {/* Phones: the origin is in the section lead, so the row shows the
+                          destination alone instead of "Helsinki → Rovanie…" (measured 375 px). */}
                       <p className="flex items-center gap-1.5 font-bold text-ink text-[15px] leading-snug">
                         <Plane className="w-3.5 h-3.5 text-vibe-pink shrink-0" aria-hidden="true" />
-                        <span className="truncate">Helsinki → {l.city}</span>
+                        <span className="truncate"><span className="hidden sm:inline">Helsinki → </span>{l.city}</span>
                       </p>
-                      <p className="text-[12px] text-ink-soft truncate">
-                        {l.fare.airline ? `${l.fare.airline} · ` : ''}{l.fare.oneWay ? c.oneWay : c.roundTrip}
-                        {l.soon && <span className="ml-2 inline-flex items-center rounded-full bg-vibe-pink/15 text-vibe-pink px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">{c.soon}</span>}
+                      <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] text-ink-soft">
+                        <span>{l.fare.airline ? `${l.fare.airline} · ` : ''}{l.fare.oneWay ? c.oneWay : c.roundTrip}</span>
+                        {l.soon && <span className="inline-flex items-center rounded-full bg-vibe-pink/15 text-vibe-pink px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider">{c.soon}</span>}
                       </p>
                     </div>
                     <div className="text-right shrink-0">

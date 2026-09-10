@@ -102,14 +102,17 @@ export default function LiveCars({ compact = false }: { compact?: boolean }) {
                   onClick={() => trackAffiliateClick('economybookings', sid, href)}
                   className="group flex items-center gap-4 min-h-[72px] rounded-lg border border-line bg-cream-2 px-4 py-3 hover:border-vibe-pink/40 transition-colors no-underline"
                 >
-                  <div className="w-[76px] shrink-0">
+                  {/* Phones wrap instead of truncating: "Volkswagen P…" and "Green M…" were
+                      measured at 375 px, and a cut-off name reads as a defect. */}
+                  <div className="w-[64px] sm:w-[76px] shrink-0">
                     <span className="inline-block rounded-full border border-line-2 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-ink-soft">{c.classNames[o.classIdx]}</span>
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="font-bold text-ink text-[15px] leading-snug truncate">{o.model} <span className="font-normal text-ink-mute">· {c.orSimilar}</span></p>
-                    <p className="text-[12px] text-ink-soft truncate">
-                      {c.operator}: {o.supplier} · {o.gear === 'A' ? c.auto : c.manual}
-                      <span className="inline-flex items-center gap-1 ml-2"><Users className="w-3 h-3" aria-hidden="true" />{o.seats}</span>
+                    <p className="font-bold text-ink text-[15px] leading-snug sm:truncate">{o.model} <span className="font-normal text-ink-mute whitespace-nowrap">· {c.orSimilar}</span></p>
+                    <p className="flex flex-wrap items-center gap-x-1.5 text-[12px] text-ink-soft">
+                      <span>{c.operator}: {o.supplier}</span>
+                      <span>· {o.gear === 'A' ? c.auto : c.manual}</span>
+                      <span className="inline-flex items-center gap-1"><Users className="w-3 h-3" aria-hidden="true" />{o.seats}</span>
                     </p>
                   </div>
                   <div className="text-right shrink-0">
