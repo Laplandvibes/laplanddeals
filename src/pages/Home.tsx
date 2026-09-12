@@ -219,7 +219,10 @@ export default function Home() {
               {c.sections.pickCta} <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </SectionHeader>
-          <OffersGrid offers={editorsPicks} cols="md:grid-cols-2 lg:grid-cols-4" />
+          {/* Sarakemaara seuraa poimintojen maaraa: neljan sarakkeen ruudukko
+              kolmelle kortille jatti 1280 px:lla 308 px tyhjaa oikealle
+              (verkoston asetteluportti 12.9.2026). */}
+          <OffersGrid offers={editorsPicks} cols={editorsPicks.length >= 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-2 lg:grid-cols-3'} />
           <AffiliateDisclosure variant="block" className="mt-10 max-w-3xl" />
         </div>
       </section>
