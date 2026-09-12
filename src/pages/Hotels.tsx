@@ -5,6 +5,8 @@ import PillarHeader from '../components/PillarHeader';
 import AffiliateCTA from '../components/AffiliateCTA';
 import PartnerAd from '../components/PartnerAd';
 import TonightStrip from '../components/TonightStrip';
+import LiveCabins from '../components/LiveCabins';
+import LiveSheet from '../components/LiveSheet';
 import { getOffers } from '../data/offers';
 import { useLang, LANG_PREFIX } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -32,8 +34,11 @@ export default function Hotels() {
         image="/images/offer-rovaniemi-hotels.webp"
       />
 
-      {/* "Tonight's hotel deals" (hero + nav CTA) lands here: searches pinned to tonight. */}
-      <TonightStrip />
+      {/* "Tonight's hotel deals" (hero + nav CTA) lands here: searches pinned to tonight, then the cabin feed. */}
+      <LiveSheet intro={false}>
+        <TonightStrip kicker />
+        <LiveCabins limit={6} kicker />
+      </LiveSheet>
 
       <section className="relative py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">

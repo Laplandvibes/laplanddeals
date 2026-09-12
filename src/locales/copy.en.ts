@@ -250,7 +250,10 @@ const en: SectionCopy = {
       "lastMinute": "Last-minute cabins in Lapland",
       "lastMinuteLead": "Lomarengas discounts arrivals that are only days away. This link opens that filter for Lapland.",
       "view": "View cabin",
-      "updated": "Feed updated {date}"
+      "updated": "Feed updated {date}",
+      "perWeek": "/week",
+      "bedrooms": "bedrooms",
+      "starsLabel": "Lomarengas quality"
     },
     "cars": {
       "eyebrow": "EconomyBookings · checked {date}",
@@ -270,7 +273,11 @@ const en: SectionCopy = {
         "Midsize",
         "Estate",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "Automatic first",
+      "airport": "Airport",
+      "seats": "seats",
+      "days": "days"
     },
     "activities": {
       "eyebrow": "GetYourGuide · live availability",
@@ -290,6 +297,36 @@ const en: SectionCopy = {
         "Ruka",
         "Inari"
       ]
+    },
+    "sheet": {
+      "kicker": "Live · read time on every row",
+      "h2": "Lapland today",
+      "lead": "Every row below is a partner’s own price, with the moment it was read. Nothing on this sheet is an estimate.",
+      "note": "Prices are read from partner feeds and pages and change without notice; the partner’s page has the final word. Photos: Lomarengas. Fares and carrier marks: Travelpayouts. Car totals: EconomyBookings."
+    },
+    "list": {
+      "sortBy": "Sort",
+      "sortPrice": "Price",
+      "sortDate": "Date",
+      "sortStars": "Stars",
+      "colCheapest": "Cheapest first",
+      "colSoonest": "Soonest first",
+      "colBestStars": "Best-rated first",
+      "showAll": "Show all {n}",
+      "openFare": "Open this fare",
+      "openSearch": "Open this search",
+      "seenAt": "{source}, read {d}",
+      "photoCredit": "Photos: {source}",
+      "empty": "Nothing to show right now."
+    },
+    "chart": {
+      "h2": "When are flights to Lapland cheapest?",
+      "lead": "One bar per departure day for which Travelpayouts has a cached fare from Helsinki, three months ahead. Read {d}; fares change by the hour.",
+      "cheapest": "Cheapest day {d}: {p}",
+      "priciest": "Priciest day {d}: {p}",
+      "empty": "No cached fares for this airport yet.",
+      "note": "Days without a bar simply have no cached fare; that is not a sold-out day.",
+      "airport": "Airport"
     }
   },
   faq: {

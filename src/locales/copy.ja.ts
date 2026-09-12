@@ -250,7 +250,10 @@ const ja: SectionCopy = {
       "lastMinute": "ラップランドの直前割コテージ",
       "lastMinuteLead": "Lomarengasは出発が数日後に迫った空き週を割引しています。このリンクでラップランドの直前割フィルターが開きます。",
       "view": "コテージを見る",
-      "updated": "フィード更新 {date}"
+      "updated": "フィード更新 {date}",
+      "perWeek": "/週",
+      "bedrooms": "寝室",
+      "starsLabel": "Lomarengas品質"
     },
     "cars": {
       "eyebrow": "EconomyBookings · 確認日 {date}",
@@ -270,7 +273,11 @@ const ja: SectionCopy = {
         "ミッドサイズ",
         "ワゴン",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "AT優先",
+      "airport": "空港",
+      "seats": "席",
+      "days": "日間"
     },
     "activities": {
       "eyebrow": "GetYourGuide · 空き状況はリアルタイム",
@@ -290,6 +297,36 @@ const ja: SectionCopy = {
         "ルカ",
         "イナリ"
       ]
+    },
+    "sheet": {
+      "kicker": "ライブ · 各行に取得時刻",
+      "h2": "今日のラップランド",
+      "lead": "このシートの各行はパートナー自身の価格と、それを読み取った時刻です。ここに推定値はありません。",
+      "note": "価格はパートナーのフィードやページから読み取ったもので、予告なく変わります。最終的な価格はパートナーのページが決めます。写真：Lomarengas。航空運賃と航空会社のロゴ：Travelpayouts。レンタカー総額：EconomyBookings。"
+    },
+    "list": {
+      "sortBy": "並べ替え",
+      "sortPrice": "料金",
+      "sortDate": "日付",
+      "sortStars": "星",
+      "colCheapest": "最安順",
+      "colSoonest": "出発が近い順",
+      "colBestStars": "評価が高い順",
+      "showAll": "すべて表示（{n}件）",
+      "openFare": "この運賃を開く",
+      "openSearch": "この検索を開く",
+      "seenAt": "{source}、{d}に取得",
+      "photoCredit": "写真：{source}",
+      "empty": "現在表示できるものがありません。"
+    },
+    "chart": {
+      "h2": "ラップランド行きの航空券はいつが最安？",
+      "lead": "ヘルシンキ発でTravelpayoutsのキャッシュに運賃がある出発日ごとに1本の棒、3か月先まで。{d}に取得。運賃は時間ごとに変わります。",
+      "cheapest": "最安日 {d}：{p}",
+      "priciest": "最高値の日 {d}：{p}",
+      "empty": "この空港のキャッシュ運賃はまだありません。",
+      "note": "棒がない日はキャッシュに運賃がないだけで、満席という意味ではありません。",
+      "airport": "空港"
     }
   },
   faq: {

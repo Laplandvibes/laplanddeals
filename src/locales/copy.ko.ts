@@ -250,7 +250,10 @@ const ko: SectionCopy = {
       "lastMinute": "라플란드 막판 특가 통나무집",
       "lastMinuteLead": "Lomarengas는 며칠 안에 시작하는 빈 주간을 할인합니다. 이 링크는 라플란드에 그 필터를 적용해 엽니다.",
       "view": "통나무집 보기",
-      "updated": "피드 갱신 {date}"
+      "updated": "피드 갱신 {date}",
+      "perWeek": "/주",
+      "bedrooms": "침실",
+      "starsLabel": "Lomarengas 등급"
     },
     "cars": {
       "eyebrow": "EconomyBookings · 확인일 {date}",
@@ -270,7 +273,11 @@ const ko: SectionCopy = {
         "미드사이즈",
         "왜건",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "자동 우선",
+      "airport": "공항",
+      "seats": "인승",
+      "days": "일"
     },
     "activities": {
       "eyebrow": "GetYourGuide · 실시간 예약 가능",
@@ -290,6 +297,36 @@ const ko: SectionCopy = {
         "루카",
         "이나리"
       ]
+    },
+    "sheet": {
+      "kicker": "실시간 · 모든 줄에 읽은 시각",
+      "h2": "오늘의 라플란드",
+      "lead": "이 시트의 모든 줄은 파트너의 실제 가격과 그 가격을 읽은 시각입니다. 여기에 추정치는 없습니다.",
+      "note": "가격은 파트너의 피드와 페이지에서 읽어오며 예고 없이 바뀝니다. 최종 가격은 파트너 페이지가 정합니다. 사진: Lomarengas. 항공 요금과 항공사 로고: Travelpayouts. 렌터카 총액: EconomyBookings."
+    },
+    "list": {
+      "sortBy": "정렬",
+      "sortPrice": "가격",
+      "sortDate": "날짜",
+      "sortStars": "별점",
+      "colCheapest": "저렴한 순",
+      "colSoonest": "출발 임박 순",
+      "colBestStars": "평점 높은 순",
+      "showAll": "전체 {n}개 보기",
+      "openFare": "이 요금 열기",
+      "openSearch": "이 검색 열기",
+      "seenAt": "{source}, {d} 읽음",
+      "photoCredit": "사진: {source}",
+      "empty": "지금은 표시할 항목이 없습니다."
+    },
+    "chart": {
+      "h2": "라플란드행 항공권은 언제 가장 저렴할까?",
+      "lead": "헬싱키 출발로 Travelpayouts 캐시에 요금이 있는 출발일마다 막대 하나, 3개월 앞까지. {d}에 읽음. 요금은 시간마다 바뀝니다.",
+      "cheapest": "가장 저렴한 날 {d}: {p}",
+      "priciest": "가장 비싼 날 {d}: {p}",
+      "empty": "이 공항의 캐시 요금이 아직 없습니다.",
+      "note": "막대가 없는 날은 캐시에 요금이 없다는 뜻일 뿐, 매진이 아닙니다.",
+      "airport": "공항"
     }
   },
   faq: {

@@ -250,7 +250,10 @@ const de: SectionCopy = {
       "lastMinute": "Last-Minute-Hütten in Lappland",
       "lastMinuteLead": "Lomarengas reduziert Anreisen, die nur wenige Tage entfernt liegen. Dieser Link öffnet genau diesen Filter für Lappland.",
       "view": "Hütte ansehen",
-      "updated": "Feed aktualisiert {date}"
+      "updated": "Feed aktualisiert {date}",
+      "perWeek": "/Woche",
+      "bedrooms": "Schlafzimmer",
+      "starsLabel": "Lomarengas-Qualität"
     },
     "cars": {
       "eyebrow": "EconomyBookings · geprüft {date}",
@@ -270,7 +273,11 @@ const de: SectionCopy = {
         "Mittelklasse",
         "Kombi",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "Automatik zuerst",
+      "airport": "Flughafen",
+      "seats": "Sitze",
+      "days": "Tage"
     },
     "activities": {
       "eyebrow": "GetYourGuide · Verfügbarkeit in Echtzeit",
@@ -290,6 +297,36 @@ const de: SectionCopy = {
         "Ruka",
         "Inari"
       ]
+    },
+    "sheet": {
+      "kicker": "Live · Lesezeit in jeder Zeile",
+      "h2": "Lappland heute",
+      "lead": "Jede Zeile auf diesem Blatt ist der Preis des Partners selbst, mit dem Moment, in dem er gelesen wurde. Nichts hier ist eine Schätzung.",
+      "note": "Preise werden aus Partner-Feeds und -Seiten gelesen und ändern sich ohne Ankündigung; die Partnerseite hat das letzte Wort. Fotos: Lomarengas. Flugpreise und Airline-Marken: Travelpayouts. Mietwagen-Gesamtpreise: EconomyBookings."
+    },
+    "list": {
+      "sortBy": "Sortieren",
+      "sortPrice": "Preis",
+      "sortDate": "Datum",
+      "sortStars": "Sterne",
+      "colCheapest": "Günstigste zuerst",
+      "colSoonest": "Nächster Abflug zuerst",
+      "colBestStars": "Beste Bewertung zuerst",
+      "showAll": "Alle {n} anzeigen",
+      "openFare": "Diesen Tarif öffnen",
+      "openSearch": "Diese Suche öffnen",
+      "seenAt": "{source}, gelesen {d}",
+      "photoCredit": "Fotos: {source}",
+      "empty": "Gerade nichts anzuzeigen."
+    },
+    "chart": {
+      "h2": "Wann sind Flüge nach Lappland am günstigsten?",
+      "lead": "Ein Balken je Abflugtag, für den Travelpayouts einen Preis ab Helsinki im Cache hat, drei Monate voraus. Gelesen {d}; Preise ändern sich stündlich.",
+      "cheapest": "Günstigster Tag {d}: {p}",
+      "priciest": "Teuerster Tag {d}: {p}",
+      "empty": "Für diesen Flughafen liegen noch keine Preise im Cache.",
+      "note": "Ein Tag ohne Balken hat schlicht keinen Preis im Cache; das ist kein ausverkaufter Tag.",
+      "airport": "Flughafen"
     }
   },
   faq: {

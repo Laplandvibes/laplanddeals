@@ -250,7 +250,10 @@ const zhCN: SectionCopy = {
       "lastMinute": "拉普兰最后一刻木屋",
       "lastMinuteLead": "Lomarengas对几天内入住的空档提供折扣。此链接会打开拉普兰的该筛选条件。",
       "view": "查看木屋",
-      "updated": "数据更新于 {date}"
+      "updated": "数据更新于 {date}",
+      "perWeek": "/周",
+      "bedrooms": "间卧室",
+      "starsLabel": "Lomarengas品质"
     },
     "cars": {
       "eyebrow": "EconomyBookings · 核对于 {date}",
@@ -270,7 +273,11 @@ const zhCN: SectionCopy = {
         "中型",
         "旅行车",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "自动挡优先",
+      "airport": "机场",
+      "seats": "座",
+      "days": "天"
     },
     "activities": {
       "eyebrow": "GetYourGuide · 实时可订",
@@ -290,6 +297,36 @@ const zhCN: SectionCopy = {
         "鲁卡",
         "伊纳里"
       ]
+    },
+    "sheet": {
+      "kicker": "实时 · 每行标注读取时间",
+      "h2": "今日拉普兰",
+      "lead": "这张清单上的每一行都是合作伙伴自己的价格，以及读取的时间。这里没有任何估算。",
+      "note": "价格读取自合作伙伴的数据和页面，随时可能变动；以合作伙伴页面为准。照片：Lomarengas。机票价格与航空公司标志：Travelpayouts。租车总价：EconomyBookings。"
+    },
+    "list": {
+      "sortBy": "排序",
+      "sortPrice": "价格",
+      "sortDate": "日期",
+      "sortStars": "星级",
+      "colCheapest": "最便宜优先",
+      "colSoonest": "最近出发优先",
+      "colBestStars": "评分最高优先",
+      "showAll": "显示全部 {n} 项",
+      "openFare": "打开此票价",
+      "openSearch": "打开此搜索",
+      "seenAt": "{source}，读取于 {d}",
+      "photoCredit": "照片：{source}",
+      "empty": "目前没有可显示的内容。"
+    },
+    "chart": {
+      "h2": "飞往拉普兰的航班什么时候最便宜？",
+      "lead": "从赫尔辛基出发、Travelpayouts缓存中有票价的每个出发日各一根柱，向后三个月。读取于 {d}；票价每小时都在变化。",
+      "cheapest": "最便宜的一天 {d}：{p}",
+      "priciest": "最贵的一天 {d}：{p}",
+      "empty": "该机场暂无缓存票价。",
+      "note": "没有柱的日期只是缓存中没有票价，不代表售罄。",
+      "airport": "机场"
     }
   },
   faq: {

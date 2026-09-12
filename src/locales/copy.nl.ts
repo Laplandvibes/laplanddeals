@@ -250,7 +250,10 @@ const nl: SectionCopy = {
       "lastMinute": "Last-minute hutten in Lapland",
       "lastMinuteLead": "Lomarengas geeft korting op aankomsten die nog maar een paar dagen weg zijn. Deze link opent dat filter voor Lapland.",
       "view": "Hut bekijken",
-      "updated": "Feed ververst op {date}"
+      "updated": "Feed ververst op {date}",
+      "perWeek": "/week",
+      "bedrooms": "slaapkamers",
+      "starsLabel": "Lomarengas-kwaliteit"
     },
     "cars": {
       "eyebrow": "EconomyBookings · gecontroleerd op {date}",
@@ -270,7 +273,11 @@ const nl: SectionCopy = {
         "Middenklasse",
         "Stationwagen",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "Automaat eerst",
+      "airport": "Luchthaven",
+      "seats": "zitplaatsen",
+      "days": "dagen"
     },
     "activities": {
       "eyebrow": "GetYourGuide · live beschikbaarheid",
@@ -290,6 +297,36 @@ const nl: SectionCopy = {
         "Ruka",
         "Inari"
       ]
+    },
+    "sheet": {
+      "kicker": "Live · leestijd op elke rij",
+      "h2": "Lapland vandaag",
+      "lead": "Elke rij op dit blad is de prijs van de partner zelf, met het moment waarop die is gelezen. Niets hier is een schatting.",
+      "note": "Prijzen worden gelezen uit feeds en pagina’s van partners en veranderen zonder bericht; de partnerpagina heeft het laatste woord. Foto’s: Lomarengas. Tarieven en luchtvaartlogo’s: Travelpayouts. Totaalprijzen huurauto: EconomyBookings."
+    },
+    "list": {
+      "sortBy": "Sorteren",
+      "sortPrice": "Prijs",
+      "sortDate": "Datum",
+      "sortStars": "Sterren",
+      "colCheapest": "Goedkoopste eerst",
+      "colSoonest": "Eerste vertrek eerst",
+      "colBestStars": "Best beoordeeld eerst",
+      "showAll": "Alle {n} tonen",
+      "openFare": "Dit tarief openen",
+      "openSearch": "Deze zoekopdracht openen",
+      "seenAt": "{source}, gelezen op {d}",
+      "photoCredit": "Foto’s: {source}",
+      "empty": "Nu even niets te tonen."
+    },
+    "chart": {
+      "h2": "Wanneer zijn vluchten naar Lapland het goedkoopst?",
+      "lead": "Eén balk per vertrekdag waarvoor Travelpayouts een tarief vanaf Helsinki in de cache heeft, drie maanden vooruit. Gelezen op {d}; tarieven veranderen per uur.",
+      "cheapest": "Goedkoopste dag {d}: {p}",
+      "priciest": "Duurste dag {d}: {p}",
+      "empty": "Nog geen tarieven in de cache voor deze luchthaven.",
+      "note": "Een dag zonder balk heeft simpelweg geen tarief in de cache; het is geen uitverkochte dag.",
+      "airport": "Luchthaven"
     }
   },
   faq: {

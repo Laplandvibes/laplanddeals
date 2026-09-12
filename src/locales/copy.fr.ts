@@ -250,7 +250,10 @@ const fr: SectionCopy = {
       "lastMinute": "Chalets de dernière minute en Laponie",
       "lastMinuteLead": "Lomarengas réduit les arrivées à quelques jours seulement. Ce lien ouvre ce filtre pour la Laponie.",
       "view": "Voir le chalet",
-      "updated": "Flux mis à jour le {date}"
+      "updated": "Flux mis à jour le {date}",
+      "perWeek": "/semaine",
+      "bedrooms": "chambres",
+      "starsLabel": "qualité Lomarengas"
     },
     "cars": {
       "eyebrow": "EconomyBookings · vérifié le {date}",
@@ -270,7 +273,11 @@ const fr: SectionCopy = {
         "Intermédiaire",
         "Break",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "Automatiques d’abord",
+      "airport": "Aéroport",
+      "seats": "places",
+      "days": "jours"
     },
     "activities": {
       "eyebrow": "GetYourGuide · disponibilité en direct",
@@ -290,6 +297,36 @@ const fr: SectionCopy = {
         "Ruka",
         "Inari"
       ]
+    },
+    "sheet": {
+      "kicker": "En direct · heure de lecture sur chaque ligne",
+      "h2": "La Laponie aujourd’hui",
+      "lead": "Chaque ligne de cette feuille est le prix du partenaire lui-même, avec le moment où il a été lu. Rien ici n’est une estimation.",
+      "note": "Les prix sont lus dans les flux et pages des partenaires et changent sans préavis ; la page du partenaire a le dernier mot. Photos : Lomarengas. Tarifs et logos des compagnies : Travelpayouts. Totaux de location : EconomyBookings."
+    },
+    "list": {
+      "sortBy": "Trier",
+      "sortPrice": "Prix",
+      "sortDate": "Date",
+      "sortStars": "Étoiles",
+      "colCheapest": "Les moins chers d’abord",
+      "colSoonest": "Départ le plus proche d’abord",
+      "colBestStars": "Les mieux notés d’abord",
+      "showAll": "Tout afficher ({n})",
+      "openFare": "Ouvrir ce tarif",
+      "openSearch": "Ouvrir cette recherche",
+      "seenAt": "{source}, lu le {d}",
+      "photoCredit": "Photos : {source}",
+      "empty": "Rien à afficher pour le moment."
+    },
+    "chart": {
+      "h2": "Quand les vols vers la Laponie sont-ils les moins chers ?",
+      "lead": "Une barre par jour de départ pour lequel Travelpayouts a un tarif en cache depuis Helsinki, trois mois à l’avance. Lu le {d} ; les tarifs changent d’heure en heure.",
+      "cheapest": "Jour le moins cher {d} : {p}",
+      "priciest": "Jour le plus cher {d} : {p}",
+      "empty": "Pas encore de tarifs en cache pour cet aéroport.",
+      "note": "Un jour sans barre n’a simplement pas de tarif en cache ; ce n’est pas un jour complet.",
+      "airport": "Aéroport"
     }
   },
   faq: {

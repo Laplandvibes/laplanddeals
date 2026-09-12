@@ -4,6 +4,8 @@ import NewsletterSection from '../components/NewsletterSection';
 import PillarHeader from '../components/PillarHeader';
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import LiveFlights from '../components/LiveFlights';
+import FareCalendar from '../components/FareCalendar';
+import LiveSheet from '../components/LiveSheet';
 import { getOffers } from '../data/offers';
 import { buildTripFlightHome } from '../lib/tripcom';
 import { useLang, LANG_PREFIX } from '../i18n/useLang';
@@ -42,7 +44,10 @@ export default function Flights() {
         </div>
       </section>
 
-      <LiveFlights compact />
+      <LiveSheet intro={false}>
+        <LiveFlights limit={8} kicker />
+        <FareCalendar />
+      </LiveSheet>
 
       <section className="relative py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">

@@ -250,7 +250,10 @@ const it: SectionCopy = {
       "lastMinute": "Baite last-minute in Lapponia",
       "lastMinuteLead": "Lomarengas sconta gli arrivi a pochi giorni di distanza. Questo link apre quel filtro per la Lapponia.",
       "view": "Vedi la baita",
-      "updated": "Feed aggiornato il {date}"
+      "updated": "Feed aggiornato il {date}",
+      "perWeek": "/settimana",
+      "bedrooms": "camere",
+      "starsLabel": "qualità Lomarengas"
     },
     "cars": {
       "eyebrow": "EconomyBookings · verificato il {date}",
@@ -270,7 +273,11 @@ const it: SectionCopy = {
         "Media",
         "Station wagon",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "Automatici prima",
+      "airport": "Aeroporto",
+      "seats": "posti",
+      "days": "giorni"
     },
     "activities": {
       "eyebrow": "GetYourGuide · disponibilità in tempo reale",
@@ -290,6 +297,36 @@ const it: SectionCopy = {
         "Ruka",
         "Inari"
       ]
+    },
+    "sheet": {
+      "kicker": "In tempo reale · ora di lettura su ogni riga",
+      "h2": "La Lapponia oggi",
+      "lead": "Ogni riga di questo foglio è il prezzo del partner stesso, con il momento in cui è stato letto. Niente qui è una stima.",
+      "note": "I prezzi sono letti dai feed e dalle pagine dei partner e cambiano senza preavviso; la pagina del partner ha l’ultima parola. Foto: Lomarengas. Tariffe e loghi delle compagnie: Travelpayouts. Totali autonoleggio: EconomyBookings."
+    },
+    "list": {
+      "sortBy": "Ordina",
+      "sortPrice": "Prezzo",
+      "sortDate": "Data",
+      "sortStars": "Stelle",
+      "colCheapest": "Più economici prima",
+      "colSoonest": "Partenza più vicina prima",
+      "colBestStars": "Meglio valutati prima",
+      "showAll": "Mostra tutti ({n})",
+      "openFare": "Apri questa tariffa",
+      "openSearch": "Apri questa ricerca",
+      "seenAt": "{source}, letto il {d}",
+      "photoCredit": "Foto: {source}",
+      "empty": "Niente da mostrare al momento."
+    },
+    "chart": {
+      "h2": "Quando i voli per la Lapponia costano meno?",
+      "lead": "Una barra per ogni giorno di partenza per cui Travelpayouts ha una tariffa in cache da Helsinki, tre mesi in avanti. Letto il {d}; le tariffe cambiano di ora in ora.",
+      "cheapest": "Giorno più economico {d}: {p}",
+      "priciest": "Giorno più caro {d}: {p}",
+      "empty": "Nessuna tariffa in cache per questo aeroporto, per ora.",
+      "note": "Un giorno senza barra non ha semplicemente una tariffa in cache; non è un giorno esaurito.",
+      "airport": "Aeroporto"
     }
   },
   faq: {

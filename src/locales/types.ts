@@ -46,11 +46,17 @@ export type SectionCopy = {
   /** Live sections (2026-09-10). {time}/{date}/{from}/{to} are runtime placeholders. */
   live: {
     flights: { eyebrow: string; title: string; lead: string; soon: string; anyDate: string; oneWay: string; roundTrip: string; from: string; checked: string; all: string };
-    cabins: { eyebrow: string; title: string; lead: string; weekFrom: string; guests: string; lastMinute: string; lastMinuteLead: string; view: string; updated: string };
-    cars: { eyebrow: string; title: string; lead: string; window: string; total: string; operator: string; orSimilar: string; auto: string; manual: string; cta: string; classNames: string[] };
+    cabins: { eyebrow: string; title: string; lead: string; weekFrom: string; guests: string; lastMinute: string; lastMinuteLead: string; view: string; updated: string; perWeek: string; bedrooms: string; starsLabel: string };
+    cars: { eyebrow: string; title: string; lead: string; window: string; total: string; operator: string; orSimilar: string; auto: string; manual: string; cta: string; classNames: string[]; colAutoFirst: string; airport: string; seats: string; days: string };
     activities: { eyebrow: string; title: string; lead: string; browse: string };
     /** places: Levi, Rovaniemi, Saariselkä, Ylläs, Ruka, Inari — CJK locales transliterate. */
     tonight: { eyebrow: string; title: string; lead: string; places: string[] };
+    /** The paper sheet that carries every live section (11.9.2026, ported from hoteldeals). */
+    sheet: { kicker: string; h2: string; lead: string; note: string };
+    /** Shared list frame: sort toggle labels, wide-screen column titles, buttons. */
+    list: { sortBy: string; sortPrice: string; sortDate: string; sortStars: string; colCheapest: string; colSoonest: string; colBestStars: string; showAll: string; openFare: string; openSearch: string; seenAt: string; photoCredit: string; empty: string };
+    /** Fare calendar on the kelo panel. `{d}` read time, `{p}` price. */
+    chart: { h2: string; lead: string; cheapest: string; priciest: string; empty: string; note: string; airport: string };
   };
   sections: {
     pickEyebrow: string;

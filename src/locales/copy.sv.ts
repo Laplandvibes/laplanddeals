@@ -254,7 +254,10 @@ const sv: SectionCopy = {
       "lastMinute": "Sista minuten-stugor i Lappland",
       "lastMinuteLead": "Lomarengas sänker priset på ankomster som bara är några dagar bort. Länken öppnar det filtret för Lappland.",
       "view": "Visa stugan",
-      "updated": "Flödet uppdaterat {date}"
+      "updated": "Flödet uppdaterat {date}",
+      "perWeek": "/vecka",
+      "bedrooms": "sovrum",
+      "starsLabel": "Lomarengas-kvalitet"
     },
     "cars": {
       "eyebrow": "EconomyBookings · kontrollerat {date}",
@@ -274,7 +277,11 @@ const sv: SectionCopy = {
         "Mellanklass",
         "Kombi",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "Automat först",
+      "airport": "Flygplats",
+      "seats": "platser",
+      "days": "dagar"
     },
     "activities": {
       "eyebrow": "GetYourGuide · tillgänglighet i realtid",
@@ -294,6 +301,36 @@ const sv: SectionCopy = {
         "Ruka",
         "Inari"
       ]
+    },
+    "sheet": {
+      "kicker": "Live · lästid på varje rad",
+      "h2": "Lappland i dag",
+      "lead": "Varje rad på det här arket är partnerns eget pris, med tidpunkten då det lästes. Inget här är en uppskattning.",
+      "note": "Priserna läses från partnernas flöden och sidor och ändras utan förvarning; partnerns sida har sista ordet. Bilder: Lomarengas. Flygpriser och flygbolagens märken: Travelpayouts. Hyrbilstotaler: EconomyBookings."
+    },
+    "list": {
+      "sortBy": "Sortera",
+      "sortPrice": "Pris",
+      "sortDate": "Datum",
+      "sortStars": "Stjärnor",
+      "colCheapest": "Billigast först",
+      "colSoonest": "Närmast avgång först",
+      "colBestStars": "Bäst betyg först",
+      "showAll": "Visa alla {n}",
+      "openFare": "Öppna det här priset",
+      "openSearch": "Öppna den här sökningen",
+      "seenAt": "{source}, läst {d}",
+      "photoCredit": "Bilder: {source}",
+      "empty": "Inget att visa just nu."
+    },
+    "chart": {
+      "h2": "När är flygen till Lappland billigast?",
+      "lead": "En stapel per avresedag som Travelpayouts har ett pris för i sin cache från Helsingfors, tre månader framåt. Läst {d}; priserna ändras varje timme.",
+      "cheapest": "Billigaste dagen {d}: {p}",
+      "priciest": "Dyraste dagen {d}: {p}",
+      "empty": "Inga cachade priser för den här flygplatsen ännu.",
+      "note": "En dag utan stapel har helt enkelt inget pris i cachen; det är ingen slutsåld dag.",
+      "airport": "Flygplats"
     }
   },
   faq: {

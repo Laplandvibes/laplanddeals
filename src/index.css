@@ -185,3 +185,72 @@
   .deal-pulse,
   .group:hover .ad-sheen::after { animation: none; }
 }
+
+/* ── Lumen arkki + jäälaatta + kelo (siirretty laplandhoteldealsista 11.9.2026) ──
+   Vesa 11.9.: "nyt pitää tehdä samat jutut tänne kuin laplandhoteldeals sivulle,
+   tää on ihan geneerinen." Same three layers as hoteldeals and the app's
+   "Sininen hetki": the dark page is the sky; the paper sheet rises over it
+   (blue-hour tint at the top fading to paper in 260 px); the ice tile is the
+   middle layer that carries controls and rows; white cards lift off the ice.
+   The one warm surface is the kelo (weathered pine) panel under the fare
+   calendar — the surface that talks about money. Inks on the sheet are set by
+   class (this site's `text-ink` token is SNOW), never inherited. */
+@layer utilities {
+  .sheet {
+    background: linear-gradient(180deg, hsl(216 46% 89%) 0px, hsl(216 42% 93%) 140px, hsl(216 40% 96%) 260px);
+    color: #0F172A;
+    border-radius: 28px 28px 0 0;
+  }
+  .sheet h2, .sheet h3, .sheet h4 { color: #0F172A; }
+  .tile-ice {
+    background: hsl(192 55% 93%);
+    border: 1px solid hsl(190 40% 78%);
+    border-radius: 24px;
+    box-shadow: 0 1px 0 0 hsl(0 0% 100% / 0.8) inset;
+  }
+  .tile-kelo {
+    background: hsl(28 42% 92%);
+    border: 1px solid hsl(28 32% 80%);
+    border-radius: 24px;
+    box-shadow: 0 1px 0 0 hsl(0 0% 100% / 0.7) inset;
+  }
+  .bar-kelo { background: hsl(24 46% 34%); }
+  .bar-kelo:hover { background: hsl(24 50% 26%); }
+  .card-frost {
+    background: #FFFFFF;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 16px 36px -22px rgba(15, 23, 42, 0.38);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .card-lift { transition: transform 160ms var(--ease-out-strong), box-shadow 160ms var(--ease-out-strong); }
+    .card-lift:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(15, 23, 42, 0.05), 0 22px 44px -22px rgba(15, 23, 42, 0.32); }
+  }
+  /* Pink lives only on the button (Vesa 10.9.: "miksi hinnat on pinkit"). #DB2777
+     on white text = 4.63:1, passes AA at the 14 px this button uses. */
+  .btn-pink {
+    background: #DB2777;
+    color: #FFFFFF;
+    box-shadow: 0 14px 30px -14px rgba(236, 72, 153, 0.65), 0 1px 0 rgba(255, 255, 255, 0.28) inset;
+  }
+  .btn-pink:hover { background: #BE185D; color: #FFFFFF; }
+  .seg-btn { transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease; }
+  /* One orchestrated moment: rows rise in once on first paint, 40 ms apart. */
+  .row-in { animation: lvRowIn 240ms var(--ease-out-strong) both; animation-delay: var(--i, 0ms); }
+  /* Chart bars grow from the baseline when the chart scrolls into view. */
+  .bar-in { transform: scaleY(0.12); transform-origin: bottom; }
+  .chart-in .bar-in { animation: lvBarIn 520ms var(--ease-out-strong) both; animation-delay: calc(var(--i, 0) * 12ms); }
+  /* "Read at {time}" freshness dot: a slow breath, never a blink. */
+  .fresh-dot { animation: lvBreath 2.4s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    .row-in { animation-name: lvFadeIn; }
+    .chart-in .bar-in { animation-name: lvFadeIn; transform: none; }
+    .fresh-dot { animation: none; }
+    .card-lift:hover { transform: none; }
+  }
+}
+:root { --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1); }
+@keyframes lvRowIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes lvBarIn { from { transform: scaleY(0.12); } to { transform: none; } }
+@keyframes lvFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lvBreath { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.45; transform: scale(0.78); } }

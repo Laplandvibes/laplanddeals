@@ -250,7 +250,10 @@ const es: SectionCopy = {
       "lastMinute": "Cabañas de última hora en Laponia",
       "lastMinuteLead": "Lomarengas rebaja las llegadas que están a solo unos días. Este enlace abre ese filtro para Laponia.",
       "view": "Ver cabaña",
-      "updated": "Feed actualizado el {date}"
+      "updated": "Feed actualizado el {date}",
+      "perWeek": "/semana",
+      "bedrooms": "dormitorios",
+      "starsLabel": "calidad Lomarengas"
     },
     "cars": {
       "eyebrow": "EconomyBookings · comprobado el {date}",
@@ -270,7 +273,11 @@ const es: SectionCopy = {
         "Medio",
         "Familiar",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "Automáticos primero",
+      "airport": "Aeropuerto",
+      "seats": "plazas",
+      "days": "días"
     },
     "activities": {
       "eyebrow": "GetYourGuide · disponibilidad en vivo",
@@ -290,6 +297,36 @@ const es: SectionCopy = {
         "Ruka",
         "Inari"
       ]
+    },
+    "sheet": {
+      "kicker": "En vivo · hora de lectura en cada fila",
+      "h2": "Laponia hoy",
+      "lead": "Cada fila de esta hoja es el precio del propio socio, con el momento en que se leyó. Nada aquí es una estimación.",
+      "note": "Los precios se leen de los feeds y páginas de los socios y cambian sin aviso; la página del socio tiene la última palabra. Fotos: Lomarengas. Tarifas y marcas de aerolíneas: Travelpayouts. Totales de coches: EconomyBookings."
+    },
+    "list": {
+      "sortBy": "Ordenar",
+      "sortPrice": "Precio",
+      "sortDate": "Fecha",
+      "sortStars": "Estrellas",
+      "colCheapest": "Más baratos primero",
+      "colSoonest": "Salida más próxima primero",
+      "colBestStars": "Mejor valorados primero",
+      "showAll": "Ver todos ({n})",
+      "openFare": "Abrir esta tarifa",
+      "openSearch": "Abrir esta búsqueda",
+      "seenAt": "{source}, leído {d}",
+      "photoCredit": "Fotos: {source}",
+      "empty": "Nada que mostrar ahora mismo."
+    },
+    "chart": {
+      "h2": "¿Cuándo son más baratos los vuelos a Laponia?",
+      "lead": "Una barra por cada día de salida para el que Travelpayouts tiene una tarifa en caché desde Helsinki, con tres meses de antelación. Leído {d}; las tarifas cambian cada hora.",
+      "cheapest": "Día más barato {d}: {p}",
+      "priciest": "Día más caro {d}: {p}",
+      "empty": "Aún no hay tarifas en caché para este aeropuerto.",
+      "note": "Un día sin barra solo significa que no hay tarifa en caché, no que esté agotado.",
+      "airport": "Aeropuerto"
     }
   },
   faq: {

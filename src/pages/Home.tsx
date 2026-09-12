@@ -12,6 +12,8 @@ import LiveCabins from '../components/LiveCabins';
 import LiveCars from '../components/LiveCars';
 import GygLive from '../components/GygLive';
 import TonightStrip from '../components/TonightStrip';
+import FareCalendar from '../components/FareCalendar';
+import LiveSheet from '../components/LiveSheet';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import { getEditorPicks, getSummerOffers } from '../data/offers';
@@ -191,22 +193,19 @@ export default function Home() {
       <Hero />
       <FlashBand />
 
-      {/* ── LIVE: cheapest flights (Travelpayouts via laplandflights.fi) ── */}
-      <LiveFlights />
+      {/* ── THE SHEET: every live and dated partner price, on paper (11.9.2026,
+          the same three layers as laplandhoteldeals: sheet → ice tile → white card). ── */}
+      <LiveSheet>
+        <LiveFlights limit={6} phoneLimit={3} />
+        <TonightStrip />
+        <LiveCabins limit={6} phoneLimit={3} />
+        <LiveCars limit={6} phoneLimit={3} />
+        <FareCalendar />
+      </LiveSheet>
 
-      {/* ── PÄÄKUMPPANI — kompakti banneri (LV Media). Ensimmäisen live-osion
-          alla, ei heron alla: myymätön "ad spot available" ei saa olla
-          diilisivun ensimmäinen asia. ── */}
+      {/* ── PÄÄKUMPPANI — kompakti banneri (LV Media). Arkin alla, ei heron alla:
+          myymätön "ad spot available" ei saa olla diilisivun ensimmäinen asia. ── */}
       <MainPartnerBanner config={AD_SLOTS} locale={lang} />
-
-      {/* ── LIVE: a bed tonight (checkin=today through the Worker) ── */}
-      <TonightStrip />
-
-      {/* ── LIVE: cheapest Lomarengas cabins + their own last-minute filter ── */}
-      <LiveCabins />
-
-      {/* ── DATED: EconomyBookings totals for the next captured window ── */}
-      <LiveCars />
 
       {/* ── Editor's picks ─────────────────────────────────────────── */}
       <section className="relative py-20 sm:py-24">

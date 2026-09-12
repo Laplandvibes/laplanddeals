@@ -1,20 +1,22 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowUpRight, Users } from 'lucide-react';
+import { ArrowUpRight, Star } from 'lucide-react';
+import LiveList, { type SortMode } from './live/LiveList';
+import LiveRow from './live/LiveRow';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { trackAffiliateClick } from '../lib/analytics';
 
 /**
- * Cheapest Lapland cabins this week, from the affiliate Worker's /_cabins
- * endpoint (Lomarengas Adtraction product feed pfid 375, parsed into KV at
- * most once per 24 h). Photos and weekly from-prices are the operator's own;
- * the Lomarengas programme explicitly allows showing them. Every CTA routes
- * through go/lomarengas?dest= so the click hits D1 with a placement tag.
+ * Cheapest Lapland cabins this week, on the sheet. Source: the affiliate
+ * Worker's /_cabins endpoint (Lomarengas Adtraction product feed pfid 375,
+ * parsed into KV at most once per 24 h). Photo, weekly from-price, capacity
+ * and the operator's quality stars all come from that one feed (rule §12);
+ * the Lomarengas programme explicitly allows showing its photos.
  *
- * The header CTA opens Lomarengas's OWN last-minute filter for Lapland
- * (?lastMinuteOffer=true) — that is the only honest "äkkilähdöt" link we can
- * offer, because the feed carries no discount field (measured 2026-09-10:
- * Price == OriginalPrice on 3 970 / 3 970 rows).
+ * Wide screens: cheapest first | best-rated first (Lomarengas stars, ties by
+ * price). The header button opens Lomarengas's OWN last-minute filter for
+ * Lapland — the only honest "äkkilähdöt" link, because the feed carries no
+ * discount field (Price == OriginalPrice on 3 970 / 3 970 rows, 10.9.2026).
  */
 
 type ApiCabin = {
@@ -25,7 +27,7 @@ type Api = { updatedAt: string; totals: Record<string, number>; groups: Record<s
 
 const CABINS_API = 'https://go.laplandvibes.com/_cabins';
 const REDIRECT = 'https://go.laplandvibes.com/go/lomarengas';
-const SHOWN = 6;
+const MAX_ROWS = 12;
 
 let cache: Api | null = null;
 let inflight: Promise<Api | null> | null = null;
@@ -51,9 +53,10 @@ function lastMinuteHref(lang: Lang): string {
   return `${REDIRECT}?sid=live_cabins_lastminute&dest=${encodeURIComponent(dest)}`;
 }
 
-export default function LiveCabins() {
+export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: number; phoneLimit?: number; kicker?: boolean }) {
   const lang = useLang();
   const c = COPY[lang].live.cabins;
+  const cl = COPY[lang].live.list;
   const [data, setData] = useState<Api | null>(cache);
   const [failed, setFailed] = useState(false);
 
@@ -72,15 +75,12 @@ export default function LiveCabins() {
     if (!data) return [];
     const seen = new Set<string>();
     const all: ApiCabin[] = [];
-    for (const group of Object.values(data.groups)) {
-      for (const cab of group) {
-        if (!cab.weeklyFrom || cab.weeklyFrom <= 0 || seen.has(cab.id)) continue;
-        seen.add(cab.id);
-        all.push(cab);
-      }
+    for (const group of Object.values(data.groups)) for (const cab of group) {
+      if (!cab.weeklyFrom || cab.weeklyFrom <= 0 || !cab.img || seen.has(cab.id)) continue;
+      seen.add(cab.id); all.push(cab);
     }
     all.sort((a, b) => (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9));
-    return all.slice(0, SHOWN);
+    return all.slice(0, MAX_ROWS);
   }, [data]);
 
   if (failed || (data && cabins.length === 0)) return null;
@@ -90,81 +90,60 @@ export default function LiveCabins() {
     : '';
   const lmHref = lastMinuteHref(lang);
 
+  const modes: SortMode<ApiCabin>[] = [
+    { key: 'price', label: cl.sortPrice, column: cl.colCheapest, sort: (a, b) => (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9) },
+    { key: 'stars', label: cl.sortStars, column: cl.colBestStars, sort: (a, b) => (b.stars || 0) - (a.stars || 0) || (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9) },
+  ];
+
   return (
-    <section className="relative bg-cream-2 border-y border-line py-16 sm:py-20" aria-labelledby="live-cabins-title">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8 md:mb-10">
-          <div className="max-w-2xl">
-            <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">{c.eyebrow}</p>
-            <h2 id="live-cabins-title" className="font-heading text-3xl sm:text-5xl leading-[1.05] text-ink">{c.title}</h2>
-            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed max-w-xl">{c.lead}</p>
-          </div>
-          <div className="md:max-w-xs md:text-right">
-            <a
-              href={lmHref}
-              target="_blank"
-              rel="sponsored nofollow noopener"
-              onClick={() => trackAffiliateClick('lomarengas', 'live_cabins_lastminute', lmHref)}
-              className="inline-flex items-center justify-center gap-2 w-full md:w-auto bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] px-6 py-3.5 rounded-full text-[13px] transition-colors no-underline"
-            >
-              {c.lastMinute}
-              <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-            </a>
-            <p className="text-ink-mute text-[12px] leading-relaxed mt-3">{c.lastMinuteLead}</p>
-          </div>
+    <LiveList<ApiCabin>
+      id="live-cabins"
+      kicker={kicker ? c.eyebrow : undefined}
+      title={c.title}
+      lead={c.lead}
+      aside={
+        <div className="md:max-w-xs md:text-right">
+          <a
+            href={lmHref}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            onClick={() => trackAffiliateClick('lomarengas', 'live_cabins_lastminute', lmHref)}
+            className="btn-pink inline-flex min-h-11 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-2.5 text-sm font-semibold no-underline md:w-auto"
+          >
+            {c.lastMinute} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+          <p className="mt-2 text-xs leading-relaxed text-deep-night/60">{c.lastMinuteLead}</p>
         </div>
-
-        {!data ? (
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" aria-hidden="true">
-            {[0, 1, 2].map((i) => <li key={i} className="h-[88px] rounded-lg border border-line bg-cream/60 animate-pulse" />)}
-          </ul>
-        ) : (
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {cabins.map((cab) => {
-              const sid = `live_cabin_${cab.id}`;
-              const href = cabinHref(cab.slug, sid, lang);
-              return (
-                <li key={cab.id}>
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="sponsored nofollow noopener"
-                    onClick={() => trackAffiliateClick('lomarengas', sid, href)}
-                    className="group flex items-center gap-4 min-h-[88px] rounded-lg border border-line bg-cream px-3 py-3 hover:border-vibe-pink/40 transition-colors no-underline"
-                  >
-                    <img
-                      src={cab.img}
-                      alt={cab.name}
-                      loading="lazy"
-                      decoding="async"
-                      width={96}
-                      height={72}
-                      className="w-24 h-[72px] shrink-0 rounded-md object-cover bg-cream-2"
-                      onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = 'hidden'; }}
-                    />
-                    <div className="min-w-0 flex-1">
-                      <p className="font-bold text-ink text-[15px] leading-snug truncate">{cab.name}</p>
-                      <p className="text-[12px] text-ink-soft truncate">{cab.place}{cab.muni && cab.muni !== cab.place ? `, ${cab.muni}` : ''}</p>
-                      {cab.p ? (
-                        <p className="inline-flex items-center gap-1 text-[11px] text-ink-mute mt-1">
-                          <Users className="w-3 h-3" aria-hidden="true" />{cab.p}{cab.pe ? `+${cab.pe}` : ''} {c.guests}
-                        </p>
-                      ) : null}
-                    </div>
-                    <div className="text-right shrink-0">
-                      <div className="text-[10px] uppercase tracking-[0.14em] text-ink-mute">{c.weekFrom}</div>
-                      <div className="font-heading text-2xl leading-none text-vibe-pink">{fmt.format(cab.weeklyFrom || 0)}</div>
-                      <div className="text-[11px] text-ink-mute mt-1 group-hover:text-vibe-pink transition-colors">{c.view} →</div>
-                    </div>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-
-        {updated && <p className="mt-4 text-[12px] text-ink-mute">{c.updated.replace('{date}', updated)} · Lomarengas</p>}
-      </div>
-    </section>
+      }
+      rows={cabins}
+      modes={modes}
+      limit={limit}
+      phoneLimit={phoneLimit}
+      loading={!data}
+      rowKey={(cab) => cab.id}
+      footnote={updated ? `${c.updated.replace('{date}', updated)} · ${cl.photoCredit.replace('{source}', 'Lomarengas')}` : undefined}
+      renderRow={(cab, i) => {
+        const sid = `live_cabin_${cab.id}`;
+        return (
+          <LiveRow
+            index={i}
+            media={{ kind: 'photo', src: cab.img, alt: `${cab.name}, ${cab.place}`, width: 640, height: 427, eager: i < 2 }}
+            day={cab.p ? `${cab.p}${cab.pe ? `+${cab.pe}` : ''}` : '—'}
+            month={c.guests}
+            dateSub={cab.sqm ? `${Math.round(cab.sqm)} m²${cab.br ? ` · ${cab.br} ${c.bedrooms}` : ''}` : undefined}
+            badge={cab.stars ? { text: `${'★'.repeat(Math.min(5, cab.stars))} ${cab.stars}/5`, tone: 'green' } : null}
+            name={cab.name}
+            facts={<><span className="font-medium text-finland-blue">{cab.place}</span>{cab.muni && cab.muni !== cab.place && <><span aria-hidden="true">·</span><span>{cab.muni}</span></>}<span aria-hidden="true">·</span><span className="inline-flex items-center gap-1"><Star className="h-3 w-3 text-finland-blue" aria-hidden="true" />{c.starsLabel}</span></>}
+            price={fmt.format(cab.weeklyFrom || 0)}
+            unit={c.perWeek}
+            seen={cl.seenAt.replace('{source}', 'Lomarengas').replace('{d}', updated)}
+            href={cabinHref(cab.slug, sid, lang)}
+            sid={sid}
+            partner="lomarengas"
+            cta={c.view}
+          />
+        );
+      }}
+    />
   );
 }

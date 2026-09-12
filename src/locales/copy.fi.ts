@@ -250,7 +250,10 @@ const fi: SectionCopy = {
       "lastMinute": "Äkkilähdöt Lapin mökkeihin",
       "lastMinuteLead": "Lomarengas myy lähipäivien vapaat viikot alennettuun hintaan. Tämä linkki avaa sen suodattimen Lapin mökeille.",
       "view": "Katso mökki",
-      "updated": "Syöte päivitetty {date}"
+      "updated": "Syöte päivitetty {date}",
+      "perWeek": "/viikko",
+      "bedrooms": "mh",
+      "starsLabel": "Lomarengas-laatuluokka"
     },
     "cars": {
       "eyebrow": "EconomyBookings · tarkistettu {date}",
@@ -270,7 +273,11 @@ const fi: SectionCopy = {
         "Keskikoko",
         "Farmari",
         "SUV"
-      ]
+      ],
+      "colAutoFirst": "Automaatit ensin",
+      "airport": "Lentokenttä",
+      "seats": "paikkaa",
+      "days": "pv"
     },
     "activities": {
       "eyebrow": "GetYourGuide · vapaat paikat livenä",
@@ -290,6 +297,36 @@ const fi: SectionCopy = {
         "Ruka",
         "Inari"
       ]
+    },
+    "sheet": {
+      "kicker": "Live · lukuhetki joka rivillä",
+      "h2": "Tänään Lapissa",
+      "lead": "Jokainen rivi tällä arkilla on kumppanin oma hinta ja hetki, jolloin se luettiin. Mikään tässä ei ole arvio.",
+      "note": "Hinnat luetaan kumppanien syötteistä ja sivuilta, ja ne muuttuvat ilman varoitusta; kumppanin sivu sanoo viimeisen sanan. Kuvat: Lomarengas. Lentohinnat ja yhtiöiden merkit: Travelpayouts. Autojen kokonaishinnat: EconomyBookings."
+    },
+    "list": {
+      "sortBy": "Järjestä",
+      "sortPrice": "Hinta",
+      "sortDate": "Päivä",
+      "sortStars": "Tähdet",
+      "colCheapest": "Halvin ensin",
+      "colSoonest": "Lähin lähtö ensin",
+      "colBestStars": "Parhaat tähdet ensin",
+      "showAll": "Näytä kaikki {n}",
+      "openFare": "Avaa tämä hinta",
+      "openSearch": "Avaa tämä haku",
+      "seenAt": "{source}, luettu {d}",
+      "photoCredit": "Kuvat: {source}",
+      "empty": "Ei näytettävää juuri nyt."
+    },
+    "chart": {
+      "h2": "Milloin lennot Lappiin ovat halvimmillaan?",
+      "lead": "Yksi palkki jokaiselle lähtöpäivälle, jolle Travelpayoutsin välimuistissa on hinta Helsingistä, kolme kuukautta eteenpäin. Luettu {d}; hinnat muuttuvat tunneittain.",
+      "cheapest": "Halvin päivä {d}: {p}",
+      "priciest": "Kallein päivä {d}: {p}",
+      "empty": "Tälle kentälle ei ole vielä välimuistissa hintoja.",
+      "note": "Päivä ilman palkkia tarkoittaa vain, ettei välimuistissa ole hintaa, ei loppuunmyytyä päivää.",
+      "airport": "Lentokenttä"
     }
   },
   faq: {
