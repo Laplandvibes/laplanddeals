@@ -17,6 +17,7 @@
  *   - the page scrolling sideways
  *   - fare-calendar bars narrower than 5 px, fewer than 3 gridlines, or a month with < 2 bars
  *   - an orphaned separator: a bare "·" text node, or one at a line edge, in any row or tile
+ *   - a tile title that wraps, chips of unequal width/height inside a tile, or a cut chip text
  *   - category-tile text under 4.5:1 against the pixels it actually sits on
  *     (the tile's text band is sampled with canvas: photo drawn object-fit cover,
  *     every positioned overlay composited by its computed colour/alpha, then the
@@ -167,13 +168,31 @@ for (const v of VIEWS) {
           }
         }
       }
-      return { overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth, lists, charts, chartControls, tiles, orphans };
+      // Tile shape (Vesa 12.9.: "otsikot pitää mahtua samalle riville … laatikot ei ole samankokoisia"):
+      // a title must be one line; the chips inside a tile must share one width and one height;
+      // a chip's text must not be cut (scrollWidth > clientWidth on the truncating span).
+      const tileShape = [];
+      for (const tile of document.querySelectorAll("[data-category-tiles] > a")) {
+        const t = tile.querySelector("[data-tile-title]");
+        if (t) {
+          const lh = parseFloat(getComputedStyle(t).lineHeight) || parseFloat(getComputedStyle(t).fontSize) * 1.2;
+          if (t.getBoundingClientRect().height > lh * 1.35) tileShape.push(`title wraps: "${t.textContent.trim()}"`);
+        }
+        const chips = [...tile.querySelectorAll("[data-tile-chips] > li")];
+        const ws = new Set(chips.map((c) => Math.round(c.getBoundingClientRect().width)));
+        const hs = new Set(chips.map((c) => Math.round(c.getBoundingClientRect().height)));
+        if (ws.size > 1) tileShape.push(`chip widths differ in "${t?.textContent.trim()}": ${[...ws].join("/")}`);
+        if (hs.size > 1) tileShape.push(`chip heights differ in "${t?.textContent.trim()}": ${[...hs].join("/")}`);
+        for (const c of chips) { const sp = c.querySelector("span"); if (sp && sp.scrollWidth > sp.clientWidth + 1) tileShape.push(`chip text cut: "${sp.textContent.trim()}"`); }
+      }
+      return { overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth, lists, charts, chartControls, tiles, orphans, tileShape };
     });
     await ctx.close();
 
     const tag = `${v.name} ${path}`;
     if (m.overflowX) failures.push(`${tag}: page scrolls sideways`);
     for (const o of m.orphans) failures.push(`${tag}: orphaned separator — ${o}`);
+    for (const o of m.tileShape) failures.push(`${tag}: tile shape — ${o}`);
     for (const l of m.lists) {
       if (!l.rows.length) { notes.push(`${tag}: ${l.id}: no rows rendered`); continue; }
       const hs = l.rows.map((r) => r.h);

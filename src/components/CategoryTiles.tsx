@@ -13,14 +13,19 @@ const TILE_META = [
 ];
 
 /**
- * Category tiles. The text no longer floats over the photograph: it sits in
- * a solid deep-night band under it (Vesa 11.9.2026: "tekstit ei erotu,
- * porttien läpi"). Measured on the live tiles before the change: the label
- * over the photo hit 1.0–2.5:1 on bright skies. A solid band makes the
- * contrast an invariant (snow on #0F172A = 17:1) instead of a per-photo
- * gamble — the same move the network's share cards made on 6.9. The layout
- * gate (scripts/check-ui-layout.mjs) measures every tile text node against
- * the pixels behind it and fails under 4.5:1.
+ * Category tiles.
+ *
+ * 11.9.: the text left the photograph for a solid deep-night band (Vesa:
+ * "tekstit ei erotu") — contrast is an invariant (17:1) and measured.
+ * 12.9.: the " · " hint chain became chips so a wrap could not orphan a dot —
+ * and Vesa: "otsikot pitää mahtua samalle riville … laatikot ei ole
+ * samankokoisia ja samassa rivissä nätisti". So: one tile per row on phones
+ * (a half-width tile cannot hold "HOTELLIT & MÖKIT" on one line), and the
+ * chips are full-width rows of one fixed height — the network's mobile rule
+ * (feedback_mobile_uniform_grid: when option names differ in length, one
+ * full-width row per option; measure widths and heights into a Set, more
+ * than one value = unfinished). The layout gate fails a title that wraps and
+ * chips whose widths or heights differ inside a tile.
  */
 export default function CategoryTiles() {
   const lang = useLang();
@@ -29,16 +34,17 @@ export default function CategoryTiles() {
   const browseLabel = COPY[lang].card.browse;
 
   return (
-    <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6" data-category-tiles>
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6" data-category-tiles>
       {tiles.map((tile, i) => {
         const meta = TILE_META[i];
+        const items = tile.hint.split(/\s*[·・]\s*/).filter(Boolean);
         return (
           <Link
             key={meta.to}
             to={to(meta.to)}
             className="group flex flex-col overflow-hidden rounded-lg border border-line bg-cream-2 no-underline transition-all duration-500 hover:-translate-y-0.5 hover:border-line-2"
           >
-            <div className="relative aspect-[4/3] overflow-hidden md:aspect-[16/10]">
+            <div className="relative aspect-[2/1] overflow-hidden sm:aspect-[16/10]">
               <img
                 src={meta.img}
                 alt={`${tile.label} deals in Lapland`}
@@ -49,13 +55,12 @@ export default function CategoryTiles() {
               />
             </div>
             <div className="flex flex-1 flex-col bg-deep-night p-4 md:p-5" data-tile-text>
-              <h3 className="mb-1 font-heading text-2xl leading-tight text-snow md:text-[1.7rem]">{tile.label}</h3>
-              {/* The hint used to be one " · " chain; on a half-width phone tile it wrapped with
-                  the dot orphaned at a line end or start ("IVALO ·", "· POROT") — Vesa 12.9.
-                  Each item is now its own chip, so a line break can only fall between items. */}
-              <ul className="mb-3 flex flex-wrap gap-1.5" aria-label={tile.hint}>
-                {tile.hint.split(/\s*[·・]\s*/).filter(Boolean).map((item) => (
-                  <li key={item} className="whitespace-nowrap rounded-full bg-snow/10 px-2 py-0.5 text-[11px] uppercase tracking-[0.12em] text-snow/90 md:text-xs">{item}</li>
+              <h3 className="mb-3 font-heading text-2xl leading-tight text-snow md:text-[1.7rem]" data-tile-title>{tile.label}</h3>
+              <ul className="mb-4 flex flex-col gap-1.5" aria-label={tile.hint} data-tile-chips>
+                {items.map((item) => (
+                  <li key={item} className="flex h-8 items-center rounded-md bg-snow/10 px-3 text-[11px] uppercase tracking-[0.12em] text-snow/90 md:text-xs">
+                    <span className="truncate">{item}</span>
+                  </li>
                 ))}
               </ul>
               <span className="mt-auto inline-flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-[0.12em] text-vibe-pink">
