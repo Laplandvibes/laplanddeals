@@ -254,3 +254,20 @@
 @keyframes lvBarIn { from { transform: scaleY(0.12); } to { transform: none; } }
 @keyframes lvFadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes lvBreath { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.45; transform: scale(0.78); } }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   ORPOSANA — verkoston asetteluportti 12.9.2026 (lv-asetteluportti-orposana)
+
+   Vesa: "korjaa noi kaikki". Portti `npm run gate:asettelu` laski 199 kohtaa
+   29 sivustolta, joissa otsikon viimeiselle riville jaa yksi sana ja se rivi
+   on alle 35 % edellisesta. `text-wrap: balance` jakaa sanat riveille tasan
+   ja poisti mitattuna ~90 % loydoksista (laplandgifts 9 -> 0 @412 px).
+
+   Selain rajoittaa balancen lyhyisiin lohkoihin (~6 rivia), joten se ei osu
+   leipatekstiin; sille `pretty` estaa vain orvon viimeisen rivin.
+   ───────────────────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6,
+button,
+[class*="uppercase"] {
+  text-wrap: balance;
+}
