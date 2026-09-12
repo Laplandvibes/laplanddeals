@@ -130,7 +130,7 @@ export default function LiveFlights({ limit = 6, phoneLimit, kicker }: { limit?:
             dateSub={l.fare.airline || undefined}
             badge={l.soon ? { text: c.soon, tone: 'pink' } : null}
             name={`Helsinki → ${l.city}`}
-            facts={<><span className="font-medium text-finland-blue">{l.city} ({l.code})</span>{l.fare.airline && <><span aria-hidden="true">·</span><span>{l.fare.airline}</span></>}<span aria-hidden="true">·</span><span>{l.fare.oneWay ? c.oneWay : c.roundTrip}</span></>}
+            facts={[<span key="c" className="font-medium text-finland-blue">{l.city} ({l.code})</span>, l.fare.airline || null, l.fare.oneWay ? c.oneWay : c.roundTrip]}
             price={fmt.format(l.fare.price)}
             seen={cl.seenAt.replace('{source}', 'Travelpayouts').replace('{d}', checkedAt)}
             href={goHref(l.fare.book, l.sid)}

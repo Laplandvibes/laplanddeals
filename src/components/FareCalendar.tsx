@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { segClass } from './live/seg';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import Units from './live/Units';
 
 /**
  * "When are flights to Lapland cheapest?" — one bar per departure day for
@@ -162,7 +163,7 @@ export default function FareCalendar({ className }: { className?: string }) {
             })}
           </div>
         )}
-        <p className="mt-3 text-[11px] text-deep-night/55">{c.note}</p>
+        <p className="mt-3 text-[11px] text-deep-night/55" data-sheet-note><Units text={c.note} /></p>
       </div>
     </section>
   );

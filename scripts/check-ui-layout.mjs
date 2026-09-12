@@ -16,6 +16,7 @@
  *   - a visible control under 36 px tall
  *   - the page scrolling sideways
  *   - fare-calendar bars narrower than 5 px, fewer than 3 gridlines, or a month with < 2 bars
+ *   - an orphaned separator: a bare "·" text node, or one at a line edge, in any row or tile
  *   - category-tile text under 4.5:1 against the pixels it actually sits on
  *     (the tile's text band is sampled with canvas: photo drawn object-fit cover,
  *     every positioned overlay composited by its computed colour/alpha, then the
@@ -111,7 +112,7 @@ for (const v of VIEWS) {
           g.fillStyle = `rgba(${bg.r},${bg.g},${bg.b},${bg.a})`;
           g.fillRect(r.left - tr.left, r.top - tr.top, r.width, r.height);
         }
-        for (const t of tile.querySelectorAll("h3, p, span")) {
+        for (const t of tile.querySelectorAll("h3, p, span, li")) {
           if (!t.textContent.trim() || !t.getClientRects().length) continue;
           const r = t.getBoundingClientRect();
           const x0 = Math.max(0, Math.round(r.left - tr.left)), y0 = Math.max(0, Math.round(r.top - tr.top));
@@ -125,12 +126,38 @@ for (const v of VIEWS) {
           tiles.push({ tile: tile.getAttribute("href"), text: t.textContent.trim().slice(0, 30), worst: Math.round(worst * 100) / 100, gradient: skippedGradient });
         }
       }
-      return { overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth, lists, charts, chartControls, tiles };
+      // Orphaned separators (Vesa 12.9.: "miten nuo bulletpointit menee ihan pieleen"): a " · " chain that
+      // wraps leaves the dot alone at a line end or start. Structural check: inside rows and tiles no
+      // element may be a bare "·"/"・" text node unless it sits inside a nowrap unit, and no line box may
+      // begin or end with one (measured via Range rects per separator).
+      const orphans = [];
+      for (const scope of [...document.querySelectorAll("[data-live-list], [data-category-tiles] > a, [data-sheet-note], section.sheet p")]) {
+        const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
+        let n;
+        while ((n = walker.nextNode())) {
+          const t = n.textContent;
+          if (!/[·・]/.test(t)) continue;
+          const el = n.parentElement;
+          if (!el || !el.getClientRects().length) continue;
+          // a dot inside a nowrap unit can never be orphaned
+          if (el.closest(".whitespace-nowrap")) continue;
+          if (t.trim() === "·" || t.trim() === "・") { orphans.push(`bare separator node "${(el.parentElement?.textContent || "").trim().slice(0, 40)}"`); continue; }
+          // a dot inside a longer text: check it is not at a line start/end
+          let idx = -1;
+          while ((idx = t.indexOf("·", idx + 1)) !== -1) {
+            const r = document.createRange(); r.setStart(n, idx); r.setEnd(n, idx + 1);
+            const dr = r.getBoundingClientRect(); const pr = el.getBoundingClientRect();
+            if (dr.left - pr.left < 6 || pr.right - dr.right < 6) { orphans.push(`separator at line edge in "${t.trim().slice(0, 40)}"`); break; }
+          }
+        }
+      }
+      return { overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth, lists, charts, chartControls, tiles, orphans };
     });
     await ctx.close();
 
     const tag = `${v.name} ${path}`;
     if (m.overflowX) failures.push(`${tag}: page scrolls sideways`);
+    for (const o of m.orphans) failures.push(`${tag}: orphaned separator — ${o}`);
     for (const l of m.lists) {
       if (!l.rows.length) { notes.push(`${tag}: ${l.id}: no rows rendered`); continue; }
       const hs = l.rows.map((r) => r.h);

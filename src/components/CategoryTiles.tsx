@@ -50,7 +50,14 @@ export default function CategoryTiles() {
             </div>
             <div className="flex flex-1 flex-col bg-deep-night p-4 md:p-5" data-tile-text>
               <h3 className="mb-1 font-heading text-2xl leading-tight text-snow md:text-[1.7rem]">{tile.label}</h3>
-              <p className="mb-3 text-[11px] uppercase leading-snug tracking-[0.14em] text-snow/90 md:text-xs">{tile.hint}</p>
+              {/* The hint used to be one " · " chain; on a half-width phone tile it wrapped with
+                  the dot orphaned at a line end or start ("IVALO ·", "· POROT") — Vesa 12.9.
+                  Each item is now its own chip, so a line break can only fall between items. */}
+              <ul className="mb-3 flex flex-wrap gap-1.5" aria-label={tile.hint}>
+                {tile.hint.split(/\s*[·・]\s*/).filter(Boolean).map((item) => (
+                  <li key={item} className="whitespace-nowrap rounded-full bg-snow/10 px-2 py-0.5 text-[11px] uppercase tracking-[0.12em] text-snow/90 md:text-xs">{item}</li>
+                ))}
+              </ul>
               <span className="mt-auto inline-flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-[0.12em] text-vibe-pink">
                 {browseLabel}
                 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />

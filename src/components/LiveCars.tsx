@@ -94,10 +94,10 @@ export default function LiveCars({ limit = 6, phoneLimit, kicker }: { limit?: nu
             media={{ kind: 'plate', label: c.classNames[o.classIdx], sub: c.orSimilar }}
             day={day}
             month={month}
-            dateSub={`${days} ${c.days} · ${AIRPORT_NAME[o.airport]}`}
+            dateSub={`${days} ${c.days}`}
             badge={null}
             name={o.model}
-            facts={<><span className="font-medium text-finland-blue">{o.supplier}</span><span aria-hidden="true">·</span><span>{o.gear === 'A' ? c.auto : c.manual}</span><span aria-hidden="true">·</span><span className="inline-flex items-center gap-1"><Users className="h-3 w-3" aria-hidden="true" />{o.seats} {c.seats}</span></>}
+            facts={[<span key="s" className="font-medium text-finland-blue">{o.supplier}</span>, o.gear === 'A' ? c.auto : c.manual, <span key="n" className="inline-flex items-center gap-1"><Users className="h-3 w-3" aria-hidden="true" />{o.seats} {c.seats}</span>]}
             price={fmt.format(o.total)}
             unit={c.total}
             seen={cl.seenAt.replace('{source}', 'EconomyBookings').replace('{d}', checked)}

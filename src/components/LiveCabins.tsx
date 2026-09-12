@@ -133,7 +133,7 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
             dateSub={cab.sqm ? `${Math.round(cab.sqm)} m²${cab.br ? ` · ${cab.br} ${c.bedrooms}` : ''}` : undefined}
             badge={cab.stars ? { text: `${'★'.repeat(Math.min(5, cab.stars))} ${cab.stars}/5`, tone: 'green' } : null}
             name={cab.name}
-            facts={<><span className="font-medium text-finland-blue">{cab.place}</span>{cab.muni && cab.muni !== cab.place && <><span aria-hidden="true">·</span><span>{cab.muni}</span></>}<span aria-hidden="true">·</span><span className="inline-flex items-center gap-1"><Star className="h-3 w-3 text-finland-blue" aria-hidden="true" />{c.starsLabel}</span></>}
+            facts={[<span key="p" className="font-medium text-finland-blue">{cab.place}</span>, cab.muni && cab.muni !== cab.place ? cab.muni : null, <span key="s" className="inline-flex items-center gap-1"><Star className="h-3 w-3 text-finland-blue" aria-hidden="true" />{c.starsLabel}</span>]}
             price={fmt.format(cab.weeklyFrom || 0)}
             unit={c.perWeek}
             seen={cl.seenAt.replace('{source}', 'Lomarengas').replace('{d}', updated)}

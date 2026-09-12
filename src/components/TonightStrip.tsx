@@ -4,6 +4,7 @@ import { buildAffiliateHref } from './AffiliateCTA';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { trackAffiliateClick } from '../lib/analytics';
+import Units from './live/Units';
 
 /**
  * "A bed tonight in …" — six resort buttons whose search is pinned to TONIGHT,
@@ -45,7 +46,7 @@ export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; 
       <div className="mb-5 max-w-2xl sm:mb-6">
         {kicker && (
           <p className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
-            <Moon className="h-3.5 w-3.5" aria-hidden="true" />{c.eyebrow} · {label}
+            <Moon className="h-3.5 w-3.5" aria-hidden="true" /><Units text={`${c.eyebrow} · ${label}`} />
           </p>
         )}
         <h2 id={`${id}-title`} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl">{c.title}</h2>

@@ -1,5 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react';
 import { trackAffiliateClick } from '../../lib/analytics';
+import Units from './Units';
 
 /**
  * One live row — the receipt shape laplandhoteldeals settled on after its
@@ -28,7 +29,8 @@ export interface LiveRowProps {
   dateSub?: string;
   badge?: { text: string; tone: 'green' | 'pink' } | null;
   name: string;
-  facts: ReactNode;
+  /** Fact units; the row renders a separator INSIDE each unit after the first, so a wrap can never orphan a dot. */
+  facts: ReactNode[];
   price: string;
   unit?: string;
   seen: string;
@@ -36,6 +38,19 @@ export interface LiveRowProps {
   sid: string;
   partner: string;
   cta: string;
+}
+
+/** "{source}, read {d}": the tail after the first comma stays on one line, so a wrap
+ *  gives "EconomyBookings," / "luettu 2.9." and never a lone date. */
+function Seen({ text }: { text: string }) {
+  const i = text.indexOf(', ');
+  if (i === -1) return <span className="whitespace-nowrap">{text}</span>;
+  return (
+    <>
+      <span>{text.slice(0, i + 1)}</span>{' '}
+      <span className="whitespace-nowrap">{text.slice(i + 2)}</span>
+    </>
+  );
 }
 
 export default function LiveRow(p: LiveRowProps) {
@@ -81,7 +96,7 @@ export default function LiveRow(p: LiveRowProps) {
             <span className="font-heading text-2xl leading-none text-deep-night sm:text-[1.75rem]">{p.day}</span>
             <span className="text-xs text-deep-night/60">{p.month}</span>
           </div>
-          {p.dateSub && <div className="mt-0.5 text-[11px] text-deep-night/55 sm:text-xs">{p.dateSub}</div>}
+          {p.dateSub && <div className="mt-0.5 text-[11px] text-deep-night/55 sm:text-xs"><Units text={p.dateSub} /></div>}
           {p.badge && (
             <span
               className={`mt-1 inline-flex rounded-full px-2 py-0.5 text-[11px] font-semibold leading-tight ${
@@ -96,7 +111,17 @@ export default function LiveRow(p: LiveRowProps) {
         {/* Name and one facts line, full width. */}
         <div className="col-span-2 min-w-0">
           <h3 className="font-body text-[17px] font-bold leading-snug text-deep-night line-clamp-2 sm:text-lg">{p.name}</h3>
-          <div className="mt-0.5 flex flex-wrap items-center gap-x-1.5 text-xs text-deep-night/70 line-clamp-2 sm:text-[13px]">{p.facts}</div>
+          <div className="mt-0.5 text-xs leading-relaxed text-deep-night/70 line-clamp-2 sm:text-[13px]">
+            {p.facts.filter(Boolean).map((f, i) => (
+              <span key={i}>
+                {i > 0 && ' '}
+                <span className="whitespace-nowrap">
+                  {i > 0 && <span aria-hidden="true" className="mr-1.5 text-deep-night/40">·</span>}
+                  {f}
+                </span>
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="col-span-2 flex items-center justify-between gap-3 border-t border-deep-night/10 pt-2.5">
@@ -105,9 +130,9 @@ export default function LiveRow(p: LiveRowProps) {
               {p.price}
               {p.unit && <span className="font-body text-sm font-medium text-deep-night/60"> {p.unit}</span>}
             </div>
-            <div className="mt-1 flex items-center gap-1.5 text-[11px] text-deep-night/55 sm:text-xs">
-              <span className="fresh-dot inline-block h-1.5 w-1.5 rounded-full bg-aurora-green" aria-hidden="true" />
-              {p.seen}
+            <div className="mt-1 flex items-start gap-1.5 text-[11px] leading-snug text-deep-night/55 sm:text-xs">
+              <span className="fresh-dot mt-[0.3em] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-aurora-green" aria-hidden="true" />
+              <span><Seen text={p.seen} /></span>
             </div>
           </div>
           <span className="btn-pink inline-flex min-h-11 min-w-[6rem] items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-semibold">

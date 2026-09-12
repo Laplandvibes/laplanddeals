@@ -2,6 +2,7 @@ import { Fragment, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { useLang } from '../../i18n/useLang';
 import { COPY } from '../../locales/copy';
 import { segClass } from './seg';
+import Units from './Units';
 
 /**
  * The list frame every live section shares (ported from laplandhoteldeals
@@ -83,7 +84,7 @@ export default function LiveList<T>({ id, kicker, title, lead, aside, rows, mode
     <section id={id} className={`relative ${className ?? ''}`} aria-labelledby={`${id}-title`} data-live-list>
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl">
-          {kicker && <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">{kicker}</p>}
+          {kicker && <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]"><Units text={kicker} /></p>}
           <h2 id={`${id}-title`} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl">{title}</h2>
           {lead && <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{lead}</p>}
         </div>
@@ -139,7 +140,7 @@ export default function LiveList<T>({ id, kicker, title, lead, aside, rows, mode
         )}
       </div>
 
-      {footnote && <p className="mt-4 max-w-3xl text-xs leading-relaxed text-deep-night/60">{footnote}</p>}
+      {footnote && <p className="mt-4 max-w-3xl text-xs leading-relaxed text-deep-night/60">{typeof footnote === 'string' ? <Units text={footnote} /> : footnote}</p>}
     </section>
   );
 }

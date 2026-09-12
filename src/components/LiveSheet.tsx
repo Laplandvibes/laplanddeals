@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import Units from './live/Units';
 
 /**
  * The paper sheet that carries every live section (ported from
@@ -19,14 +20,14 @@ export default function LiveSheet({ children, intro = true }: { children: ReactN
           <div className="mb-10 sm:mb-12">
             <p className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
               <span aria-hidden="true" className="deal-pulse inline-block h-2 w-2 shrink-0 rounded-full bg-[#BE185D]" />
-              {c.kicker}
+              <Units text={c.kicker} />
             </p>
             <h2 id="live-sheet-title" className="font-heading text-4xl leading-[1.02] text-deep-night sm:text-5xl md:text-6xl">{c.h2}</h2>
             <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{c.lead}</p>
           </div>
         )}
         <div className="flex flex-col gap-14 sm:gap-20">{children}</div>
-        <p className="mt-10 max-w-3xl text-xs leading-relaxed text-deep-night/60">{c.note}</p>
+        <p className="mt-10 max-w-3xl text-xs leading-relaxed text-deep-night/60" data-sheet-note><Units text={c.note} /></p>
       </div>
     </section>
   );
