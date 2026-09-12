@@ -111,16 +111,8 @@ export default function LiveRow(p: LiveRowProps) {
         {/* Name and one facts line, full width. */}
         <div className="col-span-2 min-w-0">
           <h3 className="font-body text-[17px] font-bold leading-snug text-deep-night line-clamp-2 sm:text-lg">{p.name}</h3>
-          <div className="mt-0.5 text-xs leading-relaxed text-deep-night/70 line-clamp-2 sm:text-[13px]">
-            {p.facts.filter(Boolean).map((f, i) => (
-              <span key={i}>
-                {i > 0 && ' '}
-                <span className="whitespace-nowrap">
-                  {i > 0 && <span aria-hidden="true" className="mr-1.5 text-deep-night/40">·</span>}
-                  {f}
-                </span>
-              </span>
-            ))}
+          <div className="mt-0.5 text-xs leading-relaxed text-deep-night/70 sm:text-[13px]">
+            <Units items={p.facts} />
           </div>
         </div>
 

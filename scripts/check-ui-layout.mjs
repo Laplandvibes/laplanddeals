@@ -131,6 +131,22 @@ for (const v of VIEWS) {
       // element may be a bare "·"/"・" text node unless it sits inside a nowrap unit, and no line box may
       // begin or end with one (measured via Range rects per separator).
       const orphans = [];
+      // Units: every unit carries a dot in its left padding; the container clips the strip
+      // where a line-starting unit's dot lands. A dot whose box is inside the container's
+      // visible area must therefore follow another unit on the SAME line, or it is orphaned.
+      for (const cont of document.querySelectorAll(".units")) {
+        const cr = cont.getBoundingClientRect();
+        const units = [...cont.querySelectorAll(".unit")];
+        units.forEach((u, i) => {
+          const dot = u.querySelector(".unit-dot"); if (!dot) return;
+          const dr = dot.getBoundingClientRect(); const ur = u.getBoundingClientRect();
+          const visible = dr.right > cr.left + 0.5;
+          if (!visible) return;
+          const prev = units[i - 1];
+          const sameLine = prev && Math.abs(prev.getBoundingClientRect().top - ur.top) < 2;
+          if (!sameLine) orphans.push(`visible dot starts a line in "${(cont.textContent || "").trim().slice(0, 40)}"`);
+        });
+      }
       for (const scope of [...document.querySelectorAll("[data-live-list], [data-category-tiles] > a, [data-sheet-note], section.sheet p")]) {
         const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
         let n;
@@ -140,7 +156,7 @@ for (const v of VIEWS) {
           const el = n.parentElement;
           if (!el || !el.getClientRects().length) continue;
           // a dot inside a nowrap unit can never be orphaned
-          if (el.closest(".whitespace-nowrap")) continue;
+          if (el.closest(".unit")) continue;
           if (t.trim() === "·" || t.trim() === "・") { orphans.push(`bare separator node "${(el.parentElement?.textContent || "").trim().slice(0, 40)}"`); continue; }
           // a dot inside a longer text: check it is not at a line start/end
           let idx = -1;

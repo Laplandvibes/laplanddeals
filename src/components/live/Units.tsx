@@ -1,26 +1,41 @@
+import type { ReactNode } from 'react';
+
 /**
- * A " · " chain rendered as nowrap units, the dot travelling with the item
- * after it. A line can then break only BETWEEN items, never leaving a dot
- * alone at a line edge (Vesa 12.9.2026: "miten nuo bulletpointit menee ihan
- * pieleen"). Used for row facts, date sub-lines, list footnotes and the sheet
- * note; the layout gate refuses any bare separator outside a nowrap unit.
+ * A " · " chain whose separator can never sit at a line edge.
+ *
+ * Vesa 12.9.2026: "etkö näe miten nuo bulletpointit menee ihan pieleen?" —
+ * a wrapped chain left the dot alone at a line end ("IVALO ·") or, after the
+ * first fix, at a line start ("· EconomyBookings, 2.9."). Moving the dot into
+ * the following word was not enough: a wrap still shows a dot first on the
+ * new line.
+ *
+ * The classic divider trick instead: every unit carries its dot in its own
+ * left padding; the inner row is pulled left by exactly that padding, and the
+ * OUTER wrapper clips (`overflow: hidden`). A unit that starts a line has its
+ * dot in the clipped strip and it disappears; only dots BETWEEN two units on
+ * the same line are visible. Pure CSS, no line-position guessing. The layout
+ * gate measures every dot: a visible one must have a same-line predecessor.
+ * (First attempt put the negative margin and the clip on the same element —
+ * that just moves the box, nothing is clipped; measured 218 "visible" dots.)
+ *
+ * `text` splits on " · " / "・"; `items` takes ready nodes (row facts).
+ * A single unit renders as ordinary wrapping text.
  */
-export default function Units({ text }: { text: string }) {
-  const parts = text.split(/\s*[·・]\s*/).filter(Boolean);
-  // No separator → ordinary wrapping text. A single nowrap unit would be a
-  // 300-character line (the sheet note did exactly that, measured 12.9.).
-  if (parts.length < 2) return <>{text}</>;
+export default function Units({ text, items, className }: { text?: string; items?: ReactNode[]; className?: string }) {
+  const parts: ReactNode[] = items
+    ? items.filter((x) => x !== null && x !== undefined && x !== false && x !== '')
+    : (text ?? '').split(/\s*[·・]\s*/).filter(Boolean);
+  if (parts.length < 2) return <>{parts[0] ?? null}</>;
   return (
-    <>
-      {parts.map((part, i) => (
-        <span key={i}>
-          {i > 0 && ' '}
-          <span className="whitespace-nowrap">
-            {i > 0 && <span aria-hidden="true" className="mr-1">·</span>}
+    <span className={`units block overflow-hidden ${className ?? ''}`}>
+      <span className="units-row flex flex-wrap" style={{ marginLeft: '-1.05em', rowGap: '0.1em' }}>
+        {parts.map((part, i) => (
+          <span key={i} className="unit relative whitespace-nowrap" style={{ paddingLeft: '1.05em' }}>
+            <span aria-hidden="true" className="unit-dot absolute opacity-60" style={{ left: '0.32em' }}>·</span>
             {part}
           </span>
-        </span>
-      ))}
-    </>
+        ))}
+      </span>
+    </span>
   );
 }
