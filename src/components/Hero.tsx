@@ -55,7 +55,7 @@ export default function Hero() {
           </p>
 
           {/* Bebas is single-weight and upright — no italic/weight games. */}
-          <h1 className="font-heading text-ivory leading-[0.95] mb-6 sm:mb-8 text-[3.4rem] sm:text-[5rem] lg:text-[6.4rem] drop-shadow-[0_3px_18px_rgba(0,0,0,0.85)]">
+          <h1 className="font-heading text-ivory leading-[0.95] mb-6 sm:mb-8 text-[3.4rem] sm:text-[5rem] lg:text-[6.4rem] drop-shadow-[0_3px_18px_rgba(0,0,0,0.85)] xl:text-[clamp(102px,1.5938vw_+_81.6px,122.4px)]">
             {c.h1Line1Italic}
             {c.h1Line1Bold}
             <br />
