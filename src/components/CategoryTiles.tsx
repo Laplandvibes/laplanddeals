@@ -34,7 +34,7 @@ export default function CategoryTiles() {
   const browseLabel = COPY[lang].card.browse;
 
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6" data-category-tiles>
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6" data-category-tiles data-fill-grid="category-tiles">
       {tiles.map((tile, i) => {
         const meta = TILE_META[i];
         const items = tile.hint.split(/\s*[·・]\s*/).filter(Boolean);

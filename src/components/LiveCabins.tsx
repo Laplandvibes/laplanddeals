@@ -102,13 +102,13 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
       title={c.title}
       lead={c.lead}
       aside={
-        <div className="md:max-w-xs md:text-right">
+        <div className="lg:max-w-xs lg:shrink-0 lg:text-right">
           <a
             href={lmHref}
             target="_blank"
             rel="sponsored nofollow noopener"
             onClick={() => trackAffiliateClick('lomarengas', 'live_cabins_lastminute', lmHref)}
-            className="btn-pink inline-flex min-h-11 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-2.5 text-sm font-semibold no-underline md:w-auto"
+            className="btn-pink inline-flex min-h-11 w-full items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-2.5 text-sm font-semibold no-underline sm:w-auto"
           >
             {c.lastMinute} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
           </a>

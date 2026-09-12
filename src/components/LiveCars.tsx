@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Users } from 'lucide-react';
 import LiveList, { type SortMode } from './live/LiveList';
-import { segClass } from './live/seg';
+import SegGroup from './live/SegGroup';
 import LiveRow from './live/LiveRow';
 import { buildAffiliateHref } from './AffiliateCTA';
 import { useLang, type Lang } from '../i18n/useLang';
@@ -52,23 +52,24 @@ export default function LiveCars({ limit = 6, phoneLimit, kicker }: { limit?: nu
     { key: 'auto', label: c.auto, column: c.colAutoFirst, sort: (a, b) => Number(b.gear === 'A') - Number(a.gear === 'A') || a.total - b.total },
   ];
 
+  // Two segmented groups (airport, dates): equal segments, a label above each.
   const chips = (
-    <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
-      <div className="flex flex-wrap items-center gap-2" role="group" aria-label={c.airport}>
-        {EB_AIRPORTS.map((a) => (
-          <button key={a} type="button" aria-pressed={airport === a} className={segClass(airport === a)} onClick={() => setAirport(a)}>{AIRPORT_NAME[a]}</button>
-        ))}
-      </div>
+    <>
+      <SegGroup
+        label={c.airport}
+        options={EB_AIRPORTS.map((a) => ({ key: a, label: AIRPORT_NAME[a] }))}
+        value={airport}
+        onChange={(k) => setAirport(k as EbAirport)}
+      />
       {windows.length > 1 && (
-        <div className="flex flex-wrap items-center gap-2" role="group" aria-label={c.window.replace('{from}', '').replace('{to}', '').trim()}>
-          {windows.map((w) => (
-            <button key={w.key} type="button" aria-pressed={win.key === w.key} className={segClass(win.key === w.key)} onClick={() => setWinKey(w.key)}>
-              {fmtDate(w.pickup, lang)} – {fmtDate(w.dropoff, lang)}
-            </button>
-          ))}
-        </div>
+        <SegGroup
+          label={cl.sortDate}
+          options={windows.map((w) => ({ key: w.key, label: `${fmtDate(w.pickup, lang)} – ${fmtDate(w.dropoff, lang)}` }))}
+          value={win.key}
+          onChange={setWinKey}
+        />
       )}
-    </div>
+    </>
   );
 
   return (

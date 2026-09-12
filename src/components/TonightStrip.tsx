@@ -4,6 +4,7 @@ import { buildAffiliateHref } from './AffiliateCTA';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { trackAffiliateClick } from '../lib/analytics';
+import FitHeading from './live/FitHeading';
 import Units from './live/Units';
 
 /**
@@ -43,17 +44,17 @@ export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; 
 
   return (
     <section id={id} className="relative" aria-labelledby={`${id}-title`}>
-      <div className="mb-5 max-w-2xl sm:mb-6">
+      <div className="@container mb-5 sm:mb-6">
         {kicker && (
           <p className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
             <Moon className="h-3.5 w-3.5" aria-hidden="true" /><Units text={`${c.eyebrow} · ${label}`} />
           </p>
         )}
-        <h2 id={`${id}-title`} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl">{c.title}</h2>
+        <FitHeading id={`${id}-title`} text={c.title} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl" />
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{c.lead}</p>
       </div>
       <div className="tile-ice p-3 sm:p-5">
-        <ul className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-6">
+        <ul className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-6" data-fill-grid="tonight">
           {PLACES.map((p, i) => {
             const sid = `tonight_${p.key}`;
             const href = buildAffiliateHref({ partner: 'hotels', sid, destination: p.q, query: { checkin, checkout }, lang });

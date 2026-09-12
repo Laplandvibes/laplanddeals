@@ -1,7 +1,8 @@
 import { Fragment, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { useLang } from '../../i18n/useLang';
 import { COPY } from '../../locales/copy';
-import { segClass } from './seg';
+import FitHeading from './FitHeading';
+import SegGroup from './SegGroup';
 import Units from './Units';
 
 /**
@@ -82,10 +83,14 @@ export default function LiveList<T>({ id, kicker, title, lead, aside, rows, mode
 
   return (
     <section id={id} className={`relative ${className ?? ''}`} aria-labelledby={`${id}-title`} data-live-list>
-      <div className="mb-5 flex flex-col gap-4 sm:mb-6 md:flex-row md:items-end md:justify-between">
-        <div className="max-w-2xl">
+      {/* Header: the title block is a container so FitHeading can size the
+          title to it. The aside sits beside it only from lg up: on a tablet
+          it would take a third of the row and force the title onto two
+          lines (Vesa 12.9.: "eikö otsikko mahtuisi yhdelle riville"). */}
+      <div className="mb-5 flex flex-col gap-4 sm:mb-6 lg:flex-row lg:items-end lg:justify-between lg:gap-8">
+        <div className="@container min-w-0 flex-1">
           {kicker && <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]"><Units text={kicker} /></p>}
-          <h2 id={`${id}-title`} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl">{title}</h2>
+          <FitHeading id={`${id}-title`} text={title} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl" />
           {lead && <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{lead}</p>}
         </div>
         {aside}
@@ -93,16 +98,19 @@ export default function LiveList<T>({ id, kicker, title, lead, aside, rows, mode
 
       <div className="tile-ice p-3 sm:p-5">
         {(modes.length > 1 || chips) && (
-          <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+          <div
+            className={`mb-4 grid gap-x-5 gap-y-4 ${modes.length > 1 && !chips ? 'lg:hidden' : ''}`}
+            style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 18rem), 1fr))' }}
+            data-live-controls
+          >
             {modes.length > 1 && (
-              <div className="flex flex-wrap items-center gap-2 lg:hidden" role="group" aria-label={c.sortBy}>
-                <span className="mr-1 text-xs font-medium text-deep-night/55">{c.sortBy}</span>
-                {modes.map((m) => (
-                  <button key={m.key} type="button" aria-pressed={sortKey === m.key} className={segClass(sortKey === m.key)} onClick={() => setSortKey(m.key)}>
-                    {m.label}
-                  </button>
-                ))}
-              </div>
+              <SegGroup
+                className="lg:hidden"
+                label={c.sortBy}
+                options={modes.map((m) => ({ key: m.key, label: m.label }))}
+                value={sortKey}
+                onChange={setSortKey}
+              />
             )}
             {chips}
           </div>

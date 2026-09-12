@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { segClass } from './live/seg';
+import FitHeading from './live/FitHeading';
+import SegGroup from './live/SegGroup';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import Units from './live/Units';
@@ -87,28 +88,28 @@ export default function FareCalendar({ className }: { className?: string }) {
 
   return (
     <section ref={ref} id="fare-calendar" aria-labelledby="fare-calendar-title" className={`${inView ? 'chart-in ' : ''}${className ?? ''}`}>
-      <div className="max-w-2xl">
-        <h2 id="fare-calendar-title" className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl">{c.h2}</h2>
+      <div className="@container">
+        <FitHeading id="fare-calendar-title" text={c.h2} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl" />
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{c.lead.replace('{d}', readAt)}</p>
       </div>
 
       <div className="tile-kelo mt-6 p-3 sm:p-5">
-        <div className="flex flex-wrap gap-2" role="group" aria-label={c.airport}>
-          {AIRPORTS.map((a) => (
-            <button key={a.code} type="button" aria-pressed={code === a.code} className={segClass(code === a.code)} onClick={() => setCode(a.code)}>
-              {a.city}
-            </button>
-          ))}
-        </div>
+        <SegGroup
+          className="max-w-2xl"
+          label={c.airport}
+          options={AIRPORTS.map((a) => ({ key: a.code, label: a.city }))}
+          value={code}
+          onChange={setCode}
+        />
 
         {!data ? (
-          <div className="mt-4 grid gap-4 md:grid-cols-3" aria-hidden="true">
+          <div className="mt-4 grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(17rem, 1fr))' }} aria-hidden="true">
             {[0, 1, 2].map((i) => <div key={i} className="card-frost h-60 animate-pulse" />)}
           </div>
         ) : months.length === 0 ? (
           <p className="card-frost mt-4 p-6 text-sm text-deep-night/75">{c.empty}</p>
         ) : (
-          <div className="mt-4 grid gap-4 md:grid-cols-3">
+          <div className="mt-4 grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(17rem, 1fr))' }} data-fill-grid="fare-months">
             {months.map((mo) => {
               const days = mo.days;
               const min = days.reduce((a, b) => (b.price < a.price ? b : a));

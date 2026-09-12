@@ -18,6 +18,9 @@
  *   - fare-calendar bars narrower than 5 px, fewer than 3 gridlines, or a month with < 2 bars
  *   - an orphaned separator: a bare "·" text node, or one at a line edge, in any row or tile
  *   - a tile title that wraps, chips of unequal width/height inside a tile, or a cut chip text
+ *   - a section title that wraps from 768 px up (FitHeading must size it to its container)
+ *   - a segmented control whose segments differ in width or height, or whose label is cut
+ *   - a [data-fill-grid] that leaves more than 24 px empty at the right of its first row
  *   - category-tile text under 4.5:1 against the pixels it actually sits on
  *     (the tile's text band is sampled with canvas: photo drawn object-fit cover,
  *     every positioned overlay composited by its computed colour/alpha, then the
@@ -37,18 +40,25 @@ const { chromium } = await import(pathToFileURL(resolve(ROOT, "../node_modules/p
 const base = (process.argv[2] || "https://laplanddeals.com").replace(/\/$/, "");
 
 const VIEWS = [
-  { name: "phone", w: 375, h: 812, mobile: true, maxRow: 240, minImg: 80 },
-  { name: "desktop", w: 1280, h: 800, mobile: false, maxRow: 260, minImg: 100 },
+  { name: "phone", w: 375, h: 812, mobile: true, maxRow: 240, minImg: 80, oneLineTitles: false },
+  // Two tablet widths, because they land on different sides of every layout
+  // switch on this site: 768 = the `md`/portrait tablet, 900 = a landscape
+  // tablet still below `lg` (1024) where the lists are one wide column.
+  // Vesa 12.9.2026: "tablet nkymä, miksi nämä ei ole keskitettyjä vaan
+  // oikealla on turhaan tyhjä tila … eikö otsikko mahtuisi yhdelle riville".
+  { name: "tablet", w: 768, h: 1024, mobile: false, maxRow: 260, minImg: 100, oneLineTitles: true },
+  { name: "tablet-wide", w: 900, h: 1180, mobile: false, maxRow: 260, minImg: 100, oneLineTitles: true },
+  { name: "desktop", w: 1280, h: 800, mobile: false, maxRow: 260, minImg: 100, oneLineTitles: true },
 ];
-const PAGES = ["/", "/fi/", "/flights/", "/hotels/", "/cars/"];
+const PAGES = ["/", "/fi/", "/de/", "/flights/", "/hotels/", "/cars/"];
 const failures = [];
 const notes = [];
 
 const browser = await chromium.launch();
 for (const v of VIEWS) {
   for (const path of PAGES) {
-    const ctx = await browser.newContext({ viewport: { width: v.w, height: v.h }, isMobile: v.mobile, locale: path.startsWith("/fi") ? "fi-FI" : "en-US", deviceScaleFactor: 1 });
-    await ctx.addInitScript(() => { try { localStorage.setItem("laplanddeals_cookie_consent", "declined"); localStorage.setItem("lv_locale_choice", location.pathname.startsWith("/fi") ? "fi" : "en"); } catch {} });
+    const ctx = await browser.newContext({ viewport: { width: v.w, height: v.h }, isMobile: v.mobile, locale: path.startsWith("/fi") ? "fi-FI" : path.startsWith("/de") ? "de-DE" : "en-US", deviceScaleFactor: 1 });
+    await ctx.addInitScript(() => { try { localStorage.setItem("laplanddeals_cookie_consent", "declined"); localStorage.setItem("lv_locale_choice", location.pathname.startsWith("/fi") ? "fi" : location.pathname.startsWith("/de") ? "de" : "en"); } catch {} });
     const page = await ctx.newPage();
     await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 60000 });
     await page.waitForTimeout(5500);
@@ -185,7 +195,44 @@ for (const v of VIEWS) {
         if (hs.size > 1) tileShape.push(`chip heights differ in "${t?.textContent.trim()}": ${[...hs].join("/")}`);
         for (const c of chips) { const sp = c.querySelector("span"); if (sp && sp.scrollWidth > sp.clientWidth + 1) tileShape.push(`chip text cut: "${sp.textContent.trim()}"`); }
       }
-      return { overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth, lists, charts, chartControls, tiles, orphans, tileShape };
+      // Section titles that must stay on one line (FitHeading sizes itself to
+      // its container). Measured as line boxes, not by comparing to a font
+      // size: a heading is one line when its height is within 1.35 line-heights.
+      const fitTitles = [...document.querySelectorAll("[data-fit-title]")].filter((h) => h.getClientRects().length > 0).map((h) => {
+        const cs = getComputedStyle(h);
+        const lh = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize) * 1.2;
+        return { text: (h.textContent || "").trim().slice(0, 44), lines: Math.round(h.getBoundingClientRect().height / lh * 10) / 10, size: Math.round(parseFloat(cs.fontSize)) };
+      });
+
+      // Segmented controls: every segment the same size, none with cut text.
+      const segGroups = [...document.querySelectorAll("[data-seg-group]")].filter((g) => g.getClientRects().length > 0).map((g) => {
+        const btns = [...g.querySelectorAll("button")];
+        return {
+          label: g.getAttribute("aria-label") || "",
+          n: btns.length,
+          widths: [...new Set(btns.map((b) => Math.round(b.getBoundingClientRect().width)))],
+          heights: [...new Set(btns.map((b) => Math.round(b.getBoundingClientRect().height)))],
+          cut: btns.filter((b) => b.scrollWidth > b.clientWidth + 1).map((b) => (b.textContent || "").trim()),
+        };
+      });
+
+      // A grid whose items leave a hole at the right edge (the fare calendar
+      // rendered 2 of 3 months into a fixed 3-column grid). Measured: the gap
+      // between the right edge of the last item in the FIRST row and the
+      // right edge of the grid, ignoring single-column layouts.
+      const gridGaps = [];
+      for (const grid of document.querySelectorAll("[data-fill-grid]")) {
+        const items = [...grid.children].filter((el) => el.getClientRects().length > 0);
+        if (items.length < 2) continue;
+        const gr = grid.getBoundingClientRect();
+        const top = Math.round(items[0].getBoundingClientRect().top);
+        const firstRow = items.filter((el) => Math.abs(Math.round(el.getBoundingClientRect().top) - top) < 4);
+        if (firstRow.length < 2) continue;
+        const right = Math.max(...firstRow.map((el) => el.getBoundingClientRect().right));
+        gridGaps.push({ id: grid.getAttribute("data-fill-grid"), gap: Math.round(gr.right - right), items: items.length, inRow: firstRow.length });
+      }
+
+      return { overflowX: document.documentElement.scrollWidth > document.documentElement.clientWidth, lists, charts, chartControls, tiles, orphans, tileShape, fitTitles, segGroups, gridGaps };
     });
     await ctx.close();
 
@@ -193,6 +240,21 @@ for (const v of VIEWS) {
     if (m.overflowX) failures.push(`${tag}: page scrolls sideways`);
     for (const o of m.orphans) failures.push(`${tag}: orphaned separator — ${o}`);
     for (const o of m.tileShape) failures.push(`${tag}: tile shape — ${o}`);
+    for (const t of m.fitTitles) {
+      notes.push(`${tag}: title "${t.text}" ${t.lines} line(s) at ${t.size} px`);
+      // A phone is allowed two lines; from 768 px up a section title fits one.
+      const maxLines = v.oneLineTitles ? 1.35 : 2.35;
+      if (t.lines > maxLines) failures.push(`${tag}: title wraps to ${t.lines} lines: "${t.text}"`);
+    }
+    for (const g of m.segGroups) {
+      if (g.widths.length > 1) failures.push(`${tag}: seg group "${g.label}" has ${g.widths.length} different widths (${g.widths.join("/")})`);
+      if (g.heights.length > 1) failures.push(`${tag}: seg group "${g.label}" has ${g.heights.length} different heights (${g.heights.join("/")})`);
+      for (const c of g.cut) failures.push(`${tag}: seg label cut: "${c}"`);
+    }
+    for (const g of m.gridGaps) {
+      notes.push(`${tag}: grid ${g.id}: ${g.inRow}/${g.items} in first row, ${g.gap} px to the right edge`);
+      if (g.gap > 24) failures.push(`${tag}: grid ${g.id} leaves ${g.gap} px empty at the right (${g.inRow} items in the row)`);
+    }
     for (const l of m.lists) {
       if (!l.rows.length) { notes.push(`${tag}: ${l.id}: no rows rendered`); continue; }
       const hs = l.rows.map((r) => r.h);

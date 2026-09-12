@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import FitHeading from './live/FitHeading';
 import Units from './live/Units';
 
 /**
@@ -17,12 +18,12 @@ export default function LiveSheet({ children, intro = true }: { children: ReactN
     <section className="sheet relative z-10 px-4 pb-14 pt-10 sm:px-6 sm:pb-20 sm:pt-14" aria-labelledby={intro ? 'live-sheet-title' : undefined}>
       <div className="mx-auto max-w-6xl">
         {intro && (
-          <div className="mb-10 sm:mb-12">
+          <div className="@container mb-10 sm:mb-12">
             <p className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
               <span aria-hidden="true" className="deal-pulse inline-block h-2 w-2 shrink-0 rounded-full bg-[#BE185D]" />
               <Units text={c.kicker} />
             </p>
-            <h2 id="live-sheet-title" className="font-heading text-4xl leading-[1.02] text-deep-night sm:text-5xl md:text-6xl">{c.h2}</h2>
+            <FitHeading id="live-sheet-title" text={c.h2} min={36} max={60} className="font-heading text-4xl leading-[1.02] text-deep-night sm:text-5xl md:text-6xl" />
             <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{c.lead}</p>
           </div>
         )}

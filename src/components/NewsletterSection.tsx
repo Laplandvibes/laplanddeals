@@ -175,37 +175,46 @@ export default function NewsletterSection() {
     }
   }
 
+  // 🔴 Verkoston uutiskirjepalkki on PINKKI (CLAUDE.md: "Newsletter:
+  // bg-gradient-to-br from-vibe-pink to-pink-600 — only non-dark section").
+  // Tämä sivusto oli 12.9.2026 asti verkoston ainoa sininen palkki, ja otsikko
+  // ajoi Bebasille keinokursiivin + font-lightin, jota yhdelläkään muulla
+  // sivustolla ei ole (Vesa: "miksi täällä on eri fontti ja tyyli kun muualla?
+  // ja miksi tässä on tällänen paska tausta?"). Gradientti on sama kuin
+  // hubissa ja jaetussa NewsletterInlinessä.
   return (
-    <section className="relative bg-finland-blue overflow-hidden" ref={sectionRef}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(236,72,153,0.18),transparent_55%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(0,0,0,0.35),transparent_60%)]" />
+    <section className="relative overflow-hidden" ref={sectionRef} style={{ background: 'linear-gradient(160deg, #DB2777 0%, #BE185D 58%, #9D174D 100%)' }}>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(70% 90% at 50% -10%, rgba(255,255,255,0.15) 0%, transparent 55%)' }} />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent)' }} />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
-          <p className="text-ivory/65 text-[11px] uppercase tracking-[0.28em] mb-5">{c.kicker}</p>
-          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-ivory mb-5 leading-[1.05]">
-            <span className="italic font-light">{c.titleItalic}</span>
+          <p className="text-white/85 text-[11px] font-bold uppercase tracking-[0.28em] mb-5">{c.kicker}</p>
+          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl tracking-wide text-white mb-5 leading-[1.05] text-balance" style={{ textShadow: '0 2px 22px rgba(74,4,38,0.6)' }}>
             {/* 🔴 <br /> ei tuota välilyöntiä tekstisisältöön: ilman tätä väliä
                 otsikon saavutettava nimi on kaksi sanaa kiinni toisissaan.
                 Ruudulla ei muutu mikään. Sama korjaus kuin
                 laplandcarrental/PageHero.tsx (7.9.2026). */}
-            {' '}
+            {c.titleItalic}{' '}
             <br />
             {c.titleRest}
           </h2>
-          <p className="text-ivory/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-white text-base sm:text-lg max-w-2xl mx-auto leading-relaxed" style={{ textShadow: '0 1px 10px rgba(74,4,38,0.45)' }}>
             {c.lead}
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-12 sm:mb-14">
+        {/* Tabletti sai neljä ~190 px saraketta, joissa teksti oli 4–5 rivissä
+            (Vesa 12.9.: "tabletissa varsinkin tosi huono"). Kaksi saraketta
+            660–1023 px:ssä, neljä vasta kun ne mahtuvat. */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-12 sm:mb-14">
           {c.benefits.map((b, i) => {
             const Icon = ICONS[i] || Tag;
             return (
-              <div key={b.title} className="rounded-lg bg-ivory/[0.06] backdrop-blur-sm border border-ivory/15 p-5">
-                <Icon className="w-5 h-5 text-ivory mb-3" />
-                <p className="font-heading text-base font-medium text-ivory mb-1">{b.title}</p>
-                <p className="text-ivory/70 text-[13px] leading-snug">{b.body}</p>
+              <div key={b.title} className="rounded-xl bg-white/10 backdrop-blur-sm border border-white/25 p-5">
+                <Icon className="w-5 h-5 text-white mb-3" />
+                <p className="font-heading text-base tracking-wide text-white mb-1">{b.title}</p>
+                <p className="text-white/85 text-[13px] leading-snug">{b.body}</p>
               </div>
             );
           })}
@@ -213,11 +222,11 @@ export default function NewsletterSection() {
 
         <div className="max-w-xl mx-auto">
           {state === 'ok' ? (
-            <div className="flex items-center gap-3 bg-ivory/10 backdrop-blur-sm border border-ivory/25 rounded-full px-6 py-4">
-              <CheckCircle className="w-6 h-6 text-ivory shrink-0" />
+            <div className="flex items-center gap-3 bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-6 py-4">
+              <CheckCircle className="w-6 h-6 text-white shrink-0" />
               <div>
-                <p className="text-ivory font-bold">{c.okTitle}</p>
-                <p className="text-ivory/75 text-sm">{c.okBody}</p>
+                <p className="text-white font-bold">{c.okTitle}</p>
+                <p className="text-white/85 text-sm">{c.okBody}</p>
               </div>
             </div>
           ) : (
@@ -247,17 +256,17 @@ export default function NewsletterSection() {
                   aria-label={c.placeholder}
                   required
                   disabled={state === 'sending'}
-                  className="flex-1 bg-ivory text-deep-night placeholder:text-deep-night/50 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-4 focus:ring-ivory/30 transition-shadow"
+                  className="flex-1 bg-white text-deep-night placeholder:text-deep-night/55 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-4 focus:ring-white/40 transition-shadow"
                 />
                 <button
                   type="submit"
                   disabled={state === 'sending'}
-                  className="bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] text-sm px-8 py-4 rounded-full transition-colors whitespace-nowrap disabled:opacity-60"
+                  className="bg-white hover:bg-snow text-[#BE185D] font-bold uppercase tracking-[0.1em] text-sm px-8 py-4 rounded-full transition-colors whitespace-nowrap disabled:opacity-60"
                 >
                   {state === 'sending' ? c.sending : c.cta}
                 </button>
               </div>
-              <label className="flex items-start gap-3 px-1 text-ivory/75 text-xs sm:text-[13px] leading-snug cursor-pointer">
+              <label className="flex items-start gap-3 px-1 text-white/90 text-xs sm:text-[13px] leading-snug cursor-pointer">
                 <input
                   type="checkbox"
                   checked={consented}
@@ -265,7 +274,7 @@ export default function NewsletterSection() {
                   onChange={(e) => setConsented(e.target.checked)}
                   required
                   disabled={state === 'sending'}
-                  className="mt-0.5 w-4 h-4 shrink-0 accent-vibe-pink cursor-pointer focus:outline-none focus:ring-2 focus:ring-ivory/40"
+                  className="mt-0.5 w-4 h-4 shrink-0 accent-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/50"
                 />
                 <span>
                   {cc.consent}{' '}
@@ -273,7 +282,7 @@ export default function NewsletterSection() {
                     href={localePath('/privacy', lang)}
                     target="_blank"
                     rel="noopener"
-                    className="underline underline-offset-2 text-ivory hover:text-vibe-pink transition-colors"
+                    className="underline underline-offset-2 text-white hover:text-white/80 transition-colors"
                   >
                     {cc.privacy}
                   </a>
@@ -284,12 +293,12 @@ export default function NewsletterSection() {
           )}
 
           {state === 'err' && (
-            <p className="text-ivory text-sm mt-3 text-center bg-flash-red/40 rounded-lg py-2 px-4">
+            <p className="text-white text-sm mt-3 text-center bg-black/25 rounded-lg py-2 px-4">
               {errMsg || c.error}
             </p>
           )}
 
-          <p className="text-ivory/65 text-xs sm:text-sm mt-4 text-center">
+          <p className="text-white/80 text-xs sm:text-sm mt-4 text-center">
             {c.fineprint}
           </p>
         </div>
