@@ -62,7 +62,7 @@ export default function Nav() {
             {/* NB: "cream" tokens are remapped to deep-night since the 2026-06-27 dark
     redesign — the nav is DARK, so the menu uses the default dark variant. */}
             <EcosystemMenu lang={lang} currentDomain="laplanddeals.com" />
-            <Link to={to('/')} className="no-underline" aria-label="LaplandDeals home">
+            <Link to={to('/')} className="no-underline inline-flex items-center min-h-11" aria-label="LaplandDeals home">
               <Logo />
             </Link>
           </div>

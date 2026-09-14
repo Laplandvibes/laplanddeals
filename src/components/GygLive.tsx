@@ -64,7 +64,7 @@ export default function GygLive({ items = 6, cmp = 'lv_laplanddeals_live' }: { i
             href={browseHref}
             target="_blank"
             rel="sponsored nofollow noopener"
-            className="hidden md:inline-flex items-center gap-1 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline"
+            className="lv-tap hidden md:inline-flex items-center gap-1 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline"
           >
             {c.browse} <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
           </a>
@@ -103,7 +103,7 @@ export default function GygLive({ items = 6, cmp = 'lv_laplanddeals_live' }: { i
           href={browseHref}
           target="_blank"
           rel="sponsored nofollow noopener"
-          className="md:hidden inline-flex items-center gap-1 mt-5 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline"
+          className="lv-tap md:hidden inline-flex items-center gap-1 mt-5 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline"
         >
           {c.browse} <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
         </a>

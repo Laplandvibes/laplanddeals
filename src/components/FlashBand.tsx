@@ -28,7 +28,7 @@ export default function FlashBand() {
           </div>
           <Link
             to={to('/hotels')}
-            className="shrink-0 inline-flex items-center gap-1.5 text-vibe-pink hover:text-ivory text-[12px] font-bold uppercase tracking-[0.14em] whitespace-nowrap no-underline"
+            className="lv-tap shrink-0 inline-flex items-center gap-1.5 text-vibe-pink hover:text-ivory text-[12px] font-bold uppercase tracking-[0.14em] whitespace-nowrap no-underline"
           >
             {c.cta}
           </Link>

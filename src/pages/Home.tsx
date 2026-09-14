@@ -215,7 +215,7 @@ export default function Home() {
             title={c.sections.pickTitle}
             lead={c.sections.pickLead}
           >
-            <Link to={to('/hotels')} className="hidden md:inline-flex items-center gap-1 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline">
+            <Link to={to('/hotels')} className="lv-tap hidden md:inline-flex items-center gap-1 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline">
               {c.sections.pickCta} <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </SectionHeader>
@@ -329,7 +329,7 @@ export default function Home() {
                         <Link
                           key={key}
                           to={to(FAQ_ROUTE[key])}
-                          className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-vibe-pink hover:text-ink transition-colors no-underline"
+                          className="lv-tap inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-vibe-pink hover:text-ink transition-colors no-underline"
                         >
                           {c.nav[key]} <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                         </Link>
