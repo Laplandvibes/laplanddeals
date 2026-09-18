@@ -7,6 +7,9 @@ import { useLang, useLocalePath, pick } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
 
+/** Sama sivu loppukauttaviivasta riippumatta: sisääntulo on `/x/`, linkki voi olla `/x` (18.9.2026). */
+const samePath = (a: string, b: string) => a.replace(/\/+$/, '') === b.replace(/\/+$/, '');
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -69,7 +72,7 @@ export default function Nav() {
 
           <div className="hidden xl:flex items-center gap-6">
             {navLinks.map((link) => {
-              const active = pathname === link.to;
+              const active = samePath(pathname, link.to);
               return (
                 <Link
                   key={link.to}
@@ -115,7 +118,7 @@ export default function Nav() {
         <div className="xl:hidden bg-cream/98 backdrop-blur-md border-t border-line">
           <div className="px-4 py-3 space-y-1">
             {navLinks.map((link) => {
-              const active = pathname === link.to;
+              const active = samePath(pathname, link.to);
               return (
                 <Link
                   key={link.to}
