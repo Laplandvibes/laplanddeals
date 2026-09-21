@@ -8,7 +8,7 @@ const nl: SectionCopy = {
     cars: 'Autoverhuur',
     packages: 'Pakketten',
     summer: 'Zomer',
-    tonightsCta: 'Aanbiedingen vannacht',
+    tonightsCta: 'Deals vanavond',
   },
   hero: {
     eyebrow: 'Last minute · Goedkope deals · Noorderlichtseizoen',
