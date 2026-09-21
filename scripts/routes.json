@@ -1,7 +1,7 @@
 [
   {
     "path": "/",
-    "fallbackTitle": "LaplandDeals: Last-Minute Deals for Finnish Lapland",
+    "fallbackTitle": "Lapland Holidays: Live Deals on Hotels, Flights and Safaris",
     "fallbackDescription": "Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers.",
     "harvestFiles": [
       "src/pages/Home.tsx"
@@ -17,17 +17,17 @@
       "related"
     ],
     "fallbackTitleByLang": {
-      "fi": "LaplandDeals: Last minute -tarjoukset Suomen Lappiin",
-      "de": "LaplandDeals: Last-Minute-Angebote für Finnisch-Lappland",
-      "ja": "LaplandDeals：フィンランド・ラップランドのお得な旅行プラン",
-      "es": "LaplandDeals: ofertas de última hora en Laponia",
-      "pt-BR": "LaplandDeals: ofertas de última hora na Lapônia",
-      "zh-CN": "LaplandDeals：芬兰拉普兰临时优惠与特价",
-      "ko": "LaplandDeals: 핀란드 라플란드 직전 예약 특가와 할인",
-      "it": "LaplandDeals: offerte last-minute per la Lapponia",
-      "sv": "LaplandDeals: sista minuten-erbjudanden till finska Lappland",
-      "fr": "LaplandDeals : offres de dernière minute en Laponie",
-      "nl": "LaplandDeals: Last-minute aanbiedingen voor Fins Lapland"
+      "fi": "Last minute -tarjoukset Suomen Lappiin",
+      "de": "Last-Minute-Angebote für Finnisch-Lappland",
+      "ja": "フィンランド・ラップランドのお得な旅行プラン",
+      "es": "Ofertas de última hora en Laponia",
+      "pt-BR": "Ofertas de última hora na Lapônia",
+      "zh-CN": "芬兰拉普兰临时优惠与特价",
+      "ko": "핀란드 라플란드 직전 예약 특가와 할인",
+      "it": "Offerte last-minute per la Lapponia",
+      "sv": "Sista minuten-erbjudanden till finska Lappland",
+      "fr": "Offres de dernière minute en Laponie",
+      "nl": "Last-minute aanbiedingen voor Fins Lapland"
     },
     "fallbackDescriptionByLang": {
       "fi": "Kumppaneiden live-tarjoukset Lapin hotelleihin, huskysafareihin, lentoihin Rovaniemelle ja autovuokrauksiin. Last-minute-hinnat, kauden lopun mökkiyöt ja kesätarjoukset.",
