@@ -77,7 +77,7 @@ export default function Nav() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors no-underline ${
+                  className={`inline-flex items-center min-h-11 whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors no-underline ${
                     active ? 'text-vibe-pink' : 'text-ink-soft hover:text-vibe-pink'
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function Nav() {
             <LangDropdown />
             <Link
               to={to('/hotels')}
-              className="inline-flex items-center text-[13px] font-bold uppercase tracking-[0.12em] bg-vibe-pink hover:bg-vibe-pink-2 text-ivory px-5 py-2.5 rounded-full transition-colors no-underline"
+              className="inline-flex items-center text-[13px] font-bold uppercase tracking-[0.12em] bg-[#DB2777] hover:bg-[#BE185D] text-white px-5 py-2.5 rounded-full transition-colors no-underline"
             >
               {c.tonightsCta}
             </Link>

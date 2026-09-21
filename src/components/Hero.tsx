@@ -43,13 +43,19 @@ export default function Hero() {
         />
       </picture>
 
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/0" />
+      {/* 🔴 Peite oli VAIN vaakasuuntainen (vasen 70 % → oikea 0 %). Tyopoydalla teksti
+          on vasemmassa palstassa ja se riitti, mutta 375 px:lla teksti levittyy koko
+          leveydelle ja oikea reuna jai kirkkaaksi. Mitattu 21.9.2026 (korttiteksti-portti):
+          hero-otsikon pinkki 1,00:1 rajan 3:1 sijaan ja 61 % pikseleista rajan alle.
+          Nyt vaakapeite vahvempi JA pystysuuntainen kerros tekstikaistan kohdalle. */}
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/82 via-black/60 to-black/25" />
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-cream" />
       <div aria-hidden="true" className="absolute inset-0 paper-grain opacity-40 mix-blend-overlay" />
 
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16">
         <div className="max-w-3xl">
-          <p className="flex items-center gap-2.5 text-ivory/80 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-6 sm:mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+          <p className="flex items-center gap-2.5 text-ivory text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-6 sm:mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             <span aria-hidden="true" className="inline-block w-2 h-2 rounded-full bg-vibe-pink deal-pulse shrink-0" />
             {eyebrow}
           </p>
@@ -69,7 +75,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <Link
               to={to('/hotels')}
-              className="group inline-flex items-center justify-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold tracking-[0.06em] px-7 py-4 rounded-full text-[13px] uppercase transition-colors no-underline"
+              className="group inline-flex items-center justify-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold tracking-[0.06em] px-7 py-4 rounded-full text-[13px] uppercase transition-colors no-underline"
             >
               {c.primary}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
