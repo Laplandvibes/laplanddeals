@@ -1,12 +1,13 @@
 {
-  "version": "20260905",
+  "version": "20260921",
   "domain": "laplanddeals.com",
   "brand": "DEALS",
   "tagline": "Last-minute deals for Finnish Lapland",
-  "generated": "2026-09-21T08:31:06.352Z",
+  "generated": "2026-09-21T11:35:29.428Z",
   "staticFallbackSeason": "summer",
   "seasons": {
     "summer": {
+      "tagline": "Last-minute deals for Finnish Lapland",
       "heroUrl": "https://laplanddeals.com/images/home-hero-summer.avif",
       "heroAlt": "Finnish Lapland, a lakeside cabin landscape",
       "heroSha": "e8c3d45d26eaa890",
@@ -45,6 +46,7 @@
       "errors": []
     },
     "winter": {
+      "tagline": "Last-minute deals for Finnish Lapland",
       "heroUrl": "https://laplanddeals.com/images/home-hero.avif",
       "heroAlt": "Finnish Lapland, a lakeside cabin landscape",
       "heroSha": "2a9178db30337b0e",
