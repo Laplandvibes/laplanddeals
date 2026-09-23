@@ -1,0 +1,326 @@
+{
+  "hotels": {
+    "route": "/hotels",
+    "line": "Live hotel and cabin rates, tonight",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/offer-rovaniemi-hotels.webp",
+        "bytes": 138674,
+        "sha256": "24291925a460e5e2b63c3beabb98b40e7fda3890f1e79daec8fb48b75cfd299b",
+        "heroSha": "bcf5e1eb9da1bb4e",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 15559,
+        "inkBox": [
+          365,
+          493,
+          835,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 54.4,
+        "centerSq": 55.6,
+        "photoRegion": 60.7,
+        "photoRegionRef": 60.7,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 473,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/offer-rovaniemi-hotels.webp",
+        "bytes": 138674,
+        "sha256": "24291925a460e5e2b63c3beabb98b40e7fda3890f1e79daec8fb48b75cfd299b",
+        "heroSha": "bcf5e1eb9da1bb4e",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 15559,
+        "inkBox": [
+          365,
+          493,
+          835,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 54.4,
+        "centerSq": 55.6,
+        "photoRegion": 60.7,
+        "photoRegionRef": 60.7,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 473,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
+  },
+  "cars": {
+    "route": "/cars",
+    "line": "Rental cars from Lapland's airports",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/offer-car-ivl.webp",
+        "bytes": 181772,
+        "sha256": "a6db1809dd717dfde99bc7dec43f957c13c310e0c46e3d8dd11e0bc413ad0bdf",
+        "heroSha": "fc88ad3d59da4245",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 15727,
+        "inkBox": [
+          358,
+          493,
+          841,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 91.4,
+        "centerSq": 111.4,
+        "photoRegion": 111.1,
+        "photoRegionRef": 111.1,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 486,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/offer-car-ivl.webp",
+        "bytes": 181772,
+        "sha256": "a6db1809dd717dfde99bc7dec43f957c13c310e0c46e3d8dd11e0bc413ad0bdf",
+        "heroSha": "fc88ad3d59da4245",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 15727,
+        "inkBox": [
+          358,
+          493,
+          841,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 91.4,
+        "centerSq": 111.4,
+        "photoRegion": 111.1,
+        "photoRegionRef": 111.1,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 486,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
+  },
+  "flights": {
+    "route": "/flights",
+    "line": "Helsinki to Lapland, live fares",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/offer-flight-hel-rvn.webp",
+        "bytes": 121791,
+        "sha256": "720157496771ee761bc6ee21ee191ffdf086c837ae03e68ef27ce66b22f6c63f",
+        "heroSha": "41a2a27fc692fdfd",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 14959,
+        "inkBox": [
+          401,
+          493,
+          799,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 87.3,
+        "centerSq": 87.9,
+        "photoRegion": 105.7,
+        "photoRegionRef": 105.7,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 401,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/offer-flight-hel-rvn.webp",
+        "bytes": 121791,
+        "sha256": "720157496771ee761bc6ee21ee191ffdf086c837ae03e68ef27ce66b22f6c63f",
+        "heroSha": "41a2a27fc692fdfd",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 14959,
+        "inkBox": [
+          401,
+          493,
+          799,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 87.3,
+        "centerSq": 87.9,
+        "photoRegion": 105.7,
+        "photoRegionRef": 105.7,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 401,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
+  },
+  "activities": {
+    "route": "/activities",
+    "line": "Husky and reindeer tours, live slots",
+    "kaudet": {
+      "summer": {
+        "hero": "/images/offer-husky-safaris.webp",
+        "bytes": 147251,
+        "sha256": "22dd28d0403b7ad7721311087edef6aa06d7bb29597d9a31edb4c8802d98a235",
+        "heroSha": "7d92a2ab68ec7d80",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 15650,
+        "inkBox": [
+          358,
+          493,
+          842,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 82.2,
+        "centerSq": 89.4,
+        "photoRegion": 98.6,
+        "photoRegionRef": 98.6,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 487,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": []
+      },
+      "winter": {
+        "hero": "/images/offer-husky-safaris.webp",
+        "bytes": 147251,
+        "sha256": "22dd28d0403b7ad7721311087edef6aa06d7bb29597d9a31edb4c8802d98a235",
+        "heroSha": "7d92a2ab68ec7d80",
+        "bandH": 168,
+        "photoPct": 73.3,
+        "ink": 15650,
+        "inkBox": [
+          358,
+          493,
+          842,
+          603
+        ],
+        "safe": true,
+        "accentP10": 5.06,
+        "accentMed": 5.06,
+        "whiteP10": 17.08,
+        "whiteMed": 17.08,
+        "mean": 82.2,
+        "centerSq": 89.4,
+        "photoRegion": 98.6,
+        "photoRegionRef": 98.6,
+        "overlayPixels": 0,
+        "maxDiff": 0,
+        "fit": {
+          "size": 74,
+          "lines": 1,
+          "ts": 30,
+          "tagW": 487,
+          "fits": true,
+          "bandH": 168
+        },
+        "contrastOk": true,
+        "zeroOverlay": true,
+        "errors": [],
+        "samaKuinKesa": true
+      }
+    }
+  }
+}

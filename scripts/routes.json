@@ -89,7 +89,12 @@
         "by": "id",
         "mode": "localeMap"
       }
-    ]
+    ],
+    "ogImage": "/og/hotels.jpg",
+    "ogCard": {
+      "hero": "/images/offer-rovaniemi-hotels.webp",
+      "line": "Live hotel and cabin rates, tonight"
+    }
   },
   {
     "path": "/cars",
@@ -113,7 +118,12 @@
         "by": "id",
         "mode": "localeMap"
       }
-    ]
+    ],
+    "ogImage": "/og/cars.jpg",
+    "ogCard": {
+      "hero": "/images/offer-car-ivl.webp",
+      "line": "Rental cars from Lapland's airports"
+    }
   },
   {
     "path": "/flights",
@@ -143,7 +153,12 @@
         "by": "id",
         "mode": "localeMap"
       }
-    ]
+    ],
+    "ogImage": "/og/flights.jpg",
+    "ogCard": {
+      "hero": "/images/offer-flight-hel-rvn.webp",
+      "line": "Helsinki to Lapland, live fares"
+    }
   },
   {
     "path": "/activities",
@@ -191,7 +206,12 @@
         "by": "id",
         "mode": "localeMap"
       }
-    ]
+    ],
+    "ogImage": "/og/activities.jpg",
+    "ogCard": {
+      "hero": "/images/offer-husky-safaris.webp",
+      "line": "Husky and reindeer tours, live slots"
+    }
   },
   {
     "path": "/packages",
