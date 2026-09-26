@@ -285,6 +285,11 @@ const ja: SectionCopy = {
       "lead": "料金と空き状況はGetYourGuideから直接取得しています。ほとんどのツアーは24時間前まで無料でキャンセルできます。",
       "browse": "ラップランドのツアーをGetYourGuideで見る"
     },
+    "topViewed": {
+      "eyebrow": "LaplandVibesの読者 · {date}時点",
+      "title": "読者によく見られているツアー",
+      "lead": "LaplandVibesの各サイトで、過去{days}日間に読者が最も多くクリックしたGetYourGuideのツアーです。選定は当サイト独自のクリック集計に基づいています。料金、口コミ、空き日程はGetYourGuideから直接表示しています。"
+    },
     "tonight": {
       "eyebrow": "今夜",
       "title": "今夜の宿を探す",

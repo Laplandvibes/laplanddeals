@@ -285,6 +285,11 @@ const de: SectionCopy = {
       "lead": "Preise und freie Plätze kommen direkt von GetYourGuide. Die meisten Touren lassen sich bis 24 Stunden vorher stornieren.",
       "browse": "Alle Lappland-Touren auf GetYourGuide"
     },
+    "topViewed": {
+      "eyebrow": "LaplandVibes-Leser · Stand {date}",
+      "title": "Die meistgeklickten Touren unserer Leser",
+      "lead": "Diese GetYourGuide-Touren haben Leser der LaplandVibes-Seiten in den letzten {days} Tagen am häufigsten angeklickt. Die Auswahl beruht auf unserer eigenen Klickzählung. Preise, Bewertungen und freie Termine kommen direkt von GetYourGuide."
+    },
     "tonight": {
       "eyebrow": "Heute Nacht",
       "title": "Ein Bett für heute Nacht in",

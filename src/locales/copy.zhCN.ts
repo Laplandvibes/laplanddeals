@@ -285,6 +285,11 @@ const zhCN: SectionCopy = {
       "lead": "价格和空位直接来自GetYourGuide。大多数行程可在出发前24小时免费取消。",
       "browse": "在GetYourGuide查看全部拉普兰行程"
     },
+    "topViewed": {
+      "eyebrow": "LaplandVibes读者 · 截至{date}",
+      "title": "读者浏览最多的行程",
+      "lead": "这些是过去{days}天里LaplandVibes各网站读者点击最多的GetYourGuide行程。入选依据是我们自己的点击统计。价格、评价和可订日期直接来自GetYourGuide。"
+    },
     "tonight": {
       "eyebrow": "今晚",
       "title": "今晚住在",

@@ -11,6 +11,8 @@ import LiveFlights from '../components/LiveFlights';
 import LiveCabins from '../components/LiveCabins';
 import LiveCars from '../components/LiveCars';
 import GygLive from '../components/GygLive';
+import TopActivities from '../components/TopActivities';
+import { topViewedIds } from '../lib/topViewed';
 import TonightStrip from '../components/TonightStrip';
 import FareCalendar from '../components/FareCalendar';
 import LiveSheet from '../components/LiveSheet';
@@ -207,6 +209,9 @@ export default function Home() {
           myymätön "ad spot available" ei saa olla diilisivun ensimmäinen asia. ── */}
       <MainPartnerBanner config={AD_SLOTS} locale={lang} />
 
+      {/* ── Readers' most-viewed GYG tours, our own click log (26.9.2026). ── */}
+      <TopActivities />
+
       {/* ── Editor's picks ─────────────────────────────────────────── */}
       <section className="relative py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -242,7 +247,7 @@ export default function Home() {
       </section>
 
       {/* ── LIVE: GetYourGuide widget, Lapland region ── */}
-      <GygLive />
+      <GygLive excludedTourIds={topViewedIds()} />
 
       {/* ── Summer (April–August only) ─────────────────────────────── */}
       {summerOn && (

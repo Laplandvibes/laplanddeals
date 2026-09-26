@@ -285,6 +285,11 @@ const fr: SectionCopy = {
       "lead": "Les prix et les places libres viennent directement de GetYourGuide. La plupart des excursions sont annulables jusqu’à 24 heures avant.",
       "browse": "Toutes les excursions en Laponie sur GetYourGuide"
     },
+    "topViewed": {
+      "eyebrow": "Lecteurs de LaplandVibes · au {date}",
+      "title": "Les excursions les plus consultées par nos lecteurs",
+      "lead": "Voici les excursions GetYourGuide que les lecteurs des sites LaplandVibes ont le plus consultées ces {days} derniers jours. La sélection repose sur notre propre comptage de clics. Les prix, les avis et les dates disponibles viennent directement de GetYourGuide."
+    },
     "tonight": {
       "eyebrow": "Ce soir",
       "title": "Un lit ce soir à",

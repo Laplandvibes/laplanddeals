@@ -285,6 +285,11 @@ const es: SectionCopy = {
       "lead": "Los precios y las plazas libres vienen directamente de GetYourGuide. La mayoría de los tours se pueden cancelar hasta 24 horas antes.",
       "browse": "Todos los tours de Laponia en GetYourGuide"
     },
+    "topViewed": {
+      "eyebrow": "Lectores de LaplandVibes · datos al {date}",
+      "title": "Los tours más vistos por nuestros lectores",
+      "lead": "Estos son los tours de GetYourGuide que los lectores de los sitios de LaplandVibes abrieron con más frecuencia en los últimos {days} días. La selección se basa en nuestro propio recuento de clics. Los precios, las opiniones y las fechas libres vienen directamente de GetYourGuide."
+    },
     "tonight": {
       "eyebrow": "Esta noche",
       "title": "Una cama esta noche en",

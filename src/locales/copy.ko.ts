@@ -285,6 +285,11 @@ const ko: SectionCopy = {
       "lead": "가격과 남은 자리는 GetYourGuide에서 바로 가져옵니다. 대부분의 투어는 24시간 전까지 취소할 수 있습니다.",
       "browse": "GetYourGuide에서 라플란드 투어 모두 보기"
     },
+    "topViewed": {
+      "eyebrow": "LaplandVibes 독자 · {date} 기준",
+      "title": "독자들이 가장 많이 본 투어",
+      "lead": "지난 {days}일 동안 LaplandVibes 사이트 독자들이 가장 많이 클릭한 GetYourGuide 투어입니다. 선정 기준은 자체 클릭 집계입니다. 가격, 후기, 예약 가능한 날짜는 GetYourGuide에서 바로 가져옵니다."
+    },
     "tonight": {
       "eyebrow": "오늘 밤",
       "title": "오늘 밤 묵을 곳",

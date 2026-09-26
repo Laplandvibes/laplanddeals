@@ -285,6 +285,11 @@ const ptBR: SectionCopy = {
       "lead": "Preços e vagas vêm direto do GetYourGuide. A maioria dos passeios pode ser cancelada até 24 horas antes.",
       "browse": "Todos os passeios da Lapônia no GetYourGuide"
     },
+    "topViewed": {
+      "eyebrow": "Leitores do LaplandVibes · dados de {date}",
+      "title": "Os passeios mais vistos pelos nossos leitores",
+      "lead": "Estes são os passeios do GetYourGuide que os leitores dos sites LaplandVibes mais abriram nos últimos {days} dias. A seleção se baseia na nossa própria contagem de cliques. Preços, avaliações e datas livres vêm direto do GetYourGuide."
+    },
     "tonight": {
       "eyebrow": "Hoje à noite",
       "title": "Uma cama para hoje à noite em",

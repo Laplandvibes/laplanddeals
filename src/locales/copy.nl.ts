@@ -285,6 +285,11 @@ const nl: SectionCopy = {
       "lead": "Prijzen en vrije plaatsen komen rechtstreeks van GetYourGuide. De meeste tours zijn tot 24 uur van tevoren te annuleren.",
       "browse": "Alle Lapland-tours op GetYourGuide"
     },
+    "topViewed": {
+      "eyebrow": "LaplandVibes-lezers · stand {date}",
+      "title": "De meest bekeken tours van onze lezers",
+      "lead": "Dit zijn de GetYourGuide-tours die lezers van de LaplandVibes-sites de afgelopen {days} dagen het vaakst hebben aangeklikt. De selectie is gebaseerd op onze eigen kliktelling. Prijzen, beoordelingen en vrije data komen rechtstreeks van GetYourGuide."
+    },
     "tonight": {
       "eyebrow": "Vannacht",
       "title": "Een bed voor vannacht in",

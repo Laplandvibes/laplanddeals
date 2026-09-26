@@ -285,6 +285,11 @@ const en: SectionCopy = {
       "lead": "Prices and free slots come straight from GetYourGuide. Most tours can be cancelled up to 24 hours before.",
       "browse": "All Lapland tours on GetYourGuide"
     },
+    "topViewed": {
+      "eyebrow": "LaplandVibes readers · as of {date}",
+      "title": "Our readers’ most-viewed tours",
+      "lead": "These are the GetYourGuide tours that readers across the LaplandVibes sites clicked through to most in the last {days} days. The selection comes from our own click count. Prices, reviews and free dates come straight from GetYourGuide."
+    },
     "tonight": {
       "eyebrow": "Tonight",
       "title": "A bed tonight in",

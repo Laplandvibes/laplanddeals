@@ -285,6 +285,11 @@ const fi: SectionCopy = {
       "lead": "Hinnat ja vapaat paikat tulevat suoraan GetYourGuidesta. Useimmat retket voi perua 24 tuntia ennen lähtöä.",
       "browse": "Kaikki Lapin retket GetYourGuidessa"
     },
+    "topViewed": {
+      "eyebrow": "LaplandVibes-lukijat · tilanne {date}",
+      "title": "Lukijoiden katsotuimmat retket",
+      "lead": "Näitä GetYourGuiden retkiä LaplandVibes-sivustojen lukijat ovat käyneet katsomassa eniten viimeisen {days} päivän aikana. Valinta perustuu omaan klikkitilastoomme. Hinnat, arviot ja vapaat päivät tulevat suoraan GetYourGuidesta."
+    },
     "tonight": {
       "eyebrow": "Tänä yönä",
       "title": "Yöpaikka tälle yölle",

@@ -49,6 +49,8 @@ export type SectionCopy = {
     cabins: { eyebrow: string; title: string; lead: string; weekFrom: string; guests: string; lastMinute: string; lastMinuteLead: string; view: string; updated: string; perWeek: string; bedrooms: string; starsLabel: string };
     cars: { eyebrow: string; title: string; lead: string; window: string; total: string; operator: string; orSimilar: string; auto: string; manual: string; cta: string; classNames: string[]; colAutoFirst: string; airport: string; seats: string; days: string };
     activities: { eyebrow: string; title: string; lead: string; browse: string };
+    /** Readers' most-viewed GYG tours (26.9.2026). `{date}` read date, `{days}` window. Say "viewed", never "booked". */
+    topViewed: { eyebrow: string; title: string; lead: string };
     /** places: Levi, Rovaniemi, Saariselkä, Ylläs, Ruka, Inari — CJK locales transliterate. */
     tonight: { eyebrow: string; title: string; lead: string; places: string[] };
     /** The paper sheet that carries every live section (11.9.2026, ported from hoteldeals). */

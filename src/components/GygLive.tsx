@@ -25,11 +25,31 @@ const GYG_LOCALE: Record<Lang, string> = {
   'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL', sv: 'sv-SE',
 };
 
-export default function GygLive({ items = 6, cmp = 'lv_laplanddeals_live' }: { items?: number; cmp?: string }) {
+type WidgetProps = {
+  cmp: string;
+  /** Lapland listing mode: GYG's own pick for the location. */
+  locationId?: string;
+  items?: number;
+  /** Fixed-list mode. 🔴 number-of-items is always set to the id count: without it GYG pads the
+   *  list with tours of its own choosing (measured 26.9.2026). The widget ignores the id order. */
+  tourIds?: readonly number[];
+  /** Tours shown elsewhere on the same page, so the two widgets never repeat a card. */
+  excludedTourIds?: readonly number[];
+  /** Text shown with the plain CTA when an ad blocker keeps the iframe from mounting. */
+  fallbackText: string;
+  browseHref: string;
+  browseLabel: string;
+};
+
+/**
+ * The widget box itself, shared by GygLive and TopActivities: the data attributes the Integration
+ * Analyzer turns into an iframe, plus the ad-block fallback.
+ */
+export function GygWidget({ cmp, locationId, items = 6, tourIds, excludedTourIds, fallbackText, browseHref, browseLabel }: WidgetProps) {
   const lang = useLang();
-  const c = COPY[lang].live.activities;
   const boxRef = useRef<HTMLDivElement>(null);
   const [blocked, setBlocked] = useState(false);
+  const ids = tourIds?.join(',');
 
   useEffect(() => {
     // No synchronous reset here (react-hooks/set-state-in-effect): the first
@@ -47,18 +67,56 @@ export default function GygLive({ items = 6, cmp = 'lv_laplanddeals_live' }: { i
       }, delay);
     const t = tick(FIRST);
     return () => { cancelled = true; clearTimeout(t); };
-  }, [lang]);
-
-  const browseHref = gygLocalizeHref(GYG_CATEGORIES.all, lang);
+  }, [lang, ids]);
 
   return (
-    <section className="relative bg-cream-2 border-y border-line py-16 sm:py-20" aria-labelledby="live-activities-title">
+    <>
+      <div
+        ref={boxRef}
+        className={blocked ? 'h-0 overflow-hidden' : 'min-h-[120px]'}
+        key={`gyg-${lang}-${ids ?? locationId}`}
+        data-gyg-widget="activities"
+        data-gyg-partner-id={GYG_PARTNER_ID}
+        data-gyg-locale-code={GYG_LOCALE[lang]}
+        data-gyg-cmp={cmp}
+        {...(tourIds
+          ? { 'data-gyg-tour-ids': ids, 'data-gyg-number-of-items': String(tourIds.length) }
+          : { 'data-gyg-location-id': locationId, 'data-gyg-number-of-items': String(items) })}
+        {...(excludedTourIds?.length ? { 'data-gyg-excluded-tour-ids': excludedTourIds.join(',') } : {})}
+      />
+
+      {blocked && (
+        <div className="flex flex-col items-center text-center rounded-2xl border border-line bg-cream px-6 py-8">
+          <span className="grid place-items-center w-12 h-12 rounded-full bg-vibe-pink/15 border border-vibe-pink/40 text-vibe-pink mb-4">
+            <Compass className="w-6 h-6" strokeWidth={2} aria-hidden="true" />
+          </span>
+          <p className="text-ink-soft text-sm leading-relaxed max-w-md mb-5">{fallbackText}</p>
+          <a
+            href={browseHref}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            className="inline-flex items-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] px-6 py-3.5 rounded-full text-[13px] transition-colors no-underline"
+          >
+            {browseLabel} <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
+          </a>
+        </div>
+      )}
+    </>
+  );
+}
+
+/** Section frame shared by the two GYG sections: eyebrow, title, lead, browse link. */
+export function GygSection({ id, eyebrow, title, lead, browseHref, browseLabel, className, children }: {
+  id: string; eyebrow: string; title: string; lead: string; browseHref: string; browseLabel: string; className: string; children: React.ReactNode;
+}) {
+  return (
+    <section className={`relative py-16 sm:py-20 ${className}`} aria-labelledby={id}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8 md:mb-10">
           <div className="max-w-2xl">
-            <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">{c.eyebrow}</p>
-            <h2 id="live-activities-title" className="font-heading text-3xl sm:text-5xl leading-[1.05] text-ink">{c.title}</h2>
-            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed max-w-xl">{c.lead}</p>
+            <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">{eyebrow}</p>
+            <h2 id={id} className="font-heading text-3xl sm:text-5xl leading-[1.05] text-ink">{title}</h2>
+            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed max-w-xl">{lead}</p>
           </div>
           <a
             href={browseHref}
@@ -66,38 +124,11 @@ export default function GygLive({ items = 6, cmp = 'lv_laplanddeals_live' }: { i
             rel="sponsored nofollow noopener"
             className="lv-tap hidden md:inline-flex items-center gap-1 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline"
           >
-            {c.browse} <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+            {browseLabel} <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
           </a>
         </div>
 
-        <div
-          ref={boxRef}
-          className={blocked ? 'h-0 overflow-hidden' : 'min-h-[120px]'}
-          key={`gyg-${lang}`}
-          data-gyg-widget="activities"
-          data-gyg-partner-id={GYG_PARTNER_ID}
-          data-gyg-locale-code={GYG_LOCALE[lang]}
-          data-gyg-cmp={cmp}
-          data-gyg-location-id={LAPLAND_LOCATION_ID}
-          data-gyg-number-of-items={String(items)}
-        />
-
-        {blocked && (
-          <div className="flex flex-col items-center text-center rounded-2xl border border-line bg-cream px-6 py-8">
-            <span className="grid place-items-center w-12 h-12 rounded-full bg-vibe-pink/15 border border-vibe-pink/40 text-vibe-pink mb-4">
-              <Compass className="w-6 h-6" strokeWidth={2} aria-hidden="true" />
-            </span>
-            <p className="text-ink-soft text-sm leading-relaxed max-w-md mb-5">{c.lead}</p>
-            <a
-              href={browseHref}
-              target="_blank"
-              rel="sponsored nofollow noopener"
-              className="inline-flex items-center gap-2 bg-vibe-pink hover:bg-vibe-pink-2 text-ivory font-bold uppercase tracking-[0.1em] px-6 py-3.5 rounded-full text-[13px] transition-colors no-underline"
-            >
-              {c.browse} <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
-            </a>
-          </div>
-        )}
+        {children}
 
         <a
           href={browseHref}
@@ -105,9 +136,29 @@ export default function GygLive({ items = 6, cmp = 'lv_laplanddeals_live' }: { i
           rel="sponsored nofollow noopener"
           className="lv-tap md:hidden inline-flex items-center gap-1 mt-5 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline"
         >
-          {c.browse} <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+          {browseLabel} <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
         </a>
       </div>
     </section>
+  );
+}
+
+export default function GygLive({ items = 6, cmp = 'lv_laplanddeals_live', excludedTourIds }: { items?: number; cmp?: string; excludedTourIds?: readonly number[] }) {
+  const lang = useLang();
+  const c = COPY[lang].live.activities;
+  const browseHref = gygLocalizeHref(GYG_CATEGORIES.all, lang);
+
+  return (
+    <GygSection id="live-activities-title" eyebrow={c.eyebrow} title={c.title} lead={c.lead} browseHref={browseHref} browseLabel={c.browse} className="bg-cream-2 border-y border-line">
+      <GygWidget
+        cmp={cmp}
+        locationId={LAPLAND_LOCATION_ID}
+        items={items}
+        excludedTourIds={excludedTourIds}
+        fallbackText={c.lead}
+        browseHref={browseHref}
+        browseLabel={c.browse}
+      />
+    </GygSection>
   );
 }

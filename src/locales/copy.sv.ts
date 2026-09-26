@@ -289,6 +289,11 @@ const sv: SectionCopy = {
       "lead": "Priser och lediga platser kommer direkt från GetYourGuide. De flesta turer kan avbokas upp till 24 timmar innan.",
       "browse": "Alla turer i Lappland på GetYourGuide"
     },
+    "topViewed": {
+      "eyebrow": "LaplandVibes läsare · per {date}",
+      "title": "Turerna våra läsare tittar mest på",
+      "lead": "Det här är de GetYourGuide-turer som läsarna på LaplandVibes-sajterna har klickat på mest de senaste {days} dagarna. Urvalet bygger på vår egen klickräkning. Priser, omdömen och lediga datum kommer direkt från GetYourGuide."
+    },
     "tonight": {
       "eyebrow": "I natt",
       "title": "Ett rum i natt i",
