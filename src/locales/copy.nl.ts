@@ -26,17 +26,11 @@ const nl: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: 'Eigen prijs van de partner',
-    leadRest:
-      ' · één klik opent de partnerpagina met het actuele tarief. We verzinnen nooit percentages en gebruiken geen valse afteltimers.',
-    cta: 'Hotels vannacht →',
-  },
   sections: {
     pickEyebrow: 'Keuze van de redactie',
     pickTitle: 'Met zorg geselecteerd voor het komende seizoen.',
     pickLead:
-      "Plekken die u aan een vriend zou aanraden. Elke kaart linkt naar het partnertarief van vandaag.",
+      "Plekken die u aan een vriend zou aanraden.",
     pickCta: 'Alle hotels',
 
     categoriesEyebrow: 'Blader op categorie',
@@ -65,7 +59,7 @@ const nl: SectionCopy = {
     { label: 'Zomer', hint: 'Middernachtzon · Wandelen · Hutten aan het meer' },
   ],
   card: {
-    livePrices: 'Live prijzen',
+    livePrices: 'Boeken via',
     seeDeals: 'Bekijk aanbiedingen',
     browse: 'Bekijken',
     flags: {
@@ -230,9 +224,9 @@ const nl: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "Live tarieven · Travelpayouts",
+      "eyebrow": "Vluchten vanaf Helsinki",
       "title": "De goedkoopste vluchten naar Lapland op dit moment",
-      "lead": "Het laagste tarief in de Travelpayouts-cache voor elke luchthaven in Lapland vanaf Helsinki, plus het goedkoopste vertrek binnen de komende 14 dagen. Elke rij opent precies dat tarief.",
+      "lead": "Het laagste tarief naar elke luchthaven in Lapland en het goedkoopste vertrek binnen de komende 14 dagen. Elke rij opent precies dat tarief.",
       "soon": "Komende 14 dagen",
       "anyDate": "Goedkoopste datum",
       "oneWay": "enkele reis",
@@ -242,9 +236,9 @@ const nl: SectionCopy = {
       "all": "Alle vluchtaanbiedingen"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · feed dagelijks ververst",
-      "title": "De goedkoopste Lapland-hutten deze week",
-      "lead": "Echte hutten uit de productfeed van Lomarengas, gesorteerd op weekprijs. Foto’s en prijzen zijn van de verhuurder zelf.",
+      "eyebrow": "Lomarengas · dagelijks bijgewerkt",
+      "title": "De goedkoopste hutten in Lapland",
+      "lead": "Hutten in Lapland gesorteerd op weekprijs, de goedkoopste eerst. Open een hut om de vrije data te zien en te boeken bij Lomarengas.",
       "weekFrom": "week vanaf",
       "guests": "pers.",
       "lastMinute": "Last-minute hutten in Lapland",
@@ -258,7 +252,7 @@ const nl: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · gecontroleerd op {date}",
       "title": "Huurauto op de luchthaven, echte totaalprijzen",
-      "lead": "Totaalprijzen uit de live vergelijking voor 4 huurdagen, inclusief belastingen. Elke rij opent dezelfde zoekopdracht met dezelfde data.",
+      "lead": "Totaalprijs voor 4 huurdagen, inclusief belastingen, op de luchthaven van Rovaniemi, Kittilä of Ivalo. Elke rij opent dezelfde zoekopdracht met dezelfde data.",
       "window": "Ophalen {from}, inleveren {to}",
       "total": "Totaal 4 dagen",
       "operator": "Verhuurder",
@@ -304,9 +298,9 @@ const nl: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "Live · leestijd op elke rij",
+      "kicker": "Vluchten · Hotels · Hutten · Huurauto’s",
       "h2": "Lapland vandaag",
-      "lead": "Elke rij op dit blad is de prijs van de partner zelf, met het moment waarop die is gelezen. Niets hier is een schatting.",
+      "lead": "Alles voor uw reis naar Lapland op één pagina: de goedkoopste vluchten vanaf Helsinki, een bed voor vannacht, hutten op weekprijs en een huurauto op de luchthaven. Elke rij opent precies dat aanbod.",
       "note": "Prijzen worden gelezen uit feeds en pagina’s van partners en veranderen zonder bericht; de partnerpagina heeft het laatste woord. Foto’s: Lomarengas. Tarieven en luchtvaartlogo’s: Travelpayouts. Totaalprijzen huurauto: EconomyBookings."
     },
     "list": {

@@ -38,11 +38,6 @@ export type SectionCopy = {
     secondaryTo?: string;
     secondaryToSummer?: string;
   };
-  flashBand: {
-    leadBold: string;
-    leadRest: string;
-    cta: string;
-  };
   /** Live sections (2026-09-10). {time}/{date}/{from}/{to} are runtime placeholders. */
   live: {
     flights: { eyebrow: string; title: string; lead: string; soon: string; anyDate: string; oneWay: string; roundTrip: string; from: string; checked: string; all: string };

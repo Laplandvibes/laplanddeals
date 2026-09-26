@@ -30,17 +30,11 @@ const sv: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: 'Partnerns eget pris',
-    leadRest:
-      ' · ett klick öppnar partnersidan med deras aktuella pris. Vi hittar aldrig på rabattprocent och kör inga falska nedräkningar.',
-    cta: 'Kvällens hotell →',
-  },
   sections: {
     pickEyebrow: 'Redaktionens val',
     pickTitle: 'Lugnt utvald för säsongen som kommer.',
     pickLead:
-      'Ställen värda att tipsa en vän om. Varje kort länkar till partnerns aktuella pris just nu.',
+      'Ställen värda att tipsa en vän om.',
     pickCta: 'Alla hotell',
 
     categoriesEyebrow: 'Bläddra efter kategori',
@@ -69,7 +63,7 @@ const sv: SectionCopy = {
     { label: 'Sommar', hint: 'Midnattssol · Vandring · Stugor vid sjön' },
   ],
   card: {
-    livePrices: 'Priser i realtid',
+    livePrices: 'Boka via',
     seeDeals: 'Se erbjudanden',
     browse: 'Bläddra',
     flags: {
@@ -234,9 +228,9 @@ const sv: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "Priser i realtid · Travelpayouts",
+      "eyebrow": "Flyg från Helsingfors",
       "title": "Billigaste flygen till Lappland just nu",
-      "lead": "Det lägsta priset i Travelpayouts cache för varje flygplats i Lappland från Helsingfors, plus den billigaste avgången inom de närmaste 14 dagarna. Varje rad öppnar exakt det priset.",
+      "lead": "Det lägsta priset till varje flygplats i Lappland och den billigaste avgången inom de närmaste 14 dagarna. Varje rad öppnar exakt det priset.",
       "soon": "Närmaste 14 dagarna",
       "anyDate": "Billigaste datum",
       "oneWay": "enkel resa",
@@ -246,9 +240,9 @@ const sv: SectionCopy = {
       "all": "Alla flygerbjudanden"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · flödet uppdateras dagligen",
-      "title": "Veckans billigaste stugor i Lappland",
-      "lead": "Riktiga stugor från Lomarengas produktflöde, sorterade efter veckopris. Bilder och priser är uthyrarens egna.",
+      "eyebrow": "Lomarengas · uppdateras varje dag",
+      "title": "De billigaste stugorna i Lappland",
+      "lead": "Stugor i Lappland sorterade efter veckopris, billigast först. Öppna en stuga för att se lediga datum och boka den hos Lomarengas.",
       "weekFrom": "vecka från",
       "guests": "pers.",
       "lastMinute": "Sista minuten-stugor i Lappland",
@@ -262,7 +256,7 @@ const sv: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · kontrollerat {date}",
       "title": "Hyrbil på flygplatsen, riktiga totalpriser",
-      "lead": "Totalpriser hämtade från jämförelsen i realtid för 4 hyrdagar, skatter inkluderade. Varje rad öppnar samma sökning med samma datum.",
+      "lead": "Totalpris för 4 hyrdagar, skatter inkluderade, på flygplatsen i Rovaniemi, Kittilä eller Ivalo. Varje rad öppnar samma sökning med samma datum.",
       "window": "Upphämtning {from}, återlämning {to}",
       "total": "Totalt 4 dagar",
       "operator": "Uthyrare",
@@ -308,9 +302,9 @@ const sv: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "Live · lästid på varje rad",
+      "kicker": "Flyg · Hotell · Stugor · Hyrbilar",
       "h2": "Lappland i dag",
-      "lead": "Varje rad på det här arket är partnerns eget pris, med tidpunkten då det lästes. Inget här är en uppskattning.",
+      "lead": "Allt för resan till Lappland på en sida: de billigaste flygen från Helsingfors, en säng för i natt, stugor efter veckopris och hyrbil på flygplatsen. Varje rad öppnar just det erbjudandet.",
       "note": "Priserna läses från partnernas flöden och sidor och ändras utan förvarning; partnerns sida har sista ordet. Bilder: Lomarengas. Flygpriser och flygbolagens märken: Travelpayouts. Hyrbilstotaler: EconomyBookings."
     },
     "list": {

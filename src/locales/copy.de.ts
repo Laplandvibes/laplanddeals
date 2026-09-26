@@ -26,17 +26,11 @@ const de: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: 'Live-Partnerpreise',
-    leadRest:
-      ' · bei jedem Klick aktualisiert. Wir erfinden keine Prozente, der Partner zeigt den heutigen Preis.',
-    cta: 'Hotels heute Abend →',
-  },
   sections: {
     pickEyebrow: 'Redaktionsempfehlung',
     pickTitle: 'In Ruhe ausgewählt für die kommende Saison.',
     pickLead:
-      'Orte, die Sie auch einem Freund empfehlen würden. Jede Karte führt zum heutigen Live-Preis des Partners.',
+      'Orte, die Sie auch einem Freund empfehlen würden.',
     pickCta: 'Alle Hotels',
 
     categoriesEyebrow: 'Nach Kategorie',
@@ -65,7 +59,7 @@ const de: SectionCopy = {
     { label: 'Sommer', hint: 'Mitternachtssonne · Wandern · Seehütten' },
   ],
   card: {
-    livePrices: 'Live-Preise',
+    livePrices: 'Buchung über',
     seeDeals: 'Angebote ansehen',
     browse: 'Ansehen',
     flags: {
@@ -230,9 +224,9 @@ const de: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "Live-Preise · Travelpayouts",
+      "eyebrow": "Flüge ab Helsinki",
       "title": "Die günstigsten Flüge nach Lappland, jetzt",
-      "lead": "Der niedrigste Preis im Travelpayouts-Cache für jeden Lappland-Flughafen ab Helsinki, dazu der günstigste Abflug innerhalb der nächsten 14 Tage. Jede Zeile öffnet genau diesen Tarif.",
+      "lead": "Der günstigste Flug zu jedem Flughafen in Lappland und der günstigste Abflug in den nächsten 14 Tagen. Jede Zeile öffnet genau diesen Tarif.",
       "soon": "Nächste 14 Tage",
       "anyDate": "Günstigster Termin",
       "oneWay": "einfacher Flug",
@@ -242,9 +236,9 @@ const de: SectionCopy = {
       "all": "Alle Flugangebote"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · Feed täglich aktualisiert",
-      "title": "Die günstigsten Hütten in Lappland diese Woche",
-      "lead": "Echte Hütten aus dem Lomarengas-Produktfeed, nach Wochenpreis sortiert. Fotos und Preise stammen vom Anbieter.",
+      "eyebrow": "Lomarengas · täglich aktualisiert",
+      "title": "Die günstigsten Hütten in Lappland",
+      "lead": "Hütten in Lappland nach Wochenpreis, die günstigste zuerst. Öffnen Sie eine Hütte, um freie Termine zu sehen und bei Lomarengas zu buchen.",
       "weekFrom": "Woche ab",
       "guests": "Pers.",
       "lastMinute": "Last-Minute-Hütten in Lappland",
@@ -258,7 +252,7 @@ const de: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · geprüft {date}",
       "title": "Mietwagen am Flughafen, echte Gesamtpreise",
-      "lead": "Gesamtpreise aus dem Live-Vergleich für 4 Miettage inklusive Steuern. Jede Zeile öffnet dieselbe Suche mit denselben Daten.",
+      "lead": "Gesamtpreis für 4 Miettage inklusive Steuern am Flughafen Rovaniemi, Kittilä oder Ivalo. Jede Zeile öffnet dieselbe Suche mit denselben Daten.",
       "window": "Abholung {from}, Rückgabe {to}",
       "total": "Gesamt 4 Tage",
       "operator": "Vermieter",
@@ -304,9 +298,9 @@ const de: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "Live · Lesezeit in jeder Zeile",
+      "kicker": "Flüge · Hotels · Hütten · Mietwagen",
       "h2": "Lappland heute",
-      "lead": "Jede Zeile auf diesem Blatt ist der Preis des Partners selbst, mit dem Moment, in dem er gelesen wurde. Nichts hier ist eine Schätzung.",
+      "lead": "Alles für die Lappland-Reise auf einer Seite: die günstigsten Flüge ab Helsinki, ein Bett für heute Nacht, Hütten nach Wochenpreis und ein Mietwagen am Flughafen. Jede Zeile öffnet genau dieses Angebot.",
       "note": "Preise werden aus Partner-Feeds und -Seiten gelesen und ändern sich ohne Ankündigung; die Partnerseite hat das letzte Wort. Fotos: Lomarengas. Flugpreise und Airline-Marken: Travelpayouts. Mietwagen-Gesamtpreise: EconomyBookings."
     },
     "list": {

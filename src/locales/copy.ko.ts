@@ -26,17 +26,11 @@ const ko: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: '파트너 실시간 가격',
-    leadRest:
-      ' · 클릭할 때마다 새로 불러옵니다. 할인율을 임의로 만들어내지 않습니다. 파트너가 표시하는 오늘의 요금입니다.',
-    cta: '오늘 밤 호텔 →',
-  },
   sections: {
     pickEyebrow: '에디터 추천',
     pickTitle: '다가오는 시즌을 위해 조용히 큐레이션했습니다.',
     pickLead:
-      '친구에게 추천할 만한 곳들. 각 카드는 오늘의 파트너 실시간 가격으로 연결됩니다.',
+      '친구에게 추천할 만한 곳들.',
     pickCta: '모든 호텔',
 
     categoriesEyebrow: '카테고리별로 둘러보기',
@@ -65,7 +59,7 @@ const ko: SectionCopy = {
     { label: '여름', hint: '백야 · 하이킹 · 호숫가 통나무집' },
   ],
   card: {
-    livePrices: '실시간 가격',
+    livePrices: '예약처',
     seeDeals: '특가 보기',
     browse: '둘러보기',
     flags: {
@@ -230,9 +224,9 @@ const ko: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "실시간 요금 · Travelpayouts",
+      "eyebrow": "헬싱키 출발 항공편",
       "title": "지금 라플란드행 가장 저렴한 항공편",
-      "lead": "헬싱키 출발 라플란드 각 공항의 Travelpayouts 캐시 최저 요금과, 앞으로 14일 안에 출발하는 가장 저렴한 편입니다. 각 줄을 열면 바로 그 요금이 나옵니다.",
+      "lead": "라플란드 각 공항까지의 최저 요금과 앞으로 14일 안에 출발하는 가장 저렴한 편입니다. 각 줄을 열면 바로 그 요금이 나옵니다.",
       "soon": "앞으로 14일",
       "anyDate": "가장 저렴한 날짜",
       "oneWay": "편도",
@@ -242,9 +236,9 @@ const ko: SectionCopy = {
       "all": "항공권 특가 모두 보기"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · 피드 매일 갱신",
-      "title": "이번 주 가장 저렴한 라플란드 통나무집",
-      "lead": "Lomarengas 상품 피드의 실제 통나무집을 주간 요금순으로 정렬했습니다. 사진과 가격은 업체가 제공한 것입니다.",
+      "eyebrow": "Lomarengas · 매일 갱신",
+      "title": "라플란드의 저렴한 통나무집",
+      "lead": "라플란드 통나무집을 주간 요금이 낮은 순으로 정렬했습니다. 통나무집을 열면 예약 가능한 날짜를 확인하고 Lomarengas에서 예약할 수 있습니다.",
       "weekFrom": "1주",
       "guests": "명",
       "lastMinute": "라플란드 막판 특가 통나무집",
@@ -258,7 +252,7 @@ const ko: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · 확인일 {date}",
       "title": "공항 렌터카, 실제 총액",
-      "lead": "4일 렌트 기준 총액을 실시간 비교 결과에서 그대로 가져왔습니다(세금 포함). 각 줄을 열면 같은 날짜로 같은 검색이 나옵니다.",
+      "lead": "로바니에미, 키틸래, 이발로 공항에서 4일 렌트할 때의 세금 포함 총액입니다. 각 줄을 열면 같은 날짜로 같은 검색이 나옵니다.",
       "window": "인수 {from}, 반납 {to}",
       "total": "4일 총액",
       "operator": "렌터카사",
@@ -304,9 +298,9 @@ const ko: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "실시간 · 모든 줄에 읽은 시각",
+      "kicker": "항공편 · 호텔 · 통나무집 · 렌터카",
       "h2": "오늘의 라플란드",
-      "lead": "이 시트의 모든 줄은 파트너의 실제 가격과 그 가격을 읽은 시각입니다. 여기에 추정치는 없습니다.",
+      "lead": "라플란드 여행에 필요한 것을 한 페이지에 모았습니다. 헬싱키 출발 최저가 항공편, 오늘 밤 묵을 곳, 주간 요금순 통나무집, 공항 렌터카까지 있습니다. 각 줄을 열면 해당 상품이 나옵니다.",
       "note": "가격은 파트너의 피드와 페이지에서 읽어오며 예고 없이 바뀝니다. 최종 가격은 파트너 페이지가 정합니다. 사진: Lomarengas. 항공 요금과 항공사 로고: Travelpayouts. 렌터카 총액: EconomyBookings."
     },
     "list": {

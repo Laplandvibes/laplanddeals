@@ -26,17 +26,11 @@ const en: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: "Partner's own price",
-    leadRest:
-      ' · one click opens the partner’s page showing their current rate. We never invent percentages or run fake countdowns.',
-    cta: "Tonight's hotels →",
-  },
   sections: {
     pickEyebrow: "Editor's picks",
     pickTitle: 'Quietly curated for the season ahead.',
     pickLead:
-      "Places worth sending a friend to. Each card links to today's live partner price.",
+      "Places worth sending a friend to.",
     pickCta: 'All hotels',
 
     categoriesEyebrow: 'Browse by category',
@@ -65,7 +59,7 @@ const en: SectionCopy = {
     { label: 'Summer', hint: 'Midnight sun · Hiking · Lakeside cabins' },
   ],
   card: {
-    livePrices: 'Live prices',
+    livePrices: 'Book on',
     seeDeals: 'See deals',
     browse: 'Browse',
     flags: {
@@ -230,9 +224,9 @@ const en: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "Live fares · Travelpayouts",
+      "eyebrow": "Flights from Helsinki",
       "title": "Cheapest flights to Lapland right now",
-      "lead": "The lowest fare in the Travelpayouts cache for each Lapland airport from Helsinki, plus the cheapest departure within the next 14 days. Each row opens that exact fare.",
+      "lead": "The cheapest fare to each Lapland airport, plus the cheapest departure in the next 14 days. Each row opens that exact fare.",
       "soon": "Next 14 days",
       "anyDate": "Cheapest date",
       "oneWay": "one way",
@@ -242,9 +236,9 @@ const en: SectionCopy = {
       "all": "All flight deals"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · feed refreshed daily",
-      "title": "Cheapest Lapland cabins this week",
-      "lead": "Real cabins from the Lomarengas product feed, sorted by weekly price. Photos and prices are the operator’s own.",
+      "eyebrow": "Lomarengas · updated daily",
+      "title": "Lapland’s lowest-priced cabins",
+      "lead": "Lapland cabins sorted by weekly price, lowest first. Open a cabin to see its free dates and book it on Lomarengas.",
       "weekFrom": "week from",
       "guests": "guests",
       "lastMinute": "Last-minute cabins in Lapland",
@@ -258,7 +252,7 @@ const en: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · checked {date}",
       "title": "Airport car hire, real totals",
-      "lead": "Totals captured from the live comparison for a 4-day hire, taxes included. Each row opens the same search with the same dates.",
+      "lead": "Total price for a 4-day hire at Rovaniemi, Kittilä or Ivalo airport, taxes included. Each row opens the same search with the same dates.",
       "window": "Pick-up {from}, return {to}",
       "total": "4-day total",
       "operator": "Operator",
@@ -304,9 +298,9 @@ const en: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "Live · read time on every row",
+      "kicker": "Flights · Hotels · Cabins · Car hire",
       "h2": "Lapland today",
-      "lead": "Every row below is a partner’s own price, with the moment it was read. Nothing on this sheet is an estimate.",
+      "lead": "Everything for a Lapland trip on one page: the cheapest flights from Helsinki, a bed for tonight, cabins by weekly price and car hire at the airport. Each row opens that exact offer.",
       "note": "Prices are read from partner feeds and pages and change without notice; the partner’s page has the final word. Photos: Lomarengas. Fares and carrier marks: Travelpayouts. Car totals: EconomyBookings."
     },
     "list": {

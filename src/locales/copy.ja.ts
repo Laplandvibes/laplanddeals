@@ -26,17 +26,11 @@ const ja: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: '提携先のリアルタイム価格',
-    leadRest:
-      ' · クリックのたびに更新されます。割引率を捏造することは一切なく、提携先が公表する本日のレートをそのままお見せしています。',
-    cta: '今夜のホテル →',
-  },
   sections: {
     pickEyebrow: '編集部のおすすめ',
     pickTitle: 'これからのシーズンに向けて静かに厳選しました。',
     pickLead:
-      '友人にそっと教えたくなる場所だけを集めています。各カードは本日の提携先リアルタイム価格にリンクしています。',
+      '友人にそっと教えたくなる場所だけを集めています。',
     pickCta: 'すべてのホテルを見る',
 
     categoriesEyebrow: 'カテゴリーから探す',
@@ -65,7 +59,7 @@ const ja: SectionCopy = {
     { label: '夏', hint: '白夜 · ハイキング · 湖畔のコテージ' },
   ],
   card: {
-    livePrices: 'リアルタイム価格',
+    livePrices: '予約先',
     seeDeals: 'お得情報を見る',
     browse: '見る',
     flags: {
@@ -230,9 +224,9 @@ const ja: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "リアルタイム運賃 · Travelpayouts",
+      "eyebrow": "ヘルシンキ発の航空券",
       "title": "ラップランド行き、今いちばん安い航空券",
-      "lead": "ヘルシンキ発ラップランド各空港について、Travelpayoutsのキャッシュにある最安運賃と、今後14日以内で最も安い便を表示します。各行を開くとその運賃がそのまま表示されます。",
+      "lead": "ラップランド各空港への最安運賃と、今後14日以内で最も安い便です。各行を開くとその運賃がそのまま表示されます。",
       "soon": "今後14日以内",
       "anyDate": "最安の日",
       "oneWay": "片道",
@@ -242,9 +236,9 @@ const ja: SectionCopy = {
       "all": "航空券のお得情報をすべて見る"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · フィードは毎日更新",
-      "title": "今週いちばん安いラップランドのコテージ",
-      "lead": "Lomarengasの商品フィードにある実在のコテージを週料金順に並べています。写真と料金は事業者のものです。",
+      "eyebrow": "Lomarengas · 毎日更新",
+      "title": "ラップランドの格安コテージ",
+      "lead": "ラップランドのコテージを週料金の安い順に並べています。コテージを開くと空き日程を確認でき、Lomarengasで予約できます。",
       "weekFrom": "1週間",
       "guests": "名",
       "lastMinute": "ラップランドの直前割コテージ",
@@ -258,7 +252,7 @@ const ja: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · 確認日 {date}",
       "title": "空港レンタカーの実際の総額",
-      "lead": "4日間レンタルの総額を比較サイトの実際の結果から取得しました（税込）。各行を開くと同じ日程で同じ検索が表示されます。",
+      "lead": "ロヴァニエミ、キッティラ、イヴァロの各空港で借りる4日間レンタルの税込総額です。各行を開くと同じ日程で同じ検索が表示されます。",
       "window": "受取 {from}、返却 {to}",
       "total": "4日間総額",
       "operator": "レンタル会社",
@@ -304,9 +298,9 @@ const ja: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "ライブ · 各行に取得時刻",
+      "kicker": "航空券 · ホテル · コテージ · レンタカー",
       "h2": "今日のラップランド",
-      "lead": "このシートの各行はパートナー自身の価格と、それを読み取った時刻です。ここに推定値はありません。",
+      "lead": "ラップランド旅行に必要なものをこのページにまとめました。ヘルシンキ発の最安航空券、今夜泊まれる宿、週料金順のコテージ、空港で借りるレンタカーです。各行を開くとそのオファーが表示されます。",
       "note": "価格はパートナーのフィードやページから読み取ったもので、予告なく変わります。最終的な価格はパートナーのページが決めます。写真：Lomarengas。航空運賃と航空会社のロゴ：Travelpayouts。レンタカー総額：EconomyBookings。"
     },
     "list": {

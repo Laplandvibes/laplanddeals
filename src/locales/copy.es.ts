@@ -26,17 +26,11 @@ const es: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: 'Precios reales de los socios',
-    leadRest:
-      ' · actualizados con cada clic. Nunca inventamos porcentajes, los socios muestran la tarifa real de hoy.',
-    cta: 'Hoteles de esta noche →',
-  },
   sections: {
     pickEyebrow: 'Selección editorial',
     pickTitle: 'Cuidadosamente seleccionado para la temporada que viene.',
     pickLead:
-      'Lugares que merecen una recomendación a un amigo. Cada tarjeta enlaza con el precio real de hoy del socio.',
+      'Lugares que merecen una recomendación a un amigo.',
     pickCta: 'Todos los hoteles',
 
     categoriesEyebrow: 'Explorar por categoría',
@@ -65,7 +59,7 @@ const es: SectionCopy = {
     { label: 'Verano', hint: 'Sol de medianoche · Senderismo · Cabañas junto al lago' },
   ],
   card: {
-    livePrices: 'Precios en directo',
+    livePrices: 'Reserva en',
     seeDeals: 'Ver ofertas',
     browse: 'Explorar',
     flags: {
@@ -230,9 +224,9 @@ const es: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "Tarifas en vivo · Travelpayouts",
+      "eyebrow": "Vuelos desde Helsinki",
       "title": "Los vuelos más baratos a Laponia ahora mismo",
-      "lead": "La tarifa más baja en la caché de Travelpayouts para cada aeropuerto de Laponia desde Helsinki, más la salida más barata en los próximos 14 días. Cada fila abre exactamente esa tarifa.",
+      "lead": "La tarifa más baja a cada aeropuerto de Laponia y la salida más barata en los próximos 14 días. Cada fila abre exactamente esa tarifa.",
       "soon": "Próximos 14 días",
       "anyDate": "Fecha más barata",
       "oneWay": "solo ida",
@@ -242,9 +236,9 @@ const es: SectionCopy = {
       "all": "Todas las ofertas de vuelos"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · feed actualizado a diario",
-      "title": "Las cabañas más baratas de Laponia esta semana",
-      "lead": "Cabañas reales del feed de productos de Lomarengas, ordenadas por precio semanal. Las fotos y los precios son del propio operador.",
+      "eyebrow": "Lomarengas · actualizado a diario",
+      "title": "Las cabañas más económicas de Laponia",
+      "lead": "Cabañas de Laponia ordenadas por precio semanal, de menor a mayor. Abra una cabaña para ver las fechas libres y reservarla en Lomarengas.",
       "weekFrom": "semana desde",
       "guests": "pers.",
       "lastMinute": "Cabañas de última hora en Laponia",
@@ -258,7 +252,7 @@ const es: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · comprobado el {date}",
       "title": "Coche de alquiler en el aeropuerto, totales reales",
-      "lead": "Totales tomados del comparador en vivo para un alquiler de 4 días, impuestos incluidos. Cada fila abre la misma búsqueda con las mismas fechas.",
+      "lead": "Precio total de un alquiler de 4 días, impuestos incluidos, en los aeropuertos de Rovaniemi, Kittilä o Ivalo. Cada fila abre la misma búsqueda con las mismas fechas.",
       "window": "Recogida {from}, devolución {to}",
       "total": "Total 4 días",
       "operator": "Operador",
@@ -304,9 +298,9 @@ const es: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "En vivo · hora de lectura en cada fila",
+      "kicker": "Vuelos · Hoteles · Cabañas · Coches",
       "h2": "Laponia hoy",
-      "lead": "Cada fila de esta hoja es el precio del propio socio, con el momento en que se leyó. Nada aquí es una estimación.",
+      "lead": "Todo para su viaje a Laponia en una sola página: los vuelos más baratos desde Helsinki, una cama para esta noche, cabañas por precio semanal y coche de alquiler en el aeropuerto. Cada fila abre exactamente esa oferta.",
       "note": "Los precios se leen de los feeds y páginas de los socios y cambian sin aviso; la página del socio tiene la última palabra. Fotos: Lomarengas. Tarifas y marcas de aerolíneas: Travelpayouts. Totales de coches: EconomyBookings."
     },
     "list": {

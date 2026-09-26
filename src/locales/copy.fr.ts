@@ -26,17 +26,11 @@ const fr: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: 'Tarifs partenaires en direct',
-    leadRest:
-      " · actualisés à chaque clic. Aucun pourcentage inventé, les partenaires affichent le tarif du jour.",
-    cta: 'Hôtels ce soir →',
-  },
   sections: {
     pickEyebrow: 'Sélection de la rédaction',
     pickTitle: 'Sélectionnés avec soin pour la saison à venir.',
     pickLead:
-      "Des adresses que vous recommanderiez à un ami. Chaque carte renvoie au tarif partenaire du jour.",
+      "Des adresses que vous recommanderiez à un ami.",
     pickCta: 'Tous les hôtels',
 
     categoriesEyebrow: 'Parcourir par catégorie',
@@ -65,7 +59,7 @@ const fr: SectionCopy = {
     { label: 'Été', hint: 'Soleil de minuit · Randonnée · Chalets au bord du lac' },
   ],
   card: {
-    livePrices: 'Prix en direct',
+    livePrices: 'Réservation sur',
     seeDeals: 'Voir les offres',
     browse: 'Parcourir',
     flags: {
@@ -230,9 +224,9 @@ const fr: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "Tarifs en direct · Travelpayouts",
+      "eyebrow": "Vols au départ d’Helsinki",
       "title": "Les vols les moins chers vers la Laponie en ce moment",
-      "lead": "Le tarif le plus bas du cache Travelpayouts pour chaque aéroport de Laponie au départ d’Helsinki, plus le départ le moins cher dans les 14 prochains jours. Chaque ligne ouvre exactement ce tarif.",
+      "lead": "Le tarif le plus bas vers chaque aéroport de Laponie, plus le départ le moins cher dans les 14 prochains jours. Chaque ligne ouvre exactement ce tarif.",
       "soon": "14 prochains jours",
       "anyDate": "Date la moins chère",
       "oneWay": "aller simple",
@@ -242,9 +236,9 @@ const fr: SectionCopy = {
       "all": "Toutes les offres de vols"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · flux mis à jour chaque jour",
-      "title": "Les chalets les moins chers de Laponie cette semaine",
-      "lead": "De vrais chalets issus du flux produits de Lomarengas, classés par prix à la semaine. Les photos et les prix sont ceux du loueur.",
+      "eyebrow": "Lomarengas · mis à jour chaque jour",
+      "title": "Les chalets les moins chers de Laponie",
+      "lead": "Des chalets en Laponie classés par prix à la semaine, du moins cher au plus cher. Ouvrez un chalet pour voir ses dates libres et le réserver sur Lomarengas.",
       "weekFrom": "semaine dès",
       "guests": "pers.",
       "lastMinute": "Chalets de dernière minute en Laponie",
@@ -258,7 +252,7 @@ const fr: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · vérifié le {date}",
       "title": "Location de voiture à l’aéroport, vrais totaux",
-      "lead": "Totaux relevés dans le comparateur en direct pour une location de 4 jours, taxes comprises. Chaque ligne ouvre la même recherche aux mêmes dates.",
+      "lead": "Prix total d’une location de 4 jours, taxes comprises, aux aéroports de Rovaniemi, Kittilä ou Ivalo. Chaque ligne ouvre la même recherche aux mêmes dates.",
       "window": "Prise en charge {from}, retour {to}",
       "total": "Total 4 jours",
       "operator": "Loueur",
@@ -304,9 +298,9 @@ const fr: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "En direct · heure de lecture sur chaque ligne",
+      "kicker": "Vols · Hôtels · Chalets · Voitures",
       "h2": "La Laponie aujourd’hui",
-      "lead": "Chaque ligne de cette feuille est le prix du partenaire lui-même, avec le moment où il a été lu. Rien ici n’est une estimation.",
+      "lead": "Tout votre voyage en Laponie sur une seule page : les vols les moins chers au départ d’Helsinki, un lit pour ce soir, des chalets classés par prix à la semaine et une voiture à l’aéroport. Chaque ligne ouvre exactement cette offre.",
       "note": "Les prix sont lus dans les flux et pages des partenaires et changent sans préavis ; la page du partenaire a le dernier mot. Photos : Lomarengas. Tarifs et logos des compagnies : Travelpayouts. Totaux de location : EconomyBookings."
     },
     "list": {

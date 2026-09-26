@@ -117,7 +117,9 @@ export default function LiveFlights({ limit = 6, phoneLimit, kicker }: { limit?:
       phoneLimit={phoneLimit}
       loading={!data}
       rowKey={(l) => l.key}
-      footnote={checkedAt ? `${c.checked.replace('{time}', checkedAt)} · Travelpayouts` : undefined}
+      // Name the site the traveller books on, not the affiliate network (Vesa 26.9.2026: "ei sitä
+      // matkustajaa kiinnosta travelpayouts"). The fares are Aviasales' own cache, served via TP.
+      footnote={checkedAt ? `${c.checked.replace('{time}', checkedAt)} · Aviasales` : undefined}
       renderRow={(l, i) => {
         const { day, month } = dateParts(l.fare.date, lang);
         const code = l.fare.airlineCode;
@@ -132,7 +134,7 @@ export default function LiveFlights({ limit = 6, phoneLimit, kicker }: { limit?:
             name={`Helsinki → ${l.city}`}
             facts={[<span key="c" className="font-medium text-finland-blue">{l.city} ({l.code})</span>, l.fare.airline || null, l.fare.oneWay ? c.oneWay : c.roundTrip]}
             price={fmt.format(l.fare.price)}
-            seen={cl.seenAt.replace('{source}', 'Travelpayouts').replace('{d}', checkedAt)}
+            seen={cl.seenAt.replace('{source}', 'Aviasales').replace('{d}', checkedAt)}
             href={goHref(l.fare.book, l.sid)}
             sid={l.sid}
             partner="aviasales"

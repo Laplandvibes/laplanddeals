@@ -26,17 +26,11 @@ const ptBR: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: 'Preços reais dos parceiros',
-    leadRest:
-      ' · atualizados a cada clique. Nunca inventamos porcentagens, os parceiros mostram a tarifa de hoje.',
-    cta: 'Hotéis para hoje à noite →',
-  },
   sections: {
     pickEyebrow: 'Escolhas da redação',
     pickTitle: 'Selecionado com cuidado para a próxima temporada.',
     pickLead:
-      'Lugares que valem a recomendação para um amigo. Cada card leva ao preço real do parceiro de hoje.',
+      'Lugares que valem a recomendação para um amigo.',
     pickCta: 'Todos os hotéis',
 
     categoriesEyebrow: 'Navegar por categoria',
@@ -65,7 +59,7 @@ const ptBR: SectionCopy = {
     { label: 'Verão', hint: 'Sol da meia-noite · Caminhadas · Cabanas à beira do lago' },
   ],
   card: {
-    livePrices: 'Preços ao vivo',
+    livePrices: 'Reserva via',
     seeDeals: 'Ver ofertas',
     browse: 'Explorar',
     flags: {
@@ -230,9 +224,9 @@ const ptBR: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "Tarifas ao vivo · Travelpayouts",
+      "eyebrow": "Voos saindo de Helsinque",
       "title": "Os voos mais baratos para a Lapônia agora",
-      "lead": "A tarifa mais baixa no cache da Travelpayouts para cada aeroporto da Lapônia saindo de Helsinque, mais a partida mais barata nos próximos 14 dias. Cada linha abre exatamente essa tarifa.",
+      "lead": "A tarifa mais baixa para cada aeroporto da Lapônia e a partida mais barata nos próximos 14 dias. Cada linha abre exatamente essa tarifa.",
       "soon": "Próximos 14 dias",
       "anyDate": "Data mais barata",
       "oneWay": "só ida",
@@ -242,9 +236,9 @@ const ptBR: SectionCopy = {
       "all": "Todas as ofertas de voos"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · feed atualizado diariamente",
-      "title": "As cabanas mais baratas da Lapônia nesta semana",
-      "lead": "Cabanas reais do feed de produtos da Lomarengas, ordenadas pelo preço semanal. Fotos e preços são do próprio operador.",
+      "eyebrow": "Lomarengas · atualizado todo dia",
+      "title": "As cabanas mais em conta da Lapônia",
+      "lead": "Cabanas da Lapônia ordenadas pelo preço semanal, da mais barata para a mais cara. Abra uma cabana para ver as datas livres e reservar na Lomarengas.",
       "weekFrom": "semana a partir de",
       "guests": "pessoas",
       "lastMinute": "Cabanas de última hora na Lapônia",
@@ -258,7 +252,7 @@ const ptBR: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · verificado em {date}",
       "title": "Aluguel de carro no aeroporto, totais reais",
-      "lead": "Totais capturados da comparação ao vivo para 4 dias de aluguel, impostos incluídos. Cada linha abre a mesma busca com as mesmas datas.",
+      "lead": "Preço total de 4 dias de aluguel, impostos incluídos, nos aeroportos de Rovaniemi, Kittilä ou Ivalo. Cada linha abre a mesma busca com as mesmas datas.",
       "window": "Retirada {from}, devolução {to}",
       "total": "Total de 4 dias",
       "operator": "Locadora",
@@ -304,9 +298,9 @@ const ptBR: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "Ao vivo · hora da leitura em cada linha",
+      "kicker": "Voos · Hotéis · Cabanas · Carros",
       "h2": "Lapônia hoje",
-      "lead": "Cada linha desta folha é o preço do próprio parceiro, com o momento em que foi lido. Nada aqui é estimativa.",
+      "lead": "Tudo para a sua viagem à Lapônia em uma só página: os voos mais baratos saindo de Helsinque, uma cama para hoje à noite, cabanas pelo preço semanal e carro alugado no aeroporto. Cada linha abre exatamente essa oferta.",
       "note": "Os preços são lidos dos feeds e páginas dos parceiros e mudam sem aviso; a página do parceiro tem a palavra final. Fotos: Lomarengas. Tarifas e marcas das companhias: Travelpayouts. Totais de carros: EconomyBookings."
     },
     "list": {

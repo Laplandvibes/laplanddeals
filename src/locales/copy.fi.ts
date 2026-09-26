@@ -26,17 +26,11 @@ const fi: SectionCopy = {
     secondaryTo: '/activities',
     secondaryToSummer: '/summer',
   },
-  flashBand: {
-    leadBold: 'Suoraan kumppanin hinta',
-    leadRest:
-      ' · klikkaus vie kumppanin sivulle, jossa näet hinnan. Emme keksi prosentteja emmekä pyöritä tekaistuja lähtölaskentoja.',
-    cta: 'Tämän illan hotellit →',
-  },
   sections: {
     pickEyebrow: 'Toimituksen poiminta',
     pickTitle: 'Käsin valittu tulevalle kaudelle.',
     pickLead:
-      'Paikat, joihin lähettäisimme ystävämme. Jokainen kortti vie suoraan kumppanin omaan hintaan.',
+      'Paikat, joihin lähettäisimme ystävämme.',
     pickCta: 'Kaikki hotellit',
 
     categoriesEyebrow: 'Selaa kategorian mukaan',
@@ -65,7 +59,7 @@ const fi: SectionCopy = {
     { label: 'Kesä', hint: 'Yötön yö · Vaellus · Järvenrantamökit' },
   ],
   card: {
-    livePrices: 'Kumppanin hinta',
+    livePrices: 'Varauspalvelu',
     seeDeals: 'Katso tarjoukset',
     browse: 'Selaa',
     flags: {
@@ -230,9 +224,9 @@ const fi: SectionCopy = {
   // Live sections (2026-09-10): flights, cabins, cars, GYG widget, tonight strip.
   live: {
     "flights": {
-      "eyebrow": "Live-hinnat · Travelpayouts",
+      "eyebrow": "Lennot Helsingistä",
       "title": "Halvimmat lennot Lappiin juuri nyt",
-      "lead": "Travelpayoutsin välimuistin edullisin hinta jokaiselle Lapin kentälle Helsingistä sekä halvin lähtö seuraavan 14 päivän sisällä. Rivi avaa juuri sen hinnan.",
+      "lead": "Halvin lento jokaiselle Lapin kentälle ja halvin lähtö seuraavan 14 päivän aikana. Rivi avaa juuri sen hinnan.",
       "soon": "Seuraavat 14 päivää",
       "anyDate": "Halvin päivä",
       "oneWay": "yhteen suuntaan",
@@ -242,9 +236,9 @@ const fi: SectionCopy = {
       "all": "Kaikki lentotarjoukset"
     },
     "cabins": {
-      "eyebrow": "Lomarengas · syöte päivittyy päivittäin",
-      "title": "Lapin edullisimmat mökit tällä viikolla",
-      "lead": "Aitoja mökkejä Lomarenkaan tuotesyötteestä viikkohinnan mukaan järjestettynä. Kuvat ja hinnat ovat Lomarenkaan omia.",
+      "eyebrow": "Lomarengas · päivittyy joka päivä",
+      "title": "Lapin edullisimmat mökit",
+      "lead": "Lapin mökit viikkohinnan mukaan, edullisin ensin. Avaa mökki, niin näet vapaat päivät ja voit varata sen Lomarenkaalta.",
       "weekFrom": "viikko alk.",
       "guests": "hlö",
       "lastMinute": "Äkkilähdöt Lapin mökkeihin",
@@ -258,7 +252,7 @@ const fi: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · tarkistettu {date}",
       "title": "Vuokra-auto lentokentältä, oikeat kokonaishinnat",
-      "lead": "Hinnat on poimittu vertailun tuloksista 4 päivän vuokralle veroineen. Rivi avaa saman haun samoilla päivillä.",
+      "lead": "4 päivän vuokran kokonaishinta veroineen Rovaniemen, Kittilän tai Ivalon lentokentältä. Rivi avaa saman haun samoilla päivillä.",
       "window": "Nouto {from}, palautus {to}",
       "total": "4 pv yhteensä",
       "operator": "Vuokraamo",
@@ -304,9 +298,9 @@ const fi: SectionCopy = {
       ]
     },
     "sheet": {
-      "kicker": "Live · lukuhetki joka rivillä",
+      "kicker": "Lennot · hotellit · mökit · autot",
       "h2": "Tänään Lapissa",
-      "lead": "Jokainen rivi tällä arkilla on kumppanin oma hinta ja hetki, jolloin se luettiin. Mikään tässä ei ole arvio.",
+      "lead": "Kaikki Lapin matkaan samalla sivulla: halvimmat lennot Helsingistä, yöpaikka tälle yölle, mökit viikkohinnan mukaan ja vuokra-auto kentältä. Jokainen rivi avaa juuri sen tarjouksen.",
       "note": "Hinnat luetaan kumppanien syötteistä ja sivuilta, ja ne muuttuvat ilman varoitusta; kumppanin sivu sanoo viimeisen sanan. Kuvat: Lomarengas. Lentohinnat ja yhtiöiden merkit: Travelpayouts. Autojen kokonaishinnat: EconomyBookings."
     },
     "list": {

@@ -3,7 +3,6 @@ import { ArrowRight, ShieldCheck, Newspaper, Globe, ExternalLink } from 'lucide-
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import PageSeo from '../components/PageSeo';
 import Hero from '../components/Hero';
-import FlashBand from '../components/FlashBand';
 import CategoryTiles from '../components/CategoryTiles';
 import OffersGrid from '../components/OffersGrid';
 import NewsletterSection from '../components/NewsletterSection';
@@ -193,7 +192,6 @@ export default function Home() {
       />
 
       <Hero />
-      <FlashBand />
 
       {/* ── THE SHEET: every live and dated partner price, on paper (11.9.2026,
           the same three layers as laplandhoteldeals: sheet → ice tile → white card). ── */}

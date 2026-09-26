@@ -7,7 +7,8 @@ import { COPY } from '../locales/copy';
 import { trackAffiliateClick } from '../lib/analytics';
 
 /**
- * Cheapest Lapland cabins this week, on the sheet. Source: the affiliate
+ * Lapland's lowest-priced cabins by weekly from-price, on the sheet (no "this week": the feed
+ * is a catalogue, not availability for given dates). Source: the affiliate
  * Worker's /_cabins endpoint (Lomarengas Adtraction product feed pfid 375,
  * parsed into KV at most once per 24 h). Photo, weekly from-price, capacity
  * and the operator's quality stars all come from that one feed (rule §12);
@@ -28,6 +29,14 @@ type Api = { updatedAt: string; totals: Record<string, number>; groups: Record<s
 const CABINS_API = 'https://go.laplandvibes.com/_cabins';
 const REDIRECT = 'https://go.laplandvibes.com/go/lomarengas';
 const MAX_ROWS = 12;
+/**
+ * Same sanity band the Worker applies to its full price list (/_cabins?prices=1): the feed
+ * carries broken price rows. Measured 26.9.2026 (Vesa: "miksi Vaivihka näyttää 1 € hintaa?"):
+ * the showcase had 1 €, 65 €, 68 €, 70 € and 88 € "weekly" prices, all with no capacity or size,
+ * and sorting cheapest-first put exactly those rows at the top.
+ */
+const MIN_WEEKLY = 100;
+const MAX_WEEKLY = 20000;
 
 let cache: Api | null = null;
 let inflight: Promise<Api | null> | null = null;
@@ -76,7 +85,7 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
     const seen = new Set<string>();
     const all: ApiCabin[] = [];
     for (const group of Object.values(data.groups)) for (const cab of group) {
-      if (!cab.weeklyFrom || cab.weeklyFrom <= 0 || !cab.img || seen.has(cab.id)) continue;
+      if (!cab.weeklyFrom || cab.weeklyFrom < MIN_WEEKLY || cab.weeklyFrom > MAX_WEEKLY || !cab.img || seen.has(cab.id)) continue;
       seen.add(cab.id); all.push(cab);
     }
     all.sort((a, b) => (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9));
@@ -90,9 +99,12 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
     : '';
   const lmHref = lastMinuteHref(lang);
 
+  // The feed's description stopped yielding stars, guests and size (0/60 on 26.9.2026): a
+  // "best-rated first" column over empty ratings would just repeat the price order.
+  const hasStars = cabins.some((cab) => cab.stars);
   const modes: SortMode<ApiCabin>[] = [
     { key: 'price', label: cl.sortPrice, column: cl.colCheapest, sort: (a, b) => (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9) },
-    { key: 'stars', label: cl.sortStars, column: cl.colBestStars, sort: (a, b) => (b.stars || 0) - (a.stars || 0) || (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9) },
+    ...(hasStars ? [{ key: 'stars', label: cl.sortStars, column: cl.colBestStars, sort: (a: ApiCabin, b: ApiCabin) => (b.stars || 0) - (a.stars || 0) || (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9) }] : []),
   ];
 
   return (
@@ -128,12 +140,12 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
           <LiveRow
             index={i}
             media={{ kind: 'photo', src: cab.img, alt: `${cab.name}, ${cab.place}`, width: 640, height: 427, eager: i < 2 }}
-            day={cab.p ? `${cab.p}${cab.pe ? `+${cab.pe}` : ''}` : '—'}
-            month={c.guests}
-            dateSub={cab.sqm ? `${Math.round(cab.sqm)} m²${cab.br ? ` · ${cab.br} ${c.bedrooms}` : ''}` : undefined}
+            day={cab.p ? `${cab.p}${cab.pe ? `+${cab.pe}` : ''}` : cab.br ? String(cab.br) : ''}
+            month={cab.p ? c.guests : cab.br ? c.bedrooms : ''}
+            dateSub={cab.sqm ? `${Math.round(cab.sqm)} m²${cab.p && cab.br ? ` · ${cab.br} ${c.bedrooms}` : ''}` : undefined}
             badge={cab.stars ? { text: `${'★'.repeat(Math.min(5, cab.stars))} ${cab.stars}/5`, tone: 'green' } : null}
             name={cab.name}
-            facts={[<span key="p" className="font-medium text-finland-blue">{cab.place}</span>, cab.muni && cab.muni !== cab.place ? cab.muni : null, <span key="s" className="inline-flex items-center gap-1"><Star className="h-3 w-3 text-finland-blue" aria-hidden="true" />{c.starsLabel}</span>]}
+            facts={[<span key="p" className="font-medium text-finland-blue">{cab.place}</span>, cab.muni && cab.muni !== cab.place ? cab.muni : null, cab.stars ? <span key="s" className="inline-flex items-center gap-1"><Star className="h-3 w-3 text-finland-blue" aria-hidden="true" />{c.starsLabel}</span> : null]}
             price={fmt.format(cab.weeklyFrom || 0)}
             unit={c.perWeek}
             seen={cl.seenAt.replace('{source}', 'Lomarengas').replace('{d}', updated)}
