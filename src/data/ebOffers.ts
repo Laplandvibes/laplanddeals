@@ -1,9 +1,10 @@
 // Real offers captured from the EconomyBookings comparison results at the
 // Rovaniemi (plc 61909), Kittilä (plc 61893) and Ivalo (plc 615) airports on
 // 2026-09-02, via the live results page. Totals are EUR for 4 rental days
-// including taxes/fees, exactly as shown. Same dataset as
-// laplandcarrental-new/src/data/ebOffers.ts (source of truth for refreshes):
-// re-run the same searches there and copy the rows — never invent.
+// including taxes/fees, exactly as shown. Same rows as
+// laplandcarrental-new/src/data/ebOffers.ts: both files are written by one
+// weekly run (Windows task "LV Autohinnat", scripts/write-eb-prices.mjs in
+// laplandcarrental-new). Do not edit rows by hand — never invent.
 //
 // 🔴 Vanhenemisvahti: LiveCars.tsx renders only windows whose pick-up date is
 // still in the future. A window that has passed disappears by itself, so the
