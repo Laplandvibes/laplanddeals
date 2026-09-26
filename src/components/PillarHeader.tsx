@@ -13,7 +13,9 @@ interface PillarHeaderProps {
 /**
  * Pillar page header — same visual signature as the home Hero:
  *   - full-bleed photograph background
- *   - left-anchored horizontal dark gradient (NOT bottom-up)
+ *   - measured scrim (`.pillar-scrim` in index.css): a band behind the text under
+ *     lg, a gradient anchored to the text column from lg. The old viewport-wide
+ *     gradient left the pink line on sunlit snow under 3:1 (/flights/, 26.9.2026).
  *   - vertically centered content block
  *   - paper-grain magazine texture overlay
  *   - h1 uses Playfair italic-light + roman-semibold pairing
@@ -31,7 +33,7 @@ export default function PillarHeader({ eyebrow, h1, h1Italic, sub, image }: Pill
         fetchPriority="high"
         onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
       />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/0" />
+      <div aria-hidden="true" className="absolute inset-0 pillar-scrim" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-cream" />
       <div aria-hidden="true" className="absolute inset-0 paper-grain opacity-40 mix-blend-overlay" />
 

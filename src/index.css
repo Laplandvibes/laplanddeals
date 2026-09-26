@@ -163,6 +163,39 @@
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* Pillar-hero scrim (PillarHeader). Two shapes, because the text sits differently:
+   - under lg the text block spans the full width, so a side-to-side gradient cannot
+     reach its right end: a horizontal band darkens the rows the text occupies;
+   - from lg the text is a 48rem column on the left, so the gradient is anchored to
+     that column (max-w-7xl container, lg:px-10), not to the viewport, and eases out
+     over 40rem so the sky shows no seam.
+   Sized by measurement 26.9.2026, not by eye: the pink payoff line (#EC4899) needs a
+   background luminance <= 0.049 for 3:1, i.e. ~70 % black over sunlit snow (/flights/,
+   offer-flight-hel-kao.webp). Gate: heroteksti, checked on all six pillar pages, 12
+   languages, 360-2560 px. Band .58/.64 failed Italian on tablets; .68 passed but left
+   /activities/ at 9 % of pixels under the limit at 360 px (gate fails at 10 %); .72
+   leaves 0.3 %. */
+.pillar-scrim {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.36) 0%, rgba(0,0,0,.72) 28%, rgba(0,0,0,.72) 78%, rgba(0,0,0,.42) 100%);
+}
+@media (min-width: 64rem) {
+  .pillar-scrim {
+    --col: calc(max(0px, (100% - 80rem) / 2) + 2.5rem);
+    background-image: linear-gradient(to right,
+      rgba(0,0,0,.78) 0,
+      rgba(0,0,0,.7) calc(var(--col) + 30rem),
+      rgba(0,0,0,.68) calc(var(--col) + 44rem),
+      rgba(0,0,0,.64) calc(var(--col) + 49rem),
+      rgba(0,0,0,.55) calc(var(--col) + 54rem),
+      rgba(0,0,0,.43) calc(var(--col) + 59rem),
+      rgba(0,0,0,.3) calc(var(--col) + 64rem),
+      rgba(0,0,0,.18) calc(var(--col) + 69rem),
+      rgba(0,0,0,.09) calc(var(--col) + 74rem),
+      rgba(0,0,0,.03) calc(var(--col) + 79rem),
+      rgba(0,0,0,0) calc(var(--col) + 84rem));
+  }
+}
+
 /* Slow ambient pulse for the last-minute indicator dot. */
 @keyframes deal-pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
