@@ -319,7 +319,7 @@ const fr: SectionCopy = {
       "colBestStars": "Les mieux notés d’abord",
       "showAll": "Tout afficher ({n})",
       "openFare": "Ouvrir ce tarif",
-      "openSearch": "Ouvrir cette recherche",
+      "openSearch": "Ouvrir la recherche",
       "seenAt": "{source}, lu le {d}",
       "photoCredit": "Photos : {source}",
       "empty": "Rien à afficher pour le moment."
@@ -331,7 +331,8 @@ const fr: SectionCopy = {
       "priciest": "Jour le plus cher {d} : {p}",
       "empty": "Pas encore de tarifs en cache pour cet aéroport.",
       "note": "Un jour sans barre n’a simplement pas de tarif en cache ; ce n’est pas un jour complet.",
-      "airport": "Aéroport"
+      "airport": "Aéroport",
+      "single": "{m} : un seul jour de départ a un tarif en cache ({d} : {p})."
     }
   },
   faq: {

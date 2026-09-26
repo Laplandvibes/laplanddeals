@@ -331,7 +331,8 @@ const zhCN: SectionCopy = {
       "priciest": "最贵的一天 {d}：{p}",
       "empty": "该机场暂无缓存票价。",
       "note": "没有柱的日期只是缓存中没有票价，不代表售罄。",
-      "airport": "机场"
+      "airport": "机场",
+      "single": "{m}：缓存中只有一个出发日有票价（{d}：{p}）。"
     }
   },
   faq: {

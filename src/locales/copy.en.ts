@@ -331,7 +331,8 @@ const en: SectionCopy = {
       "priciest": "Priciest day {d}: {p}",
       "empty": "No cached fares for this airport yet.",
       "note": "Days without a bar simply have no cached fare; that is not a sold-out day.",
-      "airport": "Airport"
+      "airport": "Airport",
+      "single": "{m}: only one departure day with a cached fare ({d}: {p})."
     }
   },
   faq: {

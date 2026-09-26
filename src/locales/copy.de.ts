@@ -331,7 +331,8 @@ const de: SectionCopy = {
       "priciest": "Teuerster Tag {d}: {p}",
       "empty": "Für diesen Flughafen liegen noch keine Preise im Cache.",
       "note": "Ein Tag ohne Balken hat schlicht keinen Preis im Cache; das ist kein ausverkaufter Tag.",
-      "airport": "Flughafen"
+      "airport": "Flughafen",
+      "single": "{m}: Nur ein Abflugtag hat einen Preis im Cache ({d}: {p})."
     }
   },
   faq: {

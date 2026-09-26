@@ -323,7 +323,7 @@ const sv: SectionCopy = {
       "colBestStars": "Bäst betyg först",
       "showAll": "Visa alla {n}",
       "openFare": "Öppna det här priset",
-      "openSearch": "Öppna den här sökningen",
+      "openSearch": "Öppna sökningen",
       "seenAt": "{source}, läst {d}",
       "photoCredit": "Bilder: {source}",
       "empty": "Inget att visa just nu."
@@ -335,7 +335,8 @@ const sv: SectionCopy = {
       "priciest": "Dyraste dagen {d}: {p}",
       "empty": "Inga cachade priser för den här flygplatsen ännu.",
       "note": "En dag utan stapel har helt enkelt inget pris i cachen; det är ingen slutsåld dag.",
-      "airport": "Flygplats"
+      "airport": "Flygplats",
+      "single": "{m}: bara en avresedag har ett pris i cachen ({d}: {p})."
     }
   },
   faq: {

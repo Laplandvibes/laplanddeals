@@ -47,11 +47,17 @@ export default function FitHeading({
     let cancelled = false;
     const measure = () => {
       if (cancelled) return;
-      const prevWs = el.style.whiteSpace;
+      // nowrap goes on the span, the element whose width is read. On the
+      // heading alone it does not reach the text: index.css gives `h2 > span`
+      // its own `text-wrap: balance` (orphan-word rule, 12.9.2026), so the
+      // span would wrap, the width read would be one wrapped line, R would
+      // come out several times too large and every title would sit at `max`
+      // (the fi cars title at 100 px: 322 px wrapped, 1765 px on one line).
+      const prevWs = span.style.whiteSpace;
       el.style.fontSize = '100px';
-      el.style.whiteSpace = 'nowrap';
+      span.style.whiteSpace = 'nowrap';
       const w = span.getBoundingClientRect().width;
-      el.style.whiteSpace = prevWs;
+      span.style.whiteSpace = prevWs;
       if (w > 0) {
         // cqw per container px, with 3 % in hand for subpixel rounding.
         const r = (100 / w) * 100 * 0.97;

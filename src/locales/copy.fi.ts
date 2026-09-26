@@ -331,7 +331,8 @@ const fi: SectionCopy = {
       "priciest": "Kallein päivä {d}: {p}",
       "empty": "Tälle kentälle ei ole vielä välimuistissa hintoja.",
       "note": "Päivä ilman palkkia tarkoittaa vain, ettei välimuistissa ole hintaa, ei loppuunmyytyä päivää.",
-      "airport": "Lentokenttä"
+      "airport": "Lentokenttä",
+      "single": "{m}: välimuistissa on hinta vain yhdelle lähtöpäivälle ({d}: {p})."
     }
   },
   faq: {

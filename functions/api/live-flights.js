@@ -1,5 +1,5 @@
 // GET /api/live-flights            — cheapest Helsinki → Lapland fares for the list
-// GET /api/live-flights?cal=RVN    — cheapest cached fare per departure day, 3 months, for the calendar
+// GET /api/live-flights?cal=RVN    — cheapest cached fare per departure day, this month + 3, for the calendar
 //
 // Source of truth is laplandflights.fi's own Pages Worker (TP_TOKEN lives there,
 // never here): /api/fares gives the lowest cached Travelpayouts fare per airport,
@@ -23,7 +23,10 @@ const DEST = [
   { code: 'KAO', city: 'Kuusamo' },
 ];
 const SOON_DAYS = 14;
-const CAL_MONTHS = 3;
+// The calendar draws three months, but only months with two fares or more
+// (FareCalendar.tsx). This month + 3 lets it still reach three months ahead
+// when the current one is nearly over: 26.9.2026 September had 1 fare left.
+const CAL_MONTHS = 4;
 const CACHE_TTL = 900;
 const UA = 'LaplandDeals live-flights (+https://laplanddeals.com)';
 // Carrier marks come from the same source as the fare (Travelpayouts CDN),
@@ -68,14 +71,17 @@ async function soonFare(code, today, horizon) {
 
 async function calendar(code, today) {
   const first = iso(today).slice(0, 7);
+  const yms = Array.from({ length: CAL_MONTHS }, (_, i) => addMonths(first, i));
+  const lists = await Promise.all(yms.map((ym) => monthFares(code, ym)));
   const months = [];
-  for (let i = 0; i < CAL_MONTHS; i++) {
-    const ym = addMonths(first, i);
-    const list = await monthFares(code, ym);
+  for (const [i, ym] of yms.entries()) {
+    const list = lists[i];
     const byDay = new Map();
     for (const it of list) {
       const dep = String(it.departure_at || '').slice(0, 10);
-      if (!dep || dep < iso(today) || !it.price || !it.book) continue;
+      // The calendar places a bar on its day of THIS month, so a fare dated in
+      // another month must not ride along (none measured 26.9.2026, 16 lists).
+      if (!dep || dep < iso(today) || dep.slice(0, 7) !== ym || !it.price || !it.book) continue;
       const day = Number(dep.slice(8, 10));
       const cur = byDay.get(day);
       if (!cur || it.price < cur.price) byDay.set(day, { day, price: Math.round(it.price), airline: airlineName(it.airline), book: it.book });
@@ -99,7 +105,8 @@ export async function onRequestGet({ request, waitUntil }) {
   const url = new URL(request.url);
   const cal = (url.searchParams.get('cal') || '').toUpperCase().slice(0, 3);
   const cache = caches.default;
-  const cacheKey = new Request(new URL(`/api/live-flights?v=2${cal ? `&cal=${cal}` : ''}`, request.url).toString(), { method: 'GET' });
+  // v=3: the calendar answer grew from 3 to 4 months (26.9.2026).
+  const cacheKey = new Request(new URL(`/api/live-flights?v=3${cal ? `&cal=${cal}` : ''}`, request.url).toString(), { method: 'GET' });
   const hit = await cache.match(cacheKey);
   if (hit) return hit;
 

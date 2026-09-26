@@ -319,7 +319,7 @@ const nl: SectionCopy = {
       "colBestStars": "Best beoordeeld eerst",
       "showAll": "Alle {n} tonen",
       "openFare": "Dit tarief openen",
-      "openSearch": "Deze zoekopdracht openen",
+      "openSearch": "Prijzen bekijken",
       "seenAt": "{source}, gelezen op {d}",
       "photoCredit": "Foto’s: {source}",
       "empty": "Nu even niets te tonen."
@@ -331,7 +331,8 @@ const nl: SectionCopy = {
       "priciest": "Duurste dag {d}: {p}",
       "empty": "Nog geen tarieven in de cache voor deze luchthaven.",
       "note": "Een dag zonder balk heeft simpelweg geen tarief in de cache; het is geen uitverkochte dag.",
-      "airport": "Luchthaven"
+      "airport": "Luchthaven",
+      "single": "{m}: slechts één vertrekdag heeft een tarief in de cache ({d}: {p})."
     }
   },
   faq: {

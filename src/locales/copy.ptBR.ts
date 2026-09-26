@@ -331,7 +331,8 @@ const ptBR: SectionCopy = {
       "priciest": "Dia mais caro {d}: {p}",
       "empty": "Ainda não há tarifas em cache para este aeroporto.",
       "note": "Um dia sem barra só significa que não há tarifa em cache, não que esteja esgotado.",
-      "airport": "Aeroporto"
+      "airport": "Aeroporto",
+      "single": "{m}: só um dia de partida tem tarifa em cache ({d}: {p})."
     }
   },
   faq: {

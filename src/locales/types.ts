@@ -57,8 +57,9 @@ export type SectionCopy = {
     sheet: { kicker: string; h2: string; lead: string; note: string };
     /** Shared list frame: sort toggle labels, wide-screen column titles, buttons. */
     list: { sortBy: string; sortPrice: string; sortDate: string; sortStars: string; colCheapest: string; colSoonest: string; colBestStars: string; showAll: string; openFare: string; openSearch: string; seenAt: string; photoCredit: string; empty: string };
-    /** Fare calendar on the kelo panel. `{d}` read time, `{p}` price. */
-    chart: { h2: string; lead: string; cheapest: string; priciest: string; empty: string; note: string; airport: string };
+    /** Fare calendar on the kelo panel. `{d}` read time, `{p}` price.
+     *  `single`: a month with one cached fare, listed instead of drawn — `{m}` month and year, `{d}` day, `{p}` price. */
+    chart: { h2: string; lead: string; cheapest: string; priciest: string; empty: string; note: string; airport: string; single: string };
   };
   sections: {
     pickEyebrow: string;

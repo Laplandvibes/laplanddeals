@@ -331,7 +331,8 @@ const es: SectionCopy = {
       "priciest": "Día más caro {d}: {p}",
       "empty": "Aún no hay tarifas en caché para este aeropuerto.",
       "note": "Un día sin barra solo significa que no hay tarifa en caché, no que esté agotado.",
-      "airport": "Aeropuerto"
+      "airport": "Aeropuerto",
+      "single": "{m}: solo un día de salida tiene tarifa en caché ({d}: {p})."
     }
   },
   faq: {
