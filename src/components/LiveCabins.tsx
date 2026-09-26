@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowUpRight, Star } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import LiveList, { type SortMode } from './live/LiveList';
 import LiveRow from './live/LiveRow';
 import { useLang, type Lang } from '../i18n/useLang';
@@ -7,17 +7,20 @@ import { COPY } from '../locales/copy';
 import { trackAffiliateClick } from '../lib/analytics';
 
 /**
- * Lapland's lowest-priced cabins by weekly from-price, on the sheet (no "this week": the feed
- * is a catalogue, not availability for given dates). Source: the affiliate
- * Worker's /_cabins endpoint (Lomarengas Adtraction product feed pfid 375,
- * parsed into KV at most once per 24 h). Photo, weekly from-price, capacity
- * and the operator's quality stars all come from that one feed (rule §12);
- * the Lomarengas programme explicitly allows showing its photos.
+ * Cabins in Lapland and Ruka, on the sheet. Source: the affiliate Worker's /_cabins endpoint
+ * (Lomarengas Adtraction product feed pfid 375, parsed into KV at most once per 24 h): photo,
+ * capacity, bedrooms and place; the Lomarengas programme explicitly allows showing its photos.
  *
- * Wide screens: cheapest first | best-rated first (Lomarengas stars, ties by
- * price). The header button opens Lomarengas's OWN last-minute filter for
- * Lapland — the only honest "äkkilähdöt" link, because the feed carries no
- * discount field (Price == OriginalPrice on 3 970 / 3 970 rows, 10.9.2026).
+ * 🔴 No price (Vesa 26.9.2026, "mennään kuten ehdotit"). The feed's price field could not be
+ * verified as a weekly price: 7 / 60 showcase cabins matched lomarengas.fi's own offer price
+ * within ±10 %, the cheapest end ran 1 € … 105 € for a 10-person cabin, and lomarengas.fi shows
+ * no price until dates are picked. The Worker withholds prices network-wide until a verified
+ * source exists; each row says where the price is instead. The rows are picked round-robin
+ * across the resort groups so six cards never all come from Levi.
+ *
+ * Wide screens: smallest first | largest first (a couple and a big group look for different
+ * cabins). The header button opens Lomarengas's OWN last-minute filter for Lapland: the only
+ * honest "äkkilähdöt" link, because the feed carries no discount field.
  */
 
 type ApiCabin = {
@@ -29,14 +32,7 @@ type Api = { updatedAt: string; totals: Record<string, number>; groups: Record<s
 const CABINS_API = 'https://go.laplandvibes.com/_cabins';
 const REDIRECT = 'https://go.laplandvibes.com/go/lomarengas';
 const MAX_ROWS = 12;
-/**
- * Same sanity band the Worker applies to its full price list (/_cabins?prices=1): the feed
- * carries broken price rows. Measured 26.9.2026 (Vesa: "miksi Vaivihka näyttää 1 € hintaa?"):
- * the showcase had 1 €, 65 €, 68 €, 70 € and 88 € "weekly" prices, all with no capacity or size,
- * and sorting cheapest-first put exactly those rows at the top.
- */
-const MIN_WEEKLY = 100;
-const MAX_WEEKLY = 20000;
+const GROUP_ORDER = ['levi', 'yllas', 'saariselka', 'ruka', 'lapland'];
 
 let cache: Api | null = null;
 let inflight: Promise<Api | null> | null = null;
@@ -62,6 +58,26 @@ function lastMinuteHref(lang: Lang): string {
   return `${REDIRECT}?sid=live_cabins_lastminute&dest=${encodeURIComponent(dest)}`;
 }
 
+/** Take one cabin from each resort group in turn until MAX_ROWS. */
+function roundRobin(groups: Record<string, ApiCabin[]>): ApiCabin[] {
+  const keys = [...GROUP_ORDER.filter((k) => groups[k]), ...Object.keys(groups).filter((k) => !GROUP_ORDER.includes(k))];
+  const seen = new Set<string>();
+  const out: ApiCabin[] = [];
+  for (let i = 0; out.length < MAX_ROWS; i++) {
+    let took = false;
+    for (const k of keys) {
+      const cab = groups[k][i];
+      if (!cab) continue;
+      took = true;
+      if (!cab.img || !cab.p || seen.has(cab.id)) continue;
+      seen.add(cab.id); out.push(cab);
+      if (out.length === MAX_ROWS) break;
+    }
+    if (!took) break;
+  }
+  return out;
+}
+
 export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: number; phoneLimit?: number; kicker?: boolean }) {
   const lang = useLang();
   const c = COPY[lang].live.cabins;
@@ -75,22 +91,7 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
     return () => { alive = false; };
   }, []);
 
-  const fmt = useMemo(() => {
-    try { return new Intl.NumberFormat(lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }); }
-    catch { return new Intl.NumberFormat('en', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }); }
-  }, [lang]);
-
-  const cabins = useMemo(() => {
-    if (!data) return [];
-    const seen = new Set<string>();
-    const all: ApiCabin[] = [];
-    for (const group of Object.values(data.groups)) for (const cab of group) {
-      if (!cab.weeklyFrom || cab.weeklyFrom < MIN_WEEKLY || cab.weeklyFrom > MAX_WEEKLY || !cab.img || seen.has(cab.id)) continue;
-      seen.add(cab.id); all.push(cab);
-    }
-    all.sort((a, b) => (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9));
-    return all.slice(0, MAX_ROWS);
-  }, [data]);
+  const cabins = useMemo(() => (data ? roundRobin(data.groups) : []), [data]);
 
   if (failed || (data && cabins.length === 0)) return null;
 
@@ -99,12 +100,9 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
     : '';
   const lmHref = lastMinuteHref(lang);
 
-  // The feed's description stopped yielding stars, guests and size (0/60 on 26.9.2026): a
-  // "best-rated first" column over empty ratings would just repeat the price order.
-  const hasStars = cabins.some((cab) => cab.stars);
   const modes: SortMode<ApiCabin>[] = [
-    { key: 'price', label: cl.sortPrice, column: cl.colCheapest, sort: (a, b) => (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9) },
-    ...(hasStars ? [{ key: 'stars', label: cl.sortStars, column: cl.colBestStars, sort: (a: ApiCabin, b: ApiCabin) => (b.stars || 0) - (a.stars || 0) || (a.weeklyFrom || 9e9) - (b.weeklyFrom || 9e9) }] : []),
+    { key: 'small', label: c.sortSmall, column: c.colSmall, sort: (a, b) => (a.p || 0) - (b.p || 0) || (a.br || 0) - (b.br || 0) },
+    { key: 'large', label: c.sortLarge, column: c.colLarge, sort: (a, b) => (b.p || 0) - (a.p || 0) || (b.br || 0) - (a.br || 0) },
   ];
 
   return (
@@ -140,14 +138,14 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
           <LiveRow
             index={i}
             media={{ kind: 'photo', src: cab.img, alt: `${cab.name}, ${cab.place}`, width: 640, height: 427, eager: i < 2 }}
-            day={cab.p ? `${cab.p}${cab.pe ? `+${cab.pe}` : ''}` : cab.br ? String(cab.br) : ''}
-            month={cab.p ? c.guests : cab.br ? c.bedrooms : ''}
-            dateSub={cab.sqm ? `${Math.round(cab.sqm)} m²${cab.p && cab.br ? ` · ${cab.br} ${c.bedrooms}` : ''}` : undefined}
-            badge={cab.stars ? { text: `${'★'.repeat(Math.min(5, cab.stars))} ${cab.stars}/5`, tone: 'green' } : null}
+            day={String(cab.p ?? '')}
+            month={c.guests}
+            dateSub={cab.br ? `${cab.br} ${c.bedrooms}` : undefined}
+            badge={null}
             name={cab.name}
-            facts={[<span key="p" className="font-medium text-finland-blue">{cab.place}</span>, cab.muni && cab.muni !== cab.place ? cab.muni : null, cab.stars ? <span key="s" className="inline-flex items-center gap-1"><Star className="h-3 w-3 text-finland-blue" aria-hidden="true" />{c.starsLabel}</span> : null]}
-            price={fmt.format(cab.weeklyFrom || 0)}
-            unit={c.perWeek}
+            facts={[<span key="p" className="font-medium text-finland-blue">{cab.place}</span>, cab.muni && cab.muni !== cab.place ? cab.muni : null]}
+            price=""
+            unit={c.priceAt}
             seen={cl.seenAt.replace('{source}', 'Lomarengas').replace('{d}', updated)}
             href={cabinHref(cab.slug, sid, lang)}
             sid={sid}

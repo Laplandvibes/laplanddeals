@@ -241,8 +241,8 @@ const sv: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · uppdateras varje dag",
-      "title": "De billigaste stugorna i Lappland",
-      "lead": "Stugor i Lappland sorterade efter veckopris, billigast först. Öppna en stuga för att se lediga datum och boka den hos Lomarengas.",
+      "title": "Stugor i Lappland och Ruka",
+      "lead": "Stugor i Levi, Ylläs, Saariselkä och på andra håll i Lappland, plus Ruka. Öppna en stuga för att se lediga datum och priset för dina datum hos Lomarengas.",
       "weekFrom": "vecka från",
       "guests": "pers.",
       "lastMinute": "Sista minuten-stugor i Lappland",
@@ -251,7 +251,12 @@ const sv: SectionCopy = {
       "updated": "Flödet uppdaterat {date}",
       "perWeek": "/vecka",
       "bedrooms": "sovrum",
-      "starsLabel": "Lomarengas-kvalitet"
+      "starsLabel": "Lomarengas-kvalitet",
+      "priceAt": "Pris hos Lomarengas",
+      "sortSmall": "Minsta",
+      "sortLarge": "Största",
+      "colSmall": "Minsta först",
+      "colLarge": "Största först"
     },
     "cars": {
       "eyebrow": "EconomyBookings · kontrollerat {date}",
@@ -304,7 +309,7 @@ const sv: SectionCopy = {
     "sheet": {
       "kicker": "Flyg · Hotell · Stugor · Hyrbilar",
       "h2": "Lappland i dag",
-      "lead": "Allt för resan till Lappland på en sida: de billigaste flygen från Helsingfors, en säng för i natt, stugor efter veckopris och hyrbil på flygplatsen. Varje rad öppnar just det erbjudandet.",
+      "lead": "Allt för resan till Lappland på en sida: de billigaste flygen från Helsingfors, en säng för i natt, stugor i hela Lappland och hyrbil på flygplatsen. Varje rad öppnar just det erbjudandet.",
       "note": "Priserna läses från partnernas flöden och sidor och ändras utan förvarning; partnerns sida har sista ordet. Bilder: Lomarengas. Flygpriser och flygbolagens märken: Travelpayouts. Hyrbilstotaler: EconomyBookings."
     },
     "list": {

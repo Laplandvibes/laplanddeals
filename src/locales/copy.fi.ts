@@ -237,8 +237,8 @@ const fi: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · päivittyy joka päivä",
-      "title": "Lapin edullisimmat mökit",
-      "lead": "Lapin mökit viikkohinnan mukaan, edullisin ensin. Avaa mökki, niin näet vapaat päivät ja voit varata sen Lomarenkaalta.",
+      "title": "Mökit Lapissa ja Rukalla",
+      "lead": "Mökkejä Levillä, Ylläksellä, Saariselällä ja muualla Lapissa sekä Rukalla. Avaa mökki, niin näet vapaat päivät ja valitsemiesi päivien hinnan Lomarenkaalla.",
       "weekFrom": "viikko alk.",
       "guests": "hlö",
       "lastMinute": "Äkkilähdöt Lapin mökkeihin",
@@ -247,7 +247,12 @@ const fi: SectionCopy = {
       "updated": "Syöte päivitetty {date}",
       "perWeek": "/viikko",
       "bedrooms": "mh",
-      "starsLabel": "Lomarengas-laatuluokka"
+      "starsLabel": "Lomarengas-laatuluokka",
+      "priceAt": "Hinta Lomarenkaalla",
+      "sortSmall": "Pienet",
+      "sortLarge": "Isot",
+      "colSmall": "Pienimmät ensin",
+      "colLarge": "Suurimmat ensin"
     },
     "cars": {
       "eyebrow": "EconomyBookings · tarkistettu {date}",
@@ -300,7 +305,7 @@ const fi: SectionCopy = {
     "sheet": {
       "kicker": "Lennot · hotellit · mökit · autot",
       "h2": "Tänään Lapissa",
-      "lead": "Kaikki Lapin matkaan samalla sivulla: halvimmat lennot Helsingistä, yöpaikka tälle yölle, mökit viikkohinnan mukaan ja vuokra-auto kentältä. Jokainen rivi avaa juuri sen tarjouksen.",
+      "lead": "Kaikki Lapin matkaan samalla sivulla: halvimmat lennot Helsingistä, yöpaikka tälle yölle, mökit eri puolilla Lappia ja vuokra-auto kentältä. Jokainen rivi avaa juuri sen tarjouksen.",
       "note": "Hinnat luetaan kumppanien syötteistä ja sivuilta, ja ne muuttuvat ilman varoitusta; kumppanin sivu sanoo viimeisen sanan. Kuvat: Lomarengas. Lentohinnat ja yhtiöiden merkit: Travelpayouts. Autojen kokonaishinnat: EconomyBookings."
     },
     "list": {

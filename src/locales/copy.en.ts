@@ -237,8 +237,8 @@ const en: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · updated daily",
-      "title": "Lapland’s lowest-priced cabins",
-      "lead": "Lapland cabins sorted by weekly price, lowest first. Open a cabin to see its free dates and book it on Lomarengas.",
+      "title": "Cabins in Lapland and Ruka",
+      "lead": "Cabins in Levi, Ylläs, Saariselkä and elsewhere in Lapland, plus Ruka. Open a cabin to see its free dates and the price for your dates on Lomarengas.",
       "weekFrom": "week from",
       "guests": "guests",
       "lastMinute": "Last-minute cabins in Lapland",
@@ -247,7 +247,12 @@ const en: SectionCopy = {
       "updated": "Feed updated {date}",
       "perWeek": "/week",
       "bedrooms": "bedrooms",
-      "starsLabel": "Lomarengas quality"
+      "starsLabel": "Lomarengas quality",
+      "priceAt": "Price on Lomarengas",
+      "sortSmall": "Smallest",
+      "sortLarge": "Largest",
+      "colSmall": "Smallest first",
+      "colLarge": "Largest first"
     },
     "cars": {
       "eyebrow": "EconomyBookings · checked {date}",
@@ -300,7 +305,7 @@ const en: SectionCopy = {
     "sheet": {
       "kicker": "Flights · Hotels · Cabins · Car hire",
       "h2": "Lapland today",
-      "lead": "Everything for a Lapland trip on one page: the cheapest flights from Helsinki, a bed for tonight, cabins by weekly price and car hire at the airport. Each row opens that exact offer.",
+      "lead": "Everything for a Lapland trip on one page: the cheapest flights from Helsinki, a bed for tonight, cabins across Lapland and car hire at the airport. Each row opens that exact offer.",
       "note": "Prices are read from partner feeds and pages and change without notice; the partner’s page has the final word. Photos: Lomarengas. Fares and carrier marks: Travelpayouts. Car totals: EconomyBookings."
     },
     "list": {

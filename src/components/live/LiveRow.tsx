@@ -44,6 +44,8 @@ export interface LiveRowProps {
   name: string;
   /** Fact units; Units renders the separators so a wrap can never orphan a dot. */
   facts: ReactNode[];
+  /** Empty when the source has no price we can stand behind (cabins since 26.9.2026): the unit
+   *  then carries a short "price on <partner>" line instead. */
   price: string;
   unit?: string;
   seen: string;
@@ -78,7 +80,7 @@ export default function LiveRow(p: LiveRowProps) {
         rel="sponsored nofollow noopener"
         onClick={() => trackAffiliateClick(p.partner, p.sid, p.href)}
         className="grid grid-cols-[6rem_minmax(0,1fr)] gap-x-3 gap-y-1.5 p-2.5 no-underline sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-x-4 sm:p-3 @2xl:grid-cols-[8rem_7rem_minmax(0,1fr)_auto] @2xl:items-center @2xl:gap-y-0"
-        aria-label={`${p.name}, ${p.price}${p.unit ? ' ' + p.unit : ''}`}
+        aria-label={[p.name, p.price, p.unit].filter(Boolean).join(', ')}
         data-live-row
       >
         {/* Media cell: the partner's own photo, the carrier's mark from the fare
@@ -145,7 +147,7 @@ export default function LiveRow(p: LiveRowProps) {
               German row past its own width (measured). In the 9 rem receipt
               column the unit always sits under the price. */}
           <div className="flex flex-wrap items-baseline gap-x-1.5 @2xl:flex-col @2xl:items-end @2xl:gap-0">
-            <span className="font-heading text-[1.9rem] leading-none text-deep-night whitespace-nowrap sm:text-[2.1rem]">{p.price}</span>
+            {p.price && <span className="font-heading text-[1.9rem] leading-none text-deep-night whitespace-nowrap sm:text-[2.1rem]">{p.price}</span>}
             {p.unit && <span className="whitespace-nowrap font-body text-sm font-medium text-deep-night/60 @2xl:mt-0.5 @2xl:text-xs">{p.unit}</span>}
           </div>
           <span className="btn-pink inline-flex min-h-11 min-w-[6rem] items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-semibold sm:px-5 @2xl:w-full">

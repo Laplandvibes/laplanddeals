@@ -237,8 +237,8 @@ const it: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · aggiornato ogni giorno",
-      "title": "Le baite più economiche della Lapponia",
-      "lead": "Baite in Lapponia ordinate per prezzo settimanale, dalla più economica. Apra una baita per vedere le date libere e prenotarla su Lomarengas.",
+      "title": "Baite in Lapponia e a Ruka",
+      "lead": "Baite a Levi, Ylläs, Saariselkä e altrove in Lapponia, oltre che a Ruka. Apra una baita per vedere le date libere e il prezzo per le Sue date su Lomarengas.",
       "weekFrom": "settimana da",
       "guests": "pers.",
       "lastMinute": "Baite last-minute in Lapponia",
@@ -247,7 +247,12 @@ const it: SectionCopy = {
       "updated": "Feed aggiornato il {date}",
       "perWeek": "/settimana",
       "bedrooms": "camere",
-      "starsLabel": "qualità Lomarengas"
+      "starsLabel": "qualità Lomarengas",
+      "priceAt": "Prezzo su Lomarengas",
+      "sortSmall": "Più piccole",
+      "sortLarge": "Più grandi",
+      "colSmall": "Prima le più piccole",
+      "colLarge": "Prima le più grandi"
     },
     "cars": {
       "eyebrow": "EconomyBookings · verificato il {date}",
@@ -300,7 +305,7 @@ const it: SectionCopy = {
     "sheet": {
       "kicker": "Voli · Hotel · Baite · Auto",
       "h2": "La Lapponia oggi",
-      "lead": "Tutto per il viaggio in Lapponia in una sola pagina: i voli più economici da Helsinki, un letto per stanotte, baite per prezzo settimanale e l’auto a noleggio in aeroporto. Ogni riga apre esattamente quell’offerta.",
+      "lead": "Tutto per il viaggio in Lapponia in una sola pagina: i voli più economici da Helsinki, un letto per stanotte, baite in tutta la Lapponia e l’auto a noleggio in aeroporto. Ogni riga apre esattamente quell’offerta.",
       "note": "I prezzi sono letti dai feed e dalle pagine dei partner e cambiano senza preavviso; la pagina del partner ha l’ultima parola. Foto: Lomarengas. Tariffe e loghi delle compagnie: Travelpayouts. Totali autonoleggio: EconomyBookings."
     },
     "list": {

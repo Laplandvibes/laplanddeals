@@ -237,8 +237,8 @@ const ja: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · 毎日更新",
-      "title": "ラップランドの格安コテージ",
-      "lead": "ラップランドのコテージを週料金の安い順に並べています。コテージを開くと空き日程を確認でき、Lomarengasで予約できます。",
+      "title": "ラップランドとルカのコテージ",
+      "lead": "レヴィ、ユッラス、サーリセルカなどラップランド各地とルカのコテージです。コテージを開くと、空き日程とご希望の日程の料金をLomarengasで確認できます。",
       "weekFrom": "1週間",
       "guests": "名",
       "lastMinute": "ラップランドの直前割コテージ",
@@ -247,7 +247,12 @@ const ja: SectionCopy = {
       "updated": "フィード更新 {date}",
       "perWeek": "/週",
       "bedrooms": "寝室",
-      "starsLabel": "Lomarengas品質"
+      "starsLabel": "Lomarengas品質",
+      "priceAt": "料金はLomarengasで",
+      "sortSmall": "小さい順",
+      "sortLarge": "大きい順",
+      "colSmall": "小さい順",
+      "colLarge": "大きい順"
     },
     "cars": {
       "eyebrow": "EconomyBookings · 確認日 {date}",
@@ -300,7 +305,7 @@ const ja: SectionCopy = {
     "sheet": {
       "kicker": "航空券 · ホテル · コテージ · レンタカー",
       "h2": "今日のラップランド",
-      "lead": "ラップランド旅行に必要なものをこのページにまとめました。ヘルシンキ発の最安航空券、今夜泊まれる宿、週料金順のコテージ、空港で借りるレンタカーです。各行を開くとそのオファーが表示されます。",
+      "lead": "ラップランド旅行に必要なものをこのページにまとめました。ヘルシンキ発の最安航空券、今夜泊まれる宿、ラップランド各地のコテージ、空港で借りるレンタカーです。各行を開くとそのオファーが表示されます。",
       "note": "価格はパートナーのフィードやページから読み取ったもので、予告なく変わります。最終的な価格はパートナーのページが決めます。写真：Lomarengas。航空運賃と航空会社のロゴ：Travelpayouts。レンタカー総額：EconomyBookings。"
     },
     "list": {

@@ -237,8 +237,8 @@ const ptBR: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · atualizado todo dia",
-      "title": "As cabanas mais em conta da Lapônia",
-      "lead": "Cabanas da Lapônia ordenadas pelo preço semanal, da mais barata para a mais cara. Abra uma cabana para ver as datas livres e reservar na Lomarengas.",
+      "title": "Cabanas na Lapônia e em Ruka",
+      "lead": "Cabanas em Levi, Ylläs, Saariselkä e outros lugares da Lapônia, além de Ruka. Abra uma cabana para ver as datas livres e o preço para as suas datas na Lomarengas.",
       "weekFrom": "semana a partir de",
       "guests": "pessoas",
       "lastMinute": "Cabanas de última hora na Lapônia",
@@ -247,7 +247,12 @@ const ptBR: SectionCopy = {
       "updated": "Feed atualizado em {date}",
       "perWeek": "/semana",
       "bedrooms": "quartos",
-      "starsLabel": "qualidade Lomarengas"
+      "starsLabel": "qualidade Lomarengas",
+      "priceAt": "Preço na Lomarengas",
+      "sortSmall": "Menores",
+      "sortLarge": "Maiores",
+      "colSmall": "Menores primeiro",
+      "colLarge": "Maiores primeiro"
     },
     "cars": {
       "eyebrow": "EconomyBookings · verificado em {date}",
@@ -300,7 +305,7 @@ const ptBR: SectionCopy = {
     "sheet": {
       "kicker": "Voos · Hotéis · Cabanas · Carros",
       "h2": "Lapônia hoje",
-      "lead": "Tudo para a sua viagem à Lapônia em uma só página: os voos mais baratos saindo de Helsinque, uma cama para hoje à noite, cabanas pelo preço semanal e carro alugado no aeroporto. Cada linha abre exatamente essa oferta.",
+      "lead": "Tudo para a sua viagem à Lapônia em uma só página: os voos mais baratos saindo de Helsinque, uma cama para hoje à noite, cabanas em toda a Lapônia e carro alugado no aeroporto. Cada linha abre exatamente essa oferta.",
       "note": "Os preços são lidos dos feeds e páginas dos parceiros e mudam sem aviso; a página do parceiro tem a palavra final. Fotos: Lomarengas. Tarifas e marcas das companhias: Travelpayouts. Totais de carros: EconomyBookings."
     },
     "list": {

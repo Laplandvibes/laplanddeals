@@ -237,8 +237,8 @@ const nl: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · dagelijks bijgewerkt",
-      "title": "De goedkoopste hutten in Lapland",
-      "lead": "Hutten in Lapland gesorteerd op weekprijs, de goedkoopste eerst. Open een hut om de vrije data te zien en te boeken bij Lomarengas.",
+      "title": "Hutten in Lapland en Ruka",
+      "lead": "Hutten in Levi, Ylläs, Saariselkä en elders in Lapland, plus Ruka. Open een hut om de vrije data en de prijs voor uw data bij Lomarengas te zien.",
       "weekFrom": "week vanaf",
       "guests": "pers.",
       "lastMinute": "Last-minute hutten in Lapland",
@@ -247,7 +247,12 @@ const nl: SectionCopy = {
       "updated": "Feed ververst op {date}",
       "perWeek": "/week",
       "bedrooms": "slaapkamers",
-      "starsLabel": "Lomarengas-kwaliteit"
+      "starsLabel": "Lomarengas-kwaliteit",
+      "priceAt": "Prijs bij Lomarengas",
+      "sortSmall": "Kleinste",
+      "sortLarge": "Grootste",
+      "colSmall": "Kleinste eerst",
+      "colLarge": "Grootste eerst"
     },
     "cars": {
       "eyebrow": "EconomyBookings · gecontroleerd op {date}",
@@ -300,7 +305,7 @@ const nl: SectionCopy = {
     "sheet": {
       "kicker": "Vluchten · Hotels · Hutten · Huurauto’s",
       "h2": "Lapland vandaag",
-      "lead": "Alles voor uw reis naar Lapland op één pagina: de goedkoopste vluchten vanaf Helsinki, een bed voor vannacht, hutten op weekprijs en een huurauto op de luchthaven. Elke rij opent precies dat aanbod.",
+      "lead": "Alles voor uw reis naar Lapland op één pagina: de goedkoopste vluchten vanaf Helsinki, een bed voor vannacht, hutten in heel Lapland en een huurauto op de luchthaven. Elke rij opent precies dat aanbod.",
       "note": "Prijzen worden gelezen uit feeds en pagina’s van partners en veranderen zonder bericht; de partnerpagina heeft het laatste woord. Foto’s: Lomarengas. Tarieven en luchtvaartlogo’s: Travelpayouts. Totaalprijzen huurauto: EconomyBookings."
     },
     "list": {

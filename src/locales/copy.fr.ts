@@ -237,8 +237,8 @@ const fr: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · mis à jour chaque jour",
-      "title": "Les chalets les moins chers de Laponie",
-      "lead": "Des chalets en Laponie classés par prix à la semaine, du moins cher au plus cher. Ouvrez un chalet pour voir ses dates libres et le réserver sur Lomarengas.",
+      "title": "Chalets en Laponie et à Ruka",
+      "lead": "Des chalets à Levi, Ylläs, Saariselkä et ailleurs en Laponie, ainsi qu’à Ruka. Ouvrez un chalet pour voir ses dates libres et le prix pour vos dates sur Lomarengas.",
       "weekFrom": "semaine dès",
       "guests": "pers.",
       "lastMinute": "Chalets de dernière minute en Laponie",
@@ -247,7 +247,12 @@ const fr: SectionCopy = {
       "updated": "Flux mis à jour le {date}",
       "perWeek": "/semaine",
       "bedrooms": "chambres",
-      "starsLabel": "qualité Lomarengas"
+      "starsLabel": "qualité Lomarengas",
+      "priceAt": "Prix sur Lomarengas",
+      "sortSmall": "Plus petits",
+      "sortLarge": "Plus grands",
+      "colSmall": "Les plus petits d’abord",
+      "colLarge": "Les plus grands d’abord"
     },
     "cars": {
       "eyebrow": "EconomyBookings · vérifié le {date}",
@@ -300,7 +305,7 @@ const fr: SectionCopy = {
     "sheet": {
       "kicker": "Vols · Hôtels · Chalets · Voitures",
       "h2": "La Laponie aujourd’hui",
-      "lead": "Tout votre voyage en Laponie sur une seule page : les vols les moins chers au départ d’Helsinki, un lit pour ce soir, des chalets classés par prix à la semaine et une voiture à l’aéroport. Chaque ligne ouvre exactement cette offre.",
+      "lead": "Tout votre voyage en Laponie sur une seule page : les vols les moins chers au départ d’Helsinki, un lit pour ce soir, des chalets dans toute la Laponie et une voiture à l’aéroport. Chaque ligne ouvre exactement cette offre.",
       "note": "Les prix sont lus dans les flux et pages des partenaires et changent sans préavis ; la page du partenaire a le dernier mot. Photos : Lomarengas. Tarifs et logos des compagnies : Travelpayouts. Totaux de location : EconomyBookings."
     },
     "list": {

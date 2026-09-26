@@ -237,8 +237,8 @@ const zhCN: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · 每日更新",
-      "title": "拉普兰最实惠的木屋",
-      "lead": "拉普兰木屋按周价格从低到高排列。打开木屋即可查看空闲日期，并在Lomarengas预订。",
+      "title": "拉普兰和鲁卡的木屋",
+      "lead": "列维、于莱斯、萨利色尔卡等拉普兰各地以及鲁卡的木屋。打开木屋即可在Lomarengas查看空闲日期和您所选日期的价格。",
       "weekFrom": "每周",
       "guests": "人",
       "lastMinute": "拉普兰最后一刻木屋",
@@ -247,7 +247,12 @@ const zhCN: SectionCopy = {
       "updated": "数据更新于 {date}",
       "perWeek": "/周",
       "bedrooms": "间卧室",
-      "starsLabel": "Lomarengas品质"
+      "starsLabel": "Lomarengas品质",
+      "priceAt": "价格见Lomarengas",
+      "sortSmall": "从小到大",
+      "sortLarge": "从大到小",
+      "colSmall": "从小到大",
+      "colLarge": "从大到小"
     },
     "cars": {
       "eyebrow": "EconomyBookings · 核对于 {date}",
@@ -300,7 +305,7 @@ const zhCN: SectionCopy = {
     "sheet": {
       "kicker": "航班 · 酒店 · 木屋 · 租车",
       "h2": "今日拉普兰",
-      "lead": "拉普兰之旅所需尽在本页：赫尔辛基出发的最便宜航班、今晚的住处、按周价格排列的木屋，以及机场租车。打开任意一行即可看到该优惠。",
+      "lead": "拉普兰之旅所需尽在本页：赫尔辛基出发的最便宜航班、今晚的住处、拉普兰各地的木屋，以及机场租车。打开任意一行即可看到该优惠。",
       "note": "价格读取自合作伙伴的数据和页面，随时可能变动；以合作伙伴页面为准。照片：Lomarengas。机票价格与航空公司标志：Travelpayouts。租车总价：EconomyBookings。"
     },
     "list": {

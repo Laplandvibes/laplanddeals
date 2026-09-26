@@ -237,8 +237,8 @@ const es: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · actualizado a diario",
-      "title": "Las cabañas más económicas de Laponia",
-      "lead": "Cabañas de Laponia ordenadas por precio semanal, de menor a mayor. Abra una cabaña para ver las fechas libres y reservarla en Lomarengas.",
+      "title": "Cabañas en Laponia y Ruka",
+      "lead": "Cabañas en Levi, Ylläs, Saariselkä y otros lugares de Laponia, además de Ruka. Abra una cabaña para ver las fechas libres y el precio para sus fechas en Lomarengas.",
       "weekFrom": "semana desde",
       "guests": "pers.",
       "lastMinute": "Cabañas de última hora en Laponia",
@@ -247,7 +247,12 @@ const es: SectionCopy = {
       "updated": "Feed actualizado el {date}",
       "perWeek": "/semana",
       "bedrooms": "dormitorios",
-      "starsLabel": "calidad Lomarengas"
+      "starsLabel": "calidad Lomarengas",
+      "priceAt": "Precio en Lomarengas",
+      "sortSmall": "Más pequeñas",
+      "sortLarge": "Más grandes",
+      "colSmall": "Más pequeñas primero",
+      "colLarge": "Más grandes primero"
     },
     "cars": {
       "eyebrow": "EconomyBookings · comprobado el {date}",
@@ -300,7 +305,7 @@ const es: SectionCopy = {
     "sheet": {
       "kicker": "Vuelos · Hoteles · Cabañas · Coches",
       "h2": "Laponia hoy",
-      "lead": "Todo para su viaje a Laponia en una sola página: los vuelos más baratos desde Helsinki, una cama para esta noche, cabañas por precio semanal y coche de alquiler en el aeropuerto. Cada fila abre exactamente esa oferta.",
+      "lead": "Todo para su viaje a Laponia en una sola página: los vuelos más baratos desde Helsinki, una cama para esta noche, cabañas en toda Laponia y coche de alquiler en el aeropuerto. Cada fila abre exactamente esa oferta.",
       "note": "Los precios se leen de los feeds y páginas de los socios y cambian sin aviso; la página del socio tiene la última palabra. Fotos: Lomarengas. Tarifas y marcas de aerolíneas: Travelpayouts. Totales de coches: EconomyBookings."
     },
     "list": {

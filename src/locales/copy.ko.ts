@@ -237,8 +237,8 @@ const ko: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · 매일 갱신",
-      "title": "라플란드의 저렴한 통나무집",
-      "lead": "라플란드 통나무집을 주간 요금이 낮은 순으로 정렬했습니다. 통나무집을 열면 예약 가능한 날짜를 확인하고 Lomarengas에서 예약할 수 있습니다.",
+      "title": "라플란드와 루카의 통나무집",
+      "lead": "레비, 윌래스, 사리셀카 등 라플란드 곳곳과 루카의 통나무집입니다. 통나무집을 열면 Lomarengas에서 예약 가능한 날짜와 선택한 날짜의 가격을 확인할 수 있습니다.",
       "weekFrom": "1주",
       "guests": "명",
       "lastMinute": "라플란드 막판 특가 통나무집",
@@ -247,7 +247,12 @@ const ko: SectionCopy = {
       "updated": "피드 갱신 {date}",
       "perWeek": "/주",
       "bedrooms": "침실",
-      "starsLabel": "Lomarengas 등급"
+      "starsLabel": "Lomarengas 등급",
+      "priceAt": "가격은 Lomarengas에서",
+      "sortSmall": "작은 순",
+      "sortLarge": "큰 순",
+      "colSmall": "작은 순",
+      "colLarge": "큰 순"
     },
     "cars": {
       "eyebrow": "EconomyBookings · 확인일 {date}",
@@ -300,7 +305,7 @@ const ko: SectionCopy = {
     "sheet": {
       "kicker": "항공편 · 호텔 · 통나무집 · 렌터카",
       "h2": "오늘의 라플란드",
-      "lead": "라플란드 여행에 필요한 것을 한 페이지에 모았습니다. 헬싱키 출발 최저가 항공편, 오늘 밤 묵을 곳, 주간 요금순 통나무집, 공항 렌터카까지 있습니다. 각 줄을 열면 해당 상품이 나옵니다.",
+      "lead": "라플란드 여행에 필요한 것을 한 페이지에 모았습니다. 헬싱키 출발 최저가 항공편, 오늘 밤 묵을 곳, 라플란드 곳곳의 통나무집, 공항 렌터카까지 있습니다. 각 줄을 열면 해당 상품이 나옵니다.",
       "note": "가격은 파트너의 피드와 페이지에서 읽어오며 예고 없이 바뀝니다. 최종 가격은 파트너 페이지가 정합니다. 사진: Lomarengas. 항공 요금과 항공사 로고: Travelpayouts. 렌터카 총액: EconomyBookings."
     },
     "list": {

@@ -237,8 +237,8 @@ const de: SectionCopy = {
     },
     "cabins": {
       "eyebrow": "Lomarengas · täglich aktualisiert",
-      "title": "Die günstigsten Hütten in Lappland",
-      "lead": "Hütten in Lappland nach Wochenpreis, die günstigste zuerst. Öffnen Sie eine Hütte, um freie Termine zu sehen und bei Lomarengas zu buchen.",
+      "title": "Hütten in Lappland und Ruka",
+      "lead": "Hütten in Levi, Ylläs, Saariselkä und anderswo in Lappland, dazu in Ruka. Öffnen Sie eine Hütte, um freie Termine und den Preis für Ihre Daten bei Lomarengas zu sehen.",
       "weekFrom": "Woche ab",
       "guests": "Pers.",
       "lastMinute": "Last-Minute-Hütten in Lappland",
@@ -247,7 +247,12 @@ const de: SectionCopy = {
       "updated": "Feed aktualisiert {date}",
       "perWeek": "/Woche",
       "bedrooms": "Schlafzimmer",
-      "starsLabel": "Lomarengas-Qualität"
+      "starsLabel": "Lomarengas-Qualität",
+      "priceAt": "Preis bei Lomarengas",
+      "sortSmall": "Kleinste",
+      "sortLarge": "Größte",
+      "colSmall": "Kleinste zuerst",
+      "colLarge": "Größte zuerst"
     },
     "cars": {
       "eyebrow": "EconomyBookings · geprüft {date}",
@@ -300,7 +305,7 @@ const de: SectionCopy = {
     "sheet": {
       "kicker": "Flüge · Hotels · Hütten · Mietwagen",
       "h2": "Lappland heute",
-      "lead": "Alles für die Lappland-Reise auf einer Seite: die günstigsten Flüge ab Helsinki, ein Bett für heute Nacht, Hütten nach Wochenpreis und ein Mietwagen am Flughafen. Jede Zeile öffnet genau dieses Angebot.",
+      "lead": "Alles für die Lappland-Reise auf einer Seite: die günstigsten Flüge ab Helsinki, ein Bett für heute Nacht, Hütten in ganz Lappland und ein Mietwagen am Flughafen. Jede Zeile öffnet genau dieses Angebot.",
       "note": "Preise werden aus Partner-Feeds und -Seiten gelesen und ändern sich ohne Ankündigung; die Partnerseite hat das letzte Wort. Fotos: Lomarengas. Flugpreise und Airline-Marken: Travelpayouts. Mietwagen-Gesamtpreise: EconomyBookings."
     },
     "list": {
