@@ -176,7 +176,7 @@ const en: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Why we do not sell a sealed package',
-    introP1: 'A packaged Lapland week bundles a flight, a hotel and two activities behind one price, and the bundle is where the margin hides. We list the same building blocks separately: the flight, the stay, the husky day, the aurora evening. You book each at the partner\'s live rate, and nobody adds a layer on top.',
+    introP1: 'A packaged Lapland week bundles a flight, a hotel and two activities behind one price. We list the same building blocks separately: the flight, the stay, the husky day, the aurora evening. You book each at the partner\'s live rate, so you see what each part costs.',
     introP2: 'Most trips settle at four to seven nights, which is long enough for two or three big activities plus the weather flexibility that aurora hunting needs. Build from the stay outwards: the bed decides which airport is right and which activities are within reach, not the other way round.',
     eyebrow: 'Packages',
     h1Italic: 'Build your own',
@@ -212,7 +212,7 @@ const en: SectionCopy = {
       },
       {
         title: 'Lapland is wide open',
-        body: 'Same fells, same lakes, same wilderness, without the package-tour markup.',
+        body: 'Same fells, same lakes, same wilderness.',
       },
       {
         title: 'Daylight is endless',

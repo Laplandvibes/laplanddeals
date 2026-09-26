@@ -176,7 +176,7 @@ const fi: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Miksi emme myy valmista pakettia',
-    introP1: 'Valmis Lapin viikko niputtaa lennon, hotellin ja kaksi ohjelmaa yhden hinnan taakse, ja juuri niputuksessa kate piilee. Me listaamme samat rakennuspalikat erikseen: lennon, majoituksen, huskypäivän, revontuli-illan. Varaat jokaisen kumppanin livehinnalla, eikä kukaan lisää päälle omaa kerrostaan.',
+    introP1: 'Valmis Lapin viikko niputtaa lennon, hotellin ja kaksi ohjelmaa yhden hinnan taakse. Me listaamme samat rakennuspalikat erikseen: lennon, majoituksen, huskypäivän, revontuli-illan. Varaat jokaisen kumppanin livehinnalla, joten näet, mitä kukin osa maksaa.',
     introP2: 'Useimmat matkat ovat neljästä seitsemään yötä, mikä riittää kahteen tai kolmeen isoon ohjelmaan ja siihen säävaraan, jota revontulien jahtaaminen vaatii. Rakenna majoituksesta ulospäin: vuode ratkaisee, mikä lentokenttä on oikea ja mitkä ohjelmat ovat ulottuvilla, eikä toisin päin.',
     eyebrow: 'Matkapaketit',
     h1Italic: 'Rakenna oma',
@@ -212,7 +212,7 @@ const fi: SectionCopy = {
       },
       {
         title: 'Lappi on auki sinulle',
-        body: 'Samat tunturit, samat järvet, sama erämaa, ilman pakettimatkan välityspalkkiota.',
+        body: 'Samat tunturit, samat järvet, sama erämaa.',
       },
       {
         title: 'Valoisaa ympäri vuorokauden',

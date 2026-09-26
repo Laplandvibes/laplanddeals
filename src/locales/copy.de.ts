@@ -176,7 +176,7 @@ const de: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Warum wir kein fertiges Paket verkaufen',
-    introP1: 'Eine paketierte Lapplandwoche bündelt Flug, Hotel und zwei Aktivitäten hinter einem Preis, und genau im Bündel versteckt sich die Marge. Wir listen dieselben Bausteine einzeln: den Flug, die Unterkunft, den Huskytag, den Polarlichtabend. Sie buchen jeden zum Live-Tarif des Partners, und niemand legt eine eigene Schicht darüber.',
+    introP1: 'Eine paketierte Lapplandwoche bündelt Flug, Hotel und zwei Aktivitäten hinter einem Preis. Wir listen dieselben Bausteine einzeln: den Flug, die Unterkunft, den Huskytag, den Polarlichtabend. Sie buchen jeden zum Live-Tarif des Partners und sehen so, was jeder Teil kostet.',
     introP2: 'Die meisten Reisen pendeln sich bei vier bis sieben Nächten ein, genug für zwei oder drei große Aktivitäten plus den Wetterpuffer, den die Polarlichtjagd braucht. Bauen Sie von der Unterkunft nach außen: Das Bett entscheidet, welcher Flughafen richtig ist und welche Aktivitäten in Reichweite liegen, nicht umgekehrt.',
     eyebrow: 'Pakete',
     h1Italic: 'Bauen Sie Ihre eigene',
@@ -212,7 +212,7 @@ const de: SectionCopy = {
       },
       {
         title: 'Lappland steht Ihnen offen',
-        body: 'Dieselben Fjells, dieselben Seen, dieselbe Wildnis, ohne den Pauschalreise-Aufschlag.',
+        body: 'Dieselben Fjells, dieselben Seen, dieselbe Wildnis.',
       },
       {
         title: 'Endloses Tageslicht',

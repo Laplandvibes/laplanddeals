@@ -176,7 +176,7 @@ const ptBR: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Por que não vendemos pacote fechado',
-    introP1: 'Uma semana na Lapônia empacotada junta voo, hotel e duas atividades atrás de um preço só, e é no pacote que a margem se esconde. Nós listamos os mesmos blocos separadamente: o voo, a hospedagem, o dia de husky, a noite de aurora. Você reserva cada um pela tarifa ao vivo do parceiro, e ninguém acrescenta uma camada por cima.',
+    introP1: 'Uma semana na Lapônia empacotada junta voo, hotel e duas atividades atrás de um preço só. Nós listamos os mesmos blocos separadamente: o voo, a hospedagem, o dia de husky, a noite de aurora. Você reserva cada um pela tarifa ao vivo do parceiro, e assim vê quanto custa cada parte.',
     introP2: 'A maioria das viagens se acomoda entre quatro e sete noites, o bastante para duas ou três atividades grandes mais a folga de clima que a caça à aurora exige. Construa a partir da hospedagem: é a cama que decide qual aeroporto faz sentido e quais atividades ficam ao alcance, não o contrário.',
     eyebrow: 'Pacotes',
     h1Italic: 'Monte a sua',
@@ -212,7 +212,7 @@ const ptBR: SectionCopy = {
       },
       {
         title: 'A Lapônia fica totalmente aberta',
-        body: 'As mesmas montanhas, os mesmos lagos, a mesma natureza, sem a margem do pacote turístico.',
+        body: 'As mesmas montanhas, os mesmos lagos, a mesma natureza.',
       },
       {
         title: 'A luz do dia é infinita',

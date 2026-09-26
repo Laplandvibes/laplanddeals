@@ -176,7 +176,7 @@ const nl: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Waarom wij geen kant-en-klaar pakket verkopen',
-    introP1: 'Een verpakte Laplandweek bundelt een vlucht, een hotel en twee activiteiten achter één prijs, en in die bundel zit de marge verstopt. Wij zetten dezelfde bouwstenen los neer: de vlucht, het verblijf, de huskydag, de noorderlichtavond. U boekt elk tegen het livetarief van de partner, en niemand legt er een eigen laag overheen.',
+    introP1: 'Een verpakte Laplandweek bundelt een vlucht, een hotel en twee activiteiten achter één prijs. Wij zetten dezelfde bouwstenen los neer: de vlucht, het verblijf, de huskydag, de noorderlichtavond. U boekt elk tegen het livetarief van de partner, zodat u ziet wat elk onderdeel kost.',
     introP2: 'De meeste reizen komen uit op vier tot zeven nachten, genoeg voor twee of drie grote activiteiten plus de weersmarge die noorderlichtjacht vraagt. Bouw vanaf het verblijf naar buiten: het bed bepaalt welke luchthaven klopt en welke activiteiten binnen bereik liggen, niet andersom.',
     eyebrow: 'Pakketten',
     h1Italic: 'Stel uw eigen',
@@ -212,7 +212,7 @@ const nl: SectionCopy = {
       },
       {
         title: 'Heel Lapland is van u',
-        body: 'Dezelfde fjälls, meren en wildernis, zonder de marge van pakketreizen.',
+        body: 'Dezelfde fjälls, meren en wildernis.',
       },
       {
         title: 'Eindeloos daglicht',

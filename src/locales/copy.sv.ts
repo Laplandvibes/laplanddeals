@@ -180,7 +180,7 @@ const sv: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Varför vi inte säljer ett färdigt paket',
-    introP1: 'En paketerad Lapplandsvecka buntar ihop flyg, hotell och två aktiviteter bakom ett pris, och det är i bunten marginalen gömmer sig. Vi listar samma byggstenar var för sig: flyget, boendet, hunddagen, norrskenskvällen. Du bokar var och en till partnerns livepris, och ingen lägger på ett eget lager.',
+    introP1: 'En paketerad Lapplandsvecka buntar ihop flyg, hotell och två aktiviteter bakom ett pris. Vi listar samma byggstenar var för sig: flyget, boendet, hunddagen, norrskenskvällen. Du bokar var och en till partnerns livepris, så att du ser vad varje del kostar.',
     introP2: 'De flesta resor landar på fyra till sju nätter, vilket räcker till två eller tre stora aktiviteter plus den vädermarginal som norrskensjakt kräver. Bygg utifrån boendet: sängen avgör vilken flygplats som är rätt och vilka aktiviteter som ligger inom räckhåll, inte tvärtom.',
     eyebrow: 'Paket',
     h1Italic: 'Bygg din egen',
@@ -216,7 +216,7 @@ const sv: SectionCopy = {
       },
       {
         title: 'Lappland står vidöppet',
-        body: 'Samma fjäll, samma sjöar, samma vildmark, utan påslaget för paketresor.',
+        body: 'Samma fjäll, samma sjöar, samma vildmark.',
       },
       {
         title: 'Dagsljuset är oändligt',

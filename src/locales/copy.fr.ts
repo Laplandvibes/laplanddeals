@@ -176,7 +176,7 @@ const fr: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Pourquoi nous ne vendons pas de forfait tout compris',
-    introP1: 'Une semaine en Laponie vendue en forfait regroupe un vol, un hôtel et deux activités derrière un seul prix, et c\'est dans le regroupement que se cache la marge. Nous listons les mêmes briques séparément : le vol, l\'hébergement, la journée en traîneau, la soirée aurores. Vous réservez chacune au tarif en direct du partenaire, et personne n\'ajoute sa couche par-dessus.',
+    introP1: 'Une semaine en Laponie vendue en forfait regroupe un vol, un hôtel et deux activités derrière un seul prix. Nous listons les mêmes briques séparément : le vol, l\'hébergement, la journée en traîneau, la soirée aurores. Vous réservez chacune au tarif en direct du partenaire, et vous voyez ainsi ce que coûte chaque élément.',
     introP2: 'La plupart des séjours se stabilisent entre quatre et sept nuits, assez pour deux ou trois grosses activités plus la marge météo qu\'exige la chasse aux aurores. Construisez à partir de l\'hébergement : c\'est le lit qui décide de l\'aéroport pertinent et des activités à portée, pas l\'inverse.',
     eyebrow: 'Forfaits',
     h1Italic: 'Composez votre',
@@ -212,7 +212,7 @@ const fr: SectionCopy = {
       },
       {
         title: 'Toute la Laponie est à vous',
-        body: 'Mêmes collines, mêmes lacs, mêmes étendues sauvages, sans la marge des voyages organisés.',
+        body: 'Mêmes collines, mêmes lacs, mêmes étendues sauvages.',
       },
       {
         title: 'Lumière sans fin',

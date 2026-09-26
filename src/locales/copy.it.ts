@@ -176,7 +176,7 @@ const it: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Perché non vendiamo un pacchetto chiuso',
-    introP1: 'Una settimana in Lapponia venduta come pacchetto mette volo, hotel e due attività dietro un unico prezzo, ed è proprio nel pacchetto che si nasconde il margine. Noi elenchiamo gli stessi mattoni separatamente: il volo, il soggiorno, la giornata con gli husky, la serata aurora. Lei prenota ciascuno alla tariffa in tempo reale del partner, e nessuno aggiunge uno strato sopra.',
+    introP1: 'Una settimana in Lapponia venduta come pacchetto mette volo, hotel e due attività dietro un unico prezzo. Noi elenchiamo gli stessi mattoni separatamente: il volo, il soggiorno, la giornata con gli husky, la serata aurora. Lei prenota ciascuno alla tariffa in tempo reale del partner, e così vede quanto costa ogni parte.',
     introP2: 'La maggior parte dei viaggi si assesta fra quattro e sette notti, abbastanza per due o tre attività grandi più il margine meteo che la caccia all\'aurora richiede. Costruisca partendo dall\'alloggio: è il letto a decidere quale aeroporto ha senso e quali attività sono a portata, non il contrario.',
     eyebrow: 'Pacchetti',
     h1Italic: 'Componga il Suo',
@@ -212,7 +212,7 @@ const it: SectionCopy = {
       },
       {
         title: 'Tutta la Lapponia è Sua',
-        body: 'Le stesse colline, gli stessi laghi, la stessa natura selvaggia, senza la maggiorazione dei viaggi organizzati.',
+        body: 'Le stesse colline, gli stessi laghi, la stessa natura selvaggia.',
       },
       {
         title: 'Luce infinita',

@@ -176,7 +176,7 @@ const es: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Por qué no vendemos un paquete cerrado',
-    introP1: 'Un paquete de una semana en Laponia agrupa un vuelo, un hotel y dos actividades detrás de un solo precio, y es en la agrupación donde se esconde el margen. Nosotros listamos las mismas piezas por separado: el vuelo, el alojamiento, el día de huskies, la noche de auroras. Usted reserva cada una a la tarifa en vivo del socio, y nadie añade una capa encima.',
+    introP1: 'Un paquete de una semana en Laponia agrupa un vuelo, un hotel y dos actividades detrás de un solo precio. Nosotros listamos las mismas piezas por separado: el vuelo, el alojamiento, el día de huskies, la noche de auroras. Usted reserva cada una a la tarifa en vivo del socio, y así ve lo que cuesta cada parte.',
     introP2: 'La mayoría de los viajes se asientan entre cuatro y siete noches, suficiente para dos o tres actividades grandes más el margen meteorológico que exige la caza de auroras. Construya desde el alojamiento hacia fuera: la cama decide qué aeropuerto encaja y qué actividades quedan a mano, no al revés.',
     eyebrow: 'Paquetes',
     h1Italic: 'Construya su propio',
@@ -212,7 +212,7 @@ const es: SectionCopy = {
       },
       {
         title: 'Laponia está abierta de par en par',
-        body: 'Los mismos montes, los mismos lagos, la misma naturaleza, sin el recargo del paquete turístico.',
+        body: 'Los mismos montes, los mismos lagos, la misma naturaleza.',
       },
       {
         title: 'La luz del día no acaba',
