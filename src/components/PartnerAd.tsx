@@ -77,7 +77,7 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
       'zh-CN': '芬兰最大的小屋预订网络，直接从源头预订一座真正的拉普兰小屋。',
       ko: '핀란드 최대 코티지 네트워크. 진짜 라플란드 캐빈을 산지에서 직접 예약하세요.',
       fr: 'Le plus grand réseau de chalets de Finlande. Réservez un vrai chalet de Laponie à la source.',
-      it: 'La più grande rete di cottage della Finlandia: prenota una vera baita lappone alla fonte.',
+      it: 'La più grande rete di cottage della Finlandia: prenota alla fonte una vera baita in Lapponia.',
       nl: "Het grootste hutten­netwerk van Finland. Boek een echte Laplandse hut rechtstreeks bij de bron.",
       sv: 'Finlands största stugnätverk. Boka en riktig stuga i Lappland direkt hos källan.',
     },

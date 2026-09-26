@@ -149,7 +149,7 @@ const fr: SectionCopy = {
     bottomCta: 'Toutes les activités de Laponie →',
   },
   flightsPage: {
-    introTitle: 'Vers quel aéroport lapon voler réellement',
+    introTitle: 'Vers quel aéroport de Laponie voler réellement',
     introP1: 'Depuis Helsinki, il y a quatre portes pratiques, et la bonne se décide par l\'endroit où vous dormez, pas par le prix du billet. Rovaniemi dessert la ville elle-même, l\'Ounasvaara et la route de l\'est. Kittilä est le transfert court vers Levi et Ylläs. Ivalo couvre Saariselkä et Inari, le grand nord. Kuusamo est celui de Ruka.',
     introP2: 'Le vol lui-même dure environ une heure et demie : un billet moins cher vers le mauvais aéroport peut donc vous coûter deux heures de route à l\'arrivée. Les tarifs sont récupérés en direct chez le partenaire plutôt que stockés, et les lignes sont opérées par Finnair et Norwegian.',
     eyebrow: 'Vols',
@@ -166,7 +166,7 @@ const fr: SectionCopy = {
   },
   carsPage: {
     introTitle: 'Ce qu\'une voiture de location doit vraiment avoir en Laponie',
-    introP1: 'Deux choses décident si une voiture tient ici, et aucune n\'est le logo sur le capot : les pneus et la garde au sol. Les véhicules d\'hiver loués dans les aéroports lapons sont équipés pour les conditions, cloutés là où le loueur le précise ; le vrai choix porte donc sur la taille. Une petite voiture suffit sur les axes entre les villes ; un 4x4 justifie son prix sur les routes secondaires non déneigées et les accès aux chalets.',
+    introP1: 'Deux choses décident si une voiture tient ici, et aucune n\'est le logo sur le capot : les pneus et la garde au sol. Les véhicules d\'hiver loués dans les aéroports de Laponie sont équipés pour les conditions, cloutés là où le loueur le précise ; le vrai choix porte donc sur la taille. Une petite voiture suffit sur les axes entre les villes ; un 4x4 justifie son prix sur les routes secondaires non déneigées et les accès aux chalets.',
     introP2: 'La prise en charge se fait à Rovaniemi, Kittilä, Ivalo et Kuusamo, ce qui couvre toutes les portes de la page vols, et la location en aller simple fonctionne entre la plupart des aéroports finlandais si vous voulez arriver et repartir de villes différentes. Les prix viennent en direct du partenaire : vous voyez le tarif du jour, pas une vieille capture.',
     eyebrow: 'Location de voitures',
     h1Italic: 'Voitures prêtes pour l\'hiver',
@@ -182,7 +182,7 @@ const fr: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Pourquoi nous ne vendons pas de forfait tout compris',
-    introP1: 'Une semaine lapone packagée regroupe un vol, un hôtel et deux activités derrière un seul prix, et c\'est dans le regroupement que se cache la marge. Nous listons les mêmes briques séparément : le vol, l\'hébergement, la journée en traîneau, la soirée aurores. Vous réservez chacune au tarif en direct du partenaire, et personne n\'ajoute sa couche par-dessus.',
+    introP1: 'Une semaine en Laponie vendue en forfait regroupe un vol, un hôtel et deux activités derrière un seul prix, et c\'est dans le regroupement que se cache la marge. Nous listons les mêmes briques séparément : le vol, l\'hébergement, la journée en traîneau, la soirée aurores. Vous réservez chacune au tarif en direct du partenaire, et personne n\'ajoute sa couche par-dessus.',
     introP2: 'La plupart des séjours se stabilisent entre quatre et sept nuits, assez pour deux ou trois grosses activités plus la marge météo qu\'exige la chasse aux aurores. Construisez à partir de l\'hébergement : c\'est le lit qui décide de l\'aéroport pertinent et des activités à portée, pas l\'inverse.',
     eyebrow: 'Forfaits',
     h1Italic: 'Composez votre',

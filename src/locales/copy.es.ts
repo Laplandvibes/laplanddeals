@@ -166,7 +166,7 @@ const es: SectionCopy = {
   },
   carsPage: {
     introTitle: 'Qué necesita de verdad un coche de alquiler en Laponia',
-    introP1: 'Dos cosas deciden si un coche sirve aquí arriba, y ninguna es el logotipo del capó: los neumáticos y la altura libre al suelo. Los coches de invierno de los aeropuertos lapones vienen preparados para las condiciones, con clavos donde el proveedor lo indica, así que la elección relevante es el tamaño. Un coche pequeño basta en las carreteras principales entre pueblos; un 4x4 justifica su precio en las secundarias sin quitanieves y en los accesos a las cabañas.',
+    introP1: 'Dos cosas deciden si un coche sirve aquí arriba, y ninguna es el logotipo del capó: los neumáticos y la altura libre al suelo. Los coches de invierno de los aeropuertos de Laponia vienen preparados para las condiciones, con clavos donde el proveedor lo indica, así que la elección relevante es el tamaño. Un coche pequeño basta en las carreteras principales entre pueblos; un 4x4 justifica su precio en las secundarias sin quitanieves y en los accesos a las cabañas.',
     introP2: 'La recogida es en Rovaniemi, Kittilä, Ivalo y Kuusamo, lo que cubre todas las puertas de la página de vuelos, y el alquiler de sólo ida funciona entre la mayoría de aeropuertos finlandeses si quiere entrar y salir por ciudades distintas. Los precios llegan en directo del socio: ve la tarifa de hoy, no una captura antigua.',
     eyebrow: 'Alquiler de coches',
     h1Italic: 'Coches listos para el invierno',
@@ -182,7 +182,7 @@ const es: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Por qué no vendemos un paquete cerrado',
-    introP1: 'Una semana lapona empaquetada agrupa un vuelo, un hotel y dos actividades detrás de un solo precio, y es en la agrupación donde se esconde el margen. Nosotros listamos las mismas piezas por separado: el vuelo, el alojamiento, el día de huskies, la noche de auroras. Usted reserva cada una a la tarifa en vivo del socio, y nadie añade una capa encima.',
+    introP1: 'Un paquete de una semana en Laponia agrupa un vuelo, un hotel y dos actividades detrás de un solo precio, y es en la agrupación donde se esconde el margen. Nosotros listamos las mismas piezas por separado: el vuelo, el alojamiento, el día de huskies, la noche de auroras. Usted reserva cada una a la tarifa en vivo del socio, y nadie añade una capa encima.',
     introP2: 'La mayoría de los viajes se asientan entre cuatro y siete noches, suficiente para dos o tres actividades grandes más el margen meteorológico que exige la caza de auroras. Construya desde el alojamiento hacia fuera: la cama decide qué aeropuerto encaja y qué actividades quedan a mano, no al revés.',
     eyebrow: 'Paquetes',
     h1Italic: 'Construya su propio',

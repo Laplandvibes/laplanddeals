@@ -149,7 +149,7 @@ const it: SectionCopy = {
     bottomCta: 'Tutte le attività in Lapponia →',
   },
   flightsPage: {
-    introTitle: 'Su quale aeroporto lappone conviene davvero atterrare',
+    introTitle: 'Su quale aeroporto della Lapponia conviene davvero atterrare',
     introP1: 'Da Helsinki ci sono quattro porte pratiche, e quella giusta la decide dove dorme, non il prezzo del biglietto. Rovaniemi serve la città stessa, l\'Ounasvaara e la strada dell\'est. Kittilä è il transfer breve per Levi e Ylläs. Ivalo copre Saariselkä e Inari, l\'estremo nord. Kuusamo è quello per Ruka.',
     introP2: 'Il volo dura circa un\'ora e mezza, quindi un biglietto più economico sull\'aeroporto sbagliato può costarle due ore di strada dall\'altra parte. Le tariffe sono richiamate in tempo reale dal partner invece che archiviate, e le rotte sono operate da Finnair e Norwegian.',
     eyebrow: 'Voli',
@@ -166,7 +166,7 @@ const it: SectionCopy = {
   },
   carsPage: {
     introTitle: 'Che cosa deve avere davvero un\'auto a noleggio in Lapponia',
-    introP1: 'Due cose decidono se un\'auto regge quassù, e nessuna è il marchio sul cofano: gomme e altezza da terra. Le auto invernali dagli aeroporti lapponi arrivano attrezzate per le condizioni, chiodate dove l\'operatore lo indica, quindi la scelta che conta è la taglia. Una piccola basta sulle strade principali fra i paesi; un 4x4 si ripaga sulle secondarie non spalate e sugli accessi alle baite.',
+    introP1: 'Due cose decidono se un\'auto regge quassù, e nessuna è il marchio sul cofano: gomme e altezza da terra. Le auto invernali dagli aeroporti della Lapponia arrivano attrezzate per le condizioni, chiodate dove l\'operatore lo indica, quindi la scelta che conta è la taglia. Una piccola basta sulle strade principali fra i paesi; un 4x4 si ripaga sulle secondarie non spalate e sugli accessi alle baite.',
     introP2: 'Il ritiro è a Rovaniemi, Kittilä, Ivalo e Kuusamo, il che copre tutte le porte della pagina voli, e il noleggio di sola andata funziona fra la maggior parte degli aeroporti finlandesi se vuole arrivare e ripartire da città diverse. I prezzi arrivano in tempo reale dal partner: vede la tariffa di oggi, non una vecchia schermata.',
     eyebrow: 'Autonoleggio',
     h1Italic: 'Auto pronte per l\'inverno',
@@ -182,7 +182,7 @@ const it: SectionCopy = {
   },
   packagesPage: {
     introTitle: 'Perché non vendiamo un pacchetto chiuso',
-    introP1: 'Una settimana lappone in pacchetto mette volo, hotel e due attività dietro un unico prezzo, ed è proprio nel pacchetto che si nasconde il margine. Noi elenchiamo gli stessi mattoni separatamente: il volo, il soggiorno, la giornata con gli husky, la serata aurora. Lei prenota ciascuno alla tariffa in tempo reale del partner, e nessuno aggiunge uno strato sopra.',
+    introP1: 'Una settimana in Lapponia venduta come pacchetto mette volo, hotel e due attività dietro un unico prezzo, ed è proprio nel pacchetto che si nasconde il margine. Noi elenchiamo gli stessi mattoni separatamente: il volo, il soggiorno, la giornata con gli husky, la serata aurora. Lei prenota ciascuno alla tariffa in tempo reale del partner, e nessuno aggiunge uno strato sopra.',
     introP2: 'La maggior parte dei viaggi si assesta fra quattro e sette notti, abbastanza per due o tre attività grandi più il margine meteo che la caccia all\'aurora richiede. Costruisca partendo dall\'alloggio: è il letto a decidere quale aeroporto ha senso e quali attività sono a portata, non il contrario.',
     eyebrow: 'Pacchetti',
     h1Italic: 'Componga il Suo',
