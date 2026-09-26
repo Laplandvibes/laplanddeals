@@ -320,11 +320,11 @@ const fr: SectionCopy = {
     },
     "chart": {
       "h2": "Quand les vols vers la Laponie sont-ils les moins chers ?",
-      "lead": "Une barre par jour de départ pour lequel Travelpayouts a un tarif en cache depuis Helsinki, trois mois à l’avance. Lu le {d} ; les tarifs changent d’heure en heure.",
+      "lead": "Le tarif le plus bas au départ d’Helsinki pour chaque jour de départ des trois prochains mois. Lu le {d} ; les tarifs changent d’heure en heure.",
       "cheapest": "Jour le moins cher {d} : {p}",
       "priciest": "Jour le plus cher {d} : {p}",
       "empty": "Pas encore de tarifs en cache pour cet aéroport.",
-      "note": "Un jour sans barre n’a simplement pas de tarif en cache ; ce n’est pas un jour complet.",
+      "note": "Un jour sans barre signifie seulement qu’aucun tarif n’a été trouvé ; ce n’est pas un jour complet.",
       "airport": "Aéroport",
       "single": "{m} : un seul jour de départ a un tarif en cache ({d} : {p})."
     }

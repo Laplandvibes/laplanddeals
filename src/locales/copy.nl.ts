@@ -320,11 +320,11 @@ const nl: SectionCopy = {
     },
     "chart": {
       "h2": "Wanneer zijn vluchten naar Lapland het goedkoopst?",
-      "lead": "Eén balk per vertrekdag waarvoor Travelpayouts een tarief vanaf Helsinki in de cache heeft, drie maanden vooruit. Gelezen op {d}; tarieven veranderen per uur.",
+      "lead": "Het laagste tarief vanaf Helsinki voor elke vertrekdag in de komende drie maanden. Gelezen op {d}; tarieven veranderen per uur.",
       "cheapest": "Goedkoopste dag {d}: {p}",
       "priciest": "Duurste dag {d}: {p}",
       "empty": "Nog geen tarieven in de cache voor deze luchthaven.",
-      "note": "Een dag zonder balk heeft simpelweg geen tarief in de cache; het is geen uitverkochte dag.",
+      "note": "Een dag zonder balk betekent alleen dat er geen tarief is gevonden, niet dat hij is uitverkocht.",
       "airport": "Luchthaven",
       "single": "{m}: slechts één vertrekdag heeft een tarief in de cache ({d}: {p})."
     }

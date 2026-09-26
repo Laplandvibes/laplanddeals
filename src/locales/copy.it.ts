@@ -320,11 +320,11 @@ const it: SectionCopy = {
     },
     "chart": {
       "h2": "Quando i voli per la Lapponia costano meno?",
-      "lead": "Una barra per ogni giorno di partenza per cui Travelpayouts ha una tariffa in cache da Helsinki, tre mesi in avanti. Letto il {d}; le tariffe cambiano di ora in ora.",
+      "lead": "La tariffa più bassa da Helsinki per ogni giorno di partenza dei prossimi tre mesi. Letto il {d}; le tariffe cambiano di ora in ora.",
       "cheapest": "Giorno più economico {d}: {p}",
       "priciest": "Giorno più caro {d}: {p}",
       "empty": "Nessuna tariffa in cache per questo aeroporto, per ora.",
-      "note": "Un giorno senza barra non ha semplicemente una tariffa in cache; non è un giorno esaurito.",
+      "note": "Un giorno senza barra significa solo che non è stata trovata una tariffa, non che sia esaurito.",
       "airport": "Aeroporto",
       "single": "{m}: solo un giorno di partenza ha una tariffa in cache ({d}: {p})."
     }

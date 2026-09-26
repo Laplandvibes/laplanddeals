@@ -320,11 +320,11 @@ const ptBR: SectionCopy = {
     },
     "chart": {
       "h2": "Quando os voos para a Lapônia são mais baratos?",
-      "lead": "Uma barra por dia de partida para o qual a Travelpayouts tem uma tarifa em cache saindo de Helsinque, três meses à frente. Lido em {d}; as tarifas mudam a cada hora.",
+      "lead": "A tarifa mais baixa saindo de Helsinque para cada dia de partida dos próximos três meses. Lido em {d}; as tarifas mudam a cada hora.",
       "cheapest": "Dia mais barato {d}: {p}",
       "priciest": "Dia mais caro {d}: {p}",
       "empty": "Ainda não há tarifas em cache para este aeroporto.",
-      "note": "Um dia sem barra só significa que não há tarifa em cache, não que esteja esgotado.",
+      "note": "Um dia sem barra só significa que não foi encontrada tarifa, não que esteja esgotado.",
       "airport": "Aeroporto",
       "single": "{m}: só um dia de partida tem tarifa em cache ({d}: {p})."
     }

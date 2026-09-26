@@ -320,11 +320,11 @@ const es: SectionCopy = {
     },
     "chart": {
       "h2": "¿Cuándo son más baratos los vuelos a Laponia?",
-      "lead": "Una barra por cada día de salida para el que Travelpayouts tiene una tarifa en caché desde Helsinki, con tres meses de antelación. Leído {d}; las tarifas cambian cada hora.",
+      "lead": "La tarifa más baja desde Helsinki para cada día de salida de los próximos tres meses. Leído {d}; las tarifas cambian cada hora.",
       "cheapest": "Día más barato {d}: {p}",
       "priciest": "Día más caro {d}: {p}",
       "empty": "Aún no hay tarifas en caché para este aeropuerto.",
-      "note": "Un día sin barra solo significa que no hay tarifa en caché, no que esté agotado.",
+      "note": "Un día sin barra solo significa que no se encontró tarifa, no que esté agotado.",
       "airport": "Aeropuerto",
       "single": "{m}: solo un día de salida tiene tarifa en caché ({d}: {p})."
     }

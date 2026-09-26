@@ -320,11 +320,11 @@ const en: SectionCopy = {
     },
     "chart": {
       "h2": "When are flights to Lapland cheapest?",
-      "lead": "One bar per departure day for which Travelpayouts has a cached fare from Helsinki, three months ahead. Read {d}; fares change by the hour.",
+      "lead": "The cheapest fare from Helsinki for each departure day over the next three months. Read {d}; fares change by the hour.",
       "cheapest": "Cheapest day {d}: {p}",
       "priciest": "Priciest day {d}: {p}",
       "empty": "No cached fares for this airport yet.",
-      "note": "Days without a bar simply have no cached fare; that is not a sold-out day.",
+      "note": "No bar on a day means no fare was found for it, not that the flights are sold out.",
       "airport": "Airport",
       "single": "{m}: only one departure day with a cached fare ({d}: {p})."
     }

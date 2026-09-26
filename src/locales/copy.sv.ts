@@ -324,11 +324,11 @@ const sv: SectionCopy = {
     },
     "chart": {
       "h2": "När är flygen till Lappland billigast?",
-      "lead": "En stapel per avresedag som Travelpayouts har ett pris för i sin cache från Helsingfors, tre månader framåt. Läst {d}; priserna ändras varje timme.",
+      "lead": "Det lägsta priset från Helsingfors för varje avresedag de kommande tre månaderna. Läst {d}; priserna ändras varje timme.",
       "cheapest": "Billigaste dagen {d}: {p}",
       "priciest": "Dyraste dagen {d}: {p}",
       "empty": "Inga cachade priser för den här flygplatsen ännu.",
-      "note": "En dag utan stapel har helt enkelt inget pris i cachen; det är ingen slutsåld dag.",
+      "note": "En dag utan stapel betyder bara att inget pris hittades, inte att den är slutsåld.",
       "airport": "Flygplats",
       "single": "{m}: bara en avresedag har ett pris i cachen ({d}: {p})."
     }

@@ -320,11 +320,11 @@ const de: SectionCopy = {
     },
     "chart": {
       "h2": "Wann sind Flüge nach Lappland am günstigsten?",
-      "lead": "Ein Balken je Abflugtag, für den Travelpayouts einen Preis ab Helsinki im Cache hat, drei Monate voraus. Gelesen {d}; Preise ändern sich stündlich.",
+      "lead": "Der günstigste Preis ab Helsinki für jeden Abflugtag der nächsten drei Monate. Gelesen {d}; Preise ändern sich stündlich.",
       "cheapest": "Günstigster Tag {d}: {p}",
       "priciest": "Teuerster Tag {d}: {p}",
       "empty": "Für diesen Flughafen liegen noch keine Preise im Cache.",
-      "note": "Ein Tag ohne Balken hat schlicht keinen Preis im Cache; das ist kein ausverkaufter Tag.",
+      "note": "Ein Tag ohne Balken heißt nur, dass kein Preis gefunden wurde, nicht dass er ausgebucht ist.",
       "airport": "Flughafen",
       "single": "{m}: Nur ein Abflugtag hat einen Preis im Cache ({d}: {p})."
     }

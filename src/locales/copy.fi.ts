@@ -320,11 +320,11 @@ const fi: SectionCopy = {
     },
     "chart": {
       "h2": "Milloin lennot Lappiin ovat halvimmillaan?",
-      "lead": "Yksi palkki jokaiselle lähtöpäivälle, jolle Travelpayoutsin välimuistissa on hinta Helsingistä, kolme kuukautta eteenpäin. Luettu {d}; hinnat muuttuvat tunneittain.",
+      "lead": "Halvin lento Helsingistä jokaiselle lähtöpäivälle kolmen kuukauden ajalta. Luettu {d}; hinnat muuttuvat tunneittain.",
       "cheapest": "Halvin päivä {d}: {p}",
       "priciest": "Kallein päivä {d}: {p}",
       "empty": "Tälle kentälle ei ole vielä välimuistissa hintoja.",
-      "note": "Päivä ilman palkkia tarkoittaa vain, ettei välimuistissa ole hintaa, ei loppuunmyytyä päivää.",
+      "note": "Päivä ilman palkkia tarkoittaa vain, ettei sille löytynyt hintaa, ei loppuunmyytyä päivää.",
       "airport": "Lentokenttä",
       "single": "{m}: välimuistissa on hinta vain yhdelle lähtöpäivälle ({d}: {p})."
     }
