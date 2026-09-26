@@ -38,6 +38,9 @@
  *   Every language homepage is measured, all 12: section titles and tile names
  *   differ in length per language (26.9.2026 the gate read only en/fi/de).
  *   Pages load GATE_CONCURRENCY at a time (default 3; 1 = one after another).
+ *   Re-measure one finding: GATE_PAGES=/,/nl/ and/or GATE_VIEWS=desktop,tablet
+ *   (comma lists) run only those; the default is everything. In Git Bash add
+ *   MSYS_NO_PATHCONV=1, or "/" arrives as a Windows path.
  *   Playwright comes from the sites root: ../node_modules next to this repo, or
  *   $LV_JUURI/node_modules when the repo is checked out elsewhere (a worktree).
  */
@@ -69,6 +72,15 @@ const PAGES = ["/", "/fi/", "/de/", "/ja/", "/es/", "/br/", "/cn/", "/kr/", "/fr
 const LANG = { "": ["en", "en-US"], fi: ["fi", "fi-FI"], de: ["de", "de-DE"], ja: ["ja", "ja-JP"], es: ["es", "es-ES"], br: ["pt-BR", "pt-BR"], cn: ["zh-CN", "zh-CN"], kr: ["ko", "ko-KR"], fr: ["fr", "fr-FR"], it: ["it", "it-IT"], nl: ["nl", "nl-NL"], sv: ["sv", "sv-SE"] };
 const langOf = (path) => LANG[path.split("/")[1]] ?? LANG[""];
 const CONCURRENCY = Math.max(1, Number(process.env.GATE_CONCURRENCY) || 3);
+const only = (env, all, key) => {
+  if (!process.env[env]) return all;
+  const want = process.env[env].split(",").map((s) => s.trim()).filter(Boolean);
+  const unknown = want.filter((w) => !all.some((a) => key(a) === w));
+  if (unknown.length) { console.error(`${env}: unknown ${unknown.join(", ")} (known: ${all.map(key).join(", ")})`); process.exit(2); }
+  return all.filter((a) => want.includes(key(a)));
+};
+const RUN_VIEWS = only("GATE_VIEWS", VIEWS, (v) => v.name);
+const RUN_PAGES = only("GATE_PAGES", PAGES, (p) => p);
 
 const browser = await chromium.launch();
 async function measurePage(v, path) {
@@ -85,7 +97,7 @@ async function measurePage(v, path) {
   // later until every row and tile photo has settled, instead of trusting the
   // fixed wait above. A timeout falls through to the measurement, which then
   // reports the skeleton rows ("no button") or the missing photos.
-  await page.waitForFunction(() => !document.querySelector("[data-live-list] .animate-pulse, #fare-calendar .animate-pulse"), null, { timeout: 30000 }).catch(() => {});
+  await page.waitForFunction(() => !document.querySelector("[data-live-list] .animate-pulse, #fare-calendar .animate-pulse"), null, { timeout: 45000 }).catch(() => {});
   await page.evaluate(() => { document.querySelectorAll('[role="dialog"]').forEach((d) => (d.style.display = "none")); document.documentElement.style.scrollBehavior = "auto"; });
   // let lazy images and the chart settle
   await page.evaluate(async () => { for (let y = 0; y < document.documentElement.scrollHeight; y += 700) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 120)); } window.scrollTo(0, 0); });
@@ -328,7 +340,9 @@ async function measurePage(v, path) {
 }
 
 // Views × pages, CONCURRENCY at a time; reported in view-then-page order.
-const jobs = VIEWS.flatMap((v) => PAGES.map((path) => ({ v, path })));
+const jobs = RUN_VIEWS.flatMap((v) => RUN_PAGES.map((path) => ({ v, path })));
+// A gate that measured nothing has failed, it has not passed.
+if (!jobs.length) { await browser.close(); console.error("check-ui-layout: nothing to measure"); process.exit(2); }
 const results = new Array(jobs.length);
 let nextJob = 0;
 await Promise.all(Array.from({ length: Math.min(CONCURRENCY, jobs.length) }, async () => {
