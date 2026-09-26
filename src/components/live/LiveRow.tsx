@@ -29,7 +29,7 @@ import Units from './Units';
 export type RowMedia =
   | { kind: 'photo'; src: string; alt: string; width: number; height: number; eager?: boolean }
   | { kind: 'logo'; src: string; alt: string }
-  | { kind: 'plate'; label: string; sub?: string };
+  | { kind: 'plate'; label: string; sub?: string; icon?: ReactNode };
 
 export interface LiveRowProps {
   index: number;
@@ -101,7 +101,8 @@ export default function LiveRow(p: LiveRowProps) {
           </div>
         ) : m && m.kind === 'plate' ? (
           <div className={`${MEDIA_H} flex w-full flex-col items-center justify-center rounded-lg border border-deep-night/10 bg-[#F4F7FB] px-1 text-center sm:rounded-xl`}>
-            <span className="font-heading text-xl leading-none text-deep-night sm:text-2xl">{m.label}</span>
+            {m.icon}
+            <span className={`font-heading leading-none text-deep-night ${m.icon ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'}`}>{m.label}</span>
             {m.sub && <span className="mt-1 text-[10px] uppercase tracking-wider text-deep-night/55">{m.sub}</span>}
           </div>
         ) : (

@@ -3,6 +3,7 @@ import { Users } from 'lucide-react';
 import LiveList, { type SortMode } from './live/LiveList';
 import SegGroup from './live/SegGroup';
 import LiveRow from './live/LiveRow';
+import CarSilhouette from './live/CarSilhouette';
 import { buildAffiliateHref } from './AffiliateCTA';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -16,7 +17,9 @@ import { EB_AIRPORTS, EB_CHECKED_AT, EB_CLASS_KEYS, EB_OFFERS, EB_WINDOWS, type 
  * the row shows. Only windows whose pick-up is still ahead of today render.
  *
  * The comparison has no licensable car photos, so the media cell is a plate
- * with the class and seats — the facts of the offer, not a stock car.
+ * with the class and seats — the facts of the offer, not a stock car. Since
+ * 26.9.2026 the plate carries a drawn side-view of the body type (CarSilhouette):
+ * an icon, never a generated car, which invents plates and badges.
  */
 
 const AIRPORT_NAME: Record<EbAirport, string> = { RVN: 'Rovaniemi', KTT: 'Kittilä', IVL: 'Ivalo' };
@@ -92,7 +95,7 @@ export default function LiveCars({ limit = 6, phoneLimit, kicker }: { limit?: nu
         return (
           <LiveRow
             index={i}
-            media={{ kind: 'plate', label: c.classNames[o.classIdx], sub: c.orSimilar }}
+            media={{ kind: 'plate', label: c.classNames[o.classIdx], sub: c.orSimilar, icon: <CarSilhouette kind={EB_CLASS_KEYS[o.classIdx]} className="mb-0.5 h-7 w-auto sm:h-8" /> }}
             day={day}
             month={month}
             dateSub={`${days} ${c.days}`}
