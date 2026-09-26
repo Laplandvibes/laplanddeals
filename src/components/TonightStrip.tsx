@@ -4,6 +4,7 @@ import { buildAffiliateHref } from './AffiliateCTA';
 import { useLang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { trackAffiliateClick } from '../lib/analytics';
+import { TONIGHT_PHOTOS } from '../data/tonightPhotos';
 import FitHeading from './live/FitHeading';
 import Units from './live/Units';
 
@@ -34,6 +35,7 @@ function localIso(d: Date): string {
 export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; kicker?: boolean }) {
   const lang = useLang();
   const c = COPY[lang].live.tonight;
+  const cl = COPY[lang].live.list;
   const { checkin, checkout, label } = useMemo(() => {
     const now = new Date();
     const next = new Date(now); next.setDate(now.getDate() + 1);
@@ -54,10 +56,11 @@ export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; 
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{c.lead}</p>
       </div>
       <div className="tile-ice p-3 sm:p-5">
-        <ul className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-6" data-fill-grid="tonight">
+        <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-6" data-fill-grid="tonight">
           {PLACES.map((p, i) => {
             const sid = `tonight_${p.key}`;
             const href = buildAffiliateHref({ partner: 'hotels', sid, destination: p.q, query: { checkin, checkout }, lang });
+            const ph = TONIGHT_PHOTOS[p.key];
             return (
               <li key={p.key}>
                 <a
@@ -65,15 +68,46 @@ export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; 
                   target="_blank"
                   rel="sponsored nofollow noopener"
                   onClick={() => trackAffiliateClick('lodging', sid, href)}
-                  className="card-frost card-lift group flex min-h-[52px] items-center justify-between gap-2 px-5 py-3 text-[15px] font-bold text-deep-night no-underline"
+                  className="card-frost card-lift group flex h-full flex-col overflow-hidden text-[15px] font-bold text-deep-night no-underline"
                 >
-                  <span className="truncate">{c.places[i]}</span>
-                  <ArrowUpRight className="h-4 w-4 shrink-0 text-deep-night/40 transition-colors group-hover:text-[#BE185D]" aria-hidden="true" />
+                  {ph && (
+                    // BY-SA frames are shown whole (object-contain); the rest were cropped to 3:2 at source.
+                    <img
+                      src={ph.src}
+                      alt=""
+                      width={ph.width}
+                      height={ph.height}
+                      loading="lazy"
+                      decoding="async"
+                      className={`aspect-[3/2] w-full bg-[#E6ECF3] ${ph.crop ? 'object-cover' : 'object-contain'}`}
+                    />
+                  )}
+                  <span className="flex min-h-[48px] items-center justify-between gap-2 px-4 py-2.5">
+                    <span className="truncate">{c.places[i]}</span>
+                    <ArrowUpRight className="h-4 w-4 shrink-0 text-deep-night/40 transition-colors group-hover:text-[#BE185D]" aria-hidden="true" />
+                  </span>
                 </a>
               </li>
             );
           })}
         </ul>
+        {/* Commons credits: author links to the file page, licence to its deed (CC BY / BY-SA §3(a)).
+            Separate from the tile links, so no link sits inside another. */}
+        <p className="mt-3 text-[11px] leading-relaxed text-deep-night/60">
+          {cl.photoCredit.split('{source}')[0]}
+          {PLACES.map((p, i) => {
+            const ph = TONIGHT_PHOTOS[p.key];
+            if (!ph) return null;
+            return (
+              <span key={p.key}>
+                {i > 0 && ' · '}
+                {c.places[i]}: <a href={ph.fileUrl} target="_blank" rel="noopener" className="lv-tap underline decoration-deep-night/30 hover:text-deep-night">{ph.author}</a>,{' '}
+                <a href={ph.licenseUrl} target="_blank" rel="license noopener" className="lv-tap whitespace-nowrap underline decoration-deep-night/30 hover:text-deep-night">{ph.license}</a>
+                {ph.croppedNote && ` (${c.cropped})`}
+              </span>
+            );
+          })}
+        </p>
       </div>
     </section>
   );

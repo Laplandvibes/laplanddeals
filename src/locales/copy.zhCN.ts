@@ -300,7 +300,8 @@ const zhCN: SectionCopy = {
         "于莱斯",
         "鲁卡",
         "伊纳里"
-      ]
+      ],
+      "cropped": "已裁剪"
     },
     "sheet": {
       "kicker": "航班 · 酒店 · 木屋 · 租车",

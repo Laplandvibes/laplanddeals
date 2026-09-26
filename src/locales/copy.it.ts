@@ -300,7 +300,8 @@ const it: SectionCopy = {
         "Ylläs",
         "Ruka",
         "Inari"
-      ]
+      ],
+      "cropped": "ritagliata"
     },
     "sheet": {
       "kicker": "Voli · Hotel · Baite · Auto",

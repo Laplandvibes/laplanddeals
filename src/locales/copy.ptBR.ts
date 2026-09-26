@@ -300,7 +300,8 @@ const ptBR: SectionCopy = {
         "Ylläs",
         "Ruka",
         "Inari"
-      ]
+      ],
+      "cropped": "recortada"
     },
     "sheet": {
       "kicker": "Voos · Hotéis · Cabanas · Carros",

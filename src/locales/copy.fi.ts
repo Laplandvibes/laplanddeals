@@ -300,7 +300,8 @@ const fi: SectionCopy = {
         "Ylläs",
         "Ruka",
         "Inari"
-      ]
+      ],
+      "cropped": "rajattu"
     },
     "sheet": {
       "kicker": "Lennot · hotellit · mökit · autot",

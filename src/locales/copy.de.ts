@@ -300,7 +300,8 @@ const de: SectionCopy = {
         "Ylläs",
         "Ruka",
         "Inari"
-      ]
+      ],
+      "cropped": "zugeschnitten"
     },
     "sheet": {
       "kicker": "Flüge · Hotels · Hütten · Mietwagen",

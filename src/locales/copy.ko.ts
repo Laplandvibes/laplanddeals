@@ -300,7 +300,8 @@ const ko: SectionCopy = {
         "윌래스",
         "루카",
         "이나리"
-      ]
+      ],
+      "cropped": "잘라냄"
     },
     "sheet": {
       "kicker": "항공편 · 호텔 · 통나무집 · 렌터카",

@@ -304,7 +304,8 @@ const sv: SectionCopy = {
         "Ylläs",
         "Ruka",
         "Inari"
-      ]
+      ],
+      "cropped": "beskuren"
     },
     "sheet": {
       "kicker": "Flyg · Hotell · Stugor · Hyrbilar",
