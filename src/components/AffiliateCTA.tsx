@@ -1,6 +1,6 @@
 import type { ReactNode, AnchorHTMLAttributes } from 'react';
 import { useLang } from '../i18n/useLang';
-import { GYG_WORKER_LANG } from '../lib/gyg';
+import { GYG_WORKER_LANG, gygLocalePath } from '../lib/gyg';
 
 /**
  * LaplandVibes affiliate CTA. All CJ-routed clicks (lodging, EconomyBookings)
@@ -95,11 +95,13 @@ export function buildAffiliateHref({
   // one Worker owns the whole mapping. Codes come from GYG_WORKER_LANG so this
   // component and ../lib/gyg.ts cannot drift apart.
   if (partner === 'activities') {
-    const path = (destination ?? '').replace(/^\/+/, '').replace(/\/+$/, '');
+    // Tuotepolku (`…-t<id>`) kantaa kielen polussa eikä saa `language`a
+    // (LV-GYG-PRODUCT-NOPREFIX, ks. gygLocalePath).
+    const path = gygLocalePath((destination ?? '').replace(/^\/+/, '').replace(/\/+$/, ''), lang);
     const params = new URLSearchParams();
     params.set('sid', sid);
     const gygLang = GYG_WORKER_LANG[lang];
-    if (gygLang) params.set('language', gygLang);
+    if (gygLang && !path.includes('/-t')) params.set('language', gygLang);
     if (query) for (const [k, v] of Object.entries(query)) if (v) params.set(k, v);
     return `${REDIRECT_HOST}/go/activities${path ? `/${path}` : ''}?${params.toString()}`;
   }

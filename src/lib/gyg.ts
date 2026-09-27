@@ -16,6 +16,7 @@
  */
 
 import type { Lang } from '../i18n/useLang';
+import { GYG_LOCALE_PREFIX, gygProductPath } from '../shared/gyg/picks';
 
 const GO = 'https://go.laplandvibes.com/go/activities';
 
@@ -30,13 +31,37 @@ export const GYG_WORKER_LANG: Record<Lang, string | undefined> = {
 };
 
 /**
+ * GYG-polku lukijan kielellä (2026-09-27).
+ *
+ * 🔴🔴 TUOTEPOLKU (`…-t<id>`) ei saa Workerilta kielietuliitettä, ja Worker
+ * pudottaa sille `language`n (LV-GYG-PRODUCT-NOPREFIX, 20.9.2026): pelkällä
+ * `language`lla tuote aukesi kävijän GYG-markkinan kielellä, useimmille
+ * englanniksi. Muulla kuin englannilla tuotelinkki kantaa oman
+ * `<kieli>-<maa>/-t<id>/`-polkunsa (gygProductPath) eikä `language`a; englanti
+ * pitää koko slugin. Sijainti- ja kategoriapolut saavat yhä `language`n, josta
+ * Worker rakentaa etuliitteen.
+ */
+export function gygLocalePath(path: string, lang: Lang): string {
+  return GYG_LOCALE_PREFIX[lang] ? gygProductPath(path, lang) : path;
+}
+
+/**
  * Liitä sivun kieli Worker-aktiviteettilinkkiin renderissä. Muut URLit
- * (Lomarengas, Trip.com, …) palautuvat sellaisenaan.
+ * (Lomarengas, Trip.com, …) palautuvat sellaisenaan. Tuotepolku saa kielen
+ * polkuun (gygLocalePath), muut `language`-parametrin.
  */
 export function gygLocalizeHref(href: string, lang: Lang): string {
   if (!href.startsWith(GO)) return href;
   const code = GYG_WORKER_LANG[lang];
   if (!code) return href;
+  const url = new URL(href);
+  const slug = url.pathname.replace(/^\/go\/activities\/?/, '').replace(/\/+$/, '');
+  const path = gygLocalePath(slug, lang);
+  if (path.includes('/-t')) {
+    url.pathname = `/go/activities/${path}`;
+    url.searchParams.delete('language');
+    return url.toString();
+  }
   return `${href}${href.includes('?') ? '&' : '?'}language=${code}`;
 }
 
@@ -48,8 +73,11 @@ export function gygLocalizeHref(href: string, lang: Lang): string {
  * @param productPath  Path component after `getyourguide.com/`. Example:
  *                     `lapland-finland-l2652` (Finnish Lapland location).
  */
-export function gygDeepLink(productPath: string, sid: string): string {
-  const path = productPath.replace(/^\/+/, '').replace(/\/+$/, '');
+export function gygDeepLink(productPath: string, sid: string, lang?: Lang): string {
+  const clean = productPath.replace(/^\/+/, '').replace(/\/+$/, '');
+  // Kielellä kutsuttuna tuotepolku saa etuliitteen jo tässä; ilman kieltä
+  // (staattinen offers.ts) sen tekee gygLocalizeHref renderissä.
+  const path = lang ? gygLocalePath(clean, lang) : clean;
   return `${GO}/${path}?sid=${sid}`;
 }
 
