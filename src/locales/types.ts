@@ -44,7 +44,7 @@ export type SectionCopy = {
     cabins: { eyebrow: string; title: string; lead: string; weekFrom: string; guests: string; lastMinute: string; lastMinuteLead: string; view: string; updated: string; perWeek: string; bedrooms: string; starsLabel: string;
       /** No verified price since 26.9.2026: "price on Lomarengas" in the price cell + size sort. */
       priceAt: string; sortSmall: string; sortLarge: string; colSmall: string; colLarge: string };
-    cars: { eyebrow: string; title: string; lead: string; window: string; total: string; operator: string; orSimilar: string; auto: string; manual: string; cta: string; classNames: string[]; colAutoFirst: string; airport: string; seats: string; days: string };
+    cars: { eyebrow: string; title: string; titleGuide: string; lead: string; leadPriced: string; window: string; total: string; priceAt: string; uses: string[]; operator: string; orSimilar: string; auto: string; manual: string; cta: string; classNames: string[]; colAutoFirst: string; airport: string; seats: string; days: string };
     activities: { eyebrow: string; title: string; lead: string; browse: string };
     /** Readers' most-viewed GYG tours (26.9.2026). `{date}` read date, `{days}` window. Say "viewed", never "booked". */
     topViewed: { eyebrow: string; title: string; lead: string };

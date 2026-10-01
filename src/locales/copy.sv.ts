@@ -261,9 +261,12 @@ const sv: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · kontrollerat {date}",
       "title": "Hyrbil på flygplatsen, riktiga totalpriser",
-      "lead": "Totalpris för 4 hyrdagar, skatter inkluderade, på flygplatsen i Rovaniemi, Kittilä eller Ivalo. Varje rad öppnar samma sökning med samma datum.",
+      "titleGuide": "Vilken bil passar din Lapplandsresa?",
+      "leadPriced": "Totalpris för 4 hyrdagar, skatter inkluderade, på flygplatsen i Rovaniemi, Kittilä eller Ivalo. Varje rad öppnar samma sökning med samma datum.",
+      "lead": "Välj flygplats och den bilklass som passar din resa. Varje rad öppnar sökningen hos EconomyBookings för flygplatsen, där du ser vilka bilar som är lediga och vad de kostar för dina datum.",
       "window": "Upphämtning {from}, återlämning {to}",
       "total": "Totalt 4 dagar",
+      "priceAt": "Pris hos EconomyBookings",
       "operator": "Uthyrare",
       "orSimilar": "eller liknande",
       "auto": "Automat",
@@ -276,6 +279,14 @@ const sv: SectionCopy = {
         "Mellanklass",
         "Kombi",
         "SUV"
+      ],
+      "uses": [
+        "Stadskörning för två",
+        "Par med lätt packning",
+        "Det trygga allroundvalet",
+        "Mer komfort för milen",
+        "Plats för skidor och packning",
+        "Vintervägar och familjer"
       ],
       "colAutoFirst": "Automat först",
       "airport": "Flygplats",

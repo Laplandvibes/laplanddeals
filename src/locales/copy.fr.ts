@@ -257,9 +257,12 @@ const fr: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · vérifié le {date}",
       "title": "Location de voiture à l’aéroport, vrais totaux",
-      "lead": "Prix total d’une location de 4 jours, taxes comprises, aux aéroports de Rovaniemi, Kittilä ou Ivalo. Chaque ligne ouvre la même recherche aux mêmes dates.",
+      "titleGuide": "Quelle voiture pour votre voyage en Laponie ?",
+      "leadPriced": "Prix total d’une location de 4 jours, taxes comprises, aux aéroports de Rovaniemi, Kittilä ou Ivalo. Chaque ligne ouvre la même recherche aux mêmes dates.",
+      "lead": "Choisissez un aéroport et la catégorie adaptée à votre voyage. Chaque ligne ouvre la recherche EconomyBookings pour cet aéroport, où vous voyez les voitures disponibles et leur prix pour vos dates.",
       "window": "Prise en charge {from}, retour {to}",
       "total": "Total 4 jours",
+      "priceAt": "Prix sur EconomyBookings",
       "operator": "Loueur",
       "orSimilar": "ou similaire",
       "auto": "Automatique",
@@ -272,6 +275,14 @@ const fr: SectionCopy = {
         "Intermédiaire",
         "Break",
         "SUV"
+      ],
+      "uses": [
+        "La ville à deux",
+        "Couples voyageant léger",
+        "La valeur sûre",
+        "Plus de confort au long cours",
+        "De la place pour les skis",
+        "Routes d'hiver et familles"
       ],
       "colAutoFirst": "Automatiques d’abord",
       "airport": "Aéroport",

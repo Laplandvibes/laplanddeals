@@ -257,9 +257,12 @@ const de: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · geprüft {date}",
       "title": "Mietwagen am Flughafen, echte Gesamtpreise",
-      "lead": "Gesamtpreis für 4 Miettage inklusive Steuern am Flughafen Rovaniemi, Kittilä oder Ivalo. Jede Zeile öffnet dieselbe Suche mit denselben Daten.",
+      "titleGuide": "Welches Auto passt zu Ihrer Lapplandreise?",
+      "leadPriced": "Gesamtpreis für 4 Miettage inklusive Steuern am Flughafen Rovaniemi, Kittilä oder Ivalo. Jede Zeile öffnet dieselbe Suche mit denselben Daten.",
+      "lead": "Wählen Sie einen Flughafen und die Klasse, die zu Ihrer Reise passt. Jede Zeile öffnet die Suche bei EconomyBookings für diesen Flughafen. Dort sehen Sie, welche Autos frei sind und was sie zu Ihren Terminen kosten.",
       "window": "Abholung {from}, Rückgabe {to}",
       "total": "Gesamt 4 Tage",
+      "priceAt": "Preis bei EconomyBookings",
       "operator": "Vermieter",
       "orSimilar": "oder ähnlich",
       "auto": "Automatik",
@@ -272,6 +275,14 @@ const de: SectionCopy = {
         "Mittelklasse",
         "Kombi",
         "SUV"
+      ],
+      "uses": [
+        "Stadtfahrten zu zweit",
+        "Paare mit leichtem Gepäck",
+        "Der sichere Allrounder",
+        "Mehr Komfort für die Kilometer",
+        "Platz für Ski und Ausrüstung",
+        "Winterstraßen und Familien"
       ],
       "colAutoFirst": "Automatik zuerst",
       "airport": "Flughafen",

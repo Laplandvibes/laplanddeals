@@ -2,13 +2,18 @@
 // Rovaniemi (plc 61909), Kittilä (plc 61893) and Ivalo (plc 615) airports on
 // 2026-09-26, via the live results page. Totals are EUR for 4 rental days
 // including taxes/fees, exactly as shown. Same rows as
-// laplandcarrental-new/src/data/ebOffers.ts: both files are written by one
-// weekly run (Windows task "LV Autohinnat", scripts/write-eb-prices.mjs in
-// laplandcarrental-new). Do not edit rows by hand — never invent.
+// laplandcarrental-new/src/data/ebOffers.ts: both files were written by one run
+// of the Windows task "LV Autohinnat" (scripts/write-eb-prices.mjs in
+// laplandcarrental-new). The task ran weekly from 2026-09-26 and has been
+// stopped since 2026-10-01: the results page now answers automated browsers
+// with a bot check (HTTP 403), and that check is not worked around. The rows
+// below are the last read. Do not edit rows by hand, never invent.
 //
-// 🔴 Vanhenemisvahti: LiveCars.tsx renders only windows whose pick-up date is
-// still in the future. A window that has passed disappears by itself, so the
-// page can never advertise a hire that cannot be booked (app lesson 24.8.2026).
+// Freshness (src/data/ebFreshness.ts, checked in the browser on every render):
+// LiveCars.tsx shows a figure only while the read is at most 7 days old, and
+// only for windows whose pick-up day is still ahead, so the page never shows an
+// old price or advertises a hire that cannot be booked. Without a figure it
+// shows the classes with their search links.
 
 export type EbAirport = 'RVN' | 'KTT' | 'IVL'
 

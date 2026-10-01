@@ -257,9 +257,12 @@ const en: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · checked {date}",
       "title": "Airport car hire, real totals",
-      "lead": "Total price for a 4-day hire at Rovaniemi, Kittilä or Ivalo airport, taxes included. Each row opens the same search with the same dates.",
+      "titleGuide": "Which car suits your Lapland trip?",
+      "leadPriced": "Total price for a 4-day hire at Rovaniemi, Kittilä or Ivalo airport, taxes included. Each row opens the same search with the same dates.",
+      "lead": "Pick an airport and the class that fits your trip. Each row opens the EconomyBookings search for that airport, where you see which cars are available and what they cost on your dates.",
       "window": "Pick-up {from}, return {to}",
       "total": "4-day total",
+      "priceAt": "Price on EconomyBookings",
       "operator": "Operator",
       "orSimilar": "or similar",
       "auto": "Automatic",
@@ -272,6 +275,14 @@ const en: SectionCopy = {
         "Midsize",
         "Estate",
         "SUV"
+      ],
+      "uses": [
+        "City hops for two",
+        "Couples with light luggage",
+        "The safe all-rounder",
+        "More comfort for the kilometres",
+        "Skis and gear space",
+        "Winter roads and families"
       ],
       "colAutoFirst": "Automatic first",
       "airport": "Airport",

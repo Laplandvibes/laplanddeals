@@ -257,9 +257,12 @@ const ko: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · 확인일 {date}",
       "title": "공항 렌터카, 실제 총액",
-      "lead": "로바니에미, 키틸래, 이발로 공항에서 4일 렌트할 때의 세금 포함 총액입니다. 각 줄을 열면 같은 날짜로 같은 검색이 나옵니다.",
+      "titleGuide": "라플란드 여행에 맞는 차는?",
+      "leadPriced": "로바니에미, 키틸래, 이발로 공항에서 4일 렌트할 때의 세금 포함 총액입니다. 각 줄을 열면 같은 날짜로 같은 검색이 나옵니다.",
+      "lead": "공항과 여행에 맞는 클래스를 고르세요. 각 줄을 열면 해당 공항의 EconomyBookings 검색이 나오고, 이용 가능한 차량과 원하는 날짜의 가격을 확인할 수 있습니다.",
       "window": "인수 {from}, 반납 {to}",
       "total": "4일 총액",
+      "priceAt": "가격은 EconomyBookings에서",
       "operator": "렌터카사",
       "orSimilar": "또는 동급",
       "auto": "자동",
@@ -272,6 +275,14 @@ const ko: SectionCopy = {
         "미드사이즈",
         "왜건",
         "SUV"
+      ],
+      "uses": [
+        "둘이서 시내 주행",
+        "짐이 적은 커플",
+        "실패 없는 만능 선택",
+        "장거리를 편안하게",
+        "스키와 짐 수납",
+        "겨울 도로와 가족"
       ],
       "colAutoFirst": "자동 우선",
       "airport": "공항",

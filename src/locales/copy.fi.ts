@@ -257,9 +257,12 @@ const fi: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · tarkistettu {date}",
       "title": "Vuokra-auto lentokentältä, oikeat kokonaishinnat",
-      "lead": "4 päivän vuokran kokonaishinta veroineen Rovaniemen, Kittilän tai Ivalon lentokentältä. Rivi avaa saman haun samoilla päivillä.",
+      "titleGuide": "Millainen auto sopii Lapin-matkallesi?",
+      "leadPriced": "4 päivän vuokran kokonaishinta veroineen Rovaniemen, Kittilän tai Ivalon lentokentältä. Rivi avaa saman haun samoilla päivillä.",
+      "lead": "Valitse lentoasema ja matkaasi sopiva autoluokka. Rivi avaa kentän haun EconomyBookingsissa, jossa näet, mitkä autot ovat vapaina ja mitä ne maksavat valitsemillasi päivillä.",
       "window": "Nouto {from}, palautus {to}",
       "total": "4 pv yhteensä",
+      "priceAt": "Hinta EconomyBookingsissa",
       "operator": "Vuokraamo",
       "orSimilar": "tai vastaava",
       "auto": "Automaatti",
@@ -272,6 +275,14 @@ const fi: SectionCopy = {
         "Keskikoko",
         "Farmari",
         "SUV"
+      ],
+      "uses": [
+        "Kaupunkiajoon kahdelle",
+        "Pariskunnalle kevyin laukuin",
+        "Varma yleisvalinta",
+        "Mukavuutta kilometreille",
+        "Tilaa suksille ja varusteille",
+        "Talviteille ja perheelle"
       ],
       "colAutoFirst": "Automaatit ensin",
       "airport": "Lentokenttä",

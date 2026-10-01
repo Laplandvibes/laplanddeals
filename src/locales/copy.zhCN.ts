@@ -257,9 +257,12 @@ const zhCN: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · 核对于 {date}",
       "title": "机场租车，真实总价",
-      "lead": "在罗瓦涅米、基蒂莱或伊瓦洛机场租车4天的含税总价。打开任意一行即可以相同日期打开相同搜索。",
+      "titleGuide": "哪款车适合您的拉普兰之旅？",
+      "leadPriced": "在罗瓦涅米、基蒂莱或伊瓦洛机场租车4天的含税总价。打开任意一行即可以相同日期打开相同搜索。",
+      "lead": "选择机场和适合行程的车型级别。打开任意一行即可进入该机场的EconomyBookings搜索，查看仍可预订的车辆以及您所选日期的价格。",
       "window": "取车 {from}，还车 {to}",
       "total": "4天总价",
+      "priceAt": "价格见EconomyBookings",
       "operator": "租车行",
       "orSimilar": "或同级",
       "auto": "自动挡",
@@ -272,6 +275,14 @@ const zhCN: SectionCopy = {
         "中型",
         "旅行车",
         "SUV"
+      ],
+      "uses": [
+        "两人城市代步",
+        "轻装出行的情侣",
+        "稳妥的全能之选",
+        "长途更舒适",
+        "放得下雪板和装备",
+        "冬季路况与家庭"
       ],
       "colAutoFirst": "自动挡优先",
       "airport": "机场",

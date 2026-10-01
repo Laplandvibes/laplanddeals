@@ -257,9 +257,12 @@ const es: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · comprobado el {date}",
       "title": "Coche de alquiler en el aeropuerto, totales reales",
-      "lead": "Precio total de un alquiler de 4 días, impuestos incluidos, en los aeropuertos de Rovaniemi, Kittilä o Ivalo. Cada fila abre la misma búsqueda con las mismas fechas.",
+      "titleGuide": "¿Qué coche le conviene para su viaje a Laponia?",
+      "leadPriced": "Precio total de un alquiler de 4 días, impuestos incluidos, en los aeropuertos de Rovaniemi, Kittilä o Ivalo. Cada fila abre la misma búsqueda con las mismas fechas.",
+      "lead": "Elija un aeropuerto y la clase que mejor se adapte a su viaje. Cada fila abre la búsqueda de EconomyBookings para ese aeropuerto, donde verá qué coches quedan disponibles y cuánto cuestan en sus fechas.",
       "window": "Recogida {from}, devolución {to}",
       "total": "Total 4 días",
+      "priceAt": "Precio en EconomyBookings",
       "operator": "Operador",
       "orSimilar": "o similar",
       "auto": "Automático",
@@ -272,6 +275,14 @@ const es: SectionCopy = {
         "Medio",
         "Familiar",
         "SUV"
+      ],
+      "uses": [
+        "Ciudad para dos",
+        "Parejas con poco equipaje",
+        "La opción versátil y segura",
+        "Más confort para los kilómetros",
+        "Espacio para esquís y equipo",
+        "Carreteras invernales y familias"
       ],
       "colAutoFirst": "Automáticos primero",
       "airport": "Aeropuerto",

@@ -48,6 +48,7 @@ export interface LiveRowProps {
    *  then carries a short "price on <partner>" line instead. */
   price: string;
   unit?: string;
+  /** "{source}, read {d}" with the fresh dot. Empty = no line (a row without a captured figure). */
   seen: string;
   href: string;
   sid: string;
@@ -134,24 +135,27 @@ export default function LiveRow(p: LiveRowProps) {
           <div className="mt-0.5 text-xs leading-relaxed text-deep-night/70 sm:text-[13px]">
             <Units items={p.facts} />
           </div>
-          <div className="mt-1 flex items-start gap-1.5 text-[11px] leading-snug text-deep-night/55">
-            <span className="fresh-dot mt-[0.3em] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-aurora-green" aria-hidden="true" />
-            <span><Seen text={p.seen} /></span>
-          </div>
+          {p.seen && (
+            <div className="mt-1 flex items-start gap-1.5 text-[11px] leading-snug text-deep-night/55">
+              <span className="fresh-dot mt-[0.3em] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-aurora-green" aria-hidden="true" />
+              <span><Seen text={p.seen} /></span>
+            </div>
+          )}
         </div>
 
         {/* Price + read-time, then the button: one ruled line when stacked,
             one right-aligned column in the receipt row. */}
-        <div className="col-span-2 flex items-center justify-between gap-3 border-t border-deep-night/10 pt-2.5 @2xl:col-span-1 @2xl:max-w-[9rem] @2xl:flex-col @2xl:items-stretch @2xl:gap-2 @2xl:border-0 @2xl:pt-0">
+        <div className={`col-span-2 flex items-center justify-between gap-3 border-t border-deep-night/10 pt-2.5 @2xl:col-span-1 @2xl:max-w-[9rem] @2xl:flex-col @2xl:items-stretch @2xl:gap-2 @2xl:border-0 @2xl:pt-0${p.price ? "" : " flex-wrap gap-y-2"}`}>
           {/* Price and unit are two nowrap words that may wrap BETWEEN each
               other: as one nowrap line "149 € 4 Tage gesamt" pushed a 375 px
               German row past its own width (measured). In the 9 rem receipt
               column the unit always sits under the price. */}
-          <div className="flex flex-wrap items-baseline gap-x-1.5 @2xl:flex-col @2xl:items-end @2xl:gap-0">
+          <div className="flex min-w-0 flex-wrap items-baseline gap-x-1.5 @2xl:flex-col @2xl:items-end @2xl:gap-0">
             {p.price && <span className="font-heading text-[1.9rem] leading-none text-deep-night whitespace-nowrap sm:text-[2.1rem]">{p.price}</span>}
-            {p.unit && <span className="whitespace-nowrap font-body text-sm font-medium text-deep-night/60 @2xl:mt-0.5 @2xl:text-xs">{p.unit}</span>}
+            {/* Without a price the unit is a short sentence ("Price on EconomyBookings"): it may wrap, so the button keeps its padding. */}
+            {p.unit && <span className={`${p.price ? "whitespace-nowrap " : ""}font-body text-sm font-medium text-deep-night/60 @2xl:mt-0.5 @2xl:text-xs`}>{p.unit}</span>}
           </div>
-          <span className="btn-pink inline-flex min-h-11 min-w-[6rem] items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-semibold sm:px-5 @2xl:w-full">
+          <span className={`btn-pink inline-flex min-h-11 min-w-[6rem] shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-semibold sm:px-5 @2xl:w-full${p.price ? "" : " ml-auto @2xl:ml-0"}`}>
             {p.cta}
           </span>
         </div>

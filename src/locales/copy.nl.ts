@@ -257,9 +257,12 @@ const nl: SectionCopy = {
     "cars": {
       "eyebrow": "EconomyBookings · gecontroleerd op {date}",
       "title": "Huurauto op de luchthaven, echte totaalprijzen",
-      "lead": "Totaalprijs voor 4 huurdagen, inclusief belastingen, op de luchthaven van Rovaniemi, Kittilä of Ivalo. Elke rij opent dezelfde zoekopdracht met dezelfde data.",
+      "titleGuide": "Welke auto past bij uw Laplandreis?",
+      "leadPriced": "Totaalprijs voor 4 huurdagen, inclusief belastingen, op de luchthaven van Rovaniemi, Kittilä of Ivalo. Elke rij opent dezelfde zoekopdracht met dezelfde data.",
+      "lead": "Kies een luchthaven en de klasse die bij uw reis past. Elke rij opent de zoekopdracht bij EconomyBookings voor die luchthaven, waar u ziet welke auto’s beschikbaar zijn en wat ze op uw data kosten.",
       "window": "Ophalen {from}, inleveren {to}",
       "total": "Totaal 4 dagen",
+      "priceAt": "Prijs bij EconomyBookings",
       "operator": "Verhuurder",
       "orSimilar": "of vergelijkbaar",
       "auto": "Automaat",
@@ -272,6 +275,14 @@ const nl: SectionCopy = {
         "Middenklasse",
         "Stationwagen",
         "SUV"
+      ],
+      "uses": [
+        "De stad in met z'n tweeën",
+        "Stellen met weinig bagage",
+        "De veilige allrounder",
+        "Meer comfort voor de kilometers",
+        "Ruimte voor ski's en spullen",
+        "Winterwegen en gezinnen"
       ],
       "colAutoFirst": "Automaat eerst",
       "airport": "Luchthaven",
