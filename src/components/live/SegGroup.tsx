@@ -49,11 +49,16 @@ export default function SegGroup({
         style={{ gridTemplateColumns: `repeat(auto-fit, minmax(min(100%, ${min}), 1fr))` }}
       >
         {options.map((o) => (
+          /* Ei whitespace-nowrapia (3.10.2026): pitkä päivämääräväli ("23 de out. – 27 de out.", ja/ko)
+             ei mahdu 148–162 px:n segmenttiin yhdelle riville, ja nowrap työnsi tekstin reunuksen yli
+             (pt-BR 19 px). Rivittyessään segmentti jakaa tekstin tasan kahdelle riville (orposanalohkon
+             text-wrap-style: balance), ja ruudukon rivi venyttää rivin muut segmentit samaan korkeuteen.
+             Ennen 3.10. nowrap ei vaikuttanut lainkaan: orposanalohkon text-wrap-lyhenne kumosi sen. */
           <button
             key={o.key}
             type="button"
             aria-pressed={value === o.key}
-            className={`${segClass(value === o.key)} w-full px-2 text-center text-[13px] whitespace-nowrap sm:px-4 sm:text-sm`}
+            className={`${segClass(value === o.key)} w-full px-2 text-center text-[13px] sm:px-4 sm:text-sm`}
             onClick={() => onChange(o.key)}
           >
             {o.label}
