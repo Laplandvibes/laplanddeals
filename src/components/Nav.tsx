@@ -60,14 +60,16 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between gap-3 h-16 md:h-[72px]">
-          <div className="flex items-center gap-3 sm:gap-5 shrink-0">
+        <div className="lv-navrivi flex items-center justify-between gap-3 h-16 md:h-[72px]">
+          <div className="lv-navvasen flex items-center gap-3 sm:gap-5 shrink-0">
             {/* NB: "cream" tokens are remapped to deep-night since the 2026-06-27 dark
     redesign — the nav is DARK, so the menu uses the default dark variant. */}
             <EcosystemMenu lang={lang} currentDomain="laplanddeals.com" />
-            <Link to={to('/')} className="no-underline inline-flex items-center min-h-11" aria-label="LaplandDeals home">
-              <Logo />
-            </Link>
+            <div className="lv-wm-paikka">
+              <Link to={to('/')} className="no-underline inline-flex items-center min-h-11" aria-label="LaplandDeals home">
+                <Logo nav />
+              </Link>
+            </div>
           </div>
 
           <div className="hidden xl:flex items-center gap-6">

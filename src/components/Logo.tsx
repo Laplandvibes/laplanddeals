@@ -1,8 +1,16 @@
+import type { CSSProperties } from 'react';
+
+// Sanamerkin leveys 1 px:n fontilla (Bebas Neue + tracking-wide). Puhelin- ja tablettinavissa koko lasketaan
+// tästä ja vapaasta tilasta (index.css LV-NAV-SANAMERKKI): 24 px, pienempi vain kun ei mahdu.
+const WM_STYLE = { '--lv-wm-k': 5.35 } as CSSProperties;
+
 interface LogoProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
   /** Use ivory text when placed over a dark gradient (e.g. Hero overlay). */
   invert?: boolean;
+  /** Navin sanamerkki: koko puhelin- ja tablettinavissa vapaan tilan mukaan (index.css LV-NAV-SANAMERKKI). */
+  nav?: boolean;
 }
 
 /**
@@ -10,7 +18,7 @@ interface LogoProps {
  * adapted to the cream luxury variant. Same Playfair italic-light + roman
  * semibold pairing as the hero h1 so header → hero share one signature.
  */
-export default function Logo({ className = '', size = 'md', invert = false }: LogoProps) {
+export default function Logo({ className = '', size = 'md', invert = false, nav = false }: LogoProps) {
   const sizeClass =
     size === 'lg' ? 'text-4xl md:text-5xl' :
     size === 'sm' ? 'text-xl md:text-2xl' :
@@ -27,8 +35,9 @@ export default function Logo({ className = '', size = 'md', invert = false }: Lo
   // site, regardless of each site's own body typography variant.
   return (
     <span
-      className={`leading-none ${sizeClass} ${className}`}
-      style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '0.04em' }}
+      className={`leading-none ${sizeClass}${nav ? ' lv-wm' : ''} ${className}`}
+      data-lv-sanamerkki={nav ? '' : undefined}
+      style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '0.025em', ...(nav ? WM_STYLE : {}) }}
     >
       <span style={{ color: '#EC4899' }}>#</span>
       <span style={{ color: heavyColour }}>LAPLAND</span>
