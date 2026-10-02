@@ -22,7 +22,8 @@ export default function Logo({ className = '', size = 'md', invert = false, nav 
   const sizeClass =
     size === 'lg' ? 'text-4xl md:text-5xl' :
     size === 'sm' ? 'text-xl md:text-2xl' :
-    'text-xl md:text-2xl';
+    // Navin koko: työpöydällä verkoston 30 px (alle 1280 px:n koko tulee index.css:n LV-NAV-SANAMERKKI-lohkosta).
+    'text-xl md:text-2xl xl:text-3xl';
 
   // Dark deal theme (2026-07-06): the site chrome is deep-night everywhere, so
   // LAPLAND is ALWAYS snow — the old non-invert ink (#0F172A) vanished against

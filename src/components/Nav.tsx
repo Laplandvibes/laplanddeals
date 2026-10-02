@@ -59,8 +59,8 @@ export default function Nav() {
           : 'bg-cream/70 backdrop-blur-sm'
       }`}
     >
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="lv-navrivi flex items-center justify-between gap-3 h-16 md:h-[72px]">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="lv-navrivi flex items-center justify-between gap-3 h-16">
           <div className="lv-navvasen flex items-center gap-3 sm:gap-5 shrink-0">
             {/* NB: "cream" tokens are remapped to deep-night since the 2026-06-27 dark
     redesign — the nav is DARK, so the menu uses the default dark variant. */}
