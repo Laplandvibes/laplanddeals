@@ -9,6 +9,18 @@ import { COPY } from '../locales/copy';
 // From September the base (aurora-season) copy is the truthful one.
 const isSummerSeason = () => { const m = new Date().getMonth()+1; return m>=6 && m<=8; };
 
+/* ── Otsikko kahdella rivillä jokaisella kielellä tietokoneella (Vesa 3.10.2026: "tehdään turhaan kolmirivisiä") ──
+ * Mitattu livenä 3.10. (12 kieltä × 1280/1536/1920): 22 löydöstä, otsikko 3–4 riviä de/fr/sv/it/nl/es/pt-BR/ja.
+ * Koko kasvoi näytön mukana (102–122 px), palsta pysyi 768 px:ssä ⇒ "Günstige Last- / Minute- / Angebote für /
+ * Lappland." ja ja katkesi kesken sanan ("ラップラン / ドの格安"). Rivijako on datassa (valkoinen rivi | pinkki rivi),
+ * joten sm:stä ylöspäin koko on pienempi kahdesta: suunniteltu --h1-max tai koko jolla pidempi rivi mahtuu
+ * palstaan (100cqi / rivin leveys em-yksiköinä). Palsta pysyy 768 px:ssä: teksti ei siirry kuvan vaaleaan reunaan.
+ * Malli: hubin Hero.tsx (laplandvibes cadea06). */
+const CJK_CHAR = /[぀-ヿ㐀-鿿가-힯＀-￯]/;
+/** Rivin leveysarvio em-yksiköinä: Bebas Neuen versaali ~0,36–0,39 em, arvio 0,4 jättää varaa; CJK-merkki 1,05 em. */
+const emWidth = (s: string): number =>
+  [...s].reduce((w, ch) => w + (CJK_CHAR.test(ch) ? 1.05 : ch === ' ' ? 0.25 : 0.4), 0);
+
 export default function Hero() {
   const lang = useLang();
   const to = useLocalePath();
@@ -25,6 +37,9 @@ export default function Hero() {
   const secondaryTo = isSummer
     ? c.secondaryToSummer ?? c.secondaryTo ?? '/summer'
     : c.secondaryTo ?? '/summer';
+  const line1 = `${c.h1Line1Italic}${c.h1Line1Bold}`;
+  const h1Em = Math.max(emWidth(line1), emWidth(c.h1Line2));
+  const cjk = CJK_CHAR.test(line1);
 
   return (
     <section className="relative min-h-[100svh] md:min-h-[92vh] flex items-center overflow-hidden pt-16">
@@ -54,16 +69,21 @@ export default function Hero() {
       <div aria-hidden="true" className="absolute inset-0 paper-grain opacity-40 mix-blend-overlay" />
 
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16">
-        <div className="max-w-3xl">
+        {/* @container: otsikon koko lasketaan tämän palstan leveydestä (100cqi). */}
+        <div className="@container max-w-3xl">
           <p className="flex items-center gap-2.5 text-ivory text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-6 sm:mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             <span aria-hidden="true" className="inline-block w-2 h-2 rounded-full bg-vibe-pink deal-pulse shrink-0" />
             {eyebrow}
           </p>
 
           {/* Bebas is single-weight and upright — no italic/weight games. */}
-          <h1 className="font-heading text-ivory leading-[0.95] mb-6 sm:mb-8 text-[3.4rem] sm:text-[5rem] lg:text-[6.4rem] drop-shadow-[0_3px_18px_rgba(0,0,0,0.85)] xl:text-[clamp(102px,1.5938vw_+_81.6px,122.4px)]">
-            {c.h1Line1Italic}
-            {c.h1Line1Bold}
+          {/* Puhelin (< 640) pitää kiinteän koon; sm+ = min(suunniteltu, palstaan mahtuva). ja/zh/ko: keep-all, ettei
+              rivi katkea kesken sanan jos arvio pettää. */}
+          <h1
+            className={`font-heading text-ivory leading-[0.95] mb-6 sm:mb-8 text-[3.4rem] sm:[--h1-max:5rem] lg:[--h1-max:6.4rem] xl:[--h1-max:clamp(102px,1.5938vw_+_81.6px,122.4px)] sm:[font-size:min(var(--h1-max),calc(100cqi/var(--h1-em)))] drop-shadow-[0_3px_18px_rgba(0,0,0,0.85)]${cjk ? ' [word-break:keep-all] [overflow-wrap:anywhere]' : ''}`}
+            style={{ ['--h1-em' as string]: h1Em.toFixed(2) }}
+          >
+            {line1}
             <br />
             <span className="text-vibe-pink drop-shadow-[0_0_40px_rgba(236,72,153,0.8)]">{c.h1Line2}</span>
           </h1>
