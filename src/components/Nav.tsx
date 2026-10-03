@@ -79,7 +79,7 @@ export default function Nav() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`inline-flex items-center min-h-11 whitespace-nowrap text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors no-underline ${
+                  className={`inline-flex items-center min-h-11 whitespace-nowrap text-sm font-medium transition-colors no-underline ${
                     active ? 'text-vibe-pink' : 'text-ink-soft hover:text-vibe-pink'
                   }`}
                 >
@@ -93,7 +93,7 @@ export default function Nav() {
             <LangDropdown />
             <Link
               to={to('/hotels')}
-              className="inline-flex items-center text-[13px] font-bold uppercase tracking-[0.12em] bg-[#DB2777] hover:bg-[#BE185D] text-white px-5 py-2.5 rounded-full transition-colors no-underline"
+              className="inline-flex items-center text-sm font-semibold bg-[#DB2777] hover:bg-[#BE185D] text-white px-5 py-2.5 rounded-full transition-colors no-underline"
             >
               {c.tonightsCta}
             </Link>
@@ -125,7 +125,7 @@ export default function Nav() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`block text-[15px] font-semibold uppercase tracking-[0.1em] no-underline py-3 px-2 rounded-md transition-colors ${
+                  className={`block text-[15px] font-medium no-underline py-3 px-2 rounded-md transition-colors ${
                     active ? 'text-vibe-pink bg-cream-2' : 'text-ink-soft hover:text-vibe-pink hover:bg-cream-2'
                   }`}
                 >
@@ -135,7 +135,7 @@ export default function Nav() {
             })}
             <Link
               to={to('/hotels')}
-              className="block text-center text-[14px] font-bold uppercase tracking-[0.12em] bg-vibe-pink text-ivory mt-3 px-5 py-3 rounded-full no-underline"
+              className="block text-center text-[14px] font-semibold bg-vibe-pink text-ivory mt-3 px-5 py-3 rounded-full no-underline"
             >
               {c.tonightsCta}
             </Link>
