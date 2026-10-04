@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, BedDouble, Maximize2, Star, Users } from 'lucide-react';
 import LiveList, { type SortMode } from './live/LiveList';
-import LiveRow from './live/LiveRow';
+import LiveCard from './live/LiveCard';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { trackAffiliateClick } from '../lib/analytics';
@@ -18,9 +18,13 @@ import { trackAffiliateClick } from '../lib/analytics';
  * source exists; each row says where the price is instead. The rows are picked round-robin
  * across the resort groups so six cards never all come from Levi.
  *
- * Wide screens: smallest first | largest first (a couple and a big group look for different
- * cabins). The header button opens Lomarengas's OWN last-minute filter for Lapland: the only
- * honest "äkkilähdöt" link, because the feed carries no discount field.
+ * Photo cards (4.10.2026, Vesa: "ei herätä visuaalista ostonautintoa"): one grid, smallest or
+ * largest first by the toggle (a couple and a big group look for different cabins). The photo
+ * leads; the card carries what the feed states and Lomarengas stands behind — guests, bedrooms,
+ * floor area and Lomarengas's own quality class ("Lomarenkaan laatutarkastettu majoituskohde:
+ * ★★★★ (4)" in the feed description, back in the feed by 4.10.2026). The header button opens
+ * Lomarengas's OWN last-minute filter for Lapland: the only honest "äkkilähdöt" link, because the
+ * feed carries no discount field.
  */
 
 type ApiCabin = {
@@ -56,6 +60,17 @@ function lastMinuteHref(lang: Lang): string {
     ? 'https://www.lomarengas.fi/mokkihaku/lappi?lastMinuteOffer=true'
     : 'https://www.lomarengas.fi/en/cottage-search/lappi?lastMinuteOffer=true';
   return `${REDIRECT}?sid=live_cabins_lastminute&dest=${encodeURIComponent(dest)}`;
+}
+
+/** The feed writes names in sentence case with unit codes in lower case ("Levin stara c 15",
+ *  "Villa arcus a"); the card shows them as names ("Levin Stara C 15"). */
+function cabinName(name: string): string {
+  return name.split(' ').map((w) => (w === 'ja' ? w : w.charAt(0).toLocaleUpperCase('fi') + w.slice(1))).join(' ');
+}
+
+/** "82.5" → "82,5" in Finnish, German, French …: the reader's own decimal mark. */
+function fmtArea(sqm: number, lang: Lang): string {
+  try { return new Intl.NumberFormat(lang, { maximumFractionDigits: 1 }).format(sqm); } catch { return String(sqm); }
 }
 
 /** Take one cabin from each resort group in turn until MAX_ROWS. */
@@ -127,6 +142,7 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
       }
       rows={cabins}
       modes={modes}
+      layout="cards"
       limit={limit}
       phoneLimit={phoneLimit}
       loading={!data}
@@ -134,19 +150,27 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
       footnote={updated ? `${c.updated.replace('{date}', updated)} · ${cl.photoCredit.replace('{source}', 'Lomarengas')}` : undefined}
       renderRow={(cab, i) => {
         const sid = `live_cabin_${cab.id}`;
+        const stars = cab.stars && cab.stars >= 1 && cab.stars <= 5 ? cab.stars : null;
         return (
-          <LiveRow
+          <LiveCard
             index={i}
-            media={{ kind: 'photo', src: cab.img, alt: `${cab.name}, ${cab.place}`, width: 640, height: 427, eager: i < 2 }}
-            day={String(cab.p ?? '')}
-            month={c.guests}
-            dateSub={cab.br ? `${cab.br} ${c.bedrooms}` : undefined}
-            badge={null}
-            name={cab.name}
-            facts={[<span key="p" className="font-medium text-finland-blue">{cab.place}</span>, cab.muni && cab.muni !== cab.place ? cab.muni : null]}
-            price=""
-            unit={c.priceAt}
-            seen={cl.seenAt.replace('{source}', 'Lomarengas').replace('{d}', updated)}
+            photo={{ src: cab.img, alt: `${cabinName(cab.name)}, ${cab.place}`, width: 600, height: 400, eager: i < 2, hideBottom: 0.2 }}
+            eyebrow={[cab.place, cab.muni && cab.muni !== cab.place ? cab.muni : null]}
+            name={cabinName(cab.name)}
+            facts={[
+              <span key="p" className="inline-flex items-center gap-1"><Users className="h-3.5 w-3.5 text-deep-night/50" aria-hidden="true" />{cab.p} {c.guests}</span>,
+              cab.br ? <span key="b" className="inline-flex items-center gap-1"><BedDouble className="h-3.5 w-3.5 text-deep-night/50" aria-hidden="true" />{cab.br} {c.bedrooms}</span> : null,
+              cab.sqm ? <span key="s" className="inline-flex items-center gap-1"><Maximize2 className="h-3.5 w-3.5 text-deep-night/50" aria-hidden="true" />{fmtArea(cab.sqm, lang)} m²</span> : null,
+            ]}
+            extra={stars ? (
+              <span className="inline-flex flex-wrap items-center gap-x-1.5">
+                <span className="inline-flex text-[#D97706]" role="img" aria-label={`${c.starsLabel} ${stars}/5`} title={c.starsLabel}>
+                  {Array.from({ length: stars }, (_, k) => <Star key={k} className="h-3.5 w-3.5 fill-current" aria-hidden="true" />)}
+                </span>
+                <span aria-hidden="true">{c.starsLabel}</span>
+              </span>
+            ) : undefined}
+            note={c.priceAt}
             href={cabinHref(cab.slug, sid, lang)}
             sid={sid}
             partner="lomarengas"

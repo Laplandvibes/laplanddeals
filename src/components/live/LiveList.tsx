@@ -17,6 +17,13 @@ import Units from './Units';
  *
  * Sorting is client-side and emits no funnel events (06-mittaus: a
  * client-side sorter is not a form). Affiliate clicks are counted in D1.
+ *
+ * `layout="cards"` (4.10.2026, cabins and car classes): ONE sorted grid of
+ * photo cards — a swipe row on a phone (cards at 82 %, the next one's edge in
+ * view), 2 columns from 640 px, 3 from 1024 px — and the sort toggle at every
+ * width. The two-column split repeated four of six
+ * cabins side by side on a desktop (smallest first | largest first over the
+ * same twelve rows), which read as a broken list, not a choice.
  */
 
 export interface SortMode<T> {
@@ -51,29 +58,41 @@ interface LiveListProps<T> {
   /** Placeholder while `rows` is still loading. */
   loading?: boolean;
   className?: string;
+  /** "rows" (default): receipt rows, two sorted columns on lg+. "cards": one sorted grid of photo cards. */
+  layout?: 'rows' | 'cards';
+  /** Under the tile, before the footnote: e.g. the photo credits of a card grid. */
+  credits?: ReactNode;
 }
 
-/** True from the lg breakpoint up; false while prerendering, so static HTML is the single column. */
-function useWide(): boolean {
+/** Cards: a swipe row on a phone (bleeds to the tile edge, snaps card by card), a grid from sm. */
+const CARD_GRID = '-mx-3 flex snap-x snap-mandatory scroll-px-3 gap-3 overflow-x-auto px-3 pb-3 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3';
+
+/** True from `minPx` up; false while prerendering, so static HTML is the single column. */
+function useMinWidth(minPx: number): boolean {
   const [wide, setWide] = useState(false);
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1024px)');
+    const mq = window.matchMedia(`(min-width: ${minPx}px)`);
     const on = () => setWide(mq.matches);
     on();
     mq.addEventListener('change', on);
     return () => mq.removeEventListener('change', on);
-  }, []);
+  }, [minPx]);
   return wide;
 }
 
-export default function LiveList<T>({ id, kicker, title, lead, aside, rows, modes, chips, renderRow, rowKey, limit, phoneLimit, footnote, loading, className }: LiveListProps<T>) {
+export default function LiveList<T>({ id, kicker, title, lead, aside, rows, modes, chips, renderRow, rowKey, limit, phoneLimit, footnote, loading, className, layout = 'rows', credits }: LiveListProps<T>) {
   const lang = useLang();
   const c = COPY[lang].live.list;
-  const wide = useWide();
+  const cards = layout === 'cards';
+  const lg = useMinWidth(1024);
+  // Rows: two sorted columns from lg. Cards: never — one grid, the toggle chooses the order.
+  const wide = lg && !cards;
   const [sortKey, setSortKey] = useState(modes[0]?.key ?? '');
   const [expanded, setExpanded] = useState(false);
 
-  const cap = wide ? limit : (phoneLimit ?? limit);
+  // Rows: a phone gets the short list. Cards: a phone swipes through the same `limit` cards
+  // sideways, so the list costs one card of height and nothing is held back.
+  const cap = cards || lg ? limit : (phoneLimit ?? limit);
   const perColumn = cap && !expanded ? cap : rows.length;
   const columns = useMemo(() => {
     const active = wide ? modes.slice(0, 2) : [modes.find((m) => m.key === sortKey) ?? modes[0]];
@@ -82,7 +101,7 @@ export default function LiveList<T>({ id, kicker, title, lead, aside, rows, mode
   const canExpand = !!cap && rows.length > cap;
 
   return (
-    <section id={id} className={`relative ${className ?? ''}`} aria-labelledby={`${id}-title`} data-live-list>
+    <section id={id} className={`relative ${className ?? ''}`} aria-labelledby={`${id}-title`} data-live-list data-layout={layout}>
       {/* Header: the title block is a container so FitHeading can size the
           title to it. The aside sits beside it only from lg up: on a tablet
           it would take a third of the row and force the title onto two
@@ -99,13 +118,13 @@ export default function LiveList<T>({ id, kicker, title, lead, aside, rows, mode
       <div className="tile-ice p-3 sm:p-5">
         {(modes.length > 1 || chips) && (
           <div
-            className={`mb-4 grid gap-x-5 gap-y-4 ${modes.length > 1 && !chips ? 'lg:hidden' : ''}`}
+            className={`mb-4 grid gap-x-5 gap-y-4 ${modes.length > 1 && !chips && !cards ? 'lg:hidden' : ''}`}
             style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 18rem), 1fr))' }}
             data-live-controls
           >
             {modes.length > 1 && (
               <SegGroup
-                className="lg:hidden"
+                className={cards ? '' : 'lg:hidden'}
                 label={c.sortBy}
                 options={modes.map((m) => ({ key: m.key, label: m.label }))}
                 value={sortKey}
@@ -117,17 +136,23 @@ export default function LiveList<T>({ id, kicker, title, lead, aside, rows, mode
         )}
 
         {loading ? (
-          <ol className="flex flex-col gap-3" aria-hidden="true">
-            {[0, 1, 2].map((i) => <li key={i} className="card-frost h-[9.5rem] animate-pulse" />)}
-          </ol>
+          cards ? (
+            <ol className={CARD_GRID} aria-hidden="true">
+              {[0, 1, 2].map((i) => <li key={i} className="card-frost h-[25rem] w-[82%] max-w-[22rem] shrink-0 animate-pulse sm:w-auto sm:max-w-none" />)}
+            </ol>
+          ) : (
+            <ol className="flex flex-col gap-3" aria-hidden="true">
+              {[0, 1, 2].map((i) => <li key={i} className="card-frost h-[9.5rem] animate-pulse" />)}
+            </ol>
+          )
         ) : rows.length === 0 ? (
           <p className="card-frost p-6 text-sm text-deep-night/75">{c.empty}</p>
         ) : (
           <div className={`grid gap-5 ${wide && columns.length > 1 ? 'lg:grid-cols-2' : ''}`}>
             {columns.map((col) => (
-              <div key={col.mode.key}>
+              <div key={col.mode.key} className="min-w-0">
                 {wide && columns.length > 1 && <h3 className="mb-3 font-heading text-2xl leading-none text-deep-night">{col.mode.column}</h3>}
-                <ol className="flex flex-col gap-3">
+                <ol className={cards ? CARD_GRID : 'flex flex-col gap-3'} data-card-grid={cards || undefined}>
                   {col.rows.map((r, i) => <Fragment key={`${col.mode.key}-${rowKey(r)}`}>{renderRow(r, i)}</Fragment>)}
                 </ol>
               </div>
@@ -148,6 +173,7 @@ export default function LiveList<T>({ id, kicker, title, lead, aside, rows, mode
         )}
       </div>
 
+      {credits}
       {footnote && <p className="mt-4 max-w-3xl text-xs leading-relaxed text-deep-night/60">{typeof footnote === 'string' ? <Units text={footnote} /> : footnote}</p>}
     </section>
   );

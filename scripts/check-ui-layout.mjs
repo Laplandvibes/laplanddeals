@@ -10,6 +10,12 @@
  * Fails the run on any of:
  *   - a live row taller than a phone can show two of (375 px: > 240 px; desktop > 260)
  *   - rows of uneven height inside one list (max − min > 48 px)
+ *   - photo-card lists (data-layout="cards", 4.10.2026: cabins and car classes): a card
+ *     taller than 520 px; cards in one grid row (or the phone's swipe row) of different
+ *     heights (> 2 px); a photo frame under 140 px tall or 200 px wide; a partner stamp that
+ *     is not cropped out (data-hide-bottom: the visible share of the image box must stay at
+ *     or under 1 − hide); on a phone, a swipe row that does not scroll sideways or shows
+ *     less than a 12 px edge of the next card
  *   - a row photo that did not render (naturalWidth 0) or renders under 80 px
  *   - text that overflows its row (scrollWidth > clientWidth)
  *   - a row button under 44 px tall / 96 px wide (iOS HIG tap target)
@@ -111,15 +117,35 @@ async function measurePage(v, path) {
       const rows = ols.flatMap((ol) => [...ol.querySelectorAll(":scope > li")]).filter((li) => li.getClientRects().length > 0);
       return {
         id,
+        layout: sec.getAttribute("data-layout") || "rows",
         rows: rows.map((li) => {
           const r = li.getBoundingClientRect();
           const img = li.querySelector("img");
           const btn = li.querySelector(".btn-pink");
           const b = btn?.getBoundingClientRect();
           const overflow = [...li.querySelectorAll("*")].some((e) => e.scrollWidth > e.clientWidth + 1 && getComputedStyle(e).overflowX !== "hidden" && !["IMG", "SVG"].includes(e.tagName) && !getComputedStyle(e).webkitLineClamp?.match(/\d/));
-          return { h: Math.round(r.height), img: img ? { natural: img.naturalWidth, w: Math.round(img.getBoundingClientRect().width) } : null, btn: b ? { w: Math.round(b.width), h: Math.round(b.height) } : null, overflow };
+          // Photo cards: the frame is what the reader sees; the image box may be taller (a cropped stamp).
+          const frame = li.querySelector("[data-card-photo]")?.getBoundingClientRect();
+          const hide = Number(img?.getAttribute("data-hide-bottom") || 0);
+          const ib = img?.getBoundingClientRect();
+          return {
+            h: Math.round(r.height), top: Math.round(r.top + scrollY),
+            img: img ? { natural: img.naturalWidth, w: Math.round(ib.width) } : null,
+            frame: frame ? { w: Math.round(frame.width), h: Math.round(frame.height) } : null,
+            stamp: hide && frame && ib ? { hide, visible: Math.round((frame.height / ib.height) * 1000) / 1000 } : null,
+            btn: b ? { w: Math.round(b.width), h: Math.round(b.height) } : null, overflow,
+          };
         }),
         controls: [...sec.querySelectorAll("button")].filter((b) => b.getClientRects().length > 0).map((b) => Math.round(b.getBoundingClientRect().height)),
+        // Phone swipe row: does it scroll, and how much of the second card peeks in.
+        swipe: (() => {
+          const g = sec.querySelector("[data-card-grid]");
+          if (!g || getComputedStyle(g).display !== "flex") return null;
+          const items = [...g.children];
+          const gr = g.getBoundingClientRect();
+          const second = items[1]?.getBoundingClientRect();
+          return { scrolls: g.scrollWidth > g.clientWidth + 1, peek: second ? Math.round(gr.right - second.left) : 0 };
+        })(),
       };
     });
     const chart = document.querySelector('section[aria-labelledby="fare-calendar-title"]');
@@ -308,9 +334,26 @@ async function measurePage(v, path) {
     if (!l.rows.length) { notes.push(`${tag}: ${l.id}: no rows rendered`); continue; }
     const hs = l.rows.map((r) => r.h);
     const max = Math.max(...hs), min = Math.min(...hs);
-    notes.push(`${tag}: ${l.id}: ${hs.length} rows, height ${min}–${max} px`);
-    if (max > v.maxRow) failures.push(`${tag}: ${l.id}: tallest row ${max} px > ${v.maxRow} px`);
-    if (max - min > 48) failures.push(`${tag}: ${l.id}: row heights uneven (${min}–${max} px)`);
+    if (l.layout === "cards") {
+      const maxCard = 520;
+      if (l.swipe && !l.swipe.scrolls && l.rows.length > 1) failures.push(`${tag}: ${l.id}: swipe row does not scroll sideways`);
+      if (l.swipe && l.rows.length > 1 && l.swipe.peek < 12) failures.push(`${tag}: ${l.id}: next card shows only ${l.swipe.peek} px — nothing says the row swipes`);
+      notes.push(`${tag}: ${l.id}: ${hs.length} cards, height ${min}–${max} px`);
+      if (max > maxCard) failures.push(`${tag}: ${l.id}: tallest card ${max} px > ${maxCard} px`);
+      // One grid row = one height (the grid stretches its items; a difference is a broken card).
+      const byTop = new Map();
+      for (const r of l.rows) { const k = [...byTop.keys()].find((t) => Math.abs(t - r.top) <= 2) ?? r.top; byTop.set(k, [...(byTop.get(k) || []), r.h]); }
+      for (const [, row] of byTop) if (Math.max(...row) - Math.min(...row) > 2) failures.push(`${tag}: ${l.id}: cards in one row differ in height (${row.join("/")} px)`);
+      l.rows.forEach((r, i) => {
+        if (!r.frame) failures.push(`${tag}: ${l.id} card ${i + 1} has no photo frame`);
+        else if (r.frame.h < 140 || r.frame.w < 200) failures.push(`${tag}: ${l.id} card ${i + 1} photo frame only ${r.frame.w}×${r.frame.h} px`);
+        if (r.stamp && r.stamp.visible > 1 - r.stamp.hide + 0.005) failures.push(`${tag}: ${l.id} card ${i + 1} shows ${Math.round(r.stamp.visible * 100)} % of the image: the partner stamp in the bottom ${Math.round(r.stamp.hide * 100)} % is in view`);
+      });
+    } else {
+      notes.push(`${tag}: ${l.id}: ${hs.length} rows, height ${min}–${max} px`);
+      if (max > v.maxRow) failures.push(`${tag}: ${l.id}: tallest row ${max} px > ${v.maxRow} px`);
+      if (max - min > 48) failures.push(`${tag}: ${l.id}: row heights uneven (${min}–${max} px)`);
+    }
     l.rows.forEach((r, i) => {
       if (r.img && r.img.natural === 0) failures.push(`${tag}: ${l.id} row ${i + 1} photo did not render`);
       else if (r.img && r.img.w < v.minImg) failures.push(`${tag}: ${l.id} row ${i + 1} photo only ${r.img.w} px wide`);
