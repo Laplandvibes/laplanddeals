@@ -20,8 +20,16 @@ import type { ReactNode } from 'react';
  *
  * `text` splits on " · " / "・"; `items` takes ready nodes (row facts).
  * A single unit renders as ordinary wrapping text.
+ *
+ * `wrap` (4.10.2026, photo-credit lines): a unit may itself wrap. A credit group
+ * ("Kia Picanto, Volkswagen Polo: Alexander Migl, CC BY-SA 4.0") is wider than a
+ * phone, and as one nowrap unit it would be clipped. A wrapping unit is a flex
+ * item that shrinks to the line and breaks inside; it still starts on a fresh
+ * line when it does not fit, so its dot lands in the clipped strip as before.
+ * (The plain " · " text these lines had was a bare separator node: 572 gate
+ * findings across 12 languages, measured live 4.10.2026.)
  */
-export default function Units({ text, items, className }: { text?: string; items?: ReactNode[]; className?: string }) {
+export default function Units({ text, items, className, wrap }: { text?: string; items?: ReactNode[]; className?: string; wrap?: boolean }) {
   const parts: ReactNode[] = items
     ? items.filter((x) => x !== null && x !== undefined && x !== false && x !== '')
     : (text ?? '').split(/\s*[·・]\s*/).filter(Boolean);
@@ -30,7 +38,7 @@ export default function Units({ text, items, className }: { text?: string; items
     <span className={`units block overflow-hidden ${className ?? ''}`}>
       <span className="units-row flex flex-wrap" style={{ marginLeft: '-1.05em', rowGap: '0.1em' }}>
         {parts.map((part, i) => (
-          <span key={i} className="unit relative whitespace-nowrap" style={{ paddingLeft: '1.05em' }}>
+          <span key={i} className={`unit relative ${wrap ? 'min-w-0 max-w-full' : 'whitespace-nowrap'}`} style={{ paddingLeft: '1.05em' }}>
             <span aria-hidden="true" className="unit-dot absolute opacity-60" style={{ left: '0.32em' }}>·</span>
             {part}
           </span>

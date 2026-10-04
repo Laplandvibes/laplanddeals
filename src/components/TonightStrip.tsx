@@ -93,21 +93,24 @@ export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; 
         </ul>
         {/* Commons credits: author links to the file page, licence to its deed (CC BY / BY-SA §3(a)).
             Separate from the tile links, so no link sits inside another. */}
-        <p className="mt-3 text-[11px] leading-relaxed text-deep-night/60">
-          {cl.photoCredit.split('{source}')[0]}
-          {PLACES.map((p, i) => {
-            const ph = TONIGHT_PHOTOS[p.key];
-            if (!ph) return null;
-            return (
-              <span key={p.key}>
-                {i > 0 && ' · '}
-                {c.places[i]}: <a href={ph.fileUrl} target="_blank" rel="noopener" className="lv-tap underline decoration-deep-night/30 hover:text-deep-night">{ph.author}</a>,{' '}
-                <a href={ph.licenseUrl} target="_blank" rel="license noopener" className="lv-tap whitespace-nowrap underline decoration-deep-night/30 hover:text-deep-night">{ph.license}</a>
-                {ph.croppedNote && ` (${c.cropped})`}
-              </span>
-            );
-          })}
-        </p>
+        {/* Units, not " · " text: a bare separator node can land at a line edge (gate:ui, 4.10.2026). */}
+        <div className="mt-3 text-[11px] leading-relaxed text-deep-night/60">
+          <Units
+            wrap
+            items={PLACES.map((p, i) => {
+              const ph = TONIGHT_PHOTOS[p.key];
+              if (!ph) return null;
+              return (
+                <span key={p.key}>
+                  {i === 0 && cl.photoCredit.split('{source}')[0]}
+                  {c.places[i]}: <a href={ph.fileUrl} target="_blank" rel="noopener" className="lv-tap underline decoration-deep-night/30 hover:text-deep-night">{ph.author}</a>,{' '}
+                  <a href={ph.licenseUrl} target="_blank" rel="license noopener" className="lv-tap whitespace-nowrap underline decoration-deep-night/30 hover:text-deep-night">{ph.license}</a>
+                  {ph.croppedNote && ` (${c.cropped})`}
+                </span>
+              );
+            })}
+          />
+        </div>
       </div>
     </section>
   );

@@ -44,6 +44,10 @@
  *   Every language homepage is measured, all 12: section titles and tile names
  *   differ in length per language (26.9.2026 the gate read only en/fi/de).
  *   Pages load GATE_CONCURRENCY at a time (default 3; 1 = one after another).
+ *   No server at hand (4.10.2026: every preview slot was taken by other sessions):
+ *   GATE_DIST=dist serves the built folder straight from disk to the browser
+ *   (Playwright routes the base URL to files; /api/* answers 404, so the flight
+ *   list and chart hide themselves and show up as notes, as with `vite preview`).
  *   Re-measure one finding: GATE_PAGES=/,/nl/ and/or GATE_VIEWS=desktop,tablet
  *   (comma lists) run only those; the default is everything. In Git Bash add
  *   MSYS_NO_PATHCONV=1, or "/" arrives as a Windows path.
@@ -59,6 +63,17 @@ const { chromium } = await pw(resolve(ROOT, ".."))
   .catch(() => (process.env.LV_JUURI ? pw(process.env.LV_JUURI) : Promise.reject()))
   .catch(() => import("playwright"));
 const base = (process.argv[2] || "https://laplanddeals.com").replace(/\/$/, "");
+const DIST = process.env.GATE_DIST ? resolve(process.env.GATE_DIST) : null;
+const TYPES = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".webp": "image/webp", ".avif": "image/avif", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml", ".json": "application/json", ".woff2": "font/woff2", ".xml": "application/xml" };
+/** GATE_DIST: a path as the static host would answer it — folder → index.html, unknown → the SPA shell. */
+async function distFile(pathname) {
+  const { readFile, stat } = await import("node:fs/promises");
+  const { join, extname } = await import("node:path");
+  let f = join(DIST, decodeURIComponent(pathname));
+  try { if ((await stat(f)).isDirectory()) f = join(f, "index.html"); } catch { f = join(DIST, "index.html"); }
+  try { return { body: await readFile(f), contentType: TYPES[extname(f)] || "application/octet-stream" }; }
+  catch { return { body: await readFile(join(DIST, "index.html")), contentType: "text/html" }; }
+}
 
 const VIEWS = [
   { name: "phone", w: 375, h: 812, mobile: true, maxRow: 240, minImg: 80, oneLineTitles: false },
@@ -95,6 +110,13 @@ async function measurePage(v, path) {
   const [langCode, locale] = langOf(path);
   const ctx = await browser.newContext({ viewport: { width: v.w, height: v.h }, isMobile: v.mobile, locale, deviceScaleFactor: 1 });
   await ctx.addInitScript((l) => { try { localStorage.setItem("laplanddeals_cookie_consent", "declined"); localStorage.setItem("lv_locale_choice", l); } catch {} }, langCode);
+  if (DIST) {
+    await ctx.route(`${base}/**`, async (route) => {
+      const u = new URL(route.request().url());
+      if (u.pathname.startsWith("/api/")) return route.fulfill({ status: 404, body: "" });
+      route.fulfill({ status: 200, ...(await distFile(u.pathname)) });
+    });
+  }
   const page = await ctx.newPage();
   await page.goto(base + path, { waitUntil: "domcontentloaded", timeout: 60000 });
   await page.waitForTimeout(5500);

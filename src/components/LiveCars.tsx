@@ -4,6 +4,7 @@ import LiveList, { type SortMode } from './live/LiveList';
 import SegGroup from './live/SegGroup';
 import LiveRow from './live/LiveRow';
 import LiveCard from './live/LiveCard';
+import Units from './live/Units';
 import CarSilhouette from './live/CarSilhouette';
 import { carPhotoFor, type CarPhoto } from '../data/carPhotos';
 import { buildAffiliateHref } from './AffiliateCTA';
@@ -53,21 +54,24 @@ function PhotoCredits({ photos, label }: { photos: CarPhoto[]; label: string }) 
   }
   const [before, after] = label.split('{source}');
   const link = 'lv-tap underline decoration-deep-night/30 hover:text-deep-night';
+  // Units, not " · " text: the dot never lands at a line edge (gate:ui, 572 findings 4.10.2026).
   return (
-    <p className="mx-auto mt-3 max-w-4xl text-center text-base leading-relaxed text-deep-night/75" data-photo-credits>
-      {before}
-      {groups.map((g, i) => (
-        <span key={g.author + g.license}>
-          {i > 0 && ' · '}
-          {g.photos.map((ph, k) => (
-            <span key={ph.src}>{k > 0 && ', '}<a href={ph.fileUrl} target="_blank" rel="noopener" className={link}>{ph.model}</a></span>
-          ))}
-          : {g.author},{' '}
-          <a href={g.licenseUrl} target="_blank" rel="license noopener" className={`${link} whitespace-nowrap`}>{g.license}</a>
-        </span>
-      ))}
-      {after}
-    </p>
+    <div className="mt-3 max-w-4xl text-base leading-relaxed text-deep-night/75" data-photo-credits>
+      <Units
+        wrap
+        items={groups.map((g, i) => (
+          <span key={g.author + g.license}>
+            {i === 0 && before}
+            {g.photos.map((ph, k) => (
+              <span key={ph.src}>{k > 0 && ', '}<a href={ph.fileUrl} target="_blank" rel="noopener" className={link}>{ph.model}</a></span>
+            ))}
+            : {g.author},{' '}
+            <a href={g.licenseUrl} target="_blank" rel="license noopener" className={`${link} whitespace-nowrap`}>{g.license}</a>
+            {i === groups.length - 1 && after}
+          </span>
+        ))}
+      />
+    </div>
   );
 }
 
