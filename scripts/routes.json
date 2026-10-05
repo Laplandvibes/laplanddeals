@@ -251,101 +251,26 @@
   },
   {
     "path": "/privacy",
+    "pageFile": "src/pages/PrivacyPolicy.tsx",
     "fallbackTitle": "Privacy Policy",
     "harvestFiles": [
       "src/shared/Legal/PrivacyContent.tsx"
-    ],
-    "fallbackTitleByLang": {
-      "fi": "Tietosuojaseloste",
-      "sv": "Integritetspolicy",
-      "de": "Datenschutzerklärung",
-      "fr": "Politique de confidentialité",
-      "es": "Política de privacidad",
-      "it": "Informativa sulla privacy",
-      "nl": "Privacyverklaring",
-      "ja": "プライバシーポリシー",
-      "ko": "개인정보 처리방침",
-      "zh-CN": "隐私政策",
-      "pt-BR": "Política de privacidade"
-    },
-    "fallbackDescriptionByLang": {
-      "fi": "Miten LaplandDeals käsittelee tietojasi.",
-      "sv": "Så behandlar LaplandDeals dina uppgifter.",
-      "de": "So verarbeitet LaplandDeals Ihre Daten.",
-      "fr": "Comment LaplandDeals traite vos données.",
-      "es": "Cómo trata LaplandDeals sus datos.",
-      "it": "Come LaplandDeals tratta i Suoi dati.",
-      "nl": "Hoe LaplandDeals met uw gegevens omgaat.",
-      "ja": "LaplandDealsの個人情報の取り扱いについて。",
-      "ko": "LaplandDeals의 개인정보 처리 방식.",
-      "zh-CN": "LaplandDeals如何处理您的数据。",
-      "pt-BR": "Como o LaplandDeals trata seus dados."
-    }
+    ]
   },
   {
     "path": "/terms",
+    "pageFile": "src/pages/Terms.tsx",
     "fallbackTitle": "Terms of Use",
     "harvestFiles": [
       "src/shared/Legal/TermsContent.tsx"
-    ],
-    "fallbackTitleByLang": {
-      "fi": "Käyttöehdot",
-      "sv": "Användarvillkor",
-      "de": "Nutzungsbedingungen",
-      "fr": "Conditions d’utilisation",
-      "es": "Términos de servicio",
-      "it": "Termini di utilizzo",
-      "nl": "Gebruiksvoorwaarden",
-      "ja": "利用規約",
-      "ko": "이용약관",
-      "zh-CN": "使用条款",
-      "pt-BR": "Termos de uso"
-    },
-    "fallbackDescriptionByLang": {
-      "fi": "LaplandDealsin käyttöehdot.",
-      "sv": "Användarvillkor för LaplandDeals.",
-      "de": "Die Nutzungsbedingungen von LaplandDeals.",
-      "fr": "Les conditions d’utilisation de LaplandDeals.",
-      "es": "Los términos de uso de LaplandDeals.",
-      "it": "I termini di utilizzo di LaplandDeals.",
-      "nl": "De gebruiksvoorwaarden van LaplandDeals.",
-      "ja": "LaplandDealsの利用規約。",
-      "ko": "LaplandDeals 이용약관.",
-      "zh-CN": "LaplandDeals的使用条款。",
-      "pt-BR": "Os termos de uso do LaplandDeals."
-    }
+    ]
   },
   {
     "path": "/cookie-policy",
+    "pageFile": "src/pages/CookiePolicy.tsx",
     "fallbackTitle": "Cookie Policy",
     "harvestFiles": [
       "src/shared/Legal/CookieContent.tsx"
-    ],
-    "fallbackTitleByLang": {
-      "fi": "Evästekäytäntö",
-      "sv": "Cookiepolicy",
-      "de": "Cookie-Richtlinie",
-      "fr": "Politique de cookies",
-      "es": "Política de cookies y consentimiento",
-      "it": "Cookie policy",
-      "nl": "Cookiebeleid",
-      "ja": "クッキーポリシー",
-      "ko": "쿠키 정책",
-      "zh-CN": "Cookie 政策",
-      "pt-BR": "Política de cookies"
-    },
-    "fallbackDescriptionByLang": {
-      "fi": "Miten LaplandDeals käyttää evästeitä.",
-      "sv": "Så använder LaplandDeals cookies.",
-      "de": "So verwendet LaplandDeals Cookies.",
-      "fr": "Comment LaplandDeals utilise les cookies.",
-      "es": "Cómo usa LaplandDeals las cookies.",
-      "it": "Come LaplandDeals utilizza i cookie.",
-      "nl": "Hoe LaplandDeals cookies gebruikt.",
-      "ja": "LaplandDealsのクッキーの使用について。",
-      "ko": "LaplandDeals의 쿠키 사용 방식.",
-      "zh-CN": "LaplandDeals如何使用Cookie。",
-      "pt-BR": "Como o LaplandDeals usa cookies."
-    }
+    ]
   }
 ]
