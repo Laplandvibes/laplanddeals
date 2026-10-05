@@ -69,55 +69,25 @@ const SIBLING_URLS = [
 // advertised a season that had ended.
 const showSummerSection = () => { const m = new Date().getMonth() + 1; return m >= 4 && m <= 8; };
 
-const SEO_TITLE: Record<Lang, { title: string; desc: string }> = {
-  en: {
-    title: 'Lapland Holidays: Live Deals on Hotels, Flights and Safaris',
-    desc: 'Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers.',
-  },
-  fi: {
-    title: 'Last minute -tarjoukset Suomen Lappiin',
-    desc: 'Kumppaneiden live-tarjoukset Lapin hotelleihin, huskysafareihin, lentoihin Rovaniemelle ja autovuokrauksiin. Last-minute-hinnat, kauden lopun mökkiyöt ja kesätarjoukset.',
-  },
-  de: {
-    title: 'Last-Minute-Angebote für Finnisch-Lappland',
-    desc: 'Live-Partnerangebote für Hotels in Lappland, Husky-Safaris, Flüge nach Rovaniemi und Mietwagen. Last-Minute-Preise, Saisonende-Rabatte, Sommerangebote.',
-  },
-  ja: {
-    title: 'フィンランド・ラップランドのお得な旅行プラン',
-    desc: 'ラップランドのホテル、ハスキーサファリ、ロヴァニエミ行き航空券、レンタカーの最新パートナーオファー。直前価格・シーズン終了セール・夏季オファーをまとめてご紹介します。',
-  },
-  es: {
-    title: 'Ofertas de última hora en Laponia',
-    desc: 'Ofertas reales de los socios en hoteles de Laponia, safaris de huskies, vuelos a Rovaniemi y alquiler de coches. Precios de última hora, bajadas de precio de fin de temporada y ofertas de verano.',
-  },
-  'pt-BR': {
-    title: 'Ofertas de última hora na Lapônia',
-    desc: 'Ofertas reais dos parceiros em hotéis da Lapônia, safáris com huskies, voos para Rovaniemi e aluguel de carro. Preços de última hora, promoções de fim de temporada e ofertas de verão.',
-  },
-  'zh-CN': {
-    title: '芬兰拉普兰临时优惠与特价',
-    desc: '拉普兰酒店、哈士奇雪橇、罗瓦涅米航班和租车的合作伙伴实时优惠。临时折扣、季末清仓、夏季优惠。',
-  },
-  ko: {
-    title: '핀란드 라플란드 직전 예약 특가와 할인',
-    desc: '라플란드 호텔, 허스키 사파리, 로바니에미행 항공편, 렌터카의 파트너 실시간 특가. 직전 예약, 시즌 마감 할인, 여름 특가.',
-  },
-  fr: {
-    title: 'Offres de dernière minute en Laponie',
-    desc: "Offres partenaires en direct sur les hôtels de Laponie, safaris en traîneau à chiens, vols pour Rovaniemi et location de voitures. Tarifs de dernière minute, soldes de fin de saison, offres d'été.",
-  },
-  it: {
-    title: 'Offerte last-minute per la Lapponia',
-    desc: 'Offerte partner in tempo reale su hotel in Lapponia, safari con husky, voli per Rovaniemi e autonoleggio. Prezzi last-minute, sconti di fine stagione, offerte estive.',
-  },
-  nl: {
-    title: 'Last-minute aanbiedingen voor Fins Lapland',
-    desc: "Live partneraanbiedingen voor Lapland-hotels, husky-safari's, vluchten naar Rovaniemi en autoverhuur. Last-minute prijzen, eindseizoenskortingen, zomeraanbiedingen.",
-  },
-  sv: {
-    title: 'Sista minuten-erbjudanden till finska Lappland',
-    desc: 'Partnernas realtidspriser på hotell i Lappland, huskysafarier, flyg till Rovaniemi och biluthyrning. Sista minuten-priser, säsongens slutrea och sommarerbjudanden.',
-  },
+// <title> and description per locale. The prerender reads these same `const <locale>` blocks
+// (scripts/routes.json "pageFile": seoTitle / seoDescription), so the static HTML and the browser
+// show one text: change it only here. Keep each description inside the prerender's length window
+// (70–160 characters; ja, zh and ko 100–200 width units, a CJK character counts as two): a shorter
+// one is extended and a longer one cut in the static HTML only, and the two would differ again.
+const en = { seoTitle: 'Lapland Holidays: Live Deals on Hotels, Flights and Safaris', seoDescription: 'Live partner deals on Lapland hotels, husky safaris, flights to Rovaniemi and car hire. Last-minute prices, end-of-season clearouts, summer offers.' };
+const fi = { seoTitle: 'Last minute -tarjoukset Suomen Lappiin', seoDescription: 'Kumppaneiden live-tarjoukset Lapin hotelleihin, huskysafareihin, lentoihin Rovaniemelle ja autovuokrauksiin.' };
+const de = { seoTitle: 'Last-Minute-Angebote für Finnisch-Lappland', seoDescription: 'Live-Partnerangebote für Hotels in Lappland, Husky-Safaris, Flüge nach Rovaniemi und Mietwagen. Last-Minute-Preise, Saisonende-Rabatte, Sommerangebote.' };
+const ja = { seoTitle: 'フィンランド・ラップランドのお得な旅行プラン', seoDescription: 'ラップランドのホテル、ハスキーサファリ、ロヴァニエミ行き航空券、レンタカーの最新パートナーオファー。直前価格・シーズン終了セール・夏季オファーをまとめてご紹介します。' };
+const es = { seoTitle: 'Ofertas de última hora en Laponia', seoDescription: 'Ofertas reales de los socios en hoteles de Laponia, safaris de huskies, vuelos a Rovaniemi y alquiler de coches.' };
+const ptBR = { seoTitle: 'Ofertas de última hora na Lapônia', seoDescription: 'Ofertas reais dos parceiros em hotéis da Lapônia, safáris com huskies, voos para Rovaniemi e aluguel de carro.' };
+const zhCN = { seoTitle: '芬兰拉普兰临时优惠与特价', seoDescription: '拉普兰酒店、哈士奇雪橇、罗瓦涅米航班和租车的合作伙伴实时优惠。临时折扣、季末清仓、夏季优惠。临时空出的酒店客房、未售完的哈士奇雪橇和雪地摩托名额、便宜的套餐和空置小屋，全在一处。' };
+const ko = { seoTitle: '핀란드 라플란드 직전 예약 특가와 할인', seoDescription: '라플란드 호텔, 허스키 사파리, 로바니에미행 항공편, 렌터카의 파트너 실시간 특가. 직전 예약, 시즌 마감 할인, 여름 특가.' };
+const fr = { seoTitle: 'Offres de dernière minute en Laponie', seoDescription: 'Offres partenaires en direct sur les hôtels de Laponie, safaris en traîneau à chiens, vols pour Rovaniemi et location de voitures.' };
+const it = { seoTitle: 'Offerte last-minute per la Lapponia', seoDescription: 'Offerte partner in tempo reale su hotel in Lapponia, safari con husky, voli per Rovaniemi e autonoleggio.' };
+const nl = { seoTitle: 'Last-minute aanbiedingen voor Fins Lapland', seoDescription: "Live partneraanbiedingen voor Lapland-hotels, husky-safari's, vluchten naar Rovaniemi en autoverhuur." };
+const sv = { seoTitle: 'Sista minuten-erbjudanden till finska Lappland', seoDescription: 'Partnernas realtidspriser på hotell i Lappland, huskysafarier, flyg till Rovaniemi och biluthyrning.' };
+const SEO: Record<Lang, { seoTitle: string; seoDescription: string }> = {
+  en, fi, de, ja, es, 'pt-BR': ptBR, 'zh-CN': zhCN, ko, fr, it, nl, sv,
 };
 
 // Per-question links to the deal pages that back each FAQ answer
@@ -147,7 +117,7 @@ export default function Home() {
   const editorsPicks = getEditorPicks(4, lang);
   const summerPicks = getSummerOffers(4, lang);
   const summerOn = showSummerSection();
-  const seo = SEO_TITLE[lang];
+  const seo = SEO[lang];
   const pathSeg: Record<Lang, string> = { en: '', fi: '/fi', de: '/de', ja: '/ja', es: '/es', 'pt-BR': '/br', 'zh-CN': '/cn', ko: '/kr', fr: '/fr', it: '/it', nl: '/nl', sv: '/sv' };
   const path = pathSeg[lang] || '/';
   const inLangMap: Record<Lang, string> = { en: 'en', fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko', fr: 'fr', it: 'it', nl: 'nl', sv: 'sv' };
@@ -176,13 +146,13 @@ export default function Home() {
   return (
     <>
       <PageSeo
-        title={seo.title}
-        description={seo.desc}
+        title={seo.seoTitle}
+        description={seo.seoDescription}
         path={path}
         jsonLd={[
           {
             '@type': 'WebPage',
-            name: seo.title,
+            name: seo.seoTitle,
             url: `https://laplanddeals.com${path === '/' ? '/' : path}`,
             inLanguage: inLang,
           },

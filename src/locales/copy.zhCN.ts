@@ -124,7 +124,7 @@ const zhCN: SectionCopy = {
       '极光带下的玻璃穹顶、莱维雪道旁的酒店、于拉斯的荒野旅舍、罗瓦涅米的家庭酒店。实时比较今晚的房价。',
     seoTitle: '拉普兰酒店优惠，玻璃冰屋、雪道旁、荒野旅舍',
     seoDesc:
-      '玻璃穹顶酒店、雪道直达住宿、家庭酒店和荒野旅馆的实时价格，遍布芬兰拉普兰。临时折扣和季末小屋优惠。',
+      '玻璃穹顶酒店、雪道直达住宿、家庭酒店和荒野旅馆的实时价格，遍布芬兰拉普兰。临时折扣和季末小屋优惠。整个地区只有几十家玻璃冰屋住宿。',
     bottomTitle: '没找到您的目的地？',
     bottomLead: '直接在 Trip.com 上搜索任何拉普兰小镇。',
     bottomCta: '浏览全部拉普兰酒店 →',
@@ -137,7 +137,7 @@ const zhCN: SectionCopy = {
       '哈士奇雪橇、追极光、摩托雪橇远征、驯鹿农场访问、冰钓。GetYourGuide 上的真实空位，没有虚假计时器，也没有编造的折扣。',
     seoTitle: '拉普兰活动优惠，哈士奇、极光、摩托雪橇等',
     seoDesc:
-      'GetYourGuide 上哈士奇雪橇、极光之旅、摩托雪橇、驯鹿农场和冰钓在芬兰拉普兰各地的实时价格。临时时段。',
+      'GetYourGuide 上哈士奇雪橇、极光之旅、摩托雪橇、驯鹿农场和冰钓在芬兰拉普兰各地的实时价格。临时时段。亲自驾驭你的 6 犬雪橇队。',
     bottomTitle: '浏览拉普兰完整活动目录',
     bottomLead: 'GetYourGuide 上有900多种当日游、徒步和多日冒险。',
     bottomCta: '所有拉普兰活动 →',
@@ -169,7 +169,7 @@ const zhCN: SectionCopy = {
       '钉胎、四驱、可自由追逐极光的里程。所有拉普兰机场均可取车，在 EconomyBookings 上比价。',
     seoTitle: '拉普兰租车优惠，钉胎、4WD、机场取车',
     seoDesc:
-      'EconomyBookings 上在罗瓦涅米、基蒂莱、伊瓦洛和库萨莫（鲁卡）机场租车的实时价格。冬季驾驶专用钉胎。',
+      'EconomyBookings 上在罗瓦涅米、基蒂莱、伊瓦洛和库萨莫（鲁卡）机场租车的实时价格。冬季驾驶专用钉胎。钉胎合法使用期为 11 月 1 日 – 3 月 31 日（可延长）。',
     bottomTitle: '赫尔辛基取车或异地还车？',
     bottomLead: 'EconomyBookings 支持大多数芬兰机场之间的单程租车。',
     bottomCta: '打开 EconomyBookings →',

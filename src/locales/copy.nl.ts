@@ -137,7 +137,7 @@ const nl: SectionCopy = {
       "Husky-safari's, noorderlicht-jachten, sneeuwscooter-expedities, bezoeken aan rendierboerderijen, ijsvissen. Live beschikbaarheid op GetYourGuide, geen valse timers, geen verzonnen percentages.",
     seoTitle: 'Lapland-activiteiten: husky, noorderlicht, sneeuwscooter',
     seoDesc:
-      "Live GetYourGuide-prijzen voor husky-safari's, noorderlicht-jachten, sneeuwscootertours, rendierboerderijen en ijsvissen in heel Fins Lapland. Last-minute slots.",
+      "Live GetYourGuide-prijzen voor husky-safari's, noorderlicht-jachten, sneeuwscootertours, rendierboerderijen en ijsvissen in heel Fins Lapland.",
     bottomTitle: 'Blader door de volledige Lapland-catalogus',
     bottomLead: '900+ tours, dagtrips en meerdaagse avonturen op GetYourGuide.',
     bottomCta: 'Alle Lapland-activiteiten →',
@@ -153,7 +153,7 @@ const nl: SectionCopy = {
       "Helsinki naar elke Lapland-luchthaven, vooraf ingevuld inclusief datums. Klik door naar echte Finnair- en Norwegian-tarieven.",
     seoTitle: 'Vluchten naar Lapland, Trip.com-deals vanuit Helsinki',
     seoDesc:
-      'Live Trip.com-vluchtprijzen: Helsinki naar Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) en Kemi. Tarieven voor directe Finnair- en Norwegian-vluchten, vooraf ingevuld en klaar om te boeken.',
+      'Live Trip.com-vluchtprijzen: Helsinki naar Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) en Kemi.',
     bottomTitle: 'Reist u van buiten Finland?',
     bottomLead: 'Zoek vanaf elk vertrekpunt naar elke Lapland-luchthaven op Trip.com.',
     bottomCta: 'Open de vluchtzoeker van Trip.com →',

@@ -189,7 +189,7 @@ const sv: SectionCopy = {
       'Vi säljer inga färdiga paket. Vi väljer ut byggstenarna, flyg, boende, huskydagar, norrskensturer, och du bokar varje del till partnerns pris i realtid. Ingen mellanhandsavgift.',
     seoTitle: 'Paketerbjudanden i Lappland: norrsken, familj, weekend',
     seoDesc:
-      'Idéer för flerdagarsresor i Lappland: norrskensvecka i Saariselkä, familjeresor i Rovaniemi, weekendresor. Varje del bokas separat till partnerns priser i realtid.',
+      'Idéer för flerdagarsresor i Lappland: norrskensvecka i Saariselkä, familjeresor i Rovaniemi, weekendresor.',
     curatedTitle: 'Utvalda reseidéer',
     pairTitle: 'Kombinera dessa med ditt boende',
     pairLead: 'Byggstenarna som de flesta resenärer staplar till en 4–7 nätters Lapplandsresa.',
@@ -205,7 +205,7 @@ const sv: SectionCopy = {
       'I 32 dygn går solen aldrig ner. Stugor vid sjön för en bråkdel av decemberpriserna. Vandringen kulminerar i slutet av augusti, ren luft, inga myggor, guldgul ruska.',
     seoTitle: 'Sommarerbjudanden i Lappland: midnattssol och vandring',
     seoDesc:
-      'I 32 dygn går solen aldrig ner i finska Lappland (6 juni – 7 juli). Stugerbjudanden i midnattssol, vandring i Pallas-Yllästunturi, sommarboende vid sjön för en bråkdel av vinterpriserna.',
+      'I 32 dygn går solen aldrig ner i finska Lappland (6 juni – 7 juli). Stugor vid sjön för en bråkdel av vinterpriserna och vandring i Pallas-Yllästunturi.',
     offersTitle: 'Sommarerbjudanden, partnerns priser i realtid',
     offersFallback: 'Sommarerbjudanden håller på att väljas ut, kom tillbaka snart.',
     reasonsTitle: 'Tre ärliga skäl till att sommaren är billigare',

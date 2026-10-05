@@ -153,7 +153,7 @@ const de: SectionCopy = {
       'Helsinki zu jedem Flughafen in Lappland, vorausgefüllt und datiert. Klicken Sie sich zu den echten Finnair- und Norwegian-Tarifen.',
     seoTitle: 'Flüge nach Lappland, Live-Angebote von Trip.com ab Helsinki',
     seoDesc:
-      'Live-Flugpreise von Trip.com: Helsinki nach Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) und Kemi. Direktflüge mit Finnair und Norwegian, vorausgefüllt und buchbar.',
+      'Live-Flugpreise von Trip.com: Helsinki nach Rovaniemi, Kittilä, Ivalo, Kuusamo (Ruka) und Kemi.',
     bottomTitle: 'Sie reisen von außerhalb Finnlands an?',
     bottomLead: 'Suchen Sie jeden Abflug zu jedem Lappland-Flughafen auf Trip.com.',
     bottomCta: 'Trip.com Flugsuche öffnen →',

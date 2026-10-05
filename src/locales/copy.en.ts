@@ -201,7 +201,7 @@ const en: SectionCopy = {
       '32 days the sun never sets. Lakeside cabins at a fraction of December rates. Hiking peaks in late August, clean air, no mosquitoes, ruska gold.',
     seoTitle: 'Lapland Summer Deals, Midnight Sun Stays & Hiking',
     seoDesc:
-      '32 days the sun never sets in Finnish Lapland (Jun 6 – Jul 7). Midnight-sun cabin deals, hiking in Pallas-Yllästunturi, lakeside summer stays at a fraction of winter rates.',
+      '32 days the sun never sets in Finnish Lapland (Jun 6 – Jul 7). Lakeside cabins at a fraction of winter rates and hiking in Pallas-Yllästunturi.',
     offersTitle: 'Summer offers, live partner prices',
     offersFallback: 'Summer offers being curated, check back soon.',
     reasonsTitle: 'Three honest reasons summer is cheaper',
