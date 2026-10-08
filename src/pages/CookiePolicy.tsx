@@ -30,7 +30,7 @@ export default function CookiePolicy() {
         description={META[lang].seoDescription}
         path="/cookie-policy"
       />
-      <CookieContent siteName="LaplandDeals" lang={lang} />
+      <CookieContent siteId="laplanddeals" siteName="LaplandDeals" lang={lang} />
     </main>
   );
 }
