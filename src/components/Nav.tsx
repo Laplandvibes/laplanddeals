@@ -13,6 +13,13 @@ const samePath = (a: string, b: string) => a.replace(/\/+$/, '') === b.replace(/
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // LV-VALIKKO-VAAKA (8.10.2026): Escape sulkee mobiilivalikon.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open]);
   const { pathname } = useLocation();
   const lang = useLang();
   const to = useLocalePath();
@@ -116,9 +123,12 @@ export default function Nav() {
         </div>
       </div>
 
+      {/* LV-VALIKKO-VAAKA (8.10.2026): laatikko oli kiinteän navin sisällä ilman korkeusrajaa, joten vaakapuhelimessa
+          alimmat linkit jäivät ruudun ulkopuolelle. Nyt enintään näkyvän ruudun korkuinen ja vierittyvä,
+          ≥ 640 px linkit palstoina; z-[45] verkostovalikon vihjeen (z 40) yli. */}
       {open && (
-        <div className="xl:hidden bg-cream/98 backdrop-blur-md border-t border-line">
-          <div className="px-4 py-3 space-y-1">
+        <div className="xl:hidden bg-cream/98 backdrop-blur-md border-t border-line max-h-[calc(100vh_-_4rem)] supports-[height:100dvh]:max-h-[calc(100dvh_-_4rem)] overflow-y-auto overscroll-contain relative z-[45]">
+          <div className="px-4 py-3 space-y-1 sm:space-y-0 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-x-4 sm:gap-y-1 sm:content-start">
             {navLinks.map((link) => {
               const active = samePath(pathname, link.to);
               return (
@@ -135,7 +145,7 @@ export default function Nav() {
             })}
             <Link
               to={to('/hotels')}
-              className="block text-center text-[14px] font-semibold bg-vibe-pink text-ivory mt-3 px-5 py-3 rounded-full no-underline"
+              className="block text-center text-[14px] font-semibold bg-vibe-pink text-ivory mt-3 px-5 py-3 rounded-full no-underline sm:col-span-full"
             >
               {c.tonightsCta}
             </Link>
