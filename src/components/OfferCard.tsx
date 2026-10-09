@@ -4,6 +4,7 @@ import { trackAffiliateClick } from '../lib/analytics';
 import { gygLocalizeHref } from '../lib/gyg';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { OFFER_PHOTOS } from '../data/offerPhotos';
 
 const FLAG_STYLE: Record<NonNullable<Offer['flag']>, string> = {
   'last-minute':   'bg-flash-red text-ivory',
@@ -64,14 +65,20 @@ export default function OfferCard({ offer, size = 'md', showImage = true }: Prop
       {/* Visual */}
       <div className={`relative ${heightClass} overflow-hidden bg-cream-2`}>
         {showImage && (
-          <img
-            src={`/images/offer-${offer.id}.webp`}
-            alt={offer.title}
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-          />
+          // Real photographs since 9.10.2026 (data/offerPhotos.ts). CC BY-SA frames are not cropped in the
+          // file, so the crop is made here with object-position; the credit is on the page's credit line.
+          <picture>
+            <source srcSet={`/images/offer-${offer.id}.avif`} type="image/avif" />
+            <img
+              src={`/images/offer-${offer.id}.webp`}
+              alt={offer.title}
+              loading="lazy"
+              decoding="async"
+              style={{ objectPosition: OFFER_PHOTOS[offer.id]?.pos }}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+            />
+          </picture>
         )}
 
         {/* Subtle bottom fade for legibility on bright photos */}

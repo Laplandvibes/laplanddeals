@@ -1,6 +1,8 @@
 import PageSeo, { pillarBreadcrumb } from '../components/PageSeo';
 import OffersGrid from '../components/OffersGrid';
 import NewsletterSection from '../components/NewsletterSection';
+import PhotoCredits from '../components/PhotoCredits';
+import { creditItems } from '../data/offerPhotos';
 import PillarHeader from '../components/PillarHeader';
 import PartnerAd from '../components/PartnerAd';
 import GygLive from '../components/GygLive';
@@ -31,7 +33,7 @@ export default function Activities() {
         h1Italic={c.h1Italic}
         h1={c.h1}
         sub={c.sub}
-        image="/images/offer-snowmobile.webp"
+        hero="activities"
       />
 
       <TopActivities cmp="lv_laplanddeals_activities_top_viewed" />
@@ -63,6 +65,8 @@ export default function Activities() {
           </a>
         </div>
       </section>
+
+      <PhotoCredits items={creditItems(items)} />
 
       <NewsletterSection />
     </>

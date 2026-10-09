@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { HOME_HERO_WIDTHS, isSummerSeason } from '../data/offerPhotos';
+import { HOME_HERO_ALT } from '../data/heroAlt';
 
 // June–August → summer hero (midnight sun through 7 July, hiking August).
 // Was May–September until 2026-09-10: on 10 September the live hero still read
 // "MIDNIGHT SUN · cheapest season of the year" two months after the sun set.
 // From September the base (aurora-season) copy is the truthful one.
-const isSummerSeason = () => { const m = new Date().getMonth()+1; return m>=6 && m<=8; };
+// (isSummerSeason lives in data/offerPhotos.ts so the page credit line names the photo that is shown.)
 
 /* ── Otsikko kahdella rivillä jokaisella kielellä tietokoneella (Vesa 3.10.2026: "tehdään turhaan kolmirivisiä") ──
  * Mitattu livenä 3.10. (12 kieltä × 1280/1536/1920): 22 löydöstä, otsikko 3–4 riviä de/fr/sv/it/nl/es/pt-BR/ja.
@@ -31,6 +33,7 @@ export default function Hero() {
   // is missing a *Summer override.
   const isSummer = isSummerSeason();
   const heroBase = isSummer ? 'home-hero-summer' : 'home-hero';
+  const heroSet = (ext: string) => HOME_HERO_WIDTHS.map((w) => `/images/${w === 1920 ? heroBase : `${heroBase}-${w}`}.${ext} ${w}w`).join(', ');
   const eyebrow = isSummer ? c.eyebrowSummer ?? c.eyebrow : c.eyebrow;
   const lead = isSummer ? c.leadSummer ?? c.lead : c.lead;
   const secondary = isSummer ? c.secondarySummer ?? c.secondary : c.secondary;
@@ -44,12 +47,14 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100svh] md:min-h-[92vh] flex items-center overflow-hidden pt-16">
       {/* Hero photograph */}
+      {/* Real photographs since 9.10.2026 (data/offerPhotos.ts); home-hero.avif|webp is the 1920 px file,
+          the preload in public/_headers points at it. */}
       <picture>
-        <source srcSet={`/images/${heroBase}.avif`} type="image/avif" />
-        <source srcSet={`/images/${heroBase}.webp`} type="image/webp" />
+        <source srcSet={heroSet('avif')} sizes="100vw" type="image/avif" />
+        <source srcSet={heroSet('webp')} sizes="100vw" type="image/webp" />
         <img
           src={`/images/${heroBase}.webp`}
-          alt="Finnish Lapland, a lakeside cabin landscape"
+          alt={HOME_HERO_ALT[heroBase][lang]}
           className="absolute inset-0 w-full h-full object-cover object-[center_42%]"
           loading="eager"
           decoding="async"
@@ -63,6 +68,8 @@ export default function Hero() {
           leveydelle ja oikea reuna jai kirkkaaksi. Mitattu 21.9.2026 (korttiteksti-portti):
           hero-otsikon pinkki 1,00:1 rajan 3:1 sijaan ja 61 % pikseleista rajan alle.
           Nyt vaakapeite vahvempi JA pystysuuntainen kerros tekstikaistan kohdalle. */}
+      {/* Phones: the text spans the full width, so the violet dusk sky behind the pink line needs its own dimming (gate heroteksti 9.10.2026). */}
+      <div aria-hidden="true" className="absolute inset-0 bg-black/30 sm:hidden" />
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/82 via-black/60 to-black/25" />
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-cream" />

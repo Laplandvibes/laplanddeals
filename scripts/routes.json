@@ -65,7 +65,7 @@
     ],
     "ogImage": "/og/hotels.jpg",
     "ogCard": {
-      "hero": "/images/offer-rovaniemi-hotels.webp",
+      "hero": "/images/offer-igloo-saariselka.webp",
       "line": "Live hotel and cabin rates, tonight"
     }
   },
@@ -94,7 +94,7 @@
     ],
     "ogImage": "/og/cars.jpg",
     "ogCard": {
-      "hero": "/images/offer-car-ivl.webp",
+      "hero": "/images/offer-car-ktt.webp",
       "line": "Rental cars from Lapland's airports"
     }
   },

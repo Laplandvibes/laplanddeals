@@ -2,15 +2,9 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
+import { OFFER_PHOTOS, TILE_PHOTOS } from '../data/offerPhotos';
 
-const TILE_META = [
-  { to: '/hotels',     img: '/images/offer-yllas-cabins.webp' },
-  { to: '/activities', img: '/images/offer-aurora-hunts.webp' },
-  { to: '/flights',    img: '/images/offer-flight-hel-ivl.webp' },
-  { to: '/cars',       img: '/images/offer-car-ktt.webp' },
-  { to: '/packages',   img: '/images/offer-package-family-rovaniemi.webp' },
-  { to: '/summer',     img: '/images/offer-summer-hiking.webp' },
-];
+
 
 /**
  * Category tiles.
@@ -36,7 +30,7 @@ export default function CategoryTiles() {
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6" data-category-tiles data-fill-grid="category-tiles">
       {tiles.map((tile, i) => {
-        const meta = TILE_META[i];
+        const meta = TILE_PHOTOS[i];
         const items = tile.hint.split(/\s*[·・]\s*/).filter(Boolean);
         return (
           <Link
@@ -45,14 +39,18 @@ export default function CategoryTiles() {
             className="group flex flex-col overflow-hidden rounded-lg border border-line bg-cream-2 no-underline transition-all duration-500 hover:-translate-y-0.5 hover:border-line-2"
           >
             <div className="relative aspect-[2/1] overflow-hidden sm:aspect-[16/10]">
-              <img
-                src={meta.img}
-                alt={`${tile.label} deals in Lapland`}
-                loading="lazy"
-                decoding="async"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
-                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-              />
+              <picture>
+                <source srcSet={`/images/offer-${meta.photo}.avif`} type="image/avif" />
+                <img
+                  src={`/images/offer-${meta.photo}.webp`}
+                  alt={`${tile.label} deals in Lapland`}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ objectPosition: OFFER_PHOTOS[meta.photo]?.pos }}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+                />
+              </picture>
             </div>
             <div className="flex flex-1 flex-col bg-deep-night p-4 md:p-5" data-tile-text>
               <h3 className="mb-3 font-heading text-2xl leading-tight text-snow md:text-[1.7rem]" data-tile-title>{tile.label}</h3>

@@ -1,6 +1,8 @@
 import PageSeo, { pillarBreadcrumb } from '../components/PageSeo';
 import OffersGrid from '../components/OffersGrid';
 import NewsletterSection from '../components/NewsletterSection';
+import PhotoCredits from '../components/PhotoCredits';
+import { creditItems } from '../data/offerPhotos';
 import PillarHeader from '../components/PillarHeader';
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import LiveFlights from '../components/LiveFlights';
@@ -31,7 +33,7 @@ export default function Flights() {
         h1Italic={c.h1Italic}
         h1={c.h1}
         sub={c.sub}
-        image="/images/offer-flight-hel-kao.webp"
+        hero="flights"
       />
 
       {/* Editorial lead — the same copy block routes.json harvests as this
@@ -74,6 +76,8 @@ export default function Flights() {
           </a>
         </div>
       </section>
+
+      <PhotoCredits items={creditItems(items)} />
 
       <NewsletterSection />
     </>

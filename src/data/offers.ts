@@ -12,8 +12,8 @@ import type { Lang } from '../i18n/useLang';
  * price; we never invent percentages or expiry timers. Curation is ours;
  * pricing is theirs.
  *
- * Each offer has a corresponding photograph at /public/images/offer-{id}.webp
- * (generated via scripts/generate-images.py through OpenAI gpt-image-1).
+ * Each offer has a corresponding real photograph at /public/images/offer-{id}.avif|webp
+ * (since 9.10.2026; credit receipts and alt text in data/offerPhotos.ts). Never an AI frame.
  *
  * LOCALE: title / location / blurb are translated for all 11 site locales.
  * Place names (Levi, Rovaniemi, Saariselkä, IATA codes, NP names) stay intact in

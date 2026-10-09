@@ -1,6 +1,8 @@
 import PageSeo, { pillarBreadcrumb } from '../components/PageSeo';
 import OffersGrid from '../components/OffersGrid';
 import NewsletterSection from '../components/NewsletterSection';
+import PhotoCredits from '../components/PhotoCredits';
+import { creditItems } from '../data/offerPhotos';
 import PillarHeader from '../components/PillarHeader';
 import { offers } from '../data/offers';
 import AffiliateCTA from '../components/AffiliateCTA';
@@ -28,7 +30,7 @@ export default function Summer() {
         h1Italic={c.h1Italic}
         h1={c.h1}
         sub={c.sub}
-        image="/images/offer-summer-midnight-sun.webp"
+        hero="summer"
       />
 
       {/* Editorial lead — the same copy block routes.json harvests as this
@@ -87,6 +89,8 @@ export default function Summer() {
           </div>
         </div>
       </section>
+
+      <PhotoCredits items={creditItems(summerItems)} />
 
       <NewsletterSection />
     </>

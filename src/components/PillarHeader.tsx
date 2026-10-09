@@ -1,4 +1,7 @@
 import PageBreadcrumb from './PageBreadcrumb';
+import { HEROES, type HeroKey } from '../data/offerPhotos';
+import { offers } from '../data/offers';
+import { useLang } from '../i18n/useLang';
 
 interface PillarHeaderProps {
   eyebrow: string;
@@ -6,8 +9,8 @@ interface PillarHeaderProps {
   /** Optional italic display word(s) prepended to the h1 in italic-light. */
   h1Italic?: string;
   sub: string;
-  /** Hero photograph path under /public, e.g. /images/offer-igloo-saariselka.webp */
-  image: string;
+  /** Hero photograph (data/offerPhotos.ts HEROES): public/images/hero-<key>-<width>.avif|webp. */
+  hero: HeroKey;
 }
 
 /**
@@ -20,19 +23,32 @@ interface PillarHeaderProps {
  *   - paper-grain magazine texture overlay
  *   - h1 uses Playfair italic-light + roman-semibold pairing
  */
-export default function PillarHeader({ eyebrow, h1, h1Italic, sub, image }: PillarHeaderProps) {
+export default function PillarHeader({ eyebrow, h1, h1Italic, sub, hero }: PillarHeaderProps) {
+  const lang = useLang();
+  const h = HEROES[hero];
+  // Alt = the localised title of the offer card that shows the same photograph (no new translation work).
+  const alt = offers(lang).find((o) => o.id === h.photo)?.title ?? '';
+  const srcset = (ext: string) => h.widths.map((w) => `/images/hero-${hero}-${w}.${ext} ${w}w`).join(', ');
+  const mid = h.widths.includes(1920) ? 1920 : h.widths[h.widths.length - 1];
   return (
     <>
     <header className="relative overflow-hidden pt-16 min-h-[72vh] md:min-h-[78vh] flex items-center">
-      <img
-        src={image}
-        alt={`${h1Italic ? `${h1Italic} ` : ''}${h1} · Lapland travel deals`}
-        className="absolute inset-0 w-full h-full object-cover object-[center_42%]"
-        loading="eager"
-        decoding="async"
-        fetchPriority="high"
-        onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-      />
+      {/* Real photograph (9.10.2026): AVIF/WebP in 1280/1920/2560 px, never cropped in the file. */}
+      <picture>
+        <source type="image/avif" srcSet={srcset('avif')} sizes="100vw" />
+        <source type="image/webp" srcSet={srcset('webp')} sizes="100vw" />
+        <img
+          src={`/images/hero-${hero}-${mid}.webp`}
+          alt={alt}
+          className={`absolute inset-0 w-full h-full object-cover ${h.zoom ?? ''}`}
+          style={{ objectPosition: h.pos ?? '50% 42%' }}
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+        />
+      </picture>
+      {h.dim ? <div aria-hidden="true" className="absolute inset-0" style={{ background: `rgba(0,0,0,${h.dim})` }} /> : null}
       <div aria-hidden="true" className="absolute inset-0 pillar-scrim" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-cream" />
       <div aria-hidden="true" className="absolute inset-0 paper-grain opacity-40 mix-blend-overlay" />

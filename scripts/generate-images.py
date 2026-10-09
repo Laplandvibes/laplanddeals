@@ -9,7 +9,12 @@ Env:    OPENAI_API_KEY required.
 
 Reference: stayinlapland-new/scripts/generate-images.py + LV memory rule
 lv_image_generation_rule.md.
+
+RETIRED 9.10.2026. The offer, tile and hero images are now real photographs (src/data/offerPhotos.ts
+holds the credit receipts); running this script would overwrite them with AI frames. The AI originals
+are in _reissu-2026-07/_ai-originals-backup/laplanddeals-new/. Re-enable only with Vesa's say-so.
 """
+raise SystemExit("generate-images.py is retired: the site images are real photographs (src/data/offerPhotos.ts).")
 
 from __future__ import annotations
 import argparse, base64, concurrent.futures as cf, json, os, sys, time, urllib.request

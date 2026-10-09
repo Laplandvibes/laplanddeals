@@ -21,6 +21,8 @@ import { getEditorPicks, getSummerOffers } from '../data/offers';
 import { useLang, useLocalePath, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { AppPromoHero } from '../components/AppPromo';
+import PhotoCredits from '../components/PhotoCredits';
+import { OFFER_PHOTOS, TILE_PHOTOS, creditItems, isSummerSeason } from '../data/offerPhotos';
 
 /**
  * Front page (rebuilt 2026-09-10, "Tänään Lapissa").
@@ -117,6 +119,7 @@ export default function Home() {
   const editorsPicks = getEditorPicks(4, lang);
   const summerPicks = getSummerOffers(4, lang);
   const summerOn = showSummerSection();
+  const heroKey = isSummerSeason() ? 'home-hero-summer' : 'home-hero';
   const seo = SEO[lang];
   const pathSeg: Record<Lang, string> = { en: '', fi: '/fi', de: '/de', ja: '/ja', es: '/es', 'pt-BR': '/br', 'zh-CN': '/cn', ko: '/kr', fr: '/fr', it: '/it', nl: '/nl', sv: '/sv' };
   const path = pathSeg[lang] || '/';
@@ -238,6 +241,17 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* ── Photo credits: front-page hero, editor's picks, category tiles (9.10.2026). The cards are links, so the
+          credit is listed here with links to the file pages and licence deeds. ── */}
+      <PhotoCredits
+        items={[
+          { key: heroKey, label: OFFER_PHOTOS[heroKey].place },
+          ...creditItems(editorsPicks),
+          ...creditItems(summerOn ? summerPicks : []),
+          ...TILE_PHOTOS.map((t, i) => ({ key: t.photo, label: c.tiles[i].label })),
+        ]}
+      />
 
       {/* ── Trust ─────────────────────────────────────────────────── */}
       <section className="bg-cream-2 border-t border-line py-14">
