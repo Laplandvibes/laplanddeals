@@ -126,7 +126,7 @@ const en: SectionCopy = {
     seoDesc:
       'Live prices for glass igloos, ski-in stays, family hotels and wilderness lodges across Finnish Lapland. Last-minute and end-of-season cabin nights.',
     bottomTitle: "Don't see your destination?",
-    bottomLead: 'Search any Lapland town directly on Trip.com.',
+    bottomLead: 'Search Lapland towns directly on Sembo.',
     bottomCta: 'Browse all Lapland hotels →',
   },
   activitiesPage: {

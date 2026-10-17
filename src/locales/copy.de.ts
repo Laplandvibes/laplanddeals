@@ -126,7 +126,7 @@ const de: SectionCopy = {
     seoDesc:
       'Live-Preise für Glas-Iglus, Ski-in-Unterkünfte, Familienhotels und Wildnis-Lodges in Finnisch-Lappland. Last-Minute- und Saisonende-Hütten.',
     bottomTitle: 'Ihr Reiseziel nicht dabei?',
-    bottomLead: 'Suchen Sie jeden Ort in Lappland direkt auf Trip.com.',
+    bottomLead: 'Suchen Sie Orte in Lappland direkt bei Sembo.',
     bottomCta: 'Alle Hotels in Lappland ansehen →',
   },
   activitiesPage: {

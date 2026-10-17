@@ -252,8 +252,10 @@ const ADVERTISERS: Record<AdvertiserId, AdvertiserConfig> = {
   },
 };
 
-/** fi is routed to Sembo (Adtraction) by the go/hotels Worker, so the hotel
- *  unit is skinned as Sembo for fi. Same id/trackId: analytics keys unchanged. */
+/** fi/sv/de/en are routed to Sembo (Adtraction) by the go/hotels Worker
+ *  (SEMBO_MARKETS; en since 17.10.2026), so the hotel unit is skinned as Sembo
+ *  for those languages. Same id/trackId: analytics keys unchanged. */
+const SEMBO_LANGS: ReadonlySet<Lang> = new Set<Lang>(['fi', 'sv', 'de', 'en']);
 const SEMBO_FI: AdvertiserConfig = {
   ...ADVERTISERS.lodging,
   name: 'Sembo',
@@ -262,7 +264,13 @@ const SEMBO_FI: AdvertiserConfig = {
   plateBg: '#FFFFFF',
   ring: 'hover:border-[#0EA5E9]/45',
   glow: 'radial-gradient(circle at 12% 0%, rgba(14,165,233,0.10), transparent 60%)',
-  note: { ...ADVERTISERS.lodging.note, fi: 'Avaa Sembon: vapaat huoneet ja hinnat reaaliajassa.' },
+  note: {
+    ...ADVERTISERS.lodging.note,
+    fi: 'Avaa Sembon: vapaat huoneet ja hinnat reaaliajassa.',
+    en: 'Opens Sembo: live rooms and prices.',
+    de: 'Öffnet Sembo: Zimmer und Preise in Echtzeit.',
+    sv: 'Öppnar Sembo: rum och priser i realtid.',
+  },
 };
 
 /** Worker locale codes per site language, appended to the hotels ad href so the
@@ -292,7 +300,7 @@ function lomarengasHref(sid: string, lang: Lang): string {
 
 export default function PartnerAd({ advertiser, placement, className = '' }: Props) {
   const lang = useLang();
-  const a = advertiser === 'lodging' && lang === 'fi' ? SEMBO_FI : ADVERTISERS[advertiser];
+  const a = advertiser === 'lodging' && SEMBO_LANGS.has(lang) ? SEMBO_FI : ADVERTISERS[advertiser];
   if (!a) return null;
 
   const href =

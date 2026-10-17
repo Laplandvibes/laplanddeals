@@ -130,7 +130,7 @@ const sv: SectionCopy = {
     seoDesc:
       'Priser i realtid på glasigloor, ski-in-boende, familjehotell och vildmarkslodger i finska Lappland. Stugnätter i sista minuten och i slutet av säsongen.',
     bottomTitle: 'Ser du inte ditt resmål?',
-    bottomLead: 'Sök vilken ort som helst i Lappland direkt på Trip.com.',
+    bottomLead: 'Sök orter i Lappland direkt på Sembo.',
     bottomCta: 'Bläddra bland alla hotell i Lappland →',
   },
   activitiesPage: {

@@ -23,9 +23,11 @@ const PARTNER_LABEL: Record<Offer['partner'], string> = {
 
 // The card footer must name the partner the visitor actually lands on ("no hiding",
 // Vesa). Lodging offers route through the
-// go/hotels Worker, which sends fi to Sembo and every other locale to Trip.com.
+// go/hotels Worker, which sends fi/sv/de/en to Sembo (SEMBO_MARKETS; en since 17.10.2026)
+// and every other locale to Trip.com.
+const SEMBO_LANGS: ReadonlySet<Lang> = new Set<Lang>(['fi', 'sv', 'de', 'en']);
 function partnerLabel(partner: Offer['partner'], lang: Lang): string {
-  if (partner === 'lodging' && lang === 'fi') return 'Sembo';
+  if (partner === 'lodging' && SEMBO_LANGS.has(lang)) return 'Sembo';
   return PARTNER_LABEL[partner];
 }
 
