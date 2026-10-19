@@ -6,6 +6,6 @@
 // render as itself in GYG's widget. Click counts are deliberately not stored: the log is private.
 // The widget ignores this order, so the page never shows a rank.
 
-export const TOP_VIEWED_CHECKED_AT = '2026-10-12';
+export const TOP_VIEWED_CHECKED_AT = '2026-10-19';
 export const TOP_VIEWED_WINDOW_DAYS = 30;
 export const TOP_VIEWED_TOUR_IDS: readonly number[] = [];
