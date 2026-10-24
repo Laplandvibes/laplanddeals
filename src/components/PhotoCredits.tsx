@@ -1,6 +1,7 @@
 import Units from './live/Units';
 import { OFFER_PHOTOS } from '../data/offerPhotos';
 import { useLang } from '../i18n/useLang';
+import { licenseLabel } from '../lib/licenseLabel';
 import { COPY } from '../locales/copy';
 
 export type PhotoCreditItem = { key: string; label: string };
@@ -42,7 +43,7 @@ export default function PhotoCredits({ items, className = '' }: { items: PhotoCr
               <span key={row.key}>{k > 0 && ', '}<a href={row.fileUrl} target="_blank" rel="noopener" className={link}>{row.label}</a></span>
             ))}
             : {g.author},{' '}
-            <a href={g.licenseUrl} target="_blank" rel="license noopener" className={`${link} whitespace-nowrap`}>{g.license}</a>
+            <a href={g.licenseUrl} target="_blank" rel="license noopener" className={`${link} whitespace-nowrap`}>{licenseLabel(g.license, lang)}</a>
             {g.cropped && ` (${cropped})`}
             {i === groups.length - 1 && after}
           </span>

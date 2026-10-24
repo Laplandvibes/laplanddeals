@@ -73,7 +73,10 @@ export default function Nav() {
     redesign — the nav is DARK, so the menu uses the default dark variant. */}
             <EcosystemMenu lang={lang} currentDomain="laplanddeals.com" />
             <div className="lv-wm-paikka">
-              <Link to={to('/')} className="no-underline inline-flex items-center min-h-11" aria-label="LaplandDeals home">
+              <Link to={to('/')} className="no-underline inline-flex items-center min-h-11" aria-label={pick(lang,
+                'LaplandDeals home', 'LaplandDeals, etusivu', 'LaplandDeals, Startseite', 'LaplandDeals ホーム',
+                'LaplandDeals, página de inicio', 'LaplandDeals, página inicial', 'LaplandDeals 首页', 'LaplandDeals 홈',
+                'LaplandDeals, page d’accueil', 'LaplandDeals, pagina iniziale', 'LaplandDeals, startpagina', 'LaplandDeals, startsida')}>
                 <Logo nav />
               </Link>
             </div>

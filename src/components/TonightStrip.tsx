@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { ArrowUpRight, Moon } from 'lucide-react';
 import { buildAffiliateHref } from './AffiliateCTA';
 import { useLang } from '../i18n/useLang';
+import { licenseLabel } from '../lib/licenseLabel';
 import { COPY } from '../locales/copy';
 import { trackAffiliateClick } from '../lib/analytics';
 import { TONIGHT_PHOTOS } from '../data/tonightPhotos';
@@ -104,7 +105,7 @@ export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; 
                 <span key={p.key}>
                   {i === 0 && cl.photoCredit.split('{source}')[0]}
                   {c.places[i]}: <a href={ph.fileUrl} target="_blank" rel="noopener" className="lv-tap underline decoration-deep-night/30 hover:text-deep-night">{ph.author}</a>,{' '}
-                  <a href={ph.licenseUrl} target="_blank" rel="license noopener" className="lv-tap whitespace-nowrap underline decoration-deep-night/30 hover:text-deep-night">{ph.license}</a>
+                  <a href={ph.licenseUrl} target="_blank" rel="license noopener" className="lv-tap whitespace-nowrap underline decoration-deep-night/30 hover:text-deep-night">{licenseLabel(ph.license, lang)}</a>
                   {ph.croppedNote && ` (${c.cropped})`}
                 </span>
               );

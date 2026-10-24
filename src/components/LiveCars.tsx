@@ -7,6 +7,7 @@ import LiveCard from './live/LiveCard';
 import Units from './live/Units';
 import CarSilhouette from './live/CarSilhouette';
 import { carPhotoFor, type CarPhoto } from '../data/carPhotos';
+import { licenseLabel } from '../lib/licenseLabel';
 import { buildAffiliateHref } from './AffiliateCTA';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
@@ -45,6 +46,7 @@ function modelName(model: string): string {
  *  name links to its file page, the licence to its deed (CC BY-SA §3(a)). Grouping keeps the line
  *  to a few phone lines instead of eight. */
 function PhotoCredits({ photos, label }: { photos: CarPhoto[]; label: string }) {
+  const lang = useLang();
   if (!photos.length) return null;
   const groups: { author: string; license: string; licenseUrl: string; photos: CarPhoto[] }[] = [];
   for (const ph of photos) {
@@ -66,7 +68,7 @@ function PhotoCredits({ photos, label }: { photos: CarPhoto[]; label: string }) 
               <span key={ph.src}>{k > 0 && ', '}<a href={ph.fileUrl} target="_blank" rel="noopener" className={link}>{ph.model}</a></span>
             ))}
             : {g.author},{' '}
-            <a href={g.licenseUrl} target="_blank" rel="license noopener" className={`${link} whitespace-nowrap`}>{g.license}</a>
+            <a href={g.licenseUrl} target="_blank" rel="license noopener" className={`${link} whitespace-nowrap`}>{licenseLabel(g.license, lang)}</a>
             {i === groups.length - 1 && after}
           </span>
         ))}
@@ -151,7 +153,7 @@ export default function LiveCars({ limit = 6, phoneLimit, kicker }: { limit?: nu
           return (
             <LiveCard
               index={i}
-              photo={ph ? { src: ph.src, alt: ph.alt, width: ph.width, height: ph.height, eager: i < 2 } : null}
+              photo={ph ? { src: ph.src, alt: ph.alt[lang], width: ph.width, height: ph.height, eager: i < 2 } : null}
               fallback={<CarSilhouette kind={EB_CLASS_KEYS[r.classIdx]} className="h-auto w-3/5 max-w-[10rem]" />}
               eyebrow={[
                 c.classNames[r.classIdx],
@@ -205,7 +207,7 @@ export default function LiveCars({ limit = 6, phoneLimit, kicker }: { limit?: nu
             media={(() => {
               const ph = carPhotoFor(o.model);
               return ph
-                ? { kind: 'photo' as const, src: ph.src, alt: ph.alt, width: ph.width, height: ph.height, eager: i < 2 }
+                ? { kind: 'photo' as const, src: ph.src, alt: ph.alt[lang], width: ph.width, height: ph.height, eager: i < 2 }
                 : { kind: 'plate' as const, label: c.classNames[o.classIdx], sub: c.orSimilar, icon: <CarSilhouette kind={EB_CLASS_KEYS[o.classIdx]} className="mb-0.5 h-7 w-auto sm:h-8" /> };
             })()}
             day={day}
