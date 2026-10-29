@@ -1,3 +1,13 @@
+function newsletterEmailLabel(): string {
+  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
+  return ({fi:'Sähköpostiosoite',en:'Email address',de:'E-Mail-Adresse',es:'Correo electrónico',fr:'Adresse e-mail',it:'Indirizzo email',nl:'E-mailadres',sv:'E-postadress',ja:'メールアドレス',ko:'이메일 주소',pt:'Endereço de e-mail',zh:'电子邮箱'} as Record<string,string>)[lang] || 'Email address';
+}
+
+function newsletterLanguageNotice(): string {
+  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
+  const notes: Record<string, string> = {"fi":"Uutiskirjeet ovat suomeksi.","en":"Newsletters are in English.","de":"Die Newsletter werden auf Englisch versendet.","ja":"ニュースレターは英語でお届けします。","ko":"뉴스레터는 영어로 발송됩니다.","fr":"Les newsletters sont envoyées en anglais.","it":"Le newsletter sono inviate in inglese.","nl":"De nieuwsbrieven zijn in het Engels.","sv":"Nyhetsbreven skickas på engelska.","es":"Los boletines se envían en inglés.","pt":"As newsletters são enviadas em inglês.","zh":"订阅邮件以英语发送。"};
+  return notes[lang] || notes.en;
+}
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { CheckCircle, Tag, Bell, Clock, Sun } from 'lucide-react';
 import { trackNewsletterSignup } from '../lib/analytics';
@@ -232,8 +242,7 @@ export default function NewsletterSection() {
           ) : (
             <>
             <><FounderByline tone="pink" />
-            <form
-              onSubmit={onSubmit}
+            <form style={{ background: '#0F172A', color: '#F9FAFB', padding: 16, borderRadius: 16 }} onSubmit={onSubmit}
               onInvalidCapture={(e) => {
                 // Natiivi required-validointi esti lahetyksen. Laukeaa per
                 // kentta, joten vaimennetaan 400 ms:ksi -> yksi nl_blocked
@@ -247,7 +256,7 @@ export default function NewsletterSection() {
               className="flex flex-col gap-3"
             >
               <div className="flex flex-col sm:flex-row gap-3">
-                <input
+                <label style={{display:'flex',flexDirection:'column',gap:8,flex:'1 1 0%',minWidth:0,textAlign:'left',fontSize:14,color:'#F9FAFB'}}><span>{newsletterEmailLabel()}</span><span style={{fontSize:13,lineHeight:1.5}}>{newsletterLanguageNotice()}</span><input autoComplete="email" style={{ background: '#FFFFFF', color: '#1F2937', WebkitTextFillColor: '#1F2937', border: '1px solid #64748B' }}
                   type="email"
                   value={email}
                   onFocus={trackStart}
@@ -257,8 +266,8 @@ export default function NewsletterSection() {
                   required
                   disabled={state === 'sending'}
                   className="flex-1 bg-white text-deep-night placeholder:text-deep-night/55 rounded-full px-6 py-4 text-base focus:outline-none focus:ring-4 focus:ring-white/40 transition-shadow"
-                />
-                <button
+                /></label>
+                <button style={{ backgroundColor: '#BE185D', color: '#FFFFFF', alignSelf: 'end', minHeight: 48 }}
                   type="submit"
                   disabled={state === 'sending'}
                   className="bg-white hover:bg-snow text-[#BE185D] font-bold uppercase tracking-[0.1em] text-sm px-8 py-4 rounded-full transition-colors whitespace-nowrap disabled:opacity-60"
@@ -266,7 +275,7 @@ export default function NewsletterSection() {
                   {state === 'sending' ? c.sending : c.cta}
                 </button>
               </div>
-              <label className="flex items-start gap-3 px-1 text-white/90 text-xs sm:text-[13px] leading-snug cursor-pointer">
+              <label style={{color:"#F9FAFB"}} className="flex items-start gap-3 px-1 text-white/90 text-xs sm:text-[13px] leading-snug cursor-pointer">
                 <input
                   type="checkbox"
                   checked={consented}
@@ -276,9 +285,9 @@ export default function NewsletterSection() {
                   disabled={state === 'sending'}
                   className="mt-0.5 w-4 h-4 shrink-0 accent-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/50"
                 />
-                <span>
+                <span style={{color:"#F9FAFB"}}>
                   {cc.consent}{' '}
-                  <a
+                  <a style={{color:"#BAE6FD",textDecoration:"underline"}} 
                     href={localePath('/privacy', lang)}
                     target="_blank"
                     rel="noopener"
