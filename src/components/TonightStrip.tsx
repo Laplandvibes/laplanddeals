@@ -8,6 +8,7 @@ import { trackAffiliateClick } from '../lib/analytics';
 import { TONIGHT_PHOTOS } from '../data/tonightPhotos';
 import FitHeading from './live/FitHeading';
 import Units from './live/Units';
+import SemboUkCode from './SemboUkCode';
 
 /**
  * "A bed tonight in …" — six resort buttons whose search is pinned to TONIGHT,
@@ -113,6 +114,8 @@ export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; 
           />
         </div>
       </div>
+      {/* English town buttons open sembo.co.uk: Sembo UK's code for November bookings. */}
+      <SemboUkCode surface={id} className="mt-5" />
     </section>
   );
 }
