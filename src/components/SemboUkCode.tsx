@@ -5,8 +5,11 @@ import { trackAffiliateClick } from '../lib/analytics';
 import { useLang } from '../i18n/useLang';
 
 /**
- * Sembo UK's November 2026 discount code, for English readers only, under the
- * "bed tonight" town buttons (TonightStrip), which open sembo.co.uk in English.
+ * Sembo UK's November 2026 discount code, for English readers only: on /hotels
+ * under the "bed tonight" town buttons (TonightStrip), which open sembo.co.uk in
+ * English; on the home page at the top of the live sheet, because there the
+ * town buttons sit 3.7 phone screens down (measured live 30.10.2026) and an ad
+ * that deep is not seen (Vesa 20.10.: 1–2.5 screens).
  *
  * Source: Adtraction mail to info@ on 27.10.2026 ("Sembo UK - November code!",
  * unitedkingdom@adtraction.com), sent as an offer to promote: £30 off with code
@@ -35,7 +38,16 @@ function semboUkCodeLive(now = Date.now()): boolean {
   return now >= SHOW_FROM && now < SHOW_UNTIL;
 }
 
-export default function SemboUkCode({ surface, className = '' }: { surface: string; className?: string }) {
+export default function SemboUkCode({
+  surface,
+  townsAbove = false,
+  className = '',
+}: {
+  surface: string;
+  /** True under TonightStrip, whose town buttons open sembo.co.uk in English (measured 30.10.2026). */
+  townsAbove?: boolean;
+  className?: string;
+}) {
   const lang = useLang();
   const [copied, setCopied] = useState(false);
   if (lang !== 'en' || !semboUkCodeLive()) return null;
@@ -80,7 +92,7 @@ export default function SemboUkCode({ surface, className = '' }: { surface: stri
             </li>
           ))}
         </ul>
-        <p className="mt-3 text-sm leading-relaxed text-deep-night/70">The town buttons above also open sembo.co.uk. Same code, same terms.</p>
+        {townsAbove && <p className="mt-3 text-sm leading-relaxed text-deep-night/70">The town buttons above also open sembo.co.uk. Same code, same terms.</p>}
       </div>
 
       <div className="flex flex-col gap-3">

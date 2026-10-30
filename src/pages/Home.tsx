@@ -13,6 +13,7 @@ import GygLive from '../components/GygLive';
 import TopActivities from '../components/TopActivities';
 import { topViewedIds } from '../lib/topViewed';
 import TonightStrip from '../components/TonightStrip';
+import SemboUkCode from '../components/SemboUkCode';
 import FareCalendar from '../components/FareCalendar';
 import LiveSheet from '../components/LiveSheet';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
@@ -169,8 +170,11 @@ export default function Home() {
       {/* ── THE SHEET: every live and dated partner price, on paper (11.9.2026,
           the same three layers as laplandhoteldeals: sheet → ice tile → white card). ── */}
       <LiveSheet>
+        {/* Sembo UK's November code (English only, 1.–30.11.2026) first: under the
+            town buttons it would sit 3.7 phone screens down. */}
+        <SemboUkCode surface="home" />
         <LiveFlights limit={6} phoneLimit={3} />
-        <TonightStrip />
+        <TonightStrip codeCard={false} />
         <LiveCabins limit={6} phoneLimit={3} />
         <LiveCars limit={6} phoneLimit={3} />
         <FareCalendar />

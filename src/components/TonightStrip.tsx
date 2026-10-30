@@ -34,7 +34,7 @@ function localIso(d: Date): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
-export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; kicker?: boolean }) {
+export default function TonightStrip({ id = 'tonight', kicker, codeCard = true }: { id?: string; kicker?: boolean; codeCard?: boolean }) {
   const lang = useLang();
   const c = COPY[lang].live.tonight;
   const cl = COPY[lang].live.list;
@@ -114,8 +114,9 @@ export default function TonightStrip({ id = 'tonight', kicker }: { id?: string; 
           />
         </div>
       </div>
-      {/* English town buttons open sembo.co.uk: Sembo UK's code for November bookings. */}
-      <SemboUkCode surface={id} className="mt-5" />
+      {/* English town buttons open sembo.co.uk: Sembo UK's code for November bookings.
+          Home shows the card at the top of the sheet instead (codeCard={false}). */}
+      {codeCard && <SemboUkCode surface={id} townsAbove className="mt-5" />}
     </section>
   );
 }
