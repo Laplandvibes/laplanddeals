@@ -35,8 +35,8 @@ export default function Logo({ className = '', size = 'md', invert = false, nav 
   // vibe-pink, LAPLAND in snow/ink) — a brand constant shared across every LV
   // site, regardless of each site's own body typography variant.
   return (
-    <span
-      className={`leading-none ${sizeClass}${nav ? ' lv-wm' : ''} ${className}`}
+    <span translate="no"
+      className={`notranslate leading-none ${sizeClass}${nav ? ' lv-wm' : ''} ${className}`}
       data-lv-sanamerkki={nav ? '' : undefined}
       style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '0.025em', ...(nav ? WM_STYLE : {}) }}
     >
