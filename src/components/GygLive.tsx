@@ -112,11 +112,11 @@ export function GygSection({ id, eyebrow, title, lead, browseHref, browseLabel, 
   return (
     <section className={`relative py-16 sm:py-20 ${className}`} aria-labelledby={id}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8 md:mb-10">
+        <div className="flex flex-col items-center text-center lg:flex-row lg:items-end lg:justify-between lg:text-left gap-4 mb-8 md:mb-10">
           <div className="max-w-2xl">
             <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">{eyebrow}</p>
             <h2 id={id} className="font-heading text-3xl sm:text-5xl leading-[1.05] text-ink">{title}</h2>
-            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed max-w-xl">{lead}</p>
+            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed max-w-xl mx-auto w-fit text-left lg:mx-0 lg:w-auto">{lead}</p>
           </div>
           <a
             href={browseHref}
@@ -134,7 +134,7 @@ export function GygSection({ id, eyebrow, title, lead, browseHref, browseLabel, 
           href={browseHref}
           target="_blank"
           rel="sponsored nofollow noopener"
-          className="lv-tap md:hidden inline-flex items-center gap-1 mt-5 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline"
+          className="lv-tap md:hidden flex w-fit mx-auto items-center gap-1 mt-5 text-ink hover:text-vibe-pink text-[12px] font-bold uppercase tracking-[0.14em] no-underline"
         >
           {browseLabel} <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
         </a>

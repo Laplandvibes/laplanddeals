@@ -127,7 +127,7 @@ export default function LiveCabins({ limit = 6, phoneLimit, kicker }: { limit?: 
       title={c.title}
       lead={c.lead}
       aside={
-        <div className="lg:max-w-xs lg:shrink-0 lg:text-right">
+        <div className="text-center lg:max-w-xs lg:shrink-0 lg:text-right">
           <a
             href={lmHref}
             target="_blank"

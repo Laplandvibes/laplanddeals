@@ -54,7 +54,7 @@ export default function PillarHeader({ eyebrow, h1, h1Italic, sub, hero }: Pilla
       <div aria-hidden="true" className="absolute inset-0 paper-grain opacity-40 mix-blend-overlay" />
 
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl max-lg:mx-auto max-lg:text-center">
           <p className="text-ivory/80 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-5 sm:mb-7 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             {eyebrow}
           </p>
@@ -70,7 +70,7 @@ export default function PillarHeader({ eyebrow, h1, h1Italic, sub, hero }: Pilla
             )}
             <span className="text-vibe-pink drop-shadow-[0_0_40px_rgba(236,72,153,0.8)]">{h1}</span>
           </h1>
-          <p className="text-ivory/85 text-base sm:text-lg max-w-2xl leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+          <p className="text-ivory/85 text-base sm:text-lg max-w-2xl max-lg:mx-auto max-lg:w-fit max-lg:text-left leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             {sub}
           </p>
         </div>

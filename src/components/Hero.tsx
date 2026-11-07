@@ -68,8 +68,9 @@ export default function Hero() {
           leveydelle ja oikea reuna jai kirkkaaksi. Mitattu 21.9.2026 (korttiteksti-portti):
           hero-otsikon pinkki 1,00:1 rajan 3:1 sijaan ja 61 % pikseleista rajan alle.
           Nyt vaakapeite vahvempi JA pystysuuntainen kerros tekstikaistan kohdalle. */}
-      {/* Phones: the text spans the full width, so the violet dusk sky behind the pink line needs its own dimming (gate heroteksti 9.10.2026). */}
-      <div aria-hidden="true" className="absolute inset-0 bg-black/30 sm:hidden" />
+      {/* Phones and tablets: the text spans the full width (centred below lg since 7.11.2026, gate:tabletti), so the
+          violet dusk sky behind the pink line needs its own dimming (gate heroteksti 9.10.2026). */}
+      <div aria-hidden="true" className="absolute inset-0 bg-black/30 lg:hidden" />
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/82 via-black/60 to-black/25" />
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-cream" />
@@ -77,9 +78,10 @@ export default function Hero() {
 
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16">
         {/* @container: otsikon koko lasketaan tämän palstan leveydestä (100cqi). */}
-        <div className="@container max-w-3xl">
-          <p className="flex items-center gap-2.5 text-ivory text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-6 sm:mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
-            <span aria-hidden="true" className="inline-block w-2 h-2 rounded-full bg-vibe-pink deal-pulse shrink-0" />
+        <div className="@container max-w-3xl max-lg:mx-auto max-lg:text-center">
+          <p className="lg:flex lg:items-center lg:gap-2.5 text-balance text-ivory text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-6 sm:mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
+            {/* Alle lg piste on tekstin alussa rivin sisällä: flex-rivissä keskitetty, kahdelle riville katkeava teksti jätti pisteen yksin vasempaan reunaan. */}
+            <span aria-hidden="true" className="inline-block w-2 h-2 rounded-full bg-vibe-pink deal-pulse shrink-0 mr-2.5 align-middle lg:mr-0" />
             {eyebrow}
           </p>
 
@@ -95,11 +97,11 @@ export default function Hero() {
             <span className="text-vibe-pink drop-shadow-[0_0_40px_rgba(236,72,153,0.8)]">{c.h1Line2}</span>
           </h1>
 
-          <p className="text-ivory/85 text-base sm:text-lg lg:text-xl max-w-xl xl:max-w-3xl mb-9 sm:mb-11 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] xl:text-2xl">
+          <p className="text-ivory/85 text-base sm:text-lg lg:text-xl max-w-xl xl:max-w-3xl max-lg:mx-auto max-lg:w-fit max-lg:text-left mb-9 sm:mb-11 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] xl:text-2xl">
             {lead}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center sm:justify-center lg:justify-start gap-3">
             <Link
               to={to('/hotels')}
               className="group inline-flex items-center justify-center gap-2 bg-[#DB2777] hover:bg-[#BE185D] text-white font-bold tracking-[0.06em] px-7 py-4 rounded-full text-[13px] uppercase transition-colors no-underline"

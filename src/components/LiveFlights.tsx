@@ -107,7 +107,7 @@ export default function LiveFlights({ limit = 6, phoneLimit, kicker }: { limit?:
       title={c.title}
       lead={c.lead}
       aside={
-        <Link to={to('/flights')} className="inline-flex items-center gap-2 self-start whitespace-nowrap rounded-full border border-deep-night/25 px-5 py-2.5 text-sm font-semibold text-deep-night no-underline transition-colors hover:border-deep-night hover:bg-deep-night hover:text-snow">
+        <Link to={to('/flights')} className="inline-flex items-center gap-2 self-center lg:self-start whitespace-nowrap rounded-full border border-deep-night/25 px-5 py-2.5 text-sm font-semibold text-deep-night no-underline transition-colors hover:border-deep-night hover:bg-deep-night hover:text-snow">
           {c.all} <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
       }

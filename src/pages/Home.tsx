@@ -40,7 +40,7 @@ import { OFFER_PHOTOS, TILE_PHOTOS, creditItems, isSummerSeason } from '../data/
 
 function SectionHeader({ eyebrow, title, lead, children }: { eyebrow: string; title: string; lead?: string; children?: React.ReactNode }) {
   return (
-    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
+    <div className="flex flex-col items-center text-center lg:flex-row lg:items-end lg:justify-between lg:text-left gap-4 mb-10 md:mb-14">
       <div className="max-w-2xl">
         <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">
           {eyebrow}
@@ -49,7 +49,7 @@ function SectionHeader({ eyebrow, title, lead, children }: { eyebrow: string; ti
           {title}
         </h2>
         {lead && (
-          <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed max-w-xl">
+          <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed max-w-xl mx-auto w-fit text-left lg:mx-0 lg:w-auto">
             {lead}
           </p>
         )}
@@ -284,14 +284,14 @@ export default function Home() {
       {/* ── FAQ (visible counterpart of the FAQPage JSON-LD above) ──── */}
       <section className="relative py-20 sm:py-24 border-t border-line">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="mb-10 md:mb-14">
+          <div className="mb-10 md:mb-14 text-center lg:text-left">
             <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">
               {c.faq.eyebrow}
             </p>
             <h2 className="font-heading text-3xl sm:text-5xl font-medium leading-[1.05] text-ink">
               {c.faq.title}
             </h2>
-            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed">
+            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed mx-auto w-fit text-left lg:mx-0 lg:w-auto">
               {c.faq.lead}
             </p>
           </div>
@@ -337,14 +337,14 @@ export default function Home() {
       {/* ── Related sites / where to next ───────────────────────────── */}
       <section className="relative bg-cream-2 py-20 sm:py-24 border-y border-line">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="max-w-2xl mb-10 md:mb-14">
+          <div className="max-w-2xl mb-10 md:mb-14 mx-auto text-center lg:mx-0 lg:text-left">
             <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">
               {c.related.eyebrow}
             </p>
             <h2 className="font-heading text-3xl sm:text-5xl font-medium leading-[1.05] text-ink">
               {c.related.title}
             </h2>
-            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed">
+            <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed mx-auto w-fit text-left lg:mx-0 lg:w-auto">
               {c.related.lead}
             </p>
           </div>

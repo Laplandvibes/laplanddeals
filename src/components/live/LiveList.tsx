@@ -107,10 +107,10 @@ export default function LiveList<T>({ id, kicker, title, lead, aside, rows, mode
           it would take a third of the row and force the title onto two
           lines (Vesa 12.9.: "eikö otsikko mahtuisi yhdelle riville"). */}
       <div className="mb-5 flex flex-col gap-4 sm:mb-6 lg:flex-row lg:items-end lg:justify-between lg:gap-8">
-        <div className="@container min-w-0 flex-1">
+        <div className="@container min-w-0 flex-1 text-center lg:text-left">
           {kicker && <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]"><Units text={kicker} /></p>}
           <FitHeading id={`${id}-title`} text={title} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl" />
-          {lead && <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{lead}</p>}
+          {lead && <p className="mt-3 max-w-2xl mx-auto w-fit text-left lg:mx-0 lg:w-auto text-base leading-relaxed text-deep-night/70 sm:text-lg">{lead}</p>}
         </div>
         {aside}
       </div>

@@ -134,9 +134,9 @@ export default function FareCalendar({ className }: { className?: string }) {
 
   return (
     <section ref={ref} id="fare-calendar" aria-labelledby="fare-calendar-title" className={`${inView ? 'chart-in ' : ''}${className ?? ''}`}>
-      <div className="@container">
+      <div className="@container text-center lg:text-left">
         <FitHeading id="fare-calendar-title" text={c.h2} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl" />
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{c.lead.replace('{d}', readAt)}</p>
+        <p className="mt-3 max-w-2xl mx-auto w-fit text-left lg:mx-0 lg:w-auto text-base leading-relaxed text-deep-night/70 sm:text-lg">{c.lead.replace('{d}', readAt)}</p>
       </div>
 
       <div className="tile-kelo mt-6 p-3 sm:p-5">

@@ -48,14 +48,14 @@ export default function TonightStrip({ id = 'tonight', kicker, codeCard = true }
 
   return (
     <section id={id} className="relative" aria-labelledby={`${id}-title`}>
-      <div className="@container mb-5 sm:mb-6">
+      <div className="@container mb-5 sm:mb-6 text-center lg:text-left">
         {kicker && (
-          <p className="mb-2 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
-            <Moon className="h-3.5 w-3.5" aria-hidden="true" /><Units text={`${c.eyebrow} · ${label}`} />
+          <p className="mb-2 text-balance lg:flex lg:items-center lg:gap-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
+            <Moon className="inline-block h-3.5 w-3.5 mr-2 align-[-0.2em] lg:mr-0" aria-hidden="true" /><Units text={`${c.eyebrow} · ${label}`} />
           </p>
         )}
         <FitHeading id={`${id}-title`} text={c.title} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl" />
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-deep-night/70 sm:text-lg">{c.lead}</p>
+        <p className="mt-3 max-w-2xl mx-auto w-fit text-left lg:mx-0 lg:w-auto text-base leading-relaxed text-deep-night/70 sm:text-lg">{c.lead}</p>
       </div>
       <div className="tile-ice p-3 sm:p-5">
         <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-6" data-fill-grid="tonight">
