@@ -25,8 +25,12 @@ export default function PageBreadcrumb() {
       lang={lang}
       to={to}
       labelMap={labelMap}
-      className="bg-cream text-deep-night border-b border-deep-night/10"
+      // --color-cream on tällä sivustolla #0F172A (tumma pohja), joten teksti on snow: text-deep-night antoi
+      // murupolulle kontrastin 1,00:1 eli näkymättömän tekstin (mitattu 8.11.2026 joka pilarisivulla).
+      className="bg-cream text-snow border-b border-white/10"
       accentClassName="hover:text-vibe-pink hover:opacity-100"
+      // Alle 1024 px murupolku keskelle samalle akselille kuin keskitetty otsikko (Vesa 17.10.2026); tietokoneella vasen reuna ennallaan.
+      containerClassName="max-w-7xl mx-auto px-4 sm:px-6 max-lg:justify-center"
     />
   );
 }
