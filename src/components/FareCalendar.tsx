@@ -149,7 +149,7 @@ export default function FareCalendar({ className }: { className?: string }) {
         />
 
         {!data ? (
-          <div className="mt-4 grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(17rem, 1fr))' }} aria-hidden="true">
+          <div className="mt-4 grid gap-4 md:max-lg:[&>*:last-child:nth-child(odd):not(:first-child)]:col-span-2 md:max-lg:[&>*:last-child:nth-child(odd):not(:first-child)]:justify-self-center md:max-lg:[&>*:last-child:nth-child(odd):not(:first-child)]:w-[calc((100%_-_16px)/2)]" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(17rem, 1fr))' }} aria-hidden="true">
             {[0, 1, 2].map((i) => <div key={i} className="card-frost h-60 animate-pulse" />)}
           </div>
         ) : months.length === 0 && lone.length === 0 ? (
@@ -157,7 +157,9 @@ export default function FareCalendar({ className }: { className?: string }) {
         ) : (
           <>
             {months.length > 0 && (
-              <div className="mt-4 grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(17rem, 1fr))' }} data-fill-grid="fare-months">
+              {/* 768–1023 px kortteja mahtuu kaksi riville: pariton viimeinen kuukausi (3 kk) keskelle muiden levyisenä
+                  (gate:tabletti laaja livenä 9.11.2026; dististä kalenteria ei näe, data tulee vain livenä). */}
+              <div className="mt-4 grid gap-4 md:max-lg:[&>*:last-child:nth-child(odd):not(:first-child)]:col-span-2 md:max-lg:[&>*:last-child:nth-child(odd):not(:first-child)]:justify-self-center md:max-lg:[&>*:last-child:nth-child(odd):not(:first-child)]:w-[calc((100%_-_16px)/2)]" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(17rem, 1fr))' }} data-fill-grid="fare-months">
                 {months.map((mo) => {
                   const days = mo.days;
                   const n = daysIn(mo.month);
