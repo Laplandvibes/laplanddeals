@@ -40,7 +40,7 @@ export default function PhotoCredits({ items, className = '' }: { items: PhotoCr
           <span key={g.author + g.license + g.cropped}>
             {i === 0 && before}
             {g.rows.map((row, k) => (
-              <span key={row.key}>{k > 0 && ', '}<a href={row.fileUrl} target="_blank" rel="noopener" className={link}>{row.label}</a></span>
+              <span key={row.key}>{k > 0 && ', '}<a href={row.fileUrl} target="_blank" rel="noopener" className={link}>{row.label.replace(/ · /g, '\u00A0·\u00A0')}</a></span>
             ))}
             : {g.author},{' '}
             <a href={g.licenseUrl} target="_blank" rel="license noopener" className={`${link} whitespace-nowrap`}>{licenseLabel(g.license, lang)}</a>

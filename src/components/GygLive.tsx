@@ -3,6 +3,7 @@ import { ArrowUpRight, Compass } from 'lucide-react';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { GYG_CATEGORIES, gygLocalizeHref } from '../lib/gyg';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 /**
  * GetYourGuide "activities" widget for the Lapland region (location 2652).
@@ -114,7 +115,7 @@ export function GygSection({ id, eyebrow, title, lead, browseHref, browseLabel, 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col items-center text-center lg:flex-row lg:items-end lg:justify-between lg:text-left gap-4 mb-8 md:mb-10">
           <div className="max-w-2xl">
-            <p className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold">{eyebrow}</p>
+            <Erotinrivi pino className="text-vibe-pink text-[11px] uppercase tracking-[0.28em] mb-3 font-bold" osat={erotinOsat(eyebrow)} />
             <h2 id={id} className="font-heading text-3xl sm:text-5xl leading-[1.05] text-ink">{title}</h2>
             <p className="text-ink-soft text-base sm:text-lg mt-4 leading-relaxed max-w-xl mx-auto w-fit text-left lg:mx-0 lg:w-auto">{lead}</p>
           </div>

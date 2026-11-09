@@ -2,6 +2,7 @@ import PageBreadcrumb from './PageBreadcrumb';
 import { HEROES, type HeroKey } from '../data/offerPhotos';
 import { offers } from '../data/offers';
 import { useLang } from '../i18n/useLang';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 interface PillarHeaderProps {
   eyebrow: string;
@@ -55,9 +56,7 @@ export default function PillarHeader({ eyebrow, h1, h1Italic, sub, hero }: Pilla
 
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12 sm:py-16">
         <div className="max-w-3xl max-lg:mx-auto max-lg:text-center">
-          <p className="text-ivory/80 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-5 sm:mb-7 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
-            {eyebrow}
-          </p>
+          <Erotinrivi pino className="text-ivory/80 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-5 sm:mb-7 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]" osat={erotinOsat(eyebrow)} />
           {/* Bebas is single-weight and upright — no italic/weight games.
               Two-line lockup matching the home Hero: white lead-in line,
               pink payoff line with the brand glow. */}

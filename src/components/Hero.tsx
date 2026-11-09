@@ -4,6 +4,7 @@ import { useLang, useLocalePath } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { HOME_HERO_WIDTHS, isSummerSeason } from '../data/offerPhotos';
 import { HOME_HERO_ALT } from '../data/heroAlt';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 // June–August → summer hero (midnight sun through 7 July, hiking August).
 // Was May–September until 2026-09-10: on 10 September the live hero still read
@@ -81,8 +82,9 @@ export default function Hero() {
         <div className="@container max-w-3xl max-lg:mx-auto max-lg:text-center">
           <p className="lg:flex lg:items-center lg:gap-2.5 text-balance text-ivory text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.32em] mb-6 sm:mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
             {/* Alle lg piste on tekstin alussa rivin sisällä: flex-rivissä keskitetty, kahdelle riville katkeava teksti jätti pisteen yksin vasempaan reunaan. */}
-            <span aria-hidden="true" className="inline-block w-2 h-2 rounded-full bg-vibe-pink deal-pulse shrink-0 mr-2.5 align-middle lg:mr-0" />
-            {eyebrow}
+            <Erotinrivi as="span" pino osat={erotinOsat(eyebrow).map((osa, k) => (k === 0
+              ? <><span aria-hidden="true" className="inline-block w-2 h-2 rounded-full bg-vibe-pink deal-pulse shrink-0 mr-2.5 align-middle" />{osa}</>
+              : osa))} />
           </p>
 
           {/* Bebas is single-weight and upright — no italic/weight games. */}

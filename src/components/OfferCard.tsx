@@ -5,6 +5,7 @@ import { gygLocalizeHref } from '../lib/gyg';
 import { useLang, type Lang } from '../i18n/useLang';
 import { COPY } from '../locales/copy';
 import { OFFER_PHOTOS } from '../data/offerPhotos';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 const FLAG_STYLE: Record<NonNullable<Offer['flag']>, string> = {
   'last-minute':   'bg-flash-red text-ivory',
@@ -101,11 +102,11 @@ export default function OfferCard({ offer, size = 'md', showImage = true }: Prop
       <div className="flex flex-col flex-1 p-6">
         <div className="flex items-center gap-1.5 text-ink-mute text-[11px] uppercase tracking-[0.16em] mb-2">
           <MapPin className="w-3 h-3 shrink-0" />
-          <span>{offer.location}</span>
+          <Erotinrivi as="span" className="min-w-0" osat={erotinOsat(offer.location)} />
         </div>
 
         <h3 className="font-heading text-xl md:text-[1.4rem] font-medium text-ink leading-snug mb-2.5">
-          {offer.title}
+          <Erotinrivi as="span" osat={erotinOsat(offer.title)} />
         </h3>
 
         <p className="text-ink-soft text-[14px] leading-relaxed mb-5 flex-1">
