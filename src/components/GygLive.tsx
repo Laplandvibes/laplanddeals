@@ -90,7 +90,7 @@ export function GygWidget({ cmp, locationId, items = 6, tourIds, excludedTourIds
           <span className="grid place-items-center w-12 h-12 rounded-full bg-vibe-pink/15 border border-vibe-pink/40 text-vibe-pink mb-4">
             <Compass className="w-6 h-6" strokeWidth={2} aria-hidden="true" />
           </span>
-          <p className="text-ink-soft text-sm leading-relaxed max-w-md mb-5">{fallbackText}</p>
+          <p className="text-ink-soft text-sm leading-relaxed max-w-md mb-5 max-lg:text-left">{fallbackText}</p>
           <a
             href={browseHref}
             target="_blank"

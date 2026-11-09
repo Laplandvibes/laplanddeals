@@ -54,7 +54,7 @@ export default function Hotels() {
           <h2 className="font-heading text-3xl sm:text-4xl font-medium text-ink mb-3">
             {c.bottomTitle}
           </h2>
-          <p className="text-ink-soft mb-7">
+          <p className="text-ink-soft mb-7 max-lg:mx-auto max-lg:w-fit max-lg:text-left">
             {c.bottomLead}
           </p>
           <AffiliateCTA

@@ -50,8 +50,9 @@ export default function TonightStrip({ id = 'tonight', kicker, codeCard = true }
     <section id={id} className="relative" aria-labelledby={`${id}-title`}>
       <div className="@container mb-5 sm:mb-6 text-center lg:text-left">
         {kicker && (
-          <p className="mb-2 text-balance lg:flex lg:items-center lg:gap-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
-            <Moon className="inline-block h-3.5 w-3.5 mr-2 align-[-0.2em] lg:mr-0" aria-hidden="true" /><Units text={`${c.eyebrow} · ${label}`} />
+          // Units-ketju on lohko: alle 1024 px kuu jäi omalle rivilleen ja ketju vasempaan reunaan (9.11.2026).
+          <p className="mb-2 text-balance flex items-center justify-center gap-2 lg:justify-start text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
+            <Moon className="inline-block h-3.5 w-3.5 shrink-0" aria-hidden="true" /><Units text={`${c.eyebrow} · ${label}`} />
           </p>
         )}
         <FitHeading id={`${id}-title`} text={c.title} className="font-heading text-3xl leading-[1.02] text-deep-night sm:text-5xl" />

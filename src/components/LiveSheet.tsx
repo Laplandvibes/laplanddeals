@@ -19,8 +19,10 @@ export default function LiveSheet({ children, intro = true }: { children: ReactN
       <div className="mx-auto max-w-6xl">
         {intro && (
           <div className="@container mb-10 sm:mb-12 text-center lg:text-left">
-            <p className="mb-2 text-balance lg:flex lg:items-center lg:gap-2 text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
-              <span aria-hidden="true" className="deal-pulse inline-block h-2 w-2 shrink-0 rounded-full bg-[#BE185D] mr-2 align-middle lg:mr-0" />
+            {/* Units-ketju on lohko, joten alle 1024 px piste jäi omalle rivilleen keskelle ja ketju vasempaan
+                reunaan (kuva 820 px 9.11.2026). Flex-rivi: piste + ketju yhtenä keskitettynä rivinä, lg+ vasemmalla. */}
+            <p className="mb-2 text-balance flex items-center justify-center gap-2 lg:justify-start text-[11px] font-bold uppercase tracking-[0.28em] text-[#BE185D]">
+              <span aria-hidden="true" className="deal-pulse inline-block h-2 w-2 shrink-0 rounded-full bg-[#BE185D]" />
               <Units text={c.kicker} />
             </p>
             <FitHeading id="live-sheet-title" text={c.h2} min={36} max={60} className="font-heading text-4xl leading-[1.02] text-deep-night sm:text-5xl md:text-6xl" />

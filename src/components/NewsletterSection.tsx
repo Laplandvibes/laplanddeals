@@ -224,7 +224,7 @@ export default function NewsletterSection() {
             <br />
             {c.titleRest}
           </h2>
-          <p className="text-white text-base sm:text-lg max-w-2xl mx-auto leading-relaxed" style={{ textShadow: '0 1px 10px rgba(74,4,38,0.45)' }}>
+          <p className="text-white text-base sm:text-lg max-w-2xl mx-auto max-lg:w-fit max-lg:text-left leading-relaxed" style={{ textShadow: '0 1px 10px rgba(74,4,38,0.45)' }}>
             {c.lead}
           </p>
         </div>
