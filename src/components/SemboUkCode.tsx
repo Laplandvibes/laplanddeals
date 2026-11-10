@@ -121,7 +121,7 @@ export default function SemboUkCode({
         >
           Search Lapland stays on Sembo UK
         </a>
-        <p className="text-xs leading-relaxed text-deep-night/60">Prices on sembo.co.uk are in British pounds (£). Offer and terms are set by Sembo UK.</p>
+        <p className="text-base leading-relaxed text-deep-night/75">Prices on sembo.co.uk are in British pounds (£). Offer and terms are set by Sembo UK.</p>
       </div>
     </aside>
   );
