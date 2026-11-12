@@ -1,9 +1,9 @@
 {
-  "version": "9421292e",
+  "version": "e243baf2",
   "domain": "laplanddeals.com",
   "brand": "DEALS",
   "tagline": "Last-minute deals for Finnish Lapland",
-  "generated": "2026-10-09T06:38:38.396Z",
+  "generated": "2026-11-12T10:30:56.253Z",
   "staticFallbackSeason": "winter",
   "seasons": {
     "summer": {
@@ -11,18 +11,20 @@
       "heroUrl": "https://laplanddeals.com/images/home-hero-summer-2560.avif",
       "heroAlt": "A birch-lined river bend in Äkäslompolo, Finnish Lapland, in early summer light.",
       "heroSha": "4cfe6e85b64eef09",
-      "bytes": 218578,
-      "sha256": "26d6e96e6fcf5058544961201c0aabde754ff88990dba5d4bda056a8b46ec3ab",
+      "bytes": 215990,
+      "sha256": "5cda418668e81ff1a9a52b7edce0c0390a9d5ce5277051af16e5c01c355c5c37",
       "bandH": 168,
       "photoPct": 73.3,
       "ink": 16073,
       "inkBox": [
         338,
-        493,
+        26,
         862,
-        603
+        136
       ],
       "safe": true,
+      "palkki": "yla",
+      "xVapaa": true,
       "accentP10": 5.06,
       "accentMed": 5.06,
       "whiteP10": 17.08,
@@ -50,18 +52,20 @@
       "heroUrl": "https://laplanddeals.com/images/home-hero-2560.avif",
       "heroAlt": "Snow-laden spruces and snowmobile tracks under a violet winter dusk near Kuusamo, Finland.",
       "heroSha": "4135fe30f390c0f7",
-      "bytes": 137247,
-      "sha256": "252ee21d1ee4da8c39aa6c7a3ea0a23ac76426849ef9da4c9f70f1af4e3b7c0f",
+      "bytes": 134594,
+      "sha256": "ae08b48d5890404c4970d2813f6a22cf484a1553ec37d22f080577560a89a796",
       "bandH": 168,
       "photoPct": 73.3,
       "ink": 16073,
       "inkBox": [
         338,
-        493,
+        26,
         862,
-        603
+        136
       ],
       "safe": true,
+      "palkki": "yla",
+      "xVapaa": true,
       "accentP10": 5.06,
       "accentMed": 5.06,
       "whiteP10": 17.08,

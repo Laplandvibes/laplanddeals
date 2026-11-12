@@ -5,19 +5,21 @@
     "kaudet": {
       "summer": {
         "hero": "/images/offer-igloo-saariselka.webp",
-        "bytes": 217665,
-        "sha256": "12e8b893a6f07fbfc6df4fee6c5e1082f1bdd745b0721a2de98b18667d1d7552",
+        "bytes": 214841,
+        "sha256": "3ee35e86f8c5aec24acb36baa4915853577f6674d2ff4e459aa3283b9f580e70",
         "heroSha": "ec0e22e2c7127a9e",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 15559,
         "inkBox": [
           365,
-          493,
+          26,
           835,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -42,19 +44,21 @@
       },
       "winter": {
         "hero": "/images/offer-igloo-saariselka.webp",
-        "bytes": 217665,
-        "sha256": "12e8b893a6f07fbfc6df4fee6c5e1082f1bdd745b0721a2de98b18667d1d7552",
+        "bytes": 214841,
+        "sha256": "3ee35e86f8c5aec24acb36baa4915853577f6674d2ff4e459aa3283b9f580e70",
         "heroSha": "ec0e22e2c7127a9e",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 15559,
         "inkBox": [
           365,
-          493,
+          26,
           835,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -86,19 +90,21 @@
     "kaudet": {
       "summer": {
         "hero": "/images/offer-car-ktt.webp",
-        "bytes": 177930,
-        "sha256": "4283a38b94fdd4530291de0b8adba2fcc432c043ee944046ca4dd562481c9935",
+        "bytes": 175573,
+        "sha256": "8b9b78d8cde9fcde861717d08ddfe7c01441dd0716371f67ea9c7aabe5edacb5",
         "heroSha": "e141f2dfd494c5f2",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 15727,
         "inkBox": [
           358,
-          493,
+          26,
           841,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -123,19 +129,21 @@
       },
       "winter": {
         "hero": "/images/offer-car-ktt.webp",
-        "bytes": 177930,
-        "sha256": "4283a38b94fdd4530291de0b8adba2fcc432c043ee944046ca4dd562481c9935",
+        "bytes": 175573,
+        "sha256": "8b9b78d8cde9fcde861717d08ddfe7c01441dd0716371f67ea9c7aabe5edacb5",
         "heroSha": "e141f2dfd494c5f2",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 15727,
         "inkBox": [
           358,
-          493,
+          26,
           841,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -167,19 +175,21 @@
     "kaudet": {
       "summer": {
         "hero": "/images/offer-flight-hel-kao.webp",
-        "bytes": 217632,
-        "sha256": "c355ff3fe4e79e652de0fae1e9f996b401ea44b95274396ef05a1989008022c9",
+        "bytes": 215240,
+        "sha256": "fc9d62b10f24f915e8df262e5c7cd7cedb85b57c7c822bb6a05861ef7b48e088",
         "heroSha": "0c2e4052da5f826c",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 14959,
         "inkBox": [
           401,
-          493,
+          26,
           799,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -204,19 +214,21 @@
       },
       "winter": {
         "hero": "/images/offer-flight-hel-kao.webp",
-        "bytes": 217632,
-        "sha256": "c355ff3fe4e79e652de0fae1e9f996b401ea44b95274396ef05a1989008022c9",
+        "bytes": 215240,
+        "sha256": "fc9d62b10f24f915e8df262e5c7cd7cedb85b57c7c822bb6a05861ef7b48e088",
         "heroSha": "0c2e4052da5f826c",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 14959,
         "inkBox": [
           401,
-          493,
+          26,
           799,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -248,19 +260,21 @@
     "kaudet": {
       "summer": {
         "hero": "/images/offer-husky-safaris.webp",
-        "bytes": 108955,
-        "sha256": "281c07accb5260d14415dd8e4a0b045565bde144a306b389d01c96883845e44d",
+        "bytes": 105907,
+        "sha256": "88b32e809487a1af235bcb2557099ddc7059df7cae54e0bd0ec0aff919e4424a",
         "heroSha": "cf6d0098bb2f38f1",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 15650,
         "inkBox": [
           358,
-          493,
+          26,
           842,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
@@ -285,19 +299,21 @@
       },
       "winter": {
         "hero": "/images/offer-husky-safaris.webp",
-        "bytes": 108955,
-        "sha256": "281c07accb5260d14415dd8e4a0b045565bde144a306b389d01c96883845e44d",
+        "bytes": 105907,
+        "sha256": "88b32e809487a1af235bcb2557099ddc7059df7cae54e0bd0ec0aff919e4424a",
         "heroSha": "cf6d0098bb2f38f1",
         "bandH": 168,
         "photoPct": 73.3,
         "ink": 15650,
         "inkBox": [
           358,
-          493,
+          26,
           842,
-          603
+          136
         ],
         "safe": true,
+        "palkki": "yla",
+        "xVapaa": true,
         "accentP10": 5.06,
         "accentMed": 5.06,
         "whiteP10": 17.08,
