@@ -214,7 +214,10 @@ export default function NewsletterSection() {
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-20 lg:py-24">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
-          <p className="text-white/85 text-[11px] font-bold uppercase tracking-[0.28em] mb-5">{c.kicker}</p>
+          {/* 15.11.2026 piirretystä sivusta mitattu: liukuvärin yläpää on osion vaalein kohta, ja 11 px:n teksti jäi
+              siinä 3,4–3,7:1 (/85) ja täysvalkoisenakin 4,3:1 (raja 4,5). Tumma lappu (sama 18–20 % musta kuin
+              perustajarivin pohja samalla kaistalla) = 6,0–6,3:1. Liukuväri ennallaan. */}
+          <p className="inline-block rounded-full bg-black/20 px-4 py-1.5 text-white text-[11px] font-bold uppercase tracking-[0.28em] mb-5">{c.kicker}</p>
           <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl tracking-wide text-white mb-5 leading-[1.05] text-balance" style={{ textShadow: '0 2px 22px rgba(74,4,38,0.6)' }}>
             {/* 🔴 <br /> ei tuota välilyöntiä tekstisisältöön: ilman tätä väliä
                 otsikon saavutettava nimi on kaksi sanaa kiinni toisissaan.
@@ -236,10 +239,12 @@ export default function NewsletterSection() {
           {c.benefits.map((b, i) => {
             const Icon = ICONS[i] || Tag;
             return (
-              <div key={b.title} className="rounded-xl bg-white/10 backdrop-blur-sm border border-white/25 p-5">
+              // 15.11.2026: kortin pohja bg-white/10 → bg-black/15. Vaalennettu pinkki vei valkoisen otsikon 4,46:1:een
+              // ja /85-tekstin 3,7–4,2:1:een (raja 4,5); tummennettuna 6,6–6,9:1, teksti täysvalkoinen.
+              <div key={b.title} className="rounded-xl bg-black/15 backdrop-blur-sm border border-white/25 p-5">
                 <Icon className="w-5 h-5 text-white mb-3" />
                 <p className="font-heading text-base tracking-wide text-white mb-1">{b.title}</p>
-                <p className="text-white/85 text-[13px] leading-snug">{b.body}</p>
+                <p className="text-white text-[13px] leading-snug">{b.body}</p>
               </div>
             );
           })}
@@ -251,7 +256,7 @@ export default function NewsletterSection() {
               <CheckCircle className="w-6 h-6 text-white shrink-0" />
               <div>
                 <p className="text-white font-bold">{c.okTitle}</p>
-                <p className="text-white/85 text-sm">{c.okBody}</p>
+                <p className="text-white text-sm">{c.okBody}</p>
               </div>
             </div>
           ) : (
