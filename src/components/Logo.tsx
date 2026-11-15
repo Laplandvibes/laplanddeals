@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react';
 
+import { LV_SANAMERKKI } from './lvSanamerkki';
 // Sanamerkin leveys 1 px:n fontilla (Bebas Neue + tracking-wide). Puhelin- ja tablettinavissa koko lasketaan
 // tästä ja vapaasta tilasta (index.css LV-NAV-SANAMERKKI): 24 px, pienempi vain kun ei mahdu.
 const WM_STYLE = { '--lv-wm-k': 5.35 } as CSSProperties;
@@ -40,9 +41,14 @@ export default function Logo({ className = '', size = 'md', invert = false, nav 
       data-lv-sanamerkki={nav ? '' : undefined}
       style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: '0.025em', ...(nav ? WM_STYLE : {}) }}
     >
-      <span style={{ color: '#EC4899' }}>#</span>
-      <span style={{ color: heavyColour }}>LAPLAND</span>
-      <span style={{ color: '#EC4899' }}>DEALS</span>
+      {/* VIRALLINEN sanamerkki (Vesa 14.11.2026; yläpalkki 15.11.2026 "sama leveys kuin nyt"): piirros ./lvSanamerkki.ts,
+          leveys = entisen tekstin leveys, osat perivät entiset värinsä (currentColor). Teksti ruudunlukijalle ja hakukoneelle. */}
+      <svg viewBox={LV_SANAMERKKI.viewBox} aria-hidden="true" focusable="false" style={{ width: `${LV_SANAMERKKI.leveysEm}em`, height: 'auto', display: 'inline-block', verticalAlign: 'middle', overflow: 'visible' }}>
+        <path style={{ color: '#EC4899' }} fill="currentColor" d={LV_SANAMERKKI.d[0]} />
+        <path style={{ color: heavyColour }} fill="currentColor" d={LV_SANAMERKKI.d[1]} />
+        <path style={{ color: '#EC4899' }} fill="currentColor" d={LV_SANAMERKKI.d[2]} />
+      </svg>
+      <span className="sr-only">#LAPLANDDEALS</span>
     </span>
   );
 }
